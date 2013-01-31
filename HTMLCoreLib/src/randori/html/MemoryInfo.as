@@ -9,6 +9,7 @@ package randori.html
 
 		public function MemoryInfo()
 		{
+			super();
 		}
 	}
 }

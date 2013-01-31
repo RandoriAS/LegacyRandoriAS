@@ -1,9 +1,7 @@
 package randori.html
 {
-	import flash.events.Event;
-
 	[JavaScript(export=false,name="Node")]
-	public class Node
+	public class Node extends EventTarget
 	{
 		public static const ATTRIBUTE_NODE:int = 0;
 		public static const CDATA_SECTION_NODE:int = 0;
@@ -42,12 +40,11 @@ package randori.html
 		public var previousSibling:Node;
 		public var textContent:String;
 		
-		public function addEventListener( type:String, listener:Function, useCapture:Boolean=false):void {}
+
 		public function appendChild(newChild:Node):Node { return null; }
 		public function cloneNode(deep:Boolean):Node { return null; }
 		public function compareDocumentPosition(other:Node):int  { return -1; }
 		public function contains(other:Node):Boolean { return false; }
-		public function dispatchEvent(event:Event):Boolean { return false; }
 		public function hasAttributes():Boolean { return false; }
 		public function hasChildNodes():Boolean { return false; }
 		public function insertBefore(newChild:Node, refChild:Node):Node { return null; }
@@ -59,7 +56,6 @@ package randori.html
 		public function lookupPrefix(namespaceURI:String):String { return null; }
 		public function normalize():void  { return; }
 		public function removeChild(oldChild:Node):Node { return null; }
-		public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void  { return; }
 		public function replaceChild(newChild:Node, oldChild:Node):Node { return null; }
 		
 		public function Node()
