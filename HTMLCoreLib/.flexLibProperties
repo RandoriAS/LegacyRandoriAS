@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="randori.html.CDATASection"/>
+    <classEntry path="randori.html.Comment"/>
+    <classEntry path="randori.html.EntityReference"/>
+    <classEntry path="randori.html.XPathNSResolver"/>
+    <classEntry path="randori.html.XPathExpression"/>
+    <classEntry path="randori.html.NodeFilter"/>
+    <classEntry path="randori.html.NodeIterator"/>
+    <classEntry path="randori.html.ProcessingInstruction"/>
+    <classEntry path="randori.html.Text"/>
+    <classEntry path="randori.html.TreeWalker"/>
+    <classEntry path="randori.html.XPathResult"/>
+    <classEntry path="randori.html.CssStyleSheet"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
