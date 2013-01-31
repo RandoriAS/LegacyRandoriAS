@@ -7,6 +7,7 @@ package randori.html
 
 		public function NodeList()
 		{
+			super();
 		}
 	}
 }
