@@ -1,6 +1,7 @@
 package randori.html
 {
-	public class EntityReference
+	[JavaScript(export=false,name="EntityReference")]
+	public class EntityReference extends Node
 	{
 		public function EntityReference()
 		{

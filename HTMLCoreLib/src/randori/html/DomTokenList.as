@@ -1,5 +1,6 @@
 package randori.html
 {
+	[JavaScript(export=false,name="DomTokenList")]
 	public class DomTokenList
 	{
 		public var length:int;

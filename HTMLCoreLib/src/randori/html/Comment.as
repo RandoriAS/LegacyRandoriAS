@@ -1,6 +1,7 @@
 package randori.html
 {
-	public class Comment
+	[JavaScript(export=false,name="Comment")]
+	public class Comment extends CharacterData
 	{
 		public function Comment()
 		{

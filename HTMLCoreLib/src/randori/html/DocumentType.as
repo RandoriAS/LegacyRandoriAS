@@ -1,5 +1,6 @@
 package randori.html
 {
+	[JavaScript(export=false,name="DocumentType")]
 	public class DocumentType extends Node
 	{
 		public var entities:NamedNodeMap;

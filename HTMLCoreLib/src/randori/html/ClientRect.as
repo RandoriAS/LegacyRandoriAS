@@ -1,5 +1,6 @@
 package randori.html
 {
+	[JavaScript(export=false,name="ClientRect")]
 	public class ClientRect
 	{
 		public var bottom:Number;

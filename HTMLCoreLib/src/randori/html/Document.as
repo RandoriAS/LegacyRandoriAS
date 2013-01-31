@@ -2,6 +2,7 @@ package randori.html
 {
 	import flash.events.Event;
 
+	[JavaScript(export=false,name="Document")]
 	public class Document extends Node
 	{
 		public var anchors:HtmlCollection;
@@ -123,6 +124,7 @@ package randori.html
 
 		public function Document()
 		{
+			super();
 		}
 	}
 }
