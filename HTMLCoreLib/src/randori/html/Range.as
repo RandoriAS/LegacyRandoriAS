@@ -1,5 +1,6 @@
 package randori.html
 {
+	[JavaScript(export=false,name="Range")]
 	public class Range
 	{
 		public static const END_TO_END:int = 0;
@@ -46,6 +47,7 @@ package randori.html
 
 		public function Range()
 		{
+			super();
 		}
 	}
 }

@@ -1,5 +1,7 @@
 package randori.html
 {
+	
+	[JavaScript(export=false,name="UndoManager")]
 	public class UndoManager
 	{
 		public function clearRedo():void {};
@@ -9,6 +11,7 @@ package randori.html
 
 		public function UndoManager()
 		{
+			super();
 		}
 	}
 }
