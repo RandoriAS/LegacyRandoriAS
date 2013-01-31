@@ -1,5 +1,6 @@
 package randori.html
 {
+	[JavaScript(export=false,name="DOMImplementation")]
 	public class DOMImplementation
 	{
 		public function createCSSStyleSheet(title:String, media:String):CssStyleSheet { return null; };

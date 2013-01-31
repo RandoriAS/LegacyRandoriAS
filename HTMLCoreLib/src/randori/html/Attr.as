@@ -1,5 +1,6 @@
 package randori.html
 {
+	[JavaScript(export=false,name="Attr")]
 	public class Attr extends Node
 	{
 		public var isId:Boolean;
