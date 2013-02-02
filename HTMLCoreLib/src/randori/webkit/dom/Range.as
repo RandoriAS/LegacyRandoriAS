@@ -1,0 +1,97 @@
+
+/*******************************************************************************************************
+
+  This file was auto generated with the tool "WebIDLParser"
+
+  Content was generated from IDL file:
+  http://trac.webkit.org/browser/trunk/Source/WebCore/dom/Range.idl
+
+  PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
+  - Regenerate the project with the newest IDL files.
+  - or modifiy the WebIDLParser tool itself.
+
+********************************************************************************************************
+
+  Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
+  Copyright (C) 2009 Apple Inc. All Rights Reserved.
+
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+
+  MIT License:
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+  associated documentation files (the "Software"), to deal in the Software without restriction, 
+  including without limitation the rights to use, copy, modify, merge, publish, distribute,
+  sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all copies or substantial
+  portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+  NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
+  OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*******************************************************************************************************/
+
+
+package randori.webkit.dom
+{
+
+
+[JavaScript(export=false, name="Range")]
+public class Range
+{
+
+	public function get startContainer():Node { return null; }
+
+	public function get startOffset():uint { return 0; }
+
+	public function get endContainer():Node { return null; }
+
+	public function get endOffset():uint { return 0; }
+
+	public function get collapsed():Boolean { return false; }
+
+	public function get commonAncestorContainer():Node { return null; }
+	public function setStart(refNode:Node=null, offset:uint=0):void {}
+	public function setEnd(refNode:Node=null, offset:uint=0):void {}
+	public function setStartBefore(refNode:Node=null):void {}
+	public function setStartAfter(refNode:Node=null):void {}
+	public function setEndBefore(refNode:Node=null):void {}
+	public function setEndAfter(refNode:Node=null):void {}
+	public function collapse(toStart:Boolean=false):void {}
+	public function selectNode(refNode:Node=null):void {}
+	public function selectNodeContents(refNode:Node=null):void {}
+	public static const START_TO_START:uint = 0;
+	public static const START_TO_END:uint = 1;
+	public static const END_TO_END:uint = 2;
+	public static const END_TO_START:uint = 3;
+	public function compareBoundaryPoints(how:Object=null, sourceRange:Range=null):int { return 0;}
+	public function deleteContents():void {}
+	public function extractContents():DocumentFragment { return null;}
+	public function cloneContents():DocumentFragment { return null;}
+	public function insertNode(newNode:Node=null):void {}
+	public function surroundContents(newParent:Node=null):void {}
+	public function cloneRange():Range { return null;}
+	public function toString():String { return '';}
+	public function detach():void {}
+	public function getClientRects():Object { return null;}
+	public function getBoundingClientRect():ClientRect { return null;}
+	public function createContextualFragment(html:String=''):DocumentFragment { return null;}
+	public function intersectsNode(refNode:Node=null):Boolean { return false;}
+	public function compareNode(refNode:Node=null):int { return 0;}
+	public static const NODE_BEFORE:uint = 0;
+	public static const NODE_AFTER:uint = 1;
+	public static const NODE_BEFORE_AND_AFTER:uint = 2;
+	public static const NODE_INSIDE:uint = 3;
+	public function comparePoint(refNode:Node=null, offset:uint=0):int { return 0;}
+	public function isPointInRange(refNode:Node=null, offset:uint=0):Boolean { return false;}
+	public function expand(unit:String=''):void {}
+
+	public function get text():String { return ''; }
+}
+
+}
