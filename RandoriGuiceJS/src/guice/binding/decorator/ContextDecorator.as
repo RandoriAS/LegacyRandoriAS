@@ -30,7 +30,7 @@ package guice.binding.decorator {
 			return sourceBinding.getTypeName();
 		}
 		
-		override public function getScope():Scope {
+		override public function getScope():int {
 			return Scope.Context;
 		}
 		

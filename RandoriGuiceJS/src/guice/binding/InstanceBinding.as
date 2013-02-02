@@ -28,7 +28,7 @@ package guice.binding {
 			return typeDefinition.getClassName();
 		}
 		
-		override public function getScope():Scope {
+		override public function getScope():int {
 			return Scope.Instance;
 		}
 		

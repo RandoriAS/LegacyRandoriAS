@@ -23,7 +23,7 @@ package guice.binding.decorator
 
 	public class SingletonDecorator extends ContextDecorator {
 		
-		override public function getScope():Scope {
+		override public function getScope():int {
 			return Scope.Singleton;
 		}
 
