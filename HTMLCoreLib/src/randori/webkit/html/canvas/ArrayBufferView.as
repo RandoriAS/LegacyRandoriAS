@@ -41,7 +41,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export=false, name="ArrayBufferView")]
+[JavaScript(export="false", name="ArrayBufferView")]
 /**
  *  @author RandoriAS
  *  @version 1.0

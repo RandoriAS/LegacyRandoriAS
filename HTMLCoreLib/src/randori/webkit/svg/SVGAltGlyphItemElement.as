@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGAltGlyphItemElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGAltGlyphItemElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

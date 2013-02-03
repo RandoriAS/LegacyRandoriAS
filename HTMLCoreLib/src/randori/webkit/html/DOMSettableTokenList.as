@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="DOMSettableTokenList")]
+[JavaScript(export="false", name="DOMSettableTokenList")]
 /**
  *  @author RandoriAS
  *  @version 1.0

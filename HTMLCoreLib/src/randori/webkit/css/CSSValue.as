@@ -41,7 +41,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export=false, name="CSSValue")]
+[JavaScript(export="false", name="CSSValue")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="ValidityState")]
+[JavaScript(export="false", name="ValidityState")]
 /**
  *  @author RandoriAS
  *  @version 1.0

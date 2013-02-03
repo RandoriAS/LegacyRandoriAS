@@ -41,7 +41,7 @@ package randori.webkit.modules.webdatabase
 {
 
 
-[JavaScript(export=false, name="SQLTransaction")]
+[JavaScript(export="false", nativecondition="SQL_DATABASE", name="SQLTransaction")]
 /**
  *  @author RandoriAS
  *  @version 1.0

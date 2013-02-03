@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGTextElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGTextElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -80,10 +80,10 @@ public class SVGTextElement extends SVGTextPositioningElement implements SVGTran
 	*/
 	public function getScreenCTM():SVGMatrix { return null;}
 	/**
-	*  @param element (optional argument, default value is <code>null</code>)
+	*  @param element (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>SVGMatrix</code> instance.
 	*/
-	public function getTransformToElement(element:SVGElement=null):SVGMatrix { return null;}
+	public function getTransformToElement(element:SVGElement=undefined):SVGMatrix { return null;}
 }
 
 }

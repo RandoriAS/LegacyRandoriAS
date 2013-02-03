@@ -41,7 +41,7 @@ package randori.webkit.modules.intents
 {
 
 
-[JavaScript(export=false, name="Intent")]
+[JavaScript(export="false", name="Intent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

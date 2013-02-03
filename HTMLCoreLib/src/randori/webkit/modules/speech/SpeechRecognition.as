@@ -42,7 +42,7 @@ package randori.webkit.modules.speech
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="SpeechRecognition")]
+[JavaScript(export="false", nativecondition="SCRIPTED_SPEECH", name="SpeechRecognition")]
 /**
  *  @author RandoriAS
  *  @version 1.0

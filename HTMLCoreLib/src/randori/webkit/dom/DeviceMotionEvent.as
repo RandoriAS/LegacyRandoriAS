@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="DeviceMotionEvent")]
+[JavaScript(export="false", nativecondition="DEVICE_ORIENTATION", name="DeviceMotionEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -60,15 +60,15 @@ public class DeviceMotionEvent extends DomEvent
 
 	public function get interval():Number { return 0; }
 	/**
-	*  @param type (optional argument, default value is <code>''</code>)
-	*  @param bubbles (optional argument, default value is <code>false</code>)
-	*  @param cancelable (optional argument, default value is <code>false</code>)
-	*  @param acceleration (optional argument, default value is <code>null</code>)
-	*  @param accelerationIncludingGravity (optional argument, default value is <code>null</code>)
-	*  @param rotationRate (optional argument, default value is <code>null</code>)
-	*  @param interval (optional argument, default value is <code>0</code>)
+	*  @param type (optional argument, default value is <code>undefined</code>)
+	*  @param bubbles (optional argument, default value is <code>undefined</code>)
+	*  @param cancelable (optional argument, default value is <code>undefined</code>)
+	*  @param acceleration (optional argument, default value is <code>undefined</code>)
+	*  @param accelerationIncludingGravity (optional argument, default value is <code>undefined</code>)
+	*  @param rotationRate (optional argument, default value is <code>undefined</code>)
+	*  @param interval (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initDeviceMotionEvent(type:String='', bubbles:Boolean=false, cancelable:Boolean=false, acceleration:Object=null, accelerationIncludingGravity:Object=null, rotationRate:Object=null, interval:Number=0):void {}
+	public function initDeviceMotionEvent(type:String=undefined, bubbles:Boolean=undefined, cancelable:Boolean=undefined, acceleration:Object=undefined, accelerationIncludingGravity:Object=undefined, rotationRate:Object=undefined, interval:Number=undefined):void {}
 }
 
 }

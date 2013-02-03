@@ -41,7 +41,7 @@ package randori.webkit.modules.webaudio
 {
 
 
-[JavaScript(export=false, name="AudioNode")]
+[JavaScript(export="false", nativecondition="WEB_AUDIO", name="AudioNode")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -61,14 +61,14 @@ public class AudioNode
 	public function get numberOfOutputs():uint { return 0; }
 	/**
 	*  @param destination
-	*  @param output (optional argument, default value is <code>0</code>)
-	*  @param input (optional argument, default value is <code>0</code>)
+	*  @param output (optional argument, default value is <code>undefined</code>)
+	*  @param input (optional argument, default value is <code>undefined</code>)
 	*/
-	public function connect(destination:AudioNode, output:uint=0, input:uint=0):void {}
+	public function connect(destination:AudioNode, output:uint=undefined, input:uint=undefined):void {}
 	/**
-	*  @param output (optional argument, default value is <code>0</code>)
+	*  @param output (optional argument, default value is <code>undefined</code>)
 	*/
-	public function disconnect(output:uint=0):void {}
+	public function disconnect(output:uint=undefined):void {}
 }
 
 }

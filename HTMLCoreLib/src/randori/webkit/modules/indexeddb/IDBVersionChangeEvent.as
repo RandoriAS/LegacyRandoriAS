@@ -42,7 +42,7 @@ package randori.webkit.modules.indexeddb
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="IDBVersionChangeEvent")]
+[JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="IDBVersionChangeEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

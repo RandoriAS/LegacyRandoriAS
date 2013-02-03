@@ -41,7 +41,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export=false, name="OESElementIndexUint")]
+[JavaScript(export="false", nativecondition="WEBGL", name="OESElementIndexUint")]
 /**
  *  @author RandoriAS
  *  @version 1.0

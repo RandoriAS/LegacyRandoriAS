@@ -42,7 +42,7 @@ package randori.webkit.modules.mediastream
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="RTCPeerConnection")]
+[JavaScript(export="false", nativecondition="MEDIA_STREAM", name="RTCPeerConnection")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -59,22 +59,22 @@ public class RTCPeerConnection
 	public function RTCPeerConnection(rtcIceServers:Object, mediaConstraints:Object=null) {super();}
 	/**
 	*  @param successCallback
-	*  @param failureCallback (optional argument, default value is <code>null</code>)
+	*  @param failureCallback (optional argument, default value is <code>undefined</code>)
 	*  @param mediaConstraints (optional argument, default value is <code>null</code>)
 	*/
-	public function createOffer(successCallback:Object, failureCallback:Object=null, mediaConstraints:Object=null):void {}
+	public function createOffer(successCallback:Object, failureCallback:Object=undefined, mediaConstraints:Object=null):void {}
 	/**
 	*  @param successCallback
-	*  @param failureCallback (optional argument, default value is <code>null</code>)
+	*  @param failureCallback (optional argument, default value is <code>undefined</code>)
 	*  @param mediaConstraints (optional argument, default value is <code>null</code>)
 	*/
-	public function createAnswer(successCallback:Object, failureCallback:Object=null, mediaConstraints:Object=null):void {}
+	public function createAnswer(successCallback:Object, failureCallback:Object=undefined, mediaConstraints:Object=null):void {}
 	/**
 	*  @param description
-	*  @param successCallback (optional argument, default value is <code>null</code>)
-	*  @param failureCallback (optional argument, default value is <code>null</code>)
+	*  @param successCallback (optional argument, default value is <code>undefined</code>)
+	*  @param failureCallback (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setLocalDescription(description:RTCSessionDescription, successCallback:Object=null, failureCallback:Object=null):void {}
+	public function setLocalDescription(description:RTCSessionDescription, successCallback:Object=undefined, failureCallback:Object=undefined):void {}
 
 	/**
 	*  @see randori.webkit.modules.mediastream.RTCSessionDescription
@@ -82,10 +82,10 @@ public class RTCPeerConnection
 	public function get localDescription():RTCSessionDescription { return null; }
 	/**
 	*  @param description
-	*  @param successCallback (optional argument, default value is <code>null</code>)
-	*  @param failureCallback (optional argument, default value is <code>null</code>)
+	*  @param successCallback (optional argument, default value is <code>undefined</code>)
+	*  @param failureCallback (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setRemoteDescription(description:RTCSessionDescription, successCallback:Object=null, failureCallback:Object=null):void {}
+	public function setRemoteDescription(description:RTCSessionDescription, successCallback:Object=undefined, failureCallback:Object=undefined):void {}
 
 	/**
 	*  @see randori.webkit.modules.mediastream.RTCSessionDescription
@@ -129,9 +129,9 @@ public class RTCPeerConnection
 	public function removeStream(stream:MediaStream):void {}
 	/**
 	*  @param successCallback
-	*  @param selector (optional argument, default value is <code>null</code>)
+	*  @param selector (optional argument, default value is <code>undefined</code>)
 	*/
-	public function getStats(successCallback:Object, selector:MediaStreamTrack=null):void {}
+	public function getStats(successCallback:Object, selector:MediaStreamTrack=undefined):void {}
 	/**
 	*  @param label
 	*  @param options (optional argument, default value is <code>null</code>)

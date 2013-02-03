@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="Comment")]
+[JavaScript(export="false", name="Comment")]
 /**
  *  @author RandoriAS
  *  @version 1.0

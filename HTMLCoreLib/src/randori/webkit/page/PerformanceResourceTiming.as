@@ -41,7 +41,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export=false, name="PerformanceResourceTiming")]
+[JavaScript(export="false", nativecondition="RESOURCE_TIMING", name="PerformanceResourceTiming")]
 /**
  *  @author RandoriAS
  *  @version 1.0

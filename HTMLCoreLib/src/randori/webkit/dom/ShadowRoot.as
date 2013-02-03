@@ -42,7 +42,7 @@ package randori.webkit.dom
 
 import randori.webkit.page.Selection;
 
-[JavaScript(export=false, name="ShadowRoot")]
+[JavaScript(export="false", nativecondition="SHADOW_DOM", name="ShadowRoot")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -71,32 +71,32 @@ public class ShadowRoot extends DocumentFragment
 	*/
 	public function getSelection():Selection { return null;}
 	/**
-	*  @param elementId (optional argument, default value is <code>''</code>)
+	*  @param elementId (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Element</code> instance.
 	*/
-	public function getElementById(elementId:String=''):Element { return null;}
+	public function getElementById(elementId:String=undefined):Element { return null;}
 	/**
-	*  @param className (optional argument, default value is <code>''</code>)
+	*  @param className (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByClassName(className:String=''):Object { return null;}
+	public function getElementsByClassName(className:String=undefined):Object { return null;}
 	/**
-	*  @param tagName (optional argument, default value is <code>''</code>)
+	*  @param tagName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByTagName(tagName:String=''):Object { return null;}
+	public function getElementsByTagName(tagName:String=undefined):Object { return null;}
 	/**
-	*  @param namespaceURI (optional argument, default value is <code>''</code>)
-	*  @param localName (optional argument, default value is <code>''</code>)
+	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
+	*  @param localName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByTagNameNS(namespaceURI:String='', localName:String=''):Object { return null;}
+	public function getElementsByTagNameNS(namespaceURI:String=undefined, localName:String=undefined):Object { return null;}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Element</code> instance.
 	*/
-	public function elementFromPoint(x:uint=0, y:uint=0):Element { return null;}
+	public function elementFromPoint(x:uint=undefined, y:uint=undefined):Element { return null;}
 }
 
 }

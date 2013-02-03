@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLSpanElement")]
+[JavaScript(export="false", name="HTMLSpanElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

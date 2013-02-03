@@ -42,7 +42,7 @@ package randori.webkit.html.shadow
 
 import randori.webkit.html.HTMLElement;
 
-[JavaScript(export=false, name="HTMLContentElement")]
+[JavaScript(export="false", nativecondition="SHADOW_DOM", name="HTMLContentElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

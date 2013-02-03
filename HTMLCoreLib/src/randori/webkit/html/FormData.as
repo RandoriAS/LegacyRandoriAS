@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="FormData")]
+[JavaScript(export="false", name="FormData")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -51,11 +51,11 @@ package randori.webkit.html
 public class FormData
 {
 	/**
-	*  @param name (optional argument, default value is <code>''</code>)
-	*  @param value (optional argument, default value is <code>''</code>)
-	*  @param filename (optional argument, default value is <code>''</code>)
+	*  @param name (optional argument, default value is <code>undefined</code>)
+	*  @param value (optional argument, default value is <code>undefined</code>)
+	*  @param filename (optional argument, default value is <code>undefined</code>)
 	*/
-	public function append(name:String='', value:String='', filename:String=''):void {}
+	public function append(name:String=undefined, value:String=undefined, filename:String=undefined):void {}
 }
 
 }

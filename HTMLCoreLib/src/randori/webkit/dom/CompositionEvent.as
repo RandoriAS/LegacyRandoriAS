@@ -42,7 +42,7 @@ package randori.webkit.dom
 
 import randori.webkit.page.Window;
 
-[JavaScript(export=false, name="CompositionEvent")]
+[JavaScript(export="false", name="CompositionEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -55,13 +55,13 @@ public class CompositionEvent extends UIEvent
 
 	public function get data():String { return ''; }
 	/**
-	*  @param typeArg (optional argument, default value is <code>''</code>)
-	*  @param canBubbleArg (optional argument, default value is <code>false</code>)
-	*  @param cancelableArg (optional argument, default value is <code>false</code>)
-	*  @param viewArg (optional argument, default value is <code>null</code>)
-	*  @param dataArg (optional argument, default value is <code>''</code>)
+	*  @param typeArg (optional argument, default value is <code>undefined</code>)
+	*  @param canBubbleArg (optional argument, default value is <code>undefined</code>)
+	*  @param cancelableArg (optional argument, default value is <code>undefined</code>)
+	*  @param viewArg (optional argument, default value is <code>undefined</code>)
+	*  @param dataArg (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initCompositionEvent(typeArg:String='', canBubbleArg:Boolean=false, cancelableArg:Boolean=false, viewArg:Window=null, dataArg:String=''):void {}
+	public function initCompositionEvent(typeArg:String=undefined, canBubbleArg:Boolean=undefined, cancelableArg:Boolean=undefined, viewArg:Window=undefined, dataArg:String=undefined):void {}
 }
 
 }

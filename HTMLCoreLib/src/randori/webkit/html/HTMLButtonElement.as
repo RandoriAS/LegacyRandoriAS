@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLButtonElement")]
+[JavaScript(export="false", name="HTMLButtonElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="OverflowEvent")]
+[JavaScript(export="false", name="OverflowEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -61,11 +61,11 @@ public class OverflowEvent extends DomEvent
 
 	public function get verticalOverflow():Boolean { return false; }
 	/**
-	*  @param orient (optional argument, default value is <code>0</code>)
-	*  @param horizontalOverflow (optional argument, default value is <code>false</code>)
-	*  @param verticalOverflow (optional argument, default value is <code>false</code>)
+	*  @param orient (optional argument, default value is <code>undefined</code>)
+	*  @param horizontalOverflow (optional argument, default value is <code>undefined</code>)
+	*  @param verticalOverflow (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initOverflowEvent(orient:uint=0, horizontalOverflow:Boolean=false, verticalOverflow:Boolean=false):void {}
+	public function initOverflowEvent(orient:uint=undefined, horizontalOverflow:Boolean=undefined, verticalOverflow:Boolean=undefined):void {}
 }
 
 }

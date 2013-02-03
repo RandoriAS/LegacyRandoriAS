@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLBaseFontElement")]
+[JavaScript(export="false", name="HTMLBaseFontElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

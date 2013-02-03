@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGTests")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGTests")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -66,10 +66,10 @@ public interface SVGTests
 	*/
 	 function get systemLanguage():SVGStringList;
 	/**
-	*  @param extension (optional argument, default value is <code>''</code>)
+	*  @param extension (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	 function hasExtension(extension:String=''):Boolean;
+	 function hasExtension(extension:String=undefined):Boolean;
 }
 
 }

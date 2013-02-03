@@ -41,7 +41,7 @@ package randori.webkit.modules.quota
 {
 
 
-[JavaScript(export=false, name="StorageInfo")]
+[JavaScript(export="false", nativecondition="QUOTA", name="StorageInfo")]
 /**
  *  @author RandoriAS
  *  @version 1.0

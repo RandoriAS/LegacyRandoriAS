@@ -44,7 +44,7 @@ import randori.webkit.dom.Node;
 import randori.webkit.dom.Document;
 import randori.webkit.dom.DocumentFragment;
 
-[JavaScript(export=false, name="XSLTProcessor")]
+[JavaScript(export="false", nativecondition="XSLT", name="XSLTProcessor")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -58,20 +58,20 @@ public class XSLTProcessor
 	*/
 	public function XSLTProcessor() {super();}
 	/**
-	*  @param stylesheet (optional argument, default value is <code>null</code>)
+	*  @param stylesheet (optional argument, default value is <code>undefined</code>)
 	*/
-	public function importStylesheet(stylesheet:Node=null):void {}
+	public function importStylesheet(stylesheet:Node=undefined):void {}
 	/**
-	*  @param source (optional argument, default value is <code>null</code>)
-	*  @param docVal (optional argument, default value is <code>null</code>)
+	*  @param source (optional argument, default value is <code>undefined</code>)
+	*  @param docVal (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>DocumentFragment</code> instance.
 	*/
-	public function transformToFragment(source:Node=null, docVal:Document=null):DocumentFragment { return null;}
+	public function transformToFragment(source:Node=undefined, docVal:Document=undefined):DocumentFragment { return null;}
 	/**
-	*  @param source (optional argument, default value is <code>null</code>)
+	*  @param source (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Document</code> instance.
 	*/
-	public function transformToDocument(source:Node=null):Document { return null;}
+	public function transformToDocument(source:Node=undefined):Document { return null;}
 	/**
 	*  @param namespaceURI
 	*  @param localName

@@ -42,7 +42,7 @@ package randori.webkit.modules.speech
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="SpeechSynthesisEvent")]
+[JavaScript(export="false", nativecondition="SPEECH_SYNTHESIS", name="SpeechSynthesisEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -42,7 +42,7 @@ package randori.webkit.modules.notifications
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="Notification")]
+[JavaScript(export="false", nativecondition="NOTIFICATIONS", name="Notification")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -54,9 +54,9 @@ public class Notification
 	/**
 	*  Creates a new <code>Notification</code> instance.
 	*  @param title
-	*  @param options (optional argument, default value is <code>null</code>)
+	*  @param options (optional argument, default value is <code>undefined</code>)
 	*/
-	public function Notification(title:String, options:Object=null) {super();}
+	public function Notification(title:String, options:Object=undefined) {super();}
 	public function show():void {}
 	public function cancel():void {}
 	public function close():void {}

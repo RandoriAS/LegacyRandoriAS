@@ -41,7 +41,7 @@ package randori.webkit.modules.mediastream
 {
 
 
-[JavaScript(export=false, name="RTCStatsReport")]
+[JavaScript(export="false", nativecondition="MEDIA_STREAM", name="RTCStatsReport")]
 /**
  *  @author RandoriAS
  *  @version 1.0

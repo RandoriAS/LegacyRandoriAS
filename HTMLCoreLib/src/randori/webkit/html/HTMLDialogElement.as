@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLDialogElement")]
+[JavaScript(export="false", nativecondition="DIALOG_ELEMENT", name="HTMLDialogElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

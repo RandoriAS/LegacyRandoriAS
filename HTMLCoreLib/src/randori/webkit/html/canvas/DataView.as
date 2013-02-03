@@ -41,7 +41,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export=false, name="DataView")]
+[JavaScript(export="false", name="DataView")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGFEConvolveMatrixElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGFEConvolveMatrixElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

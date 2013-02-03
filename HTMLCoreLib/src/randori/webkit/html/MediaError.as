@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="MediaError")]
+[JavaScript(export="false", nativecondition="VIDEO", name="MediaError")]
 /**
  *  @author RandoriAS
  *  @version 1.0

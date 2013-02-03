@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGLocatable")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGLocatable")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -73,10 +73,10 @@ public interface SVGLocatable
 	*/
 	 function getScreenCTM():SVGMatrix;
 	/**
-	*  @param element (optional argument, default value is <code>null</code>)
+	*  @param element (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>SVGMatrix</code> instance.
 	*/
-	 function getTransformToElement(element:SVGElement=null):SVGMatrix;
+	 function getTransformToElement(element:SVGElement=undefined):SVGMatrix;
 }
 
 }

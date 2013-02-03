@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="ClientRect")]
+[JavaScript(export="false", name="ClientRect")]
 /**
  *  @author RandoriAS
  *  @version 1.0

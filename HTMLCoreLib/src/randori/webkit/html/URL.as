@@ -42,7 +42,7 @@ package randori.webkit.html
 
 import randori.webkit.modules.mediasource.MediaSource;
 
-[JavaScript(export=false, name="URL")]
+[JavaScript(export="false", nativecondition="BLOB", name="URL")]
 /**
  *  @author RandoriAS
  *  @version 1.0

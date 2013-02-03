@@ -41,7 +41,7 @@ package randori.webkit.modules.speech
 {
 
 
-[JavaScript(export=false, name="SpeechSynthesisUtterance")]
+[JavaScript(export="false", nativecondition="SPEECH_SYNTHESIS", name="SpeechSynthesisUtterance")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -52,9 +52,9 @@ public class SpeechSynthesisUtterance
 {
 	/**
 	*  Creates a new <code>SpeechSynthesisUtterance</code> instance.
-	*  @param text (optional argument, default value is <code>''</code>)
+	*  @param text (optional argument, default value is <code>null</code>)
 	*/
-	public function SpeechSynthesisUtterance(text:String='') {super();}
+	public function SpeechSynthesisUtterance(text:String=null) {super();}
 
 	public function get text():String { return ''; }
 	public function set text(value:String):void { }

@@ -42,7 +42,7 @@ package randori.webkit.html
 
 import randori.webkit.css.StyleSheet;
 
-[JavaScript(export=false, name="HTMLLinkElement")]
+[JavaScript(export="false", name="HTMLLinkElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

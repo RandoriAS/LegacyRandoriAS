@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLDivElement")]
+[JavaScript(export="false", name="HTMLDivElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

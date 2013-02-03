@@ -42,7 +42,7 @@ package randori.webkit.modules.battery
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="BatteryManager")]
+[JavaScript(export="false", nativecondition="BATTERY_STATUS", name="BatteryManager")]
 /**
  *  @author RandoriAS
  *  @version 1.0

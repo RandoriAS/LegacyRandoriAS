@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGFETurbulenceElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGFETurbulenceElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

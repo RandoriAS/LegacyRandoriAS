@@ -42,7 +42,7 @@ package randori.webkit.dom
 
 import randori.webkit.page.Window;
 
-[JavaScript(export=false, name="MouseEvent")]
+[JavaScript(export="false", name="MouseEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -76,23 +76,23 @@ public class MouseEvent extends UIEvent
 	*/
 	public function get relatedTarget():EventTarget { return null; }
 	/**
-	*  @param type (optional argument, default value is <code>''</code>)
-	*  @param canBubble (optional argument, default value is <code>false</code>)
-	*  @param cancelable (optional argument, default value is <code>false</code>)
-	*  @param view (optional argument, default value is <code>null</code>)
-	*  @param detail (optional argument, default value is <code>0</code>)
-	*  @param screenX (optional argument, default value is <code>0</code>)
-	*  @param screenY (optional argument, default value is <code>0</code>)
-	*  @param clientX (optional argument, default value is <code>0</code>)
-	*  @param clientY (optional argument, default value is <code>0</code>)
-	*  @param ctrlKey (optional argument, default value is <code>false</code>)
-	*  @param altKey (optional argument, default value is <code>false</code>)
-	*  @param shiftKey (optional argument, default value is <code>false</code>)
-	*  @param metaKey (optional argument, default value is <code>false</code>)
-	*  @param button (optional argument, default value is <code>0</code>)
-	*  @param relatedTarget (optional argument, default value is <code>null</code>)
+	*  @param type (optional argument, default value is <code>undefined</code>)
+	*  @param canBubble (optional argument, default value is <code>undefined</code>)
+	*  @param cancelable (optional argument, default value is <code>undefined</code>)
+	*  @param view (optional argument, default value is <code>undefined</code>)
+	*  @param detail (optional argument, default value is <code>undefined</code>)
+	*  @param screenX (optional argument, default value is <code>undefined</code>)
+	*  @param screenY (optional argument, default value is <code>undefined</code>)
+	*  @param clientX (optional argument, default value is <code>undefined</code>)
+	*  @param clientY (optional argument, default value is <code>undefined</code>)
+	*  @param ctrlKey (optional argument, default value is <code>undefined</code>)
+	*  @param altKey (optional argument, default value is <code>undefined</code>)
+	*  @param shiftKey (optional argument, default value is <code>undefined</code>)
+	*  @param metaKey (optional argument, default value is <code>undefined</code>)
+	*  @param button (optional argument, default value is <code>undefined</code>)
+	*  @param relatedTarget (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initMouseEvent(type:String='', canBubble:Boolean=false, cancelable:Boolean=false, view:Window=null, detail:uint=0, screenX:uint=0, screenY:uint=0, clientX:uint=0, clientY:uint=0, ctrlKey:Boolean=false, altKey:Boolean=false, shiftKey:Boolean=false, metaKey:Boolean=false, button:uint=0, relatedTarget:EventTarget=null):void {}
+	public function initMouseEvent(type:String=undefined, canBubble:Boolean=undefined, cancelable:Boolean=undefined, view:Window=undefined, detail:uint=undefined, screenX:uint=undefined, screenY:uint=undefined, clientX:uint=undefined, clientY:uint=undefined, ctrlKey:Boolean=undefined, altKey:Boolean=undefined, shiftKey:Boolean=undefined, metaKey:Boolean=undefined, button:uint=undefined, relatedTarget:EventTarget=undefined):void {}
 
 	public function get offsetX():uint { return 0; }
 

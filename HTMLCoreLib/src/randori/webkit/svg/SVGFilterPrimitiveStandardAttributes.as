@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGFilterPrimitiveStandardAttributes")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGFilterPrimitiveStandardAttributes")]
 /**
  *  @author RandoriAS
  *  @version 1.0

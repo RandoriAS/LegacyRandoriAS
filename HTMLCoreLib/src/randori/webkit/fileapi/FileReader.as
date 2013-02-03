@@ -42,7 +42,7 @@ package randori.webkit.fileapi
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="FileReader")]
+[JavaScript(export="false", nativecondition="BLOB", name="FileReader")]
 /**
  *  @author RandoriAS
  *  @version 1.0

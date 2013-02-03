@@ -42,7 +42,7 @@ package randori.webkit.modules.networkinfo
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="NetworkInfoConnection")]
+[JavaScript(export="false", nativecondition="NETWORK_INFO", name="NetworkInfoConnection")]
 /**
  *  @author RandoriAS
  *  @version 1.0

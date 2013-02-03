@@ -42,7 +42,7 @@ package randori.webkit.html
 
 import randori.webkit.html.track.TextTrack;
 
-[JavaScript(export=false, name="HTMLMediaElement")]
+[JavaScript(export="false", nativecondition="VIDEO", name="HTMLMediaElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -83,11 +83,11 @@ public class HTMLMediaElement extends HTMLElement
 	public function get buffered():TimeRanges { return null; }
 	public function load():void {}
 	/**
-	*  @param type (optional argument, default value is <code>''</code>)
-	*  @param keySystem (optional argument, default value is <code>''</code>)
+	*  @param type (optional argument, default value is <code>undefined</code>)
+	*  @param keySystem (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
-	public function canPlayType(type:String='', keySystem:String=''):String { return '';}
+	public function canPlayType(type:String=undefined, keySystem:String=undefined):String { return '';}
 	public static const HAVE_NOTHING:uint = 0;
 	public static const HAVE_METADATA:uint = 1;
 	public static const HAVE_CURRENT_DATA:uint = 2;

@@ -43,7 +43,7 @@ package randori.webkit.inspector
 import randori.webkit.dom.MouseEvent;
 import randori.webkit.modules.filesystem.DOMFileSystem;
 
-[JavaScript(export=false, name="InspectorFrontendHost")]
+[JavaScript(export="false", nativecondition="INSPECTOR", name="InspectorFrontendHost")]
 /**
  *  @author RandoriAS
  *  @version 1.0

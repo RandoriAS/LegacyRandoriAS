@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLDataListElement")]
+[JavaScript(export="false", nativecondition="DATALIST_ELEMENT", name="HTMLDataListElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

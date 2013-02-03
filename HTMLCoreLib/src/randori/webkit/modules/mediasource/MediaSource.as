@@ -42,7 +42,7 @@ package randori.webkit.modules.mediasource
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="MediaSource")]
+[JavaScript(export="false", nativecondition="MEDIA_SOURCE", name="MediaSource")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -80,9 +80,9 @@ public class MediaSource
 
 	public function get readyState():String { return ''; }
 	/**
-	*  @param error (optional argument, default value is <code>''</code>)
+	*  @param error (optional argument, default value is <code>null</code>)
 	*/
-	public function endOfStream(error:String=''):void {}
+	public function endOfStream(error:String=null):void {}
 	/**
 	*  @param type
 	*  @param listener

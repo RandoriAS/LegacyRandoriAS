@@ -41,7 +41,7 @@ package randori.webkit.modules.mediastream
 {
 
 
-[JavaScript(export=false, name="RTCSessionDescription")]
+[JavaScript(export="false", nativecondition="MEDIA_STREAM", name="RTCSessionDescription")]
 /**
  *  @author RandoriAS
  *  @version 1.0

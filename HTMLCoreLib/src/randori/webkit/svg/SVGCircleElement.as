@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGCircleElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGCircleElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -86,10 +86,10 @@ public class SVGCircleElement extends SVGStyledElement implements SVGTests, SVGL
 	*/
 	public function get systemLanguage():SVGStringList { return null; }
 	/**
-	*  @param extension (optional argument, default value is <code>''</code>)
+	*  @param extension (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function hasExtension(extension:String=''):Boolean { return false;}
+	public function hasExtension(extension:String=undefined):Boolean { return false;}
 
 	public function get xmllang():String { return ''; }
 	public function set xmllang(value:String):void { }
@@ -129,10 +129,10 @@ public class SVGCircleElement extends SVGStyledElement implements SVGTests, SVGL
 	*/
 	public function getScreenCTM():SVGMatrix { return null;}
 	/**
-	*  @param element (optional argument, default value is <code>null</code>)
+	*  @param element (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>SVGMatrix</code> instance.
 	*/
-	public function getTransformToElement(element:SVGElement=null):SVGMatrix { return null;}
+	public function getTransformToElement(element:SVGElement=undefined):SVGMatrix { return null;}
 }
 
 }

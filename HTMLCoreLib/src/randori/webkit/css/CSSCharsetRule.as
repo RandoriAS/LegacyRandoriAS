@@ -41,7 +41,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export=false, name="CSSCharsetRule")]
+[JavaScript(export="false", name="CSSCharsetRule")]
 /**
  *  @author RandoriAS
  *  @version 1.0

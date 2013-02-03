@@ -41,7 +41,7 @@ package randori.webkit.fileapi
 {
 
 
-[JavaScript(export=false, name="Blob")]
+[JavaScript(export="false", name="Blob")]
 /**
  *  @author RandoriAS
  *  @version 1.0

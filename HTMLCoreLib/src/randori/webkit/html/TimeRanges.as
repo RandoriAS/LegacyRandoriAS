@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="TimeRanges")]
+[JavaScript(export="false", nativecondition="VIDEO", name="TimeRanges")]
 /**
  *  @author RandoriAS
  *  @version 1.0

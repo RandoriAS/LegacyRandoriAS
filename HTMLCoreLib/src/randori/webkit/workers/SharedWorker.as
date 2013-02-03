@@ -42,7 +42,7 @@ package randori.webkit.workers
 
 import randori.webkit.dom.MessagePort;
 
-[JavaScript(export=false, name="SharedWorker")]
+[JavaScript(export="false", nativecondition="SHARED_WORKERS", name="SharedWorker")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -55,9 +55,9 @@ public class SharedWorker extends AbstractWorker
 	/**
 	*  Creates a new <code>SharedWorker</code> instance.
 	*  @param scriptURL
-	*  @param name (optional argument, default value is <code>''</code>)
+	*  @param name (optional argument, default value is <code>null</code>)
 	*/
-	public function SharedWorker(scriptURL:String, name:String='') {super();}
+	public function SharedWorker(scriptURL:String, name:String=null) {super();}
 
 	/**
 	*  @see randori.webkit.dom.MessagePort

@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGComponentTransferFunctionElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGComponentTransferFunctionElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

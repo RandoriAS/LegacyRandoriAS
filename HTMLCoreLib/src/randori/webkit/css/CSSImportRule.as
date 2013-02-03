@@ -41,7 +41,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export=false, name="CSSImportRule")]
+[JavaScript(export="false", name="CSSImportRule")]
 /**
  *  @author RandoriAS
  *  @version 1.0

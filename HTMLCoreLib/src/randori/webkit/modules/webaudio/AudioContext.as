@@ -44,7 +44,7 @@ import randori.webkit.html.canvas.ArrayBuffer;
 import randori.webkit.html.HTMLMediaElement;
 import randori.webkit.modules.mediastream.MediaStream;
 
-[JavaScript(export=false, name="AudioContext")]
+[JavaScript(export="false", nativecondition="WEB_AUDIO", name="AudioContext")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.fileapi
 {
 
 
-[JavaScript(export=false, name="File")]
+[JavaScript(export="false", name="File")]
 /**
  *  @author RandoriAS
  *  @version 1.0

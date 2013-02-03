@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGMatrix")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGMatrix")]
 /**
  *  @author RandoriAS
  *  @version 1.0

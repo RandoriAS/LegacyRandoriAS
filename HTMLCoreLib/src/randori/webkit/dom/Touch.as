@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="Touch")]
+[JavaScript(export="false", nativecondition="TOUCH_EVENTS", name="Touch")]
 /**
  *  @author RandoriAS
  *  @version 1.0

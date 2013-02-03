@@ -41,7 +41,7 @@ package randori.webkit.modules.geolocation
 {
 
 
-[JavaScript(export=false, name="Geolocation")]
+[JavaScript(export="false", nativecondition="GEOLOCATION", name="Geolocation")]
 /**
  *  @author RandoriAS
  *  @version 1.0

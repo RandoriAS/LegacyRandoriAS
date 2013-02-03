@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="ElementTimeControl")]
+[JavaScript(export="false", nativecondition="SVG", name="ElementTimeControl")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -52,14 +52,14 @@ public interface ElementTimeControl
 {
 	 function beginElement():void;
 	/**
-	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @param offset (optional argument, default value is <code>undefined</code>)
 	*/
-	 function beginElementAt(offset:Number=0):void;
+	 function beginElementAt(offset:Number=undefined):void;
 	 function endElement():void;
 	/**
-	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @param offset (optional argument, default value is <code>undefined</code>)
 	*/
-	 function endElementAt(offset:Number=0):void;
+	 function endElementAt(offset:Number=undefined):void;
 }
 
 }

@@ -44,7 +44,7 @@ import randori.webkit.dom.Document;
 import randori.webkit.page.Window;
 import randori.webkit.svg.SVGDocument;
 
-[JavaScript(export=false, name="HTMLIFrameElement")]
+[JavaScript(export="false", name="HTMLIFrameElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export=false, name="WebGLLoseContext")]
+[JavaScript(export="false", nativecondition="WEBGL", name="WebGLLoseContext")]
 /**
  *  @author RandoriAS
  *  @version 1.0

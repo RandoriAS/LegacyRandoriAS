@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGPathSegArcAbs")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGPathSegArcAbs")]
 /**
  *  @author RandoriAS
  *  @version 1.0

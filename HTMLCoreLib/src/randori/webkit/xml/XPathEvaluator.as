@@ -42,7 +42,7 @@ package randori.webkit.xml
 
 import randori.webkit.dom.Node;
 
-[JavaScript(export=false, name="XPathEvaluator")]
+[JavaScript(export="false", name="XPathEvaluator")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -56,25 +56,25 @@ public class XPathEvaluator
 	*/
 	public function XPathEvaluator() {super();}
 	/**
-	*  @param expression (optional argument, default value is <code>''</code>)
-	*  @param resolver (optional argument, default value is <code>null</code>)
+	*  @param expression (optional argument, default value is <code>undefined</code>)
+	*  @param resolver (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>XPathExpression</code> instance.
 	*/
-	public function createExpression(expression:String='', resolver:XPathNSResolver=null):XPathExpression { return null;}
+	public function createExpression(expression:String=undefined, resolver:XPathNSResolver=undefined):XPathExpression { return null;}
 	/**
-	*  @param nodeResolver (optional argument, default value is <code>null</code>)
+	*  @param nodeResolver (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>XPathNSResolver</code> instance.
 	*/
-	public function createNSResolver(nodeResolver:Node=null):XPathNSResolver { return null;}
+	public function createNSResolver(nodeResolver:Node=undefined):XPathNSResolver { return null;}
 	/**
-	*  @param expression (optional argument, default value is <code>''</code>)
-	*  @param contextNode (optional argument, default value is <code>null</code>)
-	*  @param resolver (optional argument, default value is <code>null</code>)
-	*  @param type (optional argument, default value is <code>0</code>)
-	*  @param inResult (optional argument, default value is <code>null</code>)
+	*  @param expression (optional argument, default value is <code>undefined</code>)
+	*  @param contextNode (optional argument, default value is <code>undefined</code>)
+	*  @param resolver (optional argument, default value is <code>undefined</code>)
+	*  @param type (optional argument, default value is <code>undefined</code>)
+	*  @param inResult (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>XPathResult</code> instance.
 	*/
-	public function evaluate(expression:String='', contextNode:Node=null, resolver:XPathNSResolver=null, type:uint=0, inResult:XPathResult=null):XPathResult { return null;}
+	public function evaluate(expression:String=undefined, contextNode:Node=undefined, resolver:XPathNSResolver=undefined, type:uint=undefined, inResult:XPathResult=undefined):XPathResult { return null;}
 }
 
 }

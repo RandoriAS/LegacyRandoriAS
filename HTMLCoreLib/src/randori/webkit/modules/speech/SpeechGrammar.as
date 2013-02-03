@@ -41,7 +41,7 @@ package randori.webkit.modules.speech
 {
 
 
-[JavaScript(export=false, name="SpeechGrammar")]
+[JavaScript(export="false", nativecondition="SCRIPTED_SPEECH", name="SpeechGrammar")]
 /**
  *  @author RandoriAS
  *  @version 1.0

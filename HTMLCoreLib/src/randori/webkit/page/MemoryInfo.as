@@ -41,7 +41,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export=false, name="MemoryInfo")]
+[JavaScript(export="false", name="MemoryInfo")]
 /**
  *  @author RandoriAS
  *  @version 1.0

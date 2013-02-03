@@ -42,7 +42,7 @@ package randori.webkit.workers
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="AbstractWorker")]
+[JavaScript(export="false", nativecondition="WORKERS", name="AbstractWorker")]
 /**
  *  @author RandoriAS
  *  @version 1.0

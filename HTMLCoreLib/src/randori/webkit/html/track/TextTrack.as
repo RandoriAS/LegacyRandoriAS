@@ -42,7 +42,7 @@ package randori.webkit.html.track
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="TextTrack")]
+[JavaScript(export="false", nativecondition="VIDEO_TRACK", name="TextTrack")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="TransitionEvent")]
+[JavaScript(export="false", nativecondition="CSS_TRANSFORMS_ANIMATIONS_TRANSITIONS_UNPREFIXED", name="TransitionEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

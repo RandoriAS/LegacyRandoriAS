@@ -42,7 +42,7 @@ package randori.webkit.modules.mediastream
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="MediaStream")]
+[JavaScript(export="false", nativecondition="MEDIA_STREAM", name="MediaStream")]
 /**
  *  @author RandoriAS
  *  @version 1.0

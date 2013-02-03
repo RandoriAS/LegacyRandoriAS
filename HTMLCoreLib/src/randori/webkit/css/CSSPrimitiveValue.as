@@ -41,7 +41,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export=false, name="CSSPrimitiveValue")]
+[JavaScript(export="false", name="CSSPrimitiveValue")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -83,20 +83,20 @@ public class CSSPrimitiveValue extends CSSValue
 
 	public function get primitiveType():uint { return 0; }
 	/**
-	*  @param unitType (optional argument, default value is <code>0</code>)
-	*  @param floatValue (optional argument, default value is <code>0</code>)
+	*  @param unitType (optional argument, default value is <code>undefined</code>)
+	*  @param floatValue (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setFloatValue(unitType:uint=0, floatValue:Number=0):void {}
+	public function setFloatValue(unitType:uint=undefined, floatValue:Number=undefined):void {}
 	/**
-	*  @param unitType (optional argument, default value is <code>0</code>)
+	*  @param unitType (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Number</code> instance.
 	*/
-	public function getFloatValue(unitType:uint=0):Number { return 0;}
+	public function getFloatValue(unitType:uint=undefined):Number { return 0;}
 	/**
-	*  @param stringType (optional argument, default value is <code>0</code>)
-	*  @param stringValue (optional argument, default value is <code>''</code>)
+	*  @param stringType (optional argument, default value is <code>undefined</code>)
+	*  @param stringValue (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setStringValue(stringType:uint=0, stringValue:String=''):void {}
+	public function setStringValue(stringType:uint=undefined, stringValue:String=undefined):void {}
 	/**
 	*  @return A <code>String</code> instance.
 	*/

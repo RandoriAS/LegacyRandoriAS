@@ -43,7 +43,7 @@ package randori.webkit.modules.websockets
 import randori.webkit.html.canvas.ArrayBuffer;
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="WebSocket")]
+[JavaScript(export="false", nativecondition="WEB_SOCKETS", name="WebSocket")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export=false, name="Rect")]
+[JavaScript(export="false", name="Rect")]
 /**
  *  @author RandoriAS
  *  @version 1.0

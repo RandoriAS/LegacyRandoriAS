@@ -41,7 +41,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export=false, name="OESTextureFloat")]
+[JavaScript(export="false", nativecondition="WEBGL", name="OESTextureFloat")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export=false, name="CanvasPattern")]
+[JavaScript(export="false", name="CanvasPattern")]
 /**
  *  @author RandoriAS
  *  @version 1.0

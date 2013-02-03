@@ -41,7 +41,7 @@ package randori.webkit.modules.filesystem
 {
 
 
-[JavaScript(export=false, name="DirectoryReader")]
+[JavaScript(export="false", nativecondition="FILE_SYSTEM", name="DirectoryReader")]
 /**
  *  @author RandoriAS
  *  @version 1.0

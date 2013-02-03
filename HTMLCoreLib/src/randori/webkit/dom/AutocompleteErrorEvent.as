@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="AutocompleteErrorEvent")]
+[JavaScript(export="false", nativecondition="REQUEST_AUTOCOMPLETE", name="AutocompleteErrorEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

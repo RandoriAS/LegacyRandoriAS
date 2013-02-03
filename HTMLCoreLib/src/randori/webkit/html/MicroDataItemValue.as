@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="MicroDataItemValue")]
+[JavaScript(export="false", nativecondition="MICRODATA", name="MicroDataItemValue")]
 /**
  *  @author RandoriAS
  *  @version 1.0

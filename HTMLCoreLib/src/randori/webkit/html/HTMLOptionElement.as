@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLOptionElement")]
+[JavaScript(export="false", name="HTMLOptionElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -54,12 +54,12 @@ public class HTMLOptionElement extends HTMLElement
 	[JavascriptMethod(name="Option")]
 	/**
 	*  Creates a new <code>HTMLOptionElement</code> instance.
-	*  @param data (optional argument, default value is <code>''</code>)
-	*  @param value (optional argument, default value is <code>''</code>)
-	*  @param defaultSelected (optional argument, default value is <code>false</code>)
-	*  @param selected (optional argument, default value is <code>false</code>)
+	*  @param data (optional argument, default value is <code>null</code>)
+	*  @param value (optional argument, default value is <code>null</code>)
+	*  @param defaultSelected (optional argument, default value is <code>undefined</code>)
+	*  @param selected (optional argument, default value is <code>undefined</code>)
 	*/
-	public function HTMLOptionElement(data:String='', value:String='', defaultSelected:Boolean=false, selected:Boolean=false) {super();}
+	public function HTMLOptionElement(data:String=null, value:String=null, defaultSelected:Boolean=undefined, selected:Boolean=undefined) {super();}
 
 	public function get disabled():Boolean { return false; }
 	public function set disabled(value:Boolean):void { }

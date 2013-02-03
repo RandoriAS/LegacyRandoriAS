@@ -41,7 +41,7 @@ package randori.webkit.modules.webaudio
 {
 
 
-[JavaScript(export=false, name="ChannelMergerNode")]
+[JavaScript(export="false", nativecondition="WEB_AUDIO", name="ChannelMergerNode")]
 /**
  *  @author RandoriAS
  *  @version 1.0

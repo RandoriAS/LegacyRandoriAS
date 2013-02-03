@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGLengthList")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGLengthList")]
 /**
  *  @author RandoriAS
  *  @version 1.0

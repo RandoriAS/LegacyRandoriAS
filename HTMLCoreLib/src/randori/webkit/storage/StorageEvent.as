@@ -42,7 +42,7 @@ package randori.webkit.storage
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="StorageEvent")]
+[JavaScript(export="false", name="StorageEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -66,16 +66,16 @@ public class StorageEvent extends DomEvent
 	*/
 	public function get storageArea():Storage { return null; }
 	/**
-	*  @param typeArg (optional argument, default value is <code>''</code>)
-	*  @param canBubbleArg (optional argument, default value is <code>false</code>)
-	*  @param cancelableArg (optional argument, default value is <code>false</code>)
-	*  @param keyArg (optional argument, default value is <code>''</code>)
-	*  @param oldValueArg (optional argument, default value is <code>''</code>)
-	*  @param newValueArg (optional argument, default value is <code>''</code>)
-	*  @param urlArg (optional argument, default value is <code>''</code>)
-	*  @param storageAreaArg (optional argument, default value is <code>null</code>)
+	*  @param typeArg (optional argument, default value is <code>undefined</code>)
+	*  @param canBubbleArg (optional argument, default value is <code>undefined</code>)
+	*  @param cancelableArg (optional argument, default value is <code>undefined</code>)
+	*  @param keyArg (optional argument, default value is <code>undefined</code>)
+	*  @param oldValueArg (optional argument, default value is <code>undefined</code>)
+	*  @param newValueArg (optional argument, default value is <code>undefined</code>)
+	*  @param urlArg (optional argument, default value is <code>undefined</code>)
+	*  @param storageAreaArg (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initStorageEvent(typeArg:String='', canBubbleArg:Boolean=false, cancelableArg:Boolean=false, keyArg:String='', oldValueArg:String='', newValueArg:String='', urlArg:String='', storageAreaArg:Storage=null):void {}
+	public function initStorageEvent(typeArg:String=undefined, canBubbleArg:Boolean=undefined, cancelableArg:Boolean=undefined, keyArg:String=undefined, oldValueArg:String=undefined, newValueArg:String=undefined, urlArg:String=undefined, storageAreaArg:Storage=undefined):void {}
 }
 
 }

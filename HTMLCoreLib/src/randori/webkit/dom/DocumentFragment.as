@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="DocumentFragment")]
+[JavaScript(export="false", name="DocumentFragment")]
 /**
  *  @author RandoriAS
  *  @version 1.0

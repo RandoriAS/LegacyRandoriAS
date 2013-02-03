@@ -41,7 +41,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export=false, name="SpeechInputResult")]
+[JavaScript(export="false", nativecondition="INPUT_SPEECH", name="SpeechInputResult")]
 /**
  *  @author RandoriAS
  *  @version 1.0

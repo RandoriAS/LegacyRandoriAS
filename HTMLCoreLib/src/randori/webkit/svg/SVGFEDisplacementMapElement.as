@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGFEDisplacementMapElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGFEDisplacementMapElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

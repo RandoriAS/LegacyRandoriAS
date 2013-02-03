@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="MessageChannel")]
+[JavaScript(export="false", name="MessageChannel")]
 /**
  *  @author RandoriAS
  *  @version 1.0

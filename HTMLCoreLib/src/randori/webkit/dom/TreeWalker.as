@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="TreeWalker")]
+[JavaScript(export="false", name="TreeWalker")]
 /**
  *  @author RandoriAS
  *  @version 1.0

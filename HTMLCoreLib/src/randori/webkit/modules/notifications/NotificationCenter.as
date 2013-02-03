@@ -41,7 +41,7 @@ package randori.webkit.modules.notifications
 {
 
 
-[JavaScript(export=false, name="NotificationCenter")]
+[JavaScript(export="false", nativecondition="LEGACY_NOTIFICATIONS", name="NotificationCenter")]
 /**
  *  @author RandoriAS
  *  @version 1.0

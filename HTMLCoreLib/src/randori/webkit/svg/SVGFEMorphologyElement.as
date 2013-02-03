@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGFEMorphologyElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGFEMorphologyElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -76,10 +76,10 @@ public class SVGFEMorphologyElement extends SVGStyledElement implements SVGFilte
 	*/
 	public function get radiusY():SVGAnimatedNumber { return null; }
 	/**
-	*  @param radiusX (optional argument, default value is <code>0</code>)
-	*  @param radiusY (optional argument, default value is <code>0</code>)
+	*  @param radiusX (optional argument, default value is <code>undefined</code>)
+	*  @param radiusY (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setRadius(radiusX:Number=0, radiusY:Number=0):void {}
+	public function setRadius(radiusX:Number=undefined, radiusY:Number=undefined):void {}
 
 	/**
 	*  @see randori.webkit.svg.SVGAnimatedLength

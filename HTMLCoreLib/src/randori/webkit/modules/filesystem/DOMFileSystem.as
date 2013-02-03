@@ -41,7 +41,7 @@ package randori.webkit.modules.filesystem
 {
 
 
-[JavaScript(export=false, name="DOMFileSystem")]
+[JavaScript(export="false", nativecondition="FILE_SYSTEM", name="DOMFileSystem")]
 /**
  *  @author RandoriAS
  *  @version 1.0

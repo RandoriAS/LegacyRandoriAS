@@ -41,7 +41,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export=false, name="WebGLVertexArrayObjectOES")]
+[JavaScript(export="false", nativecondition="WEBGL", name="WebGLVertexArrayObjectOES")]
 /**
  *  @author RandoriAS
  *  @version 1.0

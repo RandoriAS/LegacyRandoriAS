@@ -41,7 +41,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export=false, name="SecurityPolicy")]
+[JavaScript(export="false", nativecondition="CSP_NEXT", name="SecurityPolicy")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -42,7 +42,7 @@ package randori.webkit.svg
 
 import randori.webkit.dom.Element;
 
-[JavaScript(export=false, name="SVGSVGElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGSVGElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -113,14 +113,14 @@ public class SVGSVGElement extends SVGStyledElement implements SVGTests, SVGLang
 	*/
 	public function get currentTranslate():SVGPoint { return null; }
 	/**
-	*  @param maxWaitMilliseconds (optional argument, default value is <code>0</code>)
+	*  @param maxWaitMilliseconds (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>uint</code> instance.
 	*/
-	public function suspendRedraw(maxWaitMilliseconds:uint=0):uint { return 0;}
+	public function suspendRedraw(maxWaitMilliseconds:uint=undefined):uint { return 0;}
 	/**
-	*  @param suspendHandleId (optional argument, default value is <code>0</code>)
+	*  @param suspendHandleId (optional argument, default value is <code>undefined</code>)
 	*/
-	public function unsuspendRedraw(suspendHandleId:uint=0):void {}
+	public function unsuspendRedraw(suspendHandleId:uint=undefined):void {}
 	public function unsuspendRedrawAll():void {}
 	public function forceRedraw():void {}
 	public function pauseAnimations():void {}
@@ -134,33 +134,33 @@ public class SVGSVGElement extends SVGStyledElement implements SVGTests, SVGLang
 	*/
 	public function getCurrentTime():Number { return 0;}
 	/**
-	*  @param seconds (optional argument, default value is <code>0</code>)
+	*  @param seconds (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setCurrentTime(seconds:Number=0):void {}
+	public function setCurrentTime(seconds:Number=undefined):void {}
 	/**
-	*  @param rect (optional argument, default value is <code>null</code>)
-	*  @param referenceElement (optional argument, default value is <code>null</code>)
+	*  @param rect (optional argument, default value is <code>undefined</code>)
+	*  @param referenceElement (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getIntersectionList(rect:SVGRect=null, referenceElement:SVGElement=null):Object { return null;}
+	public function getIntersectionList(rect:SVGRect=undefined, referenceElement:SVGElement=undefined):Object { return null;}
 	/**
-	*  @param rect (optional argument, default value is <code>null</code>)
-	*  @param referenceElement (optional argument, default value is <code>null</code>)
+	*  @param rect (optional argument, default value is <code>undefined</code>)
+	*  @param referenceElement (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getEnclosureList(rect:SVGRect=null, referenceElement:SVGElement=null):Object { return null;}
+	public function getEnclosureList(rect:SVGRect=undefined, referenceElement:SVGElement=undefined):Object { return null;}
 	/**
-	*  @param element (optional argument, default value is <code>null</code>)
-	*  @param rect (optional argument, default value is <code>null</code>)
+	*  @param element (optional argument, default value is <code>undefined</code>)
+	*  @param rect (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function checkIntersection(element:SVGElement=null, rect:SVGRect=null):Boolean { return false;}
+	public function checkIntersection(element:SVGElement=undefined, rect:SVGRect=undefined):Boolean { return false;}
 	/**
-	*  @param element (optional argument, default value is <code>null</code>)
-	*  @param rect (optional argument, default value is <code>null</code>)
+	*  @param element (optional argument, default value is <code>undefined</code>)
+	*  @param rect (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function checkEnclosure(element:SVGElement=null, rect:SVGRect=null):Boolean { return false;}
+	public function checkEnclosure(element:SVGElement=undefined, rect:SVGRect=undefined):Boolean { return false;}
 	public function deselectAll():void {}
 	/**
 	*  @return A <code>SVGNumber</code> instance.
@@ -191,15 +191,15 @@ public class SVGSVGElement extends SVGStyledElement implements SVGTests, SVGLang
 	*/
 	public function createSVGTransform():SVGTransform { return null;}
 	/**
-	*  @param matrix (optional argument, default value is <code>null</code>)
+	*  @param matrix (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>SVGTransform</code> instance.
 	*/
-	public function createSVGTransformFromMatrix(matrix:SVGMatrix=null):SVGTransform { return null;}
+	public function createSVGTransformFromMatrix(matrix:SVGMatrix=undefined):SVGTransform { return null;}
 	/**
-	*  @param elementId (optional argument, default value is <code>''</code>)
+	*  @param elementId (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Element</code> instance.
 	*/
-	public function getElementById(elementId:String=''):Element { return null;}
+	public function getElementById(elementId:String=undefined):Element { return null;}
 
 	/**
 	*  @see randori.webkit.svg.SVGStringList
@@ -216,10 +216,10 @@ public class SVGSVGElement extends SVGStyledElement implements SVGTests, SVGLang
 	*/
 	public function get systemLanguage():SVGStringList { return null; }
 	/**
-	*  @param extension (optional argument, default value is <code>''</code>)
+	*  @param extension (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function hasExtension(extension:String=''):Boolean { return false;}
+	public function hasExtension(extension:String=undefined):Boolean { return false;}
 
 	public function get xmllang():String { return ''; }
 	public function set xmllang(value:String):void { }
@@ -259,10 +259,10 @@ public class SVGSVGElement extends SVGStyledElement implements SVGTests, SVGLang
 	*/
 	public function getScreenCTM():SVGMatrix { return null;}
 	/**
-	*  @param element (optional argument, default value is <code>null</code>)
+	*  @param element (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>SVGMatrix</code> instance.
 	*/
-	public function getTransformToElement(element:SVGElement=null):SVGMatrix { return null;}
+	public function getTransformToElement(element:SVGElement=undefined):SVGMatrix { return null;}
 
 	/**
 	*  @see randori.webkit.svg.SVGAnimatedRect

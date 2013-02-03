@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="DOMStringMap")]
+[JavaScript(export="false", name="DOMStringMap")]
 /**
  *  @author RandoriAS
  *  @version 1.0

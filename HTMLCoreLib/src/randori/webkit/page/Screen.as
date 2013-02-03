@@ -41,7 +41,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export=false, name="Screen")]
+[JavaScript(export="false", name="Screen")]
 /**
  *  @author RandoriAS
  *  @version 1.0

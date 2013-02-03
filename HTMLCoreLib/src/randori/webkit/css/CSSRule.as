@@ -41,7 +41,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export=false, name="CSSRule")]
+[JavaScript(export="false", name="CSSRule")]
 /**
  *  @author RandoriAS
  *  @version 1.0

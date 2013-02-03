@@ -42,7 +42,7 @@ package randori.webkit.page
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="SpeechInputEvent")]
+[JavaScript(export="false", nativecondition="INPUT_SPEECH", name="SpeechInputEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

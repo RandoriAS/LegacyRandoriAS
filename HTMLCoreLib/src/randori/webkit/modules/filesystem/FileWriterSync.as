@@ -42,7 +42,7 @@ package randori.webkit.modules.filesystem
 
 import randori.webkit.fileapi.Blob;
 
-[JavaScript(export=false, name="FileWriterSync")]
+[JavaScript(export="false", nativecondition="FILE_SYSTEM", name="FileWriterSync")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -42,7 +42,7 @@ package randori.webkit.page
 
 import randori.webkit.html.canvas.ArrayBufferView;
 
-[JavaScript(export=false, name="Crypto")]
+[JavaScript(export="false", name="Crypto")]
 /**
  *  @author RandoriAS
  *  @version 1.0

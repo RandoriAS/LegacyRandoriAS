@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGFESpotLightElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGFESpotLightElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

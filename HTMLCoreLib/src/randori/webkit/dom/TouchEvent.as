@@ -42,7 +42,7 @@ package randori.webkit.dom
 
 import randori.webkit.page.Window;
 
-[JavaScript(export=false, name="TouchEvent")]
+[JavaScript(export="false", nativecondition="TOUCH_EVENTS", name="TouchEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -76,21 +76,21 @@ public class TouchEvent extends UIEvent
 
 	public function get metaKey():Boolean { return false; }
 	/**
-	*  @param touches (optional argument, default value is <code>null</code>)
-	*  @param targetTouches (optional argument, default value is <code>null</code>)
-	*  @param changedTouches (optional argument, default value is <code>null</code>)
-	*  @param type (optional argument, default value is <code>''</code>)
-	*  @param view (optional argument, default value is <code>null</code>)
-	*  @param screenX (optional argument, default value is <code>0</code>)
-	*  @param screenY (optional argument, default value is <code>0</code>)
-	*  @param clientX (optional argument, default value is <code>0</code>)
-	*  @param clientY (optional argument, default value is <code>0</code>)
-	*  @param ctrlKey (optional argument, default value is <code>false</code>)
-	*  @param altKey (optional argument, default value is <code>false</code>)
-	*  @param shiftKey (optional argument, default value is <code>false</code>)
-	*  @param metaKey (optional argument, default value is <code>false</code>)
+	*  @param touches (optional argument, default value is <code>undefined</code>)
+	*  @param targetTouches (optional argument, default value is <code>undefined</code>)
+	*  @param changedTouches (optional argument, default value is <code>undefined</code>)
+	*  @param type (optional argument, default value is <code>undefined</code>)
+	*  @param view (optional argument, default value is <code>undefined</code>)
+	*  @param screenX (optional argument, default value is <code>undefined</code>)
+	*  @param screenY (optional argument, default value is <code>undefined</code>)
+	*  @param clientX (optional argument, default value is <code>undefined</code>)
+	*  @param clientY (optional argument, default value is <code>undefined</code>)
+	*  @param ctrlKey (optional argument, default value is <code>undefined</code>)
+	*  @param altKey (optional argument, default value is <code>undefined</code>)
+	*  @param shiftKey (optional argument, default value is <code>undefined</code>)
+	*  @param metaKey (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initTouchEvent(touches:Object=null, targetTouches:Object=null, changedTouches:Object=null, type:String='', view:Window=null, screenX:uint=0, screenY:uint=0, clientX:uint=0, clientY:uint=0, ctrlKey:Boolean=false, altKey:Boolean=false, shiftKey:Boolean=false, metaKey:Boolean=false):void {}
+	public function initTouchEvent(touches:Object=undefined, targetTouches:Object=undefined, changedTouches:Object=undefined, type:String=undefined, view:Window=undefined, screenX:uint=undefined, screenY:uint=undefined, clientX:uint=undefined, clientY:uint=undefined, ctrlKey:Boolean=undefined, altKey:Boolean=undefined, shiftKey:Boolean=undefined, metaKey:Boolean=undefined):void {}
 }
 
 }

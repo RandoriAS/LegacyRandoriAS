@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="MediaKeyError")]
+[JavaScript(export="false", nativecondition="ENCRYPTED_MEDIA", name="MediaKeyError")]
 /**
  *  @author RandoriAS
  *  @version 1.0

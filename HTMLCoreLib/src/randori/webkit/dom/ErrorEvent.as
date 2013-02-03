@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="ErrorEvent")]
+[JavaScript(export="false", name="ErrorEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

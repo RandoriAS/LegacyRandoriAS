@@ -43,7 +43,7 @@ package randori.webkit.html.track
 import randori.webkit.dom.DocumentFragment;
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="TextTrackCue")]
+[JavaScript(export="false", nativecondition="VIDEO_TRACK", name="TextTrackCue")]
 /**
  *  @author RandoriAS
  *  @version 1.0

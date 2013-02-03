@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGMarkerElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGMarkerElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -97,9 +97,9 @@ public class SVGMarkerElement extends SVGStyledElement implements SVGLangSpace, 
 	public function get orientAngle():SVGAnimatedAngle { return null; }
 	public function setOrientToAuto():void {}
 	/**
-	*  @param angle (optional argument, default value is <code>null</code>)
+	*  @param angle (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setOrientToAngle(angle:SVGAngle=null):void {}
+	public function setOrientToAngle(angle:SVGAngle=undefined):void {}
 
 	public function get xmllang():String { return ''; }
 	public function set xmllang(value:String):void { }

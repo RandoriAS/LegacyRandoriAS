@@ -42,7 +42,7 @@ package randori.webkit.dom
 
 import randori.webkit.page.Window;
 
-[JavaScript(export=false, name="KeyboardEvent")]
+[JavaScript(export="false", name="KeyboardEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -71,24 +71,24 @@ public class KeyboardEvent extends UIEvent
 
 	public function get altGraphKey():Boolean { return false; }
 	/**
-	*  @param keyIdentifierArg (optional argument, default value is <code>''</code>)
+	*  @param keyIdentifierArg (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function getModifierState(keyIdentifierArg:String=''):Boolean { return false;}
+	public function getModifierState(keyIdentifierArg:String=undefined):Boolean { return false;}
 	/**
-	*  @param type (optional argument, default value is <code>''</code>)
-	*  @param canBubble (optional argument, default value is <code>false</code>)
-	*  @param cancelable (optional argument, default value is <code>false</code>)
-	*  @param view (optional argument, default value is <code>null</code>)
-	*  @param keyIdentifier (optional argument, default value is <code>''</code>)
-	*  @param keyLocation (optional argument, default value is <code>0</code>)
-	*  @param ctrlKey (optional argument, default value is <code>false</code>)
-	*  @param altKey (optional argument, default value is <code>false</code>)
-	*  @param shiftKey (optional argument, default value is <code>false</code>)
-	*  @param metaKey (optional argument, default value is <code>false</code>)
-	*  @param altGraphKey (optional argument, default value is <code>false</code>)
+	*  @param type (optional argument, default value is <code>undefined</code>)
+	*  @param canBubble (optional argument, default value is <code>undefined</code>)
+	*  @param cancelable (optional argument, default value is <code>undefined</code>)
+	*  @param view (optional argument, default value is <code>undefined</code>)
+	*  @param keyIdentifier (optional argument, default value is <code>undefined</code>)
+	*  @param keyLocation (optional argument, default value is <code>undefined</code>)
+	*  @param ctrlKey (optional argument, default value is <code>undefined</code>)
+	*  @param altKey (optional argument, default value is <code>undefined</code>)
+	*  @param shiftKey (optional argument, default value is <code>undefined</code>)
+	*  @param metaKey (optional argument, default value is <code>undefined</code>)
+	*  @param altGraphKey (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initKeyboardEvent(type:String='', canBubble:Boolean=false, cancelable:Boolean=false, view:Window=null, keyIdentifier:String='', keyLocation:uint=0, ctrlKey:Boolean=false, altKey:Boolean=false, shiftKey:Boolean=false, metaKey:Boolean=false, altGraphKey:Boolean=false):void {}
+	public function initKeyboardEvent(type:String=undefined, canBubble:Boolean=undefined, cancelable:Boolean=undefined, view:Window=undefined, keyIdentifier:String=undefined, keyLocation:uint=undefined, ctrlKey:Boolean=undefined, altKey:Boolean=undefined, shiftKey:Boolean=undefined, metaKey:Boolean=undefined, altGraphKey:Boolean=undefined):void {}
 }
 
 }

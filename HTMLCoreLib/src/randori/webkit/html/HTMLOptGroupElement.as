@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLOptGroupElement")]
+[JavaScript(export="false", name="HTMLOptGroupElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

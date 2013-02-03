@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="MutationObserver")]
+[JavaScript(export="false", name="MutationObserver")]
 /**
  *  @author RandoriAS
  *  @version 1.0

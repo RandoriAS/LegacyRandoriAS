@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="PopStateEvent")]
+[JavaScript(export="false", name="PopStateEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

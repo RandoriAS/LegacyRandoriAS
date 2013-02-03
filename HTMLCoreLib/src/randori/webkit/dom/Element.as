@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="Element")]
+[JavaScript(export="false", name="Element")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -54,84 +54,84 @@ public class Element extends Node
 
 	public function get tagName():String { return ''; }
 	/**
-	*  @param name (optional argument, default value is <code>''</code>)
+	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
-	public function getAttribute(name:String=''):String { return '';}
+	public function getAttribute(name:String=undefined):String { return '';}
 	/**
-	*  @param name (optional argument, default value is <code>''</code>)
-	*  @param value (optional argument, default value is <code>''</code>)
+	*  @param name (optional argument, default value is <code>undefined</code>)
+	*  @param value (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setAttribute(name:String='', value:String=''):void {}
+	public function setAttribute(name:String=undefined, value:String=undefined):void {}
 	/**
-	*  @param name (optional argument, default value is <code>''</code>)
+	*  @param name (optional argument, default value is <code>undefined</code>)
 	*/
-	public function removeAttribute(name:String=''):void {}
+	public function removeAttribute(name:String=undefined):void {}
 	/**
-	*  @param name (optional argument, default value is <code>''</code>)
+	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Attr</code> instance.
 	*/
-	public function getAttributeNode(name:String=''):Attr { return null;}
+	public function getAttributeNode(name:String=undefined):Attr { return null;}
 	/**
-	*  @param newAttr (optional argument, default value is <code>null</code>)
+	*  @param newAttr (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Attr</code> instance.
 	*/
-	public function setAttributeNode(newAttr:Attr=null):Attr { return null;}
+	public function setAttributeNode(newAttr:Attr=undefined):Attr { return null;}
 	/**
-	*  @param oldAttr (optional argument, default value is <code>null</code>)
+	*  @param oldAttr (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Attr</code> instance.
 	*/
-	public function removeAttributeNode(oldAttr:Attr=null):Attr { return null;}
+	public function removeAttributeNode(oldAttr:Attr=undefined):Attr { return null;}
 	/**
-	*  @param name (optional argument, default value is <code>''</code>)
+	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByTagName(name:String=''):Object { return null;}
+	public function getElementsByTagName(name:String=undefined):Object { return null;}
 	/**
-	*  @param namespaceURI (optional argument, default value is <code>''</code>)
-	*  @param localName (optional argument, default value is <code>''</code>)
+	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
+	*  @param localName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
-	public function getAttributeNS(namespaceURI:String='', localName:String=''):String { return '';}
+	public function getAttributeNS(namespaceURI:String=undefined, localName:String=undefined):String { return '';}
 	/**
-	*  @param namespaceURI (optional argument, default value is <code>''</code>)
-	*  @param qualifiedName (optional argument, default value is <code>''</code>)
-	*  @param value (optional argument, default value is <code>''</code>)
+	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
+	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
+	*  @param value (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setAttributeNS(namespaceURI:String='', qualifiedName:String='', value:String=''):void {}
+	public function setAttributeNS(namespaceURI:String=undefined, qualifiedName:String=undefined, value:String=undefined):void {}
 	/**
 	*  @param namespaceURI
 	*  @param localName
 	*/
 	public function removeAttributeNS(namespaceURI:String, localName:String):void {}
 	/**
-	*  @param namespaceURI (optional argument, default value is <code>''</code>)
-	*  @param localName (optional argument, default value is <code>''</code>)
+	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
+	*  @param localName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByTagNameNS(namespaceURI:String='', localName:String=''):Object { return null;}
+	public function getElementsByTagNameNS(namespaceURI:String=undefined, localName:String=undefined):Object { return null;}
 	/**
-	*  @param namespaceURI (optional argument, default value is <code>''</code>)
-	*  @param localName (optional argument, default value is <code>''</code>)
+	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
+	*  @param localName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Attr</code> instance.
 	*/
-	public function getAttributeNodeNS(namespaceURI:String='', localName:String=''):Attr { return null;}
+	public function getAttributeNodeNS(namespaceURI:String=undefined, localName:String=undefined):Attr { return null;}
 	/**
-	*  @param newAttr (optional argument, default value is <code>null</code>)
+	*  @param newAttr (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Attr</code> instance.
 	*/
-	public function setAttributeNodeNS(newAttr:Attr=null):Attr { return null;}
+	public function setAttributeNodeNS(newAttr:Attr=undefined):Attr { return null;}
 	/**
 	*  @param name
 	*  @return A <code>Boolean</code> instance.
 	*/
 	public function hasAttribute(name:String):Boolean { return false;}
 	/**
-	*  @param namespaceURI (optional argument, default value is <code>''</code>)
-	*  @param localName (optional argument, default value is <code>''</code>)
+	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
+	*  @param localName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function hasAttributeNS(namespaceURI:String='', localName:String=''):Boolean { return false;}
+	public function hasAttributeNS(namespaceURI:String=undefined, localName:String=undefined):Boolean { return false;}
 
 	/**
 	*  @see randori.webkit.css.CSSStyleDeclaration
@@ -179,18 +179,18 @@ public class Element extends Node
 	*/
 	public function scrollIntoViewIfNeeded(centerIfNeeded:Boolean=false):void {}
 	/**
-	*  @param lines (optional argument, default value is <code>0</code>)
+	*  @param lines (optional argument, default value is <code>undefined</code>)
 	*/
-	public function scrollByLines(lines:uint=0):void {}
+	public function scrollByLines(lines:uint=undefined):void {}
 	/**
-	*  @param pages (optional argument, default value is <code>0</code>)
+	*  @param pages (optional argument, default value is <code>undefined</code>)
 	*/
-	public function scrollByPages(pages:uint=0):void {}
+	public function scrollByPages(pages:uint=undefined):void {}
 	/**
-	*  @param name (optional argument, default value is <code>''</code>)
+	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByClassName(name:String=''):Object { return null;}
+	public function getElementsByClassName(name:String=undefined):Object { return null;}
 
 	public function get className():String { return ''; }
 	public function set className(value:String):void { }

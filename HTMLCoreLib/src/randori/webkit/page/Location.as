@@ -41,7 +41,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export=false, name="Location")]
+[JavaScript(export="false", name="Location")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -54,13 +54,13 @@ public class Location
 	public function get href():String { return ''; }
 	public function set href(value:String):void { }
 	/**
-	*  @param url (optional argument, default value is <code>''</code>)
+	*  @param url (optional argument, default value is <code>undefined</code>)
 	*/
-	public function assign(url:String=''):void {}
+	public function assign(url:String=undefined):void {}
 	/**
-	*  @param url (optional argument, default value is <code>''</code>)
+	*  @param url (optional argument, default value is <code>undefined</code>)
 	*/
-	public function replace(url:String=''):void {}
+	public function replace(url:String=undefined):void {}
 	public function reload():void {}
 
 	public function get protocol():String { return ''; }

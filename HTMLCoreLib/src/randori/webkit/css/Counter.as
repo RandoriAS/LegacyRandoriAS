@@ -41,7 +41,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export=false, name="Counter")]
+[JavaScript(export="false", name="Counter")]
 /**
  *  @author RandoriAS
  *  @version 1.0

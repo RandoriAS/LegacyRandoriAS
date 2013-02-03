@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGStringList")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGStringList")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -42,7 +42,7 @@ package randori.webkit.modules.geolocation
 
 import randori.webkit.page.Coordinates;
 
-[JavaScript(export=false, name="Geoposition")]
+[JavaScript(export="false", nativecondition="GEOLOCATION", name="Geoposition")]
 /**
  *  @author RandoriAS
  *  @version 1.0

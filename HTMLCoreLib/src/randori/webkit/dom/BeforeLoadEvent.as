@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="BeforeLoadEvent")]
+[JavaScript(export="false", name="BeforeLoadEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

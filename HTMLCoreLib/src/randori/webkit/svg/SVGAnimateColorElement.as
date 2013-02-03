@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGAnimateColorElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGAnimateColorElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

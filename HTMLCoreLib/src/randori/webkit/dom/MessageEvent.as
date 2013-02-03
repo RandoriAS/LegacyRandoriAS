@@ -42,7 +42,7 @@ package randori.webkit.dom
 
 import randori.webkit.page.Window;
 
-[JavaScript(export=false, name="MessageEvent")]
+[JavaScript(export="false", name="MessageEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -66,16 +66,16 @@ public class MessageEvent extends DomEvent
 
 	public function get ports():Array { return null; }
 	/**
-	*  @param typeArg (optional argument, default value is <code>''</code>)
-	*  @param canBubbleArg (optional argument, default value is <code>false</code>)
-	*  @param cancelableArg (optional argument, default value is <code>false</code>)
-	*  @param dataArg (optional argument, default value is <code>null</code>)
-	*  @param originArg (optional argument, default value is <code>''</code>)
-	*  @param lastEventIdArg (optional argument, default value is <code>''</code>)
-	*  @param sourceArg (optional argument, default value is <code>null</code>)
-	*  @param messagePorts (optional argument, default value is <code>null</code>)
+	*  @param typeArg (optional argument, default value is <code>undefined</code>)
+	*  @param canBubbleArg (optional argument, default value is <code>undefined</code>)
+	*  @param cancelableArg (optional argument, default value is <code>undefined</code>)
+	*  @param dataArg (optional argument, default value is <code>undefined</code>)
+	*  @param originArg (optional argument, default value is <code>undefined</code>)
+	*  @param lastEventIdArg (optional argument, default value is <code>undefined</code>)
+	*  @param sourceArg (optional argument, default value is <code>undefined</code>)
+	*  @param messagePorts (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initMessageEvent(typeArg:String='', canBubbleArg:Boolean=false, cancelableArg:Boolean=false, dataArg:Object=null, originArg:String='', lastEventIdArg:String='', sourceArg:Window=null, messagePorts:Array=null):void {}
+	public function initMessageEvent(typeArg:String=undefined, canBubbleArg:Boolean=undefined, cancelableArg:Boolean=undefined, dataArg:Object=undefined, originArg:String=undefined, lastEventIdArg:String=undefined, sourceArg:Window=undefined, messagePorts:Array=undefined):void {}
 }
 
 }

@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="PageTransitionEvent")]
+[JavaScript(export="false", name="PageTransitionEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

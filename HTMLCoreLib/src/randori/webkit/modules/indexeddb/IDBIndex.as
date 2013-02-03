@@ -41,7 +41,7 @@ package randori.webkit.modules.indexeddb
 {
 
 
-[JavaScript(export=false, name="IDBIndex")]
+[JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="IDBIndex")]
 /**
  *  @author RandoriAS
  *  @version 1.0

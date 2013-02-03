@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="MutationEvent")]
+[JavaScript(export="false", name="MutationEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -68,16 +68,16 @@ public class MutationEvent extends DomEvent
 
 	public function get attrChange():uint { return 0; }
 	/**
-	*  @param type (optional argument, default value is <code>''</code>)
-	*  @param canBubble (optional argument, default value is <code>false</code>)
-	*  @param cancelable (optional argument, default value is <code>false</code>)
-	*  @param relatedNode (optional argument, default value is <code>null</code>)
-	*  @param prevValue (optional argument, default value is <code>''</code>)
-	*  @param newValue (optional argument, default value is <code>''</code>)
-	*  @param attrName (optional argument, default value is <code>''</code>)
-	*  @param attrChange (optional argument, default value is <code>0</code>)
+	*  @param type (optional argument, default value is <code>undefined</code>)
+	*  @param canBubble (optional argument, default value is <code>undefined</code>)
+	*  @param cancelable (optional argument, default value is <code>undefined</code>)
+	*  @param relatedNode (optional argument, default value is <code>undefined</code>)
+	*  @param prevValue (optional argument, default value is <code>undefined</code>)
+	*  @param newValue (optional argument, default value is <code>undefined</code>)
+	*  @param attrName (optional argument, default value is <code>undefined</code>)
+	*  @param attrChange (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initMutationEvent(type:String='', canBubble:Boolean=false, cancelable:Boolean=false, relatedNode:Node=null, prevValue:String='', newValue:String='', attrName:String='', attrChange:uint=0):void {}
+	public function initMutationEvent(type:String=undefined, canBubble:Boolean=undefined, cancelable:Boolean=undefined, relatedNode:Node=undefined, prevValue:String=undefined, newValue:String=undefined, attrName:String=undefined, attrChange:uint=undefined):void {}
 }
 
 }

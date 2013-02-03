@@ -41,7 +41,7 @@ package randori.webkit.modules.webdatabase
 {
 
 
-[JavaScript(export=false, name="DatabaseSync")]
+[JavaScript(export="false", nativecondition="SQL_DATABASE", name="DatabaseSync")]
 /**
  *  @author RandoriAS
  *  @version 1.0

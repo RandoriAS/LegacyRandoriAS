@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="DocumentType")]
+[JavaScript(export="false", name="DocumentType")]
 /**
  *  @author RandoriAS
  *  @version 1.0

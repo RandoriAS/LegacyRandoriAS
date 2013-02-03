@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLFrameSetElement")]
+[JavaScript(export="false", name="HTMLFrameSetElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

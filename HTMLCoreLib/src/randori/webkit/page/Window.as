@@ -367,7 +367,7 @@ import randori.webkit.fileapi.FileError;
 import randori.webkit.fileapi.FileReader;
 import randori.webkit.html.URL;
 
-[JavaScript(export=false, name="Window")]
+[JavaScript(export="false", name="Window")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -471,31 +471,31 @@ public class Window
 	*/
 	public function showModalDialog(url:String, dialogArgs:Object=null, featureArgs:String=''):Object { return null;}
 	/**
-	*  @param message (optional argument, default value is <code>''</code>)
+	*  @param message (optional argument, default value is <code>undefined</code>)
 	*/
-	public function alert(message:String=''):void {}
+	public function alert(message:String=undefined):void {}
 	/**
-	*  @param message (optional argument, default value is <code>''</code>)
+	*  @param message (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function confirm(message:String=''):Boolean { return false;}
+	public function confirm(message:String=undefined):Boolean { return false;}
 	/**
-	*  @param message (optional argument, default value is <code>''</code>)
-	*  @param defaultValue (optional argument, default value is <code>''</code>)
+	*  @param message (optional argument, default value is <code>undefined</code>)
+	*  @param defaultValue (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
-	public function prompt(message:String='', defaultValue:String=''):String { return '';}
+	public function prompt(message:String=undefined, defaultValue:String=undefined):String { return '';}
 	/**
-	*  @param string (optional argument, default value is <code>''</code>)
-	*  @param caseSensitive (optional argument, default value is <code>false</code>)
-	*  @param backwards (optional argument, default value is <code>false</code>)
-	*  @param wrap (optional argument, default value is <code>false</code>)
-	*  @param wholeWord (optional argument, default value is <code>false</code>)
-	*  @param searchInFrames (optional argument, default value is <code>false</code>)
-	*  @param showDialog (optional argument, default value is <code>false</code>)
+	*  @param string (optional argument, default value is <code>undefined</code>)
+	*  @param caseSensitive (optional argument, default value is <code>undefined</code>)
+	*  @param backwards (optional argument, default value is <code>undefined</code>)
+	*  @param wrap (optional argument, default value is <code>undefined</code>)
+	*  @param wholeWord (optional argument, default value is <code>undefined</code>)
+	*  @param searchInFrames (optional argument, default value is <code>undefined</code>)
+	*  @param showDialog (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function find(string:String='', caseSensitive:Boolean=false, backwards:Boolean=false, wrap:Boolean=false, wholeWord:Boolean=false, searchInFrames:Boolean=false, showDialog:Boolean=false):Boolean { return false;}
+	public function find(string:String=undefined, caseSensitive:Boolean=undefined, backwards:Boolean=undefined, wrap:Boolean=undefined, wholeWord:Boolean=undefined, searchInFrames:Boolean=undefined, showDialog:Boolean=undefined):Boolean { return false;}
 
 	public function get offscreenBuffering():Boolean { return false; }
 
@@ -523,40 +523,40 @@ public class Window
 
 	public function get pageYOffset():uint { return 0; }
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*/
-	public function scrollBy(x:uint=0, y:uint=0):void {}
+	public function scrollBy(x:uint=undefined, y:uint=undefined):void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*/
-	public function scrollTo(x:uint=0, y:uint=0):void {}
+	public function scrollTo(x:uint=undefined, y:uint=undefined):void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*/
-	public function scroll(x:uint=0, y:uint=0):void {}
+	public function scroll(x:uint=undefined, y:uint=undefined):void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*/
-	public function moveBy(x:Number=0, y:Number=0):void {}
+	public function moveBy(x:Number=undefined, y:Number=undefined):void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*/
-	public function moveTo(x:Number=0, y:Number=0):void {}
+	public function moveTo(x:Number=undefined, y:Number=undefined):void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*/
-	public function resizeBy(x:Number=0, y:Number=0):void {}
+	public function resizeBy(x:Number=undefined, y:Number=undefined):void {}
 	/**
-	*  @param width (optional argument, default value is <code>0</code>)
-	*  @param height (optional argument, default value is <code>0</code>)
+	*  @param width (optional argument, default value is <code>undefined</code>)
+	*  @param height (optional argument, default value is <code>undefined</code>)
 	*/
-	public function resizeTo(width:Number=0, height:Number=0):void {}
+	public function resizeTo(width:Number=undefined, height:Number=undefined):void {}
 
 	public function get closed():Boolean { return false; }
 
@@ -619,17 +619,17 @@ public class Window
 	*/
 	public function get styleMedia():StyleMedia { return null; }
 	/**
-	*  @param element (optional argument, default value is <code>null</code>)
-	*  @param pseudoElement (optional argument, default value is <code>''</code>)
+	*  @param element (optional argument, default value is <code>undefined</code>)
+	*  @param pseudoElement (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>CSSStyleDeclaration</code> instance.
 	*/
-	public function getComputedStyle(element:Element=null, pseudoElement:String=''):Object { return null;}
+	public function getComputedStyle(element:Element=undefined, pseudoElement:String=undefined):Object { return null;}
 	/**
-	*  @param element (optional argument, default value is <code>null</code>)
-	*  @param pseudoElement (optional argument, default value is <code>''</code>)
+	*  @param element (optional argument, default value is <code>undefined</code>)
+	*  @param pseudoElement (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>CSSRuleList</code> instance.
 	*/
-	public function getMatchedCSSRules(element:Element=null, pseudoElement:String=''):Object { return null;}
+	public function getMatchedCSSRules(element:Element=undefined, pseudoElement:String=undefined):Object { return null;}
 
 	public function get devicePixelRatio():Number { return 0; }
 
@@ -666,15 +666,15 @@ public class Window
 	*/
 	public function get performance():Performance { return null; }
 	/**
-	*  @param handler (optional argument, default value is <code>null</code>)
-	*  @param timeout (optional argument, default value is <code>0</code>)
+	*  @param handler (optional argument, default value is <code>undefined</code>)
+	*  @param timeout (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>uint</code> instance.
 	*/
-	public function setTimeout(handler:Object=null, timeout:uint=0):uint { return 0;}
+	public function setTimeout(handler:Object=undefined, timeout:uint=undefined):uint { return 0;}
 	/**
-	*  @param handle (optional argument, default value is <code>0</code>)
+	*  @param handle (optional argument, default value is <code>undefined</code>)
 	*/
-	public function clearTimeout(handle:uint=0):void {}
+	public function clearTimeout(handle:uint=undefined):void {}
 	/**
 	*  @param handler
 	*  @param timeout
@@ -682,9 +682,9 @@ public class Window
 	*/
 	public function setInterval(handler:Object, timeout:uint):uint { return 0;}
 	/**
-	*  @param handle (optional argument, default value is <code>0</code>)
+	*  @param handle (optional argument, default value is <code>undefined</code>)
 	*/
-	public function clearInterval(handle:uint=0):void {}
+	public function clearInterval(handle:uint=undefined):void {}
 	/**
 	*  @param callback
 	*  @return A <code>uint</code> instance.
@@ -695,15 +695,15 @@ public class Window
 	*/
 	public function cancelAnimationFrame(id:uint):void {}
 	/**
-	*  @param string (optional argument, default value is <code>''</code>)
+	*  @param string (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
-	public function atob(string:String=''):String { return '';}
+	public function atob(string:String=undefined):String { return '';}
 	/**
-	*  @param string (optional argument, default value is <code>''</code>)
+	*  @param string (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
-	public function btoa(string:String=''):String { return '';}
+	public function btoa(string:String=undefined):String { return '';}
 
 	/**
 	*  Function that accepts an event of type <code>AbortEvent</code>.

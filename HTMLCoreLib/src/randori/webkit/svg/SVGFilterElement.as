@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGFilterElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGFilterElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -95,10 +95,10 @@ public class SVGFilterElement extends SVGStyledElement implements SVGURIReferenc
 	*/
 	public function get filterResY():SVGAnimatedInteger { return null; }
 	/**
-	*  @param filterResX (optional argument, default value is <code>0</code>)
-	*  @param filterResY (optional argument, default value is <code>0</code>)
+	*  @param filterResX (optional argument, default value is <code>undefined</code>)
+	*  @param filterResY (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setFilterRes(filterResX:uint=0, filterResY:uint=0):void {}
+	public function setFilterRes(filterResX:uint=undefined, filterResY:uint=undefined):void {}
 
 	/**
 	*  @see randori.webkit.svg.SVGAnimatedString

@@ -41,7 +41,7 @@ package randori.webkit.workers
 {
 
 
-[JavaScript(export=false, name="WorkerLocation")]
+[JavaScript(export="false", nativecondition="WORKERS", name="WorkerLocation")]
 /**
  *  @author RandoriAS
  *  @version 1.0

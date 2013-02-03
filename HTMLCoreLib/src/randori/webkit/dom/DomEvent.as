@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="Event")]
+[JavaScript(export="false", name="Event")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -93,11 +93,11 @@ public class DomEvent
 	public function stopPropagation():void {}
 	public function preventDefault():void {}
 	/**
-	*  @param eventTypeArg (optional argument, default value is <code>''</code>)
-	*  @param canBubbleArg (optional argument, default value is <code>false</code>)
-	*  @param cancelableArg (optional argument, default value is <code>false</code>)
+	*  @param eventTypeArg (optional argument, default value is <code>undefined</code>)
+	*  @param canBubbleArg (optional argument, default value is <code>undefined</code>)
+	*  @param cancelableArg (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initEvent(eventTypeArg:String='', canBubbleArg:Boolean=false, cancelableArg:Boolean=false):void {}
+	public function initEvent(eventTypeArg:String=undefined, canBubbleArg:Boolean=undefined, cancelableArg:Boolean=undefined):void {}
 
 	public function get defaultPrevented():Boolean { return false; }
 	public function stopImmediatePropagation():void {}

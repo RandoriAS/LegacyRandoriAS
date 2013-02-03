@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLInputElement")]
+[JavaScript(export="false", name="HTMLInputElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -216,9 +216,9 @@ public class HTMLInputElement extends HTMLElement
 	*  @param replacement
 	*  @param start
 	*  @param end
-	*  @param selectionMode (optional argument, default value is <code>''</code>)
+	*  @param selectionMode (optional argument, default value is <code>null</code>)
 	*/
-	public function setRangeText(replacement:String, start:uint, end:uint, selectionMode:String=''):void {}
+	public function setRangeText(replacement:String, start:uint, end:uint, selectionMode:String=null):void {}
 	/**
 	*  @param start
 	*  @param end

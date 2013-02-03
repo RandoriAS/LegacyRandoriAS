@@ -41,7 +41,7 @@ package randori.webkit.modules.webaudio
 {
 
 
-[JavaScript(export=false, name="AudioGain")]
+[JavaScript(export="false", nativecondition="WEB_AUDIO", name="AudioGain")]
 /**
  *  @author RandoriAS
  *  @version 1.0

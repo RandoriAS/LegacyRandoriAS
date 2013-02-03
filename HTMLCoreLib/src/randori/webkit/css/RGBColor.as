@@ -41,7 +41,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export=false, name="RGBColor")]
+[JavaScript(export="false", name="RGBColor")]
 /**
  *  @author RandoriAS
  *  @version 1.0

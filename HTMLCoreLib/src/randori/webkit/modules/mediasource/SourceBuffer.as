@@ -42,7 +42,7 @@ package randori.webkit.modules.mediasource
 
 import randori.webkit.html.TimeRanges;
 
-[JavaScript(export=false, name="SourceBuffer")]
+[JavaScript(export="false", nativecondition="MEDIA_SOURCE", name="SourceBuffer")]
 /**
  *  @author RandoriAS
  *  @version 1.0

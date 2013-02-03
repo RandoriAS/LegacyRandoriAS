@@ -41,7 +41,7 @@ package randori.webkit.inspector
 {
 
 
-[JavaScript(export=false, name="ScriptProfileNode")]
+[JavaScript(export="false", nativecondition="JAVASCRIPT_DEBUGGER", name="ScriptProfileNode")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.modules.webaudio
 {
 
 
-[JavaScript(export=false, name="DelayNode")]
+[JavaScript(export="false", nativecondition="WEB_AUDIO", name="DelayNode")]
 /**
  *  @author RandoriAS
  *  @version 1.0

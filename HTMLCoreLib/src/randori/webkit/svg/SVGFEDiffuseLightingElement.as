@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGFEDiffuseLightingElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGFEDiffuseLightingElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

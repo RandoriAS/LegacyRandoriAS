@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGRadialGradientElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGRadialGradientElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

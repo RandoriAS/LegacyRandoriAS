@@ -41,7 +41,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export=false, name="CSSSupportsRule")]
+[JavaScript(export="false", nativecondition="CSS3_CONDITIONAL_RULES", name="CSSSupportsRule")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -59,15 +59,15 @@ public class CSSSupportsRule extends CSSRule
 
 	public function get conditionText():String { return ''; }
 	/**
-	*  @param rule (optional argument, default value is <code>''</code>)
-	*  @param index (optional argument, default value is <code>0</code>)
+	*  @param rule (optional argument, default value is <code>undefined</code>)
+	*  @param index (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>uint</code> instance.
 	*/
-	public function insertRule(rule:String='', index:uint=0):uint { return 0;}
+	public function insertRule(rule:String=undefined, index:uint=undefined):uint { return 0;}
 	/**
-	*  @param index (optional argument, default value is <code>0</code>)
+	*  @param index (optional argument, default value is <code>undefined</code>)
 	*/
-	public function deleteRule(index:uint=0):void {}
+	public function deleteRule(index:uint=undefined):void {}
 }
 
 }

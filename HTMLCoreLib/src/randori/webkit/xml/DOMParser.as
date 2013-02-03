@@ -42,7 +42,7 @@ package randori.webkit.xml
 
 import randori.webkit.dom.Document;
 
-[JavaScript(export=false, name="DOMParser")]
+[JavaScript(export="false", name="DOMParser")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -56,11 +56,11 @@ public class DOMParser
 	*/
 	public function DOMParser() {super();}
 	/**
-	*  @param str (optional argument, default value is <code>''</code>)
-	*  @param contentType (optional argument, default value is <code>''</code>)
+	*  @param str (optional argument, default value is <code>undefined</code>)
+	*  @param contentType (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Document</code> instance.
 	*/
-	public function parseFromString(str:String='', contentType:String=''):Document { return null;}
+	public function parseFromString(str:String=undefined, contentType:String=undefined):Document { return null;}
 }
 
 }

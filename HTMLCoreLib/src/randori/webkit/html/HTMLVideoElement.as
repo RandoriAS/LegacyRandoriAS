@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLVideoElement")]
+[JavaScript(export="false", nativecondition="VIDEO", name="HTMLVideoElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

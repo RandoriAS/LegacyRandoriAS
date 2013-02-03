@@ -42,7 +42,7 @@ package randori.webkit.page
 
 import randori.webkit.inspector.ScriptProfile;
 
-[JavaScript(export=false, name="Console")]
+[JavaScript(export="false", name="Console")]
 /**
  *  @author RandoriAS
  *  @version 1.0

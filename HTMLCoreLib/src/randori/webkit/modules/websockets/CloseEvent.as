@@ -42,7 +42,7 @@ package randori.webkit.modules.websockets
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="CloseEvent")]
+[JavaScript(export="false", name="CloseEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

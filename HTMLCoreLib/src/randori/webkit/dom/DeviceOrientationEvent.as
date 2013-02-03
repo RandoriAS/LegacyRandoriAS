@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="DeviceOrientationEvent")]
+[JavaScript(export="false", nativecondition="DEVICE_ORIENTATION", name="DeviceOrientationEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -60,15 +60,15 @@ public class DeviceOrientationEvent extends DomEvent
 
 	public function get absolute():Boolean { return false; }
 	/**
-	*  @param type (optional argument, default value is <code>''</code>)
-	*  @param bubbles (optional argument, default value is <code>false</code>)
-	*  @param cancelable (optional argument, default value is <code>false</code>)
-	*  @param alpha (optional argument, default value is <code>0</code>)
-	*  @param beta (optional argument, default value is <code>0</code>)
-	*  @param gamma (optional argument, default value is <code>0</code>)
-	*  @param absolute (optional argument, default value is <code>false</code>)
+	*  @param type (optional argument, default value is <code>undefined</code>)
+	*  @param bubbles (optional argument, default value is <code>undefined</code>)
+	*  @param cancelable (optional argument, default value is <code>undefined</code>)
+	*  @param alpha (optional argument, default value is <code>undefined</code>)
+	*  @param beta (optional argument, default value is <code>undefined</code>)
+	*  @param gamma (optional argument, default value is <code>undefined</code>)
+	*  @param absolute (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initDeviceOrientationEvent(type:String='', bubbles:Boolean=false, cancelable:Boolean=false, alpha:Number=0, beta:Number=0, gamma:Number=0, absolute:Boolean=false):void {}
+	public function initDeviceOrientationEvent(type:String=undefined, bubbles:Boolean=undefined, cancelable:Boolean=undefined, alpha:Number=undefined, beta:Number=undefined, gamma:Number=undefined, absolute:Boolean=undefined):void {}
 }
 
 }

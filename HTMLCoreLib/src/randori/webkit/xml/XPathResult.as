@@ -42,7 +42,7 @@ package randori.webkit.xml
 
 import randori.webkit.dom.Node;
 
-[JavaScript(export=false, name="XPathResult")]
+[JavaScript(export="false", name="XPathResult")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -83,10 +83,10 @@ public class XPathResult
 	*/
 	public function iterateNext():Node { return null;}
 	/**
-	*  @param index (optional argument, default value is <code>0</code>)
+	*  @param index (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Node</code> instance.
 	*/
-	public function snapshotItem(index:uint=0):Node { return null;}
+	public function snapshotItem(index:uint=undefined):Node { return null;}
 }
 
 }

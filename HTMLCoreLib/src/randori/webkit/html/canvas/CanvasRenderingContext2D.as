@@ -45,7 +45,7 @@ import randori.webkit.html.HTMLImageElement;
 import randori.webkit.html.ImageData;
 import randori.webkit.html.HTMLCanvasElement;
 
-[JavaScript(export=false, name="CanvasRenderingContext2D")]
+[JavaScript(export="false", name="CanvasRenderingContext2D")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -58,37 +58,37 @@ public class CanvasRenderingContext2D extends CanvasRenderingContext
 	public function save():void {}
 	public function restore():void {}
 	/**
-	*  @param sx (optional argument, default value is <code>0</code>)
-	*  @param sy (optional argument, default value is <code>0</code>)
+	*  @param sx (optional argument, default value is <code>undefined</code>)
+	*  @param sy (optional argument, default value is <code>undefined</code>)
 	*/
-	public function scale(sx:Number=0, sy:Number=0):void {}
+	public function scale(sx:Number=undefined, sy:Number=undefined):void {}
 	/**
-	*  @param angle (optional argument, default value is <code>0</code>)
+	*  @param angle (optional argument, default value is <code>undefined</code>)
 	*/
-	public function rotate(angle:Number=0):void {}
+	public function rotate(angle:Number=undefined):void {}
 	/**
-	*  @param tx (optional argument, default value is <code>0</code>)
-	*  @param ty (optional argument, default value is <code>0</code>)
+	*  @param tx (optional argument, default value is <code>undefined</code>)
+	*  @param ty (optional argument, default value is <code>undefined</code>)
 	*/
-	public function translate(tx:Number=0, ty:Number=0):void {}
+	public function translate(tx:Number=undefined, ty:Number=undefined):void {}
 	/**
-	*  @param m11 (optional argument, default value is <code>0</code>)
-	*  @param m12 (optional argument, default value is <code>0</code>)
-	*  @param m21 (optional argument, default value is <code>0</code>)
-	*  @param m22 (optional argument, default value is <code>0</code>)
-	*  @param dx (optional argument, default value is <code>0</code>)
-	*  @param dy (optional argument, default value is <code>0</code>)
+	*  @param m11 (optional argument, default value is <code>undefined</code>)
+	*  @param m12 (optional argument, default value is <code>undefined</code>)
+	*  @param m21 (optional argument, default value is <code>undefined</code>)
+	*  @param m22 (optional argument, default value is <code>undefined</code>)
+	*  @param dx (optional argument, default value is <code>undefined</code>)
+	*  @param dy (optional argument, default value is <code>undefined</code>)
 	*/
-	public function transform(m11:Number=0, m12:Number=0, m21:Number=0, m22:Number=0, dx:Number=0, dy:Number=0):void {}
+	public function transform(m11:Number=undefined, m12:Number=undefined, m21:Number=undefined, m22:Number=undefined, dx:Number=undefined, dy:Number=undefined):void {}
 	/**
-	*  @param m11 (optional argument, default value is <code>0</code>)
-	*  @param m12 (optional argument, default value is <code>0</code>)
-	*  @param m21 (optional argument, default value is <code>0</code>)
-	*  @param m22 (optional argument, default value is <code>0</code>)
-	*  @param dx (optional argument, default value is <code>0</code>)
-	*  @param dy (optional argument, default value is <code>0</code>)
+	*  @param m11 (optional argument, default value is <code>undefined</code>)
+	*  @param m12 (optional argument, default value is <code>undefined</code>)
+	*  @param m21 (optional argument, default value is <code>undefined</code>)
+	*  @param m22 (optional argument, default value is <code>undefined</code>)
+	*  @param dx (optional argument, default value is <code>undefined</code>)
+	*  @param dy (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setTransform(m11:Number=0, m12:Number=0, m21:Number=0, m22:Number=0, dx:Number=0, dy:Number=0):void {}
+	public function setTransform(m11:Number=undefined, m12:Number=undefined, m21:Number=undefined, m22:Number=undefined, dx:Number=undefined, dy:Number=undefined):void {}
 
 	public function get globalAlpha():Number { return 0; }
 	public function set globalAlpha(value:Number):void { }
@@ -96,23 +96,23 @@ public class CanvasRenderingContext2D extends CanvasRenderingContext
 	public function get globalCompositeOperation():String { return ''; }
 	public function set globalCompositeOperation(value:String):void { }
 	/**
-	*  @param x0 (optional argument, default value is <code>0</code>)
-	*  @param y0 (optional argument, default value is <code>0</code>)
-	*  @param x1 (optional argument, default value is <code>0</code>)
-	*  @param y1 (optional argument, default value is <code>0</code>)
+	*  @param x0 (optional argument, default value is <code>undefined</code>)
+	*  @param y0 (optional argument, default value is <code>undefined</code>)
+	*  @param x1 (optional argument, default value is <code>undefined</code>)
+	*  @param y1 (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>CanvasGradient</code> instance.
 	*/
-	public function createLinearGradient(x0:Number=0, y0:Number=0, x1:Number=0, y1:Number=0):CanvasGradient { return null;}
+	public function createLinearGradient(x0:Number=undefined, y0:Number=undefined, x1:Number=undefined, y1:Number=undefined):CanvasGradient { return null;}
 	/**
-	*  @param x0 (optional argument, default value is <code>0</code>)
-	*  @param y0 (optional argument, default value is <code>0</code>)
-	*  @param r0 (optional argument, default value is <code>0</code>)
-	*  @param x1 (optional argument, default value is <code>0</code>)
-	*  @param y1 (optional argument, default value is <code>0</code>)
-	*  @param r1 (optional argument, default value is <code>0</code>)
+	*  @param x0 (optional argument, default value is <code>undefined</code>)
+	*  @param y0 (optional argument, default value is <code>undefined</code>)
+	*  @param r0 (optional argument, default value is <code>undefined</code>)
+	*  @param x1 (optional argument, default value is <code>undefined</code>)
+	*  @param y1 (optional argument, default value is <code>undefined</code>)
+	*  @param r1 (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>CanvasGradient</code> instance.
 	*/
-	public function createRadialGradient(x0:Number=0, y0:Number=0, r0:Number=0, x1:Number=0, y1:Number=0, r1:Number=0):CanvasGradient { return null;}
+	public function createRadialGradient(x0:Number=undefined, y0:Number=undefined, r0:Number=undefined, x1:Number=undefined, y1:Number=undefined, r1:Number=undefined):CanvasGradient { return null;}
 
 	public function get lineWidth():Number { return 0; }
 	public function set lineWidth(value:Number):void { }
@@ -149,71 +149,71 @@ public class CanvasRenderingContext2D extends CanvasRenderingContext
 	public function get lineDashOffset():Number { return 0; }
 	public function set lineDashOffset(value:Number):void { }
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
-	*  @param width (optional argument, default value is <code>0</code>)
-	*  @param height (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
+	*  @param width (optional argument, default value is <code>undefined</code>)
+	*  @param height (optional argument, default value is <code>undefined</code>)
 	*/
-	public function clearRect(x:Number=0, y:Number=0, width:Number=0, height:Number=0):void {}
+	public function clearRect(x:Number=undefined, y:Number=undefined, width:Number=undefined, height:Number=undefined):void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
-	*  @param width (optional argument, default value is <code>0</code>)
-	*  @param height (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
+	*  @param width (optional argument, default value is <code>undefined</code>)
+	*  @param height (optional argument, default value is <code>undefined</code>)
 	*/
-	public function fillRect(x:Number=0, y:Number=0, width:Number=0, height:Number=0):void {}
+	public function fillRect(x:Number=undefined, y:Number=undefined, width:Number=undefined, height:Number=undefined):void {}
 	public function beginPath():void {}
 	public function closePath():void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*/
-	public function moveTo(x:Number=0, y:Number=0):void {}
+	public function moveTo(x:Number=undefined, y:Number=undefined):void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*/
-	public function lineTo(x:Number=0, y:Number=0):void {}
+	public function lineTo(x:Number=undefined, y:Number=undefined):void {}
 	/**
-	*  @param cpx (optional argument, default value is <code>0</code>)
-	*  @param cpy (optional argument, default value is <code>0</code>)
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param cpx (optional argument, default value is <code>undefined</code>)
+	*  @param cpy (optional argument, default value is <code>undefined</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*/
-	public function quadraticCurveTo(cpx:Number=0, cpy:Number=0, x:Number=0, y:Number=0):void {}
+	public function quadraticCurveTo(cpx:Number=undefined, cpy:Number=undefined, x:Number=undefined, y:Number=undefined):void {}
 	/**
-	*  @param cp1x (optional argument, default value is <code>0</code>)
-	*  @param cp1y (optional argument, default value is <code>0</code>)
-	*  @param cp2x (optional argument, default value is <code>0</code>)
-	*  @param cp2y (optional argument, default value is <code>0</code>)
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param cp1x (optional argument, default value is <code>undefined</code>)
+	*  @param cp1y (optional argument, default value is <code>undefined</code>)
+	*  @param cp2x (optional argument, default value is <code>undefined</code>)
+	*  @param cp2y (optional argument, default value is <code>undefined</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*/
-	public function bezierCurveTo(cp1x:Number=0, cp1y:Number=0, cp2x:Number=0, cp2y:Number=0, x:Number=0, y:Number=0):void {}
+	public function bezierCurveTo(cp1x:Number=undefined, cp1y:Number=undefined, cp2x:Number=undefined, cp2y:Number=undefined, x:Number=undefined, y:Number=undefined):void {}
 	/**
-	*  @param x1 (optional argument, default value is <code>0</code>)
-	*  @param y1 (optional argument, default value is <code>0</code>)
-	*  @param x2 (optional argument, default value is <code>0</code>)
-	*  @param y2 (optional argument, default value is <code>0</code>)
-	*  @param radius (optional argument, default value is <code>0</code>)
+	*  @param x1 (optional argument, default value is <code>undefined</code>)
+	*  @param y1 (optional argument, default value is <code>undefined</code>)
+	*  @param x2 (optional argument, default value is <code>undefined</code>)
+	*  @param y2 (optional argument, default value is <code>undefined</code>)
+	*  @param radius (optional argument, default value is <code>undefined</code>)
 	*/
-	public function arcTo(x1:Number=0, y1:Number=0, x2:Number=0, y2:Number=0, radius:Number=0):void {}
+	public function arcTo(x1:Number=undefined, y1:Number=undefined, x2:Number=undefined, y2:Number=undefined, radius:Number=undefined):void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
-	*  @param width (optional argument, default value is <code>0</code>)
-	*  @param height (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
+	*  @param width (optional argument, default value is <code>undefined</code>)
+	*  @param height (optional argument, default value is <code>undefined</code>)
 	*/
-	public function rect(x:Number=0, y:Number=0, width:Number=0, height:Number=0):void {}
+	public function rect(x:Number=undefined, y:Number=undefined, width:Number=undefined, height:Number=undefined):void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
-	*  @param radius (optional argument, default value is <code>0</code>)
-	*  @param startAngle (optional argument, default value is <code>0</code>)
-	*  @param endAngle (optional argument, default value is <code>0</code>)
-	*  @param anticlockwise (optional argument, default value is <code>false</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
+	*  @param radius (optional argument, default value is <code>undefined</code>)
+	*  @param startAngle (optional argument, default value is <code>undefined</code>)
+	*  @param endAngle (optional argument, default value is <code>undefined</code>)
+	*  @param anticlockwise (optional argument, default value is <code>undefined</code>)
 	*/
-	public function arc(x:Number=0, y:Number=0, radius:Number=0, startAngle:Number=0, endAngle:Number=0, anticlockwise:Boolean=false):void {}
+	public function arc(x:Number=undefined, y:Number=undefined, radius:Number=undefined, startAngle:Number=undefined, endAngle:Number=undefined, anticlockwise:Boolean=undefined):void {}
 	/**
 	*  @param winding (optional argument, default value is <code>''</code>)
 	*/
@@ -224,18 +224,18 @@ public class CanvasRenderingContext2D extends CanvasRenderingContext
 	*/
 	public function clip(winding:String=''):void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*  @param winding (optional argument, default value is <code>''</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function isPointInPath(x:Number=0, y:Number=0, winding:String=''):Boolean { return false;}
+	public function isPointInPath(x:Number=undefined, y:Number=undefined, winding:String=''):Boolean { return false;}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function isPointInStroke(x:Number=0, y:Number=0):Boolean { return false;}
+	public function isPointInStroke(x:Number=undefined, y:Number=undefined):Boolean { return false;}
 
 	public function get font():String { return ''; }
 	public function set font(value:String):void { }
@@ -246,34 +246,34 @@ public class CanvasRenderingContext2D extends CanvasRenderingContext
 	public function get textBaseline():String { return ''; }
 	public function set textBaseline(value:String):void { }
 	/**
-	*  @param text (optional argument, default value is <code>''</code>)
+	*  @param text (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>TextMetrics</code> instance.
 	*/
-	public function measureText(text:String=''):TextMetrics { return null;}
+	public function measureText(text:String=undefined):TextMetrics { return null;}
 	/**
-	*  @param alpha (optional argument, default value is <code>0</code>)
+	*  @param alpha (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setAlpha(alpha:Number=0):void {}
+	public function setAlpha(alpha:Number=undefined):void {}
 	/**
-	*  @param compositeOperation (optional argument, default value is <code>''</code>)
+	*  @param compositeOperation (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setCompositeOperation(compositeOperation:String=''):void {}
+	public function setCompositeOperation(compositeOperation:String=undefined):void {}
 	/**
-	*  @param width (optional argument, default value is <code>0</code>)
+	*  @param width (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setLineWidth(width:Number=0):void {}
+	public function setLineWidth(width:Number=undefined):void {}
 	/**
-	*  @param cap (optional argument, default value is <code>''</code>)
+	*  @param cap (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setLineCap(cap:String=''):void {}
+	public function setLineCap(cap:String=undefined):void {}
 	/**
-	*  @param join (optional argument, default value is <code>''</code>)
+	*  @param join (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setLineJoin(join:String=''):void {}
+	public function setLineJoin(join:String=undefined):void {}
 	/**
-	*  @param limit (optional argument, default value is <code>0</code>)
+	*  @param limit (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setMiterLimit(limit:Number=0):void {}
+	public function setMiterLimit(limit:Number=undefined):void {}
 	public function clearShadow():void {}
 	/**
 	*  @param text
@@ -306,13 +306,13 @@ public class CanvasRenderingContext2D extends CanvasRenderingContext
 	*/
 	public function setFillColor(c:Number, m:Number, y:Number, k:Number, a:Number):void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
-	*  @param width (optional argument, default value is <code>0</code>)
-	*  @param height (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
+	*  @param width (optional argument, default value is <code>undefined</code>)
+	*  @param height (optional argument, default value is <code>undefined</code>)
 	*  @param lineWidth (optional argument, default value is <code>0</code>)
 	*/
-	public function strokeRect(x:Number=0, y:Number=0, width:Number=0, height:Number=0, lineWidth:Number=0):void {}
+	public function strokeRect(x:Number=undefined, y:Number=undefined, width:Number=undefined, height:Number=undefined, lineWidth:Number=0):void {}
 	/**
 	*  @param image
 	*  @param sx
@@ -378,13 +378,13 @@ public class CanvasRenderingContext2D extends CanvasRenderingContext
 	public function get fillStyle():Object { return null; }
 	public function set fillStyle(value:Object):void { }
 	/**
-	*  @param sx (optional argument, default value is <code>0</code>)
-	*  @param sy (optional argument, default value is <code>0</code>)
-	*  @param sw (optional argument, default value is <code>0</code>)
-	*  @param sh (optional argument, default value is <code>0</code>)
+	*  @param sx (optional argument, default value is <code>undefined</code>)
+	*  @param sy (optional argument, default value is <code>undefined</code>)
+	*  @param sw (optional argument, default value is <code>undefined</code>)
+	*  @param sh (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>ImageData</code> instance.
 	*/
-	public function getImageData(sx:Number=0, sy:Number=0, sw:Number=0, sh:Number=0):ImageData { return null;}
+	public function getImageData(sx:Number=undefined, sy:Number=undefined, sw:Number=undefined, sh:Number=undefined):ImageData { return null;}
 }
 
 }

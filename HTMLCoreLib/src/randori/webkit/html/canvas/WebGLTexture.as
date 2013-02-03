@@ -41,7 +41,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export=false, name="WebGLTexture")]
+[JavaScript(export="false", nativecondition="WEBGL", name="WebGLTexture")]
 /**
  *  @author RandoriAS
  *  @version 1.0

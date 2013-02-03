@@ -41,7 +41,7 @@ package randori.webkit.modules.filesystem
 {
 
 
-[JavaScript(export=false, name="Metadata")]
+[JavaScript(export="false", nativecondition="FILE_SYSTEM", name="Metadata")]
 /**
  *  @author RandoriAS
  *  @version 1.0

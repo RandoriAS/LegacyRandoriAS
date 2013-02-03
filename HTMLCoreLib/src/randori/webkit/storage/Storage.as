@@ -41,7 +41,7 @@ package randori.webkit.storage
 {
 
 
-[JavaScript(export=false, name="Storage")]
+[JavaScript(export="false", name="Storage")]
 /**
  *  @author RandoriAS
  *  @version 1.0

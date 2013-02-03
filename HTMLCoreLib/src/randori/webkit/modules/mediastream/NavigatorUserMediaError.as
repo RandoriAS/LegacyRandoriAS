@@ -41,7 +41,7 @@ package randori.webkit.modules.mediastream
 {
 
 
-[JavaScript(export=false, name="NavigatorUserMediaError")]
+[JavaScript(export="false", nativecondition="MEDIA_STREAM", name="NavigatorUserMediaError")]
 /**
  *  @author RandoriAS
  *  @version 1.0

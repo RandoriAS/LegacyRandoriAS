@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="TextMetrics")]
+[JavaScript(export="false", name="TextMetrics")]
 /**
  *  @author RandoriAS
  *  @version 1.0

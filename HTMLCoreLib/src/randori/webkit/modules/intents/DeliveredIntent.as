@@ -41,7 +41,7 @@ package randori.webkit.modules.intents
 {
 
 
-[JavaScript(export=false, name="DeliveredIntent")]
+[JavaScript(export="false", nativecondition="WEB_INTENTS", name="DeliveredIntent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

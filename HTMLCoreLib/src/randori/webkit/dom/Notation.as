@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="Notation")]
+[JavaScript(export="false", name="Notation")]
 /**
  *  @author RandoriAS
  *  @version 1.0

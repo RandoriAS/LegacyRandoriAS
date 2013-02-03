@@ -42,7 +42,7 @@ package randori.webkit.css
 
 import randori.webkit.dom.Node;
 
-[JavaScript(export=false, name="StyleSheet")]
+[JavaScript(export="false", name="StyleSheet")]
 /**
  *  @author RandoriAS
  *  @version 1.0

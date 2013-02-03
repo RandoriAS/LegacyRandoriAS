@@ -41,7 +41,7 @@ package randori.webkit.modules.webdatabase
 {
 
 
-[JavaScript(export=false, name="SQLResultSetRowList")]
+[JavaScript(export="false", nativecondition="SQL_DATABASE", name="SQLResultSetRowList")]
 /**
  *  @author RandoriAS
  *  @version 1.0

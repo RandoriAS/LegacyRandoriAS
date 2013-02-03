@@ -42,7 +42,7 @@ package randori.webkit.svg
 
 import randori.webkit.dom.Document;
 
-[JavaScript(export=false, name="SVGDocument")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGDocument")]
 /**
  *  @author RandoriAS
  *  @version 1.0

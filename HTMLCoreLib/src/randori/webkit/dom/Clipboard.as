@@ -42,7 +42,7 @@ package randori.webkit.dom
 
 import randori.webkit.html.HTMLImageElement;
 
-[JavaScript(export=false, name="Clipboard")]
+[JavaScript(export="false", name="Clipboard")]
 /**
  *  @author RandoriAS
  *  @version 1.0

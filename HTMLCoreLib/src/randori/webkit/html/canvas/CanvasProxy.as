@@ -41,7 +41,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export=false, name="CanvasProxy")]
+[JavaScript(export="false", nativecondition="CANVAS_PROXY", name="CanvasProxy")]
 /**
  *  @author RandoriAS
  *  @version 1.0

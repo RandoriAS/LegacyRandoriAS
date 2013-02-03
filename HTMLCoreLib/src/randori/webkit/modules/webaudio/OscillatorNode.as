@@ -41,7 +41,7 @@ package randori.webkit.modules.webaudio
 {
 
 
-[JavaScript(export=false, name="OscillatorNode")]
+[JavaScript(export="false", nativecondition="WEB_AUDIO", name="OscillatorNode")]
 /**
  *  @author RandoriAS
  *  @version 1.0

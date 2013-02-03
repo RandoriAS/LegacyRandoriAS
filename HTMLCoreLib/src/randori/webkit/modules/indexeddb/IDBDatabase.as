@@ -42,7 +42,7 @@ package randori.webkit.modules.indexeddb
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="IDBDatabase")]
+[JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="IDBDatabase")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -94,10 +94,10 @@ public class IDBDatabase
 	public function deleteObjectStore(name:String):void {}
 	/**
 	*  @param storeNames
-	*  @param mode (optional argument, default value is <code>''</code>)
+	*  @param mode (optional argument, default value is <code>null</code>)
 	*  @return A <code>IDBTransaction</code> instance.
 	*/
-	public function transaction(storeNames:Object, mode:String=''):IDBTransaction { return null;}
+	public function transaction(storeNames:Object, mode:String=null):IDBTransaction { return null;}
 	public function close():void {}
 	/**
 	*  @param type

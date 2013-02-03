@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLTableColElement")]
+[JavaScript(export="false", name="HTMLTableColElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

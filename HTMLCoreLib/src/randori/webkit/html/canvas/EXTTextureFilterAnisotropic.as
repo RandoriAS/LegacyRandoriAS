@@ -41,7 +41,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export=false, name="EXTTextureFilterAnisotropic")]
+[JavaScript(export="false", nativecondition="WEBGL", name="EXTTextureFilterAnisotropic")]
 /**
  *  @author RandoriAS
  *  @version 1.0

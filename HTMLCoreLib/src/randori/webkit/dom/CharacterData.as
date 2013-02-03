@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="CharacterData")]
+[JavaScript(export="false", name="CharacterData")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -57,31 +57,31 @@ public class CharacterData extends Node
 
 	public function get length():uint { return 0; }
 	/**
-	*  @param offset (optional argument, default value is <code>0</code>)
-	*  @param length (optional argument, default value is <code>0</code>)
+	*  @param offset (optional argument, default value is <code>undefined</code>)
+	*  @param length (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
-	public function substringData(offset:uint=0, length:uint=0):String { return '';}
+	public function substringData(offset:uint=undefined, length:uint=undefined):String { return '';}
 	/**
-	*  @param data (optional argument, default value is <code>''</code>)
+	*  @param data (optional argument, default value is <code>undefined</code>)
 	*/
-	public function appendData(data:String=''):void {}
+	public function appendData(data:String=undefined):void {}
 	/**
-	*  @param offset (optional argument, default value is <code>0</code>)
-	*  @param data (optional argument, default value is <code>''</code>)
+	*  @param offset (optional argument, default value is <code>undefined</code>)
+	*  @param data (optional argument, default value is <code>undefined</code>)
 	*/
-	public function insertData(offset:uint=0, data:String=''):void {}
+	public function insertData(offset:uint=undefined, data:String=undefined):void {}
 	/**
-	*  @param offset (optional argument, default value is <code>0</code>)
-	*  @param length (optional argument, default value is <code>0</code>)
+	*  @param offset (optional argument, default value is <code>undefined</code>)
+	*  @param length (optional argument, default value is <code>undefined</code>)
 	*/
-	public function deleteData(offset:uint=0, length:uint=0):void {}
+	public function deleteData(offset:uint=undefined, length:uint=undefined):void {}
 	/**
-	*  @param offset (optional argument, default value is <code>0</code>)
-	*  @param length (optional argument, default value is <code>0</code>)
-	*  @param data (optional argument, default value is <code>''</code>)
+	*  @param offset (optional argument, default value is <code>undefined</code>)
+	*  @param length (optional argument, default value is <code>undefined</code>)
+	*  @param data (optional argument, default value is <code>undefined</code>)
 	*/
-	public function replaceData(offset:uint=0, length:uint=0, data:String=''):void {}
+	public function replaceData(offset:uint=undefined, length:uint=undefined, data:String=undefined):void {}
 	public function remove():void {}
 }
 

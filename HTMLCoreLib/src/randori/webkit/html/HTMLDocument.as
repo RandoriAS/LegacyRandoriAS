@@ -43,7 +43,7 @@ package randori.webkit.html
 import randori.webkit.dom.Document;
 import randori.webkit.dom.Element;
 
-[JavaScript(export=false, name="HTMLDocument")]
+[JavaScript(export="false", name="HTMLDocument")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -56,13 +56,13 @@ public class HTMLDocument extends Document
 	public function open():void {}
 	public function close():void {}
 	/**
-	*  @param text (optional argument, default value is <code>''</code>)
+	*  @param text (optional argument, default value is <code>undefined</code>)
 	*/
-	public function write(text:String=''):void {}
+	public function write(text:String=undefined):void {}
 	/**
-	*  @param text (optional argument, default value is <code>''</code>)
+	*  @param text (optional argument, default value is <code>undefined</code>)
 	*/
-	public function writeln(text:String=''):void {}
+	public function writeln(text:String=undefined):void {}
 
 	/**
 	*  @see randori.webkit.html.HTMLCollection

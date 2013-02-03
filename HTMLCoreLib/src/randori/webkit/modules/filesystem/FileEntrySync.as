@@ -42,7 +42,7 @@ package randori.webkit.modules.filesystem
 
 import randori.webkit.fileapi.File;
 
-[JavaScript(export=false, name="FileEntrySync")]
+[JavaScript(export="false", nativecondition="FILE_SYSTEM", name="FileEntrySync")]
 /**
  *  @author RandoriAS
  *  @version 1.0

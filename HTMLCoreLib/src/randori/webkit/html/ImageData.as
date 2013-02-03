@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="ImageData")]
+[JavaScript(export="false", name="ImageData")]
 /**
  *  @author RandoriAS
  *  @version 1.0

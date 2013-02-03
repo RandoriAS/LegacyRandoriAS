@@ -41,7 +41,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export=false, name="DOMPath")]
+[JavaScript(export="false", name="DOMPath")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -52,55 +52,55 @@ public class DOMPath
 {
 	public function closePath():void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*/
-	public function moveTo(x:Number=0, y:Number=0):void {}
+	public function moveTo(x:Number=undefined, y:Number=undefined):void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*/
-	public function lineTo(x:Number=0, y:Number=0):void {}
+	public function lineTo(x:Number=undefined, y:Number=undefined):void {}
 	/**
-	*  @param cpx (optional argument, default value is <code>0</code>)
-	*  @param cpy (optional argument, default value is <code>0</code>)
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param cpx (optional argument, default value is <code>undefined</code>)
+	*  @param cpy (optional argument, default value is <code>undefined</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*/
-	public function quadraticCurveTo(cpx:Number=0, cpy:Number=0, x:Number=0, y:Number=0):void {}
+	public function quadraticCurveTo(cpx:Number=undefined, cpy:Number=undefined, x:Number=undefined, y:Number=undefined):void {}
 	/**
-	*  @param cp1x (optional argument, default value is <code>0</code>)
-	*  @param cp1y (optional argument, default value is <code>0</code>)
-	*  @param cp2x (optional argument, default value is <code>0</code>)
-	*  @param cp2y (optional argument, default value is <code>0</code>)
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param cp1x (optional argument, default value is <code>undefined</code>)
+	*  @param cp1y (optional argument, default value is <code>undefined</code>)
+	*  @param cp2x (optional argument, default value is <code>undefined</code>)
+	*  @param cp2y (optional argument, default value is <code>undefined</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*/
-	public function bezierCurveTo(cp1x:Number=0, cp1y:Number=0, cp2x:Number=0, cp2y:Number=0, x:Number=0, y:Number=0):void {}
+	public function bezierCurveTo(cp1x:Number=undefined, cp1y:Number=undefined, cp2x:Number=undefined, cp2y:Number=undefined, x:Number=undefined, y:Number=undefined):void {}
 	/**
-	*  @param x1 (optional argument, default value is <code>0</code>)
-	*  @param y1 (optional argument, default value is <code>0</code>)
-	*  @param x2 (optional argument, default value is <code>0</code>)
-	*  @param y2 (optional argument, default value is <code>0</code>)
-	*  @param radius (optional argument, default value is <code>0</code>)
+	*  @param x1 (optional argument, default value is <code>undefined</code>)
+	*  @param y1 (optional argument, default value is <code>undefined</code>)
+	*  @param x2 (optional argument, default value is <code>undefined</code>)
+	*  @param y2 (optional argument, default value is <code>undefined</code>)
+	*  @param radius (optional argument, default value is <code>undefined</code>)
 	*/
-	public function arcTo(x1:Number=0, y1:Number=0, x2:Number=0, y2:Number=0, radius:Number=0):void {}
+	public function arcTo(x1:Number=undefined, y1:Number=undefined, x2:Number=undefined, y2:Number=undefined, radius:Number=undefined):void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
-	*  @param width (optional argument, default value is <code>0</code>)
-	*  @param height (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
+	*  @param width (optional argument, default value is <code>undefined</code>)
+	*  @param height (optional argument, default value is <code>undefined</code>)
 	*/
-	public function rect(x:Number=0, y:Number=0, width:Number=0, height:Number=0):void {}
+	public function rect(x:Number=undefined, y:Number=undefined, width:Number=undefined, height:Number=undefined):void {}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
-	*  @param radius (optional argument, default value is <code>0</code>)
-	*  @param startAngle (optional argument, default value is <code>0</code>)
-	*  @param endAngle (optional argument, default value is <code>0</code>)
-	*  @param anticlockwise (optional argument, default value is <code>false</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
+	*  @param radius (optional argument, default value is <code>undefined</code>)
+	*  @param startAngle (optional argument, default value is <code>undefined</code>)
+	*  @param endAngle (optional argument, default value is <code>undefined</code>)
+	*  @param anticlockwise (optional argument, default value is <code>undefined</code>)
 	*/
-	public function arc(x:Number=0, y:Number=0, radius:Number=0, startAngle:Number=0, endAngle:Number=0, anticlockwise:Boolean=false):void {}
+	public function arc(x:Number=undefined, y:Number=undefined, radius:Number=undefined, startAngle:Number=undefined, endAngle:Number=undefined, anticlockwise:Boolean=undefined):void {}
 }
 
 }

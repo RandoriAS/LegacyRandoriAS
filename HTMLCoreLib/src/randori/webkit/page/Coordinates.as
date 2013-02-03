@@ -41,7 +41,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export=false, name="Coordinates")]
+[JavaScript(export="false", name="Coordinates")]
 /**
  *  @author RandoriAS
  *  @version 1.0

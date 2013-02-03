@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="HashChangeEvent")]
+[JavaScript(export="false", name="HashChangeEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -52,13 +52,13 @@ package randori.webkit.dom
 public class HashChangeEvent extends DomEvent
 {
 	/**
-	*  @param type (optional argument, default value is <code>''</code>)
-	*  @param canBubble (optional argument, default value is <code>false</code>)
-	*  @param cancelable (optional argument, default value is <code>false</code>)
-	*  @param oldURL (optional argument, default value is <code>''</code>)
-	*  @param newURL (optional argument, default value is <code>''</code>)
+	*  @param type (optional argument, default value is <code>undefined</code>)
+	*  @param canBubble (optional argument, default value is <code>undefined</code>)
+	*  @param cancelable (optional argument, default value is <code>undefined</code>)
+	*  @param oldURL (optional argument, default value is <code>undefined</code>)
+	*  @param newURL (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initHashChangeEvent(type:String='', canBubble:Boolean=false, cancelable:Boolean=false, oldURL:String='', newURL:String=''):void {}
+	public function initHashChangeEvent(type:String=undefined, canBubble:Boolean=undefined, cancelable:Boolean=undefined, oldURL:String=undefined, newURL:String=undefined):void {}
 
 	public function get oldURL():String { return ''; }
 

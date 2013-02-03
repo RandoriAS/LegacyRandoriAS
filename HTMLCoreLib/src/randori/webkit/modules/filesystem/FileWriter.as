@@ -44,7 +44,7 @@ import randori.webkit.fileapi.Blob;
 import randori.webkit.fileapi.FileError;
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="FileWriter")]
+[JavaScript(export="false", nativecondition="FILE_SYSTEM", name="FileWriter")]
 /**
  *  @author RandoriAS
  *  @version 1.0

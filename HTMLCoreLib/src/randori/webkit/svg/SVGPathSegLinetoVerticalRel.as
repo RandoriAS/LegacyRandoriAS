@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGPathSegLinetoVerticalRel")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGPathSegLinetoVerticalRel")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.modules.webaudio
 {
 
 
-[JavaScript(export=false, name="BiquadFilterNode")]
+[JavaScript(export="false", nativecondition="WEB_AUDIO", name="BiquadFilterNode")]
 /**
  *  @author RandoriAS
  *  @version 1.0

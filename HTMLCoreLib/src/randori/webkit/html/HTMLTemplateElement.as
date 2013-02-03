@@ -42,7 +42,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.DocumentFragment;
 
-[JavaScript(export=false, name="HTMLTemplateElement")]
+[JavaScript(export="false", nativecondition="TEMPLATE_ELEMENT", name="HTMLTemplateElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

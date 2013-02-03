@@ -41,7 +41,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export=false, name="PerformanceNavigation")]
+[JavaScript(export="false", nativecondition="WEB_TIMING", name="PerformanceNavigation")]
 /**
  *  @author RandoriAS
  *  @version 1.0

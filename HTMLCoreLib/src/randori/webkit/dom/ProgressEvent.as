@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="ProgressEvent")]
+[JavaScript(export="false", name="ProgressEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

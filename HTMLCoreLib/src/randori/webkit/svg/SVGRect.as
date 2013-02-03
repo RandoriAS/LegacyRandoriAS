@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGRect")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGRect")]
 /**
  *  @author RandoriAS
  *  @version 1.0

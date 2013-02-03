@@ -41,7 +41,7 @@ package randori.webkit.plugins
 {
 
 
-[JavaScript(export=false, name="MimeType")]
+[JavaScript(export="false", name="MimeType")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGAnimationElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGAnimationElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -92,10 +92,10 @@ public class SVGAnimationElement extends SVGElement implements SVGTests, SVGExte
 	*/
 	public function get systemLanguage():SVGStringList { return null; }
 	/**
-	*  @param extension (optional argument, default value is <code>''</code>)
+	*  @param extension (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function hasExtension(extension:String=''):Boolean { return false;}
+	public function hasExtension(extension:String=undefined):Boolean { return false;}
 
 	/**
 	*  @see randori.webkit.svg.SVGAnimatedBoolean
@@ -103,14 +103,14 @@ public class SVGAnimationElement extends SVGElement implements SVGTests, SVGExte
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 	public function beginElement():void {}
 	/**
-	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @param offset (optional argument, default value is <code>undefined</code>)
 	*/
-	public function beginElementAt(offset:Number=0):void {}
+	public function beginElementAt(offset:Number=undefined):void {}
 	public function endElement():void {}
 	/**
-	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @param offset (optional argument, default value is <code>undefined</code>)
 	*/
-	public function endElementAt(offset:Number=0):void {}
+	public function endElementAt(offset:Number=undefined):void {}
 }
 
 }

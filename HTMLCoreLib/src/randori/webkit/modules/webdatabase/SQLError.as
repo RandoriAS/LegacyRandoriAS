@@ -41,7 +41,7 @@ package randori.webkit.modules.webdatabase
 {
 
 
-[JavaScript(export=false, name="SQLError")]
+[JavaScript(export="false", nativecondition="SQL_DATABASE", name="SQLError")]
 /**
  *  @author RandoriAS
  *  @version 1.0

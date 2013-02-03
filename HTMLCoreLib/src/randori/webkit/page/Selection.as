@@ -43,7 +43,7 @@ package randori.webkit.page
 import randori.webkit.dom.Node;
 import randori.webkit.dom.Range;
 
-[JavaScript(export=false, name="Selection")]
+[JavaScript(export="false", name="Selection")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -71,38 +71,38 @@ public class Selection
 
 	public function get rangeCount():uint { return 0; }
 	/**
-	*  @param node (optional argument, default value is <code>null</code>)
-	*  @param index (optional argument, default value is <code>0</code>)
+	*  @param node (optional argument, default value is <code>undefined</code>)
+	*  @param index (optional argument, default value is <code>undefined</code>)
 	*/
-	public function collapse(node:Node=null, index:uint=0):void {}
+	public function collapse(node:Node=undefined, index:uint=undefined):void {}
 	public function collapseToEnd():void {}
 	public function collapseToStart():void {}
 	public function deleteFromDocument():void {}
 	/**
-	*  @param node (optional argument, default value is <code>null</code>)
-	*  @param allowPartial (optional argument, default value is <code>false</code>)
+	*  @param node (optional argument, default value is <code>undefined</code>)
+	*  @param allowPartial (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function containsNode(node:Node=null, allowPartial:Boolean=false):Boolean { return false;}
+	public function containsNode(node:Node=undefined, allowPartial:Boolean=undefined):Boolean { return false;}
 	/**
-	*  @param node (optional argument, default value is <code>null</code>)
+	*  @param node (optional argument, default value is <code>undefined</code>)
 	*/
-	public function selectAllChildren(node:Node=null):void {}
+	public function selectAllChildren(node:Node=undefined):void {}
 	/**
-	*  @param node (optional argument, default value is <code>null</code>)
-	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @param node (optional argument, default value is <code>undefined</code>)
+	*  @param offset (optional argument, default value is <code>undefined</code>)
 	*/
-	public function extend(node:Node=null, offset:uint=0):void {}
+	public function extend(node:Node=undefined, offset:uint=undefined):void {}
 	/**
-	*  @param index (optional argument, default value is <code>0</code>)
+	*  @param index (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Range</code> instance.
 	*/
-	public function getRangeAt(index:uint=0):Range { return null;}
+	public function getRangeAt(index:uint=undefined):Range { return null;}
 	public function removeAllRanges():void {}
 	/**
-	*  @param range (optional argument, default value is <code>null</code>)
+	*  @param range (optional argument, default value is <code>undefined</code>)
 	*/
-	public function addRange(range:Range=null):void {}
+	public function addRange(range:Range=undefined):void {}
 	/**
 	*  @return A <code>String</code> instance.
 	*/
@@ -124,23 +124,23 @@ public class Selection
 
 	public function get type():String { return ''; }
 	/**
-	*  @param alter (optional argument, default value is <code>''</code>)
-	*  @param direction (optional argument, default value is <code>''</code>)
-	*  @param granularity (optional argument, default value is <code>''</code>)
+	*  @param alter (optional argument, default value is <code>undefined</code>)
+	*  @param direction (optional argument, default value is <code>undefined</code>)
+	*  @param granularity (optional argument, default value is <code>undefined</code>)
 	*/
-	public function modify(alter:String='', direction:String='', granularity:String=''):void {}
+	public function modify(alter:String=undefined, direction:String=undefined, granularity:String=undefined):void {}
 	/**
-	*  @param baseNode (optional argument, default value is <code>null</code>)
-	*  @param baseOffset (optional argument, default value is <code>0</code>)
-	*  @param extentNode (optional argument, default value is <code>null</code>)
-	*  @param extentOffset (optional argument, default value is <code>0</code>)
+	*  @param baseNode (optional argument, default value is <code>undefined</code>)
+	*  @param baseOffset (optional argument, default value is <code>undefined</code>)
+	*  @param extentNode (optional argument, default value is <code>undefined</code>)
+	*  @param extentOffset (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setBaseAndExtent(baseNode:Node=null, baseOffset:uint=0, extentNode:Node=null, extentOffset:uint=0):void {}
+	public function setBaseAndExtent(baseNode:Node=undefined, baseOffset:uint=undefined, extentNode:Node=undefined, extentOffset:uint=undefined):void {}
 	/**
-	*  @param node (optional argument, default value is <code>null</code>)
-	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @param node (optional argument, default value is <code>undefined</code>)
+	*  @param offset (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setPosition(node:Node=null, offset:uint=0):void {}
+	public function setPosition(node:Node=undefined, offset:uint=undefined):void {}
 	public function empty():void {}
 }
 

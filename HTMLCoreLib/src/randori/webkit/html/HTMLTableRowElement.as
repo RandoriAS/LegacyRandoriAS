@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLTableRowElement")]
+[JavaScript(export="false", name="HTMLTableRowElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -81,14 +81,14 @@ public class HTMLTableRowElement extends HTMLElement
 	public function get vAlign():String { return ''; }
 	public function set vAlign(value:String):void { }
 	/**
-	*  @param index (optional argument, default value is <code>0</code>)
+	*  @param index (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>HTMLElement</code> instance.
 	*/
-	public function insertCell(index:uint=0):HTMLElement { return null;}
+	public function insertCell(index:uint=undefined):HTMLElement { return null;}
 	/**
-	*  @param index (optional argument, default value is <code>0</code>)
+	*  @param index (optional argument, default value is <code>undefined</code>)
 	*/
-	public function deleteCell(index:uint=0):void {}
+	public function deleteCell(index:uint=undefined):void {}
 }
 
 }

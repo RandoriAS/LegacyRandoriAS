@@ -51,7 +51,7 @@ import randori.webkit.page.Selection;
 import randori.webkit.html.canvas.CanvasRenderingContext;
 import randori.webkit.page.SecurityPolicy;
 
-[JavaScript(export=false, name="Document")]
+[JavaScript(export="false", name="Document")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -77,79 +77,79 @@ public class Document extends Node
 	*/
 	public function get documentElement():Element { return null; }
 	/**
-	*  @param tagName (optional argument, default value is <code>''</code>)
+	*  @param tagName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Element</code> instance.
 	*/
-	public function createElement(tagName:String=''):Element { return null;}
+	public function createElement(tagName:String=undefined):Element { return null;}
 	/**
 	*  @return A <code>DocumentFragment</code> instance.
 	*/
 	public function createDocumentFragment():DocumentFragment { return null;}
 	/**
-	*  @param data (optional argument, default value is <code>''</code>)
+	*  @param data (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Text</code> instance.
 	*/
-	public function createTextNode(data:String=''):Text { return null;}
+	public function createTextNode(data:String=undefined):Text { return null;}
 	/**
-	*  @param data (optional argument, default value is <code>''</code>)
+	*  @param data (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Comment</code> instance.
 	*/
-	public function createComment(data:String=''):Comment { return null;}
+	public function createComment(data:String=undefined):Comment { return null;}
 	/**
-	*  @param data (optional argument, default value is <code>''</code>)
+	*  @param data (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>CDATASection</code> instance.
 	*/
-	public function createCDATASection(data:String=''):CDATASection { return null;}
+	public function createCDATASection(data:String=undefined):CDATASection { return null;}
 	/**
-	*  @param target (optional argument, default value is <code>''</code>)
-	*  @param data (optional argument, default value is <code>''</code>)
+	*  @param target (optional argument, default value is <code>undefined</code>)
+	*  @param data (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>ProcessingInstruction</code> instance.
 	*/
-	public function createProcessingInstruction(target:String='', data:String=''):ProcessingInstruction { return null;}
+	public function createProcessingInstruction(target:String=undefined, data:String=undefined):ProcessingInstruction { return null;}
 	/**
-	*  @param name (optional argument, default value is <code>''</code>)
+	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Attr</code> instance.
 	*/
-	public function createAttribute(name:String=''):Attr { return null;}
+	public function createAttribute(name:String=undefined):Attr { return null;}
 	/**
-	*  @param name (optional argument, default value is <code>''</code>)
+	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>EntityReference</code> instance.
 	*/
-	public function createEntityReference(name:String=''):EntityReference { return null;}
+	public function createEntityReference(name:String=undefined):EntityReference { return null;}
 	/**
-	*  @param tagname (optional argument, default value is <code>''</code>)
+	*  @param tagname (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByTagName(tagname:String=''):Object { return null;}
+	public function getElementsByTagName(tagname:String=undefined):Object { return null;}
 	/**
-	*  @param importedNode (optional argument, default value is <code>null</code>)
+	*  @param importedNode (optional argument, default value is <code>undefined</code>)
 	*  @param deep (optional argument, default value is <code>false</code>)
 	*  @return A <code>Node</code> instance.
 	*/
-	public function importNode(importedNode:Node=null, deep:Boolean=false):Node { return null;}
+	public function importNode(importedNode:Node=undefined, deep:Boolean=false):Node { return null;}
 	/**
-	*  @param namespaceURI (optional argument, default value is <code>''</code>)
-	*  @param qualifiedName (optional argument, default value is <code>''</code>)
+	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
+	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Element</code> instance.
 	*/
-	public function createElementNS(namespaceURI:String='', qualifiedName:String=''):Element { return null;}
+	public function createElementNS(namespaceURI:String=undefined, qualifiedName:String=undefined):Element { return null;}
 	/**
-	*  @param namespaceURI (optional argument, default value is <code>''</code>)
-	*  @param qualifiedName (optional argument, default value is <code>''</code>)
+	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
+	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Attr</code> instance.
 	*/
-	public function createAttributeNS(namespaceURI:String='', qualifiedName:String=''):Attr { return null;}
+	public function createAttributeNS(namespaceURI:String=undefined, qualifiedName:String=undefined):Attr { return null;}
 	/**
-	*  @param namespaceURI (optional argument, default value is <code>''</code>)
-	*  @param localName (optional argument, default value is <code>''</code>)
+	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
+	*  @param localName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByTagNameNS(namespaceURI:String='', localName:String=''):Object { return null;}
+	public function getElementsByTagNameNS(namespaceURI:String=undefined, localName:String=undefined):Object { return null;}
 	/**
-	*  @param elementId (optional argument, default value is <code>''</code>)
+	*  @param elementId (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Element</code> instance.
 	*/
-	public function getElementById(elementId:String=''):Element { return null;}
+	public function getElementById(elementId:String=undefined):Element { return null;}
 
 	public function get inputEncoding():String { return ''; }
 
@@ -161,38 +161,38 @@ public class Document extends Node
 	public function get xmlStandalone():Boolean { return false; }
 	public function set xmlStandalone(value:Boolean):void { }
 	/**
-	*  @param source (optional argument, default value is <code>null</code>)
+	*  @param source (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Node</code> instance.
 	*/
-	public function adoptNode(source:Node=null):Node { return null;}
+	public function adoptNode(source:Node=undefined):Node { return null;}
 
 	public function get documentURI():String { return ''; }
 	public function set documentURI(value:String):void { }
 	/**
-	*  @param eventType (optional argument, default value is <code>''</code>)
+	*  @param eventType (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>DomEvent</code> instance.
 	*/
-	public function createEvent(eventType:String=''):DomEvent { return null;}
+	public function createEvent(eventType:String=undefined):DomEvent { return null;}
 	/**
 	*  @return A <code>Range</code> instance.
 	*/
 	public function createRange():Range { return null;}
 	/**
-	*  @param root (optional argument, default value is <code>null</code>)
-	*  @param whatToShow (optional argument, default value is <code>0</code>)
-	*  @param filter (optional argument, default value is <code>null</code>)
-	*  @param expandEntityReferences (optional argument, default value is <code>false</code>)
+	*  @param root (optional argument, default value is <code>undefined</code>)
+	*  @param whatToShow (optional argument, default value is <code>undefined</code>)
+	*  @param filter (optional argument, default value is <code>undefined</code>)
+	*  @param expandEntityReferences (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeIterator</code> instance.
 	*/
-	public function createNodeIterator(root:Node=null, whatToShow:uint=0, filter:NodeFilter=null, expandEntityReferences:Boolean=false):NodeIterator { return null;}
+	public function createNodeIterator(root:Node=undefined, whatToShow:uint=undefined, filter:NodeFilter=undefined, expandEntityReferences:Boolean=undefined):NodeIterator { return null;}
 	/**
-	*  @param root (optional argument, default value is <code>null</code>)
-	*  @param whatToShow (optional argument, default value is <code>0</code>)
-	*  @param filter (optional argument, default value is <code>null</code>)
-	*  @param expandEntityReferences (optional argument, default value is <code>false</code>)
+	*  @param root (optional argument, default value is <code>undefined</code>)
+	*  @param whatToShow (optional argument, default value is <code>undefined</code>)
+	*  @param filter (optional argument, default value is <code>undefined</code>)
+	*  @param expandEntityReferences (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>TreeWalker</code> instance.
 	*/
-	public function createTreeWalker(root:Node=null, whatToShow:uint=0, filter:NodeFilter=null, expandEntityReferences:Boolean=false):TreeWalker { return null;}
+	public function createTreeWalker(root:Node=undefined, whatToShow:uint=undefined, filter:NodeFilter=undefined, expandEntityReferences:Boolean=undefined):TreeWalker { return null;}
 
 	/**
 	*  @see randori.webkit.page.Window
@@ -204,63 +204,63 @@ public class Document extends Node
 	*/
 	public function get styleSheets():Object { return null; }
 	/**
-	*  @param element (optional argument, default value is <code>null</code>)
-	*  @param pseudoElement (optional argument, default value is <code>''</code>)
+	*  @param element (optional argument, default value is <code>undefined</code>)
+	*  @param pseudoElement (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>CSSStyleDeclaration</code> instance.
 	*/
-	public function getOverrideStyle(element:Element=null, pseudoElement:String=''):Object { return null;}
+	public function getOverrideStyle(element:Element=undefined, pseudoElement:String=undefined):Object { return null;}
 	/**
-	*  @param expression (optional argument, default value is <code>''</code>)
-	*  @param resolver (optional argument, default value is <code>null</code>)
+	*  @param expression (optional argument, default value is <code>undefined</code>)
+	*  @param resolver (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>XPathExpression</code> instance.
 	*/
-	public function createExpression(expression:String='', resolver:XPathNSResolver=null):XPathExpression { return null;}
+	public function createExpression(expression:String=undefined, resolver:XPathNSResolver=undefined):XPathExpression { return null;}
 	/**
 	*  @param nodeResolver
 	*  @return A <code>XPathNSResolver</code> instance.
 	*/
 	public function createNSResolver(nodeResolver:Node):XPathNSResolver { return null;}
 	/**
-	*  @param expression (optional argument, default value is <code>''</code>)
-	*  @param contextNode (optional argument, default value is <code>null</code>)
-	*  @param resolver (optional argument, default value is <code>null</code>)
-	*  @param type (optional argument, default value is <code>0</code>)
-	*  @param inResult (optional argument, default value is <code>null</code>)
+	*  @param expression (optional argument, default value is <code>undefined</code>)
+	*  @param contextNode (optional argument, default value is <code>undefined</code>)
+	*  @param resolver (optional argument, default value is <code>undefined</code>)
+	*  @param type (optional argument, default value is <code>undefined</code>)
+	*  @param inResult (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>XPathResult</code> instance.
 	*/
-	public function evaluate(expression:String='', contextNode:Node=null, resolver:XPathNSResolver=null, type:uint=0, inResult:XPathResult=null):XPathResult { return null;}
+	public function evaluate(expression:String=undefined, contextNode:Node=undefined, resolver:XPathNSResolver=undefined, type:uint=undefined, inResult:XPathResult=undefined):XPathResult { return null;}
 	/**
-	*  @param command (optional argument, default value is <code>''</code>)
-	*  @param userInterface (optional argument, default value is <code>false</code>)
-	*  @param value (optional argument, default value is <code>''</code>)
+	*  @param command (optional argument, default value is <code>undefined</code>)
+	*  @param userInterface (optional argument, default value is <code>undefined</code>)
+	*  @param value (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function execCommand(command:String='', userInterface:Boolean=false, value:String=''):Boolean { return false;}
+	public function execCommand(command:String=undefined, userInterface:Boolean=undefined, value:String=undefined):Boolean { return false;}
 	/**
-	*  @param command (optional argument, default value is <code>''</code>)
+	*  @param command (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function queryCommandEnabled(command:String=''):Boolean { return false;}
+	public function queryCommandEnabled(command:String=undefined):Boolean { return false;}
 	/**
-	*  @param command (optional argument, default value is <code>''</code>)
+	*  @param command (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function queryCommandIndeterm(command:String=''):Boolean { return false;}
+	public function queryCommandIndeterm(command:String=undefined):Boolean { return false;}
 	/**
-	*  @param command (optional argument, default value is <code>''</code>)
+	*  @param command (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function queryCommandState(command:String=''):Boolean { return false;}
+	public function queryCommandState(command:String=undefined):Boolean { return false;}
 	/**
-	*  @param command (optional argument, default value is <code>''</code>)
+	*  @param command (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function queryCommandSupported(command:String=''):Boolean { return false;}
+	public function queryCommandSupported(command:String=undefined):Boolean { return false;}
 	/**
-	*  @param command (optional argument, default value is <code>''</code>)
+	*  @param command (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
-	public function queryCommandValue(command:String=''):String { return '';}
+	public function queryCommandValue(command:String=undefined):String { return '';}
 
 	public function get title():String { return ''; }
 	public function set title(value:String):void { }
@@ -314,15 +314,15 @@ public class Document extends Node
 
 	public function get lastModified():String { return ''; }
 	/**
-	*  @param elementName (optional argument, default value is <code>''</code>)
+	*  @param elementName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByName(elementName:String=''):Object { return null;}
+	public function getElementsByName(elementName:String=undefined):Object { return null;}
 	/**
-	*  @param typeNames (optional argument, default value is <code>''</code>)
+	*  @param typeNames (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getItems(typeNames:String=''):Object { return null;}
+	public function getItems(typeNames:String=undefined):Object { return null;}
 
 	/**
 	*  @see randori.webkit.page.Location
@@ -337,17 +337,17 @@ public class Document extends Node
 
 	public function get readyState():String { return ''; }
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Element</code> instance.
 	*/
-	public function elementFromPoint(x:uint=0, y:uint=0):Element { return null;}
+	public function elementFromPoint(x:uint=undefined, y:uint=undefined):Element { return null;}
 	/**
-	*  @param x (optional argument, default value is <code>0</code>)
-	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>undefined</code>)
+	*  @param y (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Range</code> instance.
 	*/
-	public function caretRangeFromPoint(x:uint=0, y:uint=0):Range { return null;}
+	public function caretRangeFromPoint(x:uint=undefined, y:uint=undefined):Range { return null;}
 	/**
 	*  @return A <code>Selection</code> instance.
 	*/
@@ -385,10 +385,10 @@ public class Document extends Node
 	*/
 	public function getCSSCanvasContext(contextId:String, name:String, width:uint, height:uint):CanvasRenderingContext { return null;}
 	/**
-	*  @param tagname (optional argument, default value is <code>''</code>)
+	*  @param tagname (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByClassName(tagname:String=''):Object { return null;}
+	public function getElementsByClassName(tagname:String=undefined):Object { return null;}
 
 	public function get compatMode():String { return ''; }
 	/**
@@ -537,20 +537,20 @@ public class Document extends Node
 	public function get ontouchcancel():Function { return null; }
 	public function set ontouchcancel(value:Function):void { }
 	/**
-	*  @param window (optional argument, default value is <code>null</code>)
-	*  @param target (optional argument, default value is <code>null</code>)
-	*  @param identifier (optional argument, default value is <code>0</code>)
-	*  @param pageX (optional argument, default value is <code>0</code>)
-	*  @param pageY (optional argument, default value is <code>0</code>)
-	*  @param screenX (optional argument, default value is <code>0</code>)
-	*  @param screenY (optional argument, default value is <code>0</code>)
-	*  @param webkitRadiusX (optional argument, default value is <code>0</code>)
-	*  @param webkitRadiusY (optional argument, default value is <code>0</code>)
-	*  @param webkitRotationAngle (optional argument, default value is <code>0</code>)
-	*  @param webkitForce (optional argument, default value is <code>0</code>)
+	*  @param window (optional argument, default value is <code>undefined</code>)
+	*  @param target (optional argument, default value is <code>undefined</code>)
+	*  @param identifier (optional argument, default value is <code>undefined</code>)
+	*  @param pageX (optional argument, default value is <code>undefined</code>)
+	*  @param pageY (optional argument, default value is <code>undefined</code>)
+	*  @param screenX (optional argument, default value is <code>undefined</code>)
+	*  @param screenY (optional argument, default value is <code>undefined</code>)
+	*  @param webkitRadiusX (optional argument, default value is <code>undefined</code>)
+	*  @param webkitRadiusY (optional argument, default value is <code>undefined</code>)
+	*  @param webkitRotationAngle (optional argument, default value is <code>undefined</code>)
+	*  @param webkitForce (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Touch</code> instance.
 	*/
-	public function createTouch(window:Window=null, target:EventTarget=null, identifier:uint=0, pageX:uint=0, pageY:uint=0, screenX:uint=0, screenY:uint=0, webkitRadiusX:uint=0, webkitRadiusY:uint=0, webkitRotationAngle:Number=0, webkitForce:Number=0):Touch { return null;}
+	public function createTouch(window:Window=undefined, target:EventTarget=undefined, identifier:uint=undefined, pageX:uint=undefined, pageY:uint=undefined, screenX:uint=undefined, screenY:uint=undefined, webkitRadiusX:uint=undefined, webkitRadiusY:uint=undefined, webkitRotationAngle:Number=undefined, webkitForce:Number=undefined):Touch { return null;}
 	/**
 	*  @return A <code>TouchList</code> instance.
 	*/

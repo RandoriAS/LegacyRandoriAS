@@ -43,7 +43,7 @@ package randori.webkit.page
 import randori.webkit.dom.Document;
 import randori.webkit.css.StyleMedia;
 
-[JavaScript(export=false, name="AbstractView")]
+[JavaScript(export="false", name="AbstractView")]
 /**
  *  @author RandoriAS
  *  @version 1.0

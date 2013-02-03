@@ -41,7 +41,7 @@ package randori.webkit.modules.gamepad
 {
 
 
-[JavaScript(export=false, name="Gamepad")]
+[JavaScript(export="false", nativecondition="GAMEPAD", name="Gamepad")]
 /**
  *  @author RandoriAS
  *  @version 1.0

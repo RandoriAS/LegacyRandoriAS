@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLFieldSetElement")]
+[JavaScript(export="false", name="HTMLFieldSetElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

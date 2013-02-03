@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLTableSectionElement")]
+[JavaScript(export="false", name="HTMLTableSectionElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -74,14 +74,14 @@ public class HTMLTableSectionElement extends HTMLElement
 	*/
 	public function get rows():Object { return null; }
 	/**
-	*  @param index (optional argument, default value is <code>0</code>)
+	*  @param index (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>HTMLElement</code> instance.
 	*/
-	public function insertRow(index:uint=0):HTMLElement { return null;}
+	public function insertRow(index:uint=undefined):HTMLElement { return null;}
 	/**
-	*  @param index (optional argument, default value is <code>0</code>)
+	*  @param index (optional argument, default value is <code>undefined</code>)
 	*/
-	public function deleteRow(index:uint=0):void {}
+	public function deleteRow(index:uint=undefined):void {}
 }
 
 }

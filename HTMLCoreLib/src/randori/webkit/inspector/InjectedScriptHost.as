@@ -42,7 +42,7 @@ package randori.webkit.inspector
 
 import randori.webkit.dom.Node;
 
-[JavaScript(export=false, name="InjectedScriptHost")]
+[JavaScript(export="false", nativecondition="INSPECTOR", name="InjectedScriptHost")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGCursorElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGCursorElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -90,10 +90,10 @@ public class SVGCursorElement extends SVGElement implements SVGURIReference, SVG
 	*/
 	public function get systemLanguage():SVGStringList { return null; }
 	/**
-	*  @param extension (optional argument, default value is <code>''</code>)
+	*  @param extension (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function hasExtension(extension:String=''):Boolean { return false;}
+	public function hasExtension(extension:String=undefined):Boolean { return false;}
 
 	/**
 	*  @see randori.webkit.svg.SVGAnimatedBoolean

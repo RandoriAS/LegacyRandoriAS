@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLTableElement")]
+[JavaScript(export="false", name="HTMLTableElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -131,14 +131,14 @@ public class HTMLTableElement extends HTMLElement
 	public function createCaption():HTMLElement { return null;}
 	public function deleteCaption():void {}
 	/**
-	*  @param index (optional argument, default value is <code>0</code>)
+	*  @param index (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>HTMLElement</code> instance.
 	*/
-	public function insertRow(index:uint=0):HTMLElement { return null;}
+	public function insertRow(index:uint=undefined):HTMLElement { return null;}
 	/**
-	*  @param index (optional argument, default value is <code>0</code>)
+	*  @param index (optional argument, default value is <code>undefined</code>)
 	*/
-	public function deleteRow(index:uint=0):void {}
+	public function deleteRow(index:uint=undefined):void {}
 }
 
 }

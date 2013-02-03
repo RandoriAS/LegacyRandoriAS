@@ -41,7 +41,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export=false, name="WebGLProgram")]
+[JavaScript(export="false", nativecondition="WEBGL", name="WebGLProgram")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGZoomAndPan")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGZoomAndPan")]
 /**
  *  @author RandoriAS
  *  @version 1.0

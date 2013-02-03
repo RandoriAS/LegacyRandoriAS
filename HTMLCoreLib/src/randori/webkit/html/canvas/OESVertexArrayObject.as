@@ -41,7 +41,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export=false, name="OESVertexArrayObject")]
+[JavaScript(export="false", nativecondition="WEBGL", name="OESVertexArrayObject")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -56,18 +56,18 @@ public class OESVertexArrayObject
 	*/
 	public function createVertexArrayOES():WebGLVertexArrayObjectOES { return null;}
 	/**
-	*  @param arrayObject (optional argument, default value is <code>null</code>)
+	*  @param arrayObject (optional argument, default value is <code>undefined</code>)
 	*/
-	public function deleteVertexArrayOES(arrayObject:WebGLVertexArrayObjectOES=null):void {}
+	public function deleteVertexArrayOES(arrayObject:WebGLVertexArrayObjectOES=undefined):void {}
 	/**
-	*  @param arrayObject (optional argument, default value is <code>null</code>)
+	*  @param arrayObject (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function isVertexArrayOES(arrayObject:WebGLVertexArrayObjectOES=null):Boolean { return false;}
+	public function isVertexArrayOES(arrayObject:WebGLVertexArrayObjectOES=undefined):Boolean { return false;}
 	/**
-	*  @param arrayObject (optional argument, default value is <code>null</code>)
+	*  @param arrayObject (optional argument, default value is <code>undefined</code>)
 	*/
-	public function bindVertexArrayOES(arrayObject:WebGLVertexArrayObjectOES=null):void {}
+	public function bindVertexArrayOES(arrayObject:WebGLVertexArrayObjectOES=undefined):void {}
 }
 
 }

@@ -43,7 +43,7 @@ package randori.webkit.dom
 import randori.webkit.css.CSSStyleSheet;
 import randori.webkit.html.HTMLDocument;
 
-[JavaScript(export=false, name="DOMImplementation")]
+[JavaScript(export="false", name="DOMImplementation")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -53,36 +53,36 @@ import randori.webkit.html.HTMLDocument;
 public class DOMImplementation
 {
 	/**
-	*  @param feature (optional argument, default value is <code>''</code>)
-	*  @param version (optional argument, default value is <code>''</code>)
+	*  @param feature (optional argument, default value is <code>undefined</code>)
+	*  @param version (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function hasFeature(feature:String='', version:String=''):Boolean { return false;}
+	public function hasFeature(feature:String=undefined, version:String=undefined):Boolean { return false;}
 	/**
-	*  @param qualifiedName (optional argument, default value is <code>''</code>)
-	*  @param publicId (optional argument, default value is <code>''</code>)
-	*  @param systemId (optional argument, default value is <code>''</code>)
+	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
+	*  @param publicId (optional argument, default value is <code>undefined</code>)
+	*  @param systemId (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>DocumentType</code> instance.
 	*/
-	public function createDocumentType(qualifiedName:String='', publicId:String='', systemId:String=''):DocumentType { return null;}
+	public function createDocumentType(qualifiedName:String=undefined, publicId:String=undefined, systemId:String=undefined):DocumentType { return null;}
 	/**
-	*  @param namespaceURI (optional argument, default value is <code>''</code>)
-	*  @param qualifiedName (optional argument, default value is <code>''</code>)
-	*  @param doctype (optional argument, default value is <code>null</code>)
+	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
+	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
+	*  @param doctype (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Document</code> instance.
 	*/
-	public function createDocument(namespaceURI:String='', qualifiedName:String='', doctype:DocumentType=null):Document { return null;}
+	public function createDocument(namespaceURI:String=undefined, qualifiedName:String=undefined, doctype:DocumentType=undefined):Document { return null;}
 	/**
-	*  @param title (optional argument, default value is <code>''</code>)
-	*  @param media (optional argument, default value is <code>''</code>)
+	*  @param title (optional argument, default value is <code>undefined</code>)
+	*  @param media (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>CSSStyleSheet</code> instance.
 	*/
-	public function createCSSStyleSheet(title:String='', media:String=''):CSSStyleSheet { return null;}
+	public function createCSSStyleSheet(title:String=undefined, media:String=undefined):CSSStyleSheet { return null;}
 	/**
-	*  @param title (optional argument, default value is <code>''</code>)
+	*  @param title (optional argument, default value is <code>null</code>)
 	*  @return A <code>HTMLDocument</code> instance.
 	*/
-	public function createHTMLDocument(title:String=''):HTMLDocument { return null;}
+	public function createHTMLDocument(title:String=null):HTMLDocument { return null;}
 }
 
 }

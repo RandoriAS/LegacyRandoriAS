@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLMeterElement")]
+[JavaScript(export="false", nativecondition="METER_ELEMENT", name="HTMLMeterElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

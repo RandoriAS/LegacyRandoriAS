@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLProgressElement")]
+[JavaScript(export="false", nativecondition="PROGRESS_ELEMENT", name="HTMLProgressElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

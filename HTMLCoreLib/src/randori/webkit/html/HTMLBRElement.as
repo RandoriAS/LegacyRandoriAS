@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLBRElement")]
+[JavaScript(export="false", name="HTMLBRElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

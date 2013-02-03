@@ -41,7 +41,7 @@ package randori.webkit.modules.indexeddb
 {
 
 
-[JavaScript(export=false, name="IDBCursorWithValue")]
+[JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="IDBCursorWithValue")]
 /**
  *  @author RandoriAS
  *  @version 1.0

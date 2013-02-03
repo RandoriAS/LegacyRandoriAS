@@ -42,7 +42,7 @@ package randori.webkit.page
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="EventSource")]
+[JavaScript(export="false", name="EventSource")]
 /**
  *  @author RandoriAS
  *  @version 1.0

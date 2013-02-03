@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="MutationRecord")]
+[JavaScript(export="false", name="MutationRecord")]
 /**
  *  @author RandoriAS
  *  @version 1.0

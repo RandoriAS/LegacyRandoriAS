@@ -41,7 +41,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export=false, name="PagePopupController")]
+[JavaScript(export="false", nativecondition="PAGE_POPUP", name="PagePopupController")]
 /**
  *  @author RandoriAS
  *  @version 1.0

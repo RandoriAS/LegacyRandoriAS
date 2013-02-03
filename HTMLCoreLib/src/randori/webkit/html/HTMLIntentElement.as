@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLIntentElement")]
+[JavaScript(export="false", nativecondition="WEB_INTENTS_TAG", name="HTMLIntentElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

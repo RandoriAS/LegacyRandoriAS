@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGPatternElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGPatternElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -112,10 +112,10 @@ public class SVGPatternElement extends SVGStyledElement implements SVGURIReferen
 	*/
 	public function get systemLanguage():SVGStringList { return null; }
 	/**
-	*  @param extension (optional argument, default value is <code>''</code>)
+	*  @param extension (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function hasExtension(extension:String=''):Boolean { return false;}
+	public function hasExtension(extension:String=undefined):Boolean { return false;}
 
 	public function get xmllang():String { return ''; }
 	public function set xmllang(value:String):void { }

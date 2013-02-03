@@ -42,7 +42,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.Element;
 
-[JavaScript(export=false, name="HTMLElement")]
+[JavaScript(export="false", name="HTMLElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -89,21 +89,21 @@ public class HTMLElement extends Element
 	public function get outerText():String { return ''; }
 	public function set outerText(value:String):void { }
 	/**
-	*  @param where (optional argument, default value is <code>''</code>)
-	*  @param element (optional argument, default value is <code>null</code>)
+	*  @param where (optional argument, default value is <code>undefined</code>)
+	*  @param element (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Element</code> instance.
 	*/
-	public function insertAdjacentElement(where:String='', element:Element=null):Element { return null;}
+	public function insertAdjacentElement(where:String=undefined, element:Element=undefined):Element { return null;}
 	/**
-	*  @param where (optional argument, default value is <code>''</code>)
-	*  @param html (optional argument, default value is <code>''</code>)
+	*  @param where (optional argument, default value is <code>undefined</code>)
+	*  @param html (optional argument, default value is <code>undefined</code>)
 	*/
-	public function insertAdjacentHTML(where:String='', html:String=''):void {}
+	public function insertAdjacentHTML(where:String=undefined, html:String=undefined):void {}
 	/**
-	*  @param where (optional argument, default value is <code>''</code>)
-	*  @param text (optional argument, default value is <code>''</code>)
+	*  @param where (optional argument, default value is <code>undefined</code>)
+	*  @param text (optional argument, default value is <code>undefined</code>)
 	*/
-	public function insertAdjacentText(where:String='', text:String=''):void {}
+	public function insertAdjacentText(where:String=undefined, text:String=undefined):void {}
 
 	/**
 	*  @see randori.webkit.html.HTMLCollection

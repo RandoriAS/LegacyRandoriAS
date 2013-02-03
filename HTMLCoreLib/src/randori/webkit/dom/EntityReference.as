@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="EntityReference")]
+[JavaScript(export="false", name="EntityReference")]
 /**
  *  @author RandoriAS
  *  @version 1.0

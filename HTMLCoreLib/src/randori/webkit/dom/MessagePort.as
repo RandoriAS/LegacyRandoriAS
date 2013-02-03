@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="MessagePort")]
+[JavaScript(export="false", name="MessagePort")]
 /**
  *  @author RandoriAS
  *  @version 1.0

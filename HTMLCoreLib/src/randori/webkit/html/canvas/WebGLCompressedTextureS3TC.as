@@ -41,7 +41,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export=false, name="WebGLCompressedTextureS3TC")]
+[JavaScript(export="false", nativecondition="WEBGL", name="WebGLCompressedTextureS3TC")]
 /**
  *  @author RandoriAS
  *  @version 1.0

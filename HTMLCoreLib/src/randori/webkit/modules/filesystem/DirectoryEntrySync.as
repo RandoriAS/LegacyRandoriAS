@@ -41,7 +41,7 @@ package randori.webkit.modules.filesystem
 {
 
 
-[JavaScript(export=false, name="DirectoryEntrySync")]
+[JavaScript(export="false", nativecondition="FILE_SYSTEM", name="DirectoryEntrySync")]
 /**
  *  @author RandoriAS
  *  @version 1.0

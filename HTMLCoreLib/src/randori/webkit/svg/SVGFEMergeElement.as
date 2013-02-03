@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGFEMergeElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGFEMergeElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

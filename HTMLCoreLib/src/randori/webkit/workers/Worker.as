@@ -41,7 +41,7 @@ package randori.webkit.workers
 {
 
 
-[JavaScript(export=false, name="Worker")]
+[JavaScript(export="false", nativecondition="WORKERS", name="Worker")]
 /**
  *  @author RandoriAS
  *  @version 1.0

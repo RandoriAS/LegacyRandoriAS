@@ -41,7 +41,7 @@ package randori.webkit.inspector
 {
 
 
-[JavaScript(export=false, name="JavaScriptCallFrame")]
+[JavaScript(export="false", nativecondition="JAVASCRIPT_DEBUGGER", name="JavaScriptCallFrame")]
 /**
  *  @author RandoriAS
  *  @version 1.0

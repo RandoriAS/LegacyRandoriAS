@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="NodeFilter")]
+[JavaScript(export="false", name="NodeFilter")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -67,10 +67,10 @@ public class NodeFilter
 	public static const SHOW_DOCUMENT_FRAGMENT:uint = 0x00000400;
 	public static const SHOW_NOTATION:uint = 0x00000800;
 	/**
-	*  @param n (optional argument, default value is <code>null</code>)
+	*  @param n (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>int</code> instance.
 	*/
-	public function acceptNode(n:Node=null):int { return 0;}
+	public function acceptNode(n:Node=undefined):int { return 0;}
 }
 
 }

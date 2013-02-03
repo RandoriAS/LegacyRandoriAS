@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="RadioNodeList")]
+[JavaScript(export="false", name="RadioNodeList")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.modules.webaudio
 {
 
 
-[JavaScript(export=false, name="WaveShaperNode")]
+[JavaScript(export="false", nativecondition="WEB_AUDIO", name="WaveShaperNode")]
 /**
  *  @author RandoriAS
  *  @version 1.0

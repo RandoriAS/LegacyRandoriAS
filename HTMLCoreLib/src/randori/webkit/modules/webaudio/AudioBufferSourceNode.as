@@ -41,7 +41,7 @@ package randori.webkit.modules.webaudio
 {
 
 
-[JavaScript(export=false, name="AudioBufferSourceNode")]
+[JavaScript(export="false", nativecondition="WEB_AUDIO", name="AudioBufferSourceNode")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -42,7 +42,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="MediaKeyEvent")]
+[JavaScript(export="false", nativecondition="ENCRYPTED_MEDIA", name="MediaKeyEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

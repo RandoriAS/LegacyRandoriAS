@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLLabelElement")]
+[JavaScript(export="false", name="HTMLLabelElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

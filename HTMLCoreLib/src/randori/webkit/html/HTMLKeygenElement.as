@@ -41,7 +41,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export=false, name="HTMLKeygenElement")]
+[JavaScript(export="false", name="HTMLKeygenElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

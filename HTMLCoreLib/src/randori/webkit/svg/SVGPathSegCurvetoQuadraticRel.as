@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGPathSegCurvetoQuadraticRel")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGPathSegCurvetoQuadraticRel")]
 /**
  *  @author RandoriAS
  *  @version 1.0

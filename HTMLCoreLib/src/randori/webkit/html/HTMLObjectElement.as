@@ -43,7 +43,7 @@ package randori.webkit.html
 import randori.webkit.dom.Document;
 import randori.webkit.svg.SVGDocument;
 
-[JavaScript(export=false, name="HTMLObjectElement")]
+[JavaScript(export="false", name="HTMLObjectElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

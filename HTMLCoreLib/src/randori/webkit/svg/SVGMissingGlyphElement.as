@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGMissingGlyphElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGMissingGlyphElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0

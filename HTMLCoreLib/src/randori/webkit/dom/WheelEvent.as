@@ -42,7 +42,7 @@ package randori.webkit.dom
 
 import randori.webkit.page.Window;
 
-[JavaScript(export=false, name="WheelEvent")]
+[JavaScript(export="false", name="WheelEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -61,33 +61,33 @@ public class WheelEvent extends MouseEvent
 
 	public function get isHorizontal():Boolean { return false; }
 	/**
-	*  @param wheelDeltaX (optional argument, default value is <code>0</code>)
-	*  @param wheelDeltaY (optional argument, default value is <code>0</code>)
-	*  @param view (optional argument, default value is <code>null</code>)
-	*  @param screenX (optional argument, default value is <code>0</code>)
-	*  @param screenY (optional argument, default value is <code>0</code>)
-	*  @param clientX (optional argument, default value is <code>0</code>)
-	*  @param clientY (optional argument, default value is <code>0</code>)
-	*  @param ctrlKey (optional argument, default value is <code>false</code>)
-	*  @param altKey (optional argument, default value is <code>false</code>)
-	*  @param shiftKey (optional argument, default value is <code>false</code>)
-	*  @param metaKey (optional argument, default value is <code>false</code>)
+	*  @param wheelDeltaX (optional argument, default value is <code>undefined</code>)
+	*  @param wheelDeltaY (optional argument, default value is <code>undefined</code>)
+	*  @param view (optional argument, default value is <code>undefined</code>)
+	*  @param screenX (optional argument, default value is <code>undefined</code>)
+	*  @param screenY (optional argument, default value is <code>undefined</code>)
+	*  @param clientX (optional argument, default value is <code>undefined</code>)
+	*  @param clientY (optional argument, default value is <code>undefined</code>)
+	*  @param ctrlKey (optional argument, default value is <code>undefined</code>)
+	*  @param altKey (optional argument, default value is <code>undefined</code>)
+	*  @param shiftKey (optional argument, default value is <code>undefined</code>)
+	*  @param metaKey (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initWheelEvent(wheelDeltaX:uint=0, wheelDeltaY:uint=0, view:Window=null, screenX:uint=0, screenY:uint=0, clientX:uint=0, clientY:uint=0, ctrlKey:Boolean=false, altKey:Boolean=false, shiftKey:Boolean=false, metaKey:Boolean=false):void {}
+	public function initWheelEvent(wheelDeltaX:uint=undefined, wheelDeltaY:uint=undefined, view:Window=undefined, screenX:uint=undefined, screenY:uint=undefined, clientX:uint=undefined, clientY:uint=undefined, ctrlKey:Boolean=undefined, altKey:Boolean=undefined, shiftKey:Boolean=undefined, metaKey:Boolean=undefined):void {}
 	/**
-	*  @param wheelDeltaX (optional argument, default value is <code>0</code>)
-	*  @param wheelDeltaY (optional argument, default value is <code>0</code>)
-	*  @param view (optional argument, default value is <code>null</code>)
-	*  @param screenX (optional argument, default value is <code>0</code>)
-	*  @param screenY (optional argument, default value is <code>0</code>)
-	*  @param clientX (optional argument, default value is <code>0</code>)
-	*  @param clientY (optional argument, default value is <code>0</code>)
-	*  @param ctrlKey (optional argument, default value is <code>false</code>)
-	*  @param altKey (optional argument, default value is <code>false</code>)
-	*  @param shiftKey (optional argument, default value is <code>false</code>)
-	*  @param metaKey (optional argument, default value is <code>false</code>)
+	*  @param wheelDeltaX (optional argument, default value is <code>undefined</code>)
+	*  @param wheelDeltaY (optional argument, default value is <code>undefined</code>)
+	*  @param view (optional argument, default value is <code>undefined</code>)
+	*  @param screenX (optional argument, default value is <code>undefined</code>)
+	*  @param screenY (optional argument, default value is <code>undefined</code>)
+	*  @param clientX (optional argument, default value is <code>undefined</code>)
+	*  @param clientY (optional argument, default value is <code>undefined</code>)
+	*  @param ctrlKey (optional argument, default value is <code>undefined</code>)
+	*  @param altKey (optional argument, default value is <code>undefined</code>)
+	*  @param shiftKey (optional argument, default value is <code>undefined</code>)
+	*  @param metaKey (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initWebKitWheelEvent(wheelDeltaX:uint=0, wheelDeltaY:uint=0, view:Window=null, screenX:uint=0, screenY:uint=0, clientX:uint=0, clientY:uint=0, ctrlKey:Boolean=false, altKey:Boolean=false, shiftKey:Boolean=false, metaKey:Boolean=false):void {}
+	public function initWebKitWheelEvent(wheelDeltaX:uint=undefined, wheelDeltaY:uint=undefined, view:Window=undefined, screenX:uint=undefined, screenY:uint=undefined, clientX:uint=undefined, clientY:uint=undefined, ctrlKey:Boolean=undefined, altKey:Boolean=undefined, shiftKey:Boolean=undefined, metaKey:Boolean=undefined):void {}
 }
 
 }

@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="EventTarget")]
+[JavaScript(export="false", name="EventTarget")]
 /**
  *  @author RandoriAS
  *  @version 1.0

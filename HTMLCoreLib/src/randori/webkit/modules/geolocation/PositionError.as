@@ -41,7 +41,7 @@ package randori.webkit.modules.geolocation
 {
 
 
-[JavaScript(export=false, name="PositionError")]
+[JavaScript(export="false", nativecondition="GEOLOCATION", name="PositionError")]
 /**
  *  @author RandoriAS
  *  @version 1.0

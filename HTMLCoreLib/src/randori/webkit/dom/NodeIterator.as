@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="NodeIterator")]
+[JavaScript(export="false", name="NodeIterator")]
 /**
  *  @author RandoriAS
  *  @version 1.0

@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="Node")]
+[JavaScript(export="false", name="Node")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -137,17 +137,17 @@ public class Node extends Object implements EventTarget
 	*/
 	public function hasChildNodes():Boolean { return false;}
 	/**
-	*  @param deep (optional argument, default value is <code>false</code>)
+	*  @param deep (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Node</code> instance.
 	*/
-	public function cloneNode(deep:Boolean=false):Node { return null;}
+	public function cloneNode(deep:Boolean=undefined):Node { return null;}
 	public function normalize():void {}
 	/**
-	*  @param feature (optional argument, default value is <code>''</code>)
-	*  @param version (optional argument, default value is <code>''</code>)
+	*  @param feature (optional argument, default value is <code>undefined</code>)
+	*  @param version (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function isSupported(feature:String='', version:String=''):Boolean { return false;}
+	public function isSupported(feature:String=undefined, version:String=undefined):Boolean { return false;}
 
 	public function get namespaceURI():String { return ''; }
 
@@ -165,30 +165,30 @@ public class Node extends Object implements EventTarget
 	public function get textContent():String { return ''; }
 	public function set textContent(value:String):void { }
 	/**
-	*  @param other (optional argument, default value is <code>null</code>)
+	*  @param other (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function isSameNode(other:Node=null):Boolean { return false;}
+	public function isSameNode(other:Node=undefined):Boolean { return false;}
 	/**
-	*  @param other (optional argument, default value is <code>null</code>)
+	*  @param other (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function isEqualNode(other:Node=null):Boolean { return false;}
+	public function isEqualNode(other:Node=undefined):Boolean { return false;}
 	/**
-	*  @param namespaceURI (optional argument, default value is <code>''</code>)
+	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
-	public function lookupPrefix(namespaceURI:String=''):String { return '';}
+	public function lookupPrefix(namespaceURI:String=undefined):String { return '';}
 	/**
-	*  @param namespaceURI (optional argument, default value is <code>''</code>)
+	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function isDefaultNamespace(namespaceURI:String=''):Boolean { return false;}
+	public function isDefaultNamespace(namespaceURI:String=undefined):Boolean { return false;}
 	/**
-	*  @param prefix (optional argument, default value is <code>''</code>)
+	*  @param prefix (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
-	public function lookupNamespaceURI(prefix:String=''):String { return '';}
+	public function lookupNamespaceURI(prefix:String=undefined):String { return '';}
 	public static const DOCUMENT_POSITION_DISCONNECTED:uint = 0x01;
 	public static const DOCUMENT_POSITION_PRECEDING:uint = 0x02;
 	public static const DOCUMENT_POSITION_FOLLOWING:uint = 0x04;
@@ -196,15 +196,15 @@ public class Node extends Object implements EventTarget
 	public static const DOCUMENT_POSITION_CONTAINED_BY:uint = 0x10;
 	public static const DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC:uint = 0x20;
 	/**
-	*  @param other (optional argument, default value is <code>null</code>)
+	*  @param other (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>uint</code> instance.
 	*/
-	public function compareDocumentPosition(other:Node=null):uint { return 0;}
+	public function compareDocumentPosition(other:Node=undefined):uint { return 0;}
 	/**
-	*  @param other (optional argument, default value is <code>null</code>)
+	*  @param other (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function contains(other:Node=null):Boolean { return false;}
+	public function contains(other:Node=undefined):Boolean { return false;}
 
 	/**
 	*  @see randori.webkit.dom.Element

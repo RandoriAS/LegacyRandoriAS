@@ -41,7 +41,7 @@ package randori.webkit.modules.indexeddb
 {
 
 
-[JavaScript(export=false, name="IDBKeyRange")]
+[JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="IDBKeyRange")]
 /**
  *  @author RandoriAS
  *  @version 1.0

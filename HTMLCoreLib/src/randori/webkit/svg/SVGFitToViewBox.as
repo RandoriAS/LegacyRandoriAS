@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGFitToViewBox")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGFitToViewBox")]
 /**
  *  @author RandoriAS
  *  @version 1.0

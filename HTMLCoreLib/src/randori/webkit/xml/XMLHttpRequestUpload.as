@@ -42,7 +42,7 @@ package randori.webkit.xml
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="XMLHttpRequestUpload")]
+[JavaScript(export="false", name="XMLHttpRequestUpload")]
 /**
  *  @author RandoriAS
  *  @version 1.0

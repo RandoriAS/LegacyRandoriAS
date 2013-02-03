@@ -42,7 +42,7 @@ package randori.webkit.modules.webaudio
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="AudioProcessingEvent")]
+[JavaScript(export="false", nativecondition="WEB_AUDIO", name="AudioProcessingEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0

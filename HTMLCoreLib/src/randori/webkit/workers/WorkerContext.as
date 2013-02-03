@@ -53,7 +53,7 @@ import randori.webkit.html.URL;
 import randori.webkit.html.canvas.ArrayBuffer;
 import randori.webkit.html.canvas.DataView;
 
-[JavaScript(export=false, name="WorkerContext")]
+[JavaScript(export="false", nativecondition="WORKERS", name="WorkerContext")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -93,9 +93,9 @@ public class WorkerContext
 	*/
 	public function setTimeout(handler:Object, timeout:uint):uint { return 0;}
 	/**
-	*  @param handle (optional argument, default value is <code>0</code>)
+	*  @param handle (optional argument, default value is <code>undefined</code>)
 	*/
-	public function clearTimeout(handle:uint=0):void {}
+	public function clearTimeout(handle:uint=undefined):void {}
 	/**
 	*  @param handler
 	*  @param timeout
@@ -103,9 +103,9 @@ public class WorkerContext
 	*/
 	public function setInterval(handler:Object, timeout:uint):uint { return 0;}
 	/**
-	*  @param handle (optional argument, default value is <code>0</code>)
+	*  @param handle (optional argument, default value is <code>undefined</code>)
 	*/
-	public function clearInterval(handle:uint=0):void {}
+	public function clearInterval(handle:uint=undefined):void {}
 	/**
 	*  @param type
 	*  @param listener

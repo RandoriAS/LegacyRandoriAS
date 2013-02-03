@@ -41,7 +41,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export=false, name="History")]
+[JavaScript(export="false", name="History")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -57,9 +57,9 @@ public class History
 	public function back():void {}
 	public function forward():void {}
 	/**
-	*  @param distance (optional argument, default value is <code>0</code>)
+	*  @param distance (optional argument, default value is <code>undefined</code>)
 	*/
-	public function go(distance:uint=0):void {}
+	public function go(distance:uint=undefined):void {}
 	/**
 	*  @param data
 	*  @param title

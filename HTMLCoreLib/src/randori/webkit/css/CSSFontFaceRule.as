@@ -41,7 +41,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export=false, name="CSSFontFaceRule")]
+[JavaScript(export="false", name="CSSFontFaceRule")]
 /**
  *  @author RandoriAS
  *  @version 1.0

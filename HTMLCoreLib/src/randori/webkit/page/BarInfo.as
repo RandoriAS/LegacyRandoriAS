@@ -41,7 +41,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export=false, name="BarInfo")]
+[JavaScript(export="false", name="BarInfo")]
 /**
  *  @author RandoriAS
  *  @version 1.0

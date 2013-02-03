@@ -41,7 +41,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export=false, name="CustomEvent")]
+[JavaScript(export="false", name="CustomEvent")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -54,12 +54,12 @@ public class CustomEvent extends DomEvent
 
 	public function get detail():Object { return null; }
 	/**
-	*  @param typeArg (optional argument, default value is <code>''</code>)
-	*  @param canBubbleArg (optional argument, default value is <code>false</code>)
-	*  @param cancelableArg (optional argument, default value is <code>false</code>)
-	*  @param detailArg (optional argument, default value is <code>null</code>)
+	*  @param typeArg (optional argument, default value is <code>undefined</code>)
+	*  @param canBubbleArg (optional argument, default value is <code>undefined</code>)
+	*  @param cancelableArg (optional argument, default value is <code>undefined</code>)
+	*  @param detailArg (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initCustomEvent(typeArg:String='', canBubbleArg:Boolean=false, cancelableArg:Boolean=false, detailArg:Object=null):void {}
+	public function initCustomEvent(typeArg:String=undefined, canBubbleArg:Boolean=undefined, cancelableArg:Boolean=undefined, detailArg:Object=undefined):void {}
 }
 
 }

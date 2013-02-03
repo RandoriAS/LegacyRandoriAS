@@ -44,7 +44,7 @@ import randori.webkit.html.canvas.ArrayBufferView;
 import randori.webkit.dom.Document;
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="XMLHttpRequest")]
+[JavaScript(export="false", name="XMLHttpRequest")]
 /**
  *  @author RandoriAS
  *  @version 1.0

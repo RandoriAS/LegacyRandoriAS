@@ -41,7 +41,7 @@ package randori.webkit.modules.speech
 {
 
 
-[JavaScript(export=false, name="SpeechSynthesis")]
+[JavaScript(export="false", nativecondition="SPEECH_SYNTHESIS", name="SpeechSynthesis")]
 /**
  *  @author RandoriAS
  *  @version 1.0

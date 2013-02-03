@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGNumber")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGNumber")]
 /**
  *  @author RandoriAS
  *  @version 1.0

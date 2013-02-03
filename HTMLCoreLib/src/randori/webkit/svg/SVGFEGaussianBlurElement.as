@@ -41,7 +41,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export=false, name="SVGFEGaussianBlurElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGFEGaussianBlurElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -68,10 +68,10 @@ public class SVGFEGaussianBlurElement extends SVGStyledElement implements SVGFil
 	*/
 	public function get stdDeviationY():SVGAnimatedNumber { return null; }
 	/**
-	*  @param stdDeviationX (optional argument, default value is <code>0</code>)
-	*  @param stdDeviationY (optional argument, default value is <code>0</code>)
+	*  @param stdDeviationX (optional argument, default value is <code>undefined</code>)
+	*  @param stdDeviationY (optional argument, default value is <code>undefined</code>)
 	*/
-	public function setStdDeviation(stdDeviationX:Number=0, stdDeviationY:Number=0):void {}
+	public function setStdDeviation(stdDeviationX:Number=undefined, stdDeviationY:Number=undefined):void {}
 
 	/**
 	*  @see randori.webkit.svg.SVGAnimatedLength

@@ -42,7 +42,7 @@ package randori.webkit.svg
 
 import randori.webkit.css.CSSValue;
 
-[JavaScript(export=false, name="SVGStyledElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGStyledElement")]
 /**
  *  @author RandoriAS
  *  @version 1.0
@@ -58,10 +58,10 @@ public class SVGStyledElement extends SVGElement
 	*/
 	public function SVGStyledElement() {super();}
 	/**
-	*  @param name (optional argument, default value is <code>''</code>)
+	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>CSSValue</code> instance.
 	*/
-	public function getPresentationAttribute(name:String=''):CSSValue { return null;}
+	public function getPresentationAttribute(name:String=undefined):CSSValue { return null;}
 }
 
 }

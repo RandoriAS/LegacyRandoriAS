@@ -42,7 +42,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export=false, name="MediaController")]
+[JavaScript(export="false", nativecondition="VIDEO", name="MediaController")]
 /**
  *  @author RandoriAS
  *  @version 1.0
