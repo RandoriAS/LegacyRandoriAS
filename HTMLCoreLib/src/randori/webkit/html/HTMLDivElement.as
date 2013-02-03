@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLDivElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLDivElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('div')")]
+	/**
+	*  Creates a new <code>HTMLDivElement</code> instance.
+	*/
 	public function HTMLDivElement() {super();}
 
 	public function get align():String { return ''; }

@@ -42,6 +42,12 @@ package randori.webkit.css
 
 
 [JavaScript(export=false, name="CSSRule")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class CSSRule
 {
 	public static const UNKNOWN_RULE:uint = 0;
@@ -59,8 +65,14 @@ public class CSSRule
 	public function get cssText():String { return ''; }
 	public function set cssText(value:String):void { }
 
+	/**
+	*  @see randori.webkit.css.CSSStyleSheet
+	*/
 	public function get parentStyleSheet():CSSStyleSheet { return null; }
 
+	/**
+	*  @see randori.webkit.css.CSSRule
+	*/
 	public function get parentRule():CSSRule { return null; }
 }
 

@@ -42,16 +42,48 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGStringList")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGStringList
 {
 
 	public function get numberOfItems():uint { return 0; }
 	public function clear():void {}
+	/**
+	*  @param item
+	*  @return A <code>String</code> instance.
+	*/
 	public function initialize(item:String):String { return '';}
+	/**
+	*  @param index
+	*  @return A <code>String</code> instance.
+	*/
 	public function getItem(index:uint):String { return '';}
+	/**
+	*  @param item
+	*  @param index
+	*  @return A <code>String</code> instance.
+	*/
 	public function insertItemBefore(item:String, index:uint):String { return '';}
+	/**
+	*  @param item
+	*  @param index
+	*  @return A <code>String</code> instance.
+	*/
 	public function replaceItem(item:String, index:uint):String { return '';}
+	/**
+	*  @param index
+	*  @return A <code>String</code> instance.
+	*/
 	public function removeItem(index:uint):String { return '';}
+	/**
+	*  @param item
+	*  @return A <code>String</code> instance.
+	*/
 	public function appendItem(item:String):String { return '';}
 }
 

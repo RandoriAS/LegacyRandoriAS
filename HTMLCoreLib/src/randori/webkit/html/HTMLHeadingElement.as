@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLHeadingElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLHeadingElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('heading')")]
+	/**
+	*  Creates a new <code>HTMLHeadingElement</code> instance.
+	*/
 	public function HTMLHeadingElement() {super();}
 
 	public function get align():String { return ''; }

@@ -43,9 +43,19 @@ package randori.webkit.page
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="SpeechInputEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.DomEvent
+ */
 public class SpeechInputEvent extends DomEvent
 {
 
+	/**
+	*  @see randori.webkit.page.SpeechInputResultList
+	*/
 	public function get results():Object { return null; }
 }
 

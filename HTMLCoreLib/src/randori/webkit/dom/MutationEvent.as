@@ -42,12 +42,22 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="MutationEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.DomEvent
+ */
 public class MutationEvent extends DomEvent
 {
 	public static const MODIFICATION:uint = 1;
 	public static const ADDITION:uint = 2;
 	public static const REMOVAL:uint = 3;
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get relatedNode():Node { return null; }
 
 	public function get prevValue():String { return ''; }
@@ -57,6 +67,16 @@ public class MutationEvent extends DomEvent
 	public function get attrName():String { return ''; }
 
 	public function get attrChange():uint { return 0; }
+	/**
+	*  @param type (optional argument, default value is <code>''</code>)
+	*  @param canBubble (optional argument, default value is <code>false</code>)
+	*  @param cancelable (optional argument, default value is <code>false</code>)
+	*  @param relatedNode (optional argument, default value is <code>null</code>)
+	*  @param prevValue (optional argument, default value is <code>''</code>)
+	*  @param newValue (optional argument, default value is <code>''</code>)
+	*  @param attrName (optional argument, default value is <code>''</code>)
+	*  @param attrChange (optional argument, default value is <code>0</code>)
+	*/
 	public function initMutationEvent(type:String='', canBubble:Boolean=false, cancelable:Boolean=false, relatedNode:Node=null, prevValue:String='', newValue:String='', attrName:String='', attrChange:uint=0):void {}
 }
 

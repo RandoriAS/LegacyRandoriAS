@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLMarqueeElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLMarqueeElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('marquee')")]
+	/**
+	*  Creates a new <code>HTMLMarqueeElement</code> instance.
+	*/
 	public function HTMLMarqueeElement() {super();}
 	public function start():void {}
 	public function stop():void {}

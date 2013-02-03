@@ -42,27 +42,65 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGFEDiffuseLightingElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ *  @see randori.webkit.svg.SVGFilterPrimitiveStandardAttributes
+ */
 public class SVGFEDiffuseLightingElement extends SVGStyledElement implements SVGFilterPrimitiveStandardAttributes
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get in1():SVGAnimatedString { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get surfaceScale():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get diffuseConstant():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get kernelUnitLengthX():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get kernelUnitLengthY():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get x():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get y():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get width():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get height():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get result():SVGAnimatedString { return null; }
 }
 

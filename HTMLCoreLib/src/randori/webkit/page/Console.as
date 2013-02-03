@@ -43,32 +43,102 @@ package randori.webkit.page
 import randori.webkit.inspector.ScriptProfile;
 
 [JavaScript(export=false, name="Console")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Console
 {
+	/**
+	*  @param scriptArgs
+	*/
 	public function debug(...params):void {}
+	/**
+	*  @param scriptArgs
+	*/
 	public function error(...params):void {}
+	/**
+	*  @param scriptArgs
+	*/
 	public function info(...params):void {}
+	/**
+	*  @param scriptArgs
+	*/
 	public function log(...params):void {}
+	/**
+	*  @param scriptArgs
+	*/
 	public function warn(...params):void {}
+	/**
+	*  @param scriptArgs
+	*/
 	public function dir(...params):void {}
+	/**
+	*  @param scriptArgs
+	*/
 	public function dirxml(...params):void {}
 	[JavascriptMethod(name="trace")]
+	/**
+	*  @param scriptArgs
+	*/
 	public function $trace(...params):void {}
+	/**
+	*  @param condition
+	*  @param scriptArgs
+	*/
 	public function assert(condition:Boolean, ...params):void {}
+	/**
+	*  @param scriptArgs
+	*/
 	public function count(...params):void {}
+	/**
+	*  @param scriptArgs
+	*/
 	public function markTimeline(...params):void {}
 
+	/**
+	*  @see randori.webkit.inspector.ScriptProfile
+	*/
 	public function get profiles():Vector.<ScriptProfile> { return null; }
+	/**
+	*  @param title
+	*/
 	public function profile(title:String):void {}
+	/**
+	*  @param title
+	*/
 	public function profileEnd(title:String):void {}
+	/**
+	*  @param title
+	*/
 	public function time(title:String):void {}
+	/**
+	*  @param title
+	*/
 	public function timeEnd(title:String):void {}
+	/**
+	*  @param scriptArgs
+	*/
 	public function timeStamp(...params):void {}
+	/**
+	*  @param scriptArgs
+	*/
 	public function group(...params):void {}
+	/**
+	*  @param scriptArgs
+	*/
 	public function groupCollapsed(...params):void {}
 	public function groupEnd():void {}
+	/**
+	*  @param scriptArgs
+	*/
 	public function clear(...params):void {}
 
+	/**
+	*  @see randori.webkit.page.MemoryInfo
+	*/
 	public function get memory():MemoryInfo { return null; }
 }
 

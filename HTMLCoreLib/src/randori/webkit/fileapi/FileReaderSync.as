@@ -43,12 +43,38 @@ package randori.webkit.fileapi
 import randori.webkit.html.canvas.ArrayBuffer;
 
 [JavaScript(export=false, name="FileReaderSync")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class FileReaderSync
 {
+	/**
+	*  Creates a new <code>FileReaderSync</code> instance.
+	*/
 	public function FileReaderSync() {super();}
+	/**
+	*  @param blob
+	*  @return A <code>ArrayBuffer</code> instance.
+	*/
 	public function readAsArrayBuffer(blob:Blob):ArrayBuffer { return null;}
+	/**
+	*  @param blob
+	*  @return A <code>String</code> instance.
+	*/
 	public function readAsBinaryString(blob:Blob):String { return '';}
+	/**
+	*  @param blob
+	*  @param encoding (optional argument, default value is <code>''</code>)
+	*  @return A <code>String</code> instance.
+	*/
 	public function readAsText(blob:Blob, encoding:String=''):String { return '';}
+	/**
+	*  @param blob
+	*  @return A <code>String</code> instance.
+	*/
 	public function readAsDataURL(blob:Blob):String { return '';}
 }
 

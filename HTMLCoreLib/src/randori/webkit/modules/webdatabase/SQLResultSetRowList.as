@@ -42,6 +42,12 @@ package randori.webkit.modules.webdatabase
 
 
 [JavaScript(export=false, name="SQLResultSetRowList")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public dynamic class SQLResultSetRowList
 {
 

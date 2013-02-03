@@ -42,23 +42,96 @@ package randori.webkit.html.canvas
 
 
 [JavaScript(export=false, name="DataView")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.canvas.ArrayBufferView
+ */
 public class DataView extends ArrayBufferView
 {
+	/**
+	*  @return A <code>Object</code> instance.
+	*/
 	public function getInt8():Object { return null;}
+	/**
+	*  @return A <code>Object</code> instance.
+	*/
 	public function getUint8():Object { return null;}
+	/**
+	*  @param byteOffset
+	*  @param littleEndian (optional argument, default value is <code>false</code>)
+	*  @return A <code>int</code> instance.
+	*/
 	public function getInt16(byteOffset:uint, littleEndian:Boolean=false):int { return 0;}
+	/**
+	*  @param byteOffset
+	*  @param littleEndian (optional argument, default value is <code>false</code>)
+	*  @return A <code>uint</code> instance.
+	*/
 	public function getUint16(byteOffset:uint, littleEndian:Boolean=false):uint { return 0;}
+	/**
+	*  @param byteOffset
+	*  @param littleEndian (optional argument, default value is <code>false</code>)
+	*  @return A <code>uint</code> instance.
+	*/
 	public function getInt32(byteOffset:uint, littleEndian:Boolean=false):uint { return 0;}
+	/**
+	*  @param byteOffset
+	*  @param littleEndian (optional argument, default value is <code>false</code>)
+	*  @return A <code>uint</code> instance.
+	*/
 	public function getUint32(byteOffset:uint, littleEndian:Boolean=false):uint { return 0;}
+	/**
+	*  @param byteOffset
+	*  @param littleEndian (optional argument, default value is <code>false</code>)
+	*  @return A <code>Number</code> instance.
+	*/
 	public function getFloat32(byteOffset:uint, littleEndian:Boolean=false):Number { return 0;}
+	/**
+	*  @param byteOffset
+	*  @param littleEndian (optional argument, default value is <code>false</code>)
+	*  @return A <code>Number</code> instance.
+	*/
 	public function getFloat64(byteOffset:uint, littleEndian:Boolean=false):Number { return 0;}
 	public function setInt8():void {}
 	public function setUint8():void {}
+	/**
+	*  @param byteOffset
+	*  @param value
+	*  @param littleEndian (optional argument, default value is <code>false</code>)
+	*/
 	public function setInt16(byteOffset:uint, value:int, littleEndian:Boolean=false):void {}
+	/**
+	*  @param byteOffset
+	*  @param value
+	*  @param littleEndian (optional argument, default value is <code>false</code>)
+	*/
 	public function setUint16(byteOffset:uint, value:uint, littleEndian:Boolean=false):void {}
+	/**
+	*  @param byteOffset
+	*  @param value
+	*  @param littleEndian (optional argument, default value is <code>false</code>)
+	*/
 	public function setInt32(byteOffset:uint, value:uint, littleEndian:Boolean=false):void {}
+	/**
+	*  @param byteOffset
+	*  @param value
+	*  @param littleEndian (optional argument, default value is <code>false</code>)
+	*/
 	public function setUint32(byteOffset:uint, value:uint, littleEndian:Boolean=false):void {}
+	/**
+	*  @param byteOffset
+	*  @param value
+	*  @param littleEndian (optional argument, default value is <code>false</code>)
+	*/
 	public function setFloat32(byteOffset:uint, value:Number, littleEndian:Boolean=false):void {}
+	/**
+	*  @param byteOffset
+	*  @param value
+	*  @param littleEndian (optional argument, default value is <code>false</code>)
+	*/
 	public function setFloat64(byteOffset:uint, value:Number, littleEndian:Boolean=false):void {}
 }
 

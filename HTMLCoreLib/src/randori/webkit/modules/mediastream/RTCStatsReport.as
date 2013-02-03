@@ -42,11 +42,23 @@ package randori.webkit.modules.mediastream
 
 
 [JavaScript(export=false, name="RTCStatsReport")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class RTCStatsReport
 {
 
+	/**
+	*  @see randori.webkit.modules.mediastream.RTCStatsElement
+	*/
 	public function get local():RTCStatsElement { return null; }
 
+	/**
+	*  @see randori.webkit.modules.mediastream.RTCStatsElement
+	*/
 	public function get remote():RTCStatsElement { return null; }
 }
 

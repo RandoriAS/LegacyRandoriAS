@@ -42,6 +42,12 @@ package randori.webkit.html.canvas
 
 
 [JavaScript(export=false, name="EXTTextureFilterAnisotropic")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class EXTTextureFilterAnisotropic
 {
 	public static const TEXTURE_MAX_ANISOTROPY_EXT:uint = 0x84FE;

@@ -42,12 +42,22 @@ package randori.webkit.css
 
 
 [JavaScript(export=false, name="CSSStyleRule")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.css.CSSRule
+ */
 public class CSSStyleRule extends CSSRule
 {
 
 	public function get selectorText():String { return ''; }
 	public function set selectorText(value:String):void { }
 
+	/**
+	*  @see randori.webkit.css.CSSStyleDeclaration
+	*/
 	public function get style():Object { return null; }
 }
 

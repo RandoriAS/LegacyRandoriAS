@@ -42,6 +42,12 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGUnitTypes")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGUnitTypes
 {
 	public static const SVG_UNIT_TYPE_UNKNOWN:uint = 0;

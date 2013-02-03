@@ -42,6 +42,14 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGFEConvolveMatrixElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ *  @see randori.webkit.svg.SVGFilterPrimitiveStandardAttributes
+ */
 public class SVGFEConvolveMatrixElement extends SVGStyledElement implements SVGFilterPrimitiveStandardAttributes
 {
 	public static const SVG_EDGEMODE_UNKNOWN:uint = 0;
@@ -49,38 +57,89 @@ public class SVGFEConvolveMatrixElement extends SVGStyledElement implements SVGF
 	public static const SVG_EDGEMODE_WRAP:uint = 2;
 	public static const SVG_EDGEMODE_NONE:uint = 3;
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get in1():SVGAnimatedString { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedInteger
+	*/
 	public function get orderX():SVGAnimatedInteger { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedInteger
+	*/
 	public function get orderY():SVGAnimatedInteger { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumberList
+	*/
 	public function get kernelMatrix():SVGAnimatedNumberList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get divisor():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get bias():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedInteger
+	*/
 	public function get targetX():SVGAnimatedInteger { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedInteger
+	*/
 	public function get targetY():SVGAnimatedInteger { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedEnumeration
+	*/
 	public function get edgeMode():SVGAnimatedEnumeration { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get kernelUnitLengthX():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get kernelUnitLengthY():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get preserveAlpha():SVGAnimatedBoolean { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get x():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get y():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get width():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get height():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get result():SVGAnimatedString { return null; }
 }
 

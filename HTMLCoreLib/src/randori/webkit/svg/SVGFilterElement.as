@@ -42,26 +42,67 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGFilterElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ *  @see randori.webkit.svg.SVGURIReference
+ *  @see randori.webkit.svg.SVGLangSpace
+ *  @see randori.webkit.svg.SVGExternalResourcesRequired
+ */
 public class SVGFilterElement extends SVGStyledElement implements SVGURIReference, SVGLangSpace, SVGExternalResourcesRequired
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedEnumeration
+	*/
 	public function get filterUnits():SVGAnimatedEnumeration { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedEnumeration
+	*/
 	public function get primitiveUnits():SVGAnimatedEnumeration { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get x():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get y():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get width():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get height():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedInteger
+	*/
 	public function get filterResX():SVGAnimatedInteger { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedInteger
+	*/
 	public function get filterResY():SVGAnimatedInteger { return null; }
+	/**
+	*  @param filterResX (optional argument, default value is <code>0</code>)
+	*  @param filterResY (optional argument, default value is <code>0</code>)
+	*/
 	public function setFilterRes(filterResX:uint=0, filterResY:uint=0):void {}
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get href():SVGAnimatedString { return null; }
 
 	public function get xmllang():String { return ''; }
@@ -70,6 +111,9 @@ public class SVGFilterElement extends SVGStyledElement implements SVGURIReferenc
 	public function get xmlspace():String { return ''; }
 	public function set xmlspace(value:String):void { }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 }
 

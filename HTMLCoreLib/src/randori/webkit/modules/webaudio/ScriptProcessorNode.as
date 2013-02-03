@@ -42,9 +42,19 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="ScriptProcessorNode")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioNode
+ */
 public class ScriptProcessorNode extends AudioNode
 {
 
+	/**
+	*  Function that accepts an event of type <code>AudioprocessEvent</code>.
+	*/
 	public function get onaudioprocess():Function { return null; }
 	public function set onaudioprocess(value:Function):void { }
 

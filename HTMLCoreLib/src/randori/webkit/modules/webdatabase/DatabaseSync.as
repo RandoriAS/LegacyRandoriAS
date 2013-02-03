@@ -42,15 +42,32 @@ package randori.webkit.modules.webdatabase
 
 
 [JavaScript(export=false, name="DatabaseSync")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DatabaseSync
 {
 
 	public function get version():String { return ''; }
 
 	public function get lastErrorMessage():String { return ''; }
-	public function changeVersion(oldVersion:String, newVersion:String, callback:Function=null):void {}
-	public function transaction(callback:Function):void {}
-	public function readTransaction(callback:Function):void {}
+	/**
+	*  @param oldVersion
+	*  @param newVersion
+	*  @param callback (optional argument, default value is <code>null</code>)
+	*/
+	public function changeVersion(oldVersion:String, newVersion:String, callback:Object=null):void {}
+	/**
+	*  @param callback
+	*/
+	public function transaction(callback:Object):void {}
+	/**
+	*  @param callback
+	*/
+	public function readTransaction(callback:Object):void {}
 }
 
 }

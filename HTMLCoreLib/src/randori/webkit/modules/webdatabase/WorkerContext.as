@@ -41,10 +41,32 @@ package randori.webkit.modules.webdatabase
 {
 
 
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class WorkerContext
 {
-	public function openDatabase(name:String, version:String, displayName:String, estimatedSize:uint, creationCallback:Function=null):Database { return null;}
-	public function openDatabaseSync(name:String, version:String, displayName:String, estimatedSize:uint, creationCallback:Function=null):DatabaseSync { return null;}
+	/**
+	*  @param name
+	*  @param version
+	*  @param displayName
+	*  @param estimatedSize
+	*  @param creationCallback (optional argument, default value is <code>null</code>)
+	*  @return A <code>Database</code> instance.
+	*/
+	public function openDatabase(name:String, version:String, displayName:String, estimatedSize:uint, creationCallback:Object=null):Database { return null;}
+	/**
+	*  @param name
+	*  @param version
+	*  @param displayName
+	*  @param estimatedSize
+	*  @param creationCallback (optional argument, default value is <code>null</code>)
+	*  @return A <code>DatabaseSync</code> instance.
+	*/
+	public function openDatabaseSync(name:String, version:String, displayName:String, estimatedSize:uint, creationCallback:Object=null):DatabaseSync { return null;}
 }
 
 }

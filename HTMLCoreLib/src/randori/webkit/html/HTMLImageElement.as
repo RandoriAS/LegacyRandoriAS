@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLImageElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLImageElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('img')")]
+	/**
+	*  Creates a new <code>HTMLImageElement</code> instance.
+	*/
 	public function HTMLImageElement() {super();}
 
 	public function get name():String { return ''; }
@@ -101,6 +111,9 @@ public class HTMLImageElement extends HTMLElement
 
 	public function get altDisplayString():String { return ''; }
 
+	/**
+	*  @see randori.webkit.html.URL
+	*/
 	public function get absoluteImageURL():URL { return null; }
 }
 

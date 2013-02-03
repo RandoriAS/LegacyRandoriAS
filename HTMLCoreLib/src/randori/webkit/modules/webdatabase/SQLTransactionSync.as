@@ -42,8 +42,19 @@ package randori.webkit.modules.webdatabase
 
 
 [JavaScript(export=false, name="SQLTransactionSync")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SQLTransactionSync
 {
+	/**
+	*  @param sqlStatement
+	*  @param arguments
+	*  @return A <code>SQLResultSet</code> instance.
+	*/
 	public function executeSql(sqlStatement:String, arguments:Object):SQLResultSet { return null;}
 }
 

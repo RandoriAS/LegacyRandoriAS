@@ -42,19 +42,40 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="MutationRecord")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class MutationRecord
 {
 
 	public function get type():String { return ''; }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get target():Node { return null; }
 
+	/**
+	*  @see randori.webkit.dom.NodeList
+	*/
 	public function get addedNodes():Object { return null; }
 
+	/**
+	*  @see randori.webkit.dom.NodeList
+	*/
 	public function get removedNodes():Object { return null; }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get previousSibling():Node { return null; }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get nextSibling():Node { return null; }
 
 	public function get attributeName():String { return ''; }

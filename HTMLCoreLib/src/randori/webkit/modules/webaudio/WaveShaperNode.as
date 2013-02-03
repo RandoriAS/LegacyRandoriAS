@@ -42,11 +42,21 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="WaveShaperNode")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioNode
+ */
 public class WaveShaperNode extends AudioNode
 {
 
-	public function get curve():Vector.<Number> { return null; }
-	public function set curve(value:Vector.<Number>):void { }
+	/**
+	*  @see randori.webkit.html.canvas.Float32Array
+	*/
+	public function get curve():Object { return null; }
+	public function set curve(value:Object):void { }
 }
 
 }

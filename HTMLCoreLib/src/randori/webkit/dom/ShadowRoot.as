@@ -43,9 +43,19 @@ package randori.webkit.dom
 import randori.webkit.page.Selection;
 
 [JavaScript(export=false, name="ShadowRoot")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.DocumentFragment
+ */
 public class ShadowRoot extends DocumentFragment
 {
 
+	/**
+	*  @see randori.webkit.dom.Element
+	*/
 	public function get activeElement():Element { return null; }
 
 	public function get applyAuthorStyles():Boolean { return false; }
@@ -56,11 +66,36 @@ public class ShadowRoot extends DocumentFragment
 
 	public function get innerHTML():String { return ''; }
 	public function set innerHTML(value:String):void { }
+	/**
+	*  @return A <code>Selection</code> instance.
+	*/
 	public function getSelection():Selection { return null;}
+	/**
+	*  @param elementId (optional argument, default value is <code>''</code>)
+	*  @return A <code>Element</code> instance.
+	*/
 	public function getElementById(elementId:String=''):Element { return null;}
+	/**
+	*  @param className (optional argument, default value is <code>''</code>)
+	*  @return A <code>NodeList</code> instance.
+	*/
 	public function getElementsByClassName(className:String=''):Object { return null;}
+	/**
+	*  @param tagName (optional argument, default value is <code>''</code>)
+	*  @return A <code>NodeList</code> instance.
+	*/
 	public function getElementsByTagName(tagName:String=''):Object { return null;}
+	/**
+	*  @param namespaceURI (optional argument, default value is <code>''</code>)
+	*  @param localName (optional argument, default value is <code>''</code>)
+	*  @return A <code>NodeList</code> instance.
+	*/
 	public function getElementsByTagNameNS(namespaceURI:String='', localName:String=''):Object { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @return A <code>Element</code> instance.
+	*/
 	public function elementFromPoint(x:uint=0, y:uint=0):Element { return null;}
 }
 

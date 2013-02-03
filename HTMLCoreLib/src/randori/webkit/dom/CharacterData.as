@@ -42,6 +42,13 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="CharacterData")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.Node
+ */
 public class CharacterData extends Node
 {
 
@@ -49,10 +56,31 @@ public class CharacterData extends Node
 	public function set data(value:String):void { }
 
 	public function get length():uint { return 0; }
+	/**
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @param length (optional argument, default value is <code>0</code>)
+	*  @return A <code>String</code> instance.
+	*/
 	public function substringData(offset:uint=0, length:uint=0):String { return '';}
+	/**
+	*  @param data (optional argument, default value is <code>''</code>)
+	*/
 	public function appendData(data:String=''):void {}
+	/**
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @param data (optional argument, default value is <code>''</code>)
+	*/
 	public function insertData(offset:uint=0, data:String=''):void {}
+	/**
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @param length (optional argument, default value is <code>0</code>)
+	*/
 	public function deleteData(offset:uint=0, length:uint=0):void {}
+	/**
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @param length (optional argument, default value is <code>0</code>)
+	*  @param data (optional argument, default value is <code>''</code>)
+	*/
 	public function replaceData(offset:uint=0, length:uint=0, data:String=''):void {}
 	public function remove():void {}
 }

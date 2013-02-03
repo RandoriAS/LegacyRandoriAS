@@ -42,16 +42,48 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGPathSegList")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGPathSegList
 {
 
 	public function get numberOfItems():uint { return 0; }
 	public function clear():void {}
+	/**
+	*  @param newItem
+	*  @return A <code>SVGPathSeg</code> instance.
+	*/
 	public function initialize(newItem:SVGPathSeg):SVGPathSeg { return null;}
+	/**
+	*  @param index
+	*  @return A <code>SVGPathSeg</code> instance.
+	*/
 	public function getItem(index:uint):SVGPathSeg { return null;}
+	/**
+	*  @param newItem
+	*  @param index
+	*  @return A <code>SVGPathSeg</code> instance.
+	*/
 	public function insertItemBefore(newItem:SVGPathSeg, index:uint):SVGPathSeg { return null;}
+	/**
+	*  @param newItem
+	*  @param index
+	*  @return A <code>SVGPathSeg</code> instance.
+	*/
 	public function replaceItem(newItem:SVGPathSeg, index:uint):SVGPathSeg { return null;}
+	/**
+	*  @param index
+	*  @return A <code>SVGPathSeg</code> instance.
+	*/
 	public function removeItem(index:uint):SVGPathSeg { return null;}
+	/**
+	*  @param newItem
+	*  @return A <code>SVGPathSeg</code> instance.
+	*/
 	public function appendItem(newItem:SVGPathSeg):SVGPathSeg { return null;}
 }
 

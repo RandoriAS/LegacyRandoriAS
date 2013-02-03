@@ -43,9 +43,19 @@ package randori.webkit.modules.webaudio
 import randori.webkit.modules.mediastream.MediaStream;
 
 [JavaScript(export=false, name="MediaStreamAudioDestinationNode")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioSourceNode
+ */
 public class MediaStreamAudioDestinationNode extends AudioSourceNode
 {
 
+	/**
+	*  @see randori.webkit.modules.mediastream.MediaStream
+	*/
 	public function get stream():MediaStream { return null; }
 }
 

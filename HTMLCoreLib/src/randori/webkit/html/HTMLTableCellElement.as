@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLTableCellElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLTableCellElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('td')")]
+	/**
+	*  Creates a new <code>HTMLTableCellElement</code> instance.
+	*/
 	public function HTMLTableCellElement() {super();}
 
 	public function get cellIndex():uint { return 0; }

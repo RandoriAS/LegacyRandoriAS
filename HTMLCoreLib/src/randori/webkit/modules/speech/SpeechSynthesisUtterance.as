@@ -42,8 +42,18 @@ package randori.webkit.modules.speech
 
 
 [JavaScript(export=false, name="SpeechSynthesisUtterance")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SpeechSynthesisUtterance
 {
+	/**
+	*  Creates a new <code>SpeechSynthesisUtterance</code> instance.
+	*  @param text (optional argument, default value is <code>''</code>)
+	*/
 	public function SpeechSynthesisUtterance(text:String='') {super();}
 
 	public function get text():String { return ''; }
@@ -64,27 +74,46 @@ public class SpeechSynthesisUtterance
 	public function get pitch():Number { return 0; }
 	public function set pitch(value:Number):void { }
 
+	/**
+	*  Function that accepts an event of type <code>StartEvent</code>.
+	*/
 	public function get onstart():Function { return null; }
 	public function set onstart(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>EndEvent</code>.
+	*/
 	public function get onend():Function { return null; }
 	public function set onend(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>errorEvent</code>.
+	*  Function that accepts an event of type <code>ErrorEvent</code>.
+	*  @see randori.webkit.dom.ErrorEvent
 	*/
 	public function get onerror():Function { return null; }
 	public function set onerror(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>PauseEvent</code>.
+	*/
 	public function get onpause():Function { return null; }
 	public function set onpause(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>ResumeEvent</code>.
+	*/
 	public function get onresume():Function { return null; }
 	public function set onresume(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>MarkEvent</code>.
+	*/
 	public function get onmark():Function { return null; }
 	public function set onmark(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>BoundaryEvent</code>.
+	*/
 	public function get onboundary():Function { return null; }
 	public function set onboundary(value:Function):void { }
 }

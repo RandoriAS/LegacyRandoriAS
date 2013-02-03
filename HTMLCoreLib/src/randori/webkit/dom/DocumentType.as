@@ -42,13 +42,26 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="DocumentType")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.Node
+ */
 public class DocumentType extends Node
 {
 
 	public function get name():String { return ''; }
 
+	/**
+	*  @see randori.webkit.dom.NamedNodeMap
+	*/
 	public function get entities():Object { return null; }
 
+	/**
+	*  @see randori.webkit.dom.NamedNodeMap
+	*/
 	public function get notations():Object { return null; }
 
 	public function get publicId():String { return ''; }

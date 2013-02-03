@@ -42,6 +42,13 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="OscillatorNode")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioSourceNode
+ */
 public class OscillatorNode extends AudioSourceNode
 {
 	public static const SINE:uint = 0;
@@ -59,13 +66,34 @@ public class OscillatorNode extends AudioSourceNode
 
 	public function get playbackState():uint { return 0; }
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioParam
+	*/
 	public function get frequency():AudioParam { return null; }
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioParam
+	*/
 	public function get detune():AudioParam { return null; }
+	/**
+	*  @param when
+	*/
 	public function start(when:Number):void {}
+	/**
+	*  @param when
+	*/
 	public function stop(when:Number):void {}
+	/**
+	*  @param when
+	*/
 	public function noteOn(when:Number):void {}
+	/**
+	*  @param when
+	*/
 	public function noteOff(when:Number):void {}
+	/**
+	*  @param waveTable
+	*/
 	public function setWaveTable(waveTable:WaveTable):void {}
 }
 

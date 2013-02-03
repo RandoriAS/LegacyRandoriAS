@@ -42,6 +42,12 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGPreserveAspectRatio")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGPreserveAspectRatio
 {
 	public static const SVG_PRESERVEASPECTRATIO_UNKNOWN:uint = 0;

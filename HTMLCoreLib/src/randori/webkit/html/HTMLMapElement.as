@@ -42,11 +42,24 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLMapElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLMapElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('map')")]
+	/**
+	*  Creates a new <code>HTMLMapElement</code> instance.
+	*/
 	public function HTMLMapElement() {super();}
 
+	/**
+	*  @see randori.webkit.html.HTMLCollection
+	*/
 	public function get areas():Object { return null; }
 
 	public function get name():String { return ''; }

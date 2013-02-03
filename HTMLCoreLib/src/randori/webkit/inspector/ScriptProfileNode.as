@@ -42,6 +42,12 @@ package randori.webkit.inspector
 
 
 [JavaScript(export=false, name="ScriptProfileNode")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class ScriptProfileNode
 {
 
@@ -56,6 +62,9 @@ public class ScriptProfileNode
 	public function get selfTime():Number { return 0; }
 
 	public function get numberOfCalls():uint { return 0; }
+	/**
+	*  @return A <code>sequence</code> instance.
+	*/
 	public function children():Vector.<ScriptProfileNode> { return null;}
 
 	public function get visible():Boolean { return false; }

@@ -41,9 +41,23 @@ package randori.webkit.modules.webdatabase
 {
 
 
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DOMWindow
 {
-	public function openDatabase(name:String, version:String, displayName:String, estimatedSize:uint, creationCallback:Function=null):Database { return null;}
+	/**
+	*  @param name
+	*  @param version
+	*  @param displayName
+	*  @param estimatedSize
+	*  @param creationCallback (optional argument, default value is <code>null</code>)
+	*  @return A <code>Database</code> instance.
+	*/
+	public function openDatabase(name:String, version:String, displayName:String, estimatedSize:uint, creationCallback:Object=null):Database { return null;}
 
 	public function get SQLException():Object { return null; }
 	public function set SQLException(value:Object):void { }

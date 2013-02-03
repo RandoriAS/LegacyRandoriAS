@@ -42,9 +42,19 @@ package randori.webkit.modules.filesystem
 
 
 [JavaScript(export=false, name="DirectoryReader")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DirectoryReader
 {
-	public function readEntries(successCallback:Function, errorCallback:Function=null):void {}
+	/**
+	*  @param successCallback
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function readEntries(successCallback:Object, errorCallback:Object=null):void {}
 }
 
 }

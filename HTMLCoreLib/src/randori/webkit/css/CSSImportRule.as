@@ -42,13 +42,26 @@ package randori.webkit.css
 
 
 [JavaScript(export=false, name="CSSImportRule")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.css.CSSRule
+ */
 public class CSSImportRule extends CSSRule
 {
 
 	public function get href():String { return ''; }
 
+	/**
+	*  @see randori.webkit.css.MediaList
+	*/
 	public function get media():Object { return null; }
 
+	/**
+	*  @see randori.webkit.css.CSSStyleSheet
+	*/
 	public function get styleSheet():CSSStyleSheet { return null; }
 }
 

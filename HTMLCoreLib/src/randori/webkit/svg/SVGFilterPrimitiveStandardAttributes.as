@@ -42,17 +42,38 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGFilterPrimitiveStandardAttributes")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public interface SVGFilterPrimitiveStandardAttributes
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	 function get x():SVGAnimatedLength;
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	 function get y():SVGAnimatedLength;
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	 function get width():SVGAnimatedLength;
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	 function get height():SVGAnimatedLength;
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	 function get result():SVGAnimatedString;
 }
 

@@ -42,19 +42,44 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="MessagePort")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class MessagePort
 {
+	/**
+	*  @param message
+	*  @param messagePorts (optional argument, default value is <code>null</code>)
+	*/
 	public function postMessage(message:Object, messagePorts:Array=null):void {}
 	public function start():void {}
 	public function close():void {}
 
 	/**
-	*  Function that accepts an event of type <code>messageEvent</code>.
+	*  Function that accepts an event of type <code>MessageEvent</code>.
+	*  @see randori.webkit.dom.MessageEvent
 	*/
 	public function get onmessage():Function { return null; }
 	public function set onmessage(value:Function):void { }
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 

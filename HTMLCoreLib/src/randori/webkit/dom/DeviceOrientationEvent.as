@@ -42,6 +42,13 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="DeviceOrientationEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.DomEvent
+ */
 public class DeviceOrientationEvent extends DomEvent
 {
 
@@ -52,6 +59,15 @@ public class DeviceOrientationEvent extends DomEvent
 	public function get gamma():Number { return 0; }
 
 	public function get absolute():Boolean { return false; }
+	/**
+	*  @param type (optional argument, default value is <code>''</code>)
+	*  @param bubbles (optional argument, default value is <code>false</code>)
+	*  @param cancelable (optional argument, default value is <code>false</code>)
+	*  @param alpha (optional argument, default value is <code>0</code>)
+	*  @param beta (optional argument, default value is <code>0</code>)
+	*  @param gamma (optional argument, default value is <code>0</code>)
+	*  @param absolute (optional argument, default value is <code>false</code>)
+	*/
 	public function initDeviceOrientationEvent(type:String='', bubbles:Boolean=false, cancelable:Boolean=false, alpha:Number=0, beta:Number=0, gamma:Number=0, absolute:Boolean=false):void {}
 }
 

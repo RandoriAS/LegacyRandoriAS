@@ -42,15 +42,34 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGLinearGradientElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGGradientElement
+ */
 public class SVGLinearGradientElement extends SVGGradientElement
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get x1():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get y1():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get x2():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get y2():SVGAnimatedLength { return null; }
 }
 

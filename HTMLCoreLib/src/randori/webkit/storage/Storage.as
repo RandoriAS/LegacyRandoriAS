@@ -42,13 +42,34 @@ package randori.webkit.storage
 
 
 [JavaScript(export=false, name="Storage")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Storage
 {
 
 	public function get length():uint { return 0; }
+	/**
+	*  @param index
+	*  @return A <code>String</code> instance.
+	*/
 	public function key(index:uint):String { return '';}
+	/**
+	*  @param key
+	*  @return A <code>String</code> instance.
+	*/
 	public function getItem(key:String):String { return '';}
+	/**
+	*  @param key
+	*  @param data
+	*/
 	public function setItem(key:String, data:String):void {}
+	/**
+	*  @param key
+	*/
 	public function removeItem(key:String):void {}
 	public function clear():void {}
 }

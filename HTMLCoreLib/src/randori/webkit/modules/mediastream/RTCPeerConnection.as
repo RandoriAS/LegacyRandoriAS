@@ -43,62 +43,166 @@ package randori.webkit.modules.mediastream
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="RTCPeerConnection")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class RTCPeerConnection
 {
+	/**
+	*  Creates a new <code>RTCPeerConnection</code> instance.
+	*  @param rtcIceServers
+	*  @param mediaConstraints (optional argument, default value is <code>null</code>)
+	*/
 	public function RTCPeerConnection(rtcIceServers:Object, mediaConstraints:Object=null) {super();}
-	public function createOffer(successCallback:Function, failureCallback:Function=null, mediaConstraints:Object=null):void {}
-	public function createAnswer(successCallback:Function, failureCallback:Function=null, mediaConstraints:Object=null):void {}
-	public function setLocalDescription(description:RTCSessionDescription, successCallback:Function=null, failureCallback:Function=null):void {}
+	/**
+	*  @param successCallback
+	*  @param failureCallback (optional argument, default value is <code>null</code>)
+	*  @param mediaConstraints (optional argument, default value is <code>null</code>)
+	*/
+	public function createOffer(successCallback:Object, failureCallback:Object=null, mediaConstraints:Object=null):void {}
+	/**
+	*  @param successCallback
+	*  @param failureCallback (optional argument, default value is <code>null</code>)
+	*  @param mediaConstraints (optional argument, default value is <code>null</code>)
+	*/
+	public function createAnswer(successCallback:Object, failureCallback:Object=null, mediaConstraints:Object=null):void {}
+	/**
+	*  @param description
+	*  @param successCallback (optional argument, default value is <code>null</code>)
+	*  @param failureCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function setLocalDescription(description:RTCSessionDescription, successCallback:Object=null, failureCallback:Object=null):void {}
 
+	/**
+	*  @see randori.webkit.modules.mediastream.RTCSessionDescription
+	*/
 	public function get localDescription():RTCSessionDescription { return null; }
-	public function setRemoteDescription(description:RTCSessionDescription, successCallback:Function=null, failureCallback:Function=null):void {}
+	/**
+	*  @param description
+	*  @param successCallback (optional argument, default value is <code>null</code>)
+	*  @param failureCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function setRemoteDescription(description:RTCSessionDescription, successCallback:Object=null, failureCallback:Object=null):void {}
 
+	/**
+	*  @see randori.webkit.modules.mediastream.RTCSessionDescription
+	*/
 	public function get remoteDescription():RTCSessionDescription { return null; }
 
 	public function get readyState():String { return ''; }
 
 	public function get signalingState():String { return ''; }
+	/**
+	*  @param configuration (optional argument, default value is <code>null</code>)
+	*  @param mediaConstraints (optional argument, default value is <code>null</code>)
+	*/
 	public function updateIce(configuration:Object=null, mediaConstraints:Object=null):void {}
+	/**
+	*  @param candidate
+	*/
 	public function addIceCandidate(candidate:RTCIceCandidate):void {}
 
 	public function get iceGatheringState():String { return ''; }
 
 	public function get iceConnectionState():String { return ''; }
 
+	/**
+	*  @see randori.webkit.modules.mediastream.MediaStreamList
+	*/
 	public function get localStreams():Object { return null; }
 
+	/**
+	*  @see randori.webkit.modules.mediastream.MediaStreamList
+	*/
 	public function get remoteStreams():Object { return null; }
+	/**
+	*  @param stream
+	*  @param mediaConstraints (optional argument, default value is <code>null</code>)
+	*/
 	public function addStream(stream:MediaStream, mediaConstraints:Object=null):void {}
+	/**
+	*  @param stream
+	*/
 	public function removeStream(stream:MediaStream):void {}
-	public function getStats(successCallback:Function, selector:MediaStreamTrack=null):void {}
+	/**
+	*  @param successCallback
+	*  @param selector (optional argument, default value is <code>null</code>)
+	*/
+	public function getStats(successCallback:Object, selector:MediaStreamTrack=null):void {}
+	/**
+	*  @param label
+	*  @param options (optional argument, default value is <code>null</code>)
+	*  @return A <code>RTCDataChannel</code> instance.
+	*/
 	public function createDataChannel(label:String, options:Object=null):RTCDataChannel { return null;}
 	public function close():void {}
 
+	/**
+	*  Function that accepts an event of type <code>NegotiationneededEvent</code>.
+	*/
 	public function get onnegotiationneeded():Function { return null; }
 	public function set onnegotiationneeded(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>IcecandidateEvent</code>.
+	*/
 	public function get onicecandidate():Function { return null; }
 	public function set onicecandidate(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>StatechangeEvent</code>.
+	*/
 	public function get onstatechange():Function { return null; }
 	public function set onstatechange(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>AddstreamEvent</code>.
+	*/
 	public function get onaddstream():Function { return null; }
 	public function set onaddstream(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>RemovestreamEvent</code>.
+	*/
 	public function get onremovestream():Function { return null; }
 	public function set onremovestream(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>GatheringchangeEvent</code>.
+	*/
 	public function get ongatheringchange():Function { return null; }
 	public function set ongatheringchange(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>IcechangeEvent</code>.
+	*/
 	public function get onicechange():Function { return null; }
 	public function set onicechange(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>DatachannelEvent</code>.
+	*/
 	public function get ondatachannel():Function { return null; }
 	public function set ondatachannel(value:Function):void { }
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param event
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(event:DomEvent):Boolean { return false;}
 }
 

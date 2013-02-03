@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLAnchorElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLAnchorElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('a')")]
+	/**
+	*  Creates a new <code>HTMLAnchorElement</code> instance.
+	*/
 	public function HTMLAnchorElement() {super();}
 
 	public function get charset():String { return ''; }
@@ -98,8 +108,14 @@ public class HTMLAnchorElement extends HTMLElement
 	public function get search():String { return ''; }
 
 	public function get text():String { return ''; }
+	/**
+	*  @return A <code>String</code> instance.
+	*/
 	public function toString():String { return '';}
 
+	/**
+	*  @see randori.webkit.html.URL
+	*/
 	public function get absoluteLinkURL():URL { return null; }
 }
 

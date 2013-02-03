@@ -42,30 +42,94 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGTextContentElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ *  @see randori.webkit.svg.SVGTests
+ *  @see randori.webkit.svg.SVGLangSpace
+ *  @see randori.webkit.svg.SVGExternalResourcesRequired
+ */
 public class SVGTextContentElement extends SVGStyledElement implements SVGTests, SVGLangSpace, SVGExternalResourcesRequired
 {
 	public static const LENGTHADJUST_UNKNOWN:uint = 0;
 	public static const LENGTHADJUST_SPACING:uint = 1;
 	public static const LENGTHADJUST_SPACINGANDGLYPHS:uint = 2;
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get textLength():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedEnumeration
+	*/
 	public function get lengthAdjust():SVGAnimatedEnumeration { return null; }
+	/**
+	*  @return A <code>uint</code> instance.
+	*/
 	public function getNumberOfChars():uint { return 0;}
+	/**
+	*  @return A <code>Number</code> instance.
+	*/
 	public function getComputedTextLength():Number { return 0;}
+	/**
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @param length (optional argument, default value is <code>0</code>)
+	*  @return A <code>Number</code> instance.
+	*/
 	public function getSubStringLength(offset:uint=0, length:uint=0):Number { return 0;}
+	/**
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPoint</code> instance.
+	*/
 	public function getStartPositionOfChar(offset:uint=0):SVGPoint { return null;}
+	/**
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPoint</code> instance.
+	*/
 	public function getEndPositionOfChar(offset:uint=0):SVGPoint { return null;}
+	/**
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGRect</code> instance.
+	*/
 	public function getExtentOfChar(offset:uint=0):SVGRect { return null;}
+	/**
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @return A <code>Number</code> instance.
+	*/
 	public function getRotationOfChar(offset:uint=0):Number { return 0;}
+	/**
+	*  @param point (optional argument, default value is <code>null</code>)
+	*  @return A <code>uint</code> instance.
+	*/
 	public function getCharNumAtPosition(point:SVGPoint=null):uint { return 0;}
+	/**
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @param length (optional argument, default value is <code>0</code>)
+	*/
 	public function selectSubString(offset:uint=0, length:uint=0):void {}
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get requiredFeatures():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get requiredExtensions():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get systemLanguage():SVGStringList { return null; }
+	/**
+	*  @param extension (optional argument, default value is <code>''</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function hasExtension(extension:String=''):Boolean { return false;}
 
 	public function get xmllang():String { return ''; }
@@ -74,6 +138,9 @@ public class SVGTextContentElement extends SVGStyledElement implements SVGTests,
 	public function get xmlspace():String { return ''; }
 	public function set xmlspace(value:String):void { }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 }
 

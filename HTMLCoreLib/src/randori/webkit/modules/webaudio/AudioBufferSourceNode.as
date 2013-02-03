@@ -42,9 +42,19 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="AudioBufferSourceNode")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioSourceNode
+ */
 public class AudioBufferSourceNode extends AudioSourceNode
 {
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioBuffer
+	*/
 	public function get buffer():AudioBuffer { return null; }
 	public function set buffer(value:AudioBuffer):void { }
 	public static const UNSCHEDULED_STATE:uint = 0;
@@ -54,8 +64,14 @@ public class AudioBufferSourceNode extends AudioSourceNode
 
 	public function get playbackState():uint { return 0; }
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioGain
+	*/
 	public function get gain():AudioGain { return null; }
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioParam
+	*/
 	public function get playbackRate():AudioParam { return null; }
 
 	public function get loop():Boolean { return false; }
@@ -66,13 +82,32 @@ public class AudioBufferSourceNode extends AudioSourceNode
 
 	public function get loopEnd():Number { return 0; }
 	public function set loopEnd(value:Number):void { }
+	/**
+	*  @param when
+	*  @param grainOffset
+	*  @param grainDuration
+	*/
 	public function start(when:Number, grainOffset:Number, grainDuration:Number):void {}
+	/**
+	*  @param when
+	*/
 	public function stop(when:Number):void {}
 
 	public function get looping():Boolean { return false; }
 	public function set looping(value:Boolean):void { }
+	/**
+	*  @param when
+	*/
 	public function noteOn(when:Number):void {}
+	/**
+	*  @param when
+	*  @param grainOffset
+	*  @param grainDuration
+	*/
 	public function noteGrainOn(when:Number, grainOffset:Number, grainDuration:Number):void {}
+	/**
+	*  @param when
+	*/
 	public function noteOff(when:Number):void {}
 }
 

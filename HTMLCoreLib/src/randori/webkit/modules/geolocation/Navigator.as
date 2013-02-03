@@ -41,9 +41,18 @@ package randori.webkit.modules.geolocation
 {
 
 
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Navigator
 {
 
+	/**
+	*  @see randori.webkit.modules.geolocation.Geolocation
+	*/
 	public function get geolocation():Geolocation { return null; }
 }
 

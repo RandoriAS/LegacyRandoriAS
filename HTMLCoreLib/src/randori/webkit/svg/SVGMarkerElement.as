@@ -42,6 +42,16 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGMarkerElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ *  @see randori.webkit.svg.SVGLangSpace
+ *  @see randori.webkit.svg.SVGExternalResourcesRequired
+ *  @see randori.webkit.svg.SVGFitToViewBox
+ */
 public class SVGMarkerElement extends SVGStyledElement implements SVGLangSpace, SVGExternalResourcesRequired, SVGFitToViewBox
 {
 	public static const SVG_MARKERUNITS_UNKNOWN:uint = 0;
@@ -51,20 +61,44 @@ public class SVGMarkerElement extends SVGStyledElement implements SVGLangSpace, 
 	public static const SVG_MARKER_ORIENT_AUTO:uint = 1;
 	public static const SVG_MARKER_ORIENT_ANGLE:uint = 2;
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get refX():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get refY():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedEnumeration
+	*/
 	public function get markerUnits():SVGAnimatedEnumeration { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get markerWidth():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get markerHeight():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedEnumeration
+	*/
 	public function get orientType():SVGAnimatedEnumeration { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedAngle
+	*/
 	public function get orientAngle():SVGAnimatedAngle { return null; }
 	public function setOrientToAuto():void {}
+	/**
+	*  @param angle (optional argument, default value is <code>null</code>)
+	*/
 	public function setOrientToAngle(angle:SVGAngle=null):void {}
 
 	public function get xmllang():String { return ''; }
@@ -73,10 +107,19 @@ public class SVGMarkerElement extends SVGStyledElement implements SVGLangSpace, 
 	public function get xmlspace():String { return ''; }
 	public function set xmlspace(value:String):void { }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedRect
+	*/
 	public function get viewBox():SVGAnimatedRect { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedPreserveAspectRatio
+	*/
 	public function get preserveAspectRatio():SVGAnimatedPreserveAspectRatio { return null; }
 }
 

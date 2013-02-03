@@ -42,11 +42,35 @@ package randori.webkit.page
 
 
 [JavaScript(export=false, name="PagePopupController")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class PagePopupController
 {
+	/**
+	*  @param numberValue
+	*  @param stringValue
+	*/
 	public function setValueAndClosePopup(numberValue:uint, stringValue:String):void {}
+	/**
+	*  @param numberString
+	*  @return A <code>String</code> instance.
+	*/
 	public function localizeNumberString(numberString:String):String { return '';}
+	/**
+	*  @param year
+	*  @param zeroBaseMonth
+	*  @return A <code>String</code> instance.
+	*/
 	public function formatMonth(year:uint, zeroBaseMonth:uint):String { return '';}
+	/**
+	*  @param name
+	*  @param sample
+	*  @param boundaryValue
+	*/
 	public function histogramEnumeration(name:String, sample:uint, boundaryValue:uint):void {}
 }
 

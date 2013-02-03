@@ -44,14 +44,27 @@ import randori.webkit.html.HTMLElement;
 import randori.webkit.dom.ShadowRoot;
 
 [JavaScript(export=false, name="HTMLShadowElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLShadowElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('shadow')")]
+	/**
+	*  Creates a new <code>HTMLShadowElement</code> instance.
+	*/
 	public function HTMLShadowElement() {super();}
 
 	public function get resetStyleInheritance():Boolean { return false; }
 	public function set resetStyleInheritance(value:Boolean):void { }
 
+	/**
+	*  @see randori.webkit.dom.ShadowRoot
+	*/
 	public function get olderShadowRoot():ShadowRoot { return null; }
 }
 

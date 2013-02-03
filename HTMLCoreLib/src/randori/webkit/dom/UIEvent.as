@@ -43,12 +43,29 @@ package randori.webkit.dom
 import randori.webkit.page.Window;
 
 [JavaScript(export=false, name="UIEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.DomEvent
+ */
 public class UIEvent extends DomEvent
 {
 
+	/**
+	*  @see randori.webkit.page.Window
+	*/
 	public function get view():Window { return null; }
 
 	public function get detail():uint { return 0; }
+	/**
+	*  @param type (optional argument, default value is <code>''</code>)
+	*  @param canBubble (optional argument, default value is <code>false</code>)
+	*  @param cancelable (optional argument, default value is <code>false</code>)
+	*  @param view (optional argument, default value is <code>null</code>)
+	*  @param detail (optional argument, default value is <code>0</code>)
+	*/
 	public function initUIEvent(type:String='', canBubble:Boolean=false, cancelable:Boolean=false, view:Window=null, detail:uint=0):void {}
 
 	public function get keyCode():uint { return 0; }

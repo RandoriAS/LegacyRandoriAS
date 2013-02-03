@@ -42,23 +42,55 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGFEOffsetElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ *  @see randori.webkit.svg.SVGFilterPrimitiveStandardAttributes
+ */
 public class SVGFEOffsetElement extends SVGStyledElement implements SVGFilterPrimitiveStandardAttributes
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get in1():SVGAnimatedString { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get dx():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get dy():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get x():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get y():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get width():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get height():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get result():SVGAnimatedString { return null; }
 }
 

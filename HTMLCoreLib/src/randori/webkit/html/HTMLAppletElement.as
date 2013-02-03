@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLAppletElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLAppletElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('applet')")]
+	/**
+	*  Creates a new <code>HTMLAppletElement</code> instance.
+	*/
 	public function HTMLAppletElement() {super();}
 
 	public function get align():String { return ''; }

@@ -42,13 +42,36 @@ package randori.webkit.modules.webdatabase
 
 
 [JavaScript(export=false, name="Database")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Database
 {
 
 	public function get version():String { return ''; }
-	public function changeVersion(oldVersion:String, newVersion:String, callback:Function=null, errorCallback:Function=null, successCallback:Function=null):void {}
-	public function transaction(callback:Function, errorCallback:Function=null, successCallback:Function=null):void {}
-	public function readTransaction(callback:Function, errorCallback:Function=null, successCallback:Function=null):void {}
+	/**
+	*  @param oldVersion
+	*  @param newVersion
+	*  @param callback (optional argument, default value is <code>null</code>)
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*  @param successCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function changeVersion(oldVersion:String, newVersion:String, callback:Object=null, errorCallback:Object=null, successCallback:Object=null):void {}
+	/**
+	*  @param callback
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*  @param successCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function transaction(callback:Object, errorCallback:Object=null, successCallback:Object=null):void {}
+	/**
+	*  @param callback
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*  @param successCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function readTransaction(callback:Object, errorCallback:Object=null, successCallback:Object=null):void {}
 }
 
 }

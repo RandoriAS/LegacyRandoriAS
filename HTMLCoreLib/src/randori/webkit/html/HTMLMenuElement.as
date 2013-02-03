@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLMenuElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLMenuElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('menu')")]
+	/**
+	*  Creates a new <code>HTMLMenuElement</code> instance.
+	*/
 	public function HTMLMenuElement() {super();}
 
 	public function get compact():Boolean { return false; }

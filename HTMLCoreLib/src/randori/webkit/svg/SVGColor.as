@@ -44,6 +44,13 @@ import randori.webkit.css.CSSValue;
 import randori.webkit.css.RGBColor;
 
 [JavaScript(export=false, name="SVGColor")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.css.CSSValue
+ */
 public class SVGColor extends CSSValue
 {
 	public static const SVG_COLORTYPE_UNKNOWN:uint = 0;
@@ -53,9 +60,24 @@ public class SVGColor extends CSSValue
 
 	public function get colorType():uint { return 0; }
 
+	/**
+	*  @see randori.webkit.css.RGBColor
+	*/
 	public function get rgbColor():RGBColor { return null; }
+	/**
+	*  @param rgbColor
+	*/
 	public function setRGBColor(rgbColor:String):void {}
+	/**
+	*  @param rgbColor
+	*  @param iccColor
+	*/
 	public function setRGBColorICCColor(rgbColor:String, iccColor:String):void {}
+	/**
+	*  @param colorType
+	*  @param rgbColor
+	*  @param iccColor
+	*/
 	public function setColor(colorType:uint, rgbColor:String, iccColor:String):void {}
 }
 

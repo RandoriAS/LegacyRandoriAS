@@ -43,13 +43,29 @@ package randori.webkit.dom
 import randori.webkit.page.Window;
 
 [JavaScript(export=false, name="TouchEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.UIEvent
+ */
 public class TouchEvent extends UIEvent
 {
 
+	/**
+	*  @see randori.webkit.dom.TouchList
+	*/
 	public function get touches():Object { return null; }
 
+	/**
+	*  @see randori.webkit.dom.TouchList
+	*/
 	public function get targetTouches():Object { return null; }
 
+	/**
+	*  @see randori.webkit.dom.TouchList
+	*/
 	public function get changedTouches():Object { return null; }
 
 	public function get ctrlKey():Boolean { return false; }
@@ -59,6 +75,21 @@ public class TouchEvent extends UIEvent
 	public function get altKey():Boolean { return false; }
 
 	public function get metaKey():Boolean { return false; }
+	/**
+	*  @param touches (optional argument, default value is <code>null</code>)
+	*  @param targetTouches (optional argument, default value is <code>null</code>)
+	*  @param changedTouches (optional argument, default value is <code>null</code>)
+	*  @param type (optional argument, default value is <code>''</code>)
+	*  @param view (optional argument, default value is <code>null</code>)
+	*  @param screenX (optional argument, default value is <code>0</code>)
+	*  @param screenY (optional argument, default value is <code>0</code>)
+	*  @param clientX (optional argument, default value is <code>0</code>)
+	*  @param clientY (optional argument, default value is <code>0</code>)
+	*  @param ctrlKey (optional argument, default value is <code>false</code>)
+	*  @param altKey (optional argument, default value is <code>false</code>)
+	*  @param shiftKey (optional argument, default value is <code>false</code>)
+	*  @param metaKey (optional argument, default value is <code>false</code>)
+	*/
 	public function initTouchEvent(touches:Object=null, targetTouches:Object=null, changedTouches:Object=null, type:String='', view:Window=null, screenX:uint=0, screenY:uint=0, clientX:uint=0, clientY:uint=0, ctrlKey:Boolean=false, altKey:Boolean=false, shiftKey:Boolean=false, metaKey:Boolean=false):void {}
 }
 

@@ -42,10 +42,30 @@ package randori.webkit.modules.indexeddb
 
 
 [JavaScript(export=false, name="IDBFactory")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class IDBFactory
 {
+	/**
+	*  @param name
+	*  @param version (optional argument, default value is <code>0</code>)
+	*  @return A <code>IDBOpenDBRequest</code> instance.
+	*/
 	public function open(name:String, version:Number=0):IDBOpenDBRequest { return null;}
+	/**
+	*  @param name
+	*  @return A <code>IDBOpenDBRequest</code> instance.
+	*/
 	public function deleteDatabase(name:String):IDBOpenDBRequest { return null;}
+	/**
+	*  @param first
+	*  @param second
+	*  @return A <code>int</code> instance.
+	*/
 	public function cmp(first:Object, second:Object):int { return 0;}
 }
 

@@ -42,24 +42,62 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGCursorElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ *  @see randori.webkit.svg.SVGURIReference
+ *  @see randori.webkit.svg.SVGTests
+ *  @see randori.webkit.svg.SVGExternalResourcesRequired
+ */
 public class SVGCursorElement extends SVGElement implements SVGURIReference, SVGTests, SVGExternalResourcesRequired
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('cursor')")]
+	/**
+	*  Creates a new <code>SVGCursorElement</code> instance.
+	*/
 	public function SVGCursorElement() {super();}
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get x():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get y():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get href():SVGAnimatedString { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get requiredFeatures():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get requiredExtensions():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get systemLanguage():SVGStringList { return null; }
+	/**
+	*  @param extension (optional argument, default value is <code>''</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function hasExtension(extension:String=''):Boolean { return false;}
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 }
 

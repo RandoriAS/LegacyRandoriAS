@@ -42,12 +42,31 @@ package randori.webkit.html.canvas
 
 
 [JavaScript(export=false, name="OESVertexArrayObject")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class OESVertexArrayObject
 {
 	public static const VERTEX_ARRAY_BINDING_OES:uint = 0x85B5;
+	/**
+	*  @return A <code>WebGLVertexArrayObjectOES</code> instance.
+	*/
 	public function createVertexArrayOES():WebGLVertexArrayObjectOES { return null;}
+	/**
+	*  @param arrayObject (optional argument, default value is <code>null</code>)
+	*/
 	public function deleteVertexArrayOES(arrayObject:WebGLVertexArrayObjectOES=null):void {}
+	/**
+	*  @param arrayObject (optional argument, default value is <code>null</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isVertexArrayOES(arrayObject:WebGLVertexArrayObjectOES=null):Boolean { return false;}
+	/**
+	*  @param arrayObject (optional argument, default value is <code>null</code>)
+	*/
 	public function bindVertexArrayOES(arrayObject:WebGLVertexArrayObjectOES=null):void {}
 }
 

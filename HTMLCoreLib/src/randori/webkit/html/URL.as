@@ -43,10 +43,26 @@ package randori.webkit.html
 import randori.webkit.modules.mediasource.MediaSource;
 
 [JavaScript(export=false, name="URL")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class URL
 {
+	/**
+	*  Creates a new <code>URL</code> instance.
+	*/
 	public function URL() {super();}
+	/**
+	*  @param source
+	*  @return A <code>String</code> instance.
+	*/
 	public function createObjectURL(source:MediaSource):String { return '';}
+	/**
+	*  @param url
+	*/
 	public function revokeObjectURL(url:String):void {}
 }
 

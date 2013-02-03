@@ -42,13 +42,31 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGMPathElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ *  @see randori.webkit.svg.SVGURIReference
+ *  @see randori.webkit.svg.SVGExternalResourcesRequired
+ */
 public class SVGMPathElement extends SVGElement implements SVGURIReference, SVGExternalResourcesRequired
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('mpath')")]
+	/**
+	*  Creates a new <code>SVGMPathElement</code> instance.
+	*/
 	public function SVGMPathElement() {super();}
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get href():SVGAnimatedString { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 }
 

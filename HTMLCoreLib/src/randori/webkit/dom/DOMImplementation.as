@@ -44,12 +44,44 @@ import randori.webkit.css.CSSStyleSheet;
 import randori.webkit.html.HTMLDocument;
 
 [JavaScript(export=false, name="DOMImplementation")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DOMImplementation
 {
+	/**
+	*  @param feature (optional argument, default value is <code>''</code>)
+	*  @param version (optional argument, default value is <code>''</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function hasFeature(feature:String='', version:String=''):Boolean { return false;}
+	/**
+	*  @param qualifiedName (optional argument, default value is <code>''</code>)
+	*  @param publicId (optional argument, default value is <code>''</code>)
+	*  @param systemId (optional argument, default value is <code>''</code>)
+	*  @return A <code>DocumentType</code> instance.
+	*/
 	public function createDocumentType(qualifiedName:String='', publicId:String='', systemId:String=''):DocumentType { return null;}
+	/**
+	*  @param namespaceURI (optional argument, default value is <code>''</code>)
+	*  @param qualifiedName (optional argument, default value is <code>''</code>)
+	*  @param doctype (optional argument, default value is <code>null</code>)
+	*  @return A <code>Document</code> instance.
+	*/
 	public function createDocument(namespaceURI:String='', qualifiedName:String='', doctype:DocumentType=null):Document { return null;}
+	/**
+	*  @param title (optional argument, default value is <code>''</code>)
+	*  @param media (optional argument, default value is <code>''</code>)
+	*  @return A <code>CSSStyleSheet</code> instance.
+	*/
 	public function createCSSStyleSheet(title:String='', media:String=''):CSSStyleSheet { return null;}
+	/**
+	*  @param title (optional argument, default value is <code>''</code>)
+	*  @return A <code>HTMLDocument</code> instance.
+	*/
 	public function createHTMLDocument(title:String=''):HTMLDocument { return null;}
 }
 

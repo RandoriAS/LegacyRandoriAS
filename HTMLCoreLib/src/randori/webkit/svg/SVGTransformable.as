@@ -42,10 +42,20 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGTransformable")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGLocatable
+ */
 public interface SVGTransformable extends SVGLocatable
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedTransformList
+	*/
 	 function get transform():SVGAnimatedTransformList;
-
 }
+
 }

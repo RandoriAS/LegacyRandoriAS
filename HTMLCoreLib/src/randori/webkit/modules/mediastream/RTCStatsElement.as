@@ -42,12 +42,25 @@ package randori.webkit.modules.mediastream
 
 
 [JavaScript(export=false, name="RTCStatsElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class RTCStatsElement
 {
 
 	public function get timestamp():Object { return null; }
+	/**
+	*  @param name
+	*  @return A <code>String</code> instance.
+	*/
 	public function stat(name:String):String { return '';}
-	public function names():String { return null;}
+	/**
+	*  @return A <code>sequence</code> instance.
+	*/
+	public function names():Vector.<String> { return null;}
 }
 
 }

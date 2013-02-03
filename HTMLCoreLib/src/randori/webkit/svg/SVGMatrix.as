@@ -42,6 +42,12 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGMatrix")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGMatrix
 {
 
@@ -62,16 +68,60 @@ public class SVGMatrix
 
 	public function get f():Number { return 0; }
 	public function set f(value:Number):void { }
+	/**
+	*  @param secondMatrix
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function multiply(secondMatrix:SVGMatrix):SVGMatrix { return null;}
+	/**
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function inverse():SVGMatrix { return null;}
+	/**
+	*  @param x
+	*  @param y
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function translate(x:Number, y:Number):SVGMatrix { return null;}
+	/**
+	*  @param scaleFactor
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function scale(scaleFactor:Number):SVGMatrix { return null;}
+	/**
+	*  @param scaleFactorX
+	*  @param scaleFactorY
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function scaleNonUniform(scaleFactorX:Number, scaleFactorY:Number):SVGMatrix { return null;}
+	/**
+	*  @param angle
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function rotate(angle:Number):SVGMatrix { return null;}
+	/**
+	*  @param x
+	*  @param y
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function rotateFromVector(x:Number, y:Number):SVGMatrix { return null;}
+	/**
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function flipX():SVGMatrix { return null;}
+	/**
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function flipY():SVGMatrix { return null;}
+	/**
+	*  @param angle
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function skewX(angle:Number):SVGMatrix { return null;}
+	/**
+	*  @param angle
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function skewY(angle:Number):SVGMatrix { return null;}
 }
 

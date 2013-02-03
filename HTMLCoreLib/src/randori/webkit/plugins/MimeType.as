@@ -42,6 +42,12 @@ package randori.webkit.plugins
 
 
 [JavaScript(export=false, name="MimeType")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class MimeType
 {
 
@@ -51,6 +57,9 @@ public class MimeType
 
 	public function get description():String { return ''; }
 
+	/**
+	*  @see randori.webkit.plugins.Plugin
+	*/
 	public function get enabledPlugin():Object { return null; }
 }
 

@@ -44,10 +44,25 @@ import randori.webkit.dom.DocumentFragment;
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="TextTrackCue")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class TextTrackCue
 {
+	/**
+	*  Creates a new <code>TextTrackCue</code> instance.
+	*  @param startTime
+	*  @param endTime
+	*  @param text
+	*/
 	public function TextTrackCue(startTime:Number, endTime:Number, text:String) {super();}
 
+	/**
+	*  @see randori.webkit.html.track.TextTrack
+	*/
 	public function get track():TextTrack { return null; }
 
 	public function get id():String { return ''; }
@@ -82,15 +97,38 @@ public class TextTrackCue
 
 	public function get text():String { return ''; }
 	public function set text(value:String):void { }
+	/**
+	*  @return A <code>DocumentFragment</code> instance.
+	*/
 	public function getCueAsHTML():DocumentFragment { return null;}
 
+	/**
+	*  Function that accepts an event of type <code>EnterEvent</code>.
+	*/
 	public function get onenter():Function { return null; }
 	public function set onenter(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>ExitEvent</code>.
+	*/
 	public function get onexit():Function { return null; }
 	public function set onexit(value:Function):void { }
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 

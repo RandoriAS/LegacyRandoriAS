@@ -42,11 +42,24 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGFEMergeNodeElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ */
 public class SVGFEMergeNodeElement extends SVGElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('femergenode')")]
+	/**
+	*  Creates a new <code>SVGFEMergeNodeElement</code> instance.
+	*/
 	public function SVGFEMergeNodeElement() {super();}
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get in1():SVGAnimatedString { return null; }
 }
 

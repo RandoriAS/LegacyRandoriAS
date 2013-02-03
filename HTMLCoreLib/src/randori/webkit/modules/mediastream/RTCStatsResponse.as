@@ -42,8 +42,17 @@ package randori.webkit.modules.mediastream
 
 
 [JavaScript(export=false, name="RTCStatsResponse")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class RTCStatsResponse
 {
+	/**
+	*  @return A <code>sequence</code> instance.
+	*/
 	public function result():Vector.<RTCStatsReport> { return null;}
 }
 

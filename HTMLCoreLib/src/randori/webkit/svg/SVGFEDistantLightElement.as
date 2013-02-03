@@ -42,13 +42,29 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGFEDistantLightElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ */
 public class SVGFEDistantLightElement extends SVGElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('fedistantlight')")]
+	/**
+	*  Creates a new <code>SVGFEDistantLightElement</code> instance.
+	*/
 	public function SVGFEDistantLightElement() {super();}
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get azimuth():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get elevation():SVGAnimatedNumber { return null; }
 }
 

@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLCanvasElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLCanvasElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('canvas')")]
+	/**
+	*  Creates a new <code>HTMLCanvasElement</code> instance.
+	*/
 	public function HTMLCanvasElement() {super();}
 
 	public function get width():uint { return 0; }
@@ -52,7 +62,15 @@ public class HTMLCanvasElement extends HTMLElement
 
 	public function get height():uint { return 0; }
 	public function set height(value:uint):void { }
+	/**
+	*  @param type (optional argument, default value is <code>''</code>)
+	*  @return A <code>String</code> instance.
+	*/
 	public function toDataURL(type:String=''):String { return '';}
+	/**
+	*  @param contextId (optional argument, default value is <code>''</code>)
+	*  @return A <code>Object</code> instance.
+	*/
 	public function getContext(contextId:String=''):Object { return null;}
 }
 

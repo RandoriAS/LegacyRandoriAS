@@ -43,32 +43,78 @@ package randori.webkit.modules.indexeddb
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="IDBDatabase")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class IDBDatabase
 {
 
 	public function get name():String { return ''; }
 
+	/**
+	*  @see randori.webkit.modules.indexeddb.IDBAny
+	*/
 	public function get version():IDBAny { return null; }
 
+	/**
+	*  @see randori.webkit.dom.DOMStringList
+	*/
 	public function get objectStoreNames():Object { return null; }
 
+	/**
+	*  Function that accepts an event of type <code>AbortEvent</code>.
+	*/
 	public function get onabort():Function { return null; }
 	public function set onabort(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>errorEvent</code>.
+	*  Function that accepts an event of type <code>ErrorEvent</code>.
+	*  @see randori.webkit.dom.ErrorEvent
 	*/
 	public function get onerror():Function { return null; }
 	public function set onerror(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>VersionchangeEvent</code>.
+	*/
 	public function get onversionchange():Function { return null; }
 	public function set onversionchange(value:Function):void { }
+	/**
+	*  @param name
+	*  @param options (optional argument, default value is <code>null</code>)
+	*  @return A <code>IDBObjectStore</code> instance.
+	*/
 	public function createObjectStore(name:String, options:Object=null):IDBObjectStore { return null;}
+	/**
+	*  @param name
+	*/
 	public function deleteObjectStore(name:String):void {}
+	/**
+	*  @param storeNames
+	*  @param mode (optional argument, default value is <code>''</code>)
+	*  @return A <code>IDBTransaction</code> instance.
+	*/
 	public function transaction(storeNames:Object, mode:String=''):IDBTransaction { return null;}
 	public function close():void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 

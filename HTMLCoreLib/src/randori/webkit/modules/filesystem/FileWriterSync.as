@@ -43,10 +43,25 @@ package randori.webkit.modules.filesystem
 import randori.webkit.fileapi.Blob;
 
 [JavaScript(export=false, name="FileWriterSync")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class FileWriterSync
 {
+	/**
+	*  @param data
+	*/
 	public function write(data:Blob):void {}
+	/**
+	*  @param position
+	*/
 	public function seek(position:Number):void {}
+	/**
+	*  @param size
+	*/
 	public function truncate(size:Number):void {}
 
 	public function get position():Number { return 0; }

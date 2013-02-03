@@ -45,9 +45,19 @@ import randori.webkit.page.Window;
 import randori.webkit.svg.SVGDocument;
 
 [JavaScript(export=false, name="HTMLIFrameElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLIFrameElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('iframe')")]
+	/**
+	*  Creates a new <code>HTMLIFrameElement</code> instance.
+	*/
 	public function HTMLIFrameElement() {super();}
 
 	public function get align():String { return ''; }
@@ -89,9 +99,18 @@ public class HTMLIFrameElement extends HTMLElement
 	public function get width():String { return ''; }
 	public function set width(value:String):void { }
 
+	/**
+	*  @see randori.webkit.dom.Document
+	*/
 	public function get contentDocument():Document { return null; }
 
+	/**
+	*  @see randori.webkit.page.Window
+	*/
 	public function get contentWindow():Window { return null; }
+	/**
+	*  @return A <code>SVGDocument</code> instance.
+	*/
 	public function getSVGDocument():SVGDocument { return null;}
 }
 

@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLTableSectionElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLTableSectionElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('tbody')")]
+	/**
+	*  Creates a new <code>HTMLTableSectionElement</code> instance.
+	*/
 	public function HTMLTableSectionElement() {super();}
 
 	public function get align():String { return ''; }
@@ -59,8 +69,18 @@ public class HTMLTableSectionElement extends HTMLElement
 	public function get vAlign():String { return ''; }
 	public function set vAlign(value:String):void { }
 
+	/**
+	*  @see randori.webkit.html.HTMLCollection
+	*/
 	public function get rows():Object { return null; }
+	/**
+	*  @param index (optional argument, default value is <code>0</code>)
+	*  @return A <code>HTMLElement</code> instance.
+	*/
 	public function insertRow(index:uint=0):HTMLElement { return null;}
+	/**
+	*  @param index (optional argument, default value is <code>0</code>)
+	*/
 	public function deleteRow(index:uint=0):void {}
 }
 

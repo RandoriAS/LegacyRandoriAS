@@ -42,6 +42,12 @@ package randori.webkit.modules.indexeddb
 
 
 [JavaScript(export=false, name="IDBKeyRange")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class IDBKeyRange
 {
 
@@ -52,9 +58,30 @@ public class IDBKeyRange
 	public function get lowerOpen():Boolean { return false; }
 
 	public function get upperOpen():Boolean { return false; }
+	/**
+	*  @param value
+	*  @return A <code>IDBKeyRange</code> instance.
+	*/
 	public function only(value:Object):IDBKeyRange { return null;}
+	/**
+	*  @param bound
+	*  @param open (optional argument, default value is <code>false</code>)
+	*  @return A <code>IDBKeyRange</code> instance.
+	*/
 	public function lowerBound(bound:Object, open:Boolean=false):IDBKeyRange { return null;}
+	/**
+	*  @param bound
+	*  @param open (optional argument, default value is <code>false</code>)
+	*  @return A <code>IDBKeyRange</code> instance.
+	*/
 	public function upperBound(bound:Object, open:Boolean=false):IDBKeyRange { return null;}
+	/**
+	*  @param lower
+	*  @param upper
+	*  @param lowerOpen (optional argument, default value is <code>false</code>)
+	*  @param upperOpen (optional argument, default value is <code>false</code>)
+	*  @return A <code>IDBKeyRange</code> instance.
+	*/
 	public function bound(lower:Object, upper:Object, lowerOpen:Boolean=false, upperOpen:Boolean=false):IDBKeyRange { return null;}
 }
 

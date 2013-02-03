@@ -44,11 +44,24 @@ import randori.webkit.dom.Document;
 import randori.webkit.svg.SVGDocument;
 
 [JavaScript(export=false, name="HTMLObjectElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLObjectElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('object')")]
+	/**
+	*  Creates a new <code>HTMLObjectElement</code> instance.
+	*/
 	public function HTMLObjectElement() {super();}
 
+	/**
+	*  @see randori.webkit.html.HTMLFormElement
+	*/
 	public function get form():HTMLFormElement { return null; }
 
 	public function get code():String { return ''; }
@@ -101,15 +114,33 @@ public class HTMLObjectElement extends HTMLElement
 
 	public function get willValidate():Boolean { return false; }
 
+	/**
+	*  @see randori.webkit.html.ValidityState
+	*/
 	public function get validity():ValidityState { return null; }
 
 	public function get validationMessage():String { return ''; }
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function checkValidity():Boolean { return false;}
+	/**
+	*  @param error
+	*/
 	public function setCustomValidity(error:String):void {}
 
+	/**
+	*  @see randori.webkit.dom.Document
+	*/
 	public function get contentDocument():Document { return null; }
+	/**
+	*  @return A <code>SVGDocument</code> instance.
+	*/
 	public function getSVGDocument():SVGDocument { return null;}
 
+	/**
+	*  @see randori.webkit.html.URL
+	*/
 	public function get absoluteImageURL():URL { return null; }
 }
 

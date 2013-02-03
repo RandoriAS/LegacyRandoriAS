@@ -42,6 +42,13 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="DeviceMotionEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.DomEvent
+ */
 public class DeviceMotionEvent extends DomEvent
 {
 
@@ -52,6 +59,15 @@ public class DeviceMotionEvent extends DomEvent
 	public function get rotationRate():Object { return null; }
 
 	public function get interval():Number { return 0; }
+	/**
+	*  @param type (optional argument, default value is <code>''</code>)
+	*  @param bubbles (optional argument, default value is <code>false</code>)
+	*  @param cancelable (optional argument, default value is <code>false</code>)
+	*  @param acceleration (optional argument, default value is <code>null</code>)
+	*  @param accelerationIncludingGravity (optional argument, default value is <code>null</code>)
+	*  @param rotationRate (optional argument, default value is <code>null</code>)
+	*  @param interval (optional argument, default value is <code>0</code>)
+	*/
 	public function initDeviceMotionEvent(type:String='', bubbles:Boolean=false, cancelable:Boolean=false, acceleration:Object=null, accelerationIncludingGravity:Object=null, rotationRate:Object=null, interval:Number=0):void {}
 }
 

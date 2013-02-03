@@ -42,6 +42,12 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="Event")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DomEvent
 {
 	public static const NONE:uint = 0;
@@ -67,8 +73,14 @@ public class DomEvent
 
 	public function get type():String { return ''; }
 
+	/**
+	*  @see randori.webkit.dom.EventTarget
+	*/
 	public function get target():EventTarget { return null; }
 
+	/**
+	*  @see randori.webkit.dom.EventTarget
+	*/
 	public function get currentTarget():EventTarget { return null; }
 
 	public function get eventPhase():uint { return 0; }
@@ -80,11 +92,19 @@ public class DomEvent
 	public function get timeStamp():Object { return null; }
 	public function stopPropagation():void {}
 	public function preventDefault():void {}
+	/**
+	*  @param eventTypeArg (optional argument, default value is <code>''</code>)
+	*  @param canBubbleArg (optional argument, default value is <code>false</code>)
+	*  @param cancelableArg (optional argument, default value is <code>false</code>)
+	*/
 	public function initEvent(eventTypeArg:String='', canBubbleArg:Boolean=false, cancelableArg:Boolean=false):void {}
 
 	public function get defaultPrevented():Boolean { return false; }
 	public function stopImmediatePropagation():void {}
 
+	/**
+	*  @see randori.webkit.dom.EventTarget
+	*/
 	public function get srcElement():EventTarget { return null; }
 
 	public function get returnValue():Boolean { return false; }
@@ -93,8 +113,17 @@ public class DomEvent
 	public function get cancelBubble():Boolean { return false; }
 	public function set cancelBubble(value:Boolean):void { }
 
+	/**
+	*  @see randori.webkit.dom.Clipboard
+	*/
 	public function get clipboardData():Clipboard { return null; }
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isMouseEvent():Boolean { return false;}
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isUIEvent():Boolean { return false;}
 }
 

@@ -42,8 +42,17 @@ package randori.webkit.modules.filesystem
 
 
 [JavaScript(export=false, name="DirectoryReaderSync")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DirectoryReaderSync
 {
+	/**
+	*  @return A <code>EntryArraySync</code> instance.
+	*/
 	public function readEntries():Object { return null;}
 }
 

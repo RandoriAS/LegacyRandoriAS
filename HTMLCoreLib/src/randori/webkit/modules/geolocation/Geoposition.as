@@ -43,9 +43,18 @@ package randori.webkit.modules.geolocation
 import randori.webkit.page.Coordinates;
 
 [JavaScript(export=false, name="Geoposition")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Geoposition
 {
 
+	/**
+	*  @see randori.webkit.page.Coordinates
+	*/
 	public function get coords():Coordinates { return null; }
 
 	public function get timestamp():Object { return null; }

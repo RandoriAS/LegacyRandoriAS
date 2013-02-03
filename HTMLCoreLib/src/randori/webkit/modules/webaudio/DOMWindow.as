@@ -41,14 +41,26 @@ package randori.webkit.modules.webaudio
 {
 
 
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DOMWindow
 {
 
 	[JavascriptProperty(name="AudioProcessingEvent")]
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioProcessingEvent
+	*/
 	public function get AudioProcessingEvent_():AudioProcessingEvent { return null; }
 	public function set AudioProcessingEvent_(value:AudioProcessingEvent):void { }
 
 	[JavascriptProperty(name="OfflineAudioCompletionEvent")]
+	/**
+	*  @see randori.webkit.modules.webaudio.OfflineAudioCompletionEvent
+	*/
 	public function get OfflineAudioCompletionEvent_():OfflineAudioCompletionEvent { return null; }
 	public function set OfflineAudioCompletionEvent_(value:OfflineAudioCompletionEvent):void { }
 }

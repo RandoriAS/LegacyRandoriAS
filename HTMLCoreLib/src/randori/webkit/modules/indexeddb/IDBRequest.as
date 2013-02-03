@@ -44,29 +44,65 @@ import randori.webkit.dom.DOMError;
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="IDBRequest")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class IDBRequest
 {
 
+	/**
+	*  @see randori.webkit.modules.indexeddb.IDBAny
+	*/
 	public function get result():IDBAny { return null; }
 
+	/**
+	*  @see randori.webkit.dom.DOMError
+	*/
 	public function get error():DOMError { return null; }
 
+	/**
+	*  @see randori.webkit.modules.indexeddb.IDBAny
+	*/
 	public function get source():IDBAny { return null; }
 
+	/**
+	*  @see randori.webkit.modules.indexeddb.IDBTransaction
+	*/
 	public function get transaction():IDBTransaction { return null; }
 
 	public function get readyState():String { return ''; }
 
+	/**
+	*  Function that accepts an event of type <code>SuccessEvent</code>.
+	*/
 	public function get onsuccess():Function { return null; }
 	public function set onsuccess(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>errorEvent</code>.
+	*  Function that accepts an event of type <code>ErrorEvent</code>.
+	*  @see randori.webkit.dom.ErrorEvent
 	*/
 	public function get onerror():Function { return null; }
 	public function set onerror(value:Function):void { }
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 

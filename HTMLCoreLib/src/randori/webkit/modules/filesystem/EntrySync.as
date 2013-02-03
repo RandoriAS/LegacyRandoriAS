@@ -42,6 +42,12 @@ package randori.webkit.modules.filesystem
 
 
 [JavaScript(export=false, name="EntrySync")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class EntrySync
 {
 
@@ -53,12 +59,34 @@ public class EntrySync
 
 	public function get fullPath():String { return ''; }
 
+	/**
+	*  @see randori.webkit.modules.filesystem.DOMFileSystemSync
+	*/
 	public function get filesystem():DOMFileSystemSync { return null; }
+	/**
+	*  @return A <code>Metadata</code> instance.
+	*/
 	public function getMetadata():Metadata { return null;}
+	/**
+	*  @param parent
+	*  @param name
+	*  @return A <code>EntrySync</code> instance.
+	*/
 	public function moveTo(parent:DirectoryEntrySync, name:String):EntrySync { return null;}
+	/**
+	*  @param parent
+	*  @param name
+	*  @return A <code>EntrySync</code> instance.
+	*/
 	public function copyTo(parent:DirectoryEntrySync, name:String):EntrySync { return null;}
+	/**
+	*  @return A <code>String</code> instance.
+	*/
 	public function toURL():String { return '';}
 	public function remove():void {}
+	/**
+	*  @return A <code>DirectoryEntrySync</code> instance.
+	*/
 	public function getParent():DirectoryEntrySync { return null;}
 }
 

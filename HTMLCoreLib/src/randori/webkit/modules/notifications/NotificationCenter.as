@@ -42,12 +42,34 @@ package randori.webkit.modules.notifications
 
 
 [JavaScript(export=false, name="NotificationCenter")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class NotificationCenter
 {
+	/**
+	*  @param url
+	*  @return A <code>Notification</code> instance.
+	*/
 	public function createHTMLNotification(url:String):Notification { return null;}
+	/**
+	*  @param iconUrl
+	*  @param title
+	*  @param body
+	*  @return A <code>Notification</code> instance.
+	*/
 	public function createNotification(iconUrl:String, title:String, body:String):Notification { return null;}
+	/**
+	*  @return A <code>int</code> instance.
+	*/
 	public function checkPermission():int { return 0;}
-	public function requestPermission(callback:Function):void {}
+	/**
+	*  @param callback
+	*/
+	public function requestPermission(callback:Object):void {}
 }
 
 }

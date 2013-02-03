@@ -43,6 +43,13 @@ package randori.webkit.html
 import randori.webkit.dom.Node;
 
 [JavaScript(export=false, name="HTMLOptionsCollection")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLCollection
+ */
 public dynamic class HTMLOptionsCollection extends Object
 {
 
@@ -51,7 +58,14 @@ public dynamic class HTMLOptionsCollection extends Object
 
 	public function get length():uint { return 0; }
 	public function set length(value:uint):void { }
+	/**
+	*  @param option (optional argument, default value is <code>null</code>)
+	*  @param index (optional argument, default value is <code>0</code>)
+	*/
 	public function add(option:HTMLOptionElement=null, index:uint=0):void {}
+	/**
+	*  @param index (optional argument, default value is <code>0</code>)
+	*/
 	public function remove(index:uint=0):void {}
 }
 

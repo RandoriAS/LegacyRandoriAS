@@ -43,11 +43,24 @@ package randori.webkit.html
 import randori.webkit.html.track.TextTrack;
 
 [JavaScript(export=false, name="HTMLMediaElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLMediaElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('media')")]
+	/**
+	*  Creates a new <code>HTMLMediaElement</code> instance.
+	*/
 	public function HTMLMediaElement() {super();}
 
+	/**
+	*  @see randori.webkit.html.MediaError
+	*/
 	public function get error():MediaError { return null; }
 
 	public function get src():String { return ''; }
@@ -64,8 +77,16 @@ public class HTMLMediaElement extends HTMLElement
 	public function get preload():String { return ''; }
 	public function set preload(value:String):void { }
 
+	/**
+	*  @see randori.webkit.html.TimeRanges
+	*/
 	public function get buffered():TimeRanges { return null; }
 	public function load():void {}
+	/**
+	*  @param type (optional argument, default value is <code>''</code>)
+	*  @param keySystem (optional argument, default value is <code>''</code>)
+	*  @return A <code>String</code> instance.
+	*/
 	public function canPlayType(type:String='', keySystem:String=''):String { return '';}
 	public static const HAVE_NOTHING:uint = 0;
 	public static const HAVE_METADATA:uint = 1;
@@ -94,8 +115,14 @@ public class HTMLMediaElement extends HTMLElement
 	public function get playbackRate():Number { return 0; }
 	public function set playbackRate(value:Number):void { }
 
+	/**
+	*  @see randori.webkit.html.TimeRanges
+	*/
 	public function get played():TimeRanges { return null; }
 
+	/**
+	*  @see randori.webkit.html.TimeRanges
+	*/
 	public function get seekable():TimeRanges { return null; }
 
 	public function get ended():Boolean { return false; }
@@ -119,13 +146,25 @@ public class HTMLMediaElement extends HTMLElement
 
 	public function get defaultMuted():Boolean { return false; }
 	public function set defaultMuted(value:Boolean):void { }
+	/**
+	*  @param kind
+	*  @param label (optional argument, default value is <code>''</code>)
+	*  @param language (optional argument, default value is <code>''</code>)
+	*  @return A <code>TextTrack</code> instance.
+	*/
 	public function addTextTrack(kind:String, label:String='', language:String=''):TextTrack { return null;}
 
+	/**
+	*  @see randori.webkit.html.track.TextTrackList
+	*/
 	public function get textTracks():Object { return null; }
 
 	public function get mediaGroup():String { return ''; }
 	public function set mediaGroup(value:String):void { }
 
+	/**
+	*  @see randori.webkit.html.MediaController
+	*/
 	public function get controller():MediaController { return null; }
 	public function set controller(value:MediaController):void { }
 }

@@ -42,14 +42,31 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLOptionElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLOptionElement extends HTMLElement
 {
 	[JavascriptMethod(name="Option")]
+	/**
+	*  Creates a new <code>HTMLOptionElement</code> instance.
+	*  @param data (optional argument, default value is <code>''</code>)
+	*  @param value (optional argument, default value is <code>''</code>)
+	*  @param defaultSelected (optional argument, default value is <code>false</code>)
+	*  @param selected (optional argument, default value is <code>false</code>)
+	*/
 	public function HTMLOptionElement(data:String='', value:String='', defaultSelected:Boolean=false, selected:Boolean=false) {super();}
 
 	public function get disabled():Boolean { return false; }
 	public function set disabled(value:Boolean):void { }
 
+	/**
+	*  @see randori.webkit.html.HTMLFormElement
+	*/
 	public function get form():HTMLFormElement { return null; }
 
 	public function get label():String { return ''; }

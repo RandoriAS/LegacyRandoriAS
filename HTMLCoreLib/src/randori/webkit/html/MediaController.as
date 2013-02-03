@@ -43,12 +43,27 @@ package randori.webkit.html
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="MediaController")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class MediaController
 {
+	/**
+	*  Creates a new <code>MediaController</code> instance.
+	*/
 	public function MediaController() {super();}
 
+	/**
+	*  @see randori.webkit.html.TimeRanges
+	*/
 	public function get buffered():TimeRanges { return null; }
 
+	/**
+	*  @see randori.webkit.html.TimeRanges
+	*/
 	public function get seekable():TimeRanges { return null; }
 
 	public function get duration():Number { return 0; }
@@ -58,6 +73,9 @@ public class MediaController
 
 	public function get paused():Boolean { return false; }
 
+	/**
+	*  @see randori.webkit.html.TimeRanges
+	*/
 	public function get played():TimeRanges { return null; }
 
 	public function get playbackState():String { return ''; }
@@ -76,8 +94,22 @@ public class MediaController
 
 	public function get muted():Boolean { return false; }
 	public function set muted(value:Boolean):void { }
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 

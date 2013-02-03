@@ -42,6 +42,14 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGFEColorMatrixElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ *  @see randori.webkit.svg.SVGFilterPrimitiveStandardAttributes
+ */
 public class SVGFEColorMatrixElement extends SVGStyledElement implements SVGFilterPrimitiveStandardAttributes
 {
 	public static const SVG_FECOLORMATRIX_TYPE_UNKNOWN:uint = 0;
@@ -50,20 +58,44 @@ public class SVGFEColorMatrixElement extends SVGStyledElement implements SVGFilt
 	public static const SVG_FECOLORMATRIX_TYPE_HUEROTATE:uint = 3;
 	public static const SVG_FECOLORMATRIX_TYPE_LUMINANCETOALPHA:uint = 4;
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get in1():SVGAnimatedString { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedEnumeration
+	*/
 	public function get type():SVGAnimatedEnumeration { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumberList
+	*/
 	public function get values():SVGAnimatedNumberList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get x():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get y():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get width():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get height():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get result():SVGAnimatedString { return null; }
 }
 

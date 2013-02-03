@@ -43,8 +43,20 @@ package randori.webkit.xml
 import randori.webkit.dom.Node;
 
 [JavaScript(export=false, name="XPathExpression")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class XPathExpression
 {
+	/**
+	*  @param contextNode (optional argument, default value is <code>null</code>)
+	*  @param type (optional argument, default value is <code>0</code>)
+	*  @param inResult (optional argument, default value is <code>null</code>)
+	*  @return A <code>XPathResult</code> instance.
+	*/
 	public function evaluate(contextNode:Node=null, type:uint=0, inResult:XPathResult=null):XPathResult { return null;}
 }
 

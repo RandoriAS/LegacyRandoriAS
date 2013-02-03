@@ -43,11 +43,37 @@ package randori.webkit.xml
 import randori.webkit.dom.Node;
 
 [JavaScript(export=false, name="XPathEvaluator")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class XPathEvaluator
 {
+	/**
+	*  Creates a new <code>XPathEvaluator</code> instance.
+	*/
 	public function XPathEvaluator() {super();}
+	/**
+	*  @param expression (optional argument, default value is <code>''</code>)
+	*  @param resolver (optional argument, default value is <code>null</code>)
+	*  @return A <code>XPathExpression</code> instance.
+	*/
 	public function createExpression(expression:String='', resolver:XPathNSResolver=null):XPathExpression { return null;}
+	/**
+	*  @param nodeResolver (optional argument, default value is <code>null</code>)
+	*  @return A <code>XPathNSResolver</code> instance.
+	*/
 	public function createNSResolver(nodeResolver:Node=null):XPathNSResolver { return null;}
+	/**
+	*  @param expression (optional argument, default value is <code>''</code>)
+	*  @param contextNode (optional argument, default value is <code>null</code>)
+	*  @param resolver (optional argument, default value is <code>null</code>)
+	*  @param type (optional argument, default value is <code>0</code>)
+	*  @param inResult (optional argument, default value is <code>null</code>)
+	*  @return A <code>XPathResult</code> instance.
+	*/
 	public function evaluate(expression:String='', contextNode:Node=null, resolver:XPathNSResolver=null, type:uint=0, inResult:XPathResult=null):XPathResult { return null;}
 }
 

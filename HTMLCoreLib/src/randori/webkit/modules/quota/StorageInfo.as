@@ -42,12 +42,29 @@ package randori.webkit.modules.quota
 
 
 [JavaScript(export=false, name="StorageInfo")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class StorageInfo
 {
 	public static const TEMPORARY:uint = 0;
 	public static const PERSISTENT:uint = 1;
-	public function queryUsageAndQuota(storageType:uint, usageCallback:Function=null, errorCallback:Function=null):void {}
-	public function requestQuota(storageType:uint, newQuotaInBytes:Number, quotaCallback:Function=null, errorCallback:Function=null):void {}
+	/**
+	*  @param storageType
+	*  @param usageCallback (optional argument, default value is <code>null</code>)
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function queryUsageAndQuota(storageType:uint, usageCallback:Object=null, errorCallback:Object=null):void {}
+	/**
+	*  @param storageType
+	*  @param newQuotaInBytes
+	*  @param quotaCallback (optional argument, default value is <code>null</code>)
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function requestQuota(storageType:uint, newQuotaInBytes:Number, quotaCallback:Object=null, errorCallback:Object=null):void {}
 }
 
 }

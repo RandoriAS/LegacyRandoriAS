@@ -42,9 +42,20 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGStyleElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ *  @see randori.webkit.svg.SVGLangSpace
+ */
 public class SVGStyleElement extends SVGElement implements SVGLangSpace
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('style')")]
+	/**
+	*  Creates a new <code>SVGStyleElement</code> instance.
+	*/
 	public function SVGStyleElement() {super();}
 
 	public function get disabled():Boolean { return false; }

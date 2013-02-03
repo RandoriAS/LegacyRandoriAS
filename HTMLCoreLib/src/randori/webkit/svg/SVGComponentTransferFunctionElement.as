@@ -42,9 +42,19 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGComponentTransferFunctionElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ */
 public class SVGComponentTransferFunctionElement extends SVGElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('componenttransferfunction')")]
+	/**
+	*  Creates a new <code>SVGComponentTransferFunctionElement</code> instance.
+	*/
 	public function SVGComponentTransferFunctionElement() {super();}
 	public static const SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN:uint = 0;
 	public static const SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY:uint = 1;
@@ -53,18 +63,39 @@ public class SVGComponentTransferFunctionElement extends SVGElement
 	public static const SVG_FECOMPONENTTRANSFER_TYPE_LINEAR:uint = 4;
 	public static const SVG_FECOMPONENTTRANSFER_TYPE_GAMMA:uint = 5;
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedEnumeration
+	*/
 	public function get type():SVGAnimatedEnumeration { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumberList
+	*/
 	public function get tableValues():SVGAnimatedNumberList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get slope():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get intercept():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get amplitude():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get exponent():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get offset():SVGAnimatedNumber { return null; }
 }
 

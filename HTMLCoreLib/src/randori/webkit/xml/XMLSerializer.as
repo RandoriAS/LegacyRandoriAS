@@ -43,9 +43,22 @@ package randori.webkit.xml
 import randori.webkit.dom.Node;
 
 [JavaScript(export=false, name="XMLSerializer")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class XMLSerializer
 {
+	/**
+	*  Creates a new <code>XMLSerializer</code> instance.
+	*/
 	public function XMLSerializer() {super();}
+	/**
+	*  @param node (optional argument, default value is <code>null</code>)
+	*  @return A <code>String</code> instance.
+	*/
 	public function serializeToString(node:Node=null):String { return '';}
 }
 

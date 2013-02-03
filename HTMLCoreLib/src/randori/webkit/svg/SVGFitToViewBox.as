@@ -42,11 +42,23 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGFitToViewBox")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public interface SVGFitToViewBox
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedRect
+	*/
 	 function get viewBox():SVGAnimatedRect;
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedPreserveAspectRatio
+	*/
 	 function get preserveAspectRatio():SVGAnimatedPreserveAspectRatio;
 }
 

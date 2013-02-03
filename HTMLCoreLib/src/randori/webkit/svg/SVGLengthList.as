@@ -42,16 +42,48 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGLengthList")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGLengthList
 {
 
 	public function get numberOfItems():uint { return 0; }
 	public function clear():void {}
+	/**
+	*  @param item
+	*  @return A <code>SVGLength</code> instance.
+	*/
 	public function initialize(item:SVGLength):SVGLength { return null;}
+	/**
+	*  @param index
+	*  @return A <code>SVGLength</code> instance.
+	*/
 	public function getItem(index:uint):SVGLength { return null;}
+	/**
+	*  @param item
+	*  @param index
+	*  @return A <code>SVGLength</code> instance.
+	*/
 	public function insertItemBefore(item:SVGLength, index:uint):SVGLength { return null;}
+	/**
+	*  @param item
+	*  @param index
+	*  @return A <code>SVGLength</code> instance.
+	*/
 	public function replaceItem(item:SVGLength, index:uint):SVGLength { return null;}
+	/**
+	*  @param index
+	*  @return A <code>SVGLength</code> instance.
+	*/
 	public function removeItem(index:uint):SVGLength { return null;}
+	/**
+	*  @param item
+	*  @return A <code>SVGLength</code> instance.
+	*/
 	public function appendItem(item:SVGLength):SVGLength { return null;}
 }
 

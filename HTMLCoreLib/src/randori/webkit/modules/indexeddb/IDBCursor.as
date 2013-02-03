@@ -42,6 +42,12 @@ package randori.webkit.modules.indexeddb
 
 
 [JavaScript(export=false, name="IDBCursor")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class IDBCursor
 {
 
@@ -51,12 +57,28 @@ public class IDBCursor
 
 	public function get primaryKey():Object { return null; }
 
+	/**
+	*  @see randori.webkit.modules.indexeddb.IDBAny
+	*/
 	public function get source():IDBAny { return null; }
+	/**
+	*  @param value
+	*  @return A <code>IDBRequest</code> instance.
+	*/
 	public function update(value:Object):IDBRequest { return null;}
+	/**
+	*  @param count
+	*/
 	public function advance(count:Number):void {}
 	[JavascriptMethod(name="continue")]
+	/**
+	*  @param key (optional argument, default value is <code>null</code>)
+	*/
 	public function $continue(key:Object=null):void {}
 	[JavascriptMethod(name="delete")]
+	/**
+	*  @return A <code>IDBRequest</code> instance.
+	*/
 	public function $delete():IDBRequest { return null;}
 }
 

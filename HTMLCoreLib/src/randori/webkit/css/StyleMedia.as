@@ -42,10 +42,20 @@ package randori.webkit.css
 
 
 [JavaScript(export=false, name="StyleMedia")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class StyleMedia
 {
 
 	public function get type():String { return ''; }
+	/**
+	*  @param mediaquery (optional argument, default value is <code>''</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function matchMedium(mediaquery:String=''):Boolean { return false;}
 }
 

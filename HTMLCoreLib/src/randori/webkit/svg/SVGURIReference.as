@@ -42,9 +42,18 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGURIReference")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public interface SVGURIReference
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	 function get href():SVGAnimatedString;
 }
 

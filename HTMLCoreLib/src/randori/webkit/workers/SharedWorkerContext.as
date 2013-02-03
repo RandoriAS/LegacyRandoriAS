@@ -42,11 +42,21 @@ package randori.webkit.workers
 
 
 [JavaScript(export=false, name="SharedWorkerContext")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.workers.WorkerContext
+ */
 public class SharedWorkerContext extends WorkerContext
 {
 
 	public function get name():String { return ''; }
 
+	/**
+	*  Function that accepts an event of type <code>ConnectEvent</code>.
+	*/
 	public function get onconnect():Function { return null; }
 	public function set onconnect(value:Function):void { }
 }

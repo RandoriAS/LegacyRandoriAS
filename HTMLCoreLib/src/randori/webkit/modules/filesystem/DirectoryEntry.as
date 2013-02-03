@@ -42,12 +42,38 @@ package randori.webkit.modules.filesystem
 
 
 [JavaScript(export=false, name="DirectoryEntry")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.filesystem.Entry
+ */
 public class DirectoryEntry extends Entry
 {
+	/**
+	*  @return A <code>DirectoryReader</code> instance.
+	*/
 	public function createReader():DirectoryReader { return null;}
-	public function getFile(path:String, options:Object=null, successCallback:Function=null, errorCallback:Function=null):void {}
-	public function getDirectory(path:String, options:Object=null, successCallback:Function=null, errorCallback:Function=null):void {}
-	public function removeRecursively(successCallback:Function, errorCallback:Function=null):void {}
+	/**
+	*  @param path
+	*  @param options (optional argument, default value is <code>null</code>)
+	*  @param successCallback (optional argument, default value is <code>null</code>)
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function getFile(path:String, options:Object=null, successCallback:Object=null, errorCallback:Object=null):void {}
+	/**
+	*  @param path
+	*  @param options (optional argument, default value is <code>null</code>)
+	*  @param successCallback (optional argument, default value is <code>null</code>)
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function getDirectory(path:String, options:Object=null, successCallback:Object=null, errorCallback:Object=null):void {}
+	/**
+	*  @param successCallback
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function removeRecursively(successCallback:Object, errorCallback:Object=null):void {}
 }
 
 }

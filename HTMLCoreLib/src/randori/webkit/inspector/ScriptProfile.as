@@ -42,6 +42,12 @@ package randori.webkit.inspector
 
 
 [JavaScript(export=false, name="ScriptProfile")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class ScriptProfile
 {
 
@@ -49,6 +55,9 @@ public class ScriptProfile
 
 	public function get uid():uint { return 0; }
 
+	/**
+	*  @see randori.webkit.inspector.ScriptProfileNode
+	*/
 	public function get head():ScriptProfileNode { return null; }
 
 	public function get idleTime():Number { return 0; }

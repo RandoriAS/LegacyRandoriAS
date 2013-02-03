@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLDialogElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLDialogElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('dialog')")]
+	/**
+	*  Creates a new <code>HTMLDialogElement</code> instance.
+	*/
 	public function HTMLDialogElement() {super();}
 
 	public function get open():Boolean { return false; }

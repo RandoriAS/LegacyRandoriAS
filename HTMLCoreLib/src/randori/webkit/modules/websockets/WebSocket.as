@@ -44,15 +44,24 @@ import randori.webkit.html.canvas.ArrayBuffer;
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="WebSocket")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class WebSocket
 {
 	/**
 	*  This type has multiple constructors, which Actionscript 3 doesn't support.
 	*  Therefore the constructors have been merged into one with optional parameters that are all typed to '*'
-	*  The original signatures are as follows:
+	*  The original signatures are as follow:
 	*  WebSocket(url:String, protocol:String);
 	*  WebSocket(url:String, protocols:Vector.<String>);
 	*  WebSocket(url:String);
+	*  Creates a new <code>WebSocket</code> instance.
+	*  @param url
+	*  @param protocol
 	*/
 	public function WebSocket(arg1:*=null, arg2:*=null) {super();}
 
@@ -69,23 +78,29 @@ public class WebSocket
 
 	public function get bufferedAmount():uint { return 0; }
 
+	/**
+	*  Function that accepts an event of type <code>OpenEvent</code>.
+	*/
 	public function get onopen():Function { return null; }
 	public function set onopen(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>messageEvent</code>.
+	*  Function that accepts an event of type <code>MessageEvent</code>.
+	*  @see randori.webkit.dom.MessageEvent
 	*/
 	public function get onmessage():Function { return null; }
 	public function set onmessage(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>errorEvent</code>.
+	*  Function that accepts an event of type <code>ErrorEvent</code>.
+	*  @see randori.webkit.dom.ErrorEvent
 	*/
 	public function get onerror():Function { return null; }
 	public function set onerror(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>closeEvent</code>.
+	*  Function that accepts an event of type <code>CloseEvent</code>.
+	*  @see randori.webkit.modules.websockets.CloseEvent
 	*/
 	public function get onclose():Function { return null; }
 	public function set onclose(value:Function):void { }
@@ -96,10 +111,32 @@ public class WebSocket
 
 	public function get binaryType():String { return ''; }
 	public function set binaryType(value:String):void { }
+	/**
+	*  @param data
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function send(data:ArrayBuffer):Boolean { return false;}
+	/**
+	*  @param code (optional argument, default value is <code>0</code>)
+	*  @param reason (optional argument, default value is <code>''</code>)
+	*/
 	public function close(code:uint=0, reason:String=''):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 

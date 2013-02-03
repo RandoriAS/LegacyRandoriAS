@@ -43,17 +43,33 @@ package randori.webkit.svg
 import randori.webkit.dom.UIEvent;
 
 [JavaScript(export=false, name="SVGZoomEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.UIEvent
+ */
 public class SVGZoomEvent extends UIEvent
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGRect
+	*/
 	public function get zoomRectScreen():SVGRect { return null; }
 
 	public function get previousScale():Number { return 0; }
 
+	/**
+	*  @see randori.webkit.svg.SVGPoint
+	*/
 	public function get previousTranslate():SVGPoint { return null; }
 
 	public function get newScale():Number { return 0; }
 
+	/**
+	*  @see randori.webkit.svg.SVGPoint
+	*/
 	public function get newTranslate():SVGPoint { return null; }
 }
 

@@ -42,6 +42,16 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGSymbolElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ *  @see randori.webkit.svg.SVGLangSpace
+ *  @see randori.webkit.svg.SVGExternalResourcesRequired
+ *  @see randori.webkit.svg.SVGFitToViewBox
+ */
 public class SVGSymbolElement extends SVGStyledElement implements SVGLangSpace, SVGExternalResourcesRequired, SVGFitToViewBox
 {
 
@@ -51,10 +61,19 @@ public class SVGSymbolElement extends SVGStyledElement implements SVGLangSpace, 
 	public function get xmlspace():String { return ''; }
 	public function set xmlspace(value:String):void { }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedRect
+	*/
 	public function get viewBox():SVGAnimatedRect { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedPreserveAspectRatio
+	*/
 	public function get preserveAspectRatio():SVGAnimatedPreserveAspectRatio { return null; }
 }
 

@@ -43,6 +43,13 @@ package randori.webkit.dom
 import randori.webkit.page.Window;
 
 [JavaScript(export=false, name="MouseEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.UIEvent
+ */
 public class MouseEvent extends UIEvent
 {
 
@@ -64,7 +71,27 @@ public class MouseEvent extends UIEvent
 
 	public function get button():uint { return 0; }
 
+	/**
+	*  @see randori.webkit.dom.EventTarget
+	*/
 	public function get relatedTarget():EventTarget { return null; }
+	/**
+	*  @param type (optional argument, default value is <code>''</code>)
+	*  @param canBubble (optional argument, default value is <code>false</code>)
+	*  @param cancelable (optional argument, default value is <code>false</code>)
+	*  @param view (optional argument, default value is <code>null</code>)
+	*  @param detail (optional argument, default value is <code>0</code>)
+	*  @param screenX (optional argument, default value is <code>0</code>)
+	*  @param screenY (optional argument, default value is <code>0</code>)
+	*  @param clientX (optional argument, default value is <code>0</code>)
+	*  @param clientY (optional argument, default value is <code>0</code>)
+	*  @param ctrlKey (optional argument, default value is <code>false</code>)
+	*  @param altKey (optional argument, default value is <code>false</code>)
+	*  @param shiftKey (optional argument, default value is <code>false</code>)
+	*  @param metaKey (optional argument, default value is <code>false</code>)
+	*  @param button (optional argument, default value is <code>0</code>)
+	*  @param relatedTarget (optional argument, default value is <code>null</code>)
+	*/
 	public function initMouseEvent(type:String='', canBubble:Boolean=false, cancelable:Boolean=false, view:Window=null, detail:uint=0, screenX:uint=0, screenY:uint=0, clientX:uint=0, clientY:uint=0, ctrlKey:Boolean=false, altKey:Boolean=false, shiftKey:Boolean=false, metaKey:Boolean=false, button:uint=0, relatedTarget:EventTarget=null):void {}
 
 	public function get offsetX():uint { return 0; }
@@ -75,10 +102,19 @@ public class MouseEvent extends UIEvent
 
 	public function get y():uint { return 0; }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get fromElement():Node { return null; }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get toElement():Node { return null; }
 
+	/**
+	*  @see randori.webkit.dom.Clipboard
+	*/
 	public function get dataTransfer():Clipboard { return null; }
 }
 

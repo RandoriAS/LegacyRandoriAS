@@ -43,9 +43,19 @@ package randori.webkit.html
 import randori.webkit.css.StyleSheet;
 
 [JavaScript(export=false, name="HTMLLinkElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLLinkElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('link')")]
+	/**
+	*  Creates a new <code>HTMLLinkElement</code> instance.
+	*/
 	public function HTMLLinkElement() {super();}
 
 	public function get disabled():Boolean { return false; }
@@ -69,6 +79,9 @@ public class HTMLLinkElement extends HTMLElement
 	public function get rev():String { return ''; }
 	public function set rev(value:String):void { }
 
+	/**
+	*  @see randori.webkit.html.DOMSettableTokenList
+	*/
 	public function get sizes():DOMSettableTokenList { return null; }
 	public function set sizes(value:DOMSettableTokenList):void { }
 
@@ -78,8 +91,14 @@ public class HTMLLinkElement extends HTMLElement
 	public function get type():String { return ''; }
 	public function set type(value:String):void { }
 
+	/**
+	*  @see randori.webkit.css.StyleSheet
+	*/
 	public function get sheet():StyleSheet { return null; }
 
+	/**
+	*  @see randori.webkit.html.URL
+	*/
 	public function get absoluteLinkURL():URL { return null; }
 }
 

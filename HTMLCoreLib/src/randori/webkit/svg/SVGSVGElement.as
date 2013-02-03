@@ -43,15 +43,40 @@ package randori.webkit.svg
 import randori.webkit.dom.Element;
 
 [JavaScript(export=false, name="SVGSVGElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ *  @see randori.webkit.svg.SVGTests
+ *  @see randori.webkit.svg.SVGLangSpace
+ *  @see randori.webkit.svg.SVGExternalResourcesRequired
+ *  @see randori.webkit.svg.SVGTransformable
+ *  @see randori.webkit.svg.SVGFitToViewBox
+ *  @see randori.webkit.svg.SVGZoomAndPan
+ */
 public class SVGSVGElement extends SVGStyledElement implements SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGTransformable, SVGFitToViewBox, SVGZoomAndPan
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get x():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get y():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get width():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get height():SVGAnimatedLength { return null; }
 
 	public function get contentScriptType():String { return ''; }
@@ -60,6 +85,9 @@ public class SVGSVGElement extends SVGStyledElement implements SVGTests, SVGLang
 	public function get contentStyleType():String { return ''; }
 	public function set contentStyleType(value:String):void { }
 
+	/**
+	*  @see randori.webkit.svg.SVGRect
+	*/
 	public function get viewport():SVGRect { return null; }
 
 	public function get pixelUnitToMillimeterX():Number { return 0; }
@@ -72,41 +100,125 @@ public class SVGSVGElement extends SVGStyledElement implements SVGTests, SVGLang
 
 	public function get useCurrentView():Boolean { return false; }
 
+	/**
+	*  @see randori.webkit.svg.SVGViewSpec
+	*/
 	public function get currentView():SVGViewSpec { return null; }
 
 	public function get currentScale():Number { return 0; }
 	public function set currentScale(value:Number):void { }
 
+	/**
+	*  @see randori.webkit.svg.SVGPoint
+	*/
 	public function get currentTranslate():SVGPoint { return null; }
+	/**
+	*  @param maxWaitMilliseconds (optional argument, default value is <code>0</code>)
+	*  @return A <code>uint</code> instance.
+	*/
 	public function suspendRedraw(maxWaitMilliseconds:uint=0):uint { return 0;}
+	/**
+	*  @param suspendHandleId (optional argument, default value is <code>0</code>)
+	*/
 	public function unsuspendRedraw(suspendHandleId:uint=0):void {}
 	public function unsuspendRedrawAll():void {}
 	public function forceRedraw():void {}
 	public function pauseAnimations():void {}
 	public function unpauseAnimations():void {}
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function animationsPaused():Boolean { return false;}
+	/**
+	*  @return A <code>Number</code> instance.
+	*/
 	public function getCurrentTime():Number { return 0;}
+	/**
+	*  @param seconds (optional argument, default value is <code>0</code>)
+	*/
 	public function setCurrentTime(seconds:Number=0):void {}
+	/**
+	*  @param rect (optional argument, default value is <code>null</code>)
+	*  @param referenceElement (optional argument, default value is <code>null</code>)
+	*  @return A <code>NodeList</code> instance.
+	*/
 	public function getIntersectionList(rect:SVGRect=null, referenceElement:SVGElement=null):Object { return null;}
+	/**
+	*  @param rect (optional argument, default value is <code>null</code>)
+	*  @param referenceElement (optional argument, default value is <code>null</code>)
+	*  @return A <code>NodeList</code> instance.
+	*/
 	public function getEnclosureList(rect:SVGRect=null, referenceElement:SVGElement=null):Object { return null;}
+	/**
+	*  @param element (optional argument, default value is <code>null</code>)
+	*  @param rect (optional argument, default value is <code>null</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function checkIntersection(element:SVGElement=null, rect:SVGRect=null):Boolean { return false;}
+	/**
+	*  @param element (optional argument, default value is <code>null</code>)
+	*  @param rect (optional argument, default value is <code>null</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function checkEnclosure(element:SVGElement=null, rect:SVGRect=null):Boolean { return false;}
 	public function deselectAll():void {}
+	/**
+	*  @return A <code>SVGNumber</code> instance.
+	*/
 	public function createSVGNumber():SVGNumber { return null;}
+	/**
+	*  @return A <code>SVGLength</code> instance.
+	*/
 	public function createSVGLength():SVGLength { return null;}
+	/**
+	*  @return A <code>SVGAngle</code> instance.
+	*/
 	public function createSVGAngle():SVGAngle { return null;}
+	/**
+	*  @return A <code>SVGPoint</code> instance.
+	*/
 	public function createSVGPoint():SVGPoint { return null;}
+	/**
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function createSVGMatrix():SVGMatrix { return null;}
+	/**
+	*  @return A <code>SVGRect</code> instance.
+	*/
 	public function createSVGRect():SVGRect { return null;}
+	/**
+	*  @return A <code>SVGTransform</code> instance.
+	*/
 	public function createSVGTransform():SVGTransform { return null;}
+	/**
+	*  @param matrix (optional argument, default value is <code>null</code>)
+	*  @return A <code>SVGTransform</code> instance.
+	*/
 	public function createSVGTransformFromMatrix(matrix:SVGMatrix=null):SVGTransform { return null;}
+	/**
+	*  @param elementId (optional argument, default value is <code>''</code>)
+	*  @return A <code>Element</code> instance.
+	*/
 	public function getElementById(elementId:String=''):Element { return null;}
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get requiredFeatures():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get requiredExtensions():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get systemLanguage():SVGStringList { return null; }
+	/**
+	*  @param extension (optional argument, default value is <code>''</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function hasExtension(extension:String=''):Boolean { return false;}
 
 	public function get xmllang():String { return ''; }
@@ -115,20 +227,51 @@ public class SVGSVGElement extends SVGStyledElement implements SVGTests, SVGLang
 	public function get xmlspace():String { return ''; }
 	public function set xmlspace(value:String):void { }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedTransformList
+	*/
 	public function get transform():SVGAnimatedTransformList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGElement
+	*/
 	public function get nearestViewportElement():SVGElement { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGElement
+	*/
 	public function get farthestViewportElement():SVGElement { return null; }
+	/**
+	*  @return A <code>SVGRect</code> instance.
+	*/
 	public function getBBox():SVGRect { return null;}
+	/**
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function getCTM():SVGMatrix { return null;}
+	/**
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function getScreenCTM():SVGMatrix { return null;}
+	/**
+	*  @param element (optional argument, default value is <code>null</code>)
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function getTransformToElement(element:SVGElement=null):SVGMatrix { return null;}
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedRect
+	*/
 	public function get viewBox():SVGAnimatedRect { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedPreserveAspectRatio
+	*/
 	public function get preserveAspectRatio():SVGAnimatedPreserveAspectRatio { return null; }
 
 	public function get SVG_ZOOMANDPAN_UNKNOWN():uint { return 0; }

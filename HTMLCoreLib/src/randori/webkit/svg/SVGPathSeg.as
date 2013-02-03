@@ -42,6 +42,12 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGPathSeg")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGPathSeg
 {
 	public static const PATHSEG_UNKNOWN:uint = 0;

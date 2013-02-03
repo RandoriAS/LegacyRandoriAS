@@ -43,9 +43,23 @@ package randori.webkit.xml
 import randori.webkit.dom.Document;
 
 [JavaScript(export=false, name="DOMParser")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DOMParser
 {
+	/**
+	*  Creates a new <code>DOMParser</code> instance.
+	*/
 	public function DOMParser() {super();}
+	/**
+	*  @param str (optional argument, default value is <code>''</code>)
+	*  @param contentType (optional argument, default value is <code>''</code>)
+	*  @return A <code>Document</code> instance.
+	*/
 	public function parseFromString(str:String='', contentType:String=''):Document { return null;}
 }
 

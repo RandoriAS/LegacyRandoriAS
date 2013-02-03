@@ -44,30 +44,67 @@ import randori.webkit.dom.DOMError;
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="IDBTransaction")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class IDBTransaction
 {
 
 	public function get mode():String { return ''; }
 
+	/**
+	*  @see randori.webkit.modules.indexeddb.IDBDatabase
+	*/
 	public function get db():IDBDatabase { return null; }
 
+	/**
+	*  @see randori.webkit.dom.DOMError
+	*/
 	public function get error():DOMError { return null; }
+	/**
+	*  @param name
+	*  @return A <code>IDBObjectStore</code> instance.
+	*/
 	public function objectStore(name:String):IDBObjectStore { return null;}
 	public function abort():void {}
 
+	/**
+	*  Function that accepts an event of type <code>AbortEvent</code>.
+	*/
 	public function get onabort():Function { return null; }
 	public function set onabort(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>CompleteEvent</code>.
+	*/
 	public function get oncomplete():Function { return null; }
 	public function set oncomplete(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>errorEvent</code>.
+	*  Function that accepts an event of type <code>ErrorEvent</code>.
+	*  @see randori.webkit.dom.ErrorEvent
 	*/
 	public function get onerror():Function { return null; }
 	public function set onerror(value:Function):void { }
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 

@@ -43,6 +43,12 @@ package randori.webkit.modules.battery
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="BatteryManager")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class BatteryManager
 {
 
@@ -54,19 +60,45 @@ public class BatteryManager
 
 	public function get level():Number { return 0; }
 
+	/**
+	*  Function that accepts an event of type <code>ChargingchangeEvent</code>.
+	*/
 	public function get onchargingchange():Function { return null; }
 	public function set onchargingchange(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>ChargingtimechangeEvent</code>.
+	*/
 	public function get onchargingtimechange():Function { return null; }
 	public function set onchargingtimechange(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>DischargingtimechangeEvent</code>.
+	*/
 	public function get ondischargingtimechange():Function { return null; }
 	public function set ondischargingtimechange(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>LevelchangeEvent</code>.
+	*/
 	public function get onlevelchange():Function { return null; }
 	public function set onlevelchange(value:Function):void { }
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param event
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(event:DomEvent):Boolean { return false;}
 }
 

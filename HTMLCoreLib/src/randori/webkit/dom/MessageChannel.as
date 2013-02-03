@@ -42,12 +42,27 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="MessageChannel")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class MessageChannel
 {
+	/**
+	*  Creates a new <code>MessageChannel</code> instance.
+	*/
 	public function MessageChannel() {super();}
 
+	/**
+	*  @see randori.webkit.dom.MessagePort
+	*/
 	public function get port1():MessagePort { return null; }
 
+	/**
+	*  @see randori.webkit.dom.MessagePort
+	*/
 	public function get port2():MessagePort { return null; }
 }
 

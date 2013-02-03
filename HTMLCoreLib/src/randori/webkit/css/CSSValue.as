@@ -42,6 +42,12 @@ package randori.webkit.css
 
 
 [JavaScript(export=false, name="CSSValue")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class CSSValue
 {
 	public static const CSS_INHERIT:uint = 0;

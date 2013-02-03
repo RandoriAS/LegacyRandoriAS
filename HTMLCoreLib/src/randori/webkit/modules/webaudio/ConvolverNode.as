@@ -42,9 +42,19 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="ConvolverNode")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioNode
+ */
 public class ConvolverNode extends AudioNode
 {
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioBuffer
+	*/
 	public function get buffer():AudioBuffer { return null; }
 	public function set buffer(value:AudioBuffer):void { }
 

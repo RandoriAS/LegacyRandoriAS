@@ -43,9 +43,19 @@ package randori.webkit.modules.webaudio
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="OfflineAudioCompletionEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.DomEvent
+ */
 public class OfflineAudioCompletionEvent extends DomEvent
 {
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioBuffer
+	*/
 	public function get renderedBuffer():AudioBuffer { return null; }
 }
 

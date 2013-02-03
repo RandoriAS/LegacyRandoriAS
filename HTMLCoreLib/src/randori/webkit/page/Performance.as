@@ -42,14 +42,32 @@ package randori.webkit.page
 
 
 [JavaScript(export=false, name="Performance")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Performance
 {
 
+	/**
+	*  @see randori.webkit.page.PerformanceNavigation
+	*/
 	public function get navigation():PerformanceNavigation { return null; }
 
+	/**
+	*  @see randori.webkit.page.PerformanceTiming
+	*/
 	public function get timing():PerformanceTiming { return null; }
 
+	/**
+	*  @see randori.webkit.page.MemoryInfo
+	*/
 	public function get memory():MemoryInfo { return null; }
+	/**
+	*  @return A <code>Number</code> instance.
+	*/
 	public function now():Number { return 0;}
 }
 

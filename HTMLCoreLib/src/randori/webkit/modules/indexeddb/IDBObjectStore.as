@@ -42,28 +42,86 @@ package randori.webkit.modules.indexeddb
 
 
 [JavaScript(export=false, name="IDBObjectStore")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class IDBObjectStore
 {
 
 	public function get name():String { return ''; }
 
+	/**
+	*  @see randori.webkit.modules.indexeddb.IDBAny
+	*/
 	public function get keyPath():IDBAny { return null; }
 
+	/**
+	*  @see randori.webkit.dom.DOMStringList
+	*/
 	public function get indexNames():Object { return null; }
 
+	/**
+	*  @see randori.webkit.modules.indexeddb.IDBTransaction
+	*/
 	public function get transaction():IDBTransaction { return null; }
 
 	public function get autoIncrement():Boolean { return false; }
+	/**
+	*  @param value
+	*  @param key (optional argument, default value is <code>null</code>)
+	*  @return A <code>IDBRequest</code> instance.
+	*/
 	public function put(value:Object, key:Object=null):IDBRequest { return null;}
+	/**
+	*  @param value
+	*  @param key (optional argument, default value is <code>null</code>)
+	*  @return A <code>IDBRequest</code> instance.
+	*/
 	public function add(value:Object, key:Object=null):IDBRequest { return null;}
 	[JavascriptMethod(name="delete")]
+	/**
+	*  @param keyRange
+	*  @return A <code>IDBRequest</code> instance.
+	*/
 	public function $delete(keyRange:IDBKeyRange):IDBRequest { return null;}
+	/**
+	*  @return A <code>IDBRequest</code> instance.
+	*/
 	public function clear():IDBRequest { return null;}
+	/**
+	*  @param key
+	*  @return A <code>IDBRequest</code> instance.
+	*/
 	public function get(key:IDBKeyRange):IDBRequest { return null;}
+	/**
+	*  @param range (optional argument, default value is <code>null</code>)
+	*  @param direction (optional argument, default value is <code>''</code>)
+	*  @return A <code>IDBRequest</code> instance.
+	*/
 	public function openCursor(range:IDBKeyRange=null, direction:String=''):IDBRequest { return null;}
-	public function createIndex(name:String, keyPath:String, options:Object=null):IDBIndex { return null;}
+	/**
+	*  @param name
+	*  @param keyPath
+	*  @param options (optional argument, default value is <code>null</code>)
+	*  @return A <code>IDBIndex</code> instance.
+	*/
+	public function createIndex(name:String, keyPath:Vector.<String>, options:Object=null):IDBIndex { return null;}
+	/**
+	*  @param name
+	*  @return A <code>IDBIndex</code> instance.
+	*/
 	public function index(name:String):IDBIndex { return null;}
+	/**
+	*  @param name
+	*/
 	public function deleteIndex(name:String):void {}
+	/**
+	*  @param range (optional argument, default value is <code>null</code>)
+	*  @return A <code>IDBRequest</code> instance.
+	*/
 	public function count(range:IDBKeyRange=null):IDBRequest { return null;}
 }
 

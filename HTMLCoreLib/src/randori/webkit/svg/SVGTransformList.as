@@ -42,18 +42,57 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGTransformList")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGTransformList
 {
 
 	public function get numberOfItems():uint { return 0; }
 	public function clear():void {}
+	/**
+	*  @param item
+	*  @return A <code>SVGTransform</code> instance.
+	*/
 	public function initialize(item:SVGTransform):SVGTransform { return null;}
+	/**
+	*  @param index
+	*  @return A <code>SVGTransform</code> instance.
+	*/
 	public function getItem(index:uint):SVGTransform { return null;}
+	/**
+	*  @param item
+	*  @param index
+	*  @return A <code>SVGTransform</code> instance.
+	*/
 	public function insertItemBefore(item:SVGTransform, index:uint):SVGTransform { return null;}
+	/**
+	*  @param item
+	*  @param index
+	*  @return A <code>SVGTransform</code> instance.
+	*/
 	public function replaceItem(item:SVGTransform, index:uint):SVGTransform { return null;}
+	/**
+	*  @param index
+	*  @return A <code>SVGTransform</code> instance.
+	*/
 	public function removeItem(index:uint):SVGTransform { return null;}
+	/**
+	*  @param item
+	*  @return A <code>SVGTransform</code> instance.
+	*/
 	public function appendItem(item:SVGTransform):SVGTransform { return null;}
+	/**
+	*  @param matrix
+	*  @return A <code>SVGTransform</code> instance.
+	*/
 	public function createSVGTransformFromMatrix(matrix:SVGMatrix):SVGTransform { return null;}
+	/**
+	*  @return A <code>SVGTransform</code> instance.
+	*/
 	public function consolidate():SVGTransform { return null;}
 }
 

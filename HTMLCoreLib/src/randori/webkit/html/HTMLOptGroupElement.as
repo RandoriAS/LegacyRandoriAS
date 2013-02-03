@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLOptGroupElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLOptGroupElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('optgroup')")]
+	/**
+	*  Creates a new <code>HTMLOptGroupElement</code> instance.
+	*/
 	public function HTMLOptGroupElement() {super();}
 
 	public function get disabled():Boolean { return false; }

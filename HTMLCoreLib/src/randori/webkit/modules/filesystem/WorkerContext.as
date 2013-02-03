@@ -42,12 +42,21 @@ package randori.webkit.modules.filesystem
 
 import randori.webkit.fileapi.FileError;
 
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class WorkerContext
 {
 	public static const TEMPORARY:uint = 0;
 	public static const PERSISTENT:uint = 1;
 
 	[JavascriptProperty(name="FileError")]
+	/**
+	*  @see randori.webkit.fileapi.FileError
+	*/
 	public function get FileError_():FileError { return null; }
 	public function set FileError_(value:FileError):void { }
 

@@ -42,6 +42,14 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGTextPathElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGTextContentElement
+ *  @see randori.webkit.svg.SVGURIReference
+ */
 public class SVGTextPathElement extends SVGTextContentElement implements SVGURIReference
 {
 	public static const TEXTPATH_METHODTYPE_UNKNOWN:uint = 0;
@@ -51,12 +59,24 @@ public class SVGTextPathElement extends SVGTextContentElement implements SVGURIR
 	public static const TEXTPATH_SPACINGTYPE_AUTO:uint = 1;
 	public static const TEXTPATH_SPACINGTYPE_EXACT:uint = 2;
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get startOffset():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedEnumeration
+	*/
 	public function get method():SVGAnimatedEnumeration { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedEnumeration
+	*/
 	public function get spacing():SVGAnimatedEnumeration { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get href():SVGAnimatedString { return null; }
 }
 

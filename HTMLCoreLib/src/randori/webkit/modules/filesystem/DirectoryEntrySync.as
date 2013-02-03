@@ -42,10 +42,30 @@ package randori.webkit.modules.filesystem
 
 
 [JavaScript(export=false, name="DirectoryEntrySync")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.filesystem.EntrySync
+ */
 public class DirectoryEntrySync extends EntrySync
 {
+	/**
+	*  @return A <code>DirectoryReaderSync</code> instance.
+	*/
 	public function createReader():DirectoryReaderSync { return null;}
+	/**
+	*  @param path
+	*  @param flags
+	*  @return A <code>FileEntrySync</code> instance.
+	*/
 	public function getFile(path:String, flags:Object):FileEntrySync { return null;}
+	/**
+	*  @param path
+	*  @param flags
+	*  @return A <code>DirectoryEntrySync</code> instance.
+	*/
 	public function getDirectory(path:String, flags:Object):DirectoryEntrySync { return null;}
 	public function removeRecursively():void {}
 }

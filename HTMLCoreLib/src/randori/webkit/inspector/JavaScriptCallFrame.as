@@ -42,6 +42,12 @@ package randori.webkit.inspector
 
 
 [JavaScript(export=false, name="JavaScriptCallFrame")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class JavaScriptCallFrame
 {
 	public static const GLOBAL_SCOPE:uint = 0;
@@ -49,9 +55,18 @@ public class JavaScriptCallFrame
 	public static const WITH_SCOPE:uint = 2;
 	public static const CLOSURE_SCOPE:uint = 3;
 	public static const CATCH_SCOPE:uint = 4;
+	/**
+	*  @param script
+	*/
 	public function evaluate(script:String):void {}
+	/**
+	*  @return A <code>Object</code> instance.
+	*/
 	public function restart():Object { return null;}
 
+	/**
+	*  @see randori.webkit.inspector.JavaScriptCallFrame
+	*/
 	public function get caller():JavaScriptCallFrame { return null; }
 
 	public function get sourceID():uint { return 0; }
@@ -61,6 +76,10 @@ public class JavaScriptCallFrame
 	public function get column():uint { return 0; }
 
 	public function get scopeChain():Array { return null; }
+	/**
+	*  @param scopeIndex
+	*  @return A <code>uint</code> instance.
+	*/
 	public function scopeType(scopeIndex:int):uint { return 0;}
 
 	public function get thisObject():Object { return null; }

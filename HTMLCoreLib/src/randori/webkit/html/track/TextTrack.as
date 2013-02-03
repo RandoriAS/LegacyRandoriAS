@@ -43,6 +43,12 @@ package randori.webkit.html.track
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="TextTrack")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class TextTrack
 {
 
@@ -55,16 +61,45 @@ public class TextTrack
 	public function get mode():String { return ''; }
 	public function set mode(value:String):void { }
 
+	/**
+	*  @see randori.webkit.html.track.TextTrackCueList
+	*/
 	public function get cues():Object { return null; }
 
+	/**
+	*  @see randori.webkit.html.track.TextTrackCueList
+	*/
 	public function get activeCues():Object { return null; }
 
+	/**
+	*  Function that accepts an event of type <code>CuechangeEvent</code>.
+	*/
 	public function get oncuechange():Function { return null; }
 	public function set oncuechange(value:Function):void { }
+	/**
+	*  @param cue
+	*/
 	public function addCue(cue:TextTrackCue):void {}
+	/**
+	*  @param cue
+	*/
 	public function removeCue(cue:TextTrackCue):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 

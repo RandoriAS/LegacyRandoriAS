@@ -42,9 +42,21 @@ package randori.webkit.modules.webdatabase
 
 
 [JavaScript(export=false, name="SQLTransaction")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SQLTransaction
 {
-	public function executeSql(sqlStatement:String, arguments:Object, callback:Function=null, errorCallback:Function=null):void {}
+	/**
+	*  @param sqlStatement
+	*  @param arguments
+	*  @param callback (optional argument, default value is <code>null</code>)
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function executeSql(sqlStatement:String, arguments:Object, callback:Object=null, errorCallback:Object=null):void {}
 }
 
 }

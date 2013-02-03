@@ -42,11 +42,23 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGAnimatedTransformList")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGAnimatedTransformList
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGTransformList
+	*/
 	public function get baseVal():SVGTransformList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGTransformList
+	*/
 	public function get animVal():SVGTransformList { return null; }
 }
 

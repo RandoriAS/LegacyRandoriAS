@@ -43,6 +43,13 @@ package randori.webkit.dom
 import randori.webkit.page.Window;
 
 [JavaScript(export=false, name="WheelEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.MouseEvent
+ */
 public class WheelEvent extends MouseEvent
 {
 
@@ -53,7 +60,33 @@ public class WheelEvent extends MouseEvent
 	public function get wheelDelta():uint { return 0; }
 
 	public function get isHorizontal():Boolean { return false; }
+	/**
+	*  @param wheelDeltaX (optional argument, default value is <code>0</code>)
+	*  @param wheelDeltaY (optional argument, default value is <code>0</code>)
+	*  @param view (optional argument, default value is <code>null</code>)
+	*  @param screenX (optional argument, default value is <code>0</code>)
+	*  @param screenY (optional argument, default value is <code>0</code>)
+	*  @param clientX (optional argument, default value is <code>0</code>)
+	*  @param clientY (optional argument, default value is <code>0</code>)
+	*  @param ctrlKey (optional argument, default value is <code>false</code>)
+	*  @param altKey (optional argument, default value is <code>false</code>)
+	*  @param shiftKey (optional argument, default value is <code>false</code>)
+	*  @param metaKey (optional argument, default value is <code>false</code>)
+	*/
 	public function initWheelEvent(wheelDeltaX:uint=0, wheelDeltaY:uint=0, view:Window=null, screenX:uint=0, screenY:uint=0, clientX:uint=0, clientY:uint=0, ctrlKey:Boolean=false, altKey:Boolean=false, shiftKey:Boolean=false, metaKey:Boolean=false):void {}
+	/**
+	*  @param wheelDeltaX (optional argument, default value is <code>0</code>)
+	*  @param wheelDeltaY (optional argument, default value is <code>0</code>)
+	*  @param view (optional argument, default value is <code>null</code>)
+	*  @param screenX (optional argument, default value is <code>0</code>)
+	*  @param screenY (optional argument, default value is <code>0</code>)
+	*  @param clientX (optional argument, default value is <code>0</code>)
+	*  @param clientY (optional argument, default value is <code>0</code>)
+	*  @param ctrlKey (optional argument, default value is <code>false</code>)
+	*  @param altKey (optional argument, default value is <code>false</code>)
+	*  @param shiftKey (optional argument, default value is <code>false</code>)
+	*  @param metaKey (optional argument, default value is <code>false</code>)
+	*/
 	public function initWebKitWheelEvent(wheelDeltaX:uint=0, wheelDeltaY:uint=0, view:Window=null, screenX:uint=0, screenY:uint=0, clientX:uint=0, clientY:uint=0, ctrlKey:Boolean=false, altKey:Boolean=false, shiftKey:Boolean=false, metaKey:Boolean=false):void {}
 }
 

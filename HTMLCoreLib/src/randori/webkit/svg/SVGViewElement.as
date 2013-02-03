@@ -42,17 +42,42 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGViewElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ *  @see randori.webkit.svg.SVGExternalResourcesRequired
+ *  @see randori.webkit.svg.SVGFitToViewBox
+ *  @see randori.webkit.svg.SVGZoomAndPan
+ */
 public class SVGViewElement extends SVGElement implements SVGExternalResourcesRequired, SVGFitToViewBox, SVGZoomAndPan
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('view')")]
+	/**
+	*  Creates a new <code>SVGViewElement</code> instance.
+	*/
 	public function SVGViewElement() {super();}
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get viewTarget():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedRect
+	*/
 	public function get viewBox():SVGAnimatedRect { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedPreserveAspectRatio
+	*/
 	public function get preserveAspectRatio():SVGAnimatedPreserveAspectRatio { return null; }
 
 	public function get SVG_ZOOMANDPAN_UNKNOWN():uint { return 0; }

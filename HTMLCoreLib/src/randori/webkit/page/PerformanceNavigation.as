@@ -42,6 +42,12 @@ package randori.webkit.page
 
 
 [JavaScript(export=false, name="PerformanceNavigation")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class PerformanceNavigation
 {
 	public static const TYPE_NAVIGATE:uint = 0;

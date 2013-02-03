@@ -42,9 +42,19 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="GainNode")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioNode
+ */
 public class GainNode extends AudioNode
 {
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioGain
+	*/
 	public function get gain():AudioGain { return null; }
 }
 

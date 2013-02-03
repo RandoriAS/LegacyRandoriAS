@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLHtmlElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLHtmlElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('html')")]
+	/**
+	*  Creates a new <code>HTMLHtmlElement</code> instance.
+	*/
 	public function HTMLHtmlElement() {super();}
 
 	public function get version():String { return ''; }

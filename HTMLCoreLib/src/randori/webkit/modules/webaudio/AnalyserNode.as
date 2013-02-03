@@ -42,6 +42,13 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="AnalyserNode")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioNode
+ */
 public class AnalyserNode extends AudioNode
 {
 
@@ -58,9 +65,18 @@ public class AnalyserNode extends AudioNode
 
 	public function get smoothingTimeConstant():Number { return 0; }
 	public function set smoothingTimeConstant(value:Number):void { }
-	public function getFloatFrequencyData(array:Vector.<Number>):void {}
-	public function getByteFrequencyData(array:Vector.<uint>):void {}
-	public function getByteTimeDomainData(array:Vector.<uint>):void {}
+	/**
+	*  @param array
+	*/
+	public function getFloatFrequencyData(array:Object):void {}
+	/**
+	*  @param array
+	*/
+	public function getByteFrequencyData(array:Object):void {}
+	/**
+	*  @param array
+	*/
+	public function getByteTimeDomainData(array:Object):void {}
 }
 
 }

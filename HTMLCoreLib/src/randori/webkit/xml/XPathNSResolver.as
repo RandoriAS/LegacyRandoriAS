@@ -42,8 +42,18 @@ package randori.webkit.xml
 
 
 [JavaScript(export=false, name="XPathNSResolver")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class XPathNSResolver
 {
+	/**
+	*  @param prefix (optional argument, default value is <code>''</code>)
+	*  @return A <code>String</code> instance.
+	*/
 	public function lookupNamespaceURI(prefix:String=''):String { return '';}
 }
 

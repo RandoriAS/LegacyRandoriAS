@@ -43,34 +43,59 @@ package randori.webkit.modules.notifications
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="Notification")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Notification
 {
+	/**
+	*  Creates a new <code>Notification</code> instance.
+	*  @param title
+	*  @param options (optional argument, default value is <code>null</code>)
+	*/
 	public function Notification(title:String, options:Object=null) {super();}
 	public function show():void {}
 	public function cancel():void {}
 	public function close():void {}
 
 	public function get permission():String { return ''; }
-	public function requestPermission(callback:Function):void {}
+	/**
+	*  @param callback
+	*/
+	public function requestPermission(callback:Object):void {}
 
+	/**
+	*  Function that accepts an event of type <code>ShowEvent</code>.
+	*/
 	public function get onshow():Function { return null; }
 	public function set onshow(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>DisplayEvent</code>.
+	*/
 	public function get ondisplay():Function { return null; }
 	public function set ondisplay(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>errorEvent</code>.
+	*  Function that accepts an event of type <code>ErrorEvent</code>.
+	*  @see randori.webkit.dom.ErrorEvent
 	*/
 	public function get onerror():Function { return null; }
 	public function set onerror(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>closeEvent</code>.
+	*  Function that accepts an event of type <code>CloseEvent</code>.
+	*  @see randori.webkit.modules.websockets.CloseEvent
 	*/
 	public function get onclose():Function { return null; }
 	public function set onclose(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>ClickEvent</code>.
+	*/
 	public function get onclick():Function { return null; }
 	public function set onclick(value:Function):void { }
 
@@ -82,8 +107,22 @@ public class Notification
 
 	public function get tag():String { return ''; }
 	public function set tag(value:String):void { }
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 

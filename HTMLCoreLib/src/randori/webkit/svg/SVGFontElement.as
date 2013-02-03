@@ -42,9 +42,19 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGFontElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ */
 public class SVGFontElement extends SVGElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('font')")]
+	/**
+	*  Creates a new <code>SVGFontElement</code> instance.
+	*/
 	public function SVGFontElement() {super();}
 }
 

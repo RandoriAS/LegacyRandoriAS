@@ -42,8 +42,18 @@ package randori.webkit.html.canvas
 
 
 [JavaScript(export=false, name="CanvasGradient")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class CanvasGradient
 {
+	/**
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @param color (optional argument, default value is <code>''</code>)
+	*/
 	public function addColorStop(offset:Number=0, color:String=''):void {}
 }
 

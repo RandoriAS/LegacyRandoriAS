@@ -42,6 +42,13 @@ package randori.webkit.html.canvas
 
 
 [JavaScript(export=false, name="WebGLRenderingContext")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.canvas.CanvasRenderingContext
+ */
 public class WebGLRenderingContext extends CanvasRenderingContext
 {
 	public static const DEPTH_BUFFER_BIT:uint = 0x00000100;
@@ -343,142 +350,712 @@ public class WebGLRenderingContext extends CanvasRenderingContext
 	public function get drawingBufferWidth():uint { return 0; }
 
 	public function get drawingBufferHeight():uint { return 0; }
+	/**
+	*  @param texture
+	*/
 	public function activeTexture(texture:uint):void {}
+	/**
+	*  @param program
+	*  @param shader
+	*/
 	public function attachShader(program:WebGLProgram, shader:WebGLShader):void {}
+	/**
+	*  @param program
+	*  @param index
+	*  @param name
+	*/
 	public function bindAttribLocation(program:WebGLProgram, index:uint, name:String):void {}
+	/**
+	*  @param target
+	*  @param buffer
+	*/
 	public function bindBuffer(target:uint, buffer:WebGLBuffer):void {}
+	/**
+	*  @param target
+	*  @param framebuffer
+	*/
 	public function bindFramebuffer(target:uint, framebuffer:WebGLFramebuffer):void {}
+	/**
+	*  @param target
+	*  @param renderbuffer
+	*/
 	public function bindRenderbuffer(target:uint, renderbuffer:WebGLRenderbuffer):void {}
+	/**
+	*  @param target
+	*  @param texture
+	*/
 	public function bindTexture(target:uint, texture:WebGLTexture):void {}
+	/**
+	*  @param red
+	*  @param green
+	*  @param blue
+	*  @param alpha
+	*/
 	public function blendColor(red:Number, green:Number, blue:Number, alpha:Number):void {}
+	/**
+	*  @param mode
+	*/
 	public function blendEquation(mode:uint):void {}
+	/**
+	*  @param modeRGB
+	*  @param modeAlpha
+	*/
 	public function blendEquationSeparate(modeRGB:uint, modeAlpha:uint):void {}
+	/**
+	*  @param sfactor
+	*  @param dfactor
+	*/
 	public function blendFunc(sfactor:uint, dfactor:uint):void {}
+	/**
+	*  @param srcRGB
+	*  @param dstRGB
+	*  @param srcAlpha
+	*  @param dstAlpha
+	*/
 	public function blendFuncSeparate(srcRGB:uint, dstRGB:uint, srcAlpha:uint, dstAlpha:uint):void {}
+	/**
+	*  @param target
+	*  @param data
+	*  @param usage
+	*/
 	public function bufferData(target:uint, data:ArrayBuffer, usage:uint):void {}
+	/**
+	*  @param target
+	*  @param offset
+	*  @param data
+	*/
 	public function bufferSubData(target:uint, offset:Number, data:ArrayBuffer):void {}
+	/**
+	*  @param target
+	*  @return A <code>uint</code> instance.
+	*/
 	public function checkFramebufferStatus(target:uint):uint { return 0;}
+	/**
+	*  @param mask
+	*/
 	public function clear(mask:uint):void {}
+	/**
+	*  @param red
+	*  @param green
+	*  @param blue
+	*  @param alpha
+	*/
 	public function clearColor(red:Number, green:Number, blue:Number, alpha:Number):void {}
+	/**
+	*  @param depth
+	*/
 	public function clearDepth(depth:Number):void {}
+	/**
+	*  @param s
+	*/
 	public function clearStencil(s:uint):void {}
+	/**
+	*  @param red
+	*  @param green
+	*  @param blue
+	*  @param alpha
+	*/
 	public function colorMask(red:Boolean, green:Boolean, blue:Boolean, alpha:Boolean):void {}
+	/**
+	*  @param shader
+	*/
 	public function compileShader(shader:WebGLShader):void {}
+	/**
+	*  @param target
+	*  @param level
+	*  @param internalformat
+	*  @param width
+	*  @param height
+	*  @param border
+	*  @param data
+	*/
 	public function compressedTexImage2D(target:uint, level:uint, internalformat:uint, width:uint, height:uint, border:uint, data:ArrayBufferView):void {}
+	/**
+	*  @param target
+	*  @param level
+	*  @param xoffset
+	*  @param yoffset
+	*  @param width
+	*  @param height
+	*  @param format
+	*  @param data
+	*/
 	public function compressedTexSubImage2D(target:uint, level:uint, xoffset:uint, yoffset:uint, width:uint, height:uint, format:uint, data:ArrayBufferView):void {}
+	/**
+	*  @param target
+	*  @param level
+	*  @param internalformat
+	*  @param x
+	*  @param y
+	*  @param width
+	*  @param height
+	*  @param border
+	*/
 	public function copyTexImage2D(target:uint, level:uint, internalformat:uint, x:uint, y:uint, width:uint, height:uint, border:uint):void {}
+	/**
+	*  @param target
+	*  @param level
+	*  @param xoffset
+	*  @param yoffset
+	*  @param x
+	*  @param y
+	*  @param width
+	*  @param height
+	*/
 	public function copyTexSubImage2D(target:uint, level:uint, xoffset:uint, yoffset:uint, x:uint, y:uint, width:uint, height:uint):void {}
+	/**
+	*  @return A <code>WebGLBuffer</code> instance.
+	*/
 	public function createBuffer():WebGLBuffer { return null;}
+	/**
+	*  @return A <code>WebGLFramebuffer</code> instance.
+	*/
 	public function createFramebuffer():WebGLFramebuffer { return null;}
+	/**
+	*  @return A <code>WebGLProgram</code> instance.
+	*/
 	public function createProgram():WebGLProgram { return null;}
+	/**
+	*  @return A <code>WebGLRenderbuffer</code> instance.
+	*/
 	public function createRenderbuffer():WebGLRenderbuffer { return null;}
+	/**
+	*  @param type
+	*  @return A <code>WebGLShader</code> instance.
+	*/
 	public function createShader(type:uint):WebGLShader { return null;}
+	/**
+	*  @return A <code>WebGLTexture</code> instance.
+	*/
 	public function createTexture():WebGLTexture { return null;}
+	/**
+	*  @param mode
+	*/
 	public function cullFace(mode:uint):void {}
+	/**
+	*  @param buffer
+	*/
 	public function deleteBuffer(buffer:WebGLBuffer):void {}
+	/**
+	*  @param framebuffer
+	*/
 	public function deleteFramebuffer(framebuffer:WebGLFramebuffer):void {}
+	/**
+	*  @param program
+	*/
 	public function deleteProgram(program:WebGLProgram):void {}
+	/**
+	*  @param renderbuffer
+	*/
 	public function deleteRenderbuffer(renderbuffer:WebGLRenderbuffer):void {}
+	/**
+	*  @param shader
+	*/
 	public function deleteShader(shader:WebGLShader):void {}
+	/**
+	*  @param texture
+	*/
 	public function deleteTexture(texture:WebGLTexture):void {}
+	/**
+	*  @param func
+	*/
 	public function depthFunc(func:uint):void {}
+	/**
+	*  @param flag
+	*/
 	public function depthMask(flag:Boolean):void {}
+	/**
+	*  @param zNear
+	*  @param zFar
+	*/
 	public function depthRange(zNear:Number, zFar:Number):void {}
+	/**
+	*  @param program
+	*  @param shader
+	*/
 	public function detachShader(program:WebGLProgram, shader:WebGLShader):void {}
+	/**
+	*  @param cap
+	*/
 	public function disable(cap:uint):void {}
+	/**
+	*  @param index
+	*/
 	public function disableVertexAttribArray(index:uint):void {}
+	/**
+	*  @param mode
+	*  @param first
+	*  @param count
+	*/
 	public function drawArrays(mode:uint, first:uint, count:uint):void {}
+	/**
+	*  @param mode
+	*  @param count
+	*  @param type
+	*  @param offset
+	*/
 	public function drawElements(mode:uint, count:uint, type:uint, offset:Number):void {}
+	/**
+	*  @param cap
+	*/
 	public function enable(cap:uint):void {}
+	/**
+	*  @param index
+	*/
 	public function enableVertexAttribArray(index:uint):void {}
 	public function finish():void {}
 	public function flush():void {}
+	/**
+	*  @param target
+	*  @param attachment
+	*  @param renderbuffertarget
+	*  @param renderbuffer
+	*/
 	public function framebufferRenderbuffer(target:uint, attachment:uint, renderbuffertarget:uint, renderbuffer:WebGLRenderbuffer):void {}
+	/**
+	*  @param target
+	*  @param attachment
+	*  @param textarget
+	*  @param texture
+	*  @param level
+	*/
 	public function framebufferTexture2D(target:uint, attachment:uint, textarget:uint, texture:WebGLTexture, level:uint):void {}
+	/**
+	*  @param mode
+	*/
 	public function frontFace(mode:uint):void {}
+	/**
+	*  @param target
+	*/
 	public function generateMipmap(target:uint):void {}
+	/**
+	*  @param program
+	*  @param index
+	*  @return A <code>WebGLActiveInfo</code> instance.
+	*/
 	public function getActiveAttrib(program:WebGLProgram, index:uint):WebGLActiveInfo { return null;}
+	/**
+	*  @param program
+	*  @param index
+	*  @return A <code>WebGLActiveInfo</code> instance.
+	*/
 	public function getActiveUniform(program:WebGLProgram, index:uint):WebGLActiveInfo { return null;}
+	/**
+	*  @param program
+	*/
 	public function getAttachedShaders(program:WebGLProgram):void {}
+	/**
+	*  @param program
+	*  @param name
+	*  @return A <code>int</code> instance.
+	*/
 	public function getAttribLocation(program:WebGLProgram, name:String):int { return 0;}
 	public function getBufferParameter():void {}
+	/**
+	*  @return A <code>WebGLContextAttributes</code> instance.
+	*/
 	public function getContextAttributes():WebGLContextAttributes { return null;}
+	/**
+	*  @return A <code>uint</code> instance.
+	*/
 	public function getError():uint { return 0;}
+	/**
+	*  @param name
+	*  @return A <code>any</code> instance.
+	*/
 	public function getExtension(name:String):Object { return null;}
 	public function getFramebufferAttachmentParameter():void {}
 	public function getParameter():void {}
 	public function getProgramParameter():void {}
+	/**
+	*  @param program
+	*  @return A <code>String</code> instance.
+	*/
 	public function getProgramInfoLog(program:WebGLProgram):String { return '';}
 	public function getRenderbufferParameter():void {}
 	public function getShaderParameter():void {}
+	/**
+	*  @param shader
+	*  @return A <code>String</code> instance.
+	*/
 	public function getShaderInfoLog(shader:WebGLShader):String { return '';}
+	/**
+	*  @param shadertype
+	*  @param precisiontype
+	*  @return A <code>WebGLShaderPrecisionFormat</code> instance.
+	*/
 	public function getShaderPrecisionFormat(shadertype:uint, precisiontype:uint):WebGLShaderPrecisionFormat { return null;}
+	/**
+	*  @param shader
+	*  @return A <code>String</code> instance.
+	*/
 	public function getShaderSource(shader:WebGLShader):String { return '';}
-	public function getSupportedExtensions():String { return null;}
+	/**
+	*  @return A <code>sequence</code> instance.
+	*/
+	public function getSupportedExtensions():Vector.<String> { return null;}
 	public function getTexParameter():void {}
 	public function getUniform():void {}
+	/**
+	*  @param program
+	*  @param name
+	*  @return A <code>WebGLUniformLocation</code> instance.
+	*/
 	public function getUniformLocation(program:WebGLProgram, name:String):WebGLUniformLocation { return null;}
 	public function getVertexAttrib():void {}
+	/**
+	*  @param index
+	*  @param pname
+	*  @return A <code>Number</code> instance.
+	*/
 	public function getVertexAttribOffset(index:uint, pname:uint):Number { return 0;}
+	/**
+	*  @param target
+	*  @param mode
+	*/
 	public function hint(target:uint, mode:uint):void {}
+	/**
+	*  @param buffer
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isBuffer(buffer:WebGLBuffer):Boolean { return false;}
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isContextLost():Boolean { return false;}
+	/**
+	*  @param cap
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isEnabled(cap:uint):Boolean { return false;}
+	/**
+	*  @param framebuffer
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isFramebuffer(framebuffer:WebGLFramebuffer):Boolean { return false;}
+	/**
+	*  @param program
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isProgram(program:WebGLProgram):Boolean { return false;}
+	/**
+	*  @param renderbuffer
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isRenderbuffer(renderbuffer:WebGLRenderbuffer):Boolean { return false;}
+	/**
+	*  @param shader
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isShader(shader:WebGLShader):Boolean { return false;}
+	/**
+	*  @param texture
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isTexture(texture:WebGLTexture):Boolean { return false;}
+	/**
+	*  @param width
+	*/
 	public function lineWidth(width:Number):void {}
+	/**
+	*  @param program
+	*/
 	public function linkProgram(program:WebGLProgram):void {}
+	/**
+	*  @param pname
+	*  @param param
+	*/
 	public function pixelStorei(pname:uint, param:uint):void {}
+	/**
+	*  @param factor
+	*  @param units
+	*/
 	public function polygonOffset(factor:Number, units:Number):void {}
+	/**
+	*  @param x
+	*  @param y
+	*  @param width
+	*  @param height
+	*  @param format
+	*  @param type
+	*  @param pixels
+	*/
 	public function readPixels(x:uint, y:uint, width:uint, height:uint, format:uint, type:uint, pixels:ArrayBufferView):void {}
 	public function releaseShaderCompiler():void {}
+	/**
+	*  @param target
+	*  @param internalformat
+	*  @param width
+	*  @param height
+	*/
 	public function renderbufferStorage(target:uint, internalformat:uint, width:uint, height:uint):void {}
+	/**
+	*  @param value
+	*  @param invert
+	*/
 	public function sampleCoverage(value:Number, invert:Boolean):void {}
+	/**
+	*  @param x
+	*  @param y
+	*  @param width
+	*  @param height
+	*/
 	public function scissor(x:uint, y:uint, width:uint, height:uint):void {}
+	/**
+	*  @param shader
+	*  @param string
+	*/
 	public function shaderSource(shader:WebGLShader, string:String):void {}
+	/**
+	*  @param func
+	*  @param ref
+	*  @param mask
+	*/
 	public function stencilFunc(func:uint, ref:uint, mask:uint):void {}
+	/**
+	*  @param face
+	*  @param func
+	*  @param ref
+	*  @param mask
+	*/
 	public function stencilFuncSeparate(face:uint, func:uint, ref:uint, mask:uint):void {}
+	/**
+	*  @param mask
+	*/
 	public function stencilMask(mask:uint):void {}
+	/**
+	*  @param face
+	*  @param mask
+	*/
 	public function stencilMaskSeparate(face:uint, mask:uint):void {}
+	/**
+	*  @param fail
+	*  @param zfail
+	*  @param zpass
+	*/
 	public function stencilOp(fail:uint, zfail:uint, zpass:uint):void {}
+	/**
+	*  @param face
+	*  @param fail
+	*  @param zfail
+	*  @param zpass
+	*/
 	public function stencilOpSeparate(face:uint, fail:uint, zfail:uint, zpass:uint):void {}
+	/**
+	*  @param target
+	*  @param pname
+	*  @param param
+	*/
 	public function texParameterf(target:uint, pname:uint, param:Number):void {}
+	/**
+	*  @param target
+	*  @param pname
+	*  @param param
+	*/
 	public function texParameteri(target:uint, pname:uint, param:uint):void {}
+	/**
+	*  @param target
+	*  @param level
+	*  @param internalformat
+	*  @param width
+	*  @param height
+	*  @param border
+	*  @param format
+	*  @param type
+	*  @param pixels
+	*/
 	public function texImage2D(target:uint, level:uint, internalformat:uint, width:uint, height:uint, border:uint, format:uint, type:uint, pixels:ArrayBufferView):void {}
+	/**
+	*  @param target
+	*  @param level
+	*  @param xoffset
+	*  @param yoffset
+	*  @param width
+	*  @param height
+	*  @param format
+	*  @param type
+	*  @param pixels
+	*/
 	public function texSubImage2D(target:uint, level:uint, xoffset:uint, yoffset:uint, width:uint, height:uint, format:uint, type:uint, pixels:ArrayBufferView):void {}
+	/**
+	*  @param location
+	*  @param x
+	*/
 	public function uniform1f(location:WebGLUniformLocation, x:Number):void {}
-	public function uniform1fv(location:WebGLUniformLocation, v:Vector.<Number>):void {}
+	/**
+	*  @param location
+	*  @param v
+	*/
+	public function uniform1fv(location:WebGLUniformLocation, v:Object):void {}
+	/**
+	*  @param location
+	*  @param x
+	*/
 	public function uniform1i(location:WebGLUniformLocation, x:uint):void {}
-	public function uniform1iv(location:WebGLUniformLocation, v:Vector.<int>):void {}
+	/**
+	*  @param location
+	*  @param v
+	*/
+	public function uniform1iv(location:WebGLUniformLocation, v:Object):void {}
+	/**
+	*  @param location
+	*  @param x
+	*  @param y
+	*/
 	public function uniform2f(location:WebGLUniformLocation, x:Number, y:Number):void {}
-	public function uniform2fv(location:WebGLUniformLocation, v:Vector.<Number>):void {}
+	/**
+	*  @param location
+	*  @param v
+	*/
+	public function uniform2fv(location:WebGLUniformLocation, v:Object):void {}
+	/**
+	*  @param location
+	*  @param x
+	*  @param y
+	*/
 	public function uniform2i(location:WebGLUniformLocation, x:uint, y:uint):void {}
-	public function uniform2iv(location:WebGLUniformLocation, v:Vector.<int>):void {}
+	/**
+	*  @param location
+	*  @param v
+	*/
+	public function uniform2iv(location:WebGLUniformLocation, v:Object):void {}
+	/**
+	*  @param location
+	*  @param x
+	*  @param y
+	*  @param z
+	*/
 	public function uniform3f(location:WebGLUniformLocation, x:Number, y:Number, z:Number):void {}
-	public function uniform3fv(location:WebGLUniformLocation, v:Vector.<Number>):void {}
+	/**
+	*  @param location
+	*  @param v
+	*/
+	public function uniform3fv(location:WebGLUniformLocation, v:Object):void {}
+	/**
+	*  @param location
+	*  @param x
+	*  @param y
+	*  @param z
+	*/
 	public function uniform3i(location:WebGLUniformLocation, x:uint, y:uint, z:uint):void {}
-	public function uniform3iv(location:WebGLUniformLocation, v:Vector.<int>):void {}
+	/**
+	*  @param location
+	*  @param v
+	*/
+	public function uniform3iv(location:WebGLUniformLocation, v:Object):void {}
+	/**
+	*  @param location
+	*  @param x
+	*  @param y
+	*  @param z
+	*  @param w
+	*/
 	public function uniform4f(location:WebGLUniformLocation, x:Number, y:Number, z:Number, w:Number):void {}
-	public function uniform4fv(location:WebGLUniformLocation, v:Vector.<Number>):void {}
+	/**
+	*  @param location
+	*  @param v
+	*/
+	public function uniform4fv(location:WebGLUniformLocation, v:Object):void {}
+	/**
+	*  @param location
+	*  @param x
+	*  @param y
+	*  @param z
+	*  @param w
+	*/
 	public function uniform4i(location:WebGLUniformLocation, x:uint, y:uint, z:uint, w:uint):void {}
-	public function uniform4iv(location:WebGLUniformLocation, v:Vector.<int>):void {}
-	public function uniformMatrix2fv(location:WebGLUniformLocation, transpose:Boolean, array:Vector.<Number>):void {}
-	public function uniformMatrix3fv(location:WebGLUniformLocation, transpose:Boolean, array:Vector.<Number>):void {}
-	public function uniformMatrix4fv(location:WebGLUniformLocation, transpose:Boolean, array:Vector.<Number>):void {}
+	/**
+	*  @param location
+	*  @param v
+	*/
+	public function uniform4iv(location:WebGLUniformLocation, v:Object):void {}
+	/**
+	*  @param location
+	*  @param transpose
+	*  @param array
+	*/
+	public function uniformMatrix2fv(location:WebGLUniformLocation, transpose:Boolean, array:Object):void {}
+	/**
+	*  @param location
+	*  @param transpose
+	*  @param array
+	*/
+	public function uniformMatrix3fv(location:WebGLUniformLocation, transpose:Boolean, array:Object):void {}
+	/**
+	*  @param location
+	*  @param transpose
+	*  @param array
+	*/
+	public function uniformMatrix4fv(location:WebGLUniformLocation, transpose:Boolean, array:Object):void {}
+	/**
+	*  @param program
+	*/
 	public function useProgram(program:WebGLProgram):void {}
+	/**
+	*  @param program
+	*/
 	public function validateProgram(program:WebGLProgram):void {}
+	/**
+	*  @param indx
+	*  @param x
+	*/
 	public function vertexAttrib1f(indx:uint, x:Number):void {}
-	public function vertexAttrib1fv(indx:uint, values:Vector.<Number>):void {}
+	/**
+	*  @param indx
+	*  @param values
+	*/
+	public function vertexAttrib1fv(indx:uint, values:Object):void {}
+	/**
+	*  @param indx
+	*  @param x
+	*  @param y
+	*/
 	public function vertexAttrib2f(indx:uint, x:Number, y:Number):void {}
-	public function vertexAttrib2fv(indx:uint, values:Vector.<Number>):void {}
+	/**
+	*  @param indx
+	*  @param values
+	*/
+	public function vertexAttrib2fv(indx:uint, values:Object):void {}
+	/**
+	*  @param indx
+	*  @param x
+	*  @param y
+	*  @param z
+	*/
 	public function vertexAttrib3f(indx:uint, x:Number, y:Number, z:Number):void {}
-	public function vertexAttrib3fv(indx:uint, values:Vector.<Number>):void {}
+	/**
+	*  @param indx
+	*  @param values
+	*/
+	public function vertexAttrib3fv(indx:uint, values:Object):void {}
+	/**
+	*  @param indx
+	*  @param x
+	*  @param y
+	*  @param z
+	*  @param w
+	*/
 	public function vertexAttrib4f(indx:uint, x:Number, y:Number, z:Number, w:Number):void {}
-	public function vertexAttrib4fv(indx:uint, values:Vector.<Number>):void {}
+	/**
+	*  @param indx
+	*  @param values
+	*/
+	public function vertexAttrib4fv(indx:uint, values:Object):void {}
+	/**
+	*  @param indx
+	*  @param size
+	*  @param type
+	*  @param normalized
+	*  @param stride
+	*  @param offset
+	*/
 	public function vertexAttribPointer(indx:uint, size:uint, type:uint, normalized:Boolean, stride:uint, offset:Number):void {}
+	/**
+	*  @param x
+	*  @param y
+	*  @param width
+	*  @param height
+	*/
 	public function viewport(x:uint, y:uint, width:uint, height:uint):void {}
 }
 

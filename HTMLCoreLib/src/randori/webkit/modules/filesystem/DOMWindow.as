@@ -41,6 +41,12 @@ package randori.webkit.modules.filesystem
 {
 
 
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DOMWindow
 {
 	public static const TEMPORARY:uint = 0;

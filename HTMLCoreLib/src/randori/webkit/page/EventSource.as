@@ -43,8 +43,19 @@ package randori.webkit.page
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="EventSource")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class EventSource
 {
+	/**
+	*  Creates a new <code>EventSource</code> instance.
+	*  @param url
+	*  @param eventSourceInit (optional argument, default value is <code>null</code>)
+	*/
 	public function EventSource(url:String, eventSourceInit:Object=null) {super();}
 
 	[JavascriptProperty(name="URL")]
@@ -59,23 +70,42 @@ public class EventSource
 
 	public function get readyState():uint { return 0; }
 
+	/**
+	*  Function that accepts an event of type <code>OpenEvent</code>.
+	*/
 	public function get onopen():Function { return null; }
 	public function set onopen(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>messageEvent</code>.
+	*  Function that accepts an event of type <code>MessageEvent</code>.
+	*  @see randori.webkit.dom.MessageEvent
 	*/
 	public function get onmessage():Function { return null; }
 	public function set onmessage(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>errorEvent</code>.
+	*  Function that accepts an event of type <code>ErrorEvent</code>.
+	*  @see randori.webkit.dom.ErrorEvent
 	*/
 	public function get onerror():Function { return null; }
 	public function set onerror(value:Function):void { }
 	public function close():void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 

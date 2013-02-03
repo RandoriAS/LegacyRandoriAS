@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLMeterElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLMeterElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('meter')")]
+	/**
+	*  Creates a new <code>HTMLMeterElement</code> instance.
+	*/
 	public function HTMLMeterElement() {super();}
 
 	public function get value():Number { return 0; }
@@ -65,6 +75,9 @@ public class HTMLMeterElement extends HTMLElement
 	public function get optimum():Number { return 0; }
 	public function set optimum(value:Number):void { }
 
+	/**
+	*  @see randori.webkit.dom.NodeList
+	*/
 	public function get labels():Object { return null; }
 }
 

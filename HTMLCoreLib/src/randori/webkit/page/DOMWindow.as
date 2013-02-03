@@ -41,9 +41,18 @@ package randori.webkit.page
 {
 
 
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DOMWindow
 {
 
+	/**
+	*  @see randori.webkit.page.PagePopupController
+	*/
 	public function get pagePopupController():PagePopupController { return null; }
 }
 

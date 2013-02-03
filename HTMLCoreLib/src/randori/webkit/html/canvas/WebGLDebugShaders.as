@@ -42,8 +42,18 @@ package randori.webkit.html.canvas
 
 
 [JavaScript(export=false, name="WebGLDebugShaders")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class WebGLDebugShaders
 {
+	/**
+	*  @param shader
+	*  @return A <code>String</code> instance.
+	*/
 	public function getTranslatedShaderSource(shader:WebGLShader):String { return '';}
 }
 

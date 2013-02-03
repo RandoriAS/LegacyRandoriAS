@@ -42,6 +42,12 @@ package randori.webkit.page
 
 
 [JavaScript(export=false, name="SecurityPolicy")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SecurityPolicy
 {
 
@@ -53,16 +59,59 @@ public class SecurityPolicy
 
 	public function get isActive():Boolean { return false; }
 
+	/**
+	*  @see randori.webkit.dom.DOMStringList
+	*/
 	public function get reportURIs():Object { return null; }
+	/**
+	*  @param url
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function allowsConnectionTo(url:String):Boolean { return false;}
+	/**
+	*  @param url
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function allowsFontFrom(url:String):Boolean { return false;}
+	/**
+	*  @param url
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function allowsFormAction(url:String):Boolean { return false;}
+	/**
+	*  @param url
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function allowsFrameFrom(url:String):Boolean { return false;}
+	/**
+	*  @param url
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function allowsImageFrom(url:String):Boolean { return false;}
+	/**
+	*  @param url
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function allowsMediaFrom(url:String):Boolean { return false;}
+	/**
+	*  @param url
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function allowsObjectFrom(url:String):Boolean { return false;}
+	/**
+	*  @param type
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function allowsPluginType(type:String):Boolean { return false;}
+	/**
+	*  @param url
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function allowsScriptFrom(url:String):Boolean { return false;}
+	/**
+	*  @param url
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function allowsStyleFrom(url:String):Boolean { return false;}
 }
 

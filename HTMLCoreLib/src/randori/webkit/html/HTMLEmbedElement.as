@@ -43,9 +43,19 @@ package randori.webkit.html
 import randori.webkit.svg.SVGDocument;
 
 [JavaScript(export=false, name="HTMLEmbedElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLEmbedElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('embed')")]
+	/**
+	*  Creates a new <code>HTMLEmbedElement</code> instance.
+	*/
 	public function HTMLEmbedElement() {super();}
 
 	public function get align():String { return ''; }
@@ -65,6 +75,9 @@ public class HTMLEmbedElement extends HTMLElement
 
 	public function get width():String { return ''; }
 	public function set width(value:String):void { }
+	/**
+	*  @return A <code>SVGDocument</code> instance.
+	*/
 	public function getSVGDocument():SVGDocument { return null;}
 }
 

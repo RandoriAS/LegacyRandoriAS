@@ -42,6 +42,13 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="EntityReference")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.Node
+ */
 public class EntityReference extends Node
 {
 }

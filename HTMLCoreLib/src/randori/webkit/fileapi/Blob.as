@@ -42,12 +42,24 @@ package randori.webkit.fileapi
 
 
 [JavaScript(export=false, name="Blob")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Blob
 {
 
 	public function get size():Number { return 0; }
 
 	public function get type():String { return ''; }
+	/**
+	*  @param start (optional argument, default value is <code>0</code>)
+	*  @param end (optional argument, default value is <code>0</code>)
+	*  @param contentType (optional argument, default value is <code>''</code>)
+	*  @return A <code>Blob</code> instance.
+	*/
 	public function slice(start:Number=0, end:Number=0, contentType:String=''):Blob { return null;}
 }
 

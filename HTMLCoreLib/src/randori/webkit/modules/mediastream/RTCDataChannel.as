@@ -44,6 +44,12 @@ import randori.webkit.html.canvas.ArrayBuffer;
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="RTCDataChannel")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class RTCDataChannel
 {
 
@@ -57,31 +63,54 @@ public class RTCDataChannel
 
 	public function get binaryType():String { return ''; }
 	public function set binaryType(value:String):void { }
+	/**
+	*  @param data
+	*/
 	public function send(data:ArrayBuffer):void {}
 	public function close():void {}
 
+	/**
+	*  Function that accepts an event of type <code>OpenEvent</code>.
+	*/
 	public function get onopen():Function { return null; }
 	public function set onopen(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>errorEvent</code>.
+	*  Function that accepts an event of type <code>ErrorEvent</code>.
+	*  @see randori.webkit.dom.ErrorEvent
 	*/
 	public function get onerror():Function { return null; }
 	public function set onerror(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>closeEvent</code>.
+	*  Function that accepts an event of type <code>CloseEvent</code>.
+	*  @see randori.webkit.modules.websockets.CloseEvent
 	*/
 	public function get onclose():Function { return null; }
 	public function set onclose(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>messageEvent</code>.
+	*  Function that accepts an event of type <code>MessageEvent</code>.
+	*  @see randori.webkit.dom.MessageEvent
 	*/
 	public function get onmessage():Function { return null; }
 	public function set onmessage(value:Function):void { }
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param event
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(event:DomEvent):Boolean { return false;}
 }
 

@@ -42,6 +42,12 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="ImageData")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class ImageData
 {
 
@@ -49,7 +55,10 @@ public class ImageData
 
 	public function get height():uint { return 0; }
 
-	public function get data():Vector.<uint> { return null; }
+	/**
+	*  @see randori.webkit.html.canvas.Uint8ClampedArray
+	*/
+	public function get data():Object { return null; }
 }
 
 }

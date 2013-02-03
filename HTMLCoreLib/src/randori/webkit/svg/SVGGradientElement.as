@@ -42,6 +42,15 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGGradientElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ *  @see randori.webkit.svg.SVGURIReference
+ *  @see randori.webkit.svg.SVGExternalResourcesRequired
+ */
 public class SVGGradientElement extends SVGStyledElement implements SVGURIReference, SVGExternalResourcesRequired
 {
 	public static const SVG_SPREADMETHOD_UNKNOWN:uint = 0;
@@ -49,14 +58,29 @@ public class SVGGradientElement extends SVGStyledElement implements SVGURIRefere
 	public static const SVG_SPREADMETHOD_REFLECT:uint = 2;
 	public static const SVG_SPREADMETHOD_REPEAT:uint = 3;
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedEnumeration
+	*/
 	public function get gradientUnits():SVGAnimatedEnumeration { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedTransformList
+	*/
 	public function get gradientTransform():SVGAnimatedTransformList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedEnumeration
+	*/
 	public function get spreadMethod():SVGAnimatedEnumeration { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get href():SVGAnimatedString { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 }
 

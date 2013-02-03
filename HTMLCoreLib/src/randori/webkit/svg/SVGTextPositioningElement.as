@@ -42,17 +42,39 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGTextPositioningElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGTextContentElement
+ */
 public class SVGTextPositioningElement extends SVGTextContentElement
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLengthList
+	*/
 	public function get x():SVGAnimatedLengthList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLengthList
+	*/
 	public function get y():SVGAnimatedLengthList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLengthList
+	*/
 	public function get dx():SVGAnimatedLengthList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLengthList
+	*/
 	public function get dy():SVGAnimatedLengthList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumberList
+	*/
 	public function get rotate():SVGAnimatedNumberList { return null; }
 }
 

@@ -42,6 +42,13 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="AudioGain")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioParam
+ */
 public class AudioGain extends AudioParam
 {
 }

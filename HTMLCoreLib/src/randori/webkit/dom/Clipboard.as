@@ -43,6 +43,12 @@ package randori.webkit.dom
 import randori.webkit.html.HTMLImageElement;
 
 [JavaScript(export=false, name="Clipboard")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Clipboard
 {
 
@@ -54,12 +60,35 @@ public class Clipboard
 
 	public function get types():Array { return null; }
 
+	/**
+	*  @see randori.webkit.fileapi.FileList
+	*/
 	public function get files():Object { return null; }
+	/**
+	*  @param type (optional argument, default value is <code>''</code>)
+	*/
 	public function clearData(type:String=''):void {}
+	/**
+	*  @param type
+	*  @return A <code>String</code> instance.
+	*/
 	public function getData(type:String):String { return '';}
+	/**
+	*  @param type
+	*  @param data
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function setData(type:String, data:String):Boolean { return false;}
+	/**
+	*  @param image
+	*  @param x
+	*  @param y
+	*/
 	public function setDragImage(image:HTMLImageElement, x:uint, y:uint):void {}
 
+	/**
+	*  @see randori.webkit.dom.DataTransferItemList
+	*/
 	public function get items():Object { return null; }
 }
 

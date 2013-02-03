@@ -42,6 +42,13 @@ package randori.webkit.css
 
 
 [JavaScript(export=false, name="CSSPrimitiveValue")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.css.CSSValue
+ */
 public class CSSPrimitiveValue extends CSSValue
 {
 	public static const CSS_UNKNOWN:uint = 0;
@@ -75,12 +82,36 @@ public class CSSPrimitiveValue extends CSSValue
 	public static const CSS_VMIN:uint = 28;
 
 	public function get primitiveType():uint { return 0; }
+	/**
+	*  @param unitType (optional argument, default value is <code>0</code>)
+	*  @param floatValue (optional argument, default value is <code>0</code>)
+	*/
 	public function setFloatValue(unitType:uint=0, floatValue:Number=0):void {}
+	/**
+	*  @param unitType (optional argument, default value is <code>0</code>)
+	*  @return A <code>Number</code> instance.
+	*/
 	public function getFloatValue(unitType:uint=0):Number { return 0;}
+	/**
+	*  @param stringType (optional argument, default value is <code>0</code>)
+	*  @param stringValue (optional argument, default value is <code>''</code>)
+	*/
 	public function setStringValue(stringType:uint=0, stringValue:String=''):void {}
+	/**
+	*  @return A <code>String</code> instance.
+	*/
 	public function getStringValue():String { return '';}
+	/**
+	*  @return A <code>Counter</code> instance.
+	*/
 	public function getCounterValue():Counter { return null;}
+	/**
+	*  @return A <code>Rect</code> instance.
+	*/
 	public function getRectValue():Rect { return null;}
+	/**
+	*  @return A <code>RGBColor</code> instance.
+	*/
 	public function getRGBColorValue():RGBColor { return null;}
 }
 

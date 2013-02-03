@@ -42,10 +42,30 @@ package randori.webkit.modules.geolocation
 
 
 [JavaScript(export=false, name="Geolocation")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Geolocation
 {
-	public function getCurrentPosition(successCallback:Function, errorCallback:Function=null, options:Object=null):void {}
-	public function watchPosition(successCallback:Function, errorCallback:Function=null, options:Object=null):uint { return 0;}
+	/**
+	*  @param successCallback
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*  @param options (optional argument, default value is <code>null</code>)
+	*/
+	public function getCurrentPosition(successCallback:Object, errorCallback:Object=null, options:Object=null):void {}
+	/**
+	*  @param successCallback
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*  @param options (optional argument, default value is <code>null</code>)
+	*  @return A <code>uint</code> instance.
+	*/
+	public function watchPosition(successCallback:Object, errorCallback:Object=null, options:Object=null):uint { return 0;}
+	/**
+	*  @param watchId
+	*/
 	public function clearWatch(watchId:uint):void {}
 }
 

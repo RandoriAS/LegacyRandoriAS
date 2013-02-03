@@ -42,6 +42,12 @@ package randori.webkit.modules.filesystem
 
 
 [JavaScript(export=false, name="Entry")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Entry
 {
 
@@ -53,13 +59,43 @@ public class Entry
 
 	public function get fullPath():String { return ''; }
 
+	/**
+	*  @see randori.webkit.modules.filesystem.DOMFileSystem
+	*/
 	public function get filesystem():DOMFileSystem { return null; }
-	public function getMetadata(successCallback:Function, errorCallback:Function=null):void {}
-	public function moveTo(parent:DirectoryEntry, name:String='', successCallback:Function=null, errorCallback:Function=null):void {}
-	public function copyTo(parent:DirectoryEntry, name:String='', successCallback:Function=null, errorCallback:Function=null):void {}
+	/**
+	*  @param successCallback
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function getMetadata(successCallback:Object, errorCallback:Object=null):void {}
+	/**
+	*  @param parent
+	*  @param name (optional argument, default value is <code>''</code>)
+	*  @param successCallback (optional argument, default value is <code>null</code>)
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function moveTo(parent:DirectoryEntry, name:String='', successCallback:Object=null, errorCallback:Object=null):void {}
+	/**
+	*  @param parent
+	*  @param name (optional argument, default value is <code>''</code>)
+	*  @param successCallback (optional argument, default value is <code>null</code>)
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function copyTo(parent:DirectoryEntry, name:String='', successCallback:Object=null, errorCallback:Object=null):void {}
+	/**
+	*  @return A <code>String</code> instance.
+	*/
 	public function toURL():String { return '';}
-	public function remove(successCallback:Function, errorCallback:Function=null):void {}
-	public function getParent(successCallback:Function=null, errorCallback:Function=null):void {}
+	/**
+	*  @param successCallback
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function remove(successCallback:Object, errorCallback:Object=null):void {}
+	/**
+	*  @param successCallback (optional argument, default value is <code>null</code>)
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function getParent(successCallback:Object=null, errorCallback:Object=null):void {}
 }
 
 }

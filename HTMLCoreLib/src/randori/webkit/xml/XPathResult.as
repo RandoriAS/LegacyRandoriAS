@@ -43,6 +43,12 @@ package randori.webkit.xml
 import randori.webkit.dom.Node;
 
 [JavaScript(export=false, name="XPathResult")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class XPathResult
 {
 	public static const ANY_TYPE:uint = 0;
@@ -64,12 +70,22 @@ public class XPathResult
 
 	public function get booleanValue():Boolean { return false; }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get singleNodeValue():Node { return null; }
 
 	public function get invalidIteratorState():Boolean { return false; }
 
 	public function get snapshotLength():uint { return 0; }
+	/**
+	*  @return A <code>Node</code> instance.
+	*/
 	public function iterateNext():Node { return null;}
+	/**
+	*  @param index (optional argument, default value is <code>0</code>)
+	*  @return A <code>Node</code> instance.
+	*/
 	public function snapshotItem(index:uint=0):Node { return null;}
 }
 

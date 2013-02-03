@@ -43,11 +43,24 @@ package randori.webkit.html
 import randori.webkit.dom.DocumentFragment;
 
 [JavaScript(export=false, name="HTMLTemplateElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLTemplateElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('template')")]
+	/**
+	*  Creates a new <code>HTMLTemplateElement</code> instance.
+	*/
 	public function HTMLTemplateElement() {super();}
 
+	/**
+	*  @see randori.webkit.dom.DocumentFragment
+	*/
 	public function get content():DocumentFragment { return null; }
 }
 

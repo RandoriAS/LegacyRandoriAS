@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLTextAreaElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLTextAreaElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('textarea')")]
+	/**
+	*  Creates a new <code>HTMLTextAreaElement</code> instance.
+	*/
 	public function HTMLTextAreaElement() {super();}
 
 	public function get autofocus():Boolean { return false; }
@@ -59,6 +69,9 @@ public class HTMLTextAreaElement extends HTMLElement
 	public function get disabled():Boolean { return false; }
 	public function set disabled(value:Boolean):void { }
 
+	/**
+	*  @see randori.webkit.html.HTMLFormElement
+	*/
 	public function get form():HTMLFormElement { return null; }
 
 	public function get maxLength():uint { return 0; }
@@ -95,12 +108,24 @@ public class HTMLTextAreaElement extends HTMLElement
 
 	public function get willValidate():Boolean { return false; }
 
+	/**
+	*  @see randori.webkit.html.ValidityState
+	*/
 	public function get validity():ValidityState { return null; }
 
 	public function get validationMessage():String { return ''; }
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function checkValidity():Boolean { return false;}
+	/**
+	*  @param error
+	*/
 	public function setCustomValidity(error:String):void {}
 
+	/**
+	*  @see randori.webkit.dom.NodeList
+	*/
 	public function get labels():Object { return null; }
 	public function select():void {}
 
@@ -112,7 +137,17 @@ public class HTMLTextAreaElement extends HTMLElement
 
 	public function get selectionDirection():String { return ''; }
 	public function set selectionDirection(value:String):void { }
+	/**
+	*  @param replacement
+	*  @param start
+	*  @param end
+	*  @param selectionMode (optional argument, default value is <code>''</code>)
+	*/
 	public function setRangeText(replacement:String, start:uint, end:uint, selectionMode:String=''):void {}
+	/**
+	*  @param start
+	*  @param end
+	*/
 	public function setSelectionRange(start:uint, end:uint):void {}
 }
 

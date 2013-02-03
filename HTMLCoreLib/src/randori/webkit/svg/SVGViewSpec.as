@@ -42,11 +42,23 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGViewSpec")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGViewSpec
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGTransformList
+	*/
 	public function get transform():SVGTransformList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGElement
+	*/
 	public function get viewTarget():SVGElement { return null; }
 
 	public function get viewBoxString():String { return ''; }
@@ -60,8 +72,14 @@ public class SVGViewSpec
 	public function get zoomAndPan():uint { return 0; }
 	public function set zoomAndPan(value:uint):void { }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedRect
+	*/
 	public function get viewBox():SVGAnimatedRect { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedPreserveAspectRatio
+	*/
 	public function get preserveAspectRatio():SVGAnimatedPreserveAspectRatio { return null; }
 }
 

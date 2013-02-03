@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLDirectoryElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLDirectoryElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('directory')")]
+	/**
+	*  Creates a new <code>HTMLDirectoryElement</code> instance.
+	*/
 	public function HTMLDirectoryElement() {super();}
 
 	public function get compact():Boolean { return false; }

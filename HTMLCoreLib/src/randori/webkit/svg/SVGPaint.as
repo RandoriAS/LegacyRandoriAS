@@ -42,6 +42,13 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGPaint")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGColor
+ */
 public class SVGPaint extends SVGColor
 {
 	public static const SVG_PAINTTYPE_UNKNOWN:uint = 0;
@@ -58,7 +65,16 @@ public class SVGPaint extends SVGColor
 	public function get paintType():uint { return 0; }
 
 	public function get uri():String { return ''; }
+	/**
+	*  @param uri
+	*/
 	public function setUri(uri:String):void {}
+	/**
+	*  @param paintType
+	*  @param uri
+	*  @param rgbColor
+	*  @param iccColor
+	*/
 	public function setPaint(paintType:uint, uri:String, rgbColor:String, iccColor:String):void {}
 }
 

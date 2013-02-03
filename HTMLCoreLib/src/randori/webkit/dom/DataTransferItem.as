@@ -43,13 +43,25 @@ package randori.webkit.dom
 import randori.webkit.fileapi.Blob;
 
 [JavaScript(export=false, name="DataTransferItem")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DataTransferItem
 {
 
 	public function get kind():String { return ''; }
 
 	public function get type():String { return ''; }
-	public function getAsString(callback:Function=null):void {}
+	/**
+	*  @param callback (optional argument, default value is <code>null</code>)
+	*/
+	public function getAsString(callback:Object=null):void {}
+	/**
+	*  @return A <code>Blob</code> instance.
+	*/
 	public function getAsFile():Blob { return null;}
 }
 

@@ -42,11 +42,23 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGAnimatedLength")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGAnimatedLength
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGLength
+	*/
 	public function get baseVal():SVGLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGLength
+	*/
 	public function get animVal():SVGLength { return null; }
 }
 

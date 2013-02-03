@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLAreaElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLAreaElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('area')")]
+	/**
+	*  Creates a new <code>HTMLAreaElement</code> instance.
+	*/
 	public function HTMLAreaElement() {super();}
 
 	public function get alt():String { return ''; }
@@ -82,6 +92,9 @@ public class HTMLAreaElement extends HTMLElement
 
 	public function get search():String { return ''; }
 
+	/**
+	*  @see randori.webkit.html.URL
+	*/
 	public function get absoluteLinkURL():URL { return null; }
 }
 

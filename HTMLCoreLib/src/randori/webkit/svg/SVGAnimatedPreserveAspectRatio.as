@@ -42,11 +42,23 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGAnimatedPreserveAspectRatio")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGAnimatedPreserveAspectRatio
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGPreserveAspectRatio
+	*/
 	public function get baseVal():SVGPreserveAspectRatio { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGPreserveAspectRatio
+	*/
 	public function get animVal():SVGPreserveAspectRatio { return null; }
 }
 

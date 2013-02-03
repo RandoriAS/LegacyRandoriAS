@@ -42,9 +42,19 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGVKernElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ */
 public class SVGVKernElement extends SVGElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('vkern')")]
+	/**
+	*  Creates a new <code>SVGVKernElement</code> instance.
+	*/
 	public function SVGVKernElement() {super();}
 }
 

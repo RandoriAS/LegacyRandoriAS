@@ -43,15 +43,31 @@ package randori.webkit.modules.speech
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="SpeechRecognitionEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.DomEvent
+ */
 public class SpeechRecognitionEvent extends DomEvent
 {
 
+	/**
+	*  @see randori.webkit.modules.speech.SpeechRecognitionResult
+	*/
 	public function get result():Object { return null; }
 
+	/**
+	*  @see randori.webkit.modules.speech.SpeechRecognitionResultList
+	*/
 	public function get resultHistory():Object { return null; }
 
 	public function get resultIndex():uint { return 0; }
 
+	/**
+	*  @see randori.webkit.modules.speech.SpeechRecognitionResultList
+	*/
 	public function get results():Object { return null; }
 }
 

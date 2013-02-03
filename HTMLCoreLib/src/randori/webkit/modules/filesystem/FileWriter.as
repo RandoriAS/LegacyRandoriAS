@@ -45,6 +45,12 @@ import randori.webkit.fileapi.FileError;
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="FileWriter")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class FileWriter
 {
 	public static const INIT:uint = 0;
@@ -52,42 +58,82 @@ public class FileWriter
 	public static const DONE:uint = 2;
 
 	public function get readyState():uint { return 0; }
+	/**
+	*  @param data
+	*/
 	public function write(data:Blob):void {}
+	/**
+	*  @param position
+	*/
 	public function seek(position:Number):void {}
+	/**
+	*  @param size
+	*/
 	public function truncate(size:Number):void {}
 	public function abort():void {}
 
+	/**
+	*  @see randori.webkit.fileapi.FileError
+	*/
 	public function get error():FileError { return null; }
 
 	public function get position():Number { return 0; }
 
 	public function get length():Number { return 0; }
 
+	/**
+	*  Function that accepts an event of type <code>WritestartEvent</code>.
+	*/
 	public function get onwritestart():Function { return null; }
 	public function set onwritestart(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>progressEvent</code>.
+	*  Function that accepts an event of type <code>ProgressEvent</code>.
+	*  @see randori.webkit.dom.ProgressEvent
 	*/
 	public function get onprogress():Function { return null; }
 	public function set onprogress(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>WriteEvent</code>.
+	*/
 	public function get onwrite():Function { return null; }
 	public function set onwrite(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>AbortEvent</code>.
+	*/
 	public function get onabort():Function { return null; }
 	public function set onabort(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>errorEvent</code>.
+	*  Function that accepts an event of type <code>ErrorEvent</code>.
+	*  @see randori.webkit.dom.ErrorEvent
 	*/
 	public function get onerror():Function { return null; }
 	public function set onerror(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>WriteendEvent</code>.
+	*/
 	public function get onwriteend():Function { return null; }
 	public function set onwriteend(value:Function):void { }
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 

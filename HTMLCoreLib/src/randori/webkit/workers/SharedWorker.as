@@ -43,10 +43,25 @@ package randori.webkit.workers
 import randori.webkit.dom.MessagePort;
 
 [JavaScript(export=false, name="SharedWorker")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.workers.AbstractWorker
+ */
 public class SharedWorker extends AbstractWorker
 {
+	/**
+	*  Creates a new <code>SharedWorker</code> instance.
+	*  @param scriptURL
+	*  @param name (optional argument, default value is <code>''</code>)
+	*/
 	public function SharedWorker(scriptURL:String, name:String='') {super();}
 
+	/**
+	*  @see randori.webkit.dom.MessagePort
+	*/
 	public function get port():MessagePort { return null; }
 }
 

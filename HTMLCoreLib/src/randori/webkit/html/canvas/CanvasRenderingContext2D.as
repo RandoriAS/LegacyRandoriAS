@@ -46,14 +46,48 @@ import randori.webkit.html.ImageData;
 import randori.webkit.html.HTMLCanvasElement;
 
 [JavaScript(export=false, name="CanvasRenderingContext2D")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.canvas.CanvasRenderingContext
+ */
 public class CanvasRenderingContext2D extends CanvasRenderingContext
 {
 	public function save():void {}
 	public function restore():void {}
+	/**
+	*  @param sx (optional argument, default value is <code>0</code>)
+	*  @param sy (optional argument, default value is <code>0</code>)
+	*/
 	public function scale(sx:Number=0, sy:Number=0):void {}
+	/**
+	*  @param angle (optional argument, default value is <code>0</code>)
+	*/
 	public function rotate(angle:Number=0):void {}
+	/**
+	*  @param tx (optional argument, default value is <code>0</code>)
+	*  @param ty (optional argument, default value is <code>0</code>)
+	*/
 	public function translate(tx:Number=0, ty:Number=0):void {}
+	/**
+	*  @param m11 (optional argument, default value is <code>0</code>)
+	*  @param m12 (optional argument, default value is <code>0</code>)
+	*  @param m21 (optional argument, default value is <code>0</code>)
+	*  @param m22 (optional argument, default value is <code>0</code>)
+	*  @param dx (optional argument, default value is <code>0</code>)
+	*  @param dy (optional argument, default value is <code>0</code>)
+	*/
 	public function transform(m11:Number=0, m12:Number=0, m21:Number=0, m22:Number=0, dx:Number=0, dy:Number=0):void {}
+	/**
+	*  @param m11 (optional argument, default value is <code>0</code>)
+	*  @param m12 (optional argument, default value is <code>0</code>)
+	*  @param m21 (optional argument, default value is <code>0</code>)
+	*  @param m22 (optional argument, default value is <code>0</code>)
+	*  @param dx (optional argument, default value is <code>0</code>)
+	*  @param dy (optional argument, default value is <code>0</code>)
+	*/
 	public function setTransform(m11:Number=0, m12:Number=0, m21:Number=0, m22:Number=0, dx:Number=0, dy:Number=0):void {}
 
 	public function get globalAlpha():Number { return 0; }
@@ -61,7 +95,23 @@ public class CanvasRenderingContext2D extends CanvasRenderingContext
 
 	public function get globalCompositeOperation():String { return ''; }
 	public function set globalCompositeOperation(value:String):void { }
+	/**
+	*  @param x0 (optional argument, default value is <code>0</code>)
+	*  @param y0 (optional argument, default value is <code>0</code>)
+	*  @param x1 (optional argument, default value is <code>0</code>)
+	*  @param y1 (optional argument, default value is <code>0</code>)
+	*  @return A <code>CanvasGradient</code> instance.
+	*/
 	public function createLinearGradient(x0:Number=0, y0:Number=0, x1:Number=0, y1:Number=0):CanvasGradient { return null;}
+	/**
+	*  @param x0 (optional argument, default value is <code>0</code>)
+	*  @param y0 (optional argument, default value is <code>0</code>)
+	*  @param r0 (optional argument, default value is <code>0</code>)
+	*  @param x1 (optional argument, default value is <code>0</code>)
+	*  @param y1 (optional argument, default value is <code>0</code>)
+	*  @param r1 (optional argument, default value is <code>0</code>)
+	*  @return A <code>CanvasGradient</code> instance.
+	*/
 	public function createRadialGradient(x0:Number=0, y0:Number=0, r0:Number=0, x1:Number=0, y1:Number=0, r1:Number=0):CanvasGradient { return null;}
 
 	public function get lineWidth():Number { return 0; }
@@ -87,26 +137,104 @@ public class CanvasRenderingContext2D extends CanvasRenderingContext
 
 	public function get shadowColor():String { return ''; }
 	public function set shadowColor(value:String):void { }
+	/**
+	*  @param dash
+	*/
 	public function setLineDash(dash:Vector.<Number>):void {}
+	/**
+	*  @return A <code>sequence</code> instance.
+	*/
 	public function getLineDash():Vector.<Number> { return null;}
 
 	public function get lineDashOffset():Number { return 0; }
 	public function set lineDashOffset(value:Number):void { }
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param width (optional argument, default value is <code>0</code>)
+	*  @param height (optional argument, default value is <code>0</code>)
+	*/
 	public function clearRect(x:Number=0, y:Number=0, width:Number=0, height:Number=0):void {}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param width (optional argument, default value is <code>0</code>)
+	*  @param height (optional argument, default value is <code>0</code>)
+	*/
 	public function fillRect(x:Number=0, y:Number=0, width:Number=0, height:Number=0):void {}
 	public function beginPath():void {}
 	public function closePath():void {}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*/
 	public function moveTo(x:Number=0, y:Number=0):void {}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*/
 	public function lineTo(x:Number=0, y:Number=0):void {}
+	/**
+	*  @param cpx (optional argument, default value is <code>0</code>)
+	*  @param cpy (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*/
 	public function quadraticCurveTo(cpx:Number=0, cpy:Number=0, x:Number=0, y:Number=0):void {}
+	/**
+	*  @param cp1x (optional argument, default value is <code>0</code>)
+	*  @param cp1y (optional argument, default value is <code>0</code>)
+	*  @param cp2x (optional argument, default value is <code>0</code>)
+	*  @param cp2y (optional argument, default value is <code>0</code>)
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*/
 	public function bezierCurveTo(cp1x:Number=0, cp1y:Number=0, cp2x:Number=0, cp2y:Number=0, x:Number=0, y:Number=0):void {}
+	/**
+	*  @param x1 (optional argument, default value is <code>0</code>)
+	*  @param y1 (optional argument, default value is <code>0</code>)
+	*  @param x2 (optional argument, default value is <code>0</code>)
+	*  @param y2 (optional argument, default value is <code>0</code>)
+	*  @param radius (optional argument, default value is <code>0</code>)
+	*/
 	public function arcTo(x1:Number=0, y1:Number=0, x2:Number=0, y2:Number=0, radius:Number=0):void {}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param width (optional argument, default value is <code>0</code>)
+	*  @param height (optional argument, default value is <code>0</code>)
+	*/
 	public function rect(x:Number=0, y:Number=0, width:Number=0, height:Number=0):void {}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param radius (optional argument, default value is <code>0</code>)
+	*  @param startAngle (optional argument, default value is <code>0</code>)
+	*  @param endAngle (optional argument, default value is <code>0</code>)
+	*  @param anticlockwise (optional argument, default value is <code>false</code>)
+	*/
 	public function arc(x:Number=0, y:Number=0, radius:Number=0, startAngle:Number=0, endAngle:Number=0, anticlockwise:Boolean=false):void {}
+	/**
+	*  @param winding (optional argument, default value is <code>''</code>)
+	*/
 	public function fill(winding:String=''):void {}
 	public function stroke():void {}
+	/**
+	*  @param winding (optional argument, default value is <code>''</code>)
+	*/
 	public function clip(winding:String=''):void {}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param winding (optional argument, default value is <code>''</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isPointInPath(x:Number=0, y:Number=0, winding:String=''):Boolean { return false;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isPointInStroke(x:Number=0, y:Number=0):Boolean { return false;}
 
 	public function get font():String { return ''; }
@@ -117,24 +245,131 @@ public class CanvasRenderingContext2D extends CanvasRenderingContext
 
 	public function get textBaseline():String { return ''; }
 	public function set textBaseline(value:String):void { }
+	/**
+	*  @param text (optional argument, default value is <code>''</code>)
+	*  @return A <code>TextMetrics</code> instance.
+	*/
 	public function measureText(text:String=''):TextMetrics { return null;}
+	/**
+	*  @param alpha (optional argument, default value is <code>0</code>)
+	*/
 	public function setAlpha(alpha:Number=0):void {}
+	/**
+	*  @param compositeOperation (optional argument, default value is <code>''</code>)
+	*/
 	public function setCompositeOperation(compositeOperation:String=''):void {}
+	/**
+	*  @param width (optional argument, default value is <code>0</code>)
+	*/
 	public function setLineWidth(width:Number=0):void {}
+	/**
+	*  @param cap (optional argument, default value is <code>''</code>)
+	*/
 	public function setLineCap(cap:String=''):void {}
+	/**
+	*  @param join (optional argument, default value is <code>''</code>)
+	*/
 	public function setLineJoin(join:String=''):void {}
+	/**
+	*  @param limit (optional argument, default value is <code>0</code>)
+	*/
 	public function setMiterLimit(limit:Number=0):void {}
 	public function clearShadow():void {}
+	/**
+	*  @param text
+	*  @param x
+	*  @param y
+	*  @param maxWidth (optional argument, default value is <code>0</code>)
+	*/
 	public function fillText(text:String, x:Number, y:Number, maxWidth:Number=0):void {}
+	/**
+	*  @param text
+	*  @param x
+	*  @param y
+	*  @param maxWidth (optional argument, default value is <code>0</code>)
+	*/
 	public function strokeText(text:String, x:Number, y:Number, maxWidth:Number=0):void {}
+	/**
+	*  @param c
+	*  @param m
+	*  @param y
+	*  @param k
+	*  @param a
+	*/
 	public function setStrokeColor(c:Number, m:Number, y:Number, k:Number, a:Number):void {}
+	/**
+	*  @param c
+	*  @param m
+	*  @param y
+	*  @param k
+	*  @param a
+	*/
 	public function setFillColor(c:Number, m:Number, y:Number, k:Number, a:Number):void {}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param width (optional argument, default value is <code>0</code>)
+	*  @param height (optional argument, default value is <code>0</code>)
+	*  @param lineWidth (optional argument, default value is <code>0</code>)
+	*/
 	public function strokeRect(x:Number=0, y:Number=0, width:Number=0, height:Number=0, lineWidth:Number=0):void {}
+	/**
+	*  @param image
+	*  @param sx
+	*  @param sy
+	*  @param sw
+	*  @param sh
+	*  @param dx
+	*  @param dy
+	*  @param dw
+	*  @param dh
+	*/
 	public function drawImage(image:HTMLImageElement, sx:Number, sy:Number, sw:Number, sh:Number, dx:Number, dy:Number, dw:Number, dh:Number):void {}
+	/**
+	*  @param image
+	*  @param sx (optional argument, default value is <code>0</code>)
+	*  @param sy (optional argument, default value is <code>0</code>)
+	*  @param sw (optional argument, default value is <code>0</code>)
+	*  @param sh (optional argument, default value is <code>0</code>)
+	*  @param dx (optional argument, default value is <code>0</code>)
+	*  @param dy (optional argument, default value is <code>0</code>)
+	*  @param dw (optional argument, default value is <code>0</code>)
+	*  @param dh (optional argument, default value is <code>0</code>)
+	*  @param compositeOperation (optional argument, default value is <code>''</code>)
+	*/
 	public function drawImageFromRect(image:HTMLImageElement, sx:Number=0, sy:Number=0, sw:Number=0, sh:Number=0, dx:Number=0, dy:Number=0, dw:Number=0, dh:Number=0, compositeOperation:String=''):void {}
+	/**
+	*  @param width
+	*  @param height
+	*  @param blur
+	*  @param c
+	*  @param m
+	*  @param y
+	*  @param k
+	*  @param a
+	*/
 	public function setShadow(width:Number, height:Number, blur:Number, c:Number, m:Number, y:Number, k:Number, a:Number):void {}
+	/**
+	*  @param imagedata
+	*  @param dx
+	*  @param dy
+	*  @param dirtyX
+	*  @param dirtyY
+	*  @param dirtyWidth
+	*  @param dirtyHeight
+	*/
 	public function putImageData(imagedata:ImageData, dx:Number, dy:Number, dirtyX:Number, dirtyY:Number, dirtyWidth:Number, dirtyHeight:Number):void {}
+	/**
+	*  @param canvas
+	*  @param repetitionType
+	*  @return A <code>CanvasPattern</code> instance.
+	*/
 	public function createPattern(canvas:HTMLCanvasElement, repetitionType:String):CanvasPattern { return null;}
+	/**
+	*  @param sw
+	*  @param sh
+	*  @return A <code>ImageData</code> instance.
+	*/
 	public function createImageData(sw:Number, sh:Number):ImageData { return null;}
 
 	public function get strokeStyle():Object { return null; }
@@ -142,6 +377,13 @@ public class CanvasRenderingContext2D extends CanvasRenderingContext
 
 	public function get fillStyle():Object { return null; }
 	public function set fillStyle(value:Object):void { }
+	/**
+	*  @param sx (optional argument, default value is <code>0</code>)
+	*  @param sy (optional argument, default value is <code>0</code>)
+	*  @param sw (optional argument, default value is <code>0</code>)
+	*  @param sh (optional argument, default value is <code>0</code>)
+	*  @return A <code>ImageData</code> instance.
+	*/
 	public function getImageData(sx:Number=0, sy:Number=0, sw:Number=0, sh:Number=0):ImageData { return null;}
 }
 

@@ -43,9 +43,19 @@ package randori.webkit.svg
 import randori.webkit.dom.Document;
 
 [JavaScript(export=false, name="SVGDocument")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.Document
+ */
 public class SVGDocument extends Document
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGSVGElement
+	*/
 	public function get rootElement():SVGSVGElement { return null; }
 }
 

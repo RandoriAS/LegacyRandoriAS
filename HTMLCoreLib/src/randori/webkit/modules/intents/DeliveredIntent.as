@@ -42,12 +42,29 @@ package randori.webkit.modules.intents
 
 
 [JavaScript(export=false, name="DeliveredIntent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.intents.Intent
+ */
 public class DeliveredIntent extends Intent
 {
 
 	public function get ports():Object { return null; }
+	/**
+	*  @param key
+	*  @return A <code>String</code> instance.
+	*/
 	public function getExtra(key:String):String { return '';}
+	/**
+	*  @param result
+	*/
 	public function postResult(result:Object):void {}
+	/**
+	*  @param result
+	*/
 	public function postFailure(result:Object):void {}
 }
 

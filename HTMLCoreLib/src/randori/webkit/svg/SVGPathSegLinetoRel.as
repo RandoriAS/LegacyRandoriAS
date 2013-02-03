@@ -42,6 +42,13 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGPathSegLinetoRel")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGPathSeg
+ */
 public class SVGPathSegLinetoRel extends SVGPathSeg
 {
 

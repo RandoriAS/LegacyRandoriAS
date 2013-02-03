@@ -43,9 +43,19 @@ package randori.webkit.html.shadow
 import randori.webkit.html.HTMLElement;
 
 [JavaScript(export=false, name="HTMLContentElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLContentElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('content')")]
+	/**
+	*  Creates a new <code>HTMLContentElement</code> instance.
+	*/
 	public function HTMLContentElement() {super();}
 
 	public function get select():String { return ''; }
@@ -53,6 +63,9 @@ public class HTMLContentElement extends HTMLElement
 
 	public function get resetStyleInheritance():Boolean { return false; }
 	public function set resetStyleInheritance(value:Boolean):void { }
+	/**
+	*  @return A <code>NodeList</code> instance.
+	*/
 	public function getDistributedNodes():Object { return null;}
 }
 

@@ -42,16 +42,48 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGNumberList")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGNumberList
 {
 
 	public function get numberOfItems():uint { return 0; }
 	public function clear():void {}
+	/**
+	*  @param item
+	*  @return A <code>SVGNumber</code> instance.
+	*/
 	public function initialize(item:SVGNumber):SVGNumber { return null;}
+	/**
+	*  @param index
+	*  @return A <code>SVGNumber</code> instance.
+	*/
 	public function getItem(index:uint):SVGNumber { return null;}
+	/**
+	*  @param item
+	*  @param index
+	*  @return A <code>SVGNumber</code> instance.
+	*/
 	public function insertItemBefore(item:SVGNumber, index:uint):SVGNumber { return null;}
+	/**
+	*  @param item
+	*  @param index
+	*  @return A <code>SVGNumber</code> instance.
+	*/
 	public function replaceItem(item:SVGNumber, index:uint):SVGNumber { return null;}
+	/**
+	*  @param index
+	*  @return A <code>SVGNumber</code> instance.
+	*/
 	public function removeItem(index:uint):SVGNumber { return null;}
+	/**
+	*  @param item
+	*  @return A <code>SVGNumber</code> instance.
+	*/
 	public function appendItem(item:SVGNumber):SVGNumber { return null;}
 }
 

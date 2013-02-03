@@ -42,15 +42,31 @@ package randori.webkit.workers
 
 
 [JavaScript(export=false, name="Worker")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.workers.AbstractWorker
+ */
 public class Worker extends AbstractWorker
 {
+	/**
+	*  Creates a new <code>Worker</code> instance.
+	*  @param scriptUrl
+	*/
 	public function Worker(scriptUrl:String) {super();}
 
 	/**
-	*  Function that accepts an event of type <code>messageEvent</code>.
+	*  Function that accepts an event of type <code>MessageEvent</code>.
+	*  @see randori.webkit.dom.MessageEvent
 	*/
 	public function get onmessage():Function { return null; }
 	public function set onmessage(value:Function):void { }
+	/**
+	*  @param message
+	*  @param messagePorts (optional argument, default value is <code>null</code>)
+	*/
 	public function postMessage(message:Object, messagePorts:Array=null):void {}
 	public function terminate():void {}
 }

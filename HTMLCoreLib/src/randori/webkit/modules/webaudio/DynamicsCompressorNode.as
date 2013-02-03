@@ -42,19 +42,44 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="DynamicsCompressorNode")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioNode
+ */
 public class DynamicsCompressorNode extends AudioNode
 {
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioParam
+	*/
 	public function get threshold():AudioParam { return null; }
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioParam
+	*/
 	public function get knee():AudioParam { return null; }
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioParam
+	*/
 	public function get ratio():AudioParam { return null; }
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioParam
+	*/
 	public function get reduction():AudioParam { return null; }
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioParam
+	*/
 	public function get attack():AudioParam { return null; }
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioParam
+	*/
 	public function get release():AudioParam { return null; }
 }
 

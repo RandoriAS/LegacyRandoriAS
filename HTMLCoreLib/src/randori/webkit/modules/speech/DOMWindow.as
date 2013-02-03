@@ -41,16 +41,31 @@ package randori.webkit.modules.speech
 {
 
 
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DOMWindow
 {
 
+	/**
+	*  @see randori.webkit.modules.speech.SpeechSynthesis
+	*/
 	public function get speechSynthesis():SpeechSynthesis { return null; }
 
 	[JavascriptProperty(name="SpeechSynthesisEvent")]
+	/**
+	*  @see randori.webkit.modules.speech.SpeechSynthesisEvent
+	*/
 	public function get SpeechSynthesisEvent_():SpeechSynthesisEvent { return null; }
 	public function set SpeechSynthesisEvent_(value:SpeechSynthesisEvent):void { }
 
 	[JavascriptProperty(name="SpeechSynthesisUtterance")]
+	/**
+	*  @see randori.webkit.modules.speech.SpeechSynthesisUtterance
+	*/
 	public function get SpeechSynthesisUtterance_():SpeechSynthesisUtterance { return null; }
 	public function set SpeechSynthesisUtterance_(value:SpeechSynthesisUtterance):void { }
 }

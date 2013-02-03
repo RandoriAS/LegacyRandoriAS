@@ -42,11 +42,23 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGAnimatedRect")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGAnimatedRect
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGRect
+	*/
 	public function get baseVal():SVGRect { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGRect
+	*/
 	public function get animVal():SVGRect { return null; }
 }
 

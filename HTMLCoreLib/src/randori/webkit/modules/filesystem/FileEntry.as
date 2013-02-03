@@ -42,10 +42,25 @@ package randori.webkit.modules.filesystem
 
 
 [JavaScript(export=false, name="FileEntry")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.filesystem.Entry
+ */
 public class FileEntry extends Entry
 {
-	public function createWriter(successCallback:Function, errorCallback:Function=null):void {}
-	public function file(successCallback:Function, errorCallback:Function=null):void {}
+	/**
+	*  @param successCallback
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function createWriter(successCallback:Object, errorCallback:Object=null):void {}
+	/**
+	*  @param successCallback
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function file(successCallback:Object, errorCallback:Object=null):void {}
 }
 
 }

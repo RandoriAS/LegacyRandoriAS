@@ -42,6 +42,13 @@ package randori.webkit.modules.indexeddb
 
 
 [JavaScript(export=false, name="IDBCursorWithValue")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.indexeddb.IDBCursor
+ */
 public class IDBCursorWithValue extends IDBCursor
 {
 

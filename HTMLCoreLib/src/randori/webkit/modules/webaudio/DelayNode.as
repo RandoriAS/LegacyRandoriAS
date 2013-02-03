@@ -42,9 +42,19 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="DelayNode")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioNode
+ */
 public class DelayNode extends AudioNode
 {
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioParam
+	*/
 	public function get delayTime():AudioParam { return null; }
 }
 

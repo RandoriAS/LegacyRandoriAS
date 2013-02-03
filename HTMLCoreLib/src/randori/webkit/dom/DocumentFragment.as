@@ -42,9 +42,24 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="DocumentFragment")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.Node
+ */
 public class DocumentFragment extends Node
 {
+	/**
+	*  @param selectors
+	*  @return A <code>Element</code> instance.
+	*/
 	public function querySelector(selectors:String):Element { return null;}
+	/**
+	*  @param selectors
+	*  @return A <code>NodeList</code> instance.
+	*/
 	public function querySelectorAll(selectors:String):Object { return null;}
 }
 

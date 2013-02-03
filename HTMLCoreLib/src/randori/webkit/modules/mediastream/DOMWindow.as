@@ -41,18 +41,33 @@ package randori.webkit.modules.mediastream
 {
 
 
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DOMWindow
 {
 
 	[JavascriptProperty(name="RTCSessionDescription")]
+	/**
+	*  @see randori.webkit.modules.mediastream.RTCSessionDescription
+	*/
 	public function get RTCSessionDescription_():RTCSessionDescription { return null; }
 	public function set RTCSessionDescription_(value:RTCSessionDescription):void { }
 
 	[JavascriptProperty(name="RTCIceCandidate")]
+	/**
+	*  @see randori.webkit.modules.mediastream.RTCIceCandidate
+	*/
 	public function get RTCIceCandidate_():RTCIceCandidate { return null; }
 	public function set RTCIceCandidate_(value:RTCIceCandidate):void { }
 
 	[JavascriptProperty(name="MediaStreamEvent")]
+	/**
+	*  @see randori.webkit.modules.mediastream.MediaStreamEvent
+	*/
 	public function get MediaStreamEvent_():MediaStreamEvent { return null; }
 	public function set MediaStreamEvent_(value:MediaStreamEvent):void { }
 }

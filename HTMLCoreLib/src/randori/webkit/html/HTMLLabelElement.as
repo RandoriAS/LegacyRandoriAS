@@ -42,16 +42,32 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLLabelElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLLabelElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('label')")]
+	/**
+	*  Creates a new <code>HTMLLabelElement</code> instance.
+	*/
 	public function HTMLLabelElement() {super();}
 
+	/**
+	*  @see randori.webkit.html.HTMLFormElement
+	*/
 	public function get form():HTMLFormElement { return null; }
 
 	public function get htmlFor():String { return ''; }
 	public function set htmlFor(value:String):void { }
 
+	/**
+	*  @see randori.webkit.html.HTMLElement
+	*/
 	public function get control():HTMLElement { return null; }
 }
 

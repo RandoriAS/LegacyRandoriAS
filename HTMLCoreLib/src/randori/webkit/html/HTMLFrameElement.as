@@ -45,9 +45,19 @@ import randori.webkit.page.Window;
 import randori.webkit.svg.SVGDocument;
 
 [JavaScript(export=false, name="HTMLFrameElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLFrameElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('frame')")]
+	/**
+	*  Creates a new <code>HTMLFrameElement</code> instance.
+	*/
 	public function HTMLFrameElement() {super();}
 
 	public function get frameBorder():String { return ''; }
@@ -74,9 +84,18 @@ public class HTMLFrameElement extends HTMLElement
 	public function get src():String { return ''; }
 	public function set src(value:String):void { }
 
+	/**
+	*  @see randori.webkit.dom.Document
+	*/
 	public function get contentDocument():Document { return null; }
 
+	/**
+	*  @see randori.webkit.page.Window
+	*/
 	public function get contentWindow():Window { return null; }
+	/**
+	*  @return A <code>SVGDocument</code> instance.
+	*/
 	public function getSVGDocument():SVGDocument { return null;}
 
 	public function get location():String { return ''; }

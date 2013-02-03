@@ -43,9 +43,19 @@ package randori.webkit.modules.mediastream
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="MediaStreamTrackEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.DomEvent
+ */
 public class MediaStreamTrackEvent extends DomEvent
 {
 
+	/**
+	*  @see randori.webkit.modules.mediastream.MediaStreamTrack
+	*/
 	public function get track():MediaStreamTrack { return null; }
 }
 

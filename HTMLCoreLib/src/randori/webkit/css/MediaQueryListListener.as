@@ -42,8 +42,17 @@ package randori.webkit.css
 
 
 [JavaScript(export=false, name="MediaQueryListListener")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class MediaQueryListListener
 {
+	/**
+	*  @param list (optional argument, default value is <code>null</code>)
+	*/
 	public function queryChanged(list:MediaQueryList=null):void {}
 }
 

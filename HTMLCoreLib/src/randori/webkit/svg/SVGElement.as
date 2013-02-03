@@ -43,6 +43,13 @@ package randori.webkit.svg
 import randori.webkit.dom.Element;
 
 [JavaScript(export=false, name="SVGElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.Element
+ */
 public class SVGElement extends Element
 {
 
@@ -52,8 +59,14 @@ public class SVGElement extends Element
 	public function get xmlbase():String { return ''; }
 	public function set xmlbase(value:String):void { }
 
+	/**
+	*  @see randori.webkit.svg.SVGSVGElement
+	*/
 	public function get ownerSVGElement():SVGSVGElement { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGElement
+	*/
 	public function get viewportElement():SVGElement { return null; }
 }
 

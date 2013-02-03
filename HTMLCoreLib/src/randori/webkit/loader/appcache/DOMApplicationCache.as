@@ -43,6 +43,12 @@ package randori.webkit.loader.appcache
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="DOMApplicationCache")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DOMApplicationCache
 {
 	public static const UNCACHED:uint = 0;
@@ -57,37 +63,71 @@ public class DOMApplicationCache
 	public function swapCache():void {}
 	public function abort():void {}
 
+	/**
+	*  Function that accepts an event of type <code>CheckingEvent</code>.
+	*/
 	public function get onchecking():Function { return null; }
 	public function set onchecking(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>errorEvent</code>.
+	*  Function that accepts an event of type <code>ErrorEvent</code>.
+	*  @see randori.webkit.dom.ErrorEvent
 	*/
 	public function get onerror():Function { return null; }
 	public function set onerror(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>NoupdateEvent</code>.
+	*/
 	public function get onnoupdate():Function { return null; }
 	public function set onnoupdate(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>DownloadingEvent</code>.
+	*/
 	public function get ondownloading():Function { return null; }
 	public function set ondownloading(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>progressEvent</code>.
+	*  Function that accepts an event of type <code>ProgressEvent</code>.
+	*  @see randori.webkit.dom.ProgressEvent
 	*/
 	public function get onprogress():Function { return null; }
 	public function set onprogress(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>UpdatereadyEvent</code>.
+	*/
 	public function get onupdateready():Function { return null; }
 	public function set onupdateready(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>CachedEvent</code>.
+	*/
 	public function get oncached():Function { return null; }
 	public function set oncached(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>ObsoleteEvent</code>.
+	*/
 	public function get onobsolete():Function { return null; }
 	public function set onobsolete(value:Function):void { }
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 

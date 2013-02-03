@@ -43,8 +43,18 @@ package randori.webkit.page
 import randori.webkit.html.canvas.ArrayBufferView;
 
 [JavaScript(export=false, name="Crypto")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Crypto
 {
+	/**
+	*  @param array
+	*  @return A <code>ArrayBufferView</code> instance.
+	*/
 	public function getRandomValues(array:ArrayBufferView):ArrayBufferView { return null;}
 }
 

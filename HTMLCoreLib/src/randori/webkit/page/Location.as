@@ -42,12 +42,24 @@ package randori.webkit.page
 
 
 [JavaScript(export=false, name="Location")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Location
 {
 
 	public function get href():String { return ''; }
 	public function set href(value:String):void { }
+	/**
+	*  @param url (optional argument, default value is <code>''</code>)
+	*/
 	public function assign(url:String=''):void {}
+	/**
+	*  @param url (optional argument, default value is <code>''</code>)
+	*/
 	public function replace(url:String=''):void {}
 	public function reload():void {}
 
@@ -74,8 +86,17 @@ public class Location
 
 	public function get origin():String { return ''; }
 
+	/**
+	*  @see randori.webkit.dom.DOMStringList
+	*/
 	public function get ancestorOrigins():Object { return null; }
+	/**
+	*  @return A <code>String</code> instance.
+	*/
 	public function toString():String { return '';}
+	/**
+	*  @return A <code>Object</code> instance.
+	*/
 	public function valueOf():Object { return null;}
 }
 

@@ -43,20 +43,73 @@ package randori.webkit.inspector
 import randori.webkit.dom.Node;
 
 [JavaScript(export=false, name="InjectedScriptHost")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class InjectedScriptHost
 {
 	public function clearConsoleMessages():void {}
+	/**
+	*  @param text
+	*/
 	public function copyText(text:String):void {}
+	/**
+	*  @param objectId
+	*  @param hints
+	*/
 	public function inspect(objectId:Object, hints:Object):void {}
+	/**
+	*  @param num
+	*  @return A <code>Object</code> instance.
+	*/
 	public function inspectedObject(num:int):Object { return null;}
+	/**
+	*  @param object
+	*  @return A <code>Object</code> instance.
+	*/
 	public function internalConstructorName(object:Object):Object { return null;}
+	/**
+	*  @param object
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isHTMLAllCollection(object:Object):Boolean { return false;}
+	/**
+	*  @param object
+	*  @return A <code>String</code> instance.
+	*/
 	public function type(object:Object):String { return '';}
+	/**
+	*  @param object
+	*  @return A <code>Object</code> instance.
+	*/
 	public function functionDetails(object:Object):Object { return null;}
+	/**
+	*  @param object
+	*  @return A <code>Array</code> instance.
+	*/
 	public function getInternalProperties(object:Object):Array { return null;}
+	/**
+	*  @param node
+	*  @return A <code>Array</code> instance.
+	*/
 	public function getEventListeners(node:Node):Array { return null;}
+	/**
+	*  @param database
+	*  @return A <code>String</code> instance.
+	*/
 	public function databaseId(database:Object):String { return '';}
+	/**
+	*  @param storage
+	*  @return A <code>String</code> instance.
+	*/
 	public function storageId(storage:Object):String { return '';}
+	/**
+	*  @param text
+	*  @return A <code>Object</code> instance.
+	*/
 	public function evaluate(text:String):Object { return null;}
 }
 

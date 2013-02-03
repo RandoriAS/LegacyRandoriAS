@@ -43,6 +43,12 @@ package randori.webkit.css
 import randori.webkit.dom.Node;
 
 [JavaScript(export=false, name="StyleSheet")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class StyleSheet
 {
 
@@ -51,15 +57,27 @@ public class StyleSheet
 	public function get disabled():Boolean { return false; }
 	public function set disabled(value:Boolean):void { }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get ownerNode():Node { return null; }
 
+	/**
+	*  @see randori.webkit.css.StyleSheet
+	*/
 	public function get parentStyleSheet():StyleSheet { return null; }
 
 	public function get href():String { return ''; }
 
 	public function get title():String { return ''; }
 
+	/**
+	*  @see randori.webkit.css.MediaList
+	*/
 	public function get media():Object { return null; }
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isCSSStyleSheet():Boolean { return false;}
 }
 

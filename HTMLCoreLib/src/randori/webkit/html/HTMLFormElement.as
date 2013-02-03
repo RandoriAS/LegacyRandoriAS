@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLFormElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLFormElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('form')")]
+	/**
+	*  Creates a new <code>HTMLFormElement</code> instance.
+	*/
 	public function HTMLFormElement() {super();}
 
 	public function get acceptCharset():String { return ''; }
@@ -74,19 +84,29 @@ public class HTMLFormElement extends HTMLElement
 	public function get target():String { return ''; }
 	public function set target(value:String):void { }
 
+	/**
+	*  @see randori.webkit.html.HTMLCollection
+	*/
 	public function get elements():Object { return null; }
 
 	public function get length():uint { return 0; }
 	public function submit():void {}
 	public function reset():void {}
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function checkValidity():Boolean { return false;}
 	public function requestAutocomplete():void {}
 
+	/**
+	*  Function that accepts an event of type <code>AutocompleteEvent</code>.
+	*/
 	public function get onautocomplete():Function { return null; }
 	public function set onautocomplete(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>autocompleteerrorEvent</code>.
+	*  Function that accepts an event of type <code>AutocompleteerrorEvent</code>.
+	*  @see randori.webkit.dom.AutocompleteErrorEvent
 	*/
 	public function get onautocompleteerror():Function { return null; }
 	public function set onautocompleteerror(value:Function):void { }

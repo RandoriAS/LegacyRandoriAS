@@ -42,26 +42,68 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGRectElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ *  @see randori.webkit.svg.SVGTests
+ *  @see randori.webkit.svg.SVGLangSpace
+ *  @see randori.webkit.svg.SVGExternalResourcesRequired
+ *  @see randori.webkit.svg.SVGTransformable
+ */
 public class SVGRectElement extends SVGStyledElement implements SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGTransformable
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get x():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get y():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get width():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get height():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get rx():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get ry():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get requiredFeatures():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get requiredExtensions():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get systemLanguage():SVGStringList { return null; }
+	/**
+	*  @param extension (optional argument, default value is <code>''</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function hasExtension(extension:String=''):Boolean { return false;}
 
 	public function get xmllang():String { return ''; }
@@ -70,16 +112,41 @@ public class SVGRectElement extends SVGStyledElement implements SVGTests, SVGLan
 	public function get xmlspace():String { return ''; }
 	public function set xmlspace(value:String):void { }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedTransformList
+	*/
 	public function get transform():SVGAnimatedTransformList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGElement
+	*/
 	public function get nearestViewportElement():SVGElement { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGElement
+	*/
 	public function get farthestViewportElement():SVGElement { return null; }
+	/**
+	*  @return A <code>SVGRect</code> instance.
+	*/
 	public function getBBox():SVGRect { return null;}
+	/**
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function getCTM():SVGMatrix { return null;}
+	/**
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function getScreenCTM():SVGMatrix { return null;}
+	/**
+	*  @param element (optional argument, default value is <code>null</code>)
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function getTransformToElement(element:SVGElement=null):SVGMatrix { return null;}
 }
 

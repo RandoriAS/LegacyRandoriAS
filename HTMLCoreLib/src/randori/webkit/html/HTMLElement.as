@@ -43,6 +43,13 @@ package randori.webkit.html
 import randori.webkit.dom.Element;
 
 [JavaScript(export=false, name="HTMLElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.Element
+ */
 public class HTMLElement extends Element
 {
 
@@ -81,10 +88,26 @@ public class HTMLElement extends Element
 
 	public function get outerText():String { return ''; }
 	public function set outerText(value:String):void { }
+	/**
+	*  @param where (optional argument, default value is <code>''</code>)
+	*  @param element (optional argument, default value is <code>null</code>)
+	*  @return A <code>Element</code> instance.
+	*/
 	public function insertAdjacentElement(where:String='', element:Element=null):Element { return null;}
+	/**
+	*  @param where (optional argument, default value is <code>''</code>)
+	*  @param html (optional argument, default value is <code>''</code>)
+	*/
 	public function insertAdjacentHTML(where:String='', html:String=''):void {}
+	/**
+	*  @param where (optional argument, default value is <code>''</code>)
+	*  @param text (optional argument, default value is <code>''</code>)
+	*/
 	public function insertAdjacentText(where:String='', text:String=''):void {}
 
+	/**
+	*  @see randori.webkit.html.HTMLCollection
+	*/
 	public function get children():Object { return null; }
 
 	public function get contentEditable():String { return ''; }
@@ -96,15 +119,27 @@ public class HTMLElement extends Element
 	public function get itemScope():Boolean { return false; }
 	public function set itemScope(value:Boolean):void { }
 
+	/**
+	*  @see randori.webkit.html.DOMSettableTokenList
+	*/
 	public function get itemType():DOMSettableTokenList { return null; }
 
 	public function get itemId():String { return ''; }
 	public function set itemId(value:String):void { }
 
+	/**
+	*  @see randori.webkit.html.DOMSettableTokenList
+	*/
 	public function get itemRef():DOMSettableTokenList { return null; }
 
+	/**
+	*  @see randori.webkit.html.DOMSettableTokenList
+	*/
 	public function get itemProp():DOMSettableTokenList { return null; }
 
+	/**
+	*  @see randori.webkit.html.HTMLPropertiesCollection
+	*/
 	public function get properties():Object { return null; }
 
 	public function get itemValue():Object { return null; }

@@ -42,6 +42,13 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="Attr")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.Node
+ */
 public class Attr extends Node
 {
 
@@ -52,10 +59,16 @@ public class Attr extends Node
 	public function get value():String { return ''; }
 	public function set value(value:String):void { }
 
+	/**
+	*  @see randori.webkit.dom.Element
+	*/
 	public function get ownerElement():Element { return null; }
 
 	public function get isId():Boolean { return false; }
 
+	/**
+	*  @see randori.webkit.css.CSSStyleDeclaration
+	*/
 	public function get style():Object { return null; }
 }
 

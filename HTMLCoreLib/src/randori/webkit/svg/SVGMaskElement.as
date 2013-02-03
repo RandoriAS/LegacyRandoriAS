@@ -42,26 +42,67 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGMaskElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ *  @see randori.webkit.svg.SVGTests
+ *  @see randori.webkit.svg.SVGLangSpace
+ *  @see randori.webkit.svg.SVGExternalResourcesRequired
+ */
 public class SVGMaskElement extends SVGStyledElement implements SVGTests, SVGLangSpace, SVGExternalResourcesRequired
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedEnumeration
+	*/
 	public function get maskUnits():SVGAnimatedEnumeration { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedEnumeration
+	*/
 	public function get maskContentUnits():SVGAnimatedEnumeration { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get x():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get y():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get width():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedLength
+	*/
 	public function get height():SVGAnimatedLength { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get requiredFeatures():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get requiredExtensions():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get systemLanguage():SVGStringList { return null; }
+	/**
+	*  @param extension (optional argument, default value is <code>''</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function hasExtension(extension:String=''):Boolean { return false;}
 
 	public function get xmllang():String { return ''; }
@@ -70,6 +111,9 @@ public class SVGMaskElement extends SVGStyledElement implements SVGTests, SVGLan
 	public function get xmlspace():String { return ''; }
 	public function set xmlspace(value:String):void { }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 }
 

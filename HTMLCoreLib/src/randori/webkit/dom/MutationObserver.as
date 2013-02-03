@@ -42,9 +42,22 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="MutationObserver")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class MutationObserver
 {
+	/**
+	*  @param target
+	*  @param options
+	*/
 	public function observe(target:Node, options:Object):void {}
+	/**
+	*  @return A <code>sequence</code> instance.
+	*/
 	public function takeRecords():Vector.<MutationRecord> { return null;}
 	public function disconnect():void {}
 }

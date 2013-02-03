@@ -43,6 +43,13 @@ package randori.webkit.html
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="MediaKeyEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.DomEvent
+ */
 public class MediaKeyEvent extends DomEvent
 {
 
@@ -50,12 +57,21 @@ public class MediaKeyEvent extends DomEvent
 
 	public function get sessionId():String { return ''; }
 
-	public function get initData():Vector.<uint> { return null; }
+	/**
+	*  @see randori.webkit.html.canvas.Uint8Array
+	*/
+	public function get initData():Object { return null; }
 
-	public function get message():Vector.<uint> { return null; }
+	/**
+	*  @see randori.webkit.html.canvas.Uint8Array
+	*/
+	public function get message():Object { return null; }
 
 	public function get defaultURL():String { return ''; }
 
+	/**
+	*  @see randori.webkit.html.MediaKeyError
+	*/
 	public function get errorCode():MediaKeyError { return null; }
 
 	public function get systemCode():uint { return 0; }

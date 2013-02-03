@@ -43,9 +43,22 @@ package randori.webkit.modules.filesystem
 import randori.webkit.fileapi.File;
 
 [JavaScript(export=false, name="FileEntrySync")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.filesystem.EntrySync
+ */
 public class FileEntrySync extends EntrySync
 {
+	/**
+	*  @return A <code>File</code> instance.
+	*/
 	public function file():File { return null;}
+	/**
+	*  @return A <code>FileWriterSync</code> instance.
+	*/
 	public function createWriter():FileWriterSync { return null;}
 }
 

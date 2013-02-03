@@ -42,10 +42,21 @@ package randori.webkit.html.canvas
 
 
 [JavaScript(export=false, name="ArrayBuffer")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class ArrayBuffer
 {
 
 	public function get byteLength():uint { return 0; }
+	/**
+	*  @param begin
+	*  @param end (optional argument, default value is <code>0</code>)
+	*  @return A <code>ArrayBuffer</code> instance.
+	*/
 	public function slice(begin:uint, end:uint=0):ArrayBuffer { return null;}
 }
 

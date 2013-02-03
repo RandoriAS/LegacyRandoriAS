@@ -42,15 +42,40 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGLocatable")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public interface SVGLocatable
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGElement
+	*/
 	 function get nearestViewportElement():SVGElement;
 
+	/**
+	*  @see randori.webkit.svg.SVGElement
+	*/
 	 function get farthestViewportElement():SVGElement;
+	/**
+	*  @return A <code>SVGRect</code> instance.
+	*/
 	 function getBBox():SVGRect;
+	/**
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	 function getCTM():SVGMatrix;
+	/**
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	 function getScreenCTM():SVGMatrix;
+	/**
+	*  @param element (optional argument, default value is <code>null</code>)
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	 function getTransformToElement(element:SVGElement=null):SVGMatrix;
 }
 

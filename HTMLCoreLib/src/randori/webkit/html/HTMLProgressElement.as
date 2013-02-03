@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLProgressElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLProgressElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('progress')")]
+	/**
+	*  Creates a new <code>HTMLProgressElement</code> instance.
+	*/
 	public function HTMLProgressElement() {super();}
 
 	public function get value():Number { return 0; }
@@ -55,6 +65,9 @@ public class HTMLProgressElement extends HTMLElement
 
 	public function get position():Number { return 0; }
 
+	/**
+	*  @see randori.webkit.dom.NodeList
+	*/
 	public function get labels():Object { return null; }
 }
 

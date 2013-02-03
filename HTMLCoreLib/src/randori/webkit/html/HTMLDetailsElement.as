@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLDetailsElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLDetailsElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('details')")]
+	/**
+	*  Creates a new <code>HTMLDetailsElement</code> instance.
+	*/
 	public function HTMLDetailsElement() {super();}
 
 	public function get open():Boolean { return false; }

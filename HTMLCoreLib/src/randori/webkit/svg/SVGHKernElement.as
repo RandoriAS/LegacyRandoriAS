@@ -42,9 +42,19 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGHKernElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ */
 public class SVGHKernElement extends SVGElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('hkern')")]
+	/**
+	*  Creates a new <code>SVGHKernElement</code> instance.
+	*/
 	public function SVGHKernElement() {super();}
 }
 

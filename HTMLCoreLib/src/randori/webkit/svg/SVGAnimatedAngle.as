@@ -42,11 +42,23 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGAnimatedAngle")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGAnimatedAngle
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAngle
+	*/
 	public function get baseVal():SVGAngle { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAngle
+	*/
 	public function get animVal():SVGAngle { return null; }
 }
 

@@ -42,17 +42,47 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGTextElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGTextPositioningElement
+ *  @see randori.webkit.svg.SVGTransformable
+ */
 public class SVGTextElement extends SVGTextPositioningElement implements SVGTransformable
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedTransformList
+	*/
 	public function get transform():SVGAnimatedTransformList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGElement
+	*/
 	public function get nearestViewportElement():SVGElement { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGElement
+	*/
 	public function get farthestViewportElement():SVGElement { return null; }
+	/**
+	*  @return A <code>SVGRect</code> instance.
+	*/
 	public function getBBox():SVGRect { return null;}
+	/**
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function getCTM():SVGMatrix { return null;}
+	/**
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function getScreenCTM():SVGMatrix { return null;}
+	/**
+	*  @param element (optional argument, default value is <code>null</code>)
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function getTransformToElement(element:SVGElement=null):SVGMatrix { return null;}
 }
 

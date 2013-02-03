@@ -45,37 +45,66 @@ import randori.webkit.dom.Document;
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="XMLHttpRequest")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class XMLHttpRequest
 {
+	/**
+	*  Creates a new <code>XMLHttpRequest</code> instance.
+	*/
 	public function XMLHttpRequest() {super();}
 
+	/**
+	*  Function that accepts an event of type <code>AbortEvent</code>.
+	*/
 	public function get onabort():Function { return null; }
 	public function set onabort(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>errorEvent</code>.
+	*  Function that accepts an event of type <code>ErrorEvent</code>.
+	*  @see randori.webkit.dom.ErrorEvent
 	*/
 	public function get onerror():Function { return null; }
 	public function set onerror(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>LoadEvent</code>.
+	*/
 	public function get onload():Function { return null; }
 	public function set onload(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>LoadendEvent</code>.
+	*/
 	public function get onloadend():Function { return null; }
 	public function set onloadend(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>LoadstartEvent</code>.
+	*/
 	public function get onloadstart():Function { return null; }
 	public function set onloadstart(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>progressEvent</code>.
+	*  Function that accepts an event of type <code>ProgressEvent</code>.
+	*  @see randori.webkit.dom.ProgressEvent
 	*/
 	public function get onprogress():Function { return null; }
 	public function set onprogress(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>TimeoutEvent</code>.
+	*/
 	public function get ontimeout():Function { return null; }
 	public function set ontimeout(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>ReadystatechangeEvent</code>.
+	*/
 	public function get onreadystatechange():Function { return null; }
 	public function set onreadystatechange(value:Function):void { }
 	public static const UNSENT:uint = 0;
@@ -91,17 +120,44 @@ public class XMLHttpRequest
 
 	public function get withCredentials():Boolean { return false; }
 	public function set withCredentials(value:Boolean):void { }
+	/**
+	*  @param method
+	*  @param url
+	*  @param async (optional argument, default value is <code>false</code>)
+	*  @param user (optional argument, default value is <code>''</code>)
+	*  @param password (optional argument, default value is <code>''</code>)
+	*/
 	public function open(method:String, url:String, async:Boolean=false, user:String='', password:String=''):void {}
+	/**
+	*  @param header
+	*  @param value
+	*/
 	public function setRequestHeader(header:String, value:String):void {}
+	/**
+	*  @param data
+	*/
 	public function send(data:ArrayBufferView):void {}
 	public function abort():void {}
 
+	/**
+	*  @see randori.webkit.xml.XMLHttpRequestUpload
+	*/
 	public function get upload():XMLHttpRequestUpload { return null; }
+	/**
+	*  @return A <code>String</code> instance.
+	*/
 	public function getAllResponseHeaders():String { return '';}
+	/**
+	*  @param header
+	*  @return A <code>String</code> instance.
+	*/
 	public function getResponseHeader(header:String):String { return '';}
 
 	public function get responseText():String { return ''; }
 
+	/**
+	*  @see randori.webkit.dom.Document
+	*/
 	public function get responseXML():Document { return null; }
 
 	public function get responseType():String { return ''; }
@@ -112,9 +168,26 @@ public class XMLHttpRequest
 	public function get status():uint { return 0; }
 
 	public function get statusText():String { return ''; }
+	/**
+	*  @param override
+	*/
 	public function overrideMimeType($override:String):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 

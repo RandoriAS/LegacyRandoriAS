@@ -42,6 +42,13 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="BiquadFilterNode")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioNode
+ */
 public class BiquadFilterNode extends AudioNode
 {
 	public static const LOWPASS:uint = 0;
@@ -56,14 +63,31 @@ public class BiquadFilterNode extends AudioNode
 	public function get type():String { return ''; }
 	public function set type(value:String):void { }
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioParam
+	*/
 	public function get frequency():AudioParam { return null; }
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioParam
+	*/
 	public function get detune():AudioParam { return null; }
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioParam
+	*/
 	public function get Q():AudioParam { return null; }
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioParam
+	*/
 	public function get gain():AudioParam { return null; }
-	public function getFrequencyResponse(frequencyHz:Vector.<Number>, magResponse:Vector.<Number>, phaseResponse:Vector.<Number>):void {}
+	/**
+	*  @param frequencyHz
+	*  @param magResponse
+	*  @param phaseResponse
+	*/
+	public function getFrequencyResponse(frequencyHz:Object, magResponse:Object, phaseResponse:Object):void {}
 }
 
 }

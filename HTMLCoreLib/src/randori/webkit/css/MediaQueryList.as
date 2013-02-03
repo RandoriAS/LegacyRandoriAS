@@ -42,13 +42,25 @@ package randori.webkit.css
 
 
 [JavaScript(export=false, name="MediaQueryList")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class MediaQueryList
 {
 
 	public function get media():String { return ''; }
 
 	public function get matches():Boolean { return false; }
+	/**
+	*  @param listener (optional argument, default value is <code>null</code>)
+	*/
 	public function addListener(listener:MediaQueryListListener=null):void {}
+	/**
+	*  @param listener (optional argument, default value is <code>null</code>)
+	*/
 	public function removeListener(listener:MediaQueryListListener=null):void {}
 }
 

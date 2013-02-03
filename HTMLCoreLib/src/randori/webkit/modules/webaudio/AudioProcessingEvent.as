@@ -43,11 +43,24 @@ package randori.webkit.modules.webaudio
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="AudioProcessingEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.DomEvent
+ */
 public class AudioProcessingEvent extends DomEvent
 {
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioBuffer
+	*/
 	public function get inputBuffer():AudioBuffer { return null; }
 
+	/**
+	*  @see randori.webkit.modules.webaudio.AudioBuffer
+	*/
 	public function get outputBuffer():AudioBuffer { return null; }
 }
 

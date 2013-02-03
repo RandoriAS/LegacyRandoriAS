@@ -43,14 +43,26 @@ package randori.webkit.modules.mediasource
 import randori.webkit.html.TimeRanges;
 
 [JavaScript(export=false, name="SourceBuffer")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SourceBuffer
 {
 
+	/**
+	*  @see randori.webkit.html.TimeRanges
+	*/
 	public function get buffered():TimeRanges { return null; }
 
 	public function get timestampOffset():Number { return 0; }
 	public function set timestampOffset(value:Number):void { }
-	public function append(data:Vector.<uint>):void {}
+	/**
+	*  @param data
+	*/
+	public function append(data:Object):void {}
 	public function abort():void {}
 }
 

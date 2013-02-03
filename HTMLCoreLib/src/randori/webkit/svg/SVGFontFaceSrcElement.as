@@ -42,9 +42,19 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGFontFaceSrcElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ */
 public class SVGFontFaceSrcElement extends SVGElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('fontfacesrc')")]
+	/**
+	*  Creates a new <code>SVGFontFaceSrcElement</code> instance.
+	*/
 	public function SVGFontFaceSrcElement() {super();}
 }
 

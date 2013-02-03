@@ -42,11 +42,20 @@ package randori.webkit.modules.filesystem
 
 
 [JavaScript(export=false, name="DOMFileSystem")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DOMFileSystem
 {
 
 	public function get name():String { return ''; }
 
+	/**
+	*  @see randori.webkit.modules.filesystem.DirectoryEntry
+	*/
 	public function get root():DirectoryEntry { return null; }
 }
 

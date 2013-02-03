@@ -42,17 +42,50 @@ package randori.webkit.css
 
 
 [JavaScript(export=false, name="CSSStyleSheet")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.css.StyleSheet
+ */
 public class CSSStyleSheet extends StyleSheet
 {
 
+	/**
+	*  @see randori.webkit.css.CSSRule
+	*/
 	public function get ownerRule():CSSRule { return null; }
 
+	/**
+	*  @see randori.webkit.css.CSSRuleList
+	*/
 	public function get cssRules():Object { return null; }
+	/**
+	*  @param rule (optional argument, default value is <code>''</code>)
+	*  @param index (optional argument, default value is <code>0</code>)
+	*  @return A <code>uint</code> instance.
+	*/
 	public function insertRule(rule:String='', index:uint=0):uint { return 0;}
+	/**
+	*  @param index (optional argument, default value is <code>0</code>)
+	*/
 	public function deleteRule(index:uint=0):void {}
 
+	/**
+	*  @see randori.webkit.css.CSSRuleList
+	*/
 	public function get rules():Object { return null; }
+	/**
+	*  @param selector (optional argument, default value is <code>''</code>)
+	*  @param style (optional argument, default value is <code>''</code>)
+	*  @param index (optional argument, default value is <code>0</code>)
+	*  @return A <code>uint</code> instance.
+	*/
 	public function addRule(selector:String='', style:String='', index:uint=0):uint { return 0;}
+	/**
+	*  @param index (optional argument, default value is <code>0</code>)
+	*/
 	public function removeRule(index:uint=0):void {}
 }
 

@@ -43,23 +43,62 @@ package randori.webkit.modules.mediasource
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="MediaSource")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class MediaSource
 {
+	/**
+	*  Creates a new <code>MediaSource</code> instance.
+	*/
 	public function MediaSource() {super();}
 
+	/**
+	*  @see randori.webkit.modules.mediasource.SourceBufferList
+	*/
 	public function get sourceBuffers():Object { return null; }
 
+	/**
+	*  @see randori.webkit.modules.mediasource.SourceBufferList
+	*/
 	public function get activeSourceBuffers():Object { return null; }
 
 	public function get duration():Number { return 0; }
 	public function set duration(value:Number):void { }
+	/**
+	*  @param type
+	*  @return A <code>SourceBuffer</code> instance.
+	*/
 	public function addSourceBuffer(type:String):SourceBuffer { return null;}
+	/**
+	*  @param buffer
+	*/
 	public function removeSourceBuffer(buffer:SourceBuffer):void {}
 
 	public function get readyState():String { return ''; }
+	/**
+	*  @param error (optional argument, default value is <code>''</code>)
+	*/
 	public function endOfStream(error:String=''):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param event
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(event:DomEvent):Boolean { return false;}
 }
 

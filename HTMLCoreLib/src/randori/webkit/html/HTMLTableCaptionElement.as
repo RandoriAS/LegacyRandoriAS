@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLTableCaptionElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLTableCaptionElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('caption')")]
+	/**
+	*  Creates a new <code>HTMLTableCaptionElement</code> instance.
+	*/
 	public function HTMLTableCaptionElement() {super();}
 
 	public function get align():String { return ''; }

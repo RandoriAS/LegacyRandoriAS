@@ -42,46 +42,211 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGPathElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ *  @see randori.webkit.svg.SVGTests
+ *  @see randori.webkit.svg.SVGLangSpace
+ *  @see randori.webkit.svg.SVGExternalResourcesRequired
+ *  @see randori.webkit.svg.SVGTransformable
+ */
 public class SVGPathElement extends SVGStyledElement implements SVGTests, SVGLangSpace, SVGExternalResourcesRequired, SVGTransformable
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get pathLength():SVGAnimatedNumber { return null; }
+	/**
+	*  @return A <code>Number</code> instance.
+	*/
 	public function getTotalLength():Number { return 0;}
+	/**
+	*  @param distance (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPoint</code> instance.
+	*/
 	public function getPointAtLength(distance:Number=0):SVGPoint { return null;}
+	/**
+	*  @param distance (optional argument, default value is <code>0</code>)
+	*  @return A <code>uint</code> instance.
+	*/
 	public function getPathSegAtLength(distance:Number=0):uint { return 0;}
+	/**
+	*  @return A <code>SVGPathSegClosePath</code> instance.
+	*/
 	public function createSVGPathSegClosePath():SVGPathSegClosePath { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegMovetoAbs</code> instance.
+	*/
 	public function createSVGPathSegMovetoAbs(x:Number=0, y:Number=0):SVGPathSegMovetoAbs { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegMovetoRel</code> instance.
+	*/
 	public function createSVGPathSegMovetoRel(x:Number=0, y:Number=0):SVGPathSegMovetoRel { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegLinetoAbs</code> instance.
+	*/
 	public function createSVGPathSegLinetoAbs(x:Number=0, y:Number=0):SVGPathSegLinetoAbs { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegLinetoRel</code> instance.
+	*/
 	public function createSVGPathSegLinetoRel(x:Number=0, y:Number=0):SVGPathSegLinetoRel { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x1 (optional argument, default value is <code>0</code>)
+	*  @param y1 (optional argument, default value is <code>0</code>)
+	*  @param x2 (optional argument, default value is <code>0</code>)
+	*  @param y2 (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegCurvetoCubicAbs</code> instance.
+	*/
 	public function createSVGPathSegCurvetoCubicAbs(x:Number=0, y:Number=0, x1:Number=0, y1:Number=0, x2:Number=0, y2:Number=0):SVGPathSegCurvetoCubicAbs { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x1 (optional argument, default value is <code>0</code>)
+	*  @param y1 (optional argument, default value is <code>0</code>)
+	*  @param x2 (optional argument, default value is <code>0</code>)
+	*  @param y2 (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegCurvetoCubicRel</code> instance.
+	*/
 	public function createSVGPathSegCurvetoCubicRel(x:Number=0, y:Number=0, x1:Number=0, y1:Number=0, x2:Number=0, y2:Number=0):SVGPathSegCurvetoCubicRel { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x1 (optional argument, default value is <code>0</code>)
+	*  @param y1 (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegCurvetoQuadraticAbs</code> instance.
+	*/
 	public function createSVGPathSegCurvetoQuadraticAbs(x:Number=0, y:Number=0, x1:Number=0, y1:Number=0):SVGPathSegCurvetoQuadraticAbs { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x1 (optional argument, default value is <code>0</code>)
+	*  @param y1 (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegCurvetoQuadraticRel</code> instance.
+	*/
 	public function createSVGPathSegCurvetoQuadraticRel(x:Number=0, y:Number=0, x1:Number=0, y1:Number=0):SVGPathSegCurvetoQuadraticRel { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param r1 (optional argument, default value is <code>0</code>)
+	*  @param r2 (optional argument, default value is <code>0</code>)
+	*  @param angle (optional argument, default value is <code>0</code>)
+	*  @param largeArcFlag (optional argument, default value is <code>false</code>)
+	*  @param sweepFlag (optional argument, default value is <code>false</code>)
+	*  @return A <code>SVGPathSegArcAbs</code> instance.
+	*/
 	public function createSVGPathSegArcAbs(x:Number=0, y:Number=0, r1:Number=0, r2:Number=0, angle:Number=0, largeArcFlag:Boolean=false, sweepFlag:Boolean=false):SVGPathSegArcAbs { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param r1 (optional argument, default value is <code>0</code>)
+	*  @param r2 (optional argument, default value is <code>0</code>)
+	*  @param angle (optional argument, default value is <code>0</code>)
+	*  @param largeArcFlag (optional argument, default value is <code>false</code>)
+	*  @param sweepFlag (optional argument, default value is <code>false</code>)
+	*  @return A <code>SVGPathSegArcRel</code> instance.
+	*/
 	public function createSVGPathSegArcRel(x:Number=0, y:Number=0, r1:Number=0, r2:Number=0, angle:Number=0, largeArcFlag:Boolean=false, sweepFlag:Boolean=false):SVGPathSegArcRel { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegLinetoHorizontalAbs</code> instance.
+	*/
 	public function createSVGPathSegLinetoHorizontalAbs(x:Number=0):SVGPathSegLinetoHorizontalAbs { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegLinetoHorizontalRel</code> instance.
+	*/
 	public function createSVGPathSegLinetoHorizontalRel(x:Number=0):SVGPathSegLinetoHorizontalRel { return null;}
+	/**
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegLinetoVerticalAbs</code> instance.
+	*/
 	public function createSVGPathSegLinetoVerticalAbs(y:Number=0):SVGPathSegLinetoVerticalAbs { return null;}
+	/**
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegLinetoVerticalRel</code> instance.
+	*/
 	public function createSVGPathSegLinetoVerticalRel(y:Number=0):SVGPathSegLinetoVerticalRel { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x2 (optional argument, default value is <code>0</code>)
+	*  @param y2 (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegCurvetoCubicSmoothAbs</code> instance.
+	*/
 	public function createSVGPathSegCurvetoCubicSmoothAbs(x:Number=0, y:Number=0, x2:Number=0, y2:Number=0):SVGPathSegCurvetoCubicSmoothAbs { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @param x2 (optional argument, default value is <code>0</code>)
+	*  @param y2 (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegCurvetoCubicSmoothRel</code> instance.
+	*/
 	public function createSVGPathSegCurvetoCubicSmoothRel(x:Number=0, y:Number=0, x2:Number=0, y2:Number=0):SVGPathSegCurvetoCubicSmoothRel { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegCurvetoQuadraticSmoothAbs</code> instance.
+	*/
 	public function createSVGPathSegCurvetoQuadraticSmoothAbs(x:Number=0, y:Number=0):SVGPathSegCurvetoQuadraticSmoothAbs { return null;}
+	/**
+	*  @param x (optional argument, default value is <code>0</code>)
+	*  @param y (optional argument, default value is <code>0</code>)
+	*  @return A <code>SVGPathSegCurvetoQuadraticSmoothRel</code> instance.
+	*/
 	public function createSVGPathSegCurvetoQuadraticSmoothRel(x:Number=0, y:Number=0):SVGPathSegCurvetoQuadraticSmoothRel { return null;}
 
+	/**
+	*  @see randori.webkit.svg.SVGPathSegList
+	*/
 	public function get pathSegList():SVGPathSegList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGPathSegList
+	*/
 	public function get normalizedPathSegList():SVGPathSegList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGPathSegList
+	*/
 	public function get animatedPathSegList():SVGPathSegList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGPathSegList
+	*/
 	public function get animatedNormalizedPathSegList():SVGPathSegList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get requiredFeatures():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get requiredExtensions():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get systemLanguage():SVGStringList { return null; }
+	/**
+	*  @param extension (optional argument, default value is <code>''</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function hasExtension(extension:String=''):Boolean { return false;}
 
 	public function get xmllang():String { return ''; }
@@ -90,16 +255,41 @@ public class SVGPathElement extends SVGStyledElement implements SVGTests, SVGLan
 	public function get xmlspace():String { return ''; }
 	public function set xmlspace(value:String):void { }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedTransformList
+	*/
 	public function get transform():SVGAnimatedTransformList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGElement
+	*/
 	public function get nearestViewportElement():SVGElement { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGElement
+	*/
 	public function get farthestViewportElement():SVGElement { return null; }
+	/**
+	*  @return A <code>SVGRect</code> instance.
+	*/
 	public function getBBox():SVGRect { return null;}
+	/**
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function getCTM():SVGMatrix { return null;}
+	/**
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function getScreenCTM():SVGMatrix { return null;}
+	/**
+	*  @param element (optional argument, default value is <code>null</code>)
+	*  @return A <code>SVGMatrix</code> instance.
+	*/
 	public function getTransformToElement(element:SVGElement=null):SVGMatrix { return null;}
 }
 

@@ -42,9 +42,19 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGAltGlyphItemElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ */
 public class SVGAltGlyphItemElement extends SVGElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('altglyphitem')")]
+	/**
+	*  Creates a new <code>SVGAltGlyphItemElement</code> instance.
+	*/
 	public function SVGAltGlyphItemElement() {super();}
 }
 

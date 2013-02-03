@@ -42,6 +42,12 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="AudioParam")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class AudioParam
 {
 
@@ -57,12 +63,42 @@ public class AudioParam
 	public function get name():String { return ''; }
 
 	public function get units():uint { return 0; }
+	/**
+	*  @param value
+	*  @param time
+	*/
 	public function setValueAtTime(value:Number, time:Number):void {}
+	/**
+	*  @param value
+	*  @param time
+	*/
 	public function linearRampToValueAtTime(value:Number, time:Number):void {}
+	/**
+	*  @param value
+	*  @param time
+	*/
 	public function exponentialRampToValueAtTime(value:Number, time:Number):void {}
+	/**
+	*  @param target
+	*  @param time
+	*  @param timeConstant
+	*/
 	public function setTargetAtTime(target:Number, time:Number, timeConstant:Number):void {}
-	public function setValueCurveAtTime(values:Vector.<Number>, time:Number, duration:Number):void {}
+	/**
+	*  @param values
+	*  @param time
+	*  @param duration
+	*/
+	public function setValueCurveAtTime(values:Object, time:Number, duration:Number):void {}
+	/**
+	*  @param startTime
+	*/
 	public function cancelScheduledValues(startTime:Number):void {}
+	/**
+	*  @param targetValue
+	*  @param time
+	*  @param timeConstant
+	*/
 	public function setTargetValueAtTime(targetValue:Number, time:Number, timeConstant:Number):void {}
 }
 

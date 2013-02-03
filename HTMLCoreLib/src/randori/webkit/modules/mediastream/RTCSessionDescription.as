@@ -42,8 +42,18 @@ package randori.webkit.modules.mediastream
 
 
 [JavaScript(export=false, name="RTCSessionDescription")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class RTCSessionDescription
 {
+	/**
+	*  Creates a new <code>RTCSessionDescription</code> instance.
+	*  @param dictionary
+	*/
 	public function RTCSessionDescription(dictionary:Object) {super();}
 
 	public function get type():String { return ''; }

@@ -42,8 +42,21 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="OfflineAudioContext")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioContext
+ */
 public class OfflineAudioContext extends AudioContext
 {
+	/**
+	*  Creates a new <code>OfflineAudioContext</code> instance.
+	*  @param numberOfChannels
+	*  @param numberOfFrames
+	*  @param sampleRate
+	*/
 	public function OfflineAudioContext(numberOfChannels:uint, numberOfFrames:uint, sampleRate:Number) {super();}
 }
 

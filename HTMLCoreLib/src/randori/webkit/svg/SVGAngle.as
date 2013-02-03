@@ -42,6 +42,12 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGAngle")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGAngle
 {
 	public static const SVG_ANGLETYPE_UNKNOWN:uint = 0;
@@ -60,7 +66,14 @@ public class SVGAngle
 
 	public function get valueAsString():String { return ''; }
 	public function set valueAsString(value:String):void { }
+	/**
+	*  @param unitType
+	*  @param valueInSpecifiedUnits
+	*/
 	public function newValueSpecifiedUnits(unitType:uint, valueInSpecifiedUnits:Number):void {}
+	/**
+	*  @param unitType
+	*/
 	public function convertToSpecifiedUnits(unitType:uint):void {}
 }
 

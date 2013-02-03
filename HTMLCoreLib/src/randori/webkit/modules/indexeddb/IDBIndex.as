@@ -42,22 +42,56 @@ package randori.webkit.modules.indexeddb
 
 
 [JavaScript(export=false, name="IDBIndex")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class IDBIndex
 {
 
 	public function get name():String { return ''; }
 
+	/**
+	*  @see randori.webkit.modules.indexeddb.IDBObjectStore
+	*/
 	public function get objectStore():IDBObjectStore { return null; }
 
+	/**
+	*  @see randori.webkit.modules.indexeddb.IDBAny
+	*/
 	public function get keyPath():IDBAny { return null; }
 
 	public function get unique():Boolean { return false; }
 
 	public function get multiEntry():Boolean { return false; }
+	/**
+	*  @param range (optional argument, default value is <code>null</code>)
+	*  @param direction (optional argument, default value is <code>''</code>)
+	*  @return A <code>IDBRequest</code> instance.
+	*/
 	public function openCursor(range:IDBKeyRange=null, direction:String=''):IDBRequest { return null;}
+	/**
+	*  @param range (optional argument, default value is <code>null</code>)
+	*  @param direction (optional argument, default value is <code>''</code>)
+	*  @return A <code>IDBRequest</code> instance.
+	*/
 	public function openKeyCursor(range:IDBKeyRange=null, direction:String=''):IDBRequest { return null;}
+	/**
+	*  @param key
+	*  @return A <code>IDBRequest</code> instance.
+	*/
 	public function get(key:IDBKeyRange):IDBRequest { return null;}
+	/**
+	*  @param key
+	*  @return A <code>IDBRequest</code> instance.
+	*/
 	public function getKey(key:IDBKeyRange):IDBRequest { return null;}
+	/**
+	*  @param range (optional argument, default value is <code>null</code>)
+	*  @return A <code>IDBRequest</code> instance.
+	*/
 	public function count(range:IDBKeyRange=null):IDBRequest { return null;}
 }
 

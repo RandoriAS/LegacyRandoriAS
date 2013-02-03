@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLBaseFontElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLBaseFontElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('basefont')")]
+	/**
+	*  Creates a new <code>HTMLBaseFontElement</code> instance.
+	*/
 	public function HTMLBaseFontElement() {super();}
 
 	public function get color():String { return ''; }

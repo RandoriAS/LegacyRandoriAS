@@ -42,11 +42,26 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="Text")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.CharacterData
+ */
 public class Text extends CharacterData
 {
+	/**
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @return A <code>Text</code> instance.
+	*/
 	public function splitText(offset:uint=0):Text { return null;}
 
 	public function get wholeText():String { return ''; }
+	/**
+	*  @param content (optional argument, default value is <code>''</code>)
+	*  @return A <code>Text</code> instance.
+	*/
 	public function replaceWholeText(content:String=''):Text { return null;}
 }
 

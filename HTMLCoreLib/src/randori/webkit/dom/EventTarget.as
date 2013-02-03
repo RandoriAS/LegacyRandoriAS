@@ -42,10 +42,30 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="EventTarget")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public interface EventTarget
 {
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	 function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void;
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	 function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void;
+	/**
+	*  @param event
+	*  @return A <code>Boolean</code> instance.
+	*/
 	 function dispatchEvent(event:DomEvent):Boolean;
 }
 

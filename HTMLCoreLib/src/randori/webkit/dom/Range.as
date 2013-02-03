@@ -42,53 +42,151 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="Range")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Range
 {
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get startContainer():Node { return null; }
 
 	public function get startOffset():uint { return 0; }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get endContainer():Node { return null; }
 
 	public function get endOffset():uint { return 0; }
 
 	public function get collapsed():Boolean { return false; }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get commonAncestorContainer():Node { return null; }
+	/**
+	*  @param refNode (optional argument, default value is <code>null</code>)
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*/
 	public function setStart(refNode:Node=null, offset:uint=0):void {}
+	/**
+	*  @param refNode (optional argument, default value is <code>null</code>)
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*/
 	public function setEnd(refNode:Node=null, offset:uint=0):void {}
+	/**
+	*  @param refNode (optional argument, default value is <code>null</code>)
+	*/
 	public function setStartBefore(refNode:Node=null):void {}
+	/**
+	*  @param refNode (optional argument, default value is <code>null</code>)
+	*/
 	public function setStartAfter(refNode:Node=null):void {}
+	/**
+	*  @param refNode (optional argument, default value is <code>null</code>)
+	*/
 	public function setEndBefore(refNode:Node=null):void {}
+	/**
+	*  @param refNode (optional argument, default value is <code>null</code>)
+	*/
 	public function setEndAfter(refNode:Node=null):void {}
+	/**
+	*  @param toStart (optional argument, default value is <code>false</code>)
+	*/
 	public function collapse(toStart:Boolean=false):void {}
+	/**
+	*  @param refNode (optional argument, default value is <code>null</code>)
+	*/
 	public function selectNode(refNode:Node=null):void {}
+	/**
+	*  @param refNode (optional argument, default value is <code>null</code>)
+	*/
 	public function selectNodeContents(refNode:Node=null):void {}
 	public static const START_TO_START:uint = 0;
 	public static const START_TO_END:uint = 1;
 	public static const END_TO_END:uint = 2;
 	public static const END_TO_START:uint = 3;
+	/**
+	*  @param how (optional argument, default value is <code>null</code>)
+	*  @param sourceRange (optional argument, default value is <code>null</code>)
+	*  @return A <code>int</code> instance.
+	*/
 	public function compareBoundaryPoints(how:Object=null, sourceRange:Range=null):int { return 0;}
 	public function deleteContents():void {}
+	/**
+	*  @return A <code>DocumentFragment</code> instance.
+	*/
 	public function extractContents():DocumentFragment { return null;}
+	/**
+	*  @return A <code>DocumentFragment</code> instance.
+	*/
 	public function cloneContents():DocumentFragment { return null;}
+	/**
+	*  @param newNode (optional argument, default value is <code>null</code>)
+	*/
 	public function insertNode(newNode:Node=null):void {}
+	/**
+	*  @param newParent (optional argument, default value is <code>null</code>)
+	*/
 	public function surroundContents(newParent:Node=null):void {}
+	/**
+	*  @return A <code>Range</code> instance.
+	*/
 	public function cloneRange():Range { return null;}
+	/**
+	*  @return A <code>String</code> instance.
+	*/
 	public function toString():String { return '';}
 	public function detach():void {}
+	/**
+	*  @return A <code>ClientRectList</code> instance.
+	*/
 	public function getClientRects():Object { return null;}
+	/**
+	*  @return A <code>ClientRect</code> instance.
+	*/
 	public function getBoundingClientRect():ClientRect { return null;}
+	/**
+	*  @param html (optional argument, default value is <code>''</code>)
+	*  @return A <code>DocumentFragment</code> instance.
+	*/
 	public function createContextualFragment(html:String=''):DocumentFragment { return null;}
+	/**
+	*  @param refNode (optional argument, default value is <code>null</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function intersectsNode(refNode:Node=null):Boolean { return false;}
+	/**
+	*  @param refNode (optional argument, default value is <code>null</code>)
+	*  @return A <code>int</code> instance.
+	*/
 	public function compareNode(refNode:Node=null):int { return 0;}
 	public static const NODE_BEFORE:uint = 0;
 	public static const NODE_AFTER:uint = 1;
 	public static const NODE_BEFORE_AND_AFTER:uint = 2;
 	public static const NODE_INSIDE:uint = 3;
+	/**
+	*  @param refNode (optional argument, default value is <code>null</code>)
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @return A <code>int</code> instance.
+	*/
 	public function comparePoint(refNode:Node=null, offset:uint=0):int { return 0;}
+	/**
+	*  @param refNode (optional argument, default value is <code>null</code>)
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isPointInRange(refNode:Node=null, offset:uint=0):Boolean { return false;}
+	/**
+	*  @param unit (optional argument, default value is <code>''</code>)
+	*/
 	public function expand(unit:String=''):void {}
 
 	public function get text():String { return ''; }

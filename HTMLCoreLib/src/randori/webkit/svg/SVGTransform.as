@@ -42,6 +42,12 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGTransform")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGTransform
 {
 	public static const SVG_TRANSFORM_UNKNOWN:uint = 0;
@@ -54,14 +60,39 @@ public class SVGTransform
 
 	public function get type():uint { return 0; }
 
+	/**
+	*  @see randori.webkit.svg.SVGMatrix
+	*/
 	public function get matrix():SVGMatrix { return null; }
 
 	public function get angle():Number { return 0; }
+	/**
+	*  @param matrix
+	*/
 	public function setMatrix(matrix:SVGMatrix):void {}
+	/**
+	*  @param tx
+	*  @param ty
+	*/
 	public function setTranslate(tx:Number, ty:Number):void {}
+	/**
+	*  @param sx
+	*  @param sy
+	*/
 	public function setScale(sx:Number, sy:Number):void {}
+	/**
+	*  @param angle
+	*  @param cx
+	*  @param cy
+	*/
 	public function setRotate(angle:Number, cx:Number, cy:Number):void {}
+	/**
+	*  @param angle
+	*/
 	public function setSkewX(angle:Number):void {}
+	/**
+	*  @param angle
+	*/
 	public function setSkewY(angle:Number):void {}
 }
 

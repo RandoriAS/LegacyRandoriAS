@@ -42,6 +42,12 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="Touch")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Touch
 {
 
@@ -57,6 +63,9 @@ public class Touch
 
 	public function get pageY():uint { return 0; }
 
+	/**
+	*  @see randori.webkit.dom.EventTarget
+	*/
 	public function get target():EventTarget { return null; }
 
 	public function get identifier():uint { return 0; }

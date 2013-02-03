@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLKeygenElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLKeygenElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('keygen')")]
+	/**
+	*  Creates a new <code>HTMLKeygenElement</code> instance.
+	*/
 	public function HTMLKeygenElement() {super();}
 
 	public function get autofocus():Boolean { return false; }
@@ -56,6 +66,9 @@ public class HTMLKeygenElement extends HTMLElement
 	public function get disabled():Boolean { return false; }
 	public function set disabled(value:Boolean):void { }
 
+	/**
+	*  @see randori.webkit.html.HTMLFormElement
+	*/
 	public function get form():HTMLFormElement { return null; }
 
 	public function get keytype():String { return ''; }
@@ -68,12 +81,24 @@ public class HTMLKeygenElement extends HTMLElement
 
 	public function get willValidate():Boolean { return false; }
 
+	/**
+	*  @see randori.webkit.html.ValidityState
+	*/
 	public function get validity():ValidityState { return null; }
 
 	public function get validationMessage():String { return ''; }
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function checkValidity():Boolean { return false;}
+	/**
+	*  @param error
+	*/
 	public function setCustomValidity(error:String):void {}
 
+	/**
+	*  @see randori.webkit.dom.NodeList
+	*/
 	public function get labels():Object { return null; }
 }
 

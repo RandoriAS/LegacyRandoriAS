@@ -42,16 +42,34 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGScriptElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ *  @see randori.webkit.svg.SVGURIReference
+ *  @see randori.webkit.svg.SVGExternalResourcesRequired
+ */
 public class SVGScriptElement extends SVGElement implements SVGURIReference, SVGExternalResourcesRequired
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('script')")]
+	/**
+	*  Creates a new <code>SVGScriptElement</code> instance.
+	*/
 	public function SVGScriptElement() {super();}
 
 	public function get type():String { return ''; }
 	public function set type(value:String):void { }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get href():SVGAnimatedString { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 }
 

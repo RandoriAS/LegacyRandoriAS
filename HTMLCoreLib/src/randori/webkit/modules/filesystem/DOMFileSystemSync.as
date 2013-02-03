@@ -42,11 +42,20 @@ package randori.webkit.modules.filesystem
 
 
 [JavaScript(export=false, name="DOMFileSystemSync")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DOMFileSystemSync
 {
 
 	public function get name():String { return ''; }
 
+	/**
+	*  @see randori.webkit.modules.filesystem.DirectoryEntrySync
+	*/
 	public function get root():DirectoryEntrySync { return null; }
 }
 

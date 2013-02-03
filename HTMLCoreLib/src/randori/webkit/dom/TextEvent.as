@@ -43,10 +43,24 @@ package randori.webkit.dom
 import randori.webkit.page.Window;
 
 [JavaScript(export=false, name="TextEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.UIEvent
+ */
 public class TextEvent extends UIEvent
 {
 
 	public function get data():String { return ''; }
+	/**
+	*  @param typeArg (optional argument, default value is <code>''</code>)
+	*  @param canBubbleArg (optional argument, default value is <code>false</code>)
+	*  @param cancelableArg (optional argument, default value is <code>false</code>)
+	*  @param viewArg (optional argument, default value is <code>null</code>)
+	*  @param dataArg (optional argument, default value is <code>''</code>)
+	*/
 	public function initTextEvent(typeArg:String='', canBubbleArg:Boolean=false, cancelableArg:Boolean=false, viewArg:Window=null, dataArg:String=''):void {}
 }
 

@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLInputElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLInputElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('input')")]
+	/**
+	*  Creates a new <code>HTMLInputElement</code> instance.
+	*/
 	public function HTMLInputElement() {super();}
 
 	public function get accept():String { return ''; }
@@ -71,8 +81,14 @@ public class HTMLInputElement extends HTMLElement
 	public function get disabled():Boolean { return false; }
 	public function set disabled(value:Boolean):void { }
 
+	/**
+	*  @see randori.webkit.html.HTMLFormElement
+	*/
 	public function get form():HTMLFormElement { return null; }
 
+	/**
+	*  @see randori.webkit.fileapi.FileList
+	*/
 	public function get files():Object { return null; }
 	public function set files(value:Object):void { }
 
@@ -97,6 +113,9 @@ public class HTMLInputElement extends HTMLElement
 	public function get indeterminate():Boolean { return false; }
 	public function set indeterminate(value:Boolean):void { }
 
+	/**
+	*  @see randori.webkit.html.HTMLElement
+	*/
 	public function get list():HTMLElement { return null; }
 
 	public function get max():String { return ''; }
@@ -150,7 +169,13 @@ public class HTMLInputElement extends HTMLElement
 
 	public function get valueAsNumber():Number { return 0; }
 	public function set valueAsNumber(value:Number):void { }
+	/**
+	*  @param n (optional argument, default value is <code>0</code>)
+	*/
 	public function stepUp(n:uint=0):void {}
+	/**
+	*  @param n (optional argument, default value is <code>0</code>)
+	*/
 	public function stepDown(n:uint=0):void {}
 
 	public function get width():uint { return 0; }
@@ -158,12 +183,24 @@ public class HTMLInputElement extends HTMLElement
 
 	public function get willValidate():Boolean { return false; }
 
+	/**
+	*  @see randori.webkit.html.ValidityState
+	*/
 	public function get validity():ValidityState { return null; }
 
 	public function get validationMessage():String { return ''; }
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function checkValidity():Boolean { return false;}
+	/**
+	*  @param error
+	*/
 	public function setCustomValidity(error:String):void {}
 
+	/**
+	*  @see randori.webkit.dom.NodeList
+	*/
 	public function get labels():Object { return null; }
 	public function select():void {}
 
@@ -175,7 +212,17 @@ public class HTMLInputElement extends HTMLElement
 
 	public function get selectionDirection():String { return ''; }
 	public function set selectionDirection(value:String):void { }
+	/**
+	*  @param replacement
+	*  @param start
+	*  @param end
+	*  @param selectionMode (optional argument, default value is <code>''</code>)
+	*/
 	public function setRangeText(replacement:String, start:uint, end:uint, selectionMode:String=''):void {}
+	/**
+	*  @param start
+	*  @param end
+	*/
 	public function setSelectionRange(start:uint, end:uint):void {}
 
 	public function get align():String { return ''; }
@@ -186,10 +233,16 @@ public class HTMLInputElement extends HTMLElement
 
 	public function get incremental():Boolean { return false; }
 	public function set incremental(value:Boolean):void { }
+	/**
+	*  @param value
+	*/
 	public function setValueForUser(value:String):void {}
 
 	public function get altDisplayString():String { return ''; }
 
+	/**
+	*  @see randori.webkit.html.URL
+	*/
 	public function get absoluteImageURL():URL { return null; }
 
 	public function get capture():String { return ''; }

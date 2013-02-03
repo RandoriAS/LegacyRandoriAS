@@ -43,9 +43,19 @@ package randori.webkit.modules.webaudio
 import randori.webkit.html.HTMLMediaElement;
 
 [JavaScript(export=false, name="MediaElementAudioSourceNode")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioSourceNode
+ */
 public class MediaElementAudioSourceNode extends AudioSourceNode
 {
 
+	/**
+	*  @see randori.webkit.html.HTMLMediaElement
+	*/
 	public function get mediaElement():HTMLMediaElement { return null; }
 }
 

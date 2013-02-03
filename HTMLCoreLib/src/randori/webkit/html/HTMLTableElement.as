@@ -42,22 +42,47 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLTableElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLTableElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('table')")]
+	/**
+	*  Creates a new <code>HTMLTableElement</code> instance.
+	*/
 	public function HTMLTableElement() {super();}
 
+	/**
+	*  @see randori.webkit.html.HTMLTableCaptionElement
+	*/
 	public function get caption():HTMLTableCaptionElement { return null; }
 	public function set caption(value:HTMLTableCaptionElement):void { }
 
+	/**
+	*  @see randori.webkit.html.HTMLTableSectionElement
+	*/
 	public function get tHead():HTMLTableSectionElement { return null; }
 	public function set tHead(value:HTMLTableSectionElement):void { }
 
+	/**
+	*  @see randori.webkit.html.HTMLTableSectionElement
+	*/
 	public function get tFoot():HTMLTableSectionElement { return null; }
 	public function set tFoot(value:HTMLTableSectionElement):void { }
 
+	/**
+	*  @see randori.webkit.html.HTMLCollection
+	*/
 	public function get rows():Object { return null; }
 
+	/**
+	*  @see randori.webkit.html.HTMLCollection
+	*/
 	public function get tBodies():Object { return null; }
 
 	public function get align():String { return ''; }
@@ -86,14 +111,33 @@ public class HTMLTableElement extends HTMLElement
 
 	public function get width():String { return ''; }
 	public function set width(value:String):void { }
+	/**
+	*  @return A <code>HTMLElement</code> instance.
+	*/
 	public function createTHead():HTMLElement { return null;}
 	public function deleteTHead():void {}
+	/**
+	*  @return A <code>HTMLElement</code> instance.
+	*/
 	public function createTFoot():HTMLElement { return null;}
 	public function deleteTFoot():void {}
+	/**
+	*  @return A <code>HTMLElement</code> instance.
+	*/
 	public function createTBody():HTMLElement { return null;}
+	/**
+	*  @return A <code>HTMLElement</code> instance.
+	*/
 	public function createCaption():HTMLElement { return null;}
 	public function deleteCaption():void {}
+	/**
+	*  @param index (optional argument, default value is <code>0</code>)
+	*  @return A <code>HTMLElement</code> instance.
+	*/
 	public function insertRow(index:uint=0):HTMLElement { return null;}
+	/**
+	*  @param index (optional argument, default value is <code>0</code>)
+	*/
 	public function deleteRow(index:uint=0):void {}
 }
 

@@ -41,10 +41,19 @@ package randori.webkit.modules.websockets
 {
 
 
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class WorkerContext
 {
 
 	[JavascriptProperty(name="WebSocket")]
+	/**
+	*  @see randori.webkit.modules.websockets.WebSocket
+	*/
 	public function get WebSocket_():WebSocket { return null; }
 	public function set WebSocket_(value:WebSocket):void { }
 }

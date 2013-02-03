@@ -42,6 +42,12 @@ package randori.webkit.modules.mediastream
 
 
 [JavaScript(export=false, name="NavigatorUserMediaError")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class NavigatorUserMediaError
 {
 	public static const PERMISSION_DENIED:uint = 1;

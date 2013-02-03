@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLQuoteElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLQuoteElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('quote')")]
+	/**
+	*  Creates a new <code>HTMLQuoteElement</code> instance.
+	*/
 	public function HTMLQuoteElement() {super();}
 
 	public function get cite():String { return ''; }

@@ -42,13 +42,31 @@ package randori.webkit.css
 
 
 [JavaScript(export=false, name="CSSSupportsRule")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.css.CSSRule
+ */
 public class CSSSupportsRule extends CSSRule
 {
 
+	/**
+	*  @see randori.webkit.css.CSSRuleList
+	*/
 	public function get cssRules():Object { return null; }
 
 	public function get conditionText():String { return ''; }
+	/**
+	*  @param rule (optional argument, default value is <code>''</code>)
+	*  @param index (optional argument, default value is <code>0</code>)
+	*  @return A <code>uint</code> instance.
+	*/
 	public function insertRule(rule:String='', index:uint=0):uint { return 0;}
+	/**
+	*  @param index (optional argument, default value is <code>0</code>)
+	*/
 	public function deleteRule(index:uint=0):void {}
 }
 

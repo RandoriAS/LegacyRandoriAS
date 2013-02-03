@@ -42,25 +42,61 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="TreeWalker")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class TreeWalker
 {
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get root():Node { return null; }
 
 	public function get whatToShow():uint { return 0; }
 
+	/**
+	*  @see randori.webkit.dom.NodeFilter
+	*/
 	public function get filter():NodeFilter { return null; }
 
 	public function get expandEntityReferences():Boolean { return false; }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get currentNode():Node { return null; }
 	public function set currentNode(value:Node):void { }
+	/**
+	*  @return A <code>Node</code> instance.
+	*/
 	public function parentNode():Node { return null;}
+	/**
+	*  @return A <code>Node</code> instance.
+	*/
 	public function firstChild():Node { return null;}
+	/**
+	*  @return A <code>Node</code> instance.
+	*/
 	public function lastChild():Node { return null;}
+	/**
+	*  @return A <code>Node</code> instance.
+	*/
 	public function previousSibling():Node { return null;}
+	/**
+	*  @return A <code>Node</code> instance.
+	*/
 	public function nextSibling():Node { return null;}
+	/**
+	*  @return A <code>Node</code> instance.
+	*/
 	public function previousNode():Node { return null;}
+	/**
+	*  @return A <code>Node</code> instance.
+	*/
 	public function nextNode():Node { return null;}
 }
 

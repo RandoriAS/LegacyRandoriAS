@@ -42,26 +42,100 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="Element")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.Node
+ */
 public class Element extends Node
 {
 
 	public function get tagName():String { return ''; }
+	/**
+	*  @param name (optional argument, default value is <code>''</code>)
+	*  @return A <code>String</code> instance.
+	*/
 	public function getAttribute(name:String=''):String { return '';}
+	/**
+	*  @param name (optional argument, default value is <code>''</code>)
+	*  @param value (optional argument, default value is <code>''</code>)
+	*/
 	public function setAttribute(name:String='', value:String=''):void {}
+	/**
+	*  @param name (optional argument, default value is <code>''</code>)
+	*/
 	public function removeAttribute(name:String=''):void {}
+	/**
+	*  @param name (optional argument, default value is <code>''</code>)
+	*  @return A <code>Attr</code> instance.
+	*/
 	public function getAttributeNode(name:String=''):Attr { return null;}
+	/**
+	*  @param newAttr (optional argument, default value is <code>null</code>)
+	*  @return A <code>Attr</code> instance.
+	*/
 	public function setAttributeNode(newAttr:Attr=null):Attr { return null;}
+	/**
+	*  @param oldAttr (optional argument, default value is <code>null</code>)
+	*  @return A <code>Attr</code> instance.
+	*/
 	public function removeAttributeNode(oldAttr:Attr=null):Attr { return null;}
+	/**
+	*  @param name (optional argument, default value is <code>''</code>)
+	*  @return A <code>NodeList</code> instance.
+	*/
 	public function getElementsByTagName(name:String=''):Object { return null;}
+	/**
+	*  @param namespaceURI (optional argument, default value is <code>''</code>)
+	*  @param localName (optional argument, default value is <code>''</code>)
+	*  @return A <code>String</code> instance.
+	*/
 	public function getAttributeNS(namespaceURI:String='', localName:String=''):String { return '';}
+	/**
+	*  @param namespaceURI (optional argument, default value is <code>''</code>)
+	*  @param qualifiedName (optional argument, default value is <code>''</code>)
+	*  @param value (optional argument, default value is <code>''</code>)
+	*/
 	public function setAttributeNS(namespaceURI:String='', qualifiedName:String='', value:String=''):void {}
+	/**
+	*  @param namespaceURI
+	*  @param localName
+	*/
 	public function removeAttributeNS(namespaceURI:String, localName:String):void {}
+	/**
+	*  @param namespaceURI (optional argument, default value is <code>''</code>)
+	*  @param localName (optional argument, default value is <code>''</code>)
+	*  @return A <code>NodeList</code> instance.
+	*/
 	public function getElementsByTagNameNS(namespaceURI:String='', localName:String=''):Object { return null;}
+	/**
+	*  @param namespaceURI (optional argument, default value is <code>''</code>)
+	*  @param localName (optional argument, default value is <code>''</code>)
+	*  @return A <code>Attr</code> instance.
+	*/
 	public function getAttributeNodeNS(namespaceURI:String='', localName:String=''):Attr { return null;}
+	/**
+	*  @param newAttr (optional argument, default value is <code>null</code>)
+	*  @return A <code>Attr</code> instance.
+	*/
 	public function setAttributeNodeNS(newAttr:Attr=null):Attr { return null;}
+	/**
+	*  @param name
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function hasAttribute(name:String):Boolean { return false;}
+	/**
+	*  @param namespaceURI (optional argument, default value is <code>''</code>)
+	*  @param localName (optional argument, default value is <code>''</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function hasAttributeNS(namespaceURI:String='', localName:String=''):Boolean { return false;}
 
+	/**
+	*  @see randori.webkit.css.CSSStyleDeclaration
+	*/
 	public function get style():Object { return null; }
 
 	public function get offsetLeft():uint { return 0; }
@@ -72,6 +146,9 @@ public class Element extends Node
 
 	public function get offsetHeight():uint { return 0; }
 
+	/**
+	*  @see randori.webkit.dom.Element
+	*/
 	public function get offsetParent():Element { return null; }
 
 	public function get clientLeft():uint { return 0; }
@@ -93,32 +170,80 @@ public class Element extends Node
 	public function get scrollHeight():uint { return 0; }
 	public function focus():void {}
 	public function blur():void {}
+	/**
+	*  @param alignWithTop (optional argument, default value is <code>false</code>)
+	*/
 	public function scrollIntoView(alignWithTop:Boolean=false):void {}
+	/**
+	*  @param centerIfNeeded (optional argument, default value is <code>false</code>)
+	*/
 	public function scrollIntoViewIfNeeded(centerIfNeeded:Boolean=false):void {}
+	/**
+	*  @param lines (optional argument, default value is <code>0</code>)
+	*/
 	public function scrollByLines(lines:uint=0):void {}
+	/**
+	*  @param pages (optional argument, default value is <code>0</code>)
+	*/
 	public function scrollByPages(pages:uint=0):void {}
+	/**
+	*  @param name (optional argument, default value is <code>''</code>)
+	*  @return A <code>NodeList</code> instance.
+	*/
 	public function getElementsByClassName(name:String=''):Object { return null;}
 
 	public function get className():String { return ''; }
 	public function set className(value:String):void { }
 
+	/**
+	*  @see randori.webkit.html.DOMTokenList
+	*/
 	public function get classList():Object { return null; }
 
+	/**
+	*  @see randori.webkit.dom.DOMStringMap
+	*/
 	public function get dataset():DOMStringMap { return null; }
+	/**
+	*  @param selectors
+	*  @return A <code>Element</code> instance.
+	*/
 	public function querySelector(selectors:String):Element { return null;}
+	/**
+	*  @param selectors
+	*  @return A <code>NodeList</code> instance.
+	*/
 	public function querySelectorAll(selectors:String):Object { return null;}
 
+	/**
+	*  @see randori.webkit.dom.Element
+	*/
 	public function get firstElementChild():Element { return null; }
 
+	/**
+	*  @see randori.webkit.dom.Element
+	*/
 	public function get lastElementChild():Element { return null; }
 
+	/**
+	*  @see randori.webkit.dom.Element
+	*/
 	public function get previousElementSibling():Element { return null; }
 
+	/**
+	*  @see randori.webkit.dom.Element
+	*/
 	public function get nextElementSibling():Element { return null; }
 
 	public function get childElementCount():uint { return 0; }
 	public function remove():void {}
+	/**
+	*  @return A <code>ClientRectList</code> instance.
+	*/
 	public function getClientRects():Object { return null;}
+	/**
+	*  @return A <code>ClientRect</code> instance.
+	*/
 	public function getBoundingClientRect():ClientRect { return null;}
 
 	public function get innerText():String { return ''; }

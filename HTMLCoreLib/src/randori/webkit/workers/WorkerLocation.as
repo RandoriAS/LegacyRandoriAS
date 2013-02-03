@@ -42,6 +42,12 @@ package randori.webkit.workers
 
 
 [JavaScript(export=false, name="WorkerLocation")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class WorkerLocation
 {
 
@@ -60,6 +66,9 @@ public class WorkerLocation
 	public function get search():String { return ''; }
 
 	public function get hash():String { return ''; }
+	/**
+	*  @return A <code>String</code> instance.
+	*/
 	public function toString():String { return '';}
 }
 

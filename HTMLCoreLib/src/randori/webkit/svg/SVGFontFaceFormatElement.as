@@ -42,9 +42,19 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGFontFaceFormatElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ */
 public class SVGFontFaceFormatElement extends SVGElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('fontfaceformat')")]
+	/**
+	*  Creates a new <code>SVGFontFaceFormatElement</code> instance.
+	*/
 	public function SVGFontFaceFormatElement() {super();}
 }
 

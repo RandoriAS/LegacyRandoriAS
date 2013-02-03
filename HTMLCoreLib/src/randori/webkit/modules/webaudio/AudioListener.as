@@ -42,6 +42,12 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="AudioListener")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class AudioListener
 {
 
@@ -50,8 +56,26 @@ public class AudioListener
 
 	public function get speedOfSound():Number { return 0; }
 	public function set speedOfSound(value:Number):void { }
+	/**
+	*  @param x
+	*  @param y
+	*  @param z
+	*/
 	public function setPosition(x:Number, y:Number, z:Number):void {}
+	/**
+	*  @param x
+	*  @param y
+	*  @param z
+	*  @param xUp
+	*  @param yUp
+	*  @param zUp
+	*/
 	public function setOrientation(x:Number, y:Number, z:Number, xUp:Number, yUp:Number, zUp:Number):void {}
+	/**
+	*  @param x
+	*  @param y
+	*  @param z
+	*/
 	public function setVelocity(x:Number, y:Number, z:Number):void {}
 }
 

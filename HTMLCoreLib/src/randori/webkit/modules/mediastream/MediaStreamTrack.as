@@ -43,6 +43,12 @@ package randori.webkit.modules.mediastream
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="MediaStreamTrack")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class MediaStreamTrack
 {
 
@@ -57,16 +63,39 @@ public class MediaStreamTrack
 
 	public function get readyState():String { return ''; }
 
+	/**
+	*  Function that accepts an event of type <code>MuteEvent</code>.
+	*/
 	public function get onmute():Function { return null; }
 	public function set onmute(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>UnmuteEvent</code>.
+	*/
 	public function get onunmute():Function { return null; }
 	public function set onunmute(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>EndedEvent</code>.
+	*/
 	public function get onended():Function { return null; }
 	public function set onended(value:Function):void { }
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param event
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(event:DomEvent):Boolean { return false;}
 }
 

@@ -42,9 +42,19 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLIntentElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLIntentElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('intent')")]
+	/**
+	*  Creates a new <code>HTMLIntentElement</code> instance.
+	*/
 	public function HTMLIntentElement() {super();}
 
 	public function get action():String { return ''; }

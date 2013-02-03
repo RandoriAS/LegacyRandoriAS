@@ -42,9 +42,18 @@ package randori.webkit.modules.webdatabase
 
 
 [JavaScript(export=false, name="SQLResultSet")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SQLResultSet
 {
 
+	/**
+	*  @see randori.webkit.modules.webdatabase.SQLResultSetRowList
+	*/
 	public function get rows():SQLResultSetRowList { return null; }
 
 	public function get insertId():uint { return 0; }

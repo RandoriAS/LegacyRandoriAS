@@ -42,6 +42,13 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGMissingGlyphElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ */
 public class SVGMissingGlyphElement extends SVGStyledElement
 {
 }

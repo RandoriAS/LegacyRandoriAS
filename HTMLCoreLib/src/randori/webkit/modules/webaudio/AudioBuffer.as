@@ -42,6 +42,12 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="AudioBuffer")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class AudioBuffer
 {
 
@@ -55,7 +61,11 @@ public class AudioBuffer
 	public function set gain(value:Number):void { }
 
 	public function get numberOfChannels():uint { return 0; }
-	public function getChannelData(channelIndex:uint):Vector.<Number> { return null;}
+	/**
+	*  @param channelIndex
+	*  @return A <code>Float32Array</code> instance.
+	*/
+	public function getChannelData(channelIndex:uint):Object { return null;}
 }
 
 }

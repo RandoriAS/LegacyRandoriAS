@@ -44,39 +44,135 @@ import randori.webkit.dom.MouseEvent;
 import randori.webkit.modules.filesystem.DOMFileSystem;
 
 [JavaScript(export=false, name="InspectorFrontendHost")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class InspectorFrontendHost
 {
 	public function loaded():void {}
 	public function closeWindow():void {}
 	public function bringToFront():void {}
+	/**
+	*  @param zoom
+	*/
 	public function setZoomFactor(zoom:Number):void {}
+	/**
+	*  @param newURL
+	*/
 	public function inspectedURLChanged(newURL:String):void {}
+	/**
+	*  @param side
+	*/
 	public function requestSetDockSide(side:String):void {}
+	/**
+	*  @param height
+	*/
 	public function setAttachedWindowHeight(height:uint):void {}
+	/**
+	*  @param x
+	*  @param y
+	*/
 	public function moveWindowBy(x:Number, y:Number):void {}
+	/**
+	*  @param origin
+	*  @param script
+	*/
 	public function setInjectedScriptForOrigin(origin:String, script:String):void {}
+	/**
+	*  @return A <code>String</code> instance.
+	*/
 	public function localizedStringsURL():String { return '';}
+	/**
+	*  @return A <code>String</code> instance.
+	*/
 	public function hiddenPanels():String { return '';}
+	/**
+	*  @param text
+	*/
 	public function copyText(text:String):void {}
+	/**
+	*  @param url
+	*/
 	public function openInNewTab(url:String):void {}
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function canSave():Boolean { return false;}
+	/**
+	*  @param url
+	*  @param content
+	*  @param forceSaveAs
+	*/
 	public function save(url:String, content:String, forceSaveAs:Boolean):void {}
+	/**
+	*  @param url
+	*  @param content
+	*/
 	public function append(url:String, content:String):void {}
+	/**
+	*  @param url
+	*/
 	public function close(url:String):void {}
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function canInspectWorkers():Boolean { return false;}
+	/**
+	*  @return A <code>String</code> instance.
+	*/
 	public function platform():String { return '';}
+	/**
+	*  @return A <code>String</code> instance.
+	*/
 	public function port():String { return '';}
+	/**
+	*  @param event
+	*  @param items
+	*/
 	public function showContextMenu(event:MouseEvent, items:Object):void {}
+	/**
+	*  @param message
+	*/
 	public function sendMessageToBackend(message:String):void {}
+	/**
+	*  @param actionCode
+	*/
 	public function recordActionTaken(actionCode:uint):void {}
+	/**
+	*  @param panelCode
+	*/
 	public function recordPanelShown(panelCode:uint):void {}
+	/**
+	*  @param settingChanged
+	*/
 	public function recordSettingChanged(settingChanged:uint):void {}
+	/**
+	*  @param url
+	*  @return A <code>String</code> instance.
+	*/
 	public function loadResourceSynchronously(url:String):String { return '';}
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function supportsFileSystems():Boolean { return false;}
 	public function requestFileSystems():void {}
 	public function addFileSystem():void {}
+	/**
+	*  @param fileSystemPath
+	*/
 	public function removeFileSystem(fileSystemPath:String):void {}
+	/**
+	*  @param fileSystemId
+	*  @param registeredName
+	*  @return A <code>DOMFileSystem</code> instance.
+	*/
 	public function isolatedFileSystem(fileSystemId:String, registeredName:String):DOMFileSystem { return null;}
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isUnderTest():Boolean { return false;}
 }
 

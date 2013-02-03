@@ -42,12 +42,25 @@ package randori.webkit.modules.indexeddb
 
 
 [JavaScript(export=false, name="IDBOpenDBRequest")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.indexeddb.IDBRequest
+ */
 public class IDBOpenDBRequest extends IDBRequest
 {
 
+	/**
+	*  Function that accepts an event of type <code>BlockedEvent</code>.
+	*/
 	public function get onblocked():Function { return null; }
 	public function set onblocked(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>UpgradeneededEvent</code>.
+	*/
 	public function get onupgradeneeded():Function { return null; }
 	public function set onupgradeneeded(value:Function):void { }
 }

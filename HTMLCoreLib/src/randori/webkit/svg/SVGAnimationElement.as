@@ -42,27 +42,74 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGAnimationElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ *  @see randori.webkit.svg.SVGTests
+ *  @see randori.webkit.svg.SVGExternalResourcesRequired
+ *  @see randori.webkit.svg.ElementTimeControl
+ */
 public class SVGAnimationElement extends SVGElement implements SVGTests, SVGExternalResourcesRequired, ElementTimeControl
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('animation')")]
+	/**
+	*  Creates a new <code>SVGAnimationElement</code> instance.
+	*/
 	public function SVGAnimationElement() {super();}
 
+	/**
+	*  @see randori.webkit.svg.SVGElement
+	*/
 	public function get targetElement():SVGElement { return null; }
+	/**
+	*  @return A <code>Number</code> instance.
+	*/
 	public function getStartTime():Number { return 0;}
+	/**
+	*  @return A <code>Number</code> instance.
+	*/
 	public function getCurrentTime():Number { return 0;}
+	/**
+	*  @return A <code>Number</code> instance.
+	*/
 	public function getSimpleDuration():Number { return 0;}
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get requiredFeatures():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get requiredExtensions():SVGStringList { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	public function get systemLanguage():SVGStringList { return null; }
+	/**
+	*  @param extension (optional argument, default value is <code>''</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function hasExtension(extension:String=''):Boolean { return false;}
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedBoolean
+	*/
 	public function get externalResourcesRequired():SVGAnimatedBoolean { return null; }
 	public function beginElement():void {}
+	/**
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*/
 	public function beginElementAt(offset:Number=0):void {}
 	public function endElement():void {}
+	/**
+	*  @param offset (optional argument, default value is <code>0</code>)
+	*/
 	public function endElementAt(offset:Number=0):void {}
 }
 

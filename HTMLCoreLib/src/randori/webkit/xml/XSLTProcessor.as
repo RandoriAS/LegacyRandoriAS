@@ -41,18 +41,53 @@ package randori.webkit.xml
 {
 
 import randori.webkit.dom.Node;
-import randori.webkit.dom.DocumentFragment;
 import randori.webkit.dom.Document;
+import randori.webkit.dom.DocumentFragment;
 
 [JavaScript(export=false, name="XSLTProcessor")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class XSLTProcessor
 {
+	/**
+	*  Creates a new <code>XSLTProcessor</code> instance.
+	*/
 	public function XSLTProcessor() {super();}
+	/**
+	*  @param stylesheet (optional argument, default value is <code>null</code>)
+	*/
 	public function importStylesheet(stylesheet:Node=null):void {}
+	/**
+	*  @param source (optional argument, default value is <code>null</code>)
+	*  @param docVal (optional argument, default value is <code>null</code>)
+	*  @return A <code>DocumentFragment</code> instance.
+	*/
 	public function transformToFragment(source:Node=null, docVal:Document=null):DocumentFragment { return null;}
+	/**
+	*  @param source (optional argument, default value is <code>null</code>)
+	*  @return A <code>Document</code> instance.
+	*/
 	public function transformToDocument(source:Node=null):Document { return null;}
+	/**
+	*  @param namespaceURI
+	*  @param localName
+	*  @param value
+	*/
 	public function setParameter(namespaceURI:String, localName:String, value:String):void {}
+	/**
+	*  @param namespaceURI
+	*  @param localName
+	*  @return A <code>String</code> instance.
+	*/
 	public function getParameter(namespaceURI:String, localName:String):String { return '';}
+	/**
+	*  @param namespaceURI
+	*  @param localName
+	*/
 	public function removeParameter(namespaceURI:String, localName:String):void {}
 	public function clearParameters():void {}
 	public function reset():void {}

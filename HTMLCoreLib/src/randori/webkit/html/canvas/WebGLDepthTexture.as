@@ -42,6 +42,12 @@ package randori.webkit.html.canvas
 
 
 [JavaScript(export=false, name="WebGLDepthTexture")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class WebGLDepthTexture
 {
 	public static const UNSIGNED_INT_24_8_WEBGL:uint = 0x84FA;

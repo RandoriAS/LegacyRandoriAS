@@ -42,6 +42,12 @@ package randori.webkit.html.canvas
 
 
 [JavaScript(export=false, name="WebGLDebugRendererInfo")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class WebGLDebugRendererInfo
 {
 	public static const UNMASKED_VENDOR_WEBGL:uint = 0x9245;

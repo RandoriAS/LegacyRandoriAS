@@ -41,10 +41,30 @@ package randori.webkit.modules.navigatorcontentutils
 {
 
 
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Navigator
 {
+	/**
+	*  @param scheme
+	*  @param url
+	*  @param title
+	*/
 	public function registerProtocolHandler(scheme:String, url:String, title:String):void {}
+	/**
+	*  @param scheme
+	*  @param url
+	*  @return A <code>String</code> instance.
+	*/
 	public function isProtocolHandlerRegistered(scheme:String, url:String):String { return '';}
+	/**
+	*  @param scheme
+	*  @param url
+	*/
 	public function unregisterProtocolHandler(scheme:String, url:String):void {}
 }
 

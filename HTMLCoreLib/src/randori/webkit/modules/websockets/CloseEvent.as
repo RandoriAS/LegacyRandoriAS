@@ -43,6 +43,13 @@ package randori.webkit.modules.websockets
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="CloseEvent")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.DomEvent
+ */
 public class CloseEvent extends DomEvent
 {
 

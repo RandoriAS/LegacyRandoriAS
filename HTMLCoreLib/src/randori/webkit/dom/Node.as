@@ -42,6 +42,13 @@ package randori.webkit.dom
 
 
 [JavaScript(export=false, name="Node")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.EventTarget
+ */
 public class Node extends Object implements EventTarget
 {
 	public static const ELEMENT_NODE:uint = 1;
@@ -64,28 +71,82 @@ public class Node extends Object implements EventTarget
 
 	public function get nodeType():uint { return 0; }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get parentNode():Node { return null; }
 
+	/**
+	*  @see randori.webkit.dom.NodeList
+	*/
 	public function get childNodes():Object { return null; }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get firstChild():Node { return null; }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get lastChild():Node { return null; }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get previousSibling():Node { return null; }
 
+	/**
+	*  @see randori.webkit.dom.Node
+	*/
 	public function get nextSibling():Node { return null; }
 
+	/**
+	*  @see randori.webkit.dom.NamedNodeMap
+	*/
 	public function get attributes():Object { return null; }
 
+	/**
+	*  @see randori.webkit.dom.Document
+	*/
 	public function get ownerDocument():Document { return null; }
+	/**
+	*  @param newChild
+	*  @param refChild
+	*  @return A <code>Node</code> instance.
+	*/
 	public function insertBefore(newChild:Node, refChild:Node):Node { return null;}
+	/**
+	*  @param newChild
+	*  @param oldChild
+	*  @return A <code>Node</code> instance.
+	*/
 	public function replaceChild(newChild:Node, oldChild:Node):Node { return null;}
+	/**
+	*  @param oldChild
+	*  @return A <code>Node</code> instance.
+	*/
 	public function removeChild(oldChild:Node):Node { return null;}
+	/**
+	*  @param newChild
+	*  @return A <code>Node</code> instance.
+	*/
 	public function appendChild(newChild:Node):Node { return null;}
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function hasChildNodes():Boolean { return false;}
+	/**
+	*  @param deep (optional argument, default value is <code>false</code>)
+	*  @return A <code>Node</code> instance.
+	*/
 	public function cloneNode(deep:Boolean=false):Node { return null;}
 	public function normalize():void {}
+	/**
+	*  @param feature (optional argument, default value is <code>''</code>)
+	*  @param version (optional argument, default value is <code>''</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isSupported(feature:String='', version:String=''):Boolean { return false;}
 
 	public function get namespaceURI():String { return ''; }
@@ -94,16 +155,39 @@ public class Node extends Object implements EventTarget
 	public function set prefix(value:String):void { }
 
 	public function get localName():String { return ''; }
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function hasAttributes():Boolean { return false;}
 
 	public function get baseURI():String { return ''; }
 
 	public function get textContent():String { return ''; }
 	public function set textContent(value:String):void { }
+	/**
+	*  @param other (optional argument, default value is <code>null</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isSameNode(other:Node=null):Boolean { return false;}
+	/**
+	*  @param other (optional argument, default value is <code>null</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isEqualNode(other:Node=null):Boolean { return false;}
+	/**
+	*  @param namespaceURI (optional argument, default value is <code>''</code>)
+	*  @return A <code>String</code> instance.
+	*/
 	public function lookupPrefix(namespaceURI:String=''):String { return '';}
+	/**
+	*  @param namespaceURI (optional argument, default value is <code>''</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function isDefaultNamespace(namespaceURI:String=''):Boolean { return false;}
+	/**
+	*  @param prefix (optional argument, default value is <code>''</code>)
+	*  @return A <code>String</code> instance.
+	*/
 	public function lookupNamespaceURI(prefix:String=''):String { return '';}
 	public static const DOCUMENT_POSITION_DISCONNECTED:uint = 0x01;
 	public static const DOCUMENT_POSITION_PRECEDING:uint = 0x02;
@@ -111,15 +195,40 @@ public class Node extends Object implements EventTarget
 	public static const DOCUMENT_POSITION_CONTAINS:uint = 0x08;
 	public static const DOCUMENT_POSITION_CONTAINED_BY:uint = 0x10;
 	public static const DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC:uint = 0x20;
+	/**
+	*  @param other (optional argument, default value is <code>null</code>)
+	*  @return A <code>uint</code> instance.
+	*/
 	public function compareDocumentPosition(other:Node=null):uint { return 0;}
+	/**
+	*  @param other (optional argument, default value is <code>null</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function contains(other:Node=null):Boolean { return false;}
 
+	/**
+	*  @see randori.webkit.dom.Element
+	*/
 	public function get parentElement():Element { return null; }
 
 	public function get isContentEditable():Boolean { return false; }
 	public function inspect():void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param event
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(event:DomEvent):Boolean { return false;}
 }
 

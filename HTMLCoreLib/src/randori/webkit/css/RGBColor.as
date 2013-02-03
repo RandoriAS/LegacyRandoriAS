@@ -42,15 +42,33 @@ package randori.webkit.css
 
 
 [JavaScript(export=false, name="RGBColor")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class RGBColor
 {
 
+	/**
+	*  @see randori.webkit.css.CSSPrimitiveValue
+	*/
 	public function get red():CSSPrimitiveValue { return null; }
 
+	/**
+	*  @see randori.webkit.css.CSSPrimitiveValue
+	*/
 	public function get green():CSSPrimitiveValue { return null; }
 
+	/**
+	*  @see randori.webkit.css.CSSPrimitiveValue
+	*/
 	public function get blue():CSSPrimitiveValue { return null; }
 
+	/**
+	*  @see randori.webkit.css.CSSPrimitiveValue
+	*/
 	public function get alpha():CSSPrimitiveValue { return null; }
 
 	public function get color():Object { return null; }

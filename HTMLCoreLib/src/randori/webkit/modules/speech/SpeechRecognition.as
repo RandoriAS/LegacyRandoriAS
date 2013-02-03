@@ -43,10 +43,22 @@ package randori.webkit.modules.speech
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export=false, name="SpeechRecognition")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SpeechRecognition
 {
+	/**
+	*  Creates a new <code>SpeechRecognition</code> instance.
+	*/
 	public function SpeechRecognition() {super();}
 
+	/**
+	*  @see randori.webkit.modules.speech.SpeechGrammarList
+	*/
 	public function get grammars():Object { return null; }
 	public function set grammars(value:Object):void { }
 
@@ -65,43 +77,88 @@ public class SpeechRecognition
 	public function stop():void {}
 	public function abort():void {}
 
+	/**
+	*  Function that accepts an event of type <code>AudiostartEvent</code>.
+	*/
 	public function get onaudiostart():Function { return null; }
 	public function set onaudiostart(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>SoundstartEvent</code>.
+	*/
 	public function get onsoundstart():Function { return null; }
 	public function set onsoundstart(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>SpeechstartEvent</code>.
+	*/
 	public function get onspeechstart():Function { return null; }
 	public function set onspeechstart(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>SpeechendEvent</code>.
+	*/
 	public function get onspeechend():Function { return null; }
 	public function set onspeechend(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>SoundendEvent</code>.
+	*/
 	public function get onsoundend():Function { return null; }
 	public function set onsoundend(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>AudioendEvent</code>.
+	*/
 	public function get onaudioend():Function { return null; }
 	public function set onaudioend(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>ResultEvent</code>.
+	*/
 	public function get onresult():Function { return null; }
 	public function set onresult(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>NomatchEvent</code>.
+	*/
 	public function get onnomatch():Function { return null; }
 	public function set onnomatch(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>errorEvent</code>.
+	*  Function that accepts an event of type <code>ErrorEvent</code>.
+	*  @see randori.webkit.dom.ErrorEvent
 	*/
 	public function get onerror():Function { return null; }
 	public function set onerror(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>StartEvent</code>.
+	*/
 	public function get onstart():Function { return null; }
 	public function set onstart(value:Function):void { }
 
+	/**
+	*  Function that accepts an event of type <code>EndEvent</code>.
+	*/
 	public function get onend():Function { return null; }
 	public function set onend(value:Function):void { }
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 

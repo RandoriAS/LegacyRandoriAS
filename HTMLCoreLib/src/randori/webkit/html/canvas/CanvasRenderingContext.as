@@ -43,9 +43,18 @@ package randori.webkit.html.canvas
 import randori.webkit.html.HTMLCanvasElement;
 
 [JavaScript(export=false, name="CanvasRenderingContext")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class CanvasRenderingContext
 {
 
+	/**
+	*  @see randori.webkit.html.HTMLCanvasElement
+	*/
 	public function get canvas():HTMLCanvasElement { return null; }
 }
 

@@ -42,15 +42,34 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGFEPointLightElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGElement
+ */
 public class SVGFEPointLightElement extends SVGElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('fepointlight')")]
+	/**
+	*  Creates a new <code>SVGFEPointLightElement</code> instance.
+	*/
 	public function SVGFEPointLightElement() {super();}
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get x():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get y():SVGAnimatedNumber { return null; }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedNumber
+	*/
 	public function get z():SVGAnimatedNumber { return null; }
 }
 

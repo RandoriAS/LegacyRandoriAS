@@ -42,8 +42,18 @@ package randori.webkit.modules.mediastream
 
 
 [JavaScript(export=false, name="RTCIceCandidate")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class RTCIceCandidate
 {
+	/**
+	*  Creates a new <code>RTCIceCandidate</code> instance.
+	*  @param dictionary
+	*/
 	public function RTCIceCandidate(dictionary:Object) {super();}
 
 	public function get candidate():String { return ''; }

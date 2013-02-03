@@ -42,8 +42,17 @@ package randori.webkit.modules.speech
 
 
 [JavaScript(export=false, name="SpeechGrammar")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SpeechGrammar
 {
+	/**
+	*  Creates a new <code>SpeechGrammar</code> instance.
+	*/
 	public function SpeechGrammar() {super();}
 
 	public function get src():String { return ''; }

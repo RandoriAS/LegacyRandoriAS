@@ -42,13 +42,29 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLOutputElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLOutputElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('output')")]
+	/**
+	*  Creates a new <code>HTMLOutputElement</code> instance.
+	*/
 	public function HTMLOutputElement() {super();}
 
+	/**
+	*  @see randori.webkit.html.DOMSettableTokenList
+	*/
 	public function get htmlFor():DOMSettableTokenList { return null; }
 
+	/**
+	*  @see randori.webkit.html.HTMLFormElement
+	*/
 	public function get form():HTMLFormElement { return null; }
 
 	public function get name():String { return ''; }
@@ -64,12 +80,24 @@ public class HTMLOutputElement extends HTMLElement
 
 	public function get willValidate():Boolean { return false; }
 
+	/**
+	*  @see randori.webkit.html.ValidityState
+	*/
 	public function get validity():ValidityState { return null; }
 
 	public function get validationMessage():String { return ''; }
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function checkValidity():Boolean { return false;}
+	/**
+	*  @param error
+	*/
 	public function setCustomValidity(error:String):void {}
 
+	/**
+	*  @see randori.webkit.dom.NodeList
+	*/
 	public function get labels():Object { return null; }
 }
 

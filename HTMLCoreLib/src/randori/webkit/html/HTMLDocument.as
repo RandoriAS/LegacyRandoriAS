@@ -44,19 +44,44 @@ import randori.webkit.dom.Document;
 import randori.webkit.dom.Element;
 
 [JavaScript(export=false, name="HTMLDocument")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.dom.Document
+ */
 public class HTMLDocument extends Document
 {
 	public function open():void {}
 	public function close():void {}
+	/**
+	*  @param text (optional argument, default value is <code>''</code>)
+	*/
 	public function write(text:String=''):void {}
+	/**
+	*  @param text (optional argument, default value is <code>''</code>)
+	*/
 	public function writeln(text:String=''):void {}
 
+	/**
+	*  @see randori.webkit.html.HTMLCollection
+	*/
 	public function get embeds():Object { return null; }
 
+	/**
+	*  @see randori.webkit.html.HTMLCollection
+	*/
 	public function get plugins():Object { return null; }
 
+	/**
+	*  @see randori.webkit.html.HTMLCollection
+	*/
 	public function get scripts():Object { return null; }
 
+	/**
+	*  @see randori.webkit.html.HTMLAllCollection
+	*/
 	public function get all():Object { return null; }
 	public function set all(value:Object):void { }
 	public function clear():void {}
@@ -73,7 +98,13 @@ public class HTMLDocument extends Document
 	public function get designMode():String { return ''; }
 	public function set designMode(value:String):void { }
 
+	/**
+	*  @see randori.webkit.dom.Element
+	*/
 	public function get activeElement():Element { return null; }
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function hasFocus():Boolean { return false;}
 
 	public function get bgColor():String { return ''; }

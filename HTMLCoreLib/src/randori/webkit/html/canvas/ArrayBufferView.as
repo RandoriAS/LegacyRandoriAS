@@ -42,9 +42,18 @@ package randori.webkit.html.canvas
 
 
 [JavaScript(export=false, name="ArrayBufferView")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class ArrayBufferView
 {
 
+	/**
+	*  @see randori.webkit.html.canvas.ArrayBuffer
+	*/
 	public function get buffer():ArrayBuffer { return null; }
 
 	public function get byteOffset():uint { return 0; }

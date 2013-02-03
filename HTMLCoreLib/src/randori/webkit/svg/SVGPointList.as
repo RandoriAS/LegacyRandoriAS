@@ -42,16 +42,48 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGPointList")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SVGPointList
 {
 
 	public function get numberOfItems():uint { return 0; }
 	public function clear():void {}
+	/**
+	*  @param item
+	*  @return A <code>SVGPoint</code> instance.
+	*/
 	public function initialize(item:SVGPoint):SVGPoint { return null;}
+	/**
+	*  @param index
+	*  @return A <code>SVGPoint</code> instance.
+	*/
 	public function getItem(index:uint):SVGPoint { return null;}
+	/**
+	*  @param item
+	*  @param index
+	*  @return A <code>SVGPoint</code> instance.
+	*/
 	public function insertItemBefore(item:SVGPoint, index:uint):SVGPoint { return null;}
+	/**
+	*  @param item
+	*  @param index
+	*  @return A <code>SVGPoint</code> instance.
+	*/
 	public function replaceItem(item:SVGPoint, index:uint):SVGPoint { return null;}
+	/**
+	*  @param index
+	*  @return A <code>SVGPoint</code> instance.
+	*/
 	public function removeItem(index:uint):SVGPoint { return null;}
+	/**
+	*  @param item
+	*  @return A <code>SVGPoint</code> instance.
+	*/
 	public function appendItem(item:SVGPoint):SVGPoint { return null;}
 }
 

@@ -42,14 +42,33 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGTests")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public interface SVGTests
 {
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	 function get requiredFeatures():SVGStringList;
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	 function get requiredExtensions():SVGStringList;
 
+	/**
+	*  @see randori.webkit.svg.SVGStringList
+	*/
 	 function get systemLanguage():SVGStringList;
+	/**
+	*  @param extension (optional argument, default value is <code>''</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
 	 function hasExtension(extension:String=''):Boolean;
 }
 

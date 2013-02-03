@@ -42,11 +42,24 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLDataListElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLDataListElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('datalist')")]
+	/**
+	*  Creates a new <code>HTMLDataListElement</code> instance.
+	*/
 	public function HTMLDataListElement() {super();}
 
+	/**
+	*  @see randori.webkit.html.HTMLCollection
+	*/
 	public function get options():Object { return null; }
 }
 

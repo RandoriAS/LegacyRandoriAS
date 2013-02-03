@@ -42,12 +42,24 @@ package randori.webkit.workers
 
 
 [JavaScript(export=false, name="DedicatedWorkerContext")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.workers.WorkerContext
+ */
 public class DedicatedWorkerContext extends WorkerContext
 {
+	/**
+	*  @param message
+	*  @param messagePorts (optional argument, default value is <code>null</code>)
+	*/
 	public function postMessage(message:Object, messagePorts:Array=null):void {}
 
 	/**
-	*  Function that accepts an event of type <code>messageEvent</code>.
+	*  Function that accepts an event of type <code>MessageEvent</code>.
+	*  @see randori.webkit.dom.MessageEvent
 	*/
 	public function get onmessage():Function { return null; }
 	public function set onmessage(value:Function):void { }

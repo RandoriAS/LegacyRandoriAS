@@ -42,11 +42,25 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="TimeRanges")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class TimeRanges
 {
 
 	public function get length():uint { return 0; }
+	/**
+	*  @param index
+	*  @return A <code>Number</code> instance.
+	*/
 	public function start(index:uint):Number { return 0;}
+	/**
+	*  @param index
+	*  @return A <code>Number</code> instance.
+	*/
 	public function end(index:uint):Number { return 0;}
 }
 

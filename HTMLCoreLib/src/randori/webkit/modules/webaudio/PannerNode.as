@@ -42,6 +42,13 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="PannerNode")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.modules.webaudio.AudioNode
+ */
 public class PannerNode extends AudioNode
 {
 	public static const EQUALPOWER:uint = 0;
@@ -53,8 +60,23 @@ public class PannerNode extends AudioNode
 
 	public function get panningModel():String { return ''; }
 	public function set panningModel(value:String):void { }
+	/**
+	*  @param x
+	*  @param y
+	*  @param z
+	*/
 	public function setPosition(x:Number, y:Number, z:Number):void {}
+	/**
+	*  @param x
+	*  @param y
+	*  @param z
+	*/
 	public function setOrientation(x:Number, y:Number, z:Number):void {}
+	/**
+	*  @param x
+	*  @param y
+	*  @param z
+	*/
 	public function setVelocity(x:Number, y:Number, z:Number):void {}
 
 	public function get distanceModel():String { return ''; }

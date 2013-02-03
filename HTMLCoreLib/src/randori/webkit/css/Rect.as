@@ -42,15 +42,33 @@ package randori.webkit.css
 
 
 [JavaScript(export=false, name="Rect")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Rect
 {
 
+	/**
+	*  @see randori.webkit.css.CSSPrimitiveValue
+	*/
 	public function get top():CSSPrimitiveValue { return null; }
 
+	/**
+	*  @see randori.webkit.css.CSSPrimitiveValue
+	*/
 	public function get right():CSSPrimitiveValue { return null; }
 
+	/**
+	*  @see randori.webkit.css.CSSPrimitiveValue
+	*/
 	public function get bottom():CSSPrimitiveValue { return null; }
 
+	/**
+	*  @see randori.webkit.css.CSSPrimitiveValue
+	*/
 	public function get left():CSSPrimitiveValue { return null; }
 }
 

@@ -42,6 +42,14 @@ package randori.webkit.svg
 
 
 [JavaScript(export=false, name="SVGGlyphRefElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.svg.SVGStyledElement
+ *  @see randori.webkit.svg.SVGURIReference
+ */
 public class SVGGlyphRefElement extends SVGStyledElement implements SVGURIReference
 {
 
@@ -63,6 +71,9 @@ public class SVGGlyphRefElement extends SVGStyledElement implements SVGURIRefere
 	public function get dy():Number { return 0; }
 	public function set dy(value:Number):void { }
 
+	/**
+	*  @see randori.webkit.svg.SVGAnimatedString
+	*/
 	public function get href():SVGAnimatedString { return null; }
 }
 

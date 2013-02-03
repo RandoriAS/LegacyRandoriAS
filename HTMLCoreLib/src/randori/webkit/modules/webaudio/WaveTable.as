@@ -42,6 +42,12 @@ package randori.webkit.modules.webaudio
 
 
 [JavaScript(export=false, name="WaveTable")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class WaveTable
 {
 }

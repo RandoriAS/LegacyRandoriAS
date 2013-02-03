@@ -44,11 +44,23 @@ import randori.webkit.dom.Document;
 import randori.webkit.css.StyleMedia;
 
 [JavaScript(export=false, name="AbstractView")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class AbstractView
 {
 
+	/**
+	*  @see randori.webkit.dom.Document
+	*/
 	public function get document():Document { return null; }
 
+	/**
+	*  @see randori.webkit.css.StyleMedia
+	*/
 	public function get styleMedia():StyleMedia { return null; }
 }
 

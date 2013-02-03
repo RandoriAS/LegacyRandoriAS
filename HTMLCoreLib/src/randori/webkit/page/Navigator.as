@@ -42,6 +42,12 @@ package randori.webkit.page
 
 
 [JavaScript(export=false, name="Navigator")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class Navigator
 {
 
@@ -57,8 +63,14 @@ public class Navigator
 
 	public function get platform():String { return ''; }
 
+	/**
+	*  @see randori.webkit.plugins.PluginArray
+	*/
 	public function get plugins():Object { return null; }
 
+	/**
+	*  @see randori.webkit.plugins.MimeTypeArray
+	*/
 	public function get mimeTypes():Object { return null; }
 
 	public function get product():String { return ''; }
@@ -70,6 +82,9 @@ public class Navigator
 	public function get vendorSub():String { return ''; }
 
 	public function get cookieEnabled():Boolean { return false; }
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function javaEnabled():Boolean { return false;}
 
 	public function get onLine():Boolean { return false; }

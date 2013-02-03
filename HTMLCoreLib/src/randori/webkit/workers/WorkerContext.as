@@ -54,107 +54,213 @@ import randori.webkit.html.canvas.ArrayBuffer;
 import randori.webkit.html.canvas.DataView;
 
 [JavaScript(export=false, name="WorkerContext")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class WorkerContext
 {
 
+	/**
+	*  @see randori.webkit.workers.WorkerContext
+	*/
 	public function get self():WorkerContext { return null; }
 
+	/**
+	*  @see randori.webkit.workers.WorkerLocation
+	*/
 	public function get location():WorkerLocation { return null; }
 	public function close():void {}
 
 	/**
-	*  Function that accepts an event of type <code>errorEvent</code>.
+	*  Function that accepts an event of type <code>ErrorEvent</code>.
+	*  @see randori.webkit.dom.ErrorEvent
 	*/
 	public function get onerror():Function { return null; }
 	public function set onerror(value:Function):void { }
 	public function importScripts():void {}
 
+	/**
+	*  @see randori.webkit.page.WorkerNavigator
+	*/
 	public function get navigator():WorkerNavigator { return null; }
+	/**
+	*  @param handler
+	*  @param timeout
+	*  @return A <code>uint</code> instance.
+	*/
 	public function setTimeout(handler:Object, timeout:uint):uint { return 0;}
+	/**
+	*  @param handle (optional argument, default value is <code>0</code>)
+	*/
 	public function clearTimeout(handle:uint=0):void {}
+	/**
+	*  @param handler
+	*  @param timeout
+	*  @return A <code>uint</code> instance.
+	*/
 	public function setInterval(handler:Object, timeout:uint):uint { return 0;}
+	/**
+	*  @param handle (optional argument, default value is <code>0</code>)
+	*/
 	public function clearInterval(handle:uint=0):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
 	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 
 	[JavascriptProperty(name="MessageEvent")]
+	/**
+	*  @see randori.webkit.dom.MessageEvent
+	*/
 	public function get MessageEvent_():MessageEvent { return null; }
 	public function set MessageEvent_(value:MessageEvent):void { }
 
 	[JavascriptProperty(name="WorkerLocation")]
+	/**
+	*  @see randori.webkit.workers.WorkerLocation
+	*/
 	public function get WorkerLocation_():WorkerLocation { return null; }
 	public function set WorkerLocation_(value:WorkerLocation):void { }
 
 	[JavascriptProperty(name="MessageChannel")]
+	/**
+	*  @see randori.webkit.dom.MessageChannel
+	*/
 	public function get MessageChannel_():MessageChannel { return null; }
 	public function set MessageChannel_(value:MessageChannel):void { }
 
 	[JavascriptProperty(name="EventSource")]
+	/**
+	*  @see randori.webkit.page.EventSource
+	*/
 	public function get EventSource_():EventSource { return null; }
 	public function set EventSource_(value:EventSource):void { }
 
 	[JavascriptProperty(name="XMLHttpRequest")]
+	/**
+	*  @see randori.webkit.xml.XMLHttpRequest
+	*/
 	public function get XMLHttpRequest_():XMLHttpRequest { return null; }
 	public function set XMLHttpRequest_(value:XMLHttpRequest):void { }
 
 	[JavascriptProperty(name="Blob")]
+	/**
+	*  @see randori.webkit.fileapi.Blob
+	*/
 	public function get Blob_():Blob { return null; }
 	public function set Blob_(value:Blob):void { }
 
 	[JavascriptProperty(name="FileReader")]
+	/**
+	*  @see randori.webkit.fileapi.FileReader
+	*/
 	public function get FileReader_():FileReader { return null; }
 	public function set FileReader_(value:FileReader):void { }
 
 	[JavascriptProperty(name="FileReaderSync")]
+	/**
+	*  @see randori.webkit.fileapi.FileReaderSync
+	*/
 	public function get FileReaderSync_():FileReaderSync { return null; }
 	public function set FileReaderSync_(value:FileReaderSync):void { }
 
 	[JavascriptProperty(name="URL")]
+	/**
+	*  @see randori.webkit.html.URL
+	*/
 	public function get URL_():URL { return null; }
 	public function set URL_(value:URL):void { }
 
 	[JavascriptProperty(name="ArrayBuffer")]
+	/**
+	*  @see randori.webkit.html.canvas.ArrayBuffer
+	*/
 	public function get ArrayBuffer_():ArrayBuffer { return null; }
 	public function set ArrayBuffer_(value:ArrayBuffer):void { }
 
 	[JavascriptProperty(name="Int8Array")]
-	public function get Int8Array_():Vector.<int> { return null; }
-	public function set Int8Array_(value:Vector.<int>):void { }
+	/**
+	*  @see randori.webkit.html.canvas.Int8Array
+	*/
+	public function get Int8Array_():Object { return null; }
+	public function set Int8Array_(value:Object):void { }
 
 	[JavascriptProperty(name="Uint8Array")]
-	public function get Uint8Array_():Vector.<uint> { return null; }
-	public function set Uint8Array_(value:Vector.<uint>):void { }
+	/**
+	*  @see randori.webkit.html.canvas.Uint8Array
+	*/
+	public function get Uint8Array_():Object { return null; }
+	public function set Uint8Array_(value:Object):void { }
 
 	[JavascriptProperty(name="Uint8ClampedArray")]
-	public function get Uint8ClampedArray_():Vector.<uint> { return null; }
-	public function set Uint8ClampedArray_(value:Vector.<uint>):void { }
+	/**
+	*  @see randori.webkit.html.canvas.Uint8Array
+	*/
+	public function get Uint8ClampedArray_():Object { return null; }
+	public function set Uint8ClampedArray_(value:Object):void { }
 
 	[JavascriptProperty(name="Int16Array")]
-	public function get Int16Array_():Vector.<int> { return null; }
-	public function set Int16Array_(value:Vector.<int>):void { }
+	/**
+	*  @see randori.webkit.html.canvas.Int16Array
+	*/
+	public function get Int16Array_():Object { return null; }
+	public function set Int16Array_(value:Object):void { }
 
 	[JavascriptProperty(name="Uint16Array")]
-	public function get Uint16Array_():Vector.<uint> { return null; }
-	public function set Uint16Array_(value:Vector.<uint>):void { }
+	/**
+	*  @see randori.webkit.html.canvas.Uint16Array
+	*/
+	public function get Uint16Array_():Object { return null; }
+	public function set Uint16Array_(value:Object):void { }
 
 	[JavascriptProperty(name="Int32Array")]
-	public function get Int32Array_():Vector.<int> { return null; }
-	public function set Int32Array_(value:Vector.<int>):void { }
+	/**
+	*  @see randori.webkit.html.canvas.Int32Array
+	*/
+	public function get Int32Array_():Object { return null; }
+	public function set Int32Array_(value:Object):void { }
 
 	[JavascriptProperty(name="Uint32Array")]
-	public function get Uint32Array_():Vector.<uint> { return null; }
-	public function set Uint32Array_(value:Vector.<uint>):void { }
+	/**
+	*  @see randori.webkit.html.canvas.Uint32Array
+	*/
+	public function get Uint32Array_():Object { return null; }
+	public function set Uint32Array_(value:Object):void { }
 
 	[JavascriptProperty(name="Float32Array")]
-	public function get Float32Array_():Vector.<Number> { return null; }
-	public function set Float32Array_(value:Vector.<Number>):void { }
+	/**
+	*  @see randori.webkit.html.canvas.Float32Array
+	*/
+	public function get Float32Array_():Object { return null; }
+	public function set Float32Array_(value:Object):void { }
 
 	[JavascriptProperty(name="Float64Array")]
-	public function get Float64Array_():Vector.<Number> { return null; }
-	public function set Float64Array_(value:Vector.<Number>):void { }
+	/**
+	*  @see randori.webkit.html.canvas.Float64Array
+	*/
+	public function get Float64Array_():Object { return null; }
+	public function set Float64Array_(value:Object):void { }
 
 	[JavascriptProperty(name="DataView")]
+	/**
+	*  @see randori.webkit.html.canvas.DataView
+	*/
 	public function get DataView_():DataView { return null; }
 	public function set DataView_(value:DataView):void { }
 }

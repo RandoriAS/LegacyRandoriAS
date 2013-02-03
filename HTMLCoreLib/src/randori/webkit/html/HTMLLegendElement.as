@@ -42,11 +42,24 @@ package randori.webkit.html
 
 
 [JavaScript(export=false, name="HTMLLegendElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLLegendElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('legend')")]
+	/**
+	*  Creates a new <code>HTMLLegendElement</code> instance.
+	*/
 	public function HTMLLegendElement() {super();}
 
+	/**
+	*  @see randori.webkit.html.HTMLFormElement
+	*/
 	public function get form():HTMLFormElement { return null; }
 
 	public function get align():String { return ''; }

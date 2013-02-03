@@ -43,9 +43,19 @@ package randori.webkit.html
 import randori.webkit.html.track.TextTrack;
 
 [JavaScript(export=false, name="HTMLTrackElement")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
 public class HTMLTrackElement extends HTMLElement
 {
 	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('track')")]
+	/**
+	*  Creates a new <code>HTMLTrackElement</code> instance.
+	*/
 	public function HTMLTrackElement() {super();}
 
 	public function get kind():String { return ''; }
@@ -70,6 +80,9 @@ public class HTMLTrackElement extends HTMLElement
 
 	public function get readyState():uint { return 0; }
 
+	/**
+	*  @see randori.webkit.html.track.TextTrack
+	*/
 	public function get track():TextTrack { return null; }
 }
 

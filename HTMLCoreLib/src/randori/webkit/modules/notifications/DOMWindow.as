@@ -41,10 +41,19 @@ package randori.webkit.modules.notifications
 {
 
 
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class DOMWindow
 {
 
 	[JavascriptProperty(name="Notification")]
+	/**
+	*  @see randori.webkit.modules.notifications.Notification
+	*/
 	public function get Notification_():Notification { return null; }
 	public function set Notification_(value:Notification):void { }
 }

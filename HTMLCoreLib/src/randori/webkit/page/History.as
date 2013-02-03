@@ -42,6 +42,12 @@ package randori.webkit.page
 
 
 [JavaScript(export=false, name="History")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class History
 {
 
@@ -50,8 +56,21 @@ public class History
 	public function get state():Object { return null; }
 	public function back():void {}
 	public function forward():void {}
+	/**
+	*  @param distance (optional argument, default value is <code>0</code>)
+	*/
 	public function go(distance:uint=0):void {}
+	/**
+	*  @param data
+	*  @param title
+	*  @param url (optional argument, default value is <code>''</code>)
+	*/
 	public function pushState(data:Object, title:String, url:String=''):void {}
+	/**
+	*  @param data
+	*  @param title
+	*  @param url (optional argument, default value is <code>''</code>)
+	*/
 	public function replaceState(data:Object, title:String, url:String=''):void {}
 }
 

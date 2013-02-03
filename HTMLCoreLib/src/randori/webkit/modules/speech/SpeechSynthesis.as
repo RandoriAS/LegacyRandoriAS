@@ -42,6 +42,12 @@ package randori.webkit.modules.speech
 
 
 [JavaScript(export=false, name="SpeechSynthesis")]
+/**
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ */
 public class SpeechSynthesis
 {
 
@@ -50,10 +56,16 @@ public class SpeechSynthesis
 	public function get speaking():Boolean { return false; }
 
 	public function get paused():Boolean { return false; }
+	/**
+	*  @param utterance
+	*/
 	public function speak(utterance:SpeechSynthesisUtterance):void {}
 	public function cancel():void {}
 	public function pause():void {}
 	public function resume():void {}
+	/**
+	*  @return A <code>sequence</code> instance.
+	*/
 	public function getVoices():Vector.<SpeechSynthesisVoice> { return null;}
 }
 
