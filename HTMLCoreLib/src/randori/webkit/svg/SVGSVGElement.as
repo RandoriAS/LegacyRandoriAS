@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -40,6 +41,7 @@
 package randori.webkit.svg
 {
 
+import randori.webkit.dom.NodeList;
 import randori.webkit.dom.Element;
 
 [JavaScript(export="false", nativecondition="SVG", name="SVGSVGElement")]
@@ -142,13 +144,13 @@ public class SVGSVGElement extends SVGStyledElement implements SVGTests, SVGLang
 	*  @param referenceElement (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getIntersectionList(rect:SVGRect=undefined, referenceElement:SVGElement=undefined):Object { return null;}
+	public function getIntersectionList(rect:SVGRect=undefined, referenceElement:SVGElement=undefined):NodeList { return null;}
 	/**
 	*  @param rect (optional argument, default value is <code>undefined</code>)
 	*  @param referenceElement (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getEnclosureList(rect:SVGRect=undefined, referenceElement:SVGElement=undefined):Object { return null;}
+	public function getEnclosureList(rect:SVGRect=undefined, referenceElement:SVGElement=undefined):NodeList { return null;}
 	/**
 	*  @param element (optional argument, default value is <code>undefined</code>)
 	*  @param rect (optional argument, default value is <code>undefined</code>)

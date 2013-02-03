@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -43,10 +44,18 @@ package randori.webkit.css
 
 [JavaScript(export="false", name="CSSPageRule")]
 /**
+ *  <p>
+ *  The <code>CSSPageRule</code> interface represents a @page
+ *  rule within a CSS style sheet. The <code>@page</code> rule is
+ *  used to specify the dimensions, orientation, margins, etc. of a page box
+ *  for paged media.
+ *  </p>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
  *  @since 1.0
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/page.html#page-box
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q8
  *  @see randori.webkit.css.CSSRule
  */
 public class CSSPageRule extends CSSRule
@@ -58,7 +67,7 @@ public class CSSPageRule extends CSSRule
 	/**
 	*  @see randori.webkit.css.CSSStyleDeclaration
 	*/
-	public function get style():Object { return null; }
+	public function get style():CSSStyleDeclaration { return null; }
 }
 
 }

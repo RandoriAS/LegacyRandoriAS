@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -43,10 +44,16 @@ package randori.webkit.css
 
 [JavaScript(export="false", name="CSSImportRule")]
 /**
+ *  <p>
+ *  The <code>CSSImportRule</code> interface represents a @import
+ *  rule within a CSS style sheet. The <code>@import</code> rule is
+ *  used to import style rules from other style sheets.
+ *  </p>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
  *  @since 1.0
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/cascade.html#at-import
  *  @see randori.webkit.css.CSSRule
  */
 public class CSSImportRule extends CSSRule
@@ -57,7 +64,7 @@ public class CSSImportRule extends CSSRule
 	/**
 	*  @see randori.webkit.css.MediaList
 	*/
-	public function get media():Object { return null; }
+	public function get media():MediaList { return null; }
 
 	/**
 	*  @see randori.webkit.css.CSSStyleSheet

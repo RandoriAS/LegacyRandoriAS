@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -87,7 +88,7 @@ public class HTMLFormElement extends HTMLElement
 	/**
 	*  @see randori.webkit.html.HTMLCollection
 	*/
-	public function get elements():Object { return null; }
+	public function get elements():HTMLCollection { return null; }
 
 	public function get length():uint { return 0; }
 	public function submit():void {}
@@ -96,20 +97,6 @@ public class HTMLFormElement extends HTMLElement
 	*  @return A <code>Boolean</code> instance.
 	*/
 	public function checkValidity():Boolean { return false;}
-	public function requestAutocomplete():void {}
-
-	/**
-	*  Function that accepts an event of type <code>AutocompleteEvent</code>.
-	*/
-	public function get onautocomplete():Function { return null; }
-	public function set onautocomplete(value:Function):void { }
-
-	/**
-	*  Function that accepts an event of type <code>AutocompleteerrorEvent</code>.
-	*  @see randori.webkit.dom.AutocompleteErrorEvent
-	*/
-	public function get onautocompleteerror():Function { return null; }
-	public function set onautocompleteerror(value:Function):void { }
 }
 
 }

@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -41,6 +42,7 @@ package randori.webkit.html.shadow
 {
 
 import randori.webkit.html.HTMLElement;
+import randori.webkit.dom.NodeList;
 
 [JavaScript(export="false", nativecondition="SHADOW_DOM", name="HTMLContentElement")]
 /**
@@ -66,7 +68,7 @@ public class HTMLContentElement extends HTMLElement
 	/**
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getDistributedNodes():Object { return null;}
+	public function getDistributedNodes():NodeList { return null;}
 }
 
 }

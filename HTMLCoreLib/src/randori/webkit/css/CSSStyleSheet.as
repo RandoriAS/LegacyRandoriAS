@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -43,10 +44,17 @@ package randori.webkit.css
 
 [JavaScript(export="false", name="CSSStyleSheet")]
 /**
+ *  <p>
+ *  The <code>CSSStyleSheet</code> interface is a concrete interface used
+ *  to represent a CSS style sheet i.e., a style sheet whose content type
+ *  is "text/css".
+ *  </p>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
  *  @since 1.0
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q8
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#at-rules
  *  @see randori.webkit.css.StyleSheet
  */
 public class CSSStyleSheet extends StyleSheet
@@ -60,7 +68,7 @@ public class CSSStyleSheet extends StyleSheet
 	/**
 	*  @see randori.webkit.css.CSSRuleList
 	*/
-	public function get cssRules():Object { return null; }
+	public function get cssRules():CSSRuleList { return null; }
 	/**
 	*  @param rule (optional argument, default value is <code>undefined</code>)
 	*  @param index (optional argument, default value is <code>undefined</code>)
@@ -75,7 +83,7 @@ public class CSSStyleSheet extends StyleSheet
 	/**
 	*  @see randori.webkit.css.CSSRuleList
 	*/
-	public function get rules():Object { return null; }
+	public function get rules():CSSRuleList { return null; }
 	/**
 	*  @param selector (optional argument, default value is <code>undefined</code>)
 	*  @param style (optional argument, default value is <code>undefined</code>)

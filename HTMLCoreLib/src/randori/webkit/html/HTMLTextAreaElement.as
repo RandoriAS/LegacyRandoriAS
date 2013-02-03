@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -40,6 +41,7 @@
 package randori.webkit.html
 {
 
+import randori.webkit.dom.NodeList;
 
 [JavaScript(export="false", name="HTMLTextAreaElement")]
 /**
@@ -126,7 +128,7 @@ public class HTMLTextAreaElement extends HTMLElement
 	/**
 	*  @see randori.webkit.dom.NodeList
 	*/
-	public function get labels():Object { return null; }
+	public function get labels():NodeList { return null; }
 	public function select():void {}
 
 	public function get selectionStart():uint { return 0; }
@@ -145,10 +147,11 @@ public class HTMLTextAreaElement extends HTMLElement
 	*/
 	public function setRangeText(replacement:String, start:uint, end:uint, selectionMode:String=null):void {}
 	/**
-	*  @param start
-	*  @param end
+	*  @param start (optional argument, default value is <code>undefined</code>)
+	*  @param end (optional argument, default value is <code>undefined</code>)
+	*  @param direction (optional argument, default value is <code>''</code>)
 	*/
-	public function setSelectionRange(start:uint, end:uint):void {}
+	public function setSelectionRange(start:uint=undefined, end:uint=undefined, direction:String=''):void {}
 }
 
 }

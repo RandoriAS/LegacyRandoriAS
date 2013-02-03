@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -43,10 +44,22 @@ package randori.webkit.css
 
 [JavaScript(export="false", name="CSSRule")]
 /**
+ *  <p>
+ *  The <code>CSSRule</code> interface is the abstract base interface for any
+ *  type of CSS statement.
+ *  This includes both rule sets
+ *  and at-rules. An
+ *  implementation is expected to preserve all rules specified in a CSS style
+ *  sheet, even if the rule is not recognized by the parser. Unrecognized
+ *  rules are represented using the <code>CSSUnknownRule</code> interface.
+ *  </p>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
  *  @since 1.0
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q5
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q8
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#at-rules
  */
 public class CSSRule
 {
@@ -57,8 +70,6 @@ public class CSSRule
 	public static const MEDIA_RULE:uint = 4;
 	public static const FONT_FACE_RULE:uint = 5;
 	public static const PAGE_RULE:uint = 6;
-	public static const SUPPORTS_RULE:uint = 12;
-	public static const HOST_RULE:uint = 1001;
 
 	public function get type():uint { return 0; }
 

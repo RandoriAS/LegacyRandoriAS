@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -51,33 +52,13 @@ import randori.webkit.dom.DomEvent;
  */
 public class Notification
 {
-	/**
-	*  Creates a new <code>Notification</code> instance.
-	*  @param title
-	*  @param options (optional argument, default value is <code>undefined</code>)
-	*/
-	public function Notification(title:String, options:Object=undefined) {super();}
 	public function show():void {}
-	public function cancel():void {}
-	public function close():void {}
-
-	public function get permission():String { return ''; }
-	/**
-	*  @param callback
-	*/
-	public function requestPermission(callback:Object):void {}
 
 	/**
 	*  Function that accepts an event of type <code>ShowEvent</code>.
 	*/
 	public function get onshow():Function { return null; }
 	public function set onshow(value:Function):void { }
-
-	/**
-	*  Function that accepts an event of type <code>DisplayEvent</code>.
-	*/
-	public function get ondisplay():Function { return null; }
-	public function set ondisplay(value:Function):void { }
 
 	/**
 	*  Function that accepts an event of type <code>ErrorEvent</code>.
@@ -98,15 +79,6 @@ public class Notification
 	*/
 	public function get onclick():Function { return null; }
 	public function set onclick(value:Function):void { }
-
-	public function get dir():String { return ''; }
-	public function set dir(value:String):void { }
-
-	public function get replaceId():String { return ''; }
-	public function set replaceId(value:String):void { }
-
-	public function get tag():String { return ''; }
-	public function set tag(value:String):void { }
 	/**
 	*  @param type
 	*  @param listener

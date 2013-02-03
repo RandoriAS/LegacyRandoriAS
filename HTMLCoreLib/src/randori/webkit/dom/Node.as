@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -47,9 +48,8 @@ package randori.webkit.dom
  *  @version 1.0
  *  @productversion RandoriAS 1.0
  *  @since 1.0
- *  @see randori.webkit.dom.EventTarget
  */
-public class Node extends Object implements EventTarget
+public class Node
 {
 	public static const ELEMENT_NODE:uint = 1;
 	public static const ATTRIBUTE_NODE:uint = 2;
@@ -79,7 +79,7 @@ public class Node extends Object implements EventTarget
 	/**
 	*  @see randori.webkit.dom.NodeList
 	*/
-	public function get childNodes():Object { return null; }
+	public function get childNodes():NodeList { return null; }
 
 	/**
 	*  @see randori.webkit.dom.Node
@@ -104,7 +104,7 @@ public class Node extends Object implements EventTarget
 	/**
 	*  @see randori.webkit.dom.NamedNodeMap
 	*/
-	public function get attributes():Object { return null; }
+	public function get attributes():NamedNodeMap { return null; }
 
 	/**
 	*  @see randori.webkit.dom.Document
@@ -210,9 +210,6 @@ public class Node extends Object implements EventTarget
 	*  @see randori.webkit.dom.Element
 	*/
 	public function get parentElement():Element { return null; }
-
-	public function get isContentEditable():Boolean { return false; }
-	public function inspect():void {}
 	/**
 	*  @param type
 	*  @param listener

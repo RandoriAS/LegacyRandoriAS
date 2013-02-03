@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -51,9 +52,9 @@ package randori.webkit.modules.indexeddb
 public class IDBKeyRange
 {
 
-	public function get lower():Object { return null; }
+	public function get lower():* { return null; }
 
-	public function get upper():Object { return null; }
+	public function get upper():* { return null; }
 
 	public function get lowerOpen():Boolean { return false; }
 
@@ -62,19 +63,19 @@ public class IDBKeyRange
 	*  @param value
 	*  @return A <code>IDBKeyRange</code> instance.
 	*/
-	public function only(value:Object):IDBKeyRange { return null;}
+	public function only(value:*):IDBKeyRange { return null;}
 	/**
 	*  @param bound
 	*  @param open (optional argument, default value is <code>false</code>)
 	*  @return A <code>IDBKeyRange</code> instance.
 	*/
-	public function lowerBound(bound:Object, open:Boolean=false):IDBKeyRange { return null;}
+	public function lowerBound(bound:*, open:Boolean=false):IDBKeyRange { return null;}
 	/**
 	*  @param bound
 	*  @param open (optional argument, default value is <code>false</code>)
 	*  @return A <code>IDBKeyRange</code> instance.
 	*/
-	public function upperBound(bound:Object, open:Boolean=false):IDBKeyRange { return null;}
+	public function upperBound(bound:*, open:Boolean=false):IDBKeyRange { return null;}
 	/**
 	*  @param lower
 	*  @param upper
@@ -82,7 +83,7 @@ public class IDBKeyRange
 	*  @param upperOpen (optional argument, default value is <code>false</code>)
 	*  @return A <code>IDBKeyRange</code> instance.
 	*/
-	public function bound(lower:Object, upper:Object, lowerOpen:Boolean=false, upperOpen:Boolean=false):IDBKeyRange { return null;}
+	public function bound(lower:*, upper:*, lowerOpen:Boolean=false, upperOpen:Boolean=false):IDBKeyRange { return null;}
 }
 
 }

@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -61,12 +62,12 @@ public class MutationRecord
 	/**
 	*  @see randori.webkit.dom.NodeList
 	*/
-	public function get addedNodes():Object { return null; }
+	public function get addedNodes():NodeList { return null; }
 
 	/**
 	*  @see randori.webkit.dom.NodeList
 	*/
-	public function get removedNodes():Object { return null; }
+	public function get removedNodes():NodeList { return null; }
 
 	/**
 	*  @see randori.webkit.dom.Node

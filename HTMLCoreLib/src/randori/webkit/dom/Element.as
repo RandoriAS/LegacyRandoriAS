@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -40,6 +41,8 @@
 package randori.webkit.dom
 {
 
+import randori.webkit.css.CSSStyleDeclaration;
+import randori.webkit.html.DOMTokenList;
 
 [JavaScript(export="false", name="Element")]
 /**
@@ -86,7 +89,7 @@ public class Element extends Node
 	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByTagName(name:String=undefined):Object { return null;}
+	public function getElementsByTagName(name:String=undefined):NodeList { return null;}
 	/**
 	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
 	*  @param localName (optional argument, default value is <code>undefined</code>)
@@ -109,7 +112,7 @@ public class Element extends Node
 	*  @param localName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByTagNameNS(namespaceURI:String=undefined, localName:String=undefined):Object { return null;}
+	public function getElementsByTagNameNS(namespaceURI:String=undefined, localName:String=undefined):NodeList { return null;}
 	/**
 	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
 	*  @param localName (optional argument, default value is <code>undefined</code>)
@@ -136,7 +139,7 @@ public class Element extends Node
 	/**
 	*  @see randori.webkit.css.CSSStyleDeclaration
 	*/
-	public function get style():Object { return null; }
+	public function get style():CSSStyleDeclaration { return null; }
 
 	public function get offsetLeft():uint { return 0; }
 
@@ -190,7 +193,7 @@ public class Element extends Node
 	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByClassName(name:String=undefined):Object { return null;}
+	public function getElementsByClassName(name:String=undefined):NodeList { return null;}
 
 	public function get className():String { return ''; }
 	public function set className(value:String):void { }
@@ -198,7 +201,7 @@ public class Element extends Node
 	/**
 	*  @see randori.webkit.html.DOMTokenList
 	*/
-	public function get classList():Object { return null; }
+	public function get classList():DOMTokenList { return null; }
 
 	/**
 	*  @see randori.webkit.dom.DOMStringMap
@@ -213,7 +216,7 @@ public class Element extends Node
 	*  @param selectors
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function querySelectorAll(selectors:String):Object { return null;}
+	public function querySelectorAll(selectors:String):NodeList { return null;}
 
 	/**
 	*  @see randori.webkit.dom.Element
@@ -240,14 +243,11 @@ public class Element extends Node
 	/**
 	*  @return A <code>ClientRectList</code> instance.
 	*/
-	public function getClientRects():Object { return null;}
+	public function getClientRects():ClientRectList { return null;}
 	/**
 	*  @return A <code>ClientRect</code> instance.
 	*/
 	public function getBoundingClientRect():ClientRect { return null;}
-
-	public function get innerText():String { return ''; }
-	public static const ALLOW_KEYBOARD_INPUT:uint = 1;
 
 	public function get onabort():Function { return null; }
 	public function set onabort(value:Function):void { }

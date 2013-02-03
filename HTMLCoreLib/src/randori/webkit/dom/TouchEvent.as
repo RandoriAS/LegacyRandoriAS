@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -56,17 +57,17 @@ public class TouchEvent extends UIEvent
 	/**
 	*  @see randori.webkit.dom.TouchList
 	*/
-	public function get touches():Object { return null; }
+	public function get touches():TouchList { return null; }
 
 	/**
 	*  @see randori.webkit.dom.TouchList
 	*/
-	public function get targetTouches():Object { return null; }
+	public function get targetTouches():TouchList { return null; }
 
 	/**
 	*  @see randori.webkit.dom.TouchList
 	*/
-	public function get changedTouches():Object { return null; }
+	public function get changedTouches():TouchList { return null; }
 
 	public function get ctrlKey():Boolean { return false; }
 
@@ -90,7 +91,7 @@ public class TouchEvent extends UIEvent
 	*  @param shiftKey (optional argument, default value is <code>undefined</code>)
 	*  @param metaKey (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initTouchEvent(touches:Object=undefined, targetTouches:Object=undefined, changedTouches:Object=undefined, type:String=undefined, view:Window=undefined, screenX:uint=undefined, screenY:uint=undefined, clientX:uint=undefined, clientY:uint=undefined, ctrlKey:Boolean=undefined, altKey:Boolean=undefined, shiftKey:Boolean=undefined, metaKey:Boolean=undefined):void {}
+	public function initTouchEvent(touches:TouchList=undefined, targetTouches:TouchList=undefined, changedTouches:TouchList=undefined, type:String=undefined, view:Window=undefined, screenX:uint=undefined, screenY:uint=undefined, clientX:uint=undefined, clientY:uint=undefined, ctrlKey:Boolean=undefined, altKey:Boolean=undefined, shiftKey:Boolean=undefined, metaKey:Boolean=undefined):void {}
 }
 
 }

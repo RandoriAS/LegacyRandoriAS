@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -48,25 +49,25 @@ package randori.webkit.dom
  *  @productversion RandoriAS 1.0
  *  @since 1.0
  */
-public interface EventTarget
+public class EventTarget
 {
 	/**
 	*  @param type
 	*  @param listener
 	*  @param useCapture (optional argument, default value is <code>false</code>)
 	*/
-	 function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void;
+	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
 	/**
 	*  @param type
 	*  @param listener
 	*  @param useCapture (optional argument, default value is <code>false</code>)
 	*/
-	 function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void;
+	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
 	/**
 	*  @param event
 	*  @return A <code>Boolean</code> instance.
 	*/
-	 function dispatchEvent(event:DomEvent):Boolean;
+	public function dispatchEvent(event:DomEvent):Boolean { return false;}
 }
 
 }

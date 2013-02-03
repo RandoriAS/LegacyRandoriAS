@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -43,12 +44,8 @@ package randori.webkit.workers
 import randori.webkit.page.WorkerNavigator;
 import randori.webkit.dom.DomEvent;
 import randori.webkit.dom.MessageEvent;
-import randori.webkit.dom.MessageChannel;
 import randori.webkit.page.EventSource;
 import randori.webkit.xml.XMLHttpRequest;
-import randori.webkit.fileapi.Blob;
-import randori.webkit.fileapi.FileReader;
-import randori.webkit.fileapi.FileReaderSync;
 import randori.webkit.html.URL;
 import randori.webkit.html.canvas.ArrayBuffer;
 import randori.webkit.html.canvas.DataView;
@@ -138,13 +135,6 @@ public class WorkerContext
 	public function get WorkerLocation_():WorkerLocation { return null; }
 	public function set WorkerLocation_(value:WorkerLocation):void { }
 
-	[JavascriptProperty(name="MessageChannel")]
-	/**
-	*  @see randori.webkit.dom.MessageChannel
-	*/
-	public function get MessageChannel_():MessageChannel { return null; }
-	public function set MessageChannel_(value:MessageChannel):void { }
-
 	[JavascriptProperty(name="EventSource")]
 	/**
 	*  @see randori.webkit.page.EventSource
@@ -158,27 +148,6 @@ public class WorkerContext
 	*/
 	public function get XMLHttpRequest_():XMLHttpRequest { return null; }
 	public function set XMLHttpRequest_(value:XMLHttpRequest):void { }
-
-	[JavascriptProperty(name="Blob")]
-	/**
-	*  @see randori.webkit.fileapi.Blob
-	*/
-	public function get Blob_():Blob { return null; }
-	public function set Blob_(value:Blob):void { }
-
-	[JavascriptProperty(name="FileReader")]
-	/**
-	*  @see randori.webkit.fileapi.FileReader
-	*/
-	public function get FileReader_():FileReader { return null; }
-	public function set FileReader_(value:FileReader):void { }
-
-	[JavascriptProperty(name="FileReaderSync")]
-	/**
-	*  @see randori.webkit.fileapi.FileReaderSync
-	*/
-	public function get FileReaderSync_():FileReaderSync { return null; }
-	public function set FileReaderSync_(value:FileReaderSync):void { }
 
 	[JavascriptProperty(name="URL")]
 	/**

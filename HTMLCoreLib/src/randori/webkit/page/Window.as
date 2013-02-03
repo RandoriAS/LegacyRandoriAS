@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -45,27 +46,36 @@ import randori.webkit.dom.Element;
 import randori.webkit.dom.Document;
 import randori.webkit.css.MediaQueryList;
 import randori.webkit.css.StyleMedia;
+import randori.webkit.css.CSSStyleDeclaration;
+import randori.webkit.css.CSSRuleList;
 import randori.webkit.loader.appcache.DOMApplicationCache;
 import randori.webkit.storage.Storage;
 import randori.webkit.css.StyleSheet;
 import randori.webkit.css.CSSStyleSheet;
 import randori.webkit.css.CSSValue;
 import randori.webkit.css.CSSPrimitiveValue;
+import randori.webkit.css.CSSValueList;
 import randori.webkit.css.CSSRule;
 import randori.webkit.css.CSSCharsetRule;
 import randori.webkit.css.CSSFontFaceRule;
-import randori.webkit.css.CSSHostRule;
 import randori.webkit.css.CSSImportRule;
 import randori.webkit.css.CSSMediaRule;
 import randori.webkit.css.CSSPageRule;
 import randori.webkit.css.CSSStyleRule;
+import randori.webkit.css.MediaList;
 import randori.webkit.css.Counter;
 import randori.webkit.css.Rect;
 import randori.webkit.css.RGBColor;
+import randori.webkit.css.StyleSheetList;
+import randori.webkit.dom.DOMStringList;
 import randori.webkit.dom.DOMImplementation;
 import randori.webkit.html.DOMSettableTokenList;
+import randori.webkit.html.DOMTokenList;
 import randori.webkit.dom.DocumentFragment;
 import randori.webkit.dom.Node;
+import randori.webkit.dom.NodeList;
+import randori.webkit.dom.PropertyNodeList;
+import randori.webkit.dom.NamedNodeMap;
 import randori.webkit.dom.CharacterData;
 import randori.webkit.dom.Attr;
 import randori.webkit.dom.Text;
@@ -117,7 +127,6 @@ import randori.webkit.html.HTMLMapElement;
 import randori.webkit.html.HTMLMarqueeElement;
 import randori.webkit.html.HTMLMenuElement;
 import randori.webkit.html.HTMLMetaElement;
-import randori.webkit.html.HTMLMeterElement;
 import randori.webkit.html.HTMLModElement;
 import randori.webkit.html.HTMLOListElement;
 import randori.webkit.html.HTMLObjectElement;
@@ -127,9 +136,9 @@ import randori.webkit.html.HTMLOutputElement;
 import randori.webkit.html.HTMLParagraphElement;
 import randori.webkit.html.HTMLParamElement;
 import randori.webkit.html.HTMLPreElement;
-import randori.webkit.html.HTMLProgressElement;
 import randori.webkit.html.HTMLQuoteElement;
 import randori.webkit.html.HTMLScriptElement;
+import randori.webkit.html.HTMLSelectElement;
 import randori.webkit.html.HTMLSpanElement;
 import randori.webkit.html.HTMLStyleElement;
 import randori.webkit.html.HTMLTableCaptionElement;
@@ -142,13 +151,19 @@ import randori.webkit.html.HTMLTemplateElement;
 import randori.webkit.html.HTMLTextAreaElement;
 import randori.webkit.html.HTMLTitleElement;
 import randori.webkit.html.HTMLUListElement;
+import randori.webkit.html.HTMLCollection;
+import randori.webkit.html.HTMLAllCollection;
+import randori.webkit.html.HTMLFormControlsCollection;
 import randori.webkit.html.HTMLOptionsCollection;
+import randori.webkit.html.HTMLPropertiesCollection;
 import randori.webkit.html.HTMLUnknownElement;
 import randori.webkit.html.MediaKeyError;
 import randori.webkit.html.MediaKeyEvent;
 import randori.webkit.html.HTMLTrackElement;
 import randori.webkit.html.track.TextTrack;
 import randori.webkit.html.track.TextTrackCue;
+import randori.webkit.html.track.TextTrackCueList;
+import randori.webkit.html.track.TextTrackList;
 import randori.webkit.html.track.TrackEvent;
 import randori.webkit.html.HTMLAudioElement;
 import randori.webkit.html.HTMLMediaElement;
@@ -199,6 +214,7 @@ import randori.webkit.dom.DeviceMotionEvent;
 import randori.webkit.dom.DeviceOrientationEvent;
 import randori.webkit.dom.Touch;
 import randori.webkit.dom.TouchEvent;
+import randori.webkit.dom.TouchList;
 import randori.webkit.storage.StorageEvent;
 import randori.webkit.html.canvas.WebGLContextEvent;
 import randori.webkit.modules.proximity.DeviceProximityEvent;
@@ -207,6 +223,7 @@ import randori.webkit.dom.Clipboard;
 import randori.webkit.workers.Worker;
 import randori.webkit.workers.SharedWorker;
 import randori.webkit.fileapi.File;
+import randori.webkit.fileapi.FileList;
 import randori.webkit.fileapi.Blob;
 import randori.webkit.dom.NodeFilter;
 import randori.webkit.dom.Range;
@@ -215,153 +232,13 @@ import randori.webkit.xml.XMLSerializer;
 import randori.webkit.xml.XMLHttpRequest;
 import randori.webkit.xml.XMLHttpRequestUpload;
 import randori.webkit.xml.XSLTProcessor;
-import randori.webkit.dom.MessagePort;
-import randori.webkit.dom.MessageChannel;
+import randori.webkit.plugins.Plugin;
 import randori.webkit.plugins.MimeType;
 import randori.webkit.dom.ClientRect;
+import randori.webkit.dom.ClientRectList;
 import randori.webkit.xml.XPathEvaluator;
 import randori.webkit.xml.XPathResult;
 import randori.webkit.svg.SVGZoomEvent;
-import randori.webkit.svg.SVGAElement;
-import randori.webkit.svg.SVGAngle;
-import randori.webkit.svg.SVGAnimatedAngle;
-import randori.webkit.svg.SVGAnimatedBoolean;
-import randori.webkit.svg.SVGAnimatedEnumeration;
-import randori.webkit.svg.SVGAnimatedInteger;
-import randori.webkit.svg.SVGAnimatedLength;
-import randori.webkit.svg.SVGAnimatedLengthList;
-import randori.webkit.svg.SVGAnimatedNumber;
-import randori.webkit.svg.SVGAnimatedNumberList;
-import randori.webkit.svg.SVGAnimatedPreserveAspectRatio;
-import randori.webkit.svg.SVGAnimatedRect;
-import randori.webkit.svg.SVGAnimatedString;
-import randori.webkit.svg.SVGAnimatedTransformList;
-import randori.webkit.svg.SVGCircleElement;
-import randori.webkit.svg.SVGClipPathElement;
-import randori.webkit.svg.SVGColor;
-import randori.webkit.svg.SVGCursorElement;
-import randori.webkit.svg.SVGDefsElement;
-import randori.webkit.svg.SVGDescElement;
-import randori.webkit.svg.SVGDocument;
-import randori.webkit.svg.SVGElement;
-import randori.webkit.svg.SVGElementInstance;
-import randori.webkit.svg.SVGElementInstanceList;
-import randori.webkit.svg.SVGEllipseElement;
-import randori.webkit.svg.SVGForeignObjectElement;
-import randori.webkit.svg.SVGGElement;
-import randori.webkit.svg.SVGGradientElement;
-import randori.webkit.svg.SVGImageElement;
-import randori.webkit.svg.SVGLength;
-import randori.webkit.svg.SVGLengthList;
-import randori.webkit.svg.SVGLinearGradientElement;
-import randori.webkit.svg.SVGLineElement;
-import randori.webkit.svg.SVGMarkerElement;
-import randori.webkit.svg.SVGMaskElement;
-import randori.webkit.svg.SVGMatrix;
-import randori.webkit.svg.SVGMetadataElement;
-import randori.webkit.svg.SVGNumber;
-import randori.webkit.svg.SVGNumberList;
-import randori.webkit.svg.SVGPaint;
-import randori.webkit.svg.SVGPathElement;
-import randori.webkit.svg.SVGPathSeg;
-import randori.webkit.svg.SVGPathSegArcAbs;
-import randori.webkit.svg.SVGPathSegArcRel;
-import randori.webkit.svg.SVGPathSegClosePath;
-import randori.webkit.svg.SVGPathSegCurvetoCubicAbs;
-import randori.webkit.svg.SVGPathSegCurvetoCubicRel;
-import randori.webkit.svg.SVGPathSegCurvetoCubicSmoothAbs;
-import randori.webkit.svg.SVGPathSegCurvetoCubicSmoothRel;
-import randori.webkit.svg.SVGPathSegCurvetoQuadraticAbs;
-import randori.webkit.svg.SVGPathSegCurvetoQuadraticRel;
-import randori.webkit.svg.SVGPathSegCurvetoQuadraticSmoothAbs;
-import randori.webkit.svg.SVGPathSegCurvetoQuadraticSmoothRel;
-import randori.webkit.svg.SVGPathSegLinetoAbs;
-import randori.webkit.svg.SVGPathSegLinetoHorizontalAbs;
-import randori.webkit.svg.SVGPathSegLinetoHorizontalRel;
-import randori.webkit.svg.SVGPathSegLinetoRel;
-import randori.webkit.svg.SVGPathSegLinetoVerticalAbs;
-import randori.webkit.svg.SVGPathSegLinetoVerticalRel;
-import randori.webkit.svg.SVGPathSegList;
-import randori.webkit.svg.SVGPathSegMovetoAbs;
-import randori.webkit.svg.SVGPathSegMovetoRel;
-import randori.webkit.svg.SVGPatternElement;
-import randori.webkit.svg.SVGPoint;
-import randori.webkit.svg.SVGPointList;
-import randori.webkit.svg.SVGPolygonElement;
-import randori.webkit.svg.SVGPolylineElement;
-import randori.webkit.svg.SVGPreserveAspectRatio;
-import randori.webkit.svg.SVGRadialGradientElement;
-import randori.webkit.svg.SVGRect;
-import randori.webkit.svg.SVGRectElement;
-import randori.webkit.svg.SVGRenderingIntent;
-import randori.webkit.svg.SVGScriptElement;
-import randori.webkit.svg.SVGStopElement;
-import randori.webkit.svg.SVGStringList;
-import randori.webkit.svg.SVGStyleElement;
-import randori.webkit.svg.SVGSVGElement;
-import randori.webkit.svg.SVGSwitchElement;
-import randori.webkit.svg.SVGSymbolElement;
-import randori.webkit.svg.SVGTextContentElement;
-import randori.webkit.svg.SVGTextElement;
-import randori.webkit.svg.SVGTextPathElement;
-import randori.webkit.svg.SVGTextPositioningElement;
-import randori.webkit.svg.SVGTitleElement;
-import randori.webkit.svg.SVGTransform;
-import randori.webkit.svg.SVGTransformList;
-import randori.webkit.svg.SVGTRefElement;
-import randori.webkit.svg.SVGTSpanElement;
-import randori.webkit.svg.SVGUnitTypes;
-import randori.webkit.svg.SVGUseElement;
-import randori.webkit.svg.SVGViewElement;
-import randori.webkit.svg.SVGViewSpec;
-import randori.webkit.svg.SVGZoomAndPan;
-import randori.webkit.svg.SVGAnimateColorElement;
-import randori.webkit.svg.SVGAnimateElement;
-import randori.webkit.svg.SVGAnimateMotionElement;
-import randori.webkit.svg.SVGAnimateTransformElement;
-import randori.webkit.svg.SVGMPathElement;
-import randori.webkit.svg.SVGSetElement;
-import randori.webkit.svg.SVGAltGlyphDefElement;
-import randori.webkit.svg.SVGAltGlyphElement;
-import randori.webkit.svg.SVGAltGlyphItemElement;
-import randori.webkit.svg.SVGFontElement;
-import randori.webkit.svg.SVGFontFaceElement;
-import randori.webkit.svg.SVGFontFaceFormatElement;
-import randori.webkit.svg.SVGFontFaceNameElement;
-import randori.webkit.svg.SVGFontFaceSrcElement;
-import randori.webkit.svg.SVGFontFaceUriElement;
-import randori.webkit.svg.SVGGlyphElement;
-import randori.webkit.svg.SVGGlyphRefElement;
-import randori.webkit.svg.SVGHKernElement;
-import randori.webkit.svg.SVGMissingGlyphElement;
-import randori.webkit.svg.SVGVKernElement;
-import randori.webkit.svg.SVGComponentTransferFunctionElement;
-import randori.webkit.svg.SVGFEBlendElement;
-import randori.webkit.svg.SVGFEColorMatrixElement;
-import randori.webkit.svg.SVGFEComponentTransferElement;
-import randori.webkit.svg.SVGFECompositeElement;
-import randori.webkit.svg.SVGFEConvolveMatrixElement;
-import randori.webkit.svg.SVGFEDiffuseLightingElement;
-import randori.webkit.svg.SVGFEDisplacementMapElement;
-import randori.webkit.svg.SVGFEDistantLightElement;
-import randori.webkit.svg.SVGFEDropShadowElement;
-import randori.webkit.svg.SVGFEFloodElement;
-import randori.webkit.svg.SVGFEFuncAElement;
-import randori.webkit.svg.SVGFEFuncBElement;
-import randori.webkit.svg.SVGFEFuncGElement;
-import randori.webkit.svg.SVGFEFuncRElement;
-import randori.webkit.svg.SVGFEGaussianBlurElement;
-import randori.webkit.svg.SVGFEImageElement;
-import randori.webkit.svg.SVGFEMergeElement;
-import randori.webkit.svg.SVGFEMergeNodeElement;
-import randori.webkit.svg.SVGFEMorphologyElement;
-import randori.webkit.svg.SVGFEOffsetElement;
-import randori.webkit.svg.SVGFEPointLightElement;
-import randori.webkit.svg.SVGFESpecularLightingElement;
-import randori.webkit.svg.SVGFESpotLightElement;
-import randori.webkit.svg.SVGFETileElement;
-import randori.webkit.svg.SVGFETurbulenceElement;
-import randori.webkit.svg.SVGFilterElement;
 import randori.webkit.html.FormData;
 import randori.webkit.fileapi.FileError;
 import randori.webkit.fileapi.FileReader;
@@ -623,13 +500,13 @@ public class Window
 	*  @param pseudoElement (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>CSSStyleDeclaration</code> instance.
 	*/
-	public function getComputedStyle(element:Element=undefined, pseudoElement:String=undefined):Object { return null;}
+	public function getComputedStyle(element:Element=undefined, pseudoElement:String=undefined):CSSStyleDeclaration { return null;}
 	/**
 	*  @param element (optional argument, default value is <code>undefined</code>)
 	*  @param pseudoElement (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>CSSRuleList</code> instance.
 	*/
-	public function getMatchedCSSRules(element:Element=undefined, pseudoElement:String=undefined):Object { return null;}
+	public function getMatchedCSSRules(element:Element=undefined, pseudoElement:String=undefined):CSSRuleList { return null;}
 
 	public function get devicePixelRatio():Number { return 0; }
 
@@ -648,8 +525,6 @@ public class Window
 	*/
 	public function get localStorage():Storage { return null; }
 
-	public function get orientation():uint { return 0; }
-
 	/**
 	*  @see randori.webkit.page.Console
 	*/
@@ -660,11 +535,6 @@ public class Window
 	*  @param messagePorts
 	*/
 	public function postMessage(message:Object, targetOrigin:String, messagePorts:Array):void {}
-
-	/**
-	*  @see randori.webkit.page.Performance
-	*/
-	public function get performance():Performance { return null; }
 	/**
 	*  @param handler (optional argument, default value is <code>undefined</code>)
 	*  @param timeout (optional argument, default value is <code>undefined</code>)
@@ -685,15 +555,6 @@ public class Window
 	*  @param handle (optional argument, default value is <code>undefined</code>)
 	*/
 	public function clearInterval(handle:uint=undefined):void {}
-	/**
-	*  @param callback
-	*  @return A <code>uint</code> instance.
-	*/
-	public function requestAnimationFrame(callback:Object):uint { return 0;}
-	/**
-	*  @param id
-	*/
-	public function cancelAnimationFrame(id:uint):void {}
 	/**
 	*  @param string (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
@@ -1090,18 +951,6 @@ public class Window
 	public function set onsearch(value:Function):void { }
 
 	/**
-	*  Function that accepts an event of type <code>TransitionendEvent</code>.
-	*/
-	public function get ontransitionend():Function { return null; }
-	public function set ontransitionend(value:Function):void { }
-
-	/**
-	*  Function that accepts an event of type <code>OrientationchangeEvent</code>.
-	*/
-	public function get onorientationchange():Function { return null; }
-	public function set onorientationchange(value:Function):void { }
-
-	/**
 	*  Function that accepts an event of type <code>TouchstartEvent</code>.
 	*/
 	public function get ontouchstart():Function { return null; }
@@ -1186,11 +1035,12 @@ public class Window
 	public function get CSSPrimitiveValue_():CSSPrimitiveValue { return null; }
 	public function set CSSPrimitiveValue_(value:CSSPrimitiveValue):void { }
 
+	[JavascriptProperty(name="CSSValueList")]
 	/**
 	*  @see randori.webkit.css.CSSValueList
 	*/
-	public function get CSSValueList():Object { return null; }
-	public function set CSSValueList(value:Object):void { }
+	public function get CSSValueList_():CSSValueList { return null; }
+	public function set CSSValueList_(value:CSSValueList):void { }
 
 	[JavascriptProperty(name="CSSRule")]
 	/**
@@ -1212,13 +1062,6 @@ public class Window
 	*/
 	public function get CSSFontFaceRule_():CSSFontFaceRule { return null; }
 	public function set CSSFontFaceRule_(value:CSSFontFaceRule):void { }
-
-	[JavascriptProperty(name="CSSHostRule")]
-	/**
-	*  @see randori.webkit.css.CSSHostRule
-	*/
-	public function get CSSHostRule_():CSSHostRule { return null; }
-	public function set CSSHostRule_(value:CSSHostRule):void { }
 
 	[JavascriptProperty(name="CSSImportRule")]
 	/**
@@ -1248,17 +1091,19 @@ public class Window
 	public function get CSSStyleRule_():CSSStyleRule { return null; }
 	public function set CSSStyleRule_(value:CSSStyleRule):void { }
 
+	[JavascriptProperty(name="CSSStyleDeclaration")]
 	/**
 	*  @see randori.webkit.css.CSSStyleDeclaration
 	*/
-	public function get CSSStyleDeclaration():Object { return null; }
-	public function set CSSStyleDeclaration(value:Object):void { }
+	public function get CSSStyleDeclaration_():CSSStyleDeclaration { return null; }
+	public function set CSSStyleDeclaration_(value:CSSStyleDeclaration):void { }
 
+	[JavascriptProperty(name="MediaList")]
 	/**
 	*  @see randori.webkit.css.MediaList
 	*/
-	public function get MediaList():Object { return null; }
-	public function set MediaList(value:Object):void { }
+	public function get MediaList_():MediaList { return null; }
+	public function set MediaList_(value:MediaList):void { }
 
 	[JavascriptProperty(name="Counter")]
 	/**
@@ -1267,11 +1112,12 @@ public class Window
 	public function get Counter_():Counter { return null; }
 	public function set Counter_(value:Counter):void { }
 
+	[JavascriptProperty(name="CSSRuleList")]
 	/**
 	*  @see randori.webkit.css.CSSRuleList
 	*/
-	public function get CSSRuleList():Object { return null; }
-	public function set CSSRuleList(value:Object):void { }
+	public function get CSSRuleList_():CSSRuleList { return null; }
+	public function set CSSRuleList_(value:CSSRuleList):void { }
 
 	[JavascriptProperty(name="Rect")]
 	/**
@@ -1287,20 +1133,22 @@ public class Window
 	public function get RGBColor_():RGBColor { return null; }
 	public function set RGBColor_(value:RGBColor):void { }
 
+	[JavascriptProperty(name="StyleSheetList")]
 	/**
 	*  @see randori.webkit.css.StyleSheetList
 	*/
-	public function get StyleSheetList():Object { return null; }
-	public function set StyleSheetList(value:Object):void { }
+	public function get StyleSheetList_():StyleSheetList { return null; }
+	public function set StyleSheetList_(value:StyleSheetList):void { }
 
 	public function get DOMException():Object { return null; }
 	public function set DOMException(value:Object):void { }
 
+	[JavascriptProperty(name="DOMStringList")]
 	/**
 	*  @see randori.webkit.dom.DOMStringList
 	*/
-	public function get DOMStringList():Object { return null; }
-	public function set DOMStringList(value:Object):void { }
+	public function get DOMStringList_():DOMStringList { return null; }
+	public function set DOMStringList_(value:DOMStringList):void { }
 
 	[JavascriptProperty(name="DOMImplementation")]
 	/**
@@ -1316,11 +1164,12 @@ public class Window
 	public function get DOMSettableTokenList_():DOMSettableTokenList { return null; }
 	public function set DOMSettableTokenList_(value:DOMSettableTokenList):void { }
 
+	[JavascriptProperty(name="DOMTokenList")]
 	/**
 	*  @see randori.webkit.html.DOMTokenList
 	*/
-	public function get DOMTokenList():Object { return null; }
-	public function set DOMTokenList(value:Object):void { }
+	public function get DOMTokenList_():DOMTokenList { return null; }
+	public function set DOMTokenList_(value:DOMTokenList):void { }
 
 	[JavascriptProperty(name="DocumentFragment")]
 	/**
@@ -1343,23 +1192,26 @@ public class Window
 	public function get Node_():Node { return null; }
 	public function set Node_(value:Node):void { }
 
+	[JavascriptProperty(name="NodeList")]
 	/**
 	*  @see randori.webkit.dom.NodeList
 	*/
-	public function get NodeList():Object { return null; }
-	public function set NodeList(value:Object):void { }
+	public function get NodeList_():NodeList { return null; }
+	public function set NodeList_(value:NodeList):void { }
 
+	[JavascriptProperty(name="PropertyNodeList")]
 	/**
 	*  @see randori.webkit.dom.PropertyNodeList
 	*/
-	public function get PropertyNodeList():Object { return null; }
-	public function set PropertyNodeList(value:Object):void { }
+	public function get PropertyNodeList_():PropertyNodeList { return null; }
+	public function set PropertyNodeList_(value:PropertyNodeList):void { }
 
+	[JavascriptProperty(name="NamedNodeMap")]
 	/**
 	*  @see randori.webkit.dom.NamedNodeMap
 	*/
-	public function get NamedNodeMap():Object { return null; }
-	public function set NamedNodeMap(value:Object):void { }
+	public function get NamedNodeMap_():NamedNodeMap { return null; }
+	public function set NamedNodeMap_(value:NamedNodeMap):void { }
 
 	[JavascriptProperty(name="CharacterData")]
 	/**
@@ -1738,13 +1590,6 @@ public class Window
 	public function get HTMLMetaElement_():HTMLMetaElement { return null; }
 	public function set HTMLMetaElement_(value:HTMLMetaElement):void { }
 
-	[JavascriptProperty(name="HTMLMeterElement")]
-	/**
-	*  @see randori.webkit.html.HTMLMeterElement
-	*/
-	public function get HTMLMeterElement_():HTMLMeterElement { return null; }
-	public function set HTMLMeterElement_(value:HTMLMeterElement):void { }
-
 	[JavascriptProperty(name="HTMLModElement")]
 	/**
 	*  @see randori.webkit.html.HTMLModElement
@@ -1808,13 +1653,6 @@ public class Window
 	public function get HTMLPreElement_():HTMLPreElement { return null; }
 	public function set HTMLPreElement_(value:HTMLPreElement):void { }
 
-	[JavascriptProperty(name="HTMLProgressElement")]
-	/**
-	*  @see randori.webkit.html.HTMLProgressElement
-	*/
-	public function get HTMLProgressElement_():HTMLProgressElement { return null; }
-	public function set HTMLProgressElement_(value:HTMLProgressElement):void { }
-
 	[JavascriptProperty(name="HTMLQuoteElement")]
 	/**
 	*  @see randori.webkit.html.HTMLQuoteElement
@@ -1829,11 +1667,12 @@ public class Window
 	public function get HTMLScriptElement_():HTMLScriptElement { return null; }
 	public function set HTMLScriptElement_(value:HTMLScriptElement):void { }
 
+	[JavascriptProperty(name="HTMLSelectElement")]
 	/**
 	*  @see randori.webkit.html.HTMLSelectElement
 	*/
-	public function get HTMLSelectElement():Object { return null; }
-	public function set HTMLSelectElement(value:Object):void { }
+	public function get HTMLSelectElement_():HTMLSelectElement { return null; }
+	public function set HTMLSelectElement_(value:HTMLSelectElement):void { }
 
 	[JavascriptProperty(name="HTMLSpanElement")]
 	/**
@@ -1919,23 +1758,26 @@ public class Window
 	public function get HTMLUListElement_():HTMLUListElement { return null; }
 	public function set HTMLUListElement_(value:HTMLUListElement):void { }
 
+	[JavascriptProperty(name="HTMLCollection")]
 	/**
 	*  @see randori.webkit.html.HTMLCollection
 	*/
-	public function get HTMLCollection():Object { return null; }
-	public function set HTMLCollection(value:Object):void { }
+	public function get HTMLCollection_():HTMLCollection { return null; }
+	public function set HTMLCollection_(value:HTMLCollection):void { }
 
+	[JavascriptProperty(name="HTMLAllCollection")]
 	/**
 	*  @see randori.webkit.html.HTMLAllCollection
 	*/
-	public function get HTMLAllCollection():Object { return null; }
-	public function set HTMLAllCollection(value:Object):void { }
+	public function get HTMLAllCollection_():HTMLAllCollection { return null; }
+	public function set HTMLAllCollection_(value:HTMLAllCollection):void { }
 
+	[JavascriptProperty(name="HTMLFormControlsCollection")]
 	/**
 	*  @see randori.webkit.html.HTMLFormControlsCollection
 	*/
-	public function get HTMLFormControlsCollection():Object { return null; }
-	public function set HTMLFormControlsCollection(value:Object):void { }
+	public function get HTMLFormControlsCollection_():HTMLFormControlsCollection { return null; }
+	public function set HTMLFormControlsCollection_(value:HTMLFormControlsCollection):void { }
 
 	[JavascriptProperty(name="HTMLOptionsCollection")]
 	/**
@@ -1944,11 +1786,12 @@ public class Window
 	public function get HTMLOptionsCollection_():HTMLOptionsCollection { return null; }
 	public function set HTMLOptionsCollection_(value:HTMLOptionsCollection):void { }
 
+	[JavascriptProperty(name="HTMLPropertiesCollection")]
 	/**
 	*  @see randori.webkit.html.HTMLPropertiesCollection
 	*/
-	public function get HTMLPropertiesCollection():Object { return null; }
-	public function set HTMLPropertiesCollection(value:Object):void { }
+	public function get HTMLPropertiesCollection_():HTMLPropertiesCollection { return null; }
+	public function set HTMLPropertiesCollection_(value:HTMLPropertiesCollection):void { }
 
 	[JavascriptProperty(name="HTMLUnknownElement")]
 	/**
@@ -2004,17 +1847,19 @@ public class Window
 	public function get TextTrackCue_():TextTrackCue { return null; }
 	public function set TextTrackCue_(value:TextTrackCue):void { }
 
+	[JavascriptProperty(name="TextTrackCueList")]
 	/**
 	*  @see randori.webkit.html.track.TextTrackCueList
 	*/
-	public function get TextTrackCueList():Object { return null; }
-	public function set TextTrackCueList(value:Object):void { }
+	public function get TextTrackCueList_():TextTrackCueList { return null; }
+	public function set TextTrackCueList_(value:TextTrackCueList):void { }
 
+	[JavascriptProperty(name="TextTrackList")]
 	/**
 	*  @see randori.webkit.html.track.TextTrackList
 	*/
-	public function get TextTrackList():Object { return null; }
-	public function set TextTrackList(value:Object):void { }
+	public function get TextTrackList_():TextTrackList { return null; }
+	public function set TextTrackList_(value:TextTrackList):void { }
 
 	[JavascriptProperty(name="TrackEvent")]
 	/**
@@ -2441,11 +2286,12 @@ public class Window
 	public function get TouchEvent_():TouchEvent { return null; }
 	public function set TouchEvent_(value:TouchEvent):void { }
 
+	[JavascriptProperty(name="TouchList")]
 	/**
 	*  @see randori.webkit.dom.TouchList
 	*/
-	public function get TouchList():Object { return null; }
-	public function set TouchList(value:Object):void { }
+	public function get TouchList_():TouchList { return null; }
+	public function set TouchList_(value:TouchList):void { }
 
 	[JavascriptProperty(name="StorageEvent")]
 	/**
@@ -2513,11 +2359,12 @@ public class Window
 	public function get File_():File { return null; }
 	public function set File_(value:File):void { }
 
+	[JavascriptProperty(name="FileList")]
 	/**
 	*  @see randori.webkit.fileapi.FileList
 	*/
-	public function get FileList():Object { return null; }
-	public function set FileList(value:Object):void { }
+	public function get FileList_():FileList { return null; }
+	public function set FileList_(value:FileList):void { }
 
 	[JavascriptProperty(name="Blob")]
 	/**
@@ -2594,31 +2441,19 @@ public class Window
 	public function get XSLTProcessor_():XSLTProcessor { return null; }
 	public function set XSLTProcessor_(value:XSLTProcessor):void { }
 
-	[JavascriptProperty(name="MessagePort")]
-	/**
-	*  @see randori.webkit.dom.MessagePort
-	*/
-	public function get MessagePort_():MessagePort { return null; }
-	public function set MessagePort_(value:MessagePort):void { }
-
-	[JavascriptProperty(name="MessageChannel")]
-	/**
-	*  @see randori.webkit.dom.MessageChannel
-	*/
-	public function get MessageChannel_():MessageChannel { return null; }
-	public function set MessageChannel_(value:MessageChannel):void { }
-
+	[JavascriptProperty(name="Plugin")]
 	/**
 	*  @see randori.webkit.plugins.Plugin
 	*/
-	public function get Plugin():Object { return null; }
-	public function set Plugin(value:Object):void { }
+	public function get Plugin_():Plugin { return null; }
+	public function set Plugin_(value:Plugin):void { }
 
+	[JavascriptProperty(name="PluginArray")]
 	/**
 	*  @see randori.webkit.plugins.PluginArray
 	*/
-	public function get PluginArray():Object { return null; }
-	public function set PluginArray(value:Object):void { }
+	public function get PluginArray_():Object { return null; }
+	public function set PluginArray_(value:Object):void { }
 
 	[JavascriptProperty(name="MimeType")]
 	/**
@@ -2627,11 +2462,12 @@ public class Window
 	public function get MimeType_():MimeType { return null; }
 	public function set MimeType_(value:MimeType):void { }
 
+	[JavascriptProperty(name="MimeTypeArray")]
 	/**
 	*  @see randori.webkit.plugins.MimeTypeArray
 	*/
-	public function get MimeTypeArray():Object { return null; }
-	public function set MimeTypeArray(value:Object):void { }
+	public function get MimeTypeArray_():Object { return null; }
+	public function set MimeTypeArray_(value:Object):void { }
 
 	[JavascriptProperty(name="ClientRect")]
 	/**
@@ -2640,11 +2476,12 @@ public class Window
 	public function get ClientRect_():ClientRect { return null; }
 	public function set ClientRect_(value:ClientRect):void { }
 
+	[JavascriptProperty(name="ClientRectList")]
 	/**
 	*  @see randori.webkit.dom.ClientRectList
 	*/
-	public function get ClientRectList():Object { return null; }
-	public function set ClientRectList(value:Object):void { }
+	public function get ClientRectList_():ClientRectList { return null; }
+	public function set ClientRectList_(value:ClientRectList):void { }
 
 	[JavascriptProperty(name="Storage")]
 	/**
@@ -2677,989 +2514,6 @@ public class Window
 	public function get SVGZoomEvent_():SVGZoomEvent { return null; }
 	public function set SVGZoomEvent_(value:SVGZoomEvent):void { }
 
-	[JavascriptProperty(name="SVGAElement")]
-	/**
-	*  @see randori.webkit.svg.SVGAElement
-	*/
-	public function get SVGAElement_():SVGAElement { return null; }
-	public function set SVGAElement_(value:SVGAElement):void { }
-
-	[JavascriptProperty(name="SVGAngle")]
-	/**
-	*  @see randori.webkit.svg.SVGAngle
-	*/
-	public function get SVGAngle_():SVGAngle { return null; }
-	public function set SVGAngle_(value:SVGAngle):void { }
-
-	[JavascriptProperty(name="SVGAnimatedAngle")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimatedAngle
-	*/
-	public function get SVGAnimatedAngle_():SVGAnimatedAngle { return null; }
-	public function set SVGAnimatedAngle_(value:SVGAnimatedAngle):void { }
-
-	[JavascriptProperty(name="SVGAnimatedBoolean")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimatedBoolean
-	*/
-	public function get SVGAnimatedBoolean_():SVGAnimatedBoolean { return null; }
-	public function set SVGAnimatedBoolean_(value:SVGAnimatedBoolean):void { }
-
-	[JavascriptProperty(name="SVGAnimatedEnumeration")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimatedEnumeration
-	*/
-	public function get SVGAnimatedEnumeration_():SVGAnimatedEnumeration { return null; }
-	public function set SVGAnimatedEnumeration_(value:SVGAnimatedEnumeration):void { }
-
-	[JavascriptProperty(name="SVGAnimatedInteger")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimatedInteger
-	*/
-	public function get SVGAnimatedInteger_():SVGAnimatedInteger { return null; }
-	public function set SVGAnimatedInteger_(value:SVGAnimatedInteger):void { }
-
-	[JavascriptProperty(name="SVGAnimatedLength")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimatedLength
-	*/
-	public function get SVGAnimatedLength_():SVGAnimatedLength { return null; }
-	public function set SVGAnimatedLength_(value:SVGAnimatedLength):void { }
-
-	[JavascriptProperty(name="SVGAnimatedLengthList")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimatedLengthList
-	*/
-	public function get SVGAnimatedLengthList_():SVGAnimatedLengthList { return null; }
-	public function set SVGAnimatedLengthList_(value:SVGAnimatedLengthList):void { }
-
-	[JavascriptProperty(name="SVGAnimatedNumber")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimatedNumber
-	*/
-	public function get SVGAnimatedNumber_():SVGAnimatedNumber { return null; }
-	public function set SVGAnimatedNumber_(value:SVGAnimatedNumber):void { }
-
-	[JavascriptProperty(name="SVGAnimatedNumberList")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimatedNumberList
-	*/
-	public function get SVGAnimatedNumberList_():SVGAnimatedNumberList { return null; }
-	public function set SVGAnimatedNumberList_(value:SVGAnimatedNumberList):void { }
-
-	[JavascriptProperty(name="SVGAnimatedPreserveAspectRatio")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimatedPreserveAspectRatio
-	*/
-	public function get SVGAnimatedPreserveAspectRatio_():SVGAnimatedPreserveAspectRatio { return null; }
-	public function set SVGAnimatedPreserveAspectRatio_(value:SVGAnimatedPreserveAspectRatio):void { }
-
-	[JavascriptProperty(name="SVGAnimatedRect")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimatedRect
-	*/
-	public function get SVGAnimatedRect_():SVGAnimatedRect { return null; }
-	public function set SVGAnimatedRect_(value:SVGAnimatedRect):void { }
-
-	[JavascriptProperty(name="SVGAnimatedString")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimatedString
-	*/
-	public function get SVGAnimatedString_():SVGAnimatedString { return null; }
-	public function set SVGAnimatedString_(value:SVGAnimatedString):void { }
-
-	[JavascriptProperty(name="SVGAnimatedTransformList")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimatedTransformList
-	*/
-	public function get SVGAnimatedTransformList_():SVGAnimatedTransformList { return null; }
-	public function set SVGAnimatedTransformList_(value:SVGAnimatedTransformList):void { }
-
-	[JavascriptProperty(name="SVGCircleElement")]
-	/**
-	*  @see randori.webkit.svg.SVGCircleElement
-	*/
-	public function get SVGCircleElement_():SVGCircleElement { return null; }
-	public function set SVGCircleElement_(value:SVGCircleElement):void { }
-
-	[JavascriptProperty(name="SVGClipPathElement")]
-	/**
-	*  @see randori.webkit.svg.SVGClipPathElement
-	*/
-	public function get SVGClipPathElement_():SVGClipPathElement { return null; }
-	public function set SVGClipPathElement_(value:SVGClipPathElement):void { }
-
-	[JavascriptProperty(name="SVGColor")]
-	/**
-	*  @see randori.webkit.svg.SVGColor
-	*/
-	public function get SVGColor_():SVGColor { return null; }
-	public function set SVGColor_(value:SVGColor):void { }
-
-	[JavascriptProperty(name="SVGCursorElement")]
-	/**
-	*  @see randori.webkit.svg.SVGCursorElement
-	*/
-	public function get SVGCursorElement_():SVGCursorElement { return null; }
-	public function set SVGCursorElement_(value:SVGCursorElement):void { }
-
-	[JavascriptProperty(name="SVGDefsElement")]
-	/**
-	*  @see randori.webkit.svg.SVGDefsElement
-	*/
-	public function get SVGDefsElement_():SVGDefsElement { return null; }
-	public function set SVGDefsElement_(value:SVGDefsElement):void { }
-
-	[JavascriptProperty(name="SVGDescElement")]
-	/**
-	*  @see randori.webkit.svg.SVGDescElement
-	*/
-	public function get SVGDescElement_():SVGDescElement { return null; }
-	public function set SVGDescElement_(value:SVGDescElement):void { }
-
-	[JavascriptProperty(name="SVGDocument")]
-	/**
-	*  @see randori.webkit.svg.SVGDocument
-	*/
-	public function get SVGDocument_():SVGDocument { return null; }
-	public function set SVGDocument_(value:SVGDocument):void { }
-
-	[JavascriptProperty(name="SVGElement")]
-	/**
-	*  @see randori.webkit.svg.SVGElement
-	*/
-	public function get SVGElement_():SVGElement { return null; }
-	public function set SVGElement_(value:SVGElement):void { }
-
-	[JavascriptProperty(name="SVGElementInstance")]
-	/**
-	*  @see randori.webkit.svg.SVGElementInstance
-	*/
-	public function get SVGElementInstance_():SVGElementInstance { return null; }
-	public function set SVGElementInstance_(value:SVGElementInstance):void { }
-
-	[JavascriptProperty(name="SVGElementInstanceList")]
-	/**
-	*  @see randori.webkit.svg.SVGElementInstanceList
-	*/
-	public function get SVGElementInstanceList_():SVGElementInstanceList { return null; }
-	public function set SVGElementInstanceList_(value:SVGElementInstanceList):void { }
-
-	[JavascriptProperty(name="SVGEllipseElement")]
-	/**
-	*  @see randori.webkit.svg.SVGEllipseElement
-	*/
-	public function get SVGEllipseElement_():SVGEllipseElement { return null; }
-	public function set SVGEllipseElement_(value:SVGEllipseElement):void { }
-
-	[JavascriptProperty(name="SVGForeignObjectElement")]
-	/**
-	*  @see randori.webkit.svg.SVGForeignObjectElement
-	*/
-	public function get SVGForeignObjectElement_():SVGForeignObjectElement { return null; }
-	public function set SVGForeignObjectElement_(value:SVGForeignObjectElement):void { }
-
-	public function get SVGException():Object { return null; }
-	public function set SVGException(value:Object):void { }
-
-	[JavascriptProperty(name="SVGGElement")]
-	/**
-	*  @see randori.webkit.svg.SVGGElement
-	*/
-	public function get SVGGElement_():SVGGElement { return null; }
-	public function set SVGGElement_(value:SVGGElement):void { }
-
-	[JavascriptProperty(name="SVGGradientElement")]
-	/**
-	*  @see randori.webkit.svg.SVGGradientElement
-	*/
-	public function get SVGGradientElement_():SVGGradientElement { return null; }
-	public function set SVGGradientElement_(value:SVGGradientElement):void { }
-
-	[JavascriptProperty(name="SVGImageElement")]
-	/**
-	*  @see randori.webkit.svg.SVGImageElement
-	*/
-	public function get SVGImageElement_():SVGImageElement { return null; }
-	public function set SVGImageElement_(value:SVGImageElement):void { }
-
-	[JavascriptProperty(name="SVGLength")]
-	/**
-	*  @see randori.webkit.svg.SVGLength
-	*/
-	public function get SVGLength_():SVGLength { return null; }
-	public function set SVGLength_(value:SVGLength):void { }
-
-	[JavascriptProperty(name="SVGLengthList")]
-	/**
-	*  @see randori.webkit.svg.SVGLengthList
-	*/
-	public function get SVGLengthList_():SVGLengthList { return null; }
-	public function set SVGLengthList_(value:SVGLengthList):void { }
-
-	[JavascriptProperty(name="SVGLinearGradientElement")]
-	/**
-	*  @see randori.webkit.svg.SVGLinearGradientElement
-	*/
-	public function get SVGLinearGradientElement_():SVGLinearGradientElement { return null; }
-	public function set SVGLinearGradientElement_(value:SVGLinearGradientElement):void { }
-
-	[JavascriptProperty(name="SVGLineElement")]
-	/**
-	*  @see randori.webkit.svg.SVGLineElement
-	*/
-	public function get SVGLineElement_():SVGLineElement { return null; }
-	public function set SVGLineElement_(value:SVGLineElement):void { }
-
-	[JavascriptProperty(name="SVGMarkerElement")]
-	/**
-	*  @see randori.webkit.svg.SVGMarkerElement
-	*/
-	public function get SVGMarkerElement_():SVGMarkerElement { return null; }
-	public function set SVGMarkerElement_(value:SVGMarkerElement):void { }
-
-	[JavascriptProperty(name="SVGMaskElement")]
-	/**
-	*  @see randori.webkit.svg.SVGMaskElement
-	*/
-	public function get SVGMaskElement_():SVGMaskElement { return null; }
-	public function set SVGMaskElement_(value:SVGMaskElement):void { }
-
-	[JavascriptProperty(name="SVGMatrix")]
-	/**
-	*  @see randori.webkit.svg.SVGMatrix
-	*/
-	public function get SVGMatrix_():SVGMatrix { return null; }
-	public function set SVGMatrix_(value:SVGMatrix):void { }
-
-	[JavascriptProperty(name="SVGMetadataElement")]
-	/**
-	*  @see randori.webkit.svg.SVGMetadataElement
-	*/
-	public function get SVGMetadataElement_():SVGMetadataElement { return null; }
-	public function set SVGMetadataElement_(value:SVGMetadataElement):void { }
-
-	[JavascriptProperty(name="SVGNumber")]
-	/**
-	*  @see randori.webkit.svg.SVGNumber
-	*/
-	public function get SVGNumber_():SVGNumber { return null; }
-	public function set SVGNumber_(value:SVGNumber):void { }
-
-	[JavascriptProperty(name="SVGNumberList")]
-	/**
-	*  @see randori.webkit.svg.SVGNumberList
-	*/
-	public function get SVGNumberList_():SVGNumberList { return null; }
-	public function set SVGNumberList_(value:SVGNumberList):void { }
-
-	[JavascriptProperty(name="SVGPaint")]
-	/**
-	*  @see randori.webkit.svg.SVGPaint
-	*/
-	public function get SVGPaint_():SVGPaint { return null; }
-	public function set SVGPaint_(value:SVGPaint):void { }
-
-	[JavascriptProperty(name="SVGPathElement")]
-	/**
-	*  @see randori.webkit.svg.SVGPathElement
-	*/
-	public function get SVGPathElement_():SVGPathElement { return null; }
-	public function set SVGPathElement_(value:SVGPathElement):void { }
-
-	[JavascriptProperty(name="SVGPathSeg")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSeg
-	*/
-	public function get SVGPathSeg_():SVGPathSeg { return null; }
-	public function set SVGPathSeg_(value:SVGPathSeg):void { }
-
-	[JavascriptProperty(name="SVGPathSegArcAbs")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegArcAbs
-	*/
-	public function get SVGPathSegArcAbs_():SVGPathSegArcAbs { return null; }
-	public function set SVGPathSegArcAbs_(value:SVGPathSegArcAbs):void { }
-
-	[JavascriptProperty(name="SVGPathSegArcRel")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegArcRel
-	*/
-	public function get SVGPathSegArcRel_():SVGPathSegArcRel { return null; }
-	public function set SVGPathSegArcRel_(value:SVGPathSegArcRel):void { }
-
-	[JavascriptProperty(name="SVGPathSegClosePath")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegClosePath
-	*/
-	public function get SVGPathSegClosePath_():SVGPathSegClosePath { return null; }
-	public function set SVGPathSegClosePath_(value:SVGPathSegClosePath):void { }
-
-	[JavascriptProperty(name="SVGPathSegCurvetoCubicAbs")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegCurvetoCubicAbs
-	*/
-	public function get SVGPathSegCurvetoCubicAbs_():SVGPathSegCurvetoCubicAbs { return null; }
-	public function set SVGPathSegCurvetoCubicAbs_(value:SVGPathSegCurvetoCubicAbs):void { }
-
-	[JavascriptProperty(name="SVGPathSegCurvetoCubicRel")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegCurvetoCubicRel
-	*/
-	public function get SVGPathSegCurvetoCubicRel_():SVGPathSegCurvetoCubicRel { return null; }
-	public function set SVGPathSegCurvetoCubicRel_(value:SVGPathSegCurvetoCubicRel):void { }
-
-	[JavascriptProperty(name="SVGPathSegCurvetoCubicSmoothAbs")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegCurvetoCubicSmoothAbs
-	*/
-	public function get SVGPathSegCurvetoCubicSmoothAbs_():SVGPathSegCurvetoCubicSmoothAbs { return null; }
-	public function set SVGPathSegCurvetoCubicSmoothAbs_(value:SVGPathSegCurvetoCubicSmoothAbs):void { }
-
-	[JavascriptProperty(name="SVGPathSegCurvetoCubicSmoothRel")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegCurvetoCubicSmoothRel
-	*/
-	public function get SVGPathSegCurvetoCubicSmoothRel_():SVGPathSegCurvetoCubicSmoothRel { return null; }
-	public function set SVGPathSegCurvetoCubicSmoothRel_(value:SVGPathSegCurvetoCubicSmoothRel):void { }
-
-	[JavascriptProperty(name="SVGPathSegCurvetoQuadraticAbs")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegCurvetoQuadraticAbs
-	*/
-	public function get SVGPathSegCurvetoQuadraticAbs_():SVGPathSegCurvetoQuadraticAbs { return null; }
-	public function set SVGPathSegCurvetoQuadraticAbs_(value:SVGPathSegCurvetoQuadraticAbs):void { }
-
-	[JavascriptProperty(name="SVGPathSegCurvetoQuadraticRel")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegCurvetoQuadraticRel
-	*/
-	public function get SVGPathSegCurvetoQuadraticRel_():SVGPathSegCurvetoQuadraticRel { return null; }
-	public function set SVGPathSegCurvetoQuadraticRel_(value:SVGPathSegCurvetoQuadraticRel):void { }
-
-	[JavascriptProperty(name="SVGPathSegCurvetoQuadraticSmoothAbs")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegCurvetoQuadraticSmoothAbs
-	*/
-	public function get SVGPathSegCurvetoQuadraticSmoothAbs_():SVGPathSegCurvetoQuadraticSmoothAbs { return null; }
-	public function set SVGPathSegCurvetoQuadraticSmoothAbs_(value:SVGPathSegCurvetoQuadraticSmoothAbs):void { }
-
-	[JavascriptProperty(name="SVGPathSegCurvetoQuadraticSmoothRel")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegCurvetoQuadraticSmoothRel
-	*/
-	public function get SVGPathSegCurvetoQuadraticSmoothRel_():SVGPathSegCurvetoQuadraticSmoothRel { return null; }
-	public function set SVGPathSegCurvetoQuadraticSmoothRel_(value:SVGPathSegCurvetoQuadraticSmoothRel):void { }
-
-	[JavascriptProperty(name="SVGPathSegLinetoAbs")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegLinetoAbs
-	*/
-	public function get SVGPathSegLinetoAbs_():SVGPathSegLinetoAbs { return null; }
-	public function set SVGPathSegLinetoAbs_(value:SVGPathSegLinetoAbs):void { }
-
-	[JavascriptProperty(name="SVGPathSegLinetoHorizontalAbs")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegLinetoHorizontalAbs
-	*/
-	public function get SVGPathSegLinetoHorizontalAbs_():SVGPathSegLinetoHorizontalAbs { return null; }
-	public function set SVGPathSegLinetoHorizontalAbs_(value:SVGPathSegLinetoHorizontalAbs):void { }
-
-	[JavascriptProperty(name="SVGPathSegLinetoHorizontalRel")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegLinetoHorizontalRel
-	*/
-	public function get SVGPathSegLinetoHorizontalRel_():SVGPathSegLinetoHorizontalRel { return null; }
-	public function set SVGPathSegLinetoHorizontalRel_(value:SVGPathSegLinetoHorizontalRel):void { }
-
-	[JavascriptProperty(name="SVGPathSegLinetoRel")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegLinetoRel
-	*/
-	public function get SVGPathSegLinetoRel_():SVGPathSegLinetoRel { return null; }
-	public function set SVGPathSegLinetoRel_(value:SVGPathSegLinetoRel):void { }
-
-	[JavascriptProperty(name="SVGPathSegLinetoVerticalAbs")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegLinetoVerticalAbs
-	*/
-	public function get SVGPathSegLinetoVerticalAbs_():SVGPathSegLinetoVerticalAbs { return null; }
-	public function set SVGPathSegLinetoVerticalAbs_(value:SVGPathSegLinetoVerticalAbs):void { }
-
-	[JavascriptProperty(name="SVGPathSegLinetoVerticalRel")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegLinetoVerticalRel
-	*/
-	public function get SVGPathSegLinetoVerticalRel_():SVGPathSegLinetoVerticalRel { return null; }
-	public function set SVGPathSegLinetoVerticalRel_(value:SVGPathSegLinetoVerticalRel):void { }
-
-	[JavascriptProperty(name="SVGPathSegList")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegList
-	*/
-	public function get SVGPathSegList_():SVGPathSegList { return null; }
-	public function set SVGPathSegList_(value:SVGPathSegList):void { }
-
-	[JavascriptProperty(name="SVGPathSegMovetoAbs")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegMovetoAbs
-	*/
-	public function get SVGPathSegMovetoAbs_():SVGPathSegMovetoAbs { return null; }
-	public function set SVGPathSegMovetoAbs_(value:SVGPathSegMovetoAbs):void { }
-
-	[JavascriptProperty(name="SVGPathSegMovetoRel")]
-	/**
-	*  @see randori.webkit.svg.SVGPathSegMovetoRel
-	*/
-	public function get SVGPathSegMovetoRel_():SVGPathSegMovetoRel { return null; }
-	public function set SVGPathSegMovetoRel_(value:SVGPathSegMovetoRel):void { }
-
-	[JavascriptProperty(name="SVGPatternElement")]
-	/**
-	*  @see randori.webkit.svg.SVGPatternElement
-	*/
-	public function get SVGPatternElement_():SVGPatternElement { return null; }
-	public function set SVGPatternElement_(value:SVGPatternElement):void { }
-
-	[JavascriptProperty(name="SVGPoint")]
-	/**
-	*  @see randori.webkit.svg.SVGPoint
-	*/
-	public function get SVGPoint_():SVGPoint { return null; }
-	public function set SVGPoint_(value:SVGPoint):void { }
-
-	[JavascriptProperty(name="SVGPointList")]
-	/**
-	*  @see randori.webkit.svg.SVGPointList
-	*/
-	public function get SVGPointList_():SVGPointList { return null; }
-	public function set SVGPointList_(value:SVGPointList):void { }
-
-	[JavascriptProperty(name="SVGPolygonElement")]
-	/**
-	*  @see randori.webkit.svg.SVGPolygonElement
-	*/
-	public function get SVGPolygonElement_():SVGPolygonElement { return null; }
-	public function set SVGPolygonElement_(value:SVGPolygonElement):void { }
-
-	[JavascriptProperty(name="SVGPolylineElement")]
-	/**
-	*  @see randori.webkit.svg.SVGPolylineElement
-	*/
-	public function get SVGPolylineElement_():SVGPolylineElement { return null; }
-	public function set SVGPolylineElement_(value:SVGPolylineElement):void { }
-
-	[JavascriptProperty(name="SVGPreserveAspectRatio")]
-	/**
-	*  @see randori.webkit.svg.SVGPreserveAspectRatio
-	*/
-	public function get SVGPreserveAspectRatio_():SVGPreserveAspectRatio { return null; }
-	public function set SVGPreserveAspectRatio_(value:SVGPreserveAspectRatio):void { }
-
-	[JavascriptProperty(name="SVGRadialGradientElement")]
-	/**
-	*  @see randori.webkit.svg.SVGRadialGradientElement
-	*/
-	public function get SVGRadialGradientElement_():SVGRadialGradientElement { return null; }
-	public function set SVGRadialGradientElement_(value:SVGRadialGradientElement):void { }
-
-	[JavascriptProperty(name="SVGRect")]
-	/**
-	*  @see randori.webkit.svg.SVGRect
-	*/
-	public function get SVGRect_():SVGRect { return null; }
-	public function set SVGRect_(value:SVGRect):void { }
-
-	[JavascriptProperty(name="SVGRectElement")]
-	/**
-	*  @see randori.webkit.svg.SVGRectElement
-	*/
-	public function get SVGRectElement_():SVGRectElement { return null; }
-	public function set SVGRectElement_(value:SVGRectElement):void { }
-
-	[JavascriptProperty(name="SVGRenderingIntent")]
-	/**
-	*  @see randori.webkit.svg.SVGRenderingIntent
-	*/
-	public function get SVGRenderingIntent_():SVGRenderingIntent { return null; }
-	public function set SVGRenderingIntent_(value:SVGRenderingIntent):void { }
-
-	[JavascriptProperty(name="SVGScriptElement")]
-	/**
-	*  @see randori.webkit.svg.SVGScriptElement
-	*/
-	public function get SVGScriptElement_():SVGScriptElement { return null; }
-	public function set SVGScriptElement_(value:SVGScriptElement):void { }
-
-	[JavascriptProperty(name="SVGStopElement")]
-	/**
-	*  @see randori.webkit.svg.SVGStopElement
-	*/
-	public function get SVGStopElement_():SVGStopElement { return null; }
-	public function set SVGStopElement_(value:SVGStopElement):void { }
-
-	[JavascriptProperty(name="SVGStringList")]
-	/**
-	*  @see randori.webkit.svg.SVGStringList
-	*/
-	public function get SVGStringList_():SVGStringList { return null; }
-	public function set SVGStringList_(value:SVGStringList):void { }
-
-	[JavascriptProperty(name="SVGStyleElement")]
-	/**
-	*  @see randori.webkit.svg.SVGStyleElement
-	*/
-	public function get SVGStyleElement_():SVGStyleElement { return null; }
-	public function set SVGStyleElement_(value:SVGStyleElement):void { }
-
-	[JavascriptProperty(name="SVGSVGElement")]
-	/**
-	*  @see randori.webkit.svg.SVGSVGElement
-	*/
-	public function get SVGSVGElement_():SVGSVGElement { return null; }
-	public function set SVGSVGElement_(value:SVGSVGElement):void { }
-
-	[JavascriptProperty(name="SVGSwitchElement")]
-	/**
-	*  @see randori.webkit.svg.SVGSwitchElement
-	*/
-	public function get SVGSwitchElement_():SVGSwitchElement { return null; }
-	public function set SVGSwitchElement_(value:SVGSwitchElement):void { }
-
-	[JavascriptProperty(name="SVGSymbolElement")]
-	/**
-	*  @see randori.webkit.svg.SVGSymbolElement
-	*/
-	public function get SVGSymbolElement_():SVGSymbolElement { return null; }
-	public function set SVGSymbolElement_(value:SVGSymbolElement):void { }
-
-	[JavascriptProperty(name="SVGTextContentElement")]
-	/**
-	*  @see randori.webkit.svg.SVGTextContentElement
-	*/
-	public function get SVGTextContentElement_():SVGTextContentElement { return null; }
-	public function set SVGTextContentElement_(value:SVGTextContentElement):void { }
-
-	[JavascriptProperty(name="SVGTextElement")]
-	/**
-	*  @see randori.webkit.svg.SVGTextElement
-	*/
-	public function get SVGTextElement_():SVGTextElement { return null; }
-	public function set SVGTextElement_(value:SVGTextElement):void { }
-
-	[JavascriptProperty(name="SVGTextPathElement")]
-	/**
-	*  @see randori.webkit.svg.SVGTextPathElement
-	*/
-	public function get SVGTextPathElement_():SVGTextPathElement { return null; }
-	public function set SVGTextPathElement_(value:SVGTextPathElement):void { }
-
-	[JavascriptProperty(name="SVGTextPositioningElement")]
-	/**
-	*  @see randori.webkit.svg.SVGTextPositioningElement
-	*/
-	public function get SVGTextPositioningElement_():SVGTextPositioningElement { return null; }
-	public function set SVGTextPositioningElement_(value:SVGTextPositioningElement):void { }
-
-	[JavascriptProperty(name="SVGTitleElement")]
-	/**
-	*  @see randori.webkit.svg.SVGTitleElement
-	*/
-	public function get SVGTitleElement_():SVGTitleElement { return null; }
-	public function set SVGTitleElement_(value:SVGTitleElement):void { }
-
-	[JavascriptProperty(name="SVGTransform")]
-	/**
-	*  @see randori.webkit.svg.SVGTransform
-	*/
-	public function get SVGTransform_():SVGTransform { return null; }
-	public function set SVGTransform_(value:SVGTransform):void { }
-
-	[JavascriptProperty(name="SVGTransformList")]
-	/**
-	*  @see randori.webkit.svg.SVGTransformList
-	*/
-	public function get SVGTransformList_():SVGTransformList { return null; }
-	public function set SVGTransformList_(value:SVGTransformList):void { }
-
-	[JavascriptProperty(name="SVGTRefElement")]
-	/**
-	*  @see randori.webkit.svg.SVGTRefElement
-	*/
-	public function get SVGTRefElement_():SVGTRefElement { return null; }
-	public function set SVGTRefElement_(value:SVGTRefElement):void { }
-
-	[JavascriptProperty(name="SVGTSpanElement")]
-	/**
-	*  @see randori.webkit.svg.SVGTSpanElement
-	*/
-	public function get SVGTSpanElement_():SVGTSpanElement { return null; }
-	public function set SVGTSpanElement_(value:SVGTSpanElement):void { }
-
-	[JavascriptProperty(name="SVGUnitTypes")]
-	/**
-	*  @see randori.webkit.svg.SVGUnitTypes
-	*/
-	public function get SVGUnitTypes_():SVGUnitTypes { return null; }
-	public function set SVGUnitTypes_(value:SVGUnitTypes):void { }
-
-	[JavascriptProperty(name="SVGUseElement")]
-	/**
-	*  @see randori.webkit.svg.SVGUseElement
-	*/
-	public function get SVGUseElement_():SVGUseElement { return null; }
-	public function set SVGUseElement_(value:SVGUseElement):void { }
-
-	[JavascriptProperty(name="SVGViewElement")]
-	/**
-	*  @see randori.webkit.svg.SVGViewElement
-	*/
-	public function get SVGViewElement_():SVGViewElement { return null; }
-	public function set SVGViewElement_(value:SVGViewElement):void { }
-
-	[JavascriptProperty(name="SVGViewSpec")]
-	/**
-	*  @see randori.webkit.svg.SVGViewSpec
-	*/
-	public function get SVGViewSpec_():SVGViewSpec { return null; }
-	public function set SVGViewSpec_(value:SVGViewSpec):void { }
-
-	[JavascriptProperty(name="SVGZoomAndPan")]
-	/**
-	*  @see randori.webkit.svg.SVGZoomAndPan
-	*/
-	public function get SVGZoomAndPan_():SVGZoomAndPan { return null; }
-	public function set SVGZoomAndPan_(value:SVGZoomAndPan):void { }
-
-	[JavascriptProperty(name="SVGAnimateColorElement")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimateColorElement
-	*/
-	public function get SVGAnimateColorElement_():SVGAnimateColorElement { return null; }
-	public function set SVGAnimateColorElement_(value:SVGAnimateColorElement):void { }
-
-	[JavascriptProperty(name="SVGAnimateElement")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimateElement
-	*/
-	public function get SVGAnimateElement_():SVGAnimateElement { return null; }
-	public function set SVGAnimateElement_(value:SVGAnimateElement):void { }
-
-	[JavascriptProperty(name="SVGAnimateMotionElement")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimateMotionElement
-	*/
-	public function get SVGAnimateMotionElement_():SVGAnimateMotionElement { return null; }
-	public function set SVGAnimateMotionElement_(value:SVGAnimateMotionElement):void { }
-
-	[JavascriptProperty(name="SVGAnimateTransformElement")]
-	/**
-	*  @see randori.webkit.svg.SVGAnimateTransformElement
-	*/
-	public function get SVGAnimateTransformElement_():SVGAnimateTransformElement { return null; }
-	public function set SVGAnimateTransformElement_(value:SVGAnimateTransformElement):void { }
-
-	[JavascriptProperty(name="SVGMPathElement")]
-	/**
-	*  @see randori.webkit.svg.SVGMPathElement
-	*/
-	public function get SVGMPathElement_():SVGMPathElement { return null; }
-	public function set SVGMPathElement_(value:SVGMPathElement):void { }
-
-	[JavascriptProperty(name="SVGSetElement")]
-	/**
-	*  @see randori.webkit.svg.SVGSetElement
-	*/
-	public function get SVGSetElement_():SVGSetElement { return null; }
-	public function set SVGSetElement_(value:SVGSetElement):void { }
-
-	[JavascriptProperty(name="SVGAltGlyphDefElement")]
-	/**
-	*  @see randori.webkit.svg.SVGAltGlyphDefElement
-	*/
-	public function get SVGAltGlyphDefElement_():SVGAltGlyphDefElement { return null; }
-	public function set SVGAltGlyphDefElement_(value:SVGAltGlyphDefElement):void { }
-
-	[JavascriptProperty(name="SVGAltGlyphElement")]
-	/**
-	*  @see randori.webkit.svg.SVGAltGlyphElement
-	*/
-	public function get SVGAltGlyphElement_():SVGAltGlyphElement { return null; }
-	public function set SVGAltGlyphElement_(value:SVGAltGlyphElement):void { }
-
-	[JavascriptProperty(name="SVGAltGlyphItemElement")]
-	/**
-	*  @see randori.webkit.svg.SVGAltGlyphItemElement
-	*/
-	public function get SVGAltGlyphItemElement_():SVGAltGlyphItemElement { return null; }
-	public function set SVGAltGlyphItemElement_(value:SVGAltGlyphItemElement):void { }
-
-	[JavascriptProperty(name="SVGFontElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFontElement
-	*/
-	public function get SVGFontElement_():SVGFontElement { return null; }
-	public function set SVGFontElement_(value:SVGFontElement):void { }
-
-	[JavascriptProperty(name="SVGFontFaceElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFontFaceElement
-	*/
-	public function get SVGFontFaceElement_():SVGFontFaceElement { return null; }
-	public function set SVGFontFaceElement_(value:SVGFontFaceElement):void { }
-
-	[JavascriptProperty(name="SVGFontFaceFormatElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFontFaceFormatElement
-	*/
-	public function get SVGFontFaceFormatElement_():SVGFontFaceFormatElement { return null; }
-	public function set SVGFontFaceFormatElement_(value:SVGFontFaceFormatElement):void { }
-
-	[JavascriptProperty(name="SVGFontFaceNameElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFontFaceNameElement
-	*/
-	public function get SVGFontFaceNameElement_():SVGFontFaceNameElement { return null; }
-	public function set SVGFontFaceNameElement_(value:SVGFontFaceNameElement):void { }
-
-	[JavascriptProperty(name="SVGFontFaceSrcElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFontFaceSrcElement
-	*/
-	public function get SVGFontFaceSrcElement_():SVGFontFaceSrcElement { return null; }
-	public function set SVGFontFaceSrcElement_(value:SVGFontFaceSrcElement):void { }
-
-	[JavascriptProperty(name="SVGFontFaceUriElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFontFaceUriElement
-	*/
-	public function get SVGFontFaceUriElement_():SVGFontFaceUriElement { return null; }
-	public function set SVGFontFaceUriElement_(value:SVGFontFaceUriElement):void { }
-
-	[JavascriptProperty(name="SVGGlyphElement")]
-	/**
-	*  @see randori.webkit.svg.SVGGlyphElement
-	*/
-	public function get SVGGlyphElement_():SVGGlyphElement { return null; }
-	public function set SVGGlyphElement_(value:SVGGlyphElement):void { }
-
-	[JavascriptProperty(name="SVGGlyphRefElement")]
-	/**
-	*  @see randori.webkit.svg.SVGGlyphRefElement
-	*/
-	public function get SVGGlyphRefElement_():SVGGlyphRefElement { return null; }
-	public function set SVGGlyphRefElement_(value:SVGGlyphRefElement):void { }
-
-	[JavascriptProperty(name="SVGHKernElement")]
-	/**
-	*  @see randori.webkit.svg.SVGHKernElement
-	*/
-	public function get SVGHKernElement_():SVGHKernElement { return null; }
-	public function set SVGHKernElement_(value:SVGHKernElement):void { }
-
-	[JavascriptProperty(name="SVGMissingGlyphElement")]
-	/**
-	*  @see randori.webkit.svg.SVGMissingGlyphElement
-	*/
-	public function get SVGMissingGlyphElement_():SVGMissingGlyphElement { return null; }
-	public function set SVGMissingGlyphElement_(value:SVGMissingGlyphElement):void { }
-
-	[JavascriptProperty(name="SVGVKernElement")]
-	/**
-	*  @see randori.webkit.svg.SVGVKernElement
-	*/
-	public function get SVGVKernElement_():SVGVKernElement { return null; }
-	public function set SVGVKernElement_(value:SVGVKernElement):void { }
-
-	[JavascriptProperty(name="SVGComponentTransferFunctionElement")]
-	/**
-	*  @see randori.webkit.svg.SVGComponentTransferFunctionElement
-	*/
-	public function get SVGComponentTransferFunctionElement_():SVGComponentTransferFunctionElement { return null; }
-	public function set SVGComponentTransferFunctionElement_(value:SVGComponentTransferFunctionElement):void { }
-
-	[JavascriptProperty(name="SVGFEBlendElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEBlendElement
-	*/
-	public function get SVGFEBlendElement_():SVGFEBlendElement { return null; }
-	public function set SVGFEBlendElement_(value:SVGFEBlendElement):void { }
-
-	[JavascriptProperty(name="SVGFEColorMatrixElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEColorMatrixElement
-	*/
-	public function get SVGFEColorMatrixElement_():SVGFEColorMatrixElement { return null; }
-	public function set SVGFEColorMatrixElement_(value:SVGFEColorMatrixElement):void { }
-
-	[JavascriptProperty(name="SVGFEComponentTransferElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEComponentTransferElement
-	*/
-	public function get SVGFEComponentTransferElement_():SVGFEComponentTransferElement { return null; }
-	public function set SVGFEComponentTransferElement_(value:SVGFEComponentTransferElement):void { }
-
-	[JavascriptProperty(name="SVGFECompositeElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFECompositeElement
-	*/
-	public function get SVGFECompositeElement_():SVGFECompositeElement { return null; }
-	public function set SVGFECompositeElement_(value:SVGFECompositeElement):void { }
-
-	[JavascriptProperty(name="SVGFEConvolveMatrixElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEConvolveMatrixElement
-	*/
-	public function get SVGFEConvolveMatrixElement_():SVGFEConvolveMatrixElement { return null; }
-	public function set SVGFEConvolveMatrixElement_(value:SVGFEConvolveMatrixElement):void { }
-
-	[JavascriptProperty(name="SVGFEDiffuseLightingElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEDiffuseLightingElement
-	*/
-	public function get SVGFEDiffuseLightingElement_():SVGFEDiffuseLightingElement { return null; }
-	public function set SVGFEDiffuseLightingElement_(value:SVGFEDiffuseLightingElement):void { }
-
-	[JavascriptProperty(name="SVGFEDisplacementMapElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEDisplacementMapElement
-	*/
-	public function get SVGFEDisplacementMapElement_():SVGFEDisplacementMapElement { return null; }
-	public function set SVGFEDisplacementMapElement_(value:SVGFEDisplacementMapElement):void { }
-
-	[JavascriptProperty(name="SVGFEDistantLightElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEDistantLightElement
-	*/
-	public function get SVGFEDistantLightElement_():SVGFEDistantLightElement { return null; }
-	public function set SVGFEDistantLightElement_(value:SVGFEDistantLightElement):void { }
-
-	[JavascriptProperty(name="SVGFEDropShadowElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEDropShadowElement
-	*/
-	public function get SVGFEDropShadowElement_():SVGFEDropShadowElement { return null; }
-	public function set SVGFEDropShadowElement_(value:SVGFEDropShadowElement):void { }
-
-	[JavascriptProperty(name="SVGFEFloodElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEFloodElement
-	*/
-	public function get SVGFEFloodElement_():SVGFEFloodElement { return null; }
-	public function set SVGFEFloodElement_(value:SVGFEFloodElement):void { }
-
-	[JavascriptProperty(name="SVGFEFuncAElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEFuncAElement
-	*/
-	public function get SVGFEFuncAElement_():SVGFEFuncAElement { return null; }
-	public function set SVGFEFuncAElement_(value:SVGFEFuncAElement):void { }
-
-	[JavascriptProperty(name="SVGFEFuncBElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEFuncBElement
-	*/
-	public function get SVGFEFuncBElement_():SVGFEFuncBElement { return null; }
-	public function set SVGFEFuncBElement_(value:SVGFEFuncBElement):void { }
-
-	[JavascriptProperty(name="SVGFEFuncGElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEFuncGElement
-	*/
-	public function get SVGFEFuncGElement_():SVGFEFuncGElement { return null; }
-	public function set SVGFEFuncGElement_(value:SVGFEFuncGElement):void { }
-
-	[JavascriptProperty(name="SVGFEFuncRElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEFuncRElement
-	*/
-	public function get SVGFEFuncRElement_():SVGFEFuncRElement { return null; }
-	public function set SVGFEFuncRElement_(value:SVGFEFuncRElement):void { }
-
-	[JavascriptProperty(name="SVGFEGaussianBlurElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEGaussianBlurElement
-	*/
-	public function get SVGFEGaussianBlurElement_():SVGFEGaussianBlurElement { return null; }
-	public function set SVGFEGaussianBlurElement_(value:SVGFEGaussianBlurElement):void { }
-
-	[JavascriptProperty(name="SVGFEImageElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEImageElement
-	*/
-	public function get SVGFEImageElement_():SVGFEImageElement { return null; }
-	public function set SVGFEImageElement_(value:SVGFEImageElement):void { }
-
-	[JavascriptProperty(name="SVGFEMergeElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEMergeElement
-	*/
-	public function get SVGFEMergeElement_():SVGFEMergeElement { return null; }
-	public function set SVGFEMergeElement_(value:SVGFEMergeElement):void { }
-
-	[JavascriptProperty(name="SVGFEMergeNodeElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEMergeNodeElement
-	*/
-	public function get SVGFEMergeNodeElement_():SVGFEMergeNodeElement { return null; }
-	public function set SVGFEMergeNodeElement_(value:SVGFEMergeNodeElement):void { }
-
-	[JavascriptProperty(name="SVGFEMorphologyElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEMorphologyElement
-	*/
-	public function get SVGFEMorphologyElement_():SVGFEMorphologyElement { return null; }
-	public function set SVGFEMorphologyElement_(value:SVGFEMorphologyElement):void { }
-
-	[JavascriptProperty(name="SVGFEOffsetElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEOffsetElement
-	*/
-	public function get SVGFEOffsetElement_():SVGFEOffsetElement { return null; }
-	public function set SVGFEOffsetElement_(value:SVGFEOffsetElement):void { }
-
-	[JavascriptProperty(name="SVGFEPointLightElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFEPointLightElement
-	*/
-	public function get SVGFEPointLightElement_():SVGFEPointLightElement { return null; }
-	public function set SVGFEPointLightElement_(value:SVGFEPointLightElement):void { }
-
-	[JavascriptProperty(name="SVGFESpecularLightingElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFESpecularLightingElement
-	*/
-	public function get SVGFESpecularLightingElement_():SVGFESpecularLightingElement { return null; }
-	public function set SVGFESpecularLightingElement_(value:SVGFESpecularLightingElement):void { }
-
-	[JavascriptProperty(name="SVGFESpotLightElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFESpotLightElement
-	*/
-	public function get SVGFESpotLightElement_():SVGFESpotLightElement { return null; }
-	public function set SVGFESpotLightElement_(value:SVGFESpotLightElement):void { }
-
-	[JavascriptProperty(name="SVGFETileElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFETileElement
-	*/
-	public function get SVGFETileElement_():SVGFETileElement { return null; }
-	public function set SVGFETileElement_(value:SVGFETileElement):void { }
-
-	[JavascriptProperty(name="SVGFETurbulenceElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFETurbulenceElement
-	*/
-	public function get SVGFETurbulenceElement_():SVGFETurbulenceElement { return null; }
-	public function set SVGFETurbulenceElement_(value:SVGFETurbulenceElement):void { }
-
-	[JavascriptProperty(name="SVGFilterElement")]
-	/**
-	*  @see randori.webkit.svg.SVGFilterElement
-	*/
-	public function get SVGFilterElement_():SVGFilterElement { return null; }
-	public function set SVGFilterElement_(value:SVGFilterElement):void { }
-
 	[JavascriptProperty(name="FormData")]
 	/**
 	*  @see randori.webkit.html.FormData
@@ -3687,10 +2541,6 @@ public class Window
 	*/
 	public function get URL_():URL { return null; }
 	public function set URL_(value:URL):void { }
-	/**
-	*  @return A <code>String</code> instance.
-	*/
-	public function toString():String { return '';}
 }
 
 }

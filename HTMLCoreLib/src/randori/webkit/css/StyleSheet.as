@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -44,10 +45,34 @@ import randori.webkit.dom.Node;
 
 [JavaScript(export="false", name="StyleSheet")]
 /**
+ *  <p>
+ *  The <code>StyleSheet</code> interface is the abstract base interface for
+ *  any type of style sheet. It represents a single style sheet associated
+ *  with a structured document. In HTML, the StyleSheet interface represents
+ *  either an external style sheet, included via the HTML
+ *  
+ *  LINK element, or an inline
+ *  
+ *  STYLE element. In XML, this interface represents an external
+ *  style sheet, included via a style sheet
+ *  processing instruction.
+ *  </p>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
  *  @since 1.0
+ *  @see http://www.w3.org/TR/1998/REC-html40-19980424/struct/links.html#h-12.3
+ *  @see http://www.w3.org/TR/1998/REC-html40-19980424/present/styles.html#h-14.2.3
+ *  @see http://www.w3.org/1999/06/REC-xml-stylesheet-19990629
+ *  @see http://www.w3.org/TR/1998/REC-html40-19980424/types.html#type-content-type
+ *  @see http://www.w3.org/TR/1998/REC-html40-19980424/struct/links.html#adef-type-A
+ *  @see http://www.w3.org/1999/06/REC-xml-stylesheet-19990629
+ *  @see http://www.w3.org/TR/1998/REC-html40-19980424/struct/links.html#adef-href
+ *  @see http://www.w3.org/1999/06/REC-xml-stylesheet-19990629/#The xml-stylesheet processing instruction
+ *  @see http://www.w3.org/TR/1998/REC-html40-19980424/struct/global.html#adef-title
+ *  @see http://www.w3.org/1999/06/REC-xml-stylesheet-19990629/#The xml-stylesheet processing instruction
+ *  @see http://www.w3.org/TR/1998/REC-html40-19980424/present/styles.html#adef-media
+ *  @see http://www.w3.org/1999/06/REC-xml-stylesheet-19990629/#The xml-stylesheet processing instruction
  */
 public class StyleSheet
 {
@@ -74,11 +99,7 @@ public class StyleSheet
 	/**
 	*  @see randori.webkit.css.MediaList
 	*/
-	public function get media():Object { return null; }
-	/**
-	*  @return A <code>Boolean</code> instance.
-	*/
-	public function isCSSStyleSheet():Boolean { return false;}
+	public function get media():MediaList { return null; }
 }
 
 }

@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -94,29 +95,33 @@ public class HTMLAnchorElement extends HTMLElement
 	public function set type(value:String):void { }
 
 	public function get hash():String { return ''; }
+	public function set hash(value:String):void { }
 
 	public function get host():String { return ''; }
+	public function set host(value:String):void { }
 
 	public function get hostname():String { return ''; }
+	public function set hostname(value:String):void { }
 
 	public function get pathname():String { return ''; }
+	public function set pathname(value:String):void { }
 
 	public function get port():String { return ''; }
+	public function set port(value:String):void { }
 
 	public function get protocol():String { return ''; }
+	public function set protocol(value:String):void { }
 
 	public function get search():String { return ''; }
+	public function set search(value:String):void { }
+
+	public function get origin():String { return ''; }
 
 	public function get text():String { return ''; }
 	/**
 	*  @return A <code>String</code> instance.
 	*/
 	public function toString():String { return '';}
-
-	/**
-	*  @see randori.webkit.html.URL
-	*/
-	public function get absoluteLinkURL():URL { return null; }
 }
 
 }

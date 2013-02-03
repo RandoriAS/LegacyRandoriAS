@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -41,11 +42,14 @@ package randori.webkit.dom
 {
 
 import randori.webkit.page.Window;
+import randori.webkit.css.StyleSheetList;
+import randori.webkit.css.CSSStyleDeclaration;
 import randori.webkit.xml.XPathNSResolver;
 import randori.webkit.xml.XPathExpression;
 import randori.webkit.xml.XPathResult;
 import randori.webkit.html.HTMLElement;
 import randori.webkit.html.HTMLHeadElement;
+import randori.webkit.html.HTMLCollection;
 import randori.webkit.page.Location;
 import randori.webkit.page.Selection;
 import randori.webkit.html.canvas.CanvasRenderingContext;
@@ -120,7 +124,7 @@ public class Document extends Node
 	*  @param tagname (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByTagName(tagname:String=undefined):Object { return null;}
+	public function getElementsByTagName(tagname:String=undefined):NodeList { return null;}
 	/**
 	*  @param importedNode (optional argument, default value is <code>undefined</code>)
 	*  @param deep (optional argument, default value is <code>false</code>)
@@ -144,7 +148,7 @@ public class Document extends Node
 	*  @param localName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByTagNameNS(namespaceURI:String=undefined, localName:String=undefined):Object { return null;}
+	public function getElementsByTagNameNS(namespaceURI:String=undefined, localName:String=undefined):NodeList { return null;}
 	/**
 	*  @param elementId (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Element</code> instance.
@@ -167,7 +171,6 @@ public class Document extends Node
 	public function adoptNode(source:Node=undefined):Node { return null;}
 
 	public function get documentURI():String { return ''; }
-	public function set documentURI(value:String):void { }
 	/**
 	*  @param eventType (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>DomEvent</code> instance.
@@ -202,13 +205,13 @@ public class Document extends Node
 	/**
 	*  @see randori.webkit.css.StyleSheetList
 	*/
-	public function get styleSheets():Object { return null; }
+	public function get styleSheets():StyleSheetList { return null; }
 	/**
 	*  @param element (optional argument, default value is <code>undefined</code>)
 	*  @param pseudoElement (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>CSSStyleDeclaration</code> instance.
 	*/
-	public function getOverrideStyle(element:Element=undefined, pseudoElement:String=undefined):Object { return null;}
+	public function getOverrideStyle(element:Element=undefined, pseudoElement:String=undefined):CSSStyleDeclaration { return null;}
 	/**
 	*  @param expression (optional argument, default value is <code>undefined</code>)
 	*  @param resolver (optional argument, default value is <code>undefined</code>)
@@ -290,39 +293,34 @@ public class Document extends Node
 	/**
 	*  @see randori.webkit.html.HTMLCollection
 	*/
-	public function get images():Object { return null; }
+	public function get images():HTMLCollection { return null; }
 
 	/**
 	*  @see randori.webkit.html.HTMLCollection
 	*/
-	public function get applets():Object { return null; }
+	public function get applets():HTMLCollection { return null; }
 
 	/**
 	*  @see randori.webkit.html.HTMLCollection
 	*/
-	public function get links():Object { return null; }
+	public function get links():HTMLCollection { return null; }
 
 	/**
 	*  @see randori.webkit.html.HTMLCollection
 	*/
-	public function get forms():Object { return null; }
+	public function get forms():HTMLCollection { return null; }
 
 	/**
 	*  @see randori.webkit.html.HTMLCollection
 	*/
-	public function get anchors():Object { return null; }
+	public function get anchors():HTMLCollection { return null; }
 
 	public function get lastModified():String { return ''; }
 	/**
 	*  @param elementName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByName(elementName:String=undefined):Object { return null;}
-	/**
-	*  @param typeNames (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>NodeList</code> instance.
-	*/
-	public function getItems(typeNames:String=undefined):Object { return null;}
+	public function getElementsByName(elementName:String=undefined):NodeList { return null;}
 
 	/**
 	*  @see randori.webkit.page.Location
@@ -360,23 +358,6 @@ public class Document extends Node
 	public function get selectedStylesheetSet():String { return ''; }
 	public function set selectedStylesheetSet(value:String):void { }
 	/**
-	*  @return A <code>CSSStyleDeclaration</code> instance.
-	*/
-	public function createCSSStyleDeclaration():Object { return null;}
-	/**
-	*  @param element
-	*  @param pseudoElement
-	*  @return A <code>CSSStyleDeclaration</code> instance.
-	*/
-	public function getComputedStyle(element:Element, pseudoElement:String):Object { return null;}
-	/**
-	*  @param element
-	*  @param pseudoElement
-	*  @param authorOnly (optional argument, default value is <code>false</code>)
-	*  @return A <code>CSSRuleList</code> instance.
-	*/
-	public function getMatchedCSSRules(element:Element, pseudoElement:String, authorOnly:Boolean=false):Object { return null;}
-	/**
 	*  @param contextId
 	*  @param name
 	*  @param width
@@ -388,7 +369,7 @@ public class Document extends Node
 	*  @param tagname (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByClassName(tagname:String=undefined):Object { return null;}
+	public function getElementsByClassName(tagname:String=undefined):NodeList { return null;}
 
 	public function get compatMode():String { return ''; }
 	/**
@@ -400,7 +381,7 @@ public class Document extends Node
 	*  @param selectors
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function querySelectorAll(selectors:String):Object { return null;}
+	public function querySelectorAll(selectors:String):NodeList { return null;}
 
 	public function get onabort():Function { return null; }
 	public function set onabort(value:Function):void { }
@@ -536,29 +517,6 @@ public class Document extends Node
 
 	public function get ontouchcancel():Function { return null; }
 	public function set ontouchcancel(value:Function):void { }
-	/**
-	*  @param window (optional argument, default value is <code>undefined</code>)
-	*  @param target (optional argument, default value is <code>undefined</code>)
-	*  @param identifier (optional argument, default value is <code>undefined</code>)
-	*  @param pageX (optional argument, default value is <code>undefined</code>)
-	*  @param pageY (optional argument, default value is <code>undefined</code>)
-	*  @param screenX (optional argument, default value is <code>undefined</code>)
-	*  @param screenY (optional argument, default value is <code>undefined</code>)
-	*  @param webkitRadiusX (optional argument, default value is <code>undefined</code>)
-	*  @param webkitRadiusY (optional argument, default value is <code>undefined</code>)
-	*  @param webkitRotationAngle (optional argument, default value is <code>undefined</code>)
-	*  @param webkitForce (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Touch</code> instance.
-	*/
-	public function createTouch(window:Window=undefined, target:EventTarget=undefined, identifier:uint=undefined, pageX:uint=undefined, pageY:uint=undefined, screenX:uint=undefined, screenY:uint=undefined, webkitRadiusX:uint=undefined, webkitRadiusY:uint=undefined, webkitRotationAngle:Number=undefined, webkitForce:Number=undefined):Touch { return null;}
-	/**
-	*  @return A <code>TouchList</code> instance.
-	*/
-	public function createTouchList():Object { return null;}
-	/**
-	*  @return A <code>Boolean</code> instance.
-	*/
-	public function isHTMLDocument():Boolean { return false;}
 
 	/**
 	*  @see randori.webkit.page.SecurityPolicy

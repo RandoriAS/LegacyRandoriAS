@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -43,10 +44,55 @@ package randori.webkit.css
 
 [JavaScript(export="false", name="CSSPrimitiveValue")]
 /**
+ *  <p>
+ *  The <code>CSSPrimitiveValue</code> interface represents a single
+ *  CSS value. This
+ *  interface may be used to determine the value of a specific style property
+ *  currently set in a block or to set a specific style property explicitly
+ *  within the block. An instance of this interface might be obtained from
+ *  the <code>getPropertyCSSValue</code> method of the
+ *  <code>CSSStyleDeclaration</code> interface. A
+ *  <code>CSSPrimitiveValue</code> object only occurs in a context of a CSS
+ *  property.
+ *  </p><p>
+ *  Conversions are allowed between absolute values (from millimeters to
+ *  centimeters, from degrees to radians, and so on) but not between relative
+ *  values. (For example, a pixel value cannot be converted to a centimeter
+ *  value.) Percentage values can't be converted since they are relative to
+ *  the parent value (or another property value). There is one exception for
+ *  color percentage values: since a color percentage value is relative to
+ *  the range 0-255, a color percentage value can be converted to a number;
+ *  (see also the <code>RGBColor</code> interface).
+ *  </p>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
  *  @since 1.0
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#values
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q13
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#percentage-units
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q19
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q19
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q19
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q20
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q20
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q21
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q21
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#strings
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#uri
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#value-def-identifier
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/generate.html#x16
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#counter
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/visufx.html#value-def-shape
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#color-units
  *  @see randori.webkit.css.CSSValue
  */
 public class CSSPrimitiveValue extends CSSValue

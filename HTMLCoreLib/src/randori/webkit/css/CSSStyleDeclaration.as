@@ -1,0 +1,136 @@
+
+/*******************************************************************************************************
+
+  This file was auto generated with the tool "WebIDLParser"
+
+  Content was generated from IDL file:
+  http://trac.webkit.org/browser/trunk/Source/WebCore/css/CSSStyleDeclaration.idl
+
+  PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
+  - Regenerate the project with the newest IDL files.
+  - or modify the WebIDLParser tool itself.
+
+********************************************************************************************************
+
+  Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
+  Copyright (C) 2009 Apple Inc. All Rights Reserved.
+
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
+
+  MIT License:
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+  associated documentation files (the "Software"), to deal in the Software without restriction, 
+  including without limitation the rights to use, copy, modify, merge, publish, distribute,
+  sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all copies or substantial
+  portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+  NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
+  OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*******************************************************************************************************/
+
+
+package randori.webkit.css
+{
+
+
+[JavaScript(export="false", name="CSSStyleDeclaration")]
+/**
+ *  <p>
+ *  The <code>CSSStyleDeclaration</code> interface represents a single
+ *  CSS declaration block. This interface may be used to determine the style properties
+ *  currently set in a block or to set style properties explicitly within
+ *  the block.
+ *  </p><p>
+ *  While an implementation may not recognize all CSS properties within a CSS
+ *  declaration block, it is expected to provide access to all specified
+ *  properties in the style sheet through the
+ *  <code>CSSStyleDeclaration</code> interface.  Furthermore, implementations
+ *  that support a specific level of CSS should correctly handle CSS shorthand properties
+ *  for that level. For a further discussion of shorthand properties, see the
+ *  <code>CSS2Properties</code> interface.
+ *  </p><p>
+ *  This interface is also used to provide a <b>read-only</b> access to the
+ *  computed
+ *  values of an element. See also the <code>ViewCSS</code>
+ *  interface.
+ *  </p><note><p>
+ *  The CSS Object Model doesn't provide an access to the specified or
+ *  actual values of the
+ *  CSS cascade.
+ *  </p></note>
+ *  @author RandoriAS
+ *  @version 1.0
+ *  @productversion RandoriAS 1.0
+ *  @since 1.0
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/about.html#shorthand
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/cascade.html#computed-value
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/cascade.html#specified-value
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/cascade.html#specified-value
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/propidx.html
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/about.html#shorthand
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/propidx.html
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/propidx.html
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/propidx.html
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/propidx.html
+ */
+public dynamic class CSSStyleDeclaration
+{
+
+	public function get cssText():String { return ''; }
+	public function set cssText(value:String):void { }
+	/**
+	*  @param propertyName (optional argument, default value is <code>undefined</code>)
+	*  @return A <code>String</code> instance.
+	*/
+	public function getPropertyValue(propertyName:String=undefined):String { return '';}
+	/**
+	*  @param propertyName (optional argument, default value is <code>undefined</code>)
+	*  @return A <code>CSSValue</code> instance.
+	*/
+	public function getPropertyCSSValue(propertyName:String=undefined):CSSValue { return null;}
+	/**
+	*  @param propertyName (optional argument, default value is <code>undefined</code>)
+	*  @return A <code>String</code> instance.
+	*/
+	public function removeProperty(propertyName:String=undefined):String { return '';}
+	/**
+	*  @param propertyName (optional argument, default value is <code>undefined</code>)
+	*  @return A <code>String</code> instance.
+	*/
+	public function getPropertyPriority(propertyName:String=undefined):String { return '';}
+	/**
+	*  @param propertyName (optional argument, default value is <code>undefined</code>)
+	*  @param value (optional argument, default value is <code>undefined</code>)
+	*  @param priority (optional argument, default value is <code>undefined</code>)
+	*/
+	public function setProperty(propertyName:String=undefined, value:String=undefined, priority:String=undefined):void {}
+
+	public function get length():uint { return 0; }
+
+	/**
+	*  @see randori.webkit.css.CSSRule
+	*/
+	public function get parentRule():CSSRule { return null; }
+	/**
+	*  @param propertyName (optional argument, default value is <code>undefined</code>)
+	*  @return A <code>String</code> instance.
+	*/
+	public function getPropertyShorthand(propertyName:String=undefined):String { return '';}
+	/**
+	*  @param propertyName (optional argument, default value is <code>undefined</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
+	public function isPropertyImplicit(propertyName:String=undefined):Boolean { return false;}
+}
+
+}
