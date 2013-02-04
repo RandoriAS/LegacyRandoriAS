@@ -50,10 +50,8 @@ package randori.webkit.dom
  *  ending '<code>--&gt;</code>'. Note that this is the definition
  *  of a comment in XML, and, in practice, HTML, although some HTML
  *  tools may implement the full SGML comment structure.</p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.CharacterData
  */
 public class Comment extends CharacterData

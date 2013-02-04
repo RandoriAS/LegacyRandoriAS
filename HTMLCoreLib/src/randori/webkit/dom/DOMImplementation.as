@@ -49,19 +49,30 @@ import randori.webkit.html.HTMLDocument;
  *  <p>The <code>DOMImplementation</code> interface provides a
  *  number of methods for performing operations that are independent
  *  of any particular instance of the document object model.</p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class DOMImplementation
 {
 	/**
 	*  <p>Test if the DOM implementation implements a
 	*  specific feature.</p>
-	*  @param feature (optional argument, default value is <code>undefined</code>)
-	*  @param version (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Boolean</code> instance.
+	*  @param feature <p>The name of the feature to test (case-insensitive). The
+	*  values used by DOM features are defined throughout the DOM Level 2 specifications and listed in
+	*  the <specref ref="ID-Conformance" /> section. The name must be an
+	*  XML name. To avoid possible
+	*  conflicts, as a convention, names referring to features defined
+	*  outside the DOM specification should be made unique by reversing the name of
+	*  the Internet domain name of the person (or the organization that the
+	*  person belongs to) who defines the feature, component by component,
+	*  and using this as a prefix. For instance, the W3C SVG Working Group
+	*  defines the feature "org.w3c.dom.svg".</p>
+	*  @param version <p>This is the version number of the feature to test. In Level
+	*  2, the string can be either "2.0" or "1.0". If the version is not
+	*  specified, supporting any version of the feature causes the method
+	*  to return <code>true</code>.</p>
+	*  @return <p><code>true</code> if the feature is implemented in the
+	*  specified version, <code>false</code> otherwise.</p>
 	*/
 	public function hasFeature(feature:String=undefined, version:String=undefined):Boolean { return false;}
 	/**
@@ -71,20 +82,38 @@ public class DOMImplementation
 	*  that a future version of the DOM will provide a way for populating a
 	*  <code>DocumentType</code>.</p><p>HTML-only DOM implementations do not need to
 	*  implement this method.</p>
-	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
-	*  @param publicId (optional argument, default value is <code>undefined</code>)
-	*  @param systemId (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>DocumentType</code> instance.
+	*  @param qualifiedName <p>The qualified name
+	*  of the document type to be created. </p>
+	*  @param publicId <p>The external subset public identifier.</p>
+	*  @param systemId <p>The external subset system identifier.</p>
+	*  @return <p>A new <code>DocumentType</code> node with
+	*  <code>Node.ownerDocument</code> set to <code>null</code>.</p>
+	*  @throw DOMException <p>INVALID_CHARACTER_ERR: Raised if the specified qualified name
+	*  contains an illegal character.</p><p>NAMESPACE_ERR: Raised if the <code>qualifiedName</code> is
+	*  malformed.</p>
 	*/
 	public function createDocumentType(qualifiedName:String=undefined, publicId:String=undefined, systemId:String=undefined):DocumentType { return null;}
 	/**
 	*  <p>Creates an XML <code>Document</code> object of the specified type
 	*  with its document element. HTML-only DOM implementations do not need to
 	*  implement this method.</p>
-	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
-	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
-	*  @param doctype (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Document</code> instance.
+	*  @param namespaceURI <p>The namespace URI of
+	*  the document element to create.</p>
+	*  @param qualifiedName <p>The qualified name
+	*  of the document element to be created.</p>
+	*  @param doctype <p>The type of document to be created or <code>null</code>.</p><p>When <code>doctype</code> is not <code>null</code>, its
+	*  <code>Node.ownerDocument</code> attribute is set to the document
+	*  being created.</p>
+	*  @return <p>A new <code>Document</code> object.</p>
+	*  @throw DOMException <p>INVALID_CHARACTER_ERR: Raised if the specified qualified name
+	*  contains an illegal character.</p><p>NAMESPACE_ERR: Raised if the <code>qualifiedName</code> is
+	*  malformed, if the <code>qualifiedName</code> has a prefix and
+	*  the <code>namespaceURI</code> is <code>null</code>, or if
+	*  the <code>qualifiedName</code> has a prefix that
+	*  is "xml" and the <code>namespaceURI</code> is different
+	*  from "<loc href="http://www.w3.org/XML/1998/namespace">http://www.w3.org/XML/1998/namespace</loc>" <bibref ref="Namespaces" />.</p><p>WRONG_DOCUMENT_ERR: Raised if <code>doctype</code> has already
+	*  been used with a different document or was created from a different
+	*  implementation.</p>
 	*/
 	public function createDocument(namespaceURI:String=undefined, qualifiedName:String=undefined, doctype:DocumentType=undefined):Document { return null;}
 	/**

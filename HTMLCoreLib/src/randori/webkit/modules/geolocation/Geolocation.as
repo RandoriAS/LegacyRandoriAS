@@ -44,10 +44,8 @@ package randori.webkit.modules.geolocation
 
 [JavaScript(export="false", nativecondition="GEOLOCATION", name="Geolocation")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class Geolocation
 {

@@ -53,10 +53,8 @@ package randori.webkit.css
  *  The items in the <code>CSSValueList</code> are accessible via an integral
  *  index, starting from 0.
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.css.CSSValue
  */
 public dynamic class CSSValueList extends CSSValue

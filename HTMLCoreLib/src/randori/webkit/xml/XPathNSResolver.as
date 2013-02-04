@@ -44,16 +44,24 @@ package randori.webkit.xml
 
 [JavaScript(export="false", name="XPathNSResolver")]
 /**
- *  @author RandoriAS
+ *  <p>The <code>XPathNSResolver</code> interface permit
+ *  <code>prefix</code> strings in the expression to be properly bound to
+ *  <code>namespaceURI</code> strings.  <code>XPathEvaluator</code> can
+ *  construct an implementation of <code>XPathNSResolver</code> from a
+ *  node, or the interface may be implemented by any application.</p>
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class XPathNSResolver
 {
 	/**
-	*  @param prefix (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>String</code> instance.
+	*  <p>Look up the namespace
+	*  URI associated to the given namespace prefix.  The
+	*  XPath evaluator must never call this with a <code>null</code> or
+	*  empty argument, because the result of doing this is undefined.</p>
+	*  @param prefix <p>The prefix to look for.</p>
+	*  @return <p>Returns the associated namespace URI or
+	*  <code>null</code> if none is found.</p>
 	*/
 	public function lookupNamespaceURI(prefix:String=undefined):String { return '';}
 }

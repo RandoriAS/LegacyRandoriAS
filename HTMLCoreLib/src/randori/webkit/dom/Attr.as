@@ -78,13 +78,11 @@ package randori.webkit.dom
  *  use; see the description of <code>EntityReference</code> for
  *  discussion). Because the DOM Core is not aware of attribute types, it
  *  treats all attribute values as simple strings, even if the DTD or schema
- *  declares them as having <termref def="dt-tokenized">tokenized</termref>
+ *  declares them as having tokenized
  *  types.
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.Node
  */
 public class Attr extends Node

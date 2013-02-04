@@ -44,10 +44,8 @@ package randori.webkit.html
 
 [JavaScript(export="false", nativecondition="WEB_INTENTS_TAG", name="HTMLIntentElement")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.html.HTMLElement
  */
 public class HTMLIntentElement extends HTMLElement

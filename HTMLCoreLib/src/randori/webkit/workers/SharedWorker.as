@@ -45,10 +45,8 @@ import randori.webkit.dom.MessagePort;
 
 [JavaScript(export="false", nativecondition="SHARED_WORKERS", name="SharedWorker")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.workers.AbstractWorker
  */
 public class SharedWorker extends AbstractWorker

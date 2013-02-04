@@ -46,10 +46,8 @@ import randori.webkit.dom.Element;
 
 [JavaScript(export="false", name="HTMLDocument")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.Document
  */
 public class HTMLDocument extends Document

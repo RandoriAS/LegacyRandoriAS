@@ -52,10 +52,8 @@ package randori.webkit.dom
  *  namespaces and the various XML schema efforts on DTD
  *  representation are not clearly understood as of this writing.</p><p>The DOM Level 2 doesn't support editing <code>DocumentType</code>
  *  nodes.</p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.Node
  */
 public class DocumentType extends Node

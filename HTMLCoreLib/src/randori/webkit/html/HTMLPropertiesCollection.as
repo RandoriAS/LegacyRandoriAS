@@ -45,10 +45,8 @@ import randori.webkit.dom.DOMStringList;
 
 [JavaScript(export="false", nativecondition="MICRODATA", name="HTMLPropertiesCollection")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.html.HTMLCollection
  */
 public class HTMLPropertiesCollection extends HTMLCollection

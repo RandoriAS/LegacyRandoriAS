@@ -49,10 +49,8 @@ package randori.webkit.css
  *  to represent a CSS style sheet i.e., a style sheet whose content type
  *  is "text/css".
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q8
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#at-rules
  *  @see randori.webkit.css.StyleSheet
@@ -89,16 +87,42 @@ public class CSSStyleSheet extends StyleSheet
 	*  Used to insert a new rule into the style sheet. The new rule now
 	*  becomes part of the cascade.
 	*  </p>
-	*  @param rule (optional argument, default value is <code>undefined</code>)
-	*  @param index (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>uint</code> instance.
+	*  @param rule <p>
+	*  The parsable text representing the rule. For rule sets
+	*  this contains both the selector and the style declaration.
+	*  For at-rules, this specifies both the at-identifier and the
+	*  rule content.
+	*  </p>
+	*  @param index <p>
+	*  The index within the style sheet's rule list of the rule
+	*  before which to insert the specified rule. If the
+	*  specified index is equal to the length of the style sheet's rule
+	*  collection, the rule will be added to the end of the style sheet.
+	*  </p>
+	*  @return <p>
+	*  The index within the style sheet's rule collection of the newly
+	*  inserted rule.
+	*  </p>
+	*  @throw DOMException <p>HIERARCHY_REQUEST_ERR: Raised if the rule cannot be inserted
+	*  at the specified index e.g. if an <code>@import</code> rule
+	*  is inserted after a standard rule set or other at-rule.</p><p>INDEX_SIZE_ERR: Raised if the specified index is not a valid
+	*  insertion point.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this style sheet is
+	*  readonly.</p><p>SYNTAX_ERR: Raised if the specified rule has a syntax error
+	*  and is unparsable.</p>
 	*/
 	public function insertRule(rule:String=undefined, index:uint=undefined):uint { return 0;}
 	/**
 	*  <p>
 	*  Used to delete a rule from the style sheet.
 	*  </p>
-	*  @param index (optional argument, default value is <code>undefined</code>)
+	*  @param index <p>
+	*  The index within the style sheet's rule list of the rule
+	*  to remove.
+	*  </p>
+	*  @return <p></p>
+	*  @throw DOMException <p>INDEX_SIZE_ERR: Raised if the specified index does not correspond
+	*  to a rule in the style sheet's rule list.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this style sheet is
+	*  readonly.</p>
 	*/
 	public function deleteRule(index:uint=undefined):void {}
 

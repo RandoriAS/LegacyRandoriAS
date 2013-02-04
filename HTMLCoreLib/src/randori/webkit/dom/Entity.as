@@ -65,17 +65,15 @@ package randori.webkit.dom
  *  has to be replaced in the structure model by a clone of the
  *  <code>Entity</code>'s contents, and then the desired changes must be made
  *  to each of those clones instead. <code>Entity</code> nodes and all their
- *  <termref def="dt-descendant">descendants</termref> are <termref def="dt-readonly-node">readonly</termref>.</p><p>An <code>Entity</code> node does not have any parent.</p><note><p>If the entity contains an unbound <termref def="dt-namespaceprefix">namespace prefix</termref>, the
+ *  descendants are readonly.</p><p>An <code>Entity</code> node does not have any parent.</p><note><p>If the entity contains an unbound namespace prefix, the
  *  <code>namespaceURI</code> of the corresponding node in the
  *  <code>Entity</code> node subtree is <code>null</code>. The same is
  *  true for <code>EntityReference</code> nodes that refer to this entity,
  *  when they are created using the <code>createEntityReference</code>
  *  method of the <code>Document</code> interface. The DOM Level 2 does not
  *  support any mechanism to resolve namespace prefixes.</p></note>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.Node
  */
 public class Entity extends Node

@@ -64,10 +64,8 @@ package randori.webkit.css
  *  the range 0-255, a color percentage value can be converted to a number;
  *  (see also the <code>RGBColor</code> interface).
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#values
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q13
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#percentage-units
@@ -127,8 +125,25 @@ public class CSSPrimitiveValue extends CSSValue
 	*  value, the value will be unchanged and a <code>DOMException</code> will
 	*  be raised.
 	*  </p>
-	*  @param unitType (optional argument, default value is <code>undefined</code>)
-	*  @param floatValue (optional argument, default value is <code>undefined</code>)
+	*  @param unitType <p>
+	*  A unit code as defined above. The unit code can only be a float
+	*  unit type (i.e. <code>CSS_NUMBER</code>,
+	*  <code>CSS_PERCENTAGE</code>, <code>CSS_EMS</code>,
+	*  <code>CSS_EXS</code>, <code>CSS_PX</code>, <code>CSS_CM</code>,
+	*  <code>CSS_MM</code>, <code>CSS_IN</code>, <code>CSS_PT</code>,
+	*  <code>CSS_PC</code>, <code>CSS_DEG</code>, <code>CSS_RAD</code>,
+	*  <code>CSS_GRAD</code>, <code>CSS_MS</code>, <code>CSS_S</code>,
+	*  <code>CSS_HZ</code>, <code>CSS_KHZ</code>,
+	*  <code>CSS_DIMENSION</code>).
+	*  </p>
+	*  @param floatValue <p>
+	*  The new float value.
+	*  </p>
+	*  @return 
+	*  @throw DOMException <p>
+	*  INVALID_ACCESS_ERR: Raised if the attached property doesn't support
+	*  the float value or the unit type.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this property is
+	*  readonly.</p>
 	*/
 	public function setFloatValue(unitType:uint=undefined, floatValue:Number=undefined):void {}
 	/**
@@ -137,8 +152,25 @@ public class CSSPrimitiveValue extends CSSValue
 	*  CSS value doesn't contain a float value or can't be converted into the
 	*  specified unit, a <code>DOMException</code> is raised.
 	*  </p>
-	*  @param unitType (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Number</code> instance.
+	*  @param unitType <p>
+	*  A unit code to get the float value.  The unit code can only be a
+	*  float unit type (i.e. <code>CSS_NUMBER</code>,
+	*  <code>CSS_PERCENTAGE</code>, <code>CSS_EMS</code>,
+	*  <code>CSS_EXS</code>, <code>CSS_PX</code>, <code>CSS_CM</code>,
+	*  <code>CSS_MM</code>, <code>CSS_IN</code>, <code>CSS_PT</code>,
+	*  <code>CSS_PC</code>, <code>CSS_DEG</code>, <code>CSS_RAD</code>,
+	*  <code>CSS_GRAD</code>, <code>CSS_MS</code>, <code>CSS_S</code>,
+	*  <code>CSS_HZ</code>, <code>CSS_KHZ</code>,
+	*  <code>CSS_DIMENSION</code>).
+	*  </p>
+	*  @return <p>
+	*  The float value in the specified unit.
+	*  </p>
+	*  @throw DOMException <p>
+	*  INVALID_ACCESS_ERR: Raised if the CSS value doesn't contain a float
+	*  value or if the float value can't be converted into the specified
+	*  unit.
+	*  </p>
 	*/
 	public function getFloatValue(unitType:uint=undefined):Number { return 0;}
 	/**
@@ -148,8 +180,21 @@ public class CSSPrimitiveValue extends CSSValue
 	*  string value, the value will be unchanged and a
 	*  <code>DOMException</code> will be raised.
 	*  </p>
-	*  @param stringType (optional argument, default value is <code>undefined</code>)
-	*  @param stringValue (optional argument, default value is <code>undefined</code>)
+	*  @param stringType <p>
+	*  A string code as defined above. The string code can only be a
+	*  string unit type (i.e. <code>CSS_STRING</code>,
+	*  <code>CSS_URI</code>, <code>CSS_IDENT</code>, and
+	*  <code>CSS_ATTR</code>).
+	*  </p>
+	*  @param stringValue <p>
+	*  The new string value.
+	*  </p>
+	*  @return 
+	*  @throw DOMException <p>
+	*  INVALID_ACCESS_ERR: Raised if the CSS value doesn't contain a string
+	*  value or if the string value can't be converted into the specified
+	*  unit.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this property is
+	*  readonly.</p>
 	*/
 	public function setStringValue(stringType:uint=undefined, stringValue:String=undefined):void {}
 	/**
@@ -162,7 +207,16 @@ public class CSSPrimitiveValue extends CSSValue
 	*  <loc href="http://www.w3.org/TR/1998/REC-CSS2-19980512/aural.html#propdef-voice-family">'voice-family'</loc>)
 	*  convert a whitespace separated list of idents to a string.
 	*  </p></note>
-	*  @return A <code>String</code> instance.
+	*  @return <p>
+	*  The string value in the current unit. The current
+	*  <code>primitiveType</code> can only be a string unit type
+	*  (i.e. <code>CSS_STRING</code>, <code>CSS_URI</code>,
+	*  <code>CSS_IDENT</code> and <code>CSS_ATTR</code>).
+	*  </p>
+	*  @throw DOMException <p>
+	*  INVALID_ACCESS_ERR: Raised if the CSS value doesn't contain a string
+	*  value.
+	*  </p>
 	*/
 	public function getStringValue():String { return '';}
 	/**
@@ -172,7 +226,11 @@ public class CSSPrimitiveValue extends CSSValue
 	*  raised. Modification to the corresponding style property can be
 	*  achieved using the <code>Counter</code> interface.
 	*  </p>
-	*  @return A <code>Counter</code> instance.
+	*  @return <p>The Counter value.</p>
+	*  @throw DOMException <p>
+	*  INVALID_ACCESS_ERR: Raised if the CSS value doesn't contain a
+	*  Counter value (e.g. this is not <code>CSS_COUNTER</code>).
+	*  </p>
 	*/
 	public function getCounterValue():Counter { return null;}
 	/**
@@ -182,7 +240,11 @@ public class CSSPrimitiveValue extends CSSValue
 	*  raised. Modification to the corresponding style property can be
 	*  achieved using the <code>Rect</code> interface.
 	*  </p>
-	*  @return A <code>Rect</code> instance.
+	*  @return <p>The Rect value.</p>
+	*  @throw DOMException <p>
+	*  INVALID_ACCESS_ERR: Raised if the CSS value doesn't contain a Rect
+	*  value.  (e.g. this is not <code>CSS_RECT</code>).
+	*  </p>
 	*/
 	public function getRectValue():Rect { return null;}
 	/**
@@ -192,7 +254,11 @@ public class CSSPrimitiveValue extends CSSValue
 	*  raised. Modification to the corresponding style property can be
 	*  achieved using the <code>RGBColor</code> interface.
 	*  </p>
-	*  @return A <code>RGBColor</code> instance.
+	*  @return <p>the RGB color value.</p>
+	*  @throw DOMException <p>
+	*  INVALID_ACCESS_ERR: Raised if the attached property can't return a
+	*  RGB color value (e.g. this is not <code>CSS_RGBCOLOR</code>).
+	*  </p>
 	*/
 	public function getRGBColorValue():RGBColor { return null;}
 }

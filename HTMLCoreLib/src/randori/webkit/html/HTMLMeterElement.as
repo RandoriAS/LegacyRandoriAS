@@ -45,10 +45,8 @@ import randori.webkit.dom.NodeList;
 
 [JavaScript(export="false", nativecondition="METER_ELEMENT", name="HTMLMeterElement")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.html.HTMLElement
  */
 public class HTMLMeterElement extends HTMLElement

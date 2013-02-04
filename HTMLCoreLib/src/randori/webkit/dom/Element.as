@@ -46,7 +46,7 @@ import randori.webkit.html.DOMTokenList;
 
 [JavaScript(export="false", name="Element")]
 /**
- *  <p>The <code>Element</code> interface represents an <termref def="dt-element">element</termref> in an HTML
+ *  <p>The <code>Element</code> interface represents an element in an HTML
  *  or XML document. Elements may have attributes associated with them; since the
  *  <code>Element</code> interface inherits from <code>Node</code>, the generic
  *  <code>Node</code> interface attribute <code>attributes</code> may be used
@@ -57,13 +57,11 @@ import randori.webkit.html.DOMTokenList;
  *  retrieved to examine the possibly fairly complex sub-tree representing the
  *  attribute value. On the other hand, in HTML, where all attributes have
  *  simple string values, methods to directly access an attribute value can
- *  safely be used as a <termref def="dt-convenience">convenience</termref>.</p><note><p>In DOM Level 2, the method <code>normalize</code> is
+ *  safely be used as a convenience.</p><note><p>In DOM Level 2, the method <code>normalize</code> is
  *  inherited from the <code>Node</code> interface where it was
  *  moved.</p></note>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.Node
  */
 public class Element extends Node
@@ -85,8 +83,9 @@ public class Element extends Node
 	public function get tagName():String { return ''; }
 	/**
 	*  <p>Retrieves an attribute value by name.</p>
-	*  @param name (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>String</code> instance.
+	*  @param name <p>The name of the attribute to retrieve.</p>
+	*  @return <p>The <code>Attr</code> value as a string, or the empty string if
+	*  that attribute does not have a specified or default value.</p>
 	*/
 	public function getAttribute(name:String=undefined):String { return '';}
 	/**
@@ -102,8 +101,11 @@ public class Element extends Node
 	*  use <code>setAttributeNode</code> to assign it as the value of an
 	*  attribute.</p><p>To set an attribute with a qualified name and namespace URI, use
 	*  the <code>setAttributeNS</code> method.</p>
-	*  @param name (optional argument, default value is <code>undefined</code>)
-	*  @param value (optional argument, default value is <code>undefined</code>)
+	*  @param name <p>The name of the attribute to create or alter.</p>
+	*  @param value <p>Value to set in string form.</p>
+	*  @return <p></p>
+	*  @throw DOMException <p>INVALID_CHARACTER_ERR: Raised if the specified name contains
+	*  an illegal character.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.</p>
 	*/
 	public function setAttribute(name:String=undefined, value:String=undefined):void {}
 	/**
@@ -112,14 +114,20 @@ public class Element extends Node
 	*  the default value as well as the corresponding namespace URI,
 	*  local name, and prefix when applicable.</p><p>To remove an attribute by local name and namespace URI, use
 	*  the <code>removeAttributeNS</code> method.</p>
-	*  @param name (optional argument, default value is <code>undefined</code>)
+	*  @param name <p>The name of the attribute to remove.</p>
+	*  @return <p></p>
+	*  @throw DOMException <p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is
+	*  readonly.</p>
 	*/
 	public function removeAttribute(name:String=undefined):void {}
 	/**
 	*  <p>Retrieves an attribute node by name.</p><p>To retrieve an attribute node by qualified name and namespace URI, use
 	*  the <code>getAttributeNodeNS</code> method.</p>
-	*  @param name (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Attr</code> instance.
+	*  @param name <p>The name (<code>nodeName</code>) of the attribute to
+	*  retrieve.</p>
+	*  @return <p>The <code>Attr</code> node with the specified
+	*  name (<code>nodeName</code>) or <code>null</code> if there is no such
+	*  attribute.</p>
 	*/
 	public function getAttributeNode(name:String=undefined):Attr { return null;}
 	/**
@@ -127,8 +135,17 @@ public class Element extends Node
 	*  (<code>nodeName</code>) is already present in the element, it is replaced
 	*  by the new one.</p><p>To add a new attribute node with a qualified name and namespace URI,
 	*  use the <code>setAttributeNodeNS</code> method.</p>
-	*  @param newAttr (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Attr</code> instance.
+	*  @param newAttr <p>The <code>Attr</code> node to add to the attribute
+	*  list.</p>
+	*  @return <p>If the <code>newAttr</code> attribute replaces
+	*  an existing attribute, the replaced <code>Attr</code> node is
+	*  returned, otherwise <code>null</code> is returned.</p>
+	*  @throw DOMException <p>WRONG_DOCUMENT_ERR: Raised if <code>newAttr</code> was
+	*  created from a different document than the one that created the
+	*  element.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.</p><p>INUSE_ATTRIBUTE_ERR: Raised if <code>newAttr</code> is already
+	*  an attribute of another <code>Element</code> object. The
+	*  DOM user must explicitly clone <code>Attr</code>
+	*  nodes to re-use them in other elements.</p>
 	*/
 	public function setAttributeNode(newAttr:Attr=undefined):Attr { return null;}
 	/**
@@ -137,25 +154,33 @@ public class Element extends Node
 	*  replaced. The replacing attribute has the same namespace URI
 	*  and local name, as well as the original prefix, when
 	*  applicable.</p>
-	*  @param oldAttr (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Attr</code> instance.
+	*  @param oldAttr <p>The <code>Attr</code> node to remove from the attribute
+	*  list.</p>
+	*  @return <p>The <code>Attr</code> node that was removed.</p>
+	*  @throw DOMException <p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is
+	*  readonly.</p><p>NOT_FOUND_ERR: Raised if <code>oldAttr</code> is not an attribute of
+	*  the element.</p>
 	*/
 	public function removeAttributeNode(oldAttr:Attr=undefined):Attr { return null;}
 	/**
-	*  <p>Returns a <code>NodeList</code> of all <termref def="dt-descendant">descendant</termref><code>Elements</code> with a given tag name, in the order in which they
+	*  <p>Returns a <code>NodeList</code> of all descendant<code>Elements</code> with a given tag name, in the order in which they
 	*  are encountered in a preorder traversal of this <code>Element</code>
 	*  tree.</p>
-	*  @param name (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>NodeList</code> instance.
+	*  @param name <p>The name of the tag to match on. The special value "*"
+	*  matches all tags.</p>
+	*  @return <p>A list of matching <code>Element</code> nodes.</p>
 	*/
 	public function getElementsByTagName(name:String=undefined):NodeList { return null;}
 	/**
 	*  <p>Retrieves an attribute value by local name and namespace
 	*  URI. HTML-only DOM implementations do not need to implement this
 	*  method.</p>
-	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
-	*  @param localName (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>String</code> instance.
+	*  @param namespaceURI <p>The namespace URI of
+	*  the attribute to retrieve.</p>
+	*  @param localName <p>The local name of the
+	*  attribute to retrieve.</p>
+	*  @return <p>The <code>Attr</code> value as a string, or the empty string if
+	*  that attribute does not have a specified or default value.</p>
 	*/
 	public function getAttributeNS(namespaceURI:String=undefined, localName:String=undefined):String { return '';}
 	/**
@@ -173,9 +198,22 @@ public class Element extends Node
 	*  use <code>setAttributeNodeNS</code> or <code>setAttributeNode</code> to
 	*  assign it as the value of an attribute.</p><p>HTML-only DOM implementations do not need to implement this
 	*  method.</p>
-	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
-	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
-	*  @param value (optional argument, default value is <code>undefined</code>)
+	*  @param namespaceURI <p>The namespace URI of
+	*  the attribute to create or alter.</p>
+	*  @param qualifiedName <p>The qualified name
+	*  of the attribute to create or alter.</p>
+	*  @param value <p>The value to set in string form.</p>
+	*  @return <p></p>
+	*  @throw DOMException <p>INVALID_CHARACTER_ERR: Raised if the specified qualified name
+	*  contains an illegal character.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.</p><p>NAMESPACE_ERR: Raised if the <code>qualifiedName</code> is
+	*  malformed, if the <code>qualifiedName</code> has a prefix and
+	*  the <code>namespaceURI</code> is <code>null</code>, if the
+	*  <code>qualifiedName</code> has a prefix that is
+	*  "xml" and the <code>namespaceURI</code> is different from
+	*  "<loc href="http://www.w3.org/XML/1998/namespace">http://www.w3.org/XML/1998/namespace</loc>", or if the
+	*  <code>qualifiedName</code> is "xmlns" and the
+	*  <code>namespaceURI</code> is different from
+	*  "<loc href="http://www.w3.org/2000/xmlns/">http://www.w3.org/2000/xmlns/</loc>".</p>
 	*/
 	public function setAttributeNS(namespaceURI:String=undefined, qualifiedName:String=undefined, value:String=undefined):void {}
 	/**
@@ -184,27 +222,41 @@ public class Element extends Node
 	*  replaced. The replacing attribute has the same namespace URI
 	*  and local name, as well as the original prefix.</p><p>HTML-only DOM implementations do not need to implement this
 	*  method.</p>
-	*  @param namespaceURI
-	*  @param localName
+	*  @param namespaceURI <p>The namespace URI of
+	*  the attribute to remove.</p>
+	*  @param localName <p>The local name of the
+	*  attribute to remove.</p>
+	*  @return <p></p>
+	*  @throw DOMException <p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is
+	*  readonly.</p>
 	*/
 	public function removeAttributeNS(namespaceURI:String, localName:String):void {}
 	/**
-	*  <p>Returns a <code>NodeList</code> of all the <termref def="dt-descendant">descendant</termref><code>Elements</code> with a given local name and namespace URI in the
+	*  <p>Returns a <code>NodeList</code> of all the descendant<code>Elements</code> with a given local name and namespace URI in the
 	*  order in which they are encountered in a preorder traversal of this
 	*  <code>Element</code> tree.</p><p>HTML-only DOM implementations do not need to implement this
 	*  method.</p>
-	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
-	*  @param localName (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>NodeList</code> instance.
+	*  @param namespaceURI <p>The namespace URI of
+	*  the elements to match on. The special value "*" matches all
+	*  namespaces.</p>
+	*  @param localName <p>The local name of the
+	*  elements to match on. The special value "*" matches all local
+	*  names.</p>
+	*  @return <p>A new <code>NodeList</code> object containing all the matched
+	*  <code>Elements</code>.</p>
 	*/
 	public function getElementsByTagNameNS(namespaceURI:String=undefined, localName:String=undefined):NodeList { return null;}
 	/**
 	*  <p>Retrieves an <code>Attr</code> node by local name and namespace
 	*  URI. HTML-only DOM implementations do not need to implement this
 	*  method.</p>
-	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
-	*  @param localName (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Attr</code> instance.
+	*  @param namespaceURI <p>The namespace URI of
+	*  the attribute to retrieve.</p>
+	*  @param localName <p>The local name of the
+	*  attribute to retrieve.</p>
+	*  @return <p>The <code>Attr</code> node with the specified attribute local
+	*  name and namespace URI or <code>null</code> if there is no such
+	*  attribute.</p>
 	*/
 	public function getAttributeNodeNS(namespaceURI:String=undefined, localName:String=undefined):Attr { return null;}
 	/**
@@ -212,16 +264,28 @@ public class Element extends Node
 	*  that namespace URI is already present in the element, it is replaced by
 	*  the new one.</p><p>HTML-only DOM implementations do not need to implement this
 	*  method.</p>
-	*  @param newAttr (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Attr</code> instance.
+	*  @param newAttr <p>The <code>Attr</code> node to add to the attribute list.</p>
+	*  @return <p>If the <code>newAttr</code> attribute replaces an existing
+	*  attribute with the same local
+	*  name and namespace
+	*  URI, the replaced <code>Attr</code> node is
+	*  returned, otherwise <code>null</code> is returned.</p>
+	*  @throw DOMException <p>WRONG_DOCUMENT_ERR: Raised if <code>newAttr</code> was
+	*  created from a different document than the one that created the
+	*  element.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.</p><p>INUSE_ATTRIBUTE_ERR: Raised if <code>newAttr</code> is already an
+	*  attribute of another <code>Element</code> object. The DOM user
+	*  must explicitly clone <code>Attr</code> nodes to re-use them in
+	*  other elements.</p>
 	*/
 	public function setAttributeNodeNS(newAttr:Attr=undefined):Attr { return null;}
 	/**
 	*  <p>Returns <code>true</code> when an attribute with a given name is
 	*  specified on this element or has a default value, <code>false</code>
 	*  otherwise.</p>
-	*  @param name
-	*  @return A <code>Boolean</code> instance.
+	*  @param name <p>The name of the attribute to look for.</p>
+	*  @return <p><code>true</code> if an attribute with the given name is
+	*  specified on this element or has a default value, <code>false</code>
+	*  otherwise.</p>
 	*/
 	public function hasAttribute(name:String):Boolean { return false;}
 	/**
@@ -229,9 +293,13 @@ public class Element extends Node
 	*  name and namespace URI is specified on this element or has a default
 	*  value, <code>false</code> otherwise. HTML-only DOM implementations do
 	*  not need to implement this method.</p>
-	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
-	*  @param localName (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Boolean</code> instance.
+	*  @param namespaceURI <p>The namespace URI of
+	*  the attribute to look for.</p>
+	*  @param localName <p>The local name of the
+	*  attribute to look for.</p>
+	*  @return <p><code>true</code> if an attribute with the given local name and
+	*  namespace URI is specified or has a default value on this element,
+	*  <code>false</code> otherwise.</p>
 	*/
 	public function hasAttributeNS(namespaceURI:String=undefined, localName:String=undefined):Boolean { return false;}
 

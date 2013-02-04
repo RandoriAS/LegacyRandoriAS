@@ -45,10 +45,8 @@ import randori.webkit.page.Window;
 
 [JavaScript(export="false", name="MessageEvent")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.DomEvent
  */
 public class MessageEvent extends DomEvent

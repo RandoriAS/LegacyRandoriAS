@@ -44,10 +44,8 @@ package randori.webkit.html.track
 
 [JavaScript(export="false", nativecondition="VIDEO_TRACK", name="TextTrackCueList")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public dynamic class TextTrackCueList
 {

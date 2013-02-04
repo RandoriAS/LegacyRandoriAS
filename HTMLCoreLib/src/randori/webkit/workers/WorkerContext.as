@@ -52,10 +52,8 @@ import randori.webkit.html.canvas.DataView;
 
 [JavaScript(export="false", nativecondition="WORKERS", name="WorkerContext")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class WorkerContext
 {

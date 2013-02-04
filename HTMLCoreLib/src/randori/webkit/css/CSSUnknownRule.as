@@ -48,10 +48,8 @@ package randori.webkit.css
  *  The <code>CSSUnknownRule</code> interface represents an at-rule not
  *  supported by this user agent.
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.css.CSSRule
  */
 public class CSSUnknownRule extends CSSRule

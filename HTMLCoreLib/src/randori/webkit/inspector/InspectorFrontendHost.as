@@ -46,10 +46,8 @@ import randori.webkit.modules.filesystem.DOMFileSystem;
 
 [JavaScript(export="false", nativecondition="INSPECTOR", name="InspectorFrontendHost")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class InspectorFrontendHost
 {

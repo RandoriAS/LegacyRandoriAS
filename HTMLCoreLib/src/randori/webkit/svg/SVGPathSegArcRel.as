@@ -44,10 +44,8 @@ package randori.webkit.svg
 
 [JavaScript(export="false", nativecondition="SVG", name="SVGPathSegArcRel")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.svg.SVGPathSeg
  */
 public class SVGPathSegArcRel extends SVGPathSeg

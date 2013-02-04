@@ -62,10 +62,8 @@ package randori.webkit.css
  *  encoding information e.g. in an HTTP header, has priority (see CSS document representation) but this is
  *  not reflected in the <code>CSSCharsetRule</code>.
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#x66
  *  @see randori.webkit.css.CSSRule
  */

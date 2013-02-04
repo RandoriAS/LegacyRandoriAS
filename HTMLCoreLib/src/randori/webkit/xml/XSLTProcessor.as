@@ -47,10 +47,8 @@ import randori.webkit.dom.DocumentFragment;
 
 [JavaScript(export="false", nativecondition="XSLT", name="XSLTProcessor")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class XSLTProcessor
 {

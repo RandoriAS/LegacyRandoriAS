@@ -45,10 +45,8 @@ import randori.webkit.dom.UIEvent;
 
 [JavaScript(export="false", nativecondition="SVG", name="SVGZoomEvent")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.UIEvent
  */
 public class SVGZoomEvent extends UIEvent

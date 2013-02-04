@@ -44,10 +44,8 @@ package randori.webkit.page
 
 [JavaScript(export="false", nativecondition="WEB_TIMING", name="PerformanceEntryList")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public dynamic class PerformanceEntryList
 {

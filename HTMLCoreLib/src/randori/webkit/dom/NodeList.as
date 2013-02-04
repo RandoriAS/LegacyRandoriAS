@@ -47,12 +47,10 @@ package randori.webkit.dom
  *  <p>The <code>NodeList</code> interface provides the abstraction of an
  *  ordered collection of nodes, without defining or constraining how this
  *  collection is implemented. <code>NodeList</code> objects in the DOM are
- *  <termref def="td-live">live</termref>.</p><p>The items in the <code>NodeList</code> are accessible via an
+ *  live.</p><p>The items in the <code>NodeList</code> are accessible via an
  *  integral index, starting from 0.</p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public dynamic class NodeList
 {

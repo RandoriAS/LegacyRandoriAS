@@ -54,10 +54,8 @@ package randori.webkit.css
  *  The items in the <code>MediaList</code> are accessible via an integral
  *  index, starting from 0.
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-html40-19980424/types.html#h-6.13
  */
 public dynamic class MediaList
@@ -83,7 +81,13 @@ public dynamic class MediaList
 	*  <p>
 	*  Deletes the medium indicated by <code>oldMedium</code> from the list.
 	*  </p>
-	*  @param oldMedium (optional argument, default value is <code>undefined</code>)
+	*  @param oldMedium <p>The medium to delete in the media list.</p>
+	*  @return <p></p>
+	*  @throw DOMException <p>
+	*  NO_MODIFICATION_ALLOWED_ERR: Raised if this list is readonly.
+	*  </p><p>
+	*  NOT_FOUND_ERR: Raised if <code>oldMedium</code> is not in the list.
+	*  </p>
 	*/
 	public function deleteMedium(oldMedium:String=undefined):void {}
 	/**
@@ -91,7 +95,14 @@ public dynamic class MediaList
 	*  Adds the medium <code>newMedium</code> to the end of the list. If the
 	*  <code>newMedium</code> is already used, it is first removed.
 	*  </p>
-	*  @param newMedium (optional argument, default value is <code>undefined</code>)
+	*  @param newMedium <p>The new medium to add.</p>
+	*  @return <p></p>
+	*  @throw DOMException <p>
+	*  INVALID_CHARACTER_ERR: If the medium contains characters that are
+	*  invalid in the underlying style language.
+	*  </p><p>
+	*  NO_MODIFICATION_ALLOWED_ERR: Raised if this list is readonly.
+	*  </p>
 	*/
 	public function appendMedium(newMedium:String=undefined):void {}
 }

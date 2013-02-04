@@ -58,17 +58,15 @@ package randori.webkit.dom
  *  such an <code>Entity</code> exists, then the subtree of the
  *  <code>EntityReference</code> node is in general a copy of the
  *  <code>Entity</code> node subtree. However, this may not be true when an
- *  entity contains an unbound <termref def="dt-namespaceprefix">namespace
- *  prefix</termref>. In such a case, because the namespace prefix resolution
- *  depends on where the entity reference is, the <termref def="dt-descendant">descendants</termref> of the
+ *  entity contains an unbound namespace
+ *  prefix. In such a case, because the namespace prefix resolution
+ *  depends on where the entity reference is, the descendants of the
  *  <code>EntityReference</code> node may be bound to different
- *  <termref def="dt-namespaceURI">namespace URIs</termref>.</p><p>As for <code>Entity</code> nodes, <code>EntityReference</code> nodes and
- *  all their <termref def="dt-descendant">descendants</termref> are
- *  <termref def="dt-readonly-node">readonly</termref>.</p>
- *  @author RandoriAS
+ *  namespace URIs.</p><p>As for <code>Entity</code> nodes, <code>EntityReference</code> nodes and
+ *  all their descendants are
+ *  readonly.</p>
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.Node
  */
 public class EntityReference extends Node

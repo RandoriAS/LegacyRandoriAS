@@ -46,10 +46,8 @@ import randori.webkit.css.RGBColor;
 
 [JavaScript(export="false", nativecondition="SVG", name="SVGColor")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.css.CSSValue
  */
 public class SVGColor extends CSSValue

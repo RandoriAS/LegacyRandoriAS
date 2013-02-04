@@ -45,10 +45,8 @@ import randori.webkit.css.StyleSheet;
 
 [JavaScript(export="false", name="HTMLStyleElement")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.html.HTMLElement
  */
 public class HTMLStyleElement extends HTMLElement

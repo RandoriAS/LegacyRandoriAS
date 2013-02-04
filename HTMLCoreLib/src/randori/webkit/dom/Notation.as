@@ -53,11 +53,9 @@ package randori.webkit.dom
  *  inherited from
  *  <code>Node</code> is set to the declared name of the notation.</p><p>The DOM Level 1 does not support editing <code>Notation</code>
  *  nodes; they are therefore
- *  <termref def="dt-readonly-node">readonly</termref>.</p><p>A <code>Notation</code> node does not have any parent.</p>
- *  @author RandoriAS
+ *  readonly.</p><p>A <code>Notation</code> node does not have any parent.</p>
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-xml-19980210#Notations
  *  @see http://www.w3.org/TR/1998/REC-xml-19980210#sec-pi
  *  @see randori.webkit.dom.Node

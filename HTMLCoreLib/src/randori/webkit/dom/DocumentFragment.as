@@ -61,7 +61,7 @@ package randori.webkit.dom
  *  node.</p><p>The children of a <code>DocumentFragment</code> node are zero or more
  *  nodes representing the tops of any sub-trees defining the structure of
  *  the document. <code>DocumentFragment</code> nodes do not need to be
- *  <termref def="dt-well-formed">well-formed XML documents</termref> (although they do need to follow the rules
+ *  well-formed XML documents (although they do need to follow the rules
  *  imposed upon well-formed XML parsed entities, which can have multiple top
  *  nodes). For example, a <code>DocumentFragment</code> might have only one
  *  child and that child node could be a <code>Text</code> node. Such a
@@ -71,15 +71,13 @@ package randori.webkit.dom
  *  take children) the children of the <code>DocumentFragment</code> and not
  *  the <code>DocumentFragment</code> itself are inserted into the
  *  <code>Node</code>. This makes the <code>DocumentFragment</code> very
- *  useful when the user wishes to create nodes that are <termref def="dt-sibling">siblings</termref>; the
+ *  useful when the user wishes to create nodes that are siblings; the
  *  <code>DocumentFragment</code> acts as the parent of these nodes so that
  *  the user can use the standard methods from the <code>Node</code>
  *  interface, such as <code>insertBefore</code> and
  *  <code>appendChild</code>.</p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.Node
  */
 public class DocumentFragment extends Node

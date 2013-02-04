@@ -44,10 +44,8 @@ package randori.webkit.workers
 
 [JavaScript(export="false", nativecondition="WORKERS", name="DedicatedWorkerContext")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.workers.WorkerContext
  */
 public class DedicatedWorkerContext extends WorkerContext

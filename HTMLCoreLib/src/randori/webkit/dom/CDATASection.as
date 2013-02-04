@@ -72,10 +72,8 @@ package randori.webkit.dom
  *  error or exception when a character is missing from the encoding,
  *  making the task of ensuring that data is not corrupted on serialization
  *  more difficult.</p></note>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.Text
  */
 public class CDATASection extends Text

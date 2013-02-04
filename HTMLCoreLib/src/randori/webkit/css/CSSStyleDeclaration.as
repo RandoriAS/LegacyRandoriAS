@@ -67,10 +67,8 @@ package randori.webkit.css
  *  actual values of the
  *  CSS cascade.
  *  </p></note>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/about.html#shorthand
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/cascade.html#computed-value
@@ -95,8 +93,14 @@ public dynamic class CSSStyleDeclaration
 	*  Used to retrieve the value of a CSS property if it has been explicitly
 	*  set within this declaration block.
 	*  </p>
-	*  @param propertyName (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>String</code> instance.
+	*  @param propertyName <p>
+	*  The name of the CSS property. See the CSS property index.
+	*  </p>
+	*  @return <p>
+	*  Returns the value of the property if it has been explicitly set
+	*  for this declaration block. Returns the empty string if the property
+	*  has not been set.
+	*  </p>
 	*/
 	public function getPropertyValue(propertyName:String=undefined):String { return '';}
 	/**
@@ -107,8 +111,14 @@ public dynamic class CSSStyleDeclaration
 	*  property values can only be accessed and modified as strings, using
 	*  the <code>getPropertyValue</code> and <code>setProperty</code> methods.
 	*  </p>
-	*  @param propertyName (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>CSSValue</code> instance.
+	*  @param propertyName <p>
+	*  The name of the CSS property. See the CSS property index.
+	*  </p>
+	*  @return <p>
+	*  Returns the value of the property if it has been explicitly set for
+	*  this declaration block. Returns <code>null</code> if the property
+	*  has not been set.
+	*  </p>
 	*/
 	public function getPropertyCSSValue(propertyName:String=undefined):CSSValue { return null;}
 	/**
@@ -116,8 +126,17 @@ public dynamic class CSSStyleDeclaration
 	*  Used to remove a CSS property if it has been explicitly
 	*  set within this declaration block.
 	*  </p>
-	*  @param propertyName (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>String</code> instance.
+	*  @param propertyName <p>
+	*  The name of the CSS property. See the CSS property index.
+	*  </p>
+	*  @return <p>
+	*  Returns the value of the property if it has been explicitly set
+	*  for this declaration block. Returns the empty string if the property
+	*  has not been set or the property name does not correspond to
+	*  a known CSS property.
+	*  </p>
+	*  @throw DOMException <p>NO_MODIFICATION_ALLOWED_ERR: Raised if this declaration is
+	*  readonly or the property is readonly.</p>
 	*/
 	public function removeProperty(propertyName:String=undefined):String { return '';}
 	/**
@@ -126,8 +145,14 @@ public dynamic class CSSStyleDeclaration
 	*  (e.g. the <code>"important"</code> qualifier) if the property
 	*  has been explicitly set in this declaration block.
 	*  </p>
-	*  @param propertyName (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>String</code> instance.
+	*  @param propertyName <p>
+	*  The name of the CSS property. See the CSS property
+	*  index.
+	*  </p>
+	*  @return <p>
+	*  A string representing the priority (e.g. <code>"important"</code>)
+	*  if one exists. The empty string if none exists.
+	*  </p>
 	*/
 	public function getPropertyPriority(propertyName:String=undefined):String { return '';}
 	/**
@@ -135,9 +160,19 @@ public dynamic class CSSStyleDeclaration
 	*  Used to set a property value and priority within this declaration
 	*  block.
 	*  </p>
-	*  @param propertyName (optional argument, default value is <code>undefined</code>)
-	*  @param value (optional argument, default value is <code>undefined</code>)
-	*  @param priority (optional argument, default value is <code>undefined</code>)
+	*  @param propertyName <p>
+	*  The name of the CSS property. See the CSS property index.
+	*  </p>
+	*  @param value <p>
+	*  The new value of the property.
+	*  </p>
+	*  @param priority <p>
+	*  The new priority of the property (e.g. <code>"important"</code>).
+	*  </p>
+	*  @return <p></p>
+	*  @throw DOMException <p>SYNTAX_ERR: Raised if the specified value has a syntax error
+	*  and is unparsable.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this declaration is
+	*  readonly or the property is readonly.</p>
 	*/
 	public function setProperty(propertyName:String=undefined, value:String=undefined, priority:String=undefined):void {}
 

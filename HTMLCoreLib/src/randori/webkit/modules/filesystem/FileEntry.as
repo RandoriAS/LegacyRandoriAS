@@ -44,10 +44,8 @@ package randori.webkit.modules.filesystem
 
 [JavaScript(export="false", nativecondition="FILE_SYSTEM", name="FileEntry")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.modules.filesystem.Entry
  */
 public class FileEntry extends Entry

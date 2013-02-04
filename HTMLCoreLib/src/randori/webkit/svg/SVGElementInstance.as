@@ -45,10 +45,8 @@ import randori.webkit.dom.EventTarget;
 
 [JavaScript(export="false", nativecondition="SVG", name="SVGElementInstance")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.EventTarget
  */
 public class SVGElementInstance extends EventTarget

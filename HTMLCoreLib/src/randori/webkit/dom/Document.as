@@ -58,7 +58,7 @@ import randori.webkit.page.SecurityPolicy;
 [JavaScript(export="false", name="Document")]
 /**
  *  <p>The <code>Document</code> interface represents the entire
- *  HTML or XML document. Conceptually, it is the <termref def="dt-root-node">root</termref> of the
+ *  HTML or XML document. Conceptually, it is the root of the
  *  document tree, and provides the  primary access to the
  *  document's data.</p><p>Since elements, text nodes, comments, processing instructions,
  *  etc. cannot exist outside the context of a <code>Document</code>, the
@@ -66,10 +66,8 @@ import randori.webkit.page.SecurityPolicy;
  *  to create these objects. The <code>Node</code> objects created have a
  *  <code>ownerDocument</code> attribute which associates them with the
  *  <code>Document</code> within whose context they were created.</p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.Node
  */
 public class Document extends Node
@@ -97,7 +95,7 @@ public class Document extends Node
 	public function get implementation():DOMImplementation { return null; }
 
 	/**
-	*  <p>This is a <termref def="dt-convenience">convenience</termref> attribute that allows direct
+	*  <p>This is a convenience attribute that allows direct
 	*  access to the child node that is the root element of  the
 	*  document. For HTML documents, this is the element with
 	*  the tagName "HTML".</p>
@@ -111,43 +109,57 @@ public class Document extends Node
 	*  <code>Attr</code> nodes representing them are automatically created and
 	*  attached to the element.</p><p>To create an element with a qualified name and namespace URI, use the
 	*  <code>createElementNS</code> method.</p>
-	*  @param tagName (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Element</code> instance.
+	*  @param tagName <p>The name of the element type to
+	*  instantiate. For XML, this is case-sensitive. For HTML, the
+	*  <code>tagName</code> parameter may be provided in any case,
+	*  but it must be mapped to the canonical uppercase form by
+	*  the DOM implementation.
+	*  </p>
+	*  @return <p>A new <code>Element</code> object with the
+	*  <code>nodeName</code> attribute set to <code>tagName</code>, and
+	*  <code>localName</code>, <code>prefix</code>, and
+	*  <code>namespaceURI</code> set to <code>null</code>.</p>
+	*  @throw DOMException <p>INVALID_CHARACTER_ERR: Raised if the specified name contains
+	*  an illegal character.</p>
 	*/
 	public function createElement(tagName:String=undefined):Element { return null;}
 	/**
 	*  <p>Creates an empty <code>DocumentFragment</code> object.
 	*  </p>
-	*  @return A <code>DocumentFragment</code> instance.
+	*  @return <p>A new <code>DocumentFragment</code>.</p>
 	*/
 	public function createDocumentFragment():DocumentFragment { return null;}
 	/**
 	*  <p>Creates a <code>Text</code> node given the specified
 	*  string.</p>
-	*  @param data (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Text</code> instance.
+	*  @param data <p>The data for the node.</p>
+	*  @return <p>The new <code>Text</code> object.</p>
 	*/
 	public function createTextNode(data:String=undefined):Text { return null;}
 	/**
 	*  <p>Creates a <code>Comment</code> node given the specified
 	*  string.</p>
-	*  @param data (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Comment</code> instance.
+	*  @param data <p>The data for the node.</p>
+	*  @return <p>The new <code>Comment</code> object.</p>
 	*/
 	public function createComment(data:String=undefined):Comment { return null;}
 	/**
 	*  <p>Creates a <code>CDATASection</code> node whose value  is
 	*  the specified string.</p>
-	*  @param data (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>CDATASection</code> instance.
+	*  @param data <p>The data for the <code>CDATASection</code> contents.</p>
+	*  @return <p>The new <code>CDATASection</code> object.</p>
+	*  @throw DOMException <p>NOT_SUPPORTED_ERR: Raised if this document is an HTML
+	*  document.</p>
 	*/
 	public function createCDATASection(data:String=undefined):CDATASection { return null;}
 	/**
 	*  <p>Creates a <code>ProcessingInstruction</code> node given
 	*  the specified name and data strings.</p>
-	*  @param target (optional argument, default value is <code>undefined</code>)
-	*  @param data (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>ProcessingInstruction</code> instance.
+	*  @param target <p>The target part of the processing instruction.</p>
+	*  @param data <p>The data for the node.</p>
+	*  @return <p>The new <code>ProcessingInstruction</code> object.</p>
+	*  @throw DOMException <p>INVALID_CHARACTER_ERR: Raised if the specified target
+	*  contains an illegal character.</p><p>NOT_SUPPORTED_ERR: Raised if this document is an HTML document.</p>
 	*/
 	public function createProcessingInstruction(target:String=undefined, data:String=undefined):ProcessingInstruction { return null;}
 	/**
@@ -156,8 +168,14 @@ public class Document extends Node
 	*  can then be set on an <code>Element</code> using the
 	*  <code>setAttributeNode</code> method. </p><p>To create an attribute with a qualified name and namespace URI, use
 	*  the <code>createAttributeNS</code> method.</p>
-	*  @param name (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Attr</code> instance.
+	*  @param name <p>The name of the attribute.</p>
+	*  @return <p>A new <code>Attr</code> object with the <code>nodeName</code>
+	*  attribute set to <code>name</code>, and <code>localName</code>,
+	*  <code>prefix</code>, and <code>namespaceURI</code> set to
+	*  <code>null</code>. The value of the attribute is the empty
+	*  string.</p>
+	*  @throw DOMException <p>INVALID_CHARACTER_ERR: Raised if the specified name contains
+	*  an illegal character.</p>
 	*/
 	public function createAttribute(name:String=undefined):Attr { return null;}
 	/**
@@ -165,13 +183,15 @@ public class Document extends Node
 	*  the referenced entity is known, the child list of the
 	*  <code>EntityReference</code> node is made the same as that of the
 	*  corresponding <code>Entity</code> node.</p><note><p>If any descendant of the <code>Entity</code> node has an
-	*  unbound <termref def="dt-namespaceprefix">namespace prefix</termref>,
+	*  unbound namespace prefix,
 	*  the corresponding descendant of the created
 	*  <code>EntityReference</code> node is also unbound; (its
 	*  <code>namespaceURI</code> is <code>null</code>). The DOM Level 2 does
 	*  not support any mechanism to resolve namespace prefixes.</p></note>
-	*  @param name (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>EntityReference</code> instance.
+	*  @param name <p>The name of the entity to reference. </p>
+	*  @return <p>The new <code>EntityReference</code> object.</p>
+	*  @throw DOMException <p>INVALID_CHARACTER_ERR: Raised if the specified name contains
+	*  an illegal character.</p><p>NOT_SUPPORTED_ERR: Raised if this document is an HTML document.</p>
 	*/
 	public function createEntityReference(name:String=undefined):EntityReference { return null;}
 	/**
@@ -179,8 +199,10 @@ public class Document extends Node
 	*  with a given tag name in the order in which they are encountered
 	*  in a preorder traversal of the <code>Document</code> tree.
 	*  </p>
-	*  @param tagname (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>NodeList</code> instance.
+	*  @param tagname <p>The name of the tag to match on. The special value "*"
+	*  matches all tags.</p>
+	*  @return <p>A new <code>NodeList</code> object containing
+	*  all the matched <code>Elements</code>.</p>
 	*/
 	public function getElementsByTagName(tagname:String=undefined):NodeList { return null;}
 	/**
@@ -202,12 +224,12 @@ public class Document extends Node
 	*  <glist><gitem><label>ATTRIBUTE_NODE</label><def><p>The <code>ownerElement</code> attribute is set to
 	*  <code>null</code> and the <code>specified</code> flag is set to
 	*  <code>true</code> on the generated <code>Attr</code>. The
-	*  <termref def="dt-descendant">descendants</termref> of the source <code>Attr</code> are recursively
+	*  descendants of the source <code>Attr</code> are recursively
 	*  imported and the resulting nodes reassembled to form the
 	*  corresponding subtree.</p><p>Note that the <code>deep</code> parameter has no effect on
 	*  <code>Attr</code> nodes; they always carry their children with
 	*  them when imported.</p></def></gitem><gitem><label>DOCUMENT_FRAGMENT_NODE</label><def><p>If the <code>deep</code> option was set to
-	*  <code>true</code>, the <termref def="dt-descendant">descendants</termref> of the source element are
+	*  <code>true</code>, the descendants of the source element are
 	*  recursively imported and the resulting nodes reassembled to
 	*  form the corresponding subtree. Otherwise, this simply
 	*  generates an empty <code>DocumentFragment</code>.</p></def></gitem><gitem><label>DOCUMENT_NODE</label><def><p><code>Document</code> nodes cannot be imported.</p></def></gitem><gitem><label>DOCUMENT_TYPE_NODE</label><def><p><code>DocumentType</code> nodes cannot be imported.</p></def></gitem><gitem><label>ELEMENT_NODE</label><def><p><emph>Specified</emph> attribute nodes of the source
@@ -216,7 +238,7 @@ public class Document extends Node
 	*  attributes are <emph>not</emph> copied, though if the document
 	*  being imported into defines default attributes for this element
 	*  name, those are assigned. If the <code>importNode</code><code>deep</code> parameter was set to <code>true</code>, the
-	*  <termref def="dt-descendant">descendants</termref> of the source element are recursively imported
+	*  descendants of the source element are recursively imported
 	*  and the resulting nodes reassembled to form the corresponding
 	*  subtree.</p></def></gitem><gitem><label>ENTITY_NODE</label><def><p><code>Entity</code> nodes can be imported, however in the
 	*  current release of the DOM the <code>DocumentType</code> is
@@ -224,7 +246,7 @@ public class Document extends Node
 	*  <code>DocumentType</code> will be considered for addition to a
 	*  future release of the DOM.</p><p>On import, the <code>publicId</code>, <code>systemId</code>,
 	*  and <code>notationName</code> attributes are copied. If a
-	*  <code>deep</code> import is requested, the <termref def="dt-descendant">descendants</termref> of the
+	*  <code>deep</code> import is requested, the descendants of the
 	*  the source <code>Entity</code> are recursively imported and the
 	*  resulting nodes reassembled to form the corresponding
 	*  subtree.</p></def></gitem><gitem><label>ENTITY_REFERENCE_NODE</label><def><p>Only the <code>EntityReference</code> itself is copied,
@@ -243,37 +265,78 @@ public class Document extends Node
 	*  <code>CharacterData</code> copy their <code>data</code> and
 	*  <code>length</code> attributes from those of the source
 	*  node.</p></def></gitem></glist></p>
-	*  @param importedNode (optional argument, default value is <code>undefined</code>)
-	*  @param deep (optional argument, default value is <code>false</code>)
-	*  @return A <code>Node</code> instance.
+	*  @param importedNode <p>The node to import.</p>
+	*  @param deep <p>If <code>true</code>, recursively import the subtree
+	*  under the specified node; if <code>false</code>, import only
+	*  the node itself, as explained above. This has no effect on
+	*  <code>Attr</code>, <code>EntityReference</code>, and
+	*  <code>Notation</code> nodes.</p>
+	*  @return <p>The imported node that belongs to this
+	*  <code>Document</code>.</p>
+	*  @throw DOMException <p>NOT_SUPPORTED_ERR: Raised if the type of node being imported
+	*  is not supported.</p>
 	*/
 	public function importNode(importedNode:Node=undefined, deep:Boolean=false):Node { return null;}
 	/**
 	*  <p>Creates an element of the given qualified name and namespace
 	*  URI. HTML-only DOM implementations do not need to implement this
 	*  method.</p>
-	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
-	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Element</code> instance.
+	*  @param namespaceURI <p>The namespace URI of
+	*  the element to create.</p>
+	*  @param qualifiedName <p>The qualified name
+	*  of the element type to instantiate.</p>
+	*  @return <p>A new <code>Element</code> object with the following
+	*  attributes:</p><table summary="Layout table: the first cell the name property,                         the second cell contains his initial value"><tbody><tr><th>Attribute</th><th>Value</th></tr><tr><td><code>Node.nodeName</code></td><td><code>qualifiedName</code></td></tr><tr><td><code>Node.namespaceURI</code></td><td><code>namespaceURI</code></td></tr><tr><td><code>Node.prefix</code></td><td>prefix, extracted from
+	*  <code>qualifiedName</code>, or <code>null</code> if there is no
+	*  prefix</td></tr><tr><td><code>Node.localName</code></td><td>local name, extracted from
+	*  <code>qualifiedName</code></td></tr><tr><td><code>Element.tagName</code></td><td><code>qualifiedName</code></td></tr></tbody></table>
+	*  @throw DOMException <p>INVALID_CHARACTER_ERR: Raised if the specified qualified name
+	*  contains an illegal character.</p><p>NAMESPACE_ERR: Raised if the <code>qualifiedName</code> is
+	*  malformed, if the <code>qualifiedName</code> has a prefix and
+	*  the <code>namespaceURI</code> is <code>null</code>, or if
+	*  the <code>qualifiedName</code> has a prefix that
+	*  is "xml" and the <code>namespaceURI</code> is different
+	*  from "<loc href="http://www.w3.org/XML/1998/namespace">http://www.w3.org/XML/1998/namespace</loc>" <bibref ref="Namespaces" />.</p>
 	*/
 	public function createElementNS(namespaceURI:String=undefined, qualifiedName:String=undefined):Element { return null;}
 	/**
 	*  <p>Creates an attribute of the given qualified name and namespace
 	*  URI. HTML-only DOM implementations do not need to implement this
 	*  method.</p>
-	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
-	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Attr</code> instance.
+	*  @param namespaceURI <p>The namespace URI of
+	*  the attribute to create.</p>
+	*  @param qualifiedName <p>The qualified name
+	*  of the attribute to instantiate.</p>
+	*  @return <p>A new <code>Attr</code> object with the following
+	*  attributes:</p><table summary="Layout table: the first cell the name property,                         the second cell contains his initial value"><tbody><tr><th>Attribute</th><th>Value</th></tr><tr><td><code>Node.nodeName</code></td><td>qualifiedName</td></tr><tr><td><code>Node.namespaceURI</code></td><td><code>namespaceURI</code></td></tr><tr><td><code>Node.prefix</code></td><td>prefix, extracted from
+	*  <code>qualifiedName</code>, or <code>null</code> if there is no
+	*  prefix</td></tr><tr><td><code>Node.localName</code></td><td>local name, extracted from
+	*  <code>qualifiedName</code></td></tr><tr><td><code>Attr.name</code></td><td><code>qualifiedName</code></td></tr><tr><td><code>Node.nodeValue</code></td><td>the empty string</td></tr></tbody></table>
+	*  @throw DOMException <p>INVALID_CHARACTER_ERR: Raised if the specified qualified name
+	*  contains an illegal character.</p><p>NAMESPACE_ERR: Raised if the <code>qualifiedName</code> is
+	*  malformed, if the <code>qualifiedName</code> has a prefix and
+	*  the <code>namespaceURI</code> is <code>null</code>, if the
+	*  <code>qualifiedName</code> has a prefix that is
+	*  "xml" and the <code>namespaceURI</code> is different from
+	*  "<loc href="http://www.w3.org/XML/1998/namespace">http://www.w3.org/XML/1998/namespace</loc>", or if the
+	*  <code>qualifiedName</code> is "xmlns" and the
+	*  <code>namespaceURI</code> is different from
+	*  "<loc href="http://www.w3.org/2000/xmlns/">http://www.w3.org/2000/xmlns/</loc>".</p>
 	*/
 	public function createAttributeNS(namespaceURI:String=undefined, qualifiedName:String=undefined):Attr { return null;}
 	/**
 	*  <p>Returns a <code>NodeList</code> of all the <code>Elements</code>
-	*  with a given <termref def="dt-localname">local name</termref> and
+	*  with a given local name and
 	*  namespace URI in the order in which they are encountered in a
 	*  preorder traversal of the <code>Document</code> tree.</p>
-	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
-	*  @param localName (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>NodeList</code> instance.
+	*  @param namespaceURI <p>The namespace URI of
+	*  the elements to match on. The special value "*" matches all
+	*  namespaces.</p>
+	*  @param localName <p>The local name of the
+	*  elements to match on. The special value "*" matches all local
+	*  names.</p>
+	*  @return <p>A new <code>NodeList</code> object containing all the matched
+	*  <code>Elements</code>.</p>
 	*/
 	public function getElementsByTagNameNS(namespaceURI:String=undefined, localName:String=undefined):NodeList { return null;}
 	/**
@@ -285,8 +348,8 @@ public class Document extends Node
 	*  attributes are of type ID. Attributes with the name "ID" are not of type ID unless
 	*  so defined. Implementations that do not know whether attributes are of type
 	*  ID or not are expected to return <code>null</code>.</p></note></p>
-	*  @param elementId (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Element</code> instance.
+	*  @param elementId <p>The unique <code>id</code> value for an element.</p>
+	*  @return <p>The matching element.</p>
 	*/
 	public function getElementById(elementId:String=undefined):Element { return null;}
 

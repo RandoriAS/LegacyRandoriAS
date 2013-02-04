@@ -49,10 +49,8 @@ package randori.webkit.css
  *  rule in a CSS style sheet. The <code>@font-face</code> rule
  *  is used to hold a set of font descriptions.
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#font-descriptions
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q8
  *  @see randori.webkit.css.CSSRule

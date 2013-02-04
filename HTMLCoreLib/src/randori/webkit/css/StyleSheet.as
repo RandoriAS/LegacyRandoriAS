@@ -55,10 +55,8 @@ import randori.webkit.dom.Node;
  *  style sheet, included via a style sheet
  *  processing instruction.
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-html40-19980424/struct/links.html#h-12.3
  *  @see http://www.w3.org/TR/1998/REC-html40-19980424/present/styles.html#h-14.2.3
  *  @see http://www.w3.org/1999/06/REC-xml-stylesheet-19990629

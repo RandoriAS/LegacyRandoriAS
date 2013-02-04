@@ -46,10 +46,8 @@ import randori.webkit.dom.ShadowRoot;
 
 [JavaScript(export="false", nativecondition="SHADOW_DOM", name="HTMLShadowElement")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.html.HTMLElement
  */
 public class HTMLShadowElement extends HTMLElement

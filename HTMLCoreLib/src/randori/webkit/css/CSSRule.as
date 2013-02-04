@@ -53,10 +53,8 @@ package randori.webkit.css
  *  sheet, even if the rule is not recognized by the parser. Unrecognized
  *  rules are represented using the <code>CSSUnknownRule</code> interface.
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q5
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q8
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#at-rules

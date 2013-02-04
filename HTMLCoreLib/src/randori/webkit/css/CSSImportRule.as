@@ -49,10 +49,8 @@ package randori.webkit.css
  *  rule within a CSS style sheet. The <code>@import</code> rule is
  *  used to import style rules from other style sheets.
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/cascade.html#at-import
  *  @see randori.webkit.css.CSSRule
  */

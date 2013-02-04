@@ -49,10 +49,8 @@ import randori.webkit.css.StyleSheet;
  *  represents a  "processing instruction", used in XML
  *  as a way to keep processor-specific information in the text of the
  *  document.</p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.Node
  */
 public class ProcessingInstruction extends Node
@@ -60,7 +58,7 @@ public class ProcessingInstruction extends Node
 
 	/**
 	*  <p>The target of this processing instruction. XML defines this as
-	*  being the first <termref def="dt-token">token</termref> following the
+	*  being the first token following the
 	*  markup that begins the processing instruction.</p>
 	*/
 	public function get target():String { return ''; }

@@ -48,10 +48,8 @@ import randori.webkit.html.HTMLCanvasElement;
 
 [JavaScript(export="false", name="CanvasRenderingContext2D")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.html.canvas.CanvasRenderingContext
  */
 public class CanvasRenderingContext2D extends CanvasRenderingContext

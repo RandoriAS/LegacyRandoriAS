@@ -246,10 +246,8 @@ import randori.webkit.html.URL;
 
 [JavaScript(export="false", name="Window")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class Window
 {

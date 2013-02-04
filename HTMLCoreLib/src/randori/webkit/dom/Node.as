@@ -52,10 +52,8 @@ package randori.webkit.dom
  *  down to the specific derived interface. In cases where there is no obvious
  *  mapping of these attributes for a specific <code>nodeType</code> (e.g., <code>nodeValue</code> for an <code>Element</code> or <code>attributes</code> for a <code>Comment</code>), this returns <code>null</code>. Note that the specialized interfaces may contain additional and more
  *  convenient mechanisms to get and set the relevant information.</p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class Node
 {
@@ -92,7 +90,7 @@ public class Node
 	public function get nodeType():uint { return 0; }
 
 	/**
-	*  <p>The <termref def="dt-parent">parent</termref> of this node. All nodes,
+	*  <p>The parent of this node. All nodes,
 	*  except <code>Attr</code>, <code>Document</code>, <code>DocumentFragment</code>, <code>Entity</code>, and <code>Notation</code> may have a parent. However, if a node has just been created and not yet
 	*  added to the tree, or if it has been removed from the tree, this is <code>null</code>.</p>
 	*  @see randori.webkit.dom.Node
@@ -145,33 +143,50 @@ public class Node
 	public function get ownerDocument():Document { return null; }
 	/**
 	*  <p>Inserts the node <code>newChild</code> before the existing child node <code>refChild</code>. If <code>refChild</code> is <code>null</code>, insert <code>newChild</code> at the end of the list of children.</p><p>If <code>newChild</code> is a <code>DocumentFragment</code> object, all of its children are inserted, in the same order, before <code>refChild</code>. If the <code>newChild</code> is already in the tree, it is first removed.</p>
-	*  @param newChild
-	*  @param refChild
-	*  @return A <code>Node</code> instance.
+	*  @param newChild <p>The node to insert.</p>
+	*  @param refChild <p>The reference node, i.e., the node before which the new node must
+	*  be inserted.</p>
+	*  @return <p>The node being inserted.</p>
+	*  @throw DOMException <p>HIERARCHY_REQUEST_ERR: Raised if this node is of a type that does
+	*  not allow children of the type of the <code>newChild</code> node, or if the node to insert is one of this node's
+	*  ancestors.</p><p>WRONG_DOCUMENT_ERR: Raised if <code>newChild</code> was created from a different document than the one that created this
+	*  node.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly or if
+	*  the parent of the node being inserted is readonly.</p><p>NOT_FOUND_ERR: Raised if <code>refChild</code> is not a child of this node.</p>
 	*/
 	public function insertBefore(newChild:Node, refChild:Node):Node { return null;}
 	/**
 	*  <p>Replaces the child node <code>oldChild</code> with <code>newChild</code> in the list of children, and returns the <code>oldChild</code> node.</p><p>If <code>newChild</code> is a <code>DocumentFragment</code> object, <code>oldChild</code> is replaced by all of the <code>DocumentFragment</code> children, which are inserted in the same order. If the <code>newChild</code> is already in the tree, it is first removed.</p>
-	*  @param newChild
-	*  @param oldChild
-	*  @return A <code>Node</code> instance.
+	*  @param newChild <p>The new node to put in the child list.</p>
+	*  @param oldChild <p>The node being replaced in the list.</p>
+	*  @return <p>The node replaced.</p>
+	*  @throw DOMException <p>HIERARCHY_REQUEST_ERR: Raised if this node is of a type that does
+	*  not allow children of the type of the <code>newChild</code> node, or if the node to put in is one of this node's
+	*  ancestors.</p><p>WRONG_DOCUMENT_ERR: Raised if <code>newChild</code> was created from a different document than the one that created this
+	*  node.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node or the parent of
+	*  the new node is readonly.</p><p>NOT_FOUND_ERR: Raised if <code>oldChild</code> is not a child of this node.</p>
 	*/
 	public function replaceChild(newChild:Node, oldChild:Node):Node { return null;}
 	/**
 	*  <p>Removes the child node indicated by <code>oldChild</code> from the list of children, and returns it.</p>
-	*  @param oldChild
-	*  @return A <code>Node</code> instance.
+	*  @param oldChild <p>The node being removed.</p>
+	*  @return <p>The node removed.</p>
+	*  @throw DOMException <p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.</p><p>NOT_FOUND_ERR: Raised if <code>oldChild</code> is not a child of this node.</p>
 	*/
 	public function removeChild(oldChild:Node):Node { return null;}
 	/**
 	*  <p>Adds the node <code>newChild</code> to the end of the list of children of this node. If the <code>newChild</code> is already in the tree, it is first removed.</p>
-	*  @param newChild
-	*  @return A <code>Node</code> instance.
+	*  @param newChild <p>The node to add.</p><p>If it is a <code>DocumentFragment</code> object, the entire contents of the document fragment are moved into the
+	*  child list of this node</p>
+	*  @return <p>The node added.</p>
+	*  @throw DOMException <p>HIERARCHY_REQUEST_ERR: Raised if this node is of a type that does
+	*  not allow children of the type of the <code>newChild</code> node, or if the node to append is one of this node's
+	*  ancestors.</p><p>WRONG_DOCUMENT_ERR: Raised if <code>newChild</code> was created from a different document than the one that created this
+	*  node.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.</p>
 	*/
 	public function appendChild(newChild:Node):Node { return null;}
 	/**
 	*  <p>Returns whether this node has any children.</p>
-	*  @return A <code>Boolean</code> instance.
+	*  @return <p><code>true</code> if this node has any children, <code>false</code> otherwise.</p>
 	*/
 	public function hasChildNodes():Boolean { return false;}
 	/**
@@ -181,10 +196,10 @@ public class Node
 	*  copy any text it contains unless it is a deep clone, since the text is
 	*  contained in a child <code>Text</code> node. Cloning an <code>Attribute</code> directly, as opposed to be cloned as part of an <code>Element</code> cloning operation, returns a specified attribute (<code>specified</code> is <code>true</code>). Cloning any other type of node simply returns a copy of this
 	*  node.</p><p>Note that cloning an immutable subtree results in a mutable copy, but
-	*  the children of an <code>EntityReference</code> clone are <termref def="dt-readonly-node">readonly</termref>. In
+	*  the children of an <code>EntityReference</code> clone are readonly. In
 	*  addition, clones of unspecified <code>Attr</code> nodes are specified. And, cloning <code>Document</code>, <code>DocumentType</code>, <code>Entity</code>, and <code>Notation</code> nodes is implementation dependent.</p>
-	*  @param deep (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Node</code> instance.
+	*  @param deep <p>If <code>true</code>, recursively clone the subtree under the specified node; if <code>false</code>, clone only the node itself (and its attributes, if it is an <code>Element</code>). </p>
+	*  @return <p>The duplicate node.</p>
 	*/
 	public function cloneNode(deep:Boolean=undefined):Node { return null;}
 	/**
@@ -195,19 +210,23 @@ public class Node
 	*  as XPointer <bibref ref="XPointer" /> lookups) that depend on a particular
 	*  document tree structure are to be used.</p><note><p>In cases where the document contains <code>CDATASections</code>, the normalize operation alone may not be sufficient, since XPointers
 	*  do not differentiate between <code>Text</code> nodes and <code>CDATASection</code> nodes.</p></note>
+	*  @return <p></p>
 	*/
 	public function normalize():void {}
 	/**
 	*  <p>Tests whether the DOM implementation implements a specific feature and
 	*  that feature is supported by this node.</p>
-	*  @param feature (optional argument, default value is <code>undefined</code>)
-	*  @param version (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Boolean</code> instance.
+	*  @param feature <p>The name of the feature to test. This is the same name which can
+	*  be passed to the method <code>hasFeature</code> on <code>DOMImplementation</code>.</p>
+	*  @param version <p>This is the version number of the feature to test. In Level 2,
+	*  version 1, this is the string "2.0". If the version is not specified,
+	*  supporting any version of the feature will cause the method to return <code>true</code>.</p>
+	*  @return <p>Returns <code>true</code> if the specified feature is supported on this node, <code>false</code> otherwise.</p>
 	*/
 	public function isSupported(feature:String=undefined, version:String=undefined):Boolean { return false;}
 
 	/**
-	*  <p>The <termref def="dt-namespaceURI">namespace URI</termref> of this
+	*  <p>The namespace URI of this
 	*  node, or <code>null</code> if it is unspecified.</p><p>This is not a computed value that is the result of a namespace lookup
 	*  based on an examination of the namespace declarations in scope. It is merely
 	*  the namespace URI given at creation time.</p><p>For nodes of any type other than <code>ELEMENT_NODE</code> and <code>ATTRIBUTE_NODE</code> and nodes created with a DOM Level 1 method, such as <code>createElement</code> from the <code>Document</code> interface, this is always <code>null</code>.</p><note><p>Per the <emph>Namespaces in XML</emph> Specification
@@ -218,9 +237,9 @@ public class Node
 	public function get namespaceURI():String { return ''; }
 
 	/**
-	*  <p>The <termref def="dt-namespaceprefix">namespace prefix</termref> of
-	*  this node, or <code>null</code> if it is unspecified.</p><p>Note that setting this attribute, when permitted, changes the <code>nodeName</code> attribute, which holds the <termref def="dt-qualifiedname">qualified
-	*  name</termref>, as well as the <code>tagName</code> and <code>name</code> attributes of the <code>Element</code> and <code>Attr</code> interfaces, when applicable.</p><p>Note also that changing the prefix of an attribute that is known to
+	*  <p>The namespace prefix of
+	*  this node, or <code>null</code> if it is unspecified.</p><p>Note that setting this attribute, when permitted, changes the <code>nodeName</code> attribute, which holds the qualified
+	*  name, as well as the <code>tagName</code> and <code>name</code> attributes of the <code>Element</code> and <code>Attr</code> interfaces, when applicable.</p><p>Note also that changing the prefix of an attribute that is known to
 	*  have a default value, does not make a new attribute with the default value and
 	*  the original prefix appear, since the <code>namespaceURI</code> and <code>localName</code> do not change.</p><p>For nodes of any type other than <code>ELEMENT_NODE</code> and <code>ATTRIBUTE_NODE</code> and nodes created with a DOM Level 1 method, such as <code>createElement</code> from the <code>Document</code> interface, this is always <code>null</code>.</p>
 	*/
@@ -228,13 +247,13 @@ public class Node
 	public function set prefix(value:String):void { }
 
 	/**
-	*  <p>Returns the local part of the <termref def="dt-qualifiedname">qualified name</termref> of this node.</p><p>For nodes of any type other than <code>ELEMENT_NODE</code> and <code>ATTRIBUTE_NODE</code> and nodes created with a DOM Level 1 method, such as <code>createElement</code> from the <code>Document</code> interface, this is always <code>null</code>.</p>
+	*  <p>Returns the local part of the qualified name of this node.</p><p>For nodes of any type other than <code>ELEMENT_NODE</code> and <code>ATTRIBUTE_NODE</code> and nodes created with a DOM Level 1 method, such as <code>createElement</code> from the <code>Document</code> interface, this is always <code>null</code>.</p>
 	*/
 	public function get localName():String { return ''; }
 	/**
 	*  <p>Returns whether this node (if it is an element) has any
 	*  attributes.</p>
-	*  @return A <code>Boolean</code> instance.
+	*  @return <p><code>true</code> if this node has any attributes, <code>false</code> otherwise.</p>
 	*/
 	public function hasAttributes():Boolean { return false;}
 

@@ -44,10 +44,11 @@ package randori.webkit.dom
 
 [JavaScript(export="false", name="MutationEvent")]
 /**
- *  @author RandoriAS
+ *  <p>The <code>MutationEvent</code> interface provides specific contextual
+ *  information associated with Mutation events.
+ *  </p>
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.DomEvent
  */
 public class MutationEvent extends DomEvent
@@ -57,26 +58,59 @@ public class MutationEvent extends DomEvent
 	public static const REMOVAL:uint = 3;
 
 	/**
+	*  <p><code>relatedNode</code> is used to identify a secondary node related to a mutation event.
+	*  For example, if a mutation event is dispatched to a node indicating that its parent
+	*  has changed, the <code>relatedNode</code> is the changed parent.  If an event is instead
+	*  dispatched to a subtree indicating a node was changed within it, the <code>relatedNode</code>
+	*  is the changed node.  In the case of the DOMAttrModified event it indicates the <code>Attr</code>
+	*  node which was modified, added, or removed.
+	*  </p>
 	*  @see randori.webkit.dom.Node
 	*/
 	public function get relatedNode():Node { return null; }
 
+	/**
+	*  <p><code>prevValue</code> indicates the previous value of the <code>Attr</code> node in
+	*  DOMAttrModified events, and of the <code>CharacterData</code> node in DOMCharDataModified events.
+	*  </p>
+	*/
 	public function get prevValue():String { return ''; }
 
+	/**
+	*  <p><code>newValue</code> indicates the new value of the <code>Attr</code> node in DOMAttrModified
+	*  events, and of the <code>CharacterData</code> node in DOMCharDataModified events.
+	*  </p>
+	*/
 	public function get newValue():String { return ''; }
 
+	/**
+	*  <p><code>attrName</code> indicates the name of the changed <code>Attr</code> node in a
+	*  DOMAttrModified event.
+	*  </p>
+	*/
 	public function get attrName():String { return ''; }
 
+	/**
+	*  <p><code>attrChange</code> indicates the type of change which triggered the DOMAttrModified event.
+	*  The values can be <code>MODIFICATION</code>, <code>ADDITION</code>, or <code>REMOVAL</code>.
+	*  </p>
+	*/
 	public function get attrChange():uint { return 0; }
 	/**
-	*  @param type (optional argument, default value is <code>undefined</code>)
-	*  @param canBubble (optional argument, default value is <code>undefined</code>)
-	*  @param cancelable (optional argument, default value is <code>undefined</code>)
-	*  @param relatedNode (optional argument, default value is <code>undefined</code>)
-	*  @param prevValue (optional argument, default value is <code>undefined</code>)
-	*  @param newValue (optional argument, default value is <code>undefined</code>)
-	*  @param attrName (optional argument, default value is <code>undefined</code>)
-	*  @param attrChange (optional argument, default value is <code>undefined</code>)
+	*  <p>The <code>initMutationEvent</code> method is used to initialize the value of a <code>MutationEvent</code> created through
+	*  the <code>DocumentEvent</code> interface.  This method may only be called before the <code>MutationEvent</code> has
+	*  been dispatched via the <code>dispatchEvent</code> method, though it may be called multiple times during that
+	*  phase if necessary.  If called multiple times, the final invocation takes precedence.</p>
+	*  @param typeArg <p>Specifies the event type.</p>
+	*  @param canBubbleArg <p>Specifies whether or not the event can bubble.</p>
+	*  @param cancelableArg <p>Specifies whether or not the event's default
+	*  action can be prevented.</p>
+	*  @param relatedNodeArg <p>Specifies the <code>Event</code>'s related Node.</p>
+	*  @param prevValueArg <p>Specifies the <code>Event</code>'s <code>prevValue</code> attribute.  This value may be null.</p>
+	*  @param newValueArg <p>Specifies the <code>Event</code>'s <code>newValue</code> attribute.  This value may be null.</p>
+	*  @param attrNameArg <p>Specifies the <code>Event</code>'s <code>attrName</code> attribute.  This value may be null.</p>
+	*  @param attrChangeArg <p>Specifies the <code>Event</code>'s <code>attrChange</code> attribute</p>
+	*  @return <p></p>
 	*/
 	public function initMutationEvent(type:String=undefined, canBubble:Boolean=undefined, cancelable:Boolean=undefined, relatedNode:Node=undefined, prevValue:String=undefined, newValue:String=undefined, attrName:String=undefined, attrChange:uint=undefined):void {}
 }

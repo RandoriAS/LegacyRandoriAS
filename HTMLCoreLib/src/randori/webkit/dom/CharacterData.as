@@ -52,13 +52,11 @@ package randori.webkit.dom
  *  inherit the interface from it. All <code>offsets</code> in this
  *  interface start from <code>0</code>.</p><p>As explained in the <code>DOMString</code> interface, text strings
  *  in the DOM are represented in UTF-16, i.e. as a sequence of 16-bit
- *  units.  In the following, the term <termref def="dt-16-bit-unit">16-bit units</termref> is used whenever
+ *  units.  In the following, the term 16-bit units is used whenever
  *  necessary to indicate that indexing on CharacterData is done in
  *  16-bit units.</p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.Node
  */
 public class CharacterData extends Node
@@ -78,45 +76,84 @@ public class CharacterData extends Node
 	public function set data(value:String):void { }
 
 	/**
-	*  <p>The number of <termref def="dt-16-bit-unit">16-bit
-	*  units</termref> that are available through <code>data</code> and the
+	*  <p>The number of 16-bit
+	*  units that are available through <code>data</code> and the
 	*  <code>substringData</code> method below.  This may have the value zero,
 	*  i.e., <code>CharacterData</code> nodes may be empty.</p>
 	*/
 	public function get length():uint { return 0; }
 	/**
 	*  <p>Extracts a range of data from the node.</p>
-	*  @param offset (optional argument, default value is <code>undefined</code>)
+	*  @param offset <p>Start offset of substring to extract.</p>
+	*  @param count <p>The number of 16-bit units to extract.</p>
+	*  @return <p>The specified substring. If the sum of <code>offset</code> and
+	*  <code>count</code> exceeds the <code>length</code>, then all 16-bit
+	*  units to the end of the data are returned.</p>
+	*  @throw DOMException <p>INDEX_SIZE_ERR: Raised if the specified <code>offset</code>
+	*  is negative or greater than the number of 16-bit units in
+	*  <code>data</code>, or if the specified <code>count</code> is
+	*  negative.</p><p>DOMSTRING_SIZE_ERR: Raised if the specified range of text does
+	*  not fit into a <code>DOMString</code>.</p>
 	*  @param length (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>String</code> instance.
 	*/
 	public function substringData(offset:uint=undefined, length:uint=undefined):String { return '';}
 	/**
 	*  <p>Append the string to the end of the character data of the node.
 	*  Upon success, <code>data</code> provides access to the concatenation of
 	*  <code>data</code> and the <code>DOMString</code> specified.</p>
+	*  @param arg <p>The <code>DOMString</code> to append.</p>
+	*  @return <p></p>
+	*  @throw DOMException <p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is
+	*  readonly.</p>
 	*  @param data (optional argument, default value is <code>undefined</code>)
 	*/
 	public function appendData(data:String=undefined):void {}
 	/**
-	*  <p>Insert a string at the specified <termref def="dt-16-bit-unit">16-bit
-	*  unit</termref> offset.</p>
-	*  @param offset (optional argument, default value is <code>undefined</code>)
+	*  <p>Insert a string at the specified 16-bit
+	*  unit offset.</p>
+	*  @param offset <p>The character offset at which to insert.</p>
+	*  @param arg <p>The <code>DOMString</code> to insert.</p>
+	*  @return <p></p>
+	*  @throw DOMException <p>INDEX_SIZE_ERR: Raised if the specified <code>offset</code>
+	*  is negative or greater than the number of 16-bit units in
+	*  <code>data</code>.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.</p>
 	*  @param data (optional argument, default value is <code>undefined</code>)
 	*/
 	public function insertData(offset:uint=undefined, data:String=undefined):void {}
 	/**
-	*  <p>Remove a range of <termref def="dt-16-bit-unit">16-bit units</termref>
+	*  <p>Remove a range of 16-bit units
 	*  from the node. Upon success, <code>data</code> and <code>length</code>
 	*  reflect the change.</p>
-	*  @param offset (optional argument, default value is <code>undefined</code>)
+	*  @param offset <p>The offset from which to start removing.</p>
+	*  @param count <p>The number of 16-bit units to delete. If the sum of
+	*  <code>offset</code> and <code>count</code> exceeds
+	*  <code>length</code> then all 16-bit units from <code>offset</code>
+	*  to the end of the data are deleted.</p>
+	*  @return <p></p>
+	*  @throw DOMException <p>INDEX_SIZE_ERR: Raised if the specified <code>offset</code>
+	*  is negative or greater than the number of 16-bit units in
+	*  <code>data</code>, or if the specified <code>count</code> is
+	*  negative.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.</p>
 	*  @param length (optional argument, default value is <code>undefined</code>)
 	*/
 	public function deleteData(offset:uint=undefined, length:uint=undefined):void {}
 	/**
-	*  <p>Replace the characters starting at the specified <termref def="dt-16-bit-unit">16-bit unit</termref> offset with the specified
+	*  <p>Replace the characters starting at the specified 16-bit unit offset with the specified
 	*  string.</p>
-	*  @param offset (optional argument, default value is <code>undefined</code>)
+	*  @param offset <p>The offset from which to start replacing.</p>
+	*  @param count <p>The number of 16-bit units to replace. If the sum of
+	*  <code>offset</code> and <code>count</code> exceeds
+	*  <code>length</code>, then all 16-bit units to the end of the data
+	*  are replaced; (i.e., the effect is the same as a
+	*  <code>remove</code> method call with the same range, followed
+	*  by an <code>append</code> method invocation).</p>
+	*  @param arg <p>The <code>DOMString</code> with which the range must
+	*  be replaced.</p>
+	*  @return <p></p>
+	*  @throw DOMException <p>INDEX_SIZE_ERR: Raised if the specified <code>offset</code>
+	*  is negative or greater than the number of 16-bit units in
+	*  <code>data</code>, or if the specified <code>count</code> is
+	*  negative.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.</p>
 	*  @param length (optional argument, default value is <code>undefined</code>)
 	*  @param data (optional argument, default value is <code>undefined</code>)
 	*/

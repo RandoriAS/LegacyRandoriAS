@@ -49,10 +49,8 @@ package randori.webkit.css
  *  counters function value. This interface reflects the values in
  *  the underlying style property.
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#value-def-counter
  */
 public class Counter

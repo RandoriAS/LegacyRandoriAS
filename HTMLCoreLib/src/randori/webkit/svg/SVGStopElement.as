@@ -44,10 +44,8 @@ package randori.webkit.svg
 
 [JavaScript(export="false", nativecondition="SVG", name="SVGStopElement")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.svg.SVGStyledElement
  */
 public class SVGStopElement extends SVGStyledElement

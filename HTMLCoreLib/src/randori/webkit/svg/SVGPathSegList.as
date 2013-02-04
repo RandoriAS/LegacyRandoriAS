@@ -44,10 +44,8 @@ package randori.webkit.svg
 
 [JavaScript(export="false", nativecondition="SVG", name="SVGPathSegList")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class SVGPathSegList
 {

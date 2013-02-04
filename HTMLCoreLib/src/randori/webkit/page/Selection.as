@@ -46,10 +46,8 @@ import randori.webkit.dom.Range;
 
 [JavaScript(export="false", name="Selection")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class Selection
 {

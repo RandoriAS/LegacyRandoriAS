@@ -44,10 +44,8 @@ package randori.webkit.plugins
 
 [JavaScript(export="false", name="Plugin")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public dynamic class Plugin
 {

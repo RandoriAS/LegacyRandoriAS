@@ -45,10 +45,8 @@ import randori.webkit.dom.NodeList;
 
 [JavaScript(export="false", nativecondition="PROGRESS_ELEMENT", name="HTMLProgressElement")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.html.HTMLElement
  */
 public class HTMLProgressElement extends HTMLElement

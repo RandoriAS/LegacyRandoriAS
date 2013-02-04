@@ -44,10 +44,8 @@ package randori.webkit.fileapi
 
 [JavaScript(export="false", nativecondition="BLOB", name="FileError")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class FileError
 {

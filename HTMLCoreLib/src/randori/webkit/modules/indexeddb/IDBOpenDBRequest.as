@@ -44,10 +44,8 @@ package randori.webkit.modules.indexeddb
 
 [JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="IDBOpenDBRequest")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.modules.indexeddb.IDBRequest
  */
 public class IDBOpenDBRequest extends IDBRequest

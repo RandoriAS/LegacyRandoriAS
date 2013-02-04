@@ -61,10 +61,8 @@ package randori.webkit.css
  *  A color percentage value can always be converted to a number and vice
  *  versa.
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#value-def-color
  */
 public class RGBColor

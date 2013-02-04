@@ -44,10 +44,8 @@ package randori.webkit.workers
 
 [JavaScript(export="false", nativecondition="WORKERS", name="Worker")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.workers.AbstractWorker
  */
 public class Worker extends AbstractWorker

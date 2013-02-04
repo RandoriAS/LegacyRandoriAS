@@ -48,10 +48,8 @@ package randori.webkit.css
  *  The <code>CSSStyleRule</code> interface represents a single rule set
  *  in a CSS style sheet.
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q8
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/selector.html
  *  @see randori.webkit.css.CSSRule

@@ -50,10 +50,8 @@ package randori.webkit.css
  *  property. Hence, modifications made to the <code>CSSPrimitiveValue</code>
  *  objects modify the style property.
  *  </p>
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/visufx.html#value-def-shape
  */
 public class Rect
