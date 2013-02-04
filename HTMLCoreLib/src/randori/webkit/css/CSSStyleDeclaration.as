@@ -75,49 +75,87 @@ package randori.webkit.css
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/about.html#shorthand
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/cascade.html#computed-value
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/cascade.html#specified-value
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/cascade.html#specified-value
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/propidx.html
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/about.html#shorthand
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/propidx.html
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/propidx.html
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/propidx.html
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/propidx.html
  */
 public dynamic class CSSStyleDeclaration
 {
 
+	/**
+	*  <p>
+	*  The parsable textual representation of the declaration block (excluding
+	*  the surrounding curly braces). Setting this attribute will result in
+	*  the parsing of the new value and resetting of all the properties in the
+	*  declaration block including the removal or addition of properties.
+	*  </p>
+	*/
 	public function get cssText():String { return ''; }
 	public function set cssText(value:String):void { }
 	/**
+	*  <p>
+	*  Used to retrieve the value of a CSS property if it has been explicitly
+	*  set within this declaration block.
+	*  </p>
 	*  @param propertyName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
 	public function getPropertyValue(propertyName:String=undefined):String { return '';}
 	/**
+	*  <p>
+	*  Used to retrieve the object representation of the value of a CSS
+	*  property if it has been explicitly set within this declaration block.
+	*  This method returns <code>null</code> if the property is a shorthand property. Shorthand
+	*  property values can only be accessed and modified as strings, using
+	*  the <code>getPropertyValue</code> and <code>setProperty</code> methods.
+	*  </p>
 	*  @param propertyName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>CSSValue</code> instance.
 	*/
 	public function getPropertyCSSValue(propertyName:String=undefined):CSSValue { return null;}
 	/**
+	*  <p>
+	*  Used to remove a CSS property if it has been explicitly
+	*  set within this declaration block.
+	*  </p>
 	*  @param propertyName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
 	public function removeProperty(propertyName:String=undefined):String { return '';}
 	/**
+	*  <p>
+	*  Used to retrieve the priority of a CSS property
+	*  (e.g. the <code>"important"</code> qualifier) if the property
+	*  has been explicitly set in this declaration block.
+	*  </p>
 	*  @param propertyName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
 	public function getPropertyPriority(propertyName:String=undefined):String { return '';}
 	/**
+	*  <p>
+	*  Used to set a property value and priority within this declaration
+	*  block.
+	*  </p>
 	*  @param propertyName (optional argument, default value is <code>undefined</code>)
 	*  @param value (optional argument, default value is <code>undefined</code>)
 	*  @param priority (optional argument, default value is <code>undefined</code>)
 	*/
 	public function setProperty(propertyName:String=undefined, value:String=undefined, priority:String=undefined):void {}
 
+	/**
+	*  <p>
+	*  The number of properties that have been explicitly set in this
+	*  declaration block. The range of valid indices is 0 to length-1
+	*  inclusive.
+	*  </p>
+	*/
 	public function get length():uint { return 0; }
 
 	/**
+	*  <p>
+	*  The CSS rule that contains this declaration block or <code>null</code>
+	*  if this <code>CSSStyleDeclaration</code> is not attached to a
+	*  <code>CSSRule</code>.
+	*  </p>
 	*  @see randori.webkit.css.CSSRule
 	*/
 	public function get parentRule():CSSRule { return null; }

@@ -72,8 +72,8 @@ public class HTMLTrackElement extends HTMLElement
 	public function set label(value:String):void { }
 
 	[JavascriptProperty(name="default")]
-	public function get $default():Boolean { return false; }
-	public function set $default(value:Boolean):void { }
+	public function get default_():Boolean { return false; }
+	public function set default_(value:Boolean):void { }
 	public static const NONE:uint = 0;
 	public static const LOADING:uint = 1;
 	public static const LOADED:uint = 2;

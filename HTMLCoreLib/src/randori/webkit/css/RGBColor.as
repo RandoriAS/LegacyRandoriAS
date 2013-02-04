@@ -71,16 +71,25 @@ public class RGBColor
 {
 
 	/**
+	*  <p>
+	*  This attribute is used for the red value of the RGB color.
+	*  </p>
 	*  @see randori.webkit.css.CSSPrimitiveValue
 	*/
 	public function get red():CSSPrimitiveValue { return null; }
 
 	/**
+	*  <p>
+	*  This attribute is used for the green value of the RGB color.
+	*  </p>
 	*  @see randori.webkit.css.CSSPrimitiveValue
 	*/
 	public function get green():CSSPrimitiveValue { return null; }
 
 	/**
+	*  <p>
+	*  This attribute is used for the blue value of the RGB color.
+	*  </p>
 	*  @see randori.webkit.css.CSSPrimitiveValue
 	*/
 	public function get blue():CSSPrimitiveValue { return null; }

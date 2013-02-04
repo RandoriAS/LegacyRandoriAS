@@ -172,7 +172,7 @@ public class XMLHttpRequest
 	/**
 	*  @param override
 	*/
-	public function overrideMimeType($override:String):void {}
+	public function overrideMimeType(override_:String):void {}
 	/**
 	*  @param type
 	*  @param listener

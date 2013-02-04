@@ -46,6 +46,20 @@ import randori.webkit.html.DOMTokenList;
 
 [JavaScript(export="false", name="Element")]
 /**
+ *  <p>The <code>Element</code> interface represents an <termref def="dt-element">element</termref> in an HTML
+ *  or XML document. Elements may have attributes associated with them; since the
+ *  <code>Element</code> interface inherits from <code>Node</code>, the generic
+ *  <code>Node</code> interface attribute <code>attributes</code> may be used
+ *  to retrieve the set of all attributes for an element. There are methods on
+ *  the <code>Element</code> interface to retrieve either an <code>Attr</code>
+ *  object by name or an attribute value by name. In XML, where an attribute
+ *  value may contain entity references, an <code>Attr</code> object should be
+ *  retrieved to examine the possibly fairly complex sub-tree representing the
+ *  attribute value. On the other hand, in HTML, where all attributes have
+ *  simple string values, methods to directly access an attribute value can
+ *  safely be used as a <termref def="dt-convenience">convenience</termref>.</p><note><p>In DOM Level 2, the method <code>normalize</code> is
+ *  inherited from the <code>Node</code> interface where it was
+ *  moved.</p></note>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
@@ -55,81 +69,166 @@ import randori.webkit.html.DOMTokenList;
 public class Element extends Node
 {
 
+	/**
+	*  <p>The name of the element. For example, in:
+	*  <eg role="code">
+	*  &lt;elementExample id="demo"&gt;
+	*  ...
+	*  &lt;/elementExample&gt; ,
+	*  </eg><code>tagName</code> has the value
+	*  <code>"elementExample"</code>. Note that this is
+	*  case-preserving in XML, as are all of the operations of the DOM.
+	*  The HTML DOM returns the <code>tagName</code> of an HTML element
+	*  in the canonical uppercase form, regardless of the case in the
+	*  source HTML document. </p>
+	*/
 	public function get tagName():String { return ''; }
 	/**
+	*  <p>Retrieves an attribute value by name.</p>
 	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
 	public function getAttribute(name:String=undefined):String { return '';}
 	/**
+	*  <p>Adds a new attribute. If an attribute with that name is already
+	*  present in the element, its value is changed to be that of the value
+	*  parameter. This value is a simple string; it is not parsed as it is being
+	*  set. So any markup (such as syntax to be recognized as an entity
+	*  reference) is treated as literal text, and needs to be appropriately
+	*  escaped by the implementation when it is written out. In order to assign
+	*  an attribute value that contains entity references, the user must create
+	*  an <code>Attr</code> node plus any <code>Text</code> and
+	*  <code>EntityReference</code> nodes, build the appropriate subtree, and
+	*  use <code>setAttributeNode</code> to assign it as the value of an
+	*  attribute.</p><p>To set an attribute with a qualified name and namespace URI, use
+	*  the <code>setAttributeNS</code> method.</p>
 	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @param value (optional argument, default value is <code>undefined</code>)
 	*/
 	public function setAttribute(name:String=undefined, value:String=undefined):void {}
 	/**
+	*  <p>Removes an attribute by name. If the removed attribute is known
+	*  to have a default value, an attribute immediately appears containing
+	*  the default value as well as the corresponding namespace URI,
+	*  local name, and prefix when applicable.</p><p>To remove an attribute by local name and namespace URI, use
+	*  the <code>removeAttributeNS</code> method.</p>
 	*  @param name (optional argument, default value is <code>undefined</code>)
 	*/
 	public function removeAttribute(name:String=undefined):void {}
 	/**
+	*  <p>Retrieves an attribute node by name.</p><p>To retrieve an attribute node by qualified name and namespace URI, use
+	*  the <code>getAttributeNodeNS</code> method.</p>
 	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Attr</code> instance.
 	*/
 	public function getAttributeNode(name:String=undefined):Attr { return null;}
 	/**
+	*  <p>Adds a new attribute node. If an attribute with that name
+	*  (<code>nodeName</code>) is already present in the element, it is replaced
+	*  by the new one.</p><p>To add a new attribute node with a qualified name and namespace URI,
+	*  use the <code>setAttributeNodeNS</code> method.</p>
 	*  @param newAttr (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Attr</code> instance.
 	*/
 	public function setAttributeNode(newAttr:Attr=undefined):Attr { return null;}
 	/**
+	*  <p>Removes the specified attribute node. If the removed
+	*  <code>Attr</code> has a default value it is immediately
+	*  replaced. The replacing attribute has the same namespace URI
+	*  and local name, as well as the original prefix, when
+	*  applicable.</p>
 	*  @param oldAttr (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Attr</code> instance.
 	*/
 	public function removeAttributeNode(oldAttr:Attr=undefined):Attr { return null;}
 	/**
+	*  <p>Returns a <code>NodeList</code> of all <termref def="dt-descendant">descendant</termref><code>Elements</code> with a given tag name, in the order in which they
+	*  are encountered in a preorder traversal of this <code>Element</code>
+	*  tree.</p>
 	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
 	public function getElementsByTagName(name:String=undefined):NodeList { return null;}
 	/**
+	*  <p>Retrieves an attribute value by local name and namespace
+	*  URI. HTML-only DOM implementations do not need to implement this
+	*  method.</p>
 	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
 	*  @param localName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
 	public function getAttributeNS(namespaceURI:String=undefined, localName:String=undefined):String { return '';}
 	/**
+	*  <p>Adds a new attribute. If an attribute with the same local name
+	*  and namespace URI is already present on the element, its prefix is
+	*  changed to be the prefix part of the <code>qualifiedName</code>, and
+	*  its value is changed to be the <code>value</code> parameter. This value
+	*  is a simple string; it is not parsed as it is being set. So any markup
+	*  (such as syntax to be recognized as an entity reference) is treated as
+	*  literal text, and needs to be appropriately escaped by the
+	*  implementation when it is written out. In order to assign an attribute
+	*  value that contains entity references, the user must create an
+	*  <code>Attr</code> node plus any <code>Text</code> and
+	*  <code>EntityReference</code> nodes, build the appropriate subtree, and
+	*  use <code>setAttributeNodeNS</code> or <code>setAttributeNode</code> to
+	*  assign it as the value of an attribute.</p><p>HTML-only DOM implementations do not need to implement this
+	*  method.</p>
 	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
 	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
 	*  @param value (optional argument, default value is <code>undefined</code>)
 	*/
 	public function setAttributeNS(namespaceURI:String=undefined, qualifiedName:String=undefined, value:String=undefined):void {}
 	/**
+	*  <p>Removes an attribute by local name and namespace URI. If
+	*  the removed attribute has a default value it is immediately
+	*  replaced. The replacing attribute has the same namespace URI
+	*  and local name, as well as the original prefix.</p><p>HTML-only DOM implementations do not need to implement this
+	*  method.</p>
 	*  @param namespaceURI
 	*  @param localName
 	*/
 	public function removeAttributeNS(namespaceURI:String, localName:String):void {}
 	/**
+	*  <p>Returns a <code>NodeList</code> of all the <termref def="dt-descendant">descendant</termref><code>Elements</code> with a given local name and namespace URI in the
+	*  order in which they are encountered in a preorder traversal of this
+	*  <code>Element</code> tree.</p><p>HTML-only DOM implementations do not need to implement this
+	*  method.</p>
 	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
 	*  @param localName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
 	public function getElementsByTagNameNS(namespaceURI:String=undefined, localName:String=undefined):NodeList { return null;}
 	/**
+	*  <p>Retrieves an <code>Attr</code> node by local name and namespace
+	*  URI. HTML-only DOM implementations do not need to implement this
+	*  method.</p>
 	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
 	*  @param localName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Attr</code> instance.
 	*/
 	public function getAttributeNodeNS(namespaceURI:String=undefined, localName:String=undefined):Attr { return null;}
 	/**
+	*  <p>Adds a new attribute. If an attribute with that local name and
+	*  that namespace URI is already present in the element, it is replaced by
+	*  the new one.</p><p>HTML-only DOM implementations do not need to implement this
+	*  method.</p>
 	*  @param newAttr (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Attr</code> instance.
 	*/
 	public function setAttributeNodeNS(newAttr:Attr=undefined):Attr { return null;}
 	/**
+	*  <p>Returns <code>true</code> when an attribute with a given name is
+	*  specified on this element or has a default value, <code>false</code>
+	*  otherwise.</p>
 	*  @param name
 	*  @return A <code>Boolean</code> instance.
 	*/
 	public function hasAttribute(name:String):Boolean { return false;}
 	/**
+	*  <p>Returns <code>true</code> when an attribute with a given local
+	*  name and namespace URI is specified on this element or has a default
+	*  value, <code>false</code> otherwise. HTML-only DOM implementations do
+	*  not need to implement this method.</p>
 	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
 	*  @param localName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.

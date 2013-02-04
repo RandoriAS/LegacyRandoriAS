@@ -72,19 +72,8 @@ package randori.webkit.css
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q13
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#percentage-units
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#length-units
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q19
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q19
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q19
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q20
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q20
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q21
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q21
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#strings
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#uri
@@ -127,35 +116,82 @@ public class CSSPrimitiveValue extends CSSValue
 	public static const CSS_VH:uint = 27;
 	public static const CSS_VMIN:uint = 28;
 
+	/**
+	*  <p>The type of the value as defined by the constants specified above.</p>
+	*/
 	public function get primitiveType():uint { return 0; }
 	/**
+	*  <p>
+	*  A method to set the float value with a specified unit. If the property
+	*  attached with this value can not accept the specified unit or the float
+	*  value, the value will be unchanged and a <code>DOMException</code> will
+	*  be raised.
+	*  </p>
 	*  @param unitType (optional argument, default value is <code>undefined</code>)
 	*  @param floatValue (optional argument, default value is <code>undefined</code>)
 	*/
 	public function setFloatValue(unitType:uint=undefined, floatValue:Number=undefined):void {}
 	/**
+	*  <p>
+	*  This method is used to get a float value in a specified unit. If this
+	*  CSS value doesn't contain a float value or can't be converted into the
+	*  specified unit, a <code>DOMException</code> is raised.
+	*  </p>
 	*  @param unitType (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Number</code> instance.
 	*/
 	public function getFloatValue(unitType:uint=undefined):Number { return 0;}
 	/**
+	*  <p>
+	*  A method to set the string value with the specified unit. If the
+	*  property attached to this value can't accept the specified unit or the
+	*  string value, the value will be unchanged and a
+	*  <code>DOMException</code> will be raised.
+	*  </p>
 	*  @param stringType (optional argument, default value is <code>undefined</code>)
 	*  @param stringValue (optional argument, default value is <code>undefined</code>)
 	*/
 	public function setStringValue(stringType:uint=undefined, stringValue:String=undefined):void {}
 	/**
+	*  <p>
+	*  This method is used to get the string value. If the
+	*  CSS value doesn't contain a string value, a <code>DOMException</code>
+	*  is raised.
+	*  </p><note><p>
+	*  Some properties (like <loc href="http://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#propdef-font-family">'font-family'</loc> or
+	*  <loc href="http://www.w3.org/TR/1998/REC-CSS2-19980512/aural.html#propdef-voice-family">'voice-family'</loc>)
+	*  convert a whitespace separated list of idents to a string.
+	*  </p></note>
 	*  @return A <code>String</code> instance.
 	*/
 	public function getStringValue():String { return '';}
 	/**
+	*  <p>
+	*  This method is used to get the Counter value. If this CSS value doesn't
+	*  contain a counter value, a <code>DOMException</code> is
+	*  raised. Modification to the corresponding style property can be
+	*  achieved using the <code>Counter</code> interface.
+	*  </p>
 	*  @return A <code>Counter</code> instance.
 	*/
 	public function getCounterValue():Counter { return null;}
 	/**
+	*  <p>
+	*  This method is used to get the Rect value. If this CSS value doesn't
+	*  contain a rect value, a <code>DOMException</code> is
+	*  raised. Modification to the corresponding style property can be
+	*  achieved using the <code>Rect</code> interface.
+	*  </p>
 	*  @return A <code>Rect</code> instance.
 	*/
 	public function getRectValue():Rect { return null;}
 	/**
+	*  <p>
+	*  This method is used to get the RGB color. If this CSS value doesn't
+	*  contain a RGB color value, a <code>DOMException</code> is
+	*  raised. Modification to the corresponding style property can be
+	*  achieved using the <code>RGBColor</code> interface.
+	*  </p>
 	*  @return A <code>RGBColor</code> instance.
 	*/
 	public function getRGBColorValue():RGBColor { return null;}

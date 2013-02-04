@@ -61,21 +61,43 @@ public class CSSStyleSheet extends StyleSheet
 {
 
 	/**
+	*  <p>
+	*  If this style sheet comes from an <code>@import</code> rule, the
+	*  <code>ownerRule</code> attribute will contain the
+	*  <code>CSSImportRule</code>. In that case, the <code>ownerNode</code>
+	*  attribute in the <code>StyleSheet</code> interface will be
+	*  <code>null</code>. If the style sheet comes from an element or a
+	*  processing instruction, the <code>ownerRule</code> attribute will be
+	*  <code>null</code> and the <code>ownerNode</code> attribute will contain
+	*  the <code>Node</code>.
+	*  </p>
 	*  @see randori.webkit.css.CSSRule
 	*/
 	public function get ownerRule():CSSRule { return null; }
 
 	/**
+	*  <p>
+	*  The list of all CSS rules contained within the style sheet.
+	*  This includes both rule sets and
+	*  at-rules.
+	*  </p>
 	*  @see randori.webkit.css.CSSRuleList
 	*/
 	public function get cssRules():CSSRuleList { return null; }
 	/**
+	*  <p>
+	*  Used to insert a new rule into the style sheet. The new rule now
+	*  becomes part of the cascade.
+	*  </p>
 	*  @param rule (optional argument, default value is <code>undefined</code>)
 	*  @param index (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>uint</code> instance.
 	*/
 	public function insertRule(rule:String=undefined, index:uint=undefined):uint { return 0;}
 	/**
+	*  <p>
+	*  Used to delete a rule from the style sheet.
+	*  </p>
 	*  @param index (optional argument, default value is <code>undefined</code>)
 	*/
 	public function deleteRule(index:uint=undefined):void {}

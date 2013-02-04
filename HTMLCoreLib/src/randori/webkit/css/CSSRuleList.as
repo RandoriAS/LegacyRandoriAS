@@ -59,6 +59,12 @@ package randori.webkit.css
 public dynamic class CSSRuleList
 {
 
+	/**
+	*  <p>
+	*  The number of <code>CSSRules</code> in the list. The range of valid
+	*  child rule indices is <code>0</code> to <code>length-1</code> inclusive.
+	*  </p>
+	*/
 	public function get length():uint { return 0; }
 }
 

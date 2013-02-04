@@ -44,6 +44,11 @@ package randori.webkit.dom
 
 [JavaScript(export="false", name="NodeList")]
 /**
+ *  <p>The <code>NodeList</code> interface provides the abstraction of an
+ *  ordered collection of nodes, without defining or constraining how this
+ *  collection is implemented. <code>NodeList</code> objects in the DOM are
+ *  <termref def="td-live">live</termref>.</p><p>The items in the <code>NodeList</code> are accessible via an
+ *  integral index, starting from 0.</p>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
@@ -52,6 +57,10 @@ package randori.webkit.dom
 public dynamic class NodeList
 {
 
+	/**
+	*  <p>The number of nodes in the list. The range of valid child node
+	*  indices is 0 to <code>length-1</code> inclusive. </p>
+	*/
 	public function get length():uint { return 0; }
 }
 

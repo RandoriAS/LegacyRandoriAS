@@ -61,10 +61,18 @@ package randori.webkit.css
 public class CSSPageRule extends CSSRule
 {
 
+	/**
+	*  <p>
+	*  The parsable textual representation of the page selector for the rule.
+	*  </p>
+	*/
 	public function get selectorText():String { return ''; }
 	public function set selectorText(value:String):void { }
 
 	/**
+	*  <p>
+	*  The declaration-block of this rule.
+	*  </p>
 	*  @see randori.webkit.css.CSSStyleDeclaration
 	*/
 	public function get style():CSSStyleDeclaration { return null; }

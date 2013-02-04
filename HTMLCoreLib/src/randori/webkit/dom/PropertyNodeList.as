@@ -40,8 +40,8 @@
 
 package randori.webkit.dom
 {
-	import randori.webkit.html.MicroDataItemValue;
 
+import randori.webkit.html.MicroDataItemValue;
 
 [JavaScript(export="false", nativecondition="MICRODATA", name="PropertyNodeList")]
 /**

@@ -63,15 +63,34 @@ package randori.webkit.css
 public dynamic class MediaList
 {
 
+	/**
+	*  <p>
+	*  The parsable textual representation of the media list. This is a
+	*  comma-separated list of media.
+	*  </p>
+	*/
 	public function get mediaText():String { return ''; }
 	public function set mediaText(value:String):void { }
 
+	/**
+	*  <p>
+	*  The number of media in the list. The range of valid media is
+	*  <code>0</code> to <code>length-1</code> inclusive.
+	*  </p>
+	*/
 	public function get length():uint { return 0; }
 	/**
+	*  <p>
+	*  Deletes the medium indicated by <code>oldMedium</code> from the list.
+	*  </p>
 	*  @param oldMedium (optional argument, default value is <code>undefined</code>)
 	*/
 	public function deleteMedium(oldMedium:String=undefined):void {}
 	/**
+	*  <p>
+	*  Adds the medium <code>newMedium</code> to the end of the list. If the
+	*  <code>newMedium</code> is already used, it is first removed.
+	*  </p>
 	*  @param newMedium (optional argument, default value is <code>undefined</code>)
 	*/
 	public function appendMedium(newMedium:String=undefined):void {}

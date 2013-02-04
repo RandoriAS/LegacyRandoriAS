@@ -54,16 +54,26 @@ package randori.webkit.css
  *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q8
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/selector.html
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q8
  *  @see randori.webkit.css.CSSRule
  */
 public class CSSStyleRule extends CSSRule
 {
 
+	/**
+	*  <p>
+	*  The textual representation of the selector
+	*  for the rule set. The implementation may have stripped out insignificant
+	*  whitespace while parsing the selector.
+	*  </p>
+	*/
 	public function get selectorText():String { return ''; }
 	public function set selectorText(value:String):void { }
 
 	/**
+	*  <p>
+	*  The declaration-block
+	*  of this rule set.
+	*  </p>
 	*  @see randori.webkit.css.CSSStyleDeclaration
 	*/
 	public function get style():CSSStyleDeclaration { return null; }

@@ -58,6 +58,13 @@ package randori.webkit.css
 public dynamic class StyleSheetList
 {
 
+	/**
+	*  <p>
+	*  The number of <code>StyleSheets</code> in the list. The range of valid
+	*  child stylesheet indices is <code>0</code> to <code>length-1</code>
+	*  inclusive.
+	*  </p>
+	*/
 	public function get length():uint { return 0; }
 }
 

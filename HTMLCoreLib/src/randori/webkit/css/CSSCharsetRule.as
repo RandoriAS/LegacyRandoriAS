@@ -67,13 +67,16 @@ package randori.webkit.css
  *  @productversion RandoriAS 1.0
  *  @since 1.0
  *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#x66
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#x66
- *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#x66
  *  @see randori.webkit.css.CSSRule
  */
 public class CSSCharsetRule extends CSSRule
 {
 
+	/**
+	*  <p>
+	*  The encoding information used in this <code>@charset</code> rule.
+	*  </p>
+	*/
 	public function get encoding():String { return ''; }
 	public function set encoding(value:String):void { }
 }

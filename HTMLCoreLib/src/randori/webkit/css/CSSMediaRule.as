@@ -61,21 +61,33 @@ public class CSSMediaRule extends CSSRule
 {
 
 	/**
+	*  <p>
+	*  A list of media types for this rule.
+	*  </p>
 	*  @see randori.webkit.css.MediaList
 	*/
 	public function get media():MediaList { return null; }
 
 	/**
+	*  <p>
+	*  A list of all CSS rules contained within the media block.
+	*  </p>
 	*  @see randori.webkit.css.CSSRuleList
 	*/
 	public function get cssRules():CSSRuleList { return null; }
 	/**
+	*  <p>
+	*  Used to insert a new rule into the media block.
+	*  </p>
 	*  @param rule (optional argument, default value is <code>undefined</code>)
 	*  @param index (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>uint</code> instance.
 	*/
 	public function insertRule(rule:String=undefined, index:uint=undefined):uint { return 0;}
 	/**
+	*  <p>
+	*  Used to delete a rule from the media block.
+	*  </p>
 	*  @param index (optional argument, default value is <code>undefined</code>)
 	*/
 	public function deleteRule(index:uint=undefined):void {}

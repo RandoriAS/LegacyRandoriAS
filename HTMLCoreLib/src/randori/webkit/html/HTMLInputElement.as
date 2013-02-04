@@ -143,8 +143,8 @@ public class HTMLInputElement extends HTMLElement
 	public function set placeholder(value:String):void { }
 
 	[JavascriptProperty(name="readOnly")]
-	public function get $readOnly():Boolean { return false; }
-	public function set $readOnly(value:Boolean):void { }
+	public function get readOnly_():Boolean { return false; }
+	public function set readOnly_(value:Boolean):void { }
 
 	public function get required():Boolean { return false; }
 	public function set required(value:Boolean):void { }

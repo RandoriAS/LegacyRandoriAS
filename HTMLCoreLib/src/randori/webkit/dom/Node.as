@@ -44,6 +44,14 @@ package randori.webkit.dom
 
 [JavaScript(export="false", name="Node")]
 /**
+ *  <p>The <code>Node</code> interface is the primary datatype for the entire Document Object Model.
+ *  It represents a single node in the document tree. While all objects
+ *  implementing the <code>Node</code> interface expose methods for dealing with children, not all objects
+ *  implementing the <code>Node</code> interface may have children. For example, <code>Text</code> nodes may not have children, and adding children to such nodes results
+ *  in a <code>DOMException</code> being raised.</p><p>The attributes <code>nodeName</code>, <code>nodeValue</code> and <code>attributes</code> are included as a mechanism to get at node information without casting
+ *  down to the specific derived interface. In cases where there is no obvious
+ *  mapping of these attributes for a specific <code>nodeType</code> (e.g., <code>nodeValue</code> for an <code>Element</code> or <code>attributes</code> for a <code>Comment</code>), this returns <code>null</code>. Note that the specialized interfaces may contain additional and more
+ *  convenient mechanisms to get and set the relevant information.</p>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
@@ -64,98 +72,168 @@ public class Node
 	public static const DOCUMENT_FRAGMENT_NODE:uint = 11;
 	public static const NOTATION_NODE:uint = 12;
 
+	/**
+	*  <p>The name of this node, depending on its type; see the table above.
+	*  </p>
+	*/
 	public function get nodeName():String { return ''; }
 
+	/**
+	*  <p>The value of this node, depending on its type; see the table above.
+	*  When it is defined to be <code>null</code>, setting it has no effect.</p>
+	*/
 	public function get nodeValue():String { return ''; }
 	public function set nodeValue(value:String):void { }
 
+	/**
+	*  <p>A code representing the type of the underlying object, as defined
+	*  above.</p>
+	*/
 	public function get nodeType():uint { return 0; }
 
 	/**
+	*  <p>The <termref def="dt-parent">parent</termref> of this node. All nodes,
+	*  except <code>Attr</code>, <code>Document</code>, <code>DocumentFragment</code>, <code>Entity</code>, and <code>Notation</code> may have a parent. However, if a node has just been created and not yet
+	*  added to the tree, or if it has been removed from the tree, this is <code>null</code>.</p>
 	*  @see randori.webkit.dom.Node
 	*/
 	public function get parentNode():Node { return null; }
 
 	/**
+	*  <p>A <code>NodeList</code> that contains all children of this node. If there are no children, this
+	*  is a <code>NodeList</code> containing no nodes.</p>
 	*  @see randori.webkit.dom.NodeList
 	*/
 	public function get childNodes():NodeList { return null; }
 
 	/**
+	*  <p>The first child of this node. If there is no such node, this returns <code>null</code>.</p>
 	*  @see randori.webkit.dom.Node
 	*/
 	public function get firstChild():Node { return null; }
 
 	/**
+	*  <p>The last child of this node. If there is no such node, this returns <code>null</code>.</p>
 	*  @see randori.webkit.dom.Node
 	*/
 	public function get lastChild():Node { return null; }
 
 	/**
+	*  <p>The node immediately preceding this node. If there is no such node,
+	*  this returns <code>null</code>.</p>
 	*  @see randori.webkit.dom.Node
 	*/
 	public function get previousSibling():Node { return null; }
 
 	/**
+	*  <p>The node immediately following this node. If there is no such node,
+	*  this returns <code>null</code>.</p>
 	*  @see randori.webkit.dom.Node
 	*/
 	public function get nextSibling():Node { return null; }
 
 	/**
+	*  <p>A <code>NamedNodeMap</code> containing the attributes of this node (if it is an <code>Element</code>) or <code>null</code> otherwise. </p>
 	*  @see randori.webkit.dom.NamedNodeMap
 	*/
 	public function get attributes():NamedNodeMap { return null; }
 
 	/**
+	*  <p>The <code>Document</code> object associated with this node. This is also the <code>Document</code> object used to create new nodes. When this node is a <code>Document</code> or a <code>DocumentType</code> which is not used with any <code>Document</code> yet, this is <code>null</code>.</p>
 	*  @see randori.webkit.dom.Document
 	*/
 	public function get ownerDocument():Document { return null; }
 	/**
+	*  <p>Inserts the node <code>newChild</code> before the existing child node <code>refChild</code>. If <code>refChild</code> is <code>null</code>, insert <code>newChild</code> at the end of the list of children.</p><p>If <code>newChild</code> is a <code>DocumentFragment</code> object, all of its children are inserted, in the same order, before <code>refChild</code>. If the <code>newChild</code> is already in the tree, it is first removed.</p>
 	*  @param newChild
 	*  @param refChild
 	*  @return A <code>Node</code> instance.
 	*/
 	public function insertBefore(newChild:Node, refChild:Node):Node { return null;}
 	/**
+	*  <p>Replaces the child node <code>oldChild</code> with <code>newChild</code> in the list of children, and returns the <code>oldChild</code> node.</p><p>If <code>newChild</code> is a <code>DocumentFragment</code> object, <code>oldChild</code> is replaced by all of the <code>DocumentFragment</code> children, which are inserted in the same order. If the <code>newChild</code> is already in the tree, it is first removed.</p>
 	*  @param newChild
 	*  @param oldChild
 	*  @return A <code>Node</code> instance.
 	*/
 	public function replaceChild(newChild:Node, oldChild:Node):Node { return null;}
 	/**
+	*  <p>Removes the child node indicated by <code>oldChild</code> from the list of children, and returns it.</p>
 	*  @param oldChild
 	*  @return A <code>Node</code> instance.
 	*/
 	public function removeChild(oldChild:Node):Node { return null;}
 	/**
+	*  <p>Adds the node <code>newChild</code> to the end of the list of children of this node. If the <code>newChild</code> is already in the tree, it is first removed.</p>
 	*  @param newChild
 	*  @return A <code>Node</code> instance.
 	*/
 	public function appendChild(newChild:Node):Node { return null;}
 	/**
+	*  <p>Returns whether this node has any children.</p>
 	*  @return A <code>Boolean</code> instance.
 	*/
 	public function hasChildNodes():Boolean { return false;}
 	/**
+	*  <p>Returns a duplicate of this node, i.e., serves as a generic copy
+	*  constructor for nodes. The duplicate node has no parent; (<code>parentNode</code> is <code>null</code>.).</p><p>Cloning an <code>Element</code> copies all attributes and their values, including those generated by
+	*  the XML processor to represent defaulted attributes, but this method does not
+	*  copy any text it contains unless it is a deep clone, since the text is
+	*  contained in a child <code>Text</code> node. Cloning an <code>Attribute</code> directly, as opposed to be cloned as part of an <code>Element</code> cloning operation, returns a specified attribute (<code>specified</code> is <code>true</code>). Cloning any other type of node simply returns a copy of this
+	*  node.</p><p>Note that cloning an immutable subtree results in a mutable copy, but
+	*  the children of an <code>EntityReference</code> clone are <termref def="dt-readonly-node">readonly</termref>. In
+	*  addition, clones of unspecified <code>Attr</code> nodes are specified. And, cloning <code>Document</code>, <code>DocumentType</code>, <code>Entity</code>, and <code>Notation</code> nodes is implementation dependent.</p>
 	*  @param deep (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Node</code> instance.
 	*/
 	public function cloneNode(deep:Boolean=undefined):Node { return null;}
+	/**
+	*  <p>Puts all <code>Text</code> nodes in the full depth of the sub-tree underneath this <code>Node</code>, including attribute nodes, into a "normal" form where only structure
+	*  (e.g., elements, comments, processing instructions, CDATA sections, and entity
+	*  references) separates <code>Text</code> nodes, i.e., there are neither adjacent <code>Text</code> nodes nor empty <code>Text</code> nodes. This can be used to ensure that the DOM view of a document is
+	*  the same as if it were saved and re-loaded, and is useful when operations (such
+	*  as XPointer <bibref ref="XPointer" /> lookups) that depend on a particular
+	*  document tree structure are to be used.</p><note><p>In cases where the document contains <code>CDATASections</code>, the normalize operation alone may not be sufficient, since XPointers
+	*  do not differentiate between <code>Text</code> nodes and <code>CDATASection</code> nodes.</p></note>
+	*/
 	public function normalize():void {}
 	/**
+	*  <p>Tests whether the DOM implementation implements a specific feature and
+	*  that feature is supported by this node.</p>
 	*  @param feature (optional argument, default value is <code>undefined</code>)
 	*  @param version (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
 	public function isSupported(feature:String=undefined, version:String=undefined):Boolean { return false;}
 
+	/**
+	*  <p>The <termref def="dt-namespaceURI">namespace URI</termref> of this
+	*  node, or <code>null</code> if it is unspecified.</p><p>This is not a computed value that is the result of a namespace lookup
+	*  based on an examination of the namespace declarations in scope. It is merely
+	*  the namespace URI given at creation time.</p><p>For nodes of any type other than <code>ELEMENT_NODE</code> and <code>ATTRIBUTE_NODE</code> and nodes created with a DOM Level 1 method, such as <code>createElement</code> from the <code>Document</code> interface, this is always <code>null</code>.</p><note><p>Per the <emph>Namespaces in XML</emph> Specification
+	*  <bibref ref="Namespaces" /> an attribute does not inherit its namespace from the
+	*  element it is attached to. If an attribute is not explicitly given a namespace,
+	*  it simply has no namespace.</p></note>
+	*/
 	public function get namespaceURI():String { return ''; }
 
+	/**
+	*  <p>The <termref def="dt-namespaceprefix">namespace prefix</termref> of
+	*  this node, or <code>null</code> if it is unspecified.</p><p>Note that setting this attribute, when permitted, changes the <code>nodeName</code> attribute, which holds the <termref def="dt-qualifiedname">qualified
+	*  name</termref>, as well as the <code>tagName</code> and <code>name</code> attributes of the <code>Element</code> and <code>Attr</code> interfaces, when applicable.</p><p>Note also that changing the prefix of an attribute that is known to
+	*  have a default value, does not make a new attribute with the default value and
+	*  the original prefix appear, since the <code>namespaceURI</code> and <code>localName</code> do not change.</p><p>For nodes of any type other than <code>ELEMENT_NODE</code> and <code>ATTRIBUTE_NODE</code> and nodes created with a DOM Level 1 method, such as <code>createElement</code> from the <code>Document</code> interface, this is always <code>null</code>.</p>
+	*/
 	public function get prefix():String { return ''; }
 	public function set prefix(value:String):void { }
 
+	/**
+	*  <p>Returns the local part of the <termref def="dt-qualifiedname">qualified name</termref> of this node.</p><p>For nodes of any type other than <code>ELEMENT_NODE</code> and <code>ATTRIBUTE_NODE</code> and nodes created with a DOM Level 1 method, such as <code>createElement</code> from the <code>Document</code> interface, this is always <code>null</code>.</p>
+	*/
 	public function get localName():String { return ''; }
 	/**
+	*  <p>Returns whether this node (if it is an element) has any
+	*  attributes.</p>
 	*  @return A <code>Boolean</code> instance.
 	*/
 	public function hasAttributes():Boolean { return false;}

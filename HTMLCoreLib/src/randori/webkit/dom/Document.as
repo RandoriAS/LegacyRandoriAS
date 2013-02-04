@@ -57,6 +57,15 @@ import randori.webkit.page.SecurityPolicy;
 
 [JavaScript(export="false", name="Document")]
 /**
+ *  <p>The <code>Document</code> interface represents the entire
+ *  HTML or XML document. Conceptually, it is the <termref def="dt-root-node">root</termref> of the
+ *  document tree, and provides the  primary access to the
+ *  document's data.</p><p>Since elements, text nodes, comments, processing instructions,
+ *  etc. cannot exist outside the context of a <code>Document</code>, the
+ *  <code>Document</code> interface also contains the factory methods needed
+ *  to create these objects. The <code>Node</code> objects created have a
+ *  <code>ownerDocument</code> attribute which associates them with the
+ *  <code>Document</code> within whose context they were created.</p>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
@@ -67,89 +76,215 @@ public class Document extends Node
 {
 
 	/**
+	*  <p>The Document Type Declaration (see <code>DocumentType</code>)
+	*  associated with this document. For HTML documents as well as XML
+	*  documents without a document type declaration this returns
+	*  <code>null</code>. The DOM Level 2 does not support editing the
+	*  Document Type Declaration. <code>docType</code> cannot be
+	*  altered in any way, including through the use of methods inherited from
+	*  the <code>Node</code> interface, such as <code>insertNode</code> or
+	*  <code>removeNode</code>.</p>
 	*  @see randori.webkit.dom.DocumentType
 	*/
 	public function get doctype():DocumentType { return null; }
 
 	/**
+	*  <p>The <code>DOMImplementation</code> object that handles this
+	*  document. A DOM application may use objects from multiple
+	*  implementations.</p>
 	*  @see randori.webkit.dom.DOMImplementation
 	*/
 	public function get implementation():DOMImplementation { return null; }
 
 	/**
+	*  <p>This is a <termref def="dt-convenience">convenience</termref> attribute that allows direct
+	*  access to the child node that is the root element of  the
+	*  document. For HTML documents, this is the element with
+	*  the tagName "HTML".</p>
 	*  @see randori.webkit.dom.Element
 	*/
 	public function get documentElement():Element { return null; }
 	/**
+	*  <p>Creates an element of the type specified. Note that the instance
+	*  returned implements the <code>Element</code> interface, so attributes
+	*  can be specified directly  on the returned object.</p><p>In addition, if there are known attributes with default values,
+	*  <code>Attr</code> nodes representing them are automatically created and
+	*  attached to the element.</p><p>To create an element with a qualified name and namespace URI, use the
+	*  <code>createElementNS</code> method.</p>
 	*  @param tagName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Element</code> instance.
 	*/
 	public function createElement(tagName:String=undefined):Element { return null;}
 	/**
+	*  <p>Creates an empty <code>DocumentFragment</code> object.
+	*  </p>
 	*  @return A <code>DocumentFragment</code> instance.
 	*/
 	public function createDocumentFragment():DocumentFragment { return null;}
 	/**
+	*  <p>Creates a <code>Text</code> node given the specified
+	*  string.</p>
 	*  @param data (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Text</code> instance.
 	*/
 	public function createTextNode(data:String=undefined):Text { return null;}
 	/**
+	*  <p>Creates a <code>Comment</code> node given the specified
+	*  string.</p>
 	*  @param data (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Comment</code> instance.
 	*/
 	public function createComment(data:String=undefined):Comment { return null;}
 	/**
+	*  <p>Creates a <code>CDATASection</code> node whose value  is
+	*  the specified string.</p>
 	*  @param data (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>CDATASection</code> instance.
 	*/
 	public function createCDATASection(data:String=undefined):CDATASection { return null;}
 	/**
+	*  <p>Creates a <code>ProcessingInstruction</code> node given
+	*  the specified name and data strings.</p>
 	*  @param target (optional argument, default value is <code>undefined</code>)
 	*  @param data (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>ProcessingInstruction</code> instance.
 	*/
 	public function createProcessingInstruction(target:String=undefined, data:String=undefined):ProcessingInstruction { return null;}
 	/**
+	*  <p>Creates an <code>Attr</code> of the given name.
+	*  Note that the <code>Attr</code> instance
+	*  can then be set on an <code>Element</code> using the
+	*  <code>setAttributeNode</code> method. </p><p>To create an attribute with a qualified name and namespace URI, use
+	*  the <code>createAttributeNS</code> method.</p>
 	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Attr</code> instance.
 	*/
 	public function createAttribute(name:String=undefined):Attr { return null;}
 	/**
+	*  <p>Creates an <code>EntityReference</code> object. In addition, if
+	*  the referenced entity is known, the child list of the
+	*  <code>EntityReference</code> node is made the same as that of the
+	*  corresponding <code>Entity</code> node.</p><note><p>If any descendant of the <code>Entity</code> node has an
+	*  unbound <termref def="dt-namespaceprefix">namespace prefix</termref>,
+	*  the corresponding descendant of the created
+	*  <code>EntityReference</code> node is also unbound; (its
+	*  <code>namespaceURI</code> is <code>null</code>). The DOM Level 2 does
+	*  not support any mechanism to resolve namespace prefixes.</p></note>
 	*  @param name (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>EntityReference</code> instance.
 	*/
 	public function createEntityReference(name:String=undefined):EntityReference { return null;}
 	/**
+	*  <p>Returns a <code>NodeList</code> of all the <code>Elements</code>
+	*  with a given tag name in the order in which they are encountered
+	*  in a preorder traversal of the <code>Document</code> tree.
+	*  </p>
 	*  @param tagname (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
 	public function getElementsByTagName(tagname:String=undefined):NodeList { return null;}
 	/**
+	*  <p>Imports a node from another document to this document. The returned
+	*  node has no parent; (<code>parentNode</code> is <code>null</code>). The
+	*  source node is not altered or removed from the original document; this
+	*  method creates a new copy of the source node.</p><p>For all nodes, importing a node creates a node object owned by the
+	*  importing document, with attribute values identical to the source
+	*  node's <code>nodeName</code> and <code>nodeType</code>, plus the
+	*  attributes related to namespaces (<code>prefix</code>,
+	*  <code>localName</code>, and <code>namespaceURI</code>). As in the
+	*  <code>cloneNode</code> operation on a <code>Node</code>, the source
+	*  node is not altered.</p><p>Additional information is copied as appropriate to the
+	*  <code>nodeType</code>, attempting to mirror the behavior expected if a
+	*  fragment of XML or HTML source was copied from one document to another,
+	*  recognizing that the two documents may have different DTDs in the XML
+	*  case. The following list describes the specifics for each type of
+	*  node.
+	*  <glist><gitem><label>ATTRIBUTE_NODE</label><def><p>The <code>ownerElement</code> attribute is set to
+	*  <code>null</code> and the <code>specified</code> flag is set to
+	*  <code>true</code> on the generated <code>Attr</code>. The
+	*  <termref def="dt-descendant">descendants</termref> of the source <code>Attr</code> are recursively
+	*  imported and the resulting nodes reassembled to form the
+	*  corresponding subtree.</p><p>Note that the <code>deep</code> parameter has no effect on
+	*  <code>Attr</code> nodes; they always carry their children with
+	*  them when imported.</p></def></gitem><gitem><label>DOCUMENT_FRAGMENT_NODE</label><def><p>If the <code>deep</code> option was set to
+	*  <code>true</code>, the <termref def="dt-descendant">descendants</termref> of the source element are
+	*  recursively imported and the resulting nodes reassembled to
+	*  form the corresponding subtree. Otherwise, this simply
+	*  generates an empty <code>DocumentFragment</code>.</p></def></gitem><gitem><label>DOCUMENT_NODE</label><def><p><code>Document</code> nodes cannot be imported.</p></def></gitem><gitem><label>DOCUMENT_TYPE_NODE</label><def><p><code>DocumentType</code> nodes cannot be imported.</p></def></gitem><gitem><label>ELEMENT_NODE</label><def><p><emph>Specified</emph> attribute nodes of the source
+	*  element are imported, and the generated <code>Attr</code> nodes
+	*  are attached to the generated <code>Element</code>. Default
+	*  attributes are <emph>not</emph> copied, though if the document
+	*  being imported into defines default attributes for this element
+	*  name, those are assigned. If the <code>importNode</code><code>deep</code> parameter was set to <code>true</code>, the
+	*  <termref def="dt-descendant">descendants</termref> of the source element are recursively imported
+	*  and the resulting nodes reassembled to form the corresponding
+	*  subtree.</p></def></gitem><gitem><label>ENTITY_NODE</label><def><p><code>Entity</code> nodes can be imported, however in the
+	*  current release of the DOM the <code>DocumentType</code> is
+	*  readonly. Ability to add these imported nodes to a
+	*  <code>DocumentType</code> will be considered for addition to a
+	*  future release of the DOM.</p><p>On import, the <code>publicId</code>, <code>systemId</code>,
+	*  and <code>notationName</code> attributes are copied. If a
+	*  <code>deep</code> import is requested, the <termref def="dt-descendant">descendants</termref> of the
+	*  the source <code>Entity</code> are recursively imported and the
+	*  resulting nodes reassembled to form the corresponding
+	*  subtree.</p></def></gitem><gitem><label>ENTITY_REFERENCE_NODE</label><def><p>Only the <code>EntityReference</code> itself is copied,
+	*  even if a <code>deep</code> import is requested, since the
+	*  source and destination documents might have defined the entity
+	*  differently. If the document being imported into provides a
+	*  definition for this entity name, its value is assigned.</p></def></gitem><gitem><label>NOTATION_NODE</label><def><p><code>Notation</code> nodes can be imported, however in the
+	*  current release of the DOM the <code>DocumentType</code> is
+	*  readonly. Ability to add these imported nodes to a
+	*  <code>DocumentType</code> will be considered for addition to a
+	*  future release of the DOM.</p><p>On import, the <code>publicId</code> and
+	*  <code>systemId</code> attributes are copied.</p><p>Note that the <code>deep</code> parameter has no effect on
+	*  <code>Notation</code> nodes since they never have any
+	*  children.</p></def></gitem><gitem><label>PROCESSING_INSTRUCTION_NODE</label><def><p>The imported node copies its <code>target</code> and
+	*  <code>data</code> values from those of the source node.</p></def></gitem><gitem><label>TEXT_NODE, CDATA_SECTION_NODE, COMMENT_NODE</label><def><p>These three types of nodes inheriting from
+	*  <code>CharacterData</code> copy their <code>data</code> and
+	*  <code>length</code> attributes from those of the source
+	*  node.</p></def></gitem></glist></p>
 	*  @param importedNode (optional argument, default value is <code>undefined</code>)
 	*  @param deep (optional argument, default value is <code>false</code>)
 	*  @return A <code>Node</code> instance.
 	*/
 	public function importNode(importedNode:Node=undefined, deep:Boolean=false):Node { return null;}
 	/**
+	*  <p>Creates an element of the given qualified name and namespace
+	*  URI. HTML-only DOM implementations do not need to implement this
+	*  method.</p>
 	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
 	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Element</code> instance.
 	*/
 	public function createElementNS(namespaceURI:String=undefined, qualifiedName:String=undefined):Element { return null;}
 	/**
+	*  <p>Creates an attribute of the given qualified name and namespace
+	*  URI. HTML-only DOM implementations do not need to implement this
+	*  method.</p>
 	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
 	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Attr</code> instance.
 	*/
 	public function createAttributeNS(namespaceURI:String=undefined, qualifiedName:String=undefined):Attr { return null;}
 	/**
+	*  <p>Returns a <code>NodeList</code> of all the <code>Elements</code>
+	*  with a given <termref def="dt-localname">local name</termref> and
+	*  namespace URI in the order in which they are encountered in a
+	*  preorder traversal of the <code>Document</code> tree.</p>
 	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
 	*  @param localName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
 	public function getElementsByTagNameNS(namespaceURI:String=undefined, localName:String=undefined):NodeList { return null;}
 	/**
+	*  <p>Returns the <code>Element</code> whose <code>ID</code>
+	*  is given by <code>elementId</code>. If no such element exists, returns
+	*  <code>null</code>. Behavior is not defined if more than one element has
+	*  this <code>ID</code>.
+	*  <note><p>The DOM implementation must have information that says which
+	*  attributes are of type ID. Attributes with the name "ID" are not of type ID unless
+	*  so defined. Implementations that do not know whether attributes are of type
+	*  ID or not are expected to return <code>null</code>.</p></note></p>
 	*  @param elementId (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Element</code> instance.
 	*/

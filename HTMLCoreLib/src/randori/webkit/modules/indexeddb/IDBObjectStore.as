@@ -83,12 +83,11 @@ public class IDBObjectStore
 	*  @return A <code>IDBRequest</code> instance.
 	*/
 	public function add(value:*, key:*=null):IDBRequest { return null;}
-	[JavascriptMethod(name="delete")]
 	/**
 	*  @param keyRange
 	*  @return A <code>IDBRequest</code> instance.
 	*/
-	public function $delete(keyRange:IDBKeyRange):IDBRequest { return null;}
+	public function delete_(keyRange:IDBKeyRange):IDBRequest { return null;}
 	/**
 	*  @return A <code>IDBRequest</code> instance.
 	*/

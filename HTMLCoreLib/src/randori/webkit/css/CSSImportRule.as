@@ -59,14 +59,29 @@ package randori.webkit.css
 public class CSSImportRule extends CSSRule
 {
 
+	/**
+	*  <p>
+	*  The location of the style sheet to be imported. The attribute will not
+	*  contain the <code>"url(...)"</code> specifier around the URI.
+	*  </p>
+	*/
 	public function get href():String { return ''; }
 
 	/**
+	*  <p>
+	*  A list of media types for which this style sheet may be
+	*  used.
+	*  </p>
 	*  @see randori.webkit.css.MediaList
 	*/
 	public function get media():MediaList { return null; }
 
 	/**
+	*  <p>The style sheet referred to by this rule, if it has been loaded. The
+	*  value of this attribute is <code>null</code> if the style sheet has not
+	*  yet been loaded or if it will not be loaded (e.g. if the style sheet is
+	*  for a media type not supported by the user agent).
+	*  </p>
 	*  @see randori.webkit.css.CSSStyleSheet
 	*/
 	public function get styleSheet():CSSStyleSheet { return null; }

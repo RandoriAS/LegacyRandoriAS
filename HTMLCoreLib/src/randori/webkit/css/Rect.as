@@ -60,21 +60,33 @@ public class Rect
 {
 
 	/**
+	*  <p>
+	*  This attribute is used for the top of the rect.
+	*  </p>
 	*  @see randori.webkit.css.CSSPrimitiveValue
 	*/
 	public function get top():CSSPrimitiveValue { return null; }
 
 	/**
+	*  <p>
+	*  This attribute is used for the right of the rect.
+	*  </p>
 	*  @see randori.webkit.css.CSSPrimitiveValue
 	*/
 	public function get right():CSSPrimitiveValue { return null; }
 
 	/**
+	*  <p>
+	*  This attribute is used for the bottom of the rect.
+	*  </p>
 	*  @see randori.webkit.css.CSSPrimitiveValue
 	*/
 	public function get bottom():CSSPrimitiveValue { return null; }
 
 	/**
+	*  <p>
+	*  This attribute is used for the left of the rect.
+	*  </p>
 	*  @see randori.webkit.css.CSSPrimitiveValue
 	*/
 	public function get left():CSSPrimitiveValue { return null; }

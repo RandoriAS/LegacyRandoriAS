@@ -61,7 +61,7 @@ public class SpeechSynthesisVoice
 	public function get localService():Boolean { return false; }
 
 	[JavascriptProperty(name="default")]
-	public function get $default():Boolean { return false; }
+	public function get default_():Boolean { return false; }
 }
 
 }

@@ -46,6 +46,9 @@ import randori.webkit.html.HTMLDocument;
 
 [JavaScript(export="false", name="DOMImplementation")]
 /**
+ *  <p>The <code>DOMImplementation</code> interface provides a
+ *  number of methods for performing operations that are independent
+ *  of any particular instance of the document object model.</p>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
@@ -54,12 +57,20 @@ import randori.webkit.html.HTMLDocument;
 public class DOMImplementation
 {
 	/**
+	*  <p>Test if the DOM implementation implements a
+	*  specific feature.</p>
 	*  @param feature (optional argument, default value is <code>undefined</code>)
 	*  @param version (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Boolean</code> instance.
 	*/
 	public function hasFeature(feature:String=undefined, version:String=undefined):Boolean { return false;}
 	/**
+	*  <p>Creates an empty <code>DocumentType</code> node. Entity
+	*  declarations and notations are not made available. Entity reference
+	*  expansions and default attribute additions do not occur. It is expected
+	*  that a future version of the DOM will provide a way for populating a
+	*  <code>DocumentType</code>.</p><p>HTML-only DOM implementations do not need to
+	*  implement this method.</p>
 	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
 	*  @param publicId (optional argument, default value is <code>undefined</code>)
 	*  @param systemId (optional argument, default value is <code>undefined</code>)
@@ -67,6 +78,9 @@ public class DOMImplementation
 	*/
 	public function createDocumentType(qualifiedName:String=undefined, publicId:String=undefined, systemId:String=undefined):DocumentType { return null;}
 	/**
+	*  <p>Creates an XML <code>Document</code> object of the specified type
+	*  with its document element. HTML-only DOM implementations do not need to
+	*  implement this method.</p>
 	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
 	*  @param qualifiedName (optional argument, default value is <code>undefined</code>)
 	*  @param doctype (optional argument, default value is <code>undefined</code>)

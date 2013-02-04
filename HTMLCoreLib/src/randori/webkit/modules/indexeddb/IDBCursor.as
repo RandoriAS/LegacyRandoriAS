@@ -71,16 +71,14 @@ public class IDBCursor
 	*  @param count
 	*/
 	public function advance(count:Number):void {}
-	[JavascriptMethod(name="continue")]
 	/**
 	*  @param key (optional argument, default value is <code>null</code>)
 	*/
-	public function $continue(key:*=null):void {}
-	[JavascriptMethod(name="delete")]
+	public function continue_(key:*=null):void {}
 	/**
 	*  @return A <code>IDBRequest</code> instance.
 	*/
-	public function $delete():IDBRequest { return null;}
+	public function delete_():IDBRequest { return null;}
 }
 
 }

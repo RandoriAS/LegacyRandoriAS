@@ -71,17 +71,39 @@ public class CSSRule
 	public static const FONT_FACE_RULE:uint = 5;
 	public static const PAGE_RULE:uint = 6;
 
+	/**
+	*  <p>
+	*  The type of the rule, as defined above. The expectation is that
+	*  binding-specific casting methods can be used to cast down from an
+	*  instance of the <code>CSSRule</code> interface to the specific derived
+	*  interface implied by the <code>type</code>.
+	*  </p>
+	*/
 	public function get type():uint { return 0; }
 
+	/**
+	*  <p>
+	*  The parsable textual representation of the rule. This reflects the
+	*  current state of the rule and not its initial value.
+	*  </p>
+	*/
 	public function get cssText():String { return ''; }
 	public function set cssText(value:String):void { }
 
 	/**
+	*  <p>
+	*  The style sheet that contains this rule.
+	*  </p>
 	*  @see randori.webkit.css.CSSStyleSheet
 	*/
 	public function get parentStyleSheet():CSSStyleSheet { return null; }
 
 	/**
+	*  <p>
+	*  If this rule is contained inside another rule (e.g. a style rule inside
+	*  an @media block), this is the containing rule. If this rule is not
+	*  nested inside any other rules, this returns <code>null</code>.
+	*  </p>
 	*  @see randori.webkit.css.CSSRule
 	*/
 	public function get parentRule():CSSRule { return null; }

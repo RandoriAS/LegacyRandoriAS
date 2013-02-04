@@ -44,15 +44,29 @@ package randori.webkit.dom
 
 [JavaScript(export="false", name="Text")]
 /**
+ *  <p>The <code>Text</code> interface inherits from <code>CharacterData</code> and represents the textual content (termed
+ *  character data in XML) of an <code>Element</code> or <code>Attr</code>. If there is no markup inside an element's content, the text is
+ *  contained in a single object implementing the <code>Text</code> interface that is the only child of the element. If there is markup, it
+ *  is parsed into the <termref def="dt-infoitem">information items</termref>
+ *  (elements, comments, etc.) and <code>Text</code> nodes that form the list of children of the element.</p><p>When a document is first made available via the DOM, there is only one <code>Text</code> node for each block of text. Users may create adjacent <code>Text</code> nodes that represent the contents of a given element without any
+ *  intervening markup, but should be aware that there is no way to represent the
+ *  separations between these nodes in XML or HTML, so they will not (in general)
+ *  persist between DOM editing sessions. The <code>normalize()</code> method on <code>Node</code> merges any such adjacent <code>Text</code> objects into a single node for each block of text.</p>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
  *  @since 1.0
+ *  @see http://www.w3.org/TR/1998/REC-xml-19980210#syntax
  *  @see randori.webkit.dom.CharacterData
  */
 public class Text extends CharacterData
 {
 	/**
+	*  <p>Breaks this node into two nodes at the specified <code>offset</code>, keeping both in the tree as <termref def="dt-sibling">siblings</termref>. After being split, this node will contain
+	*  all the content up to the <code>offset</code> point. A new node of the same type, which contains all the content at
+	*  and after the <code>offset</code> point, is returned. If the original node had a parent node, the new
+	*  node is inserted as the next <termref def="dt-sibling">sibling</termref> of the
+	*  original node. When the <code>offset</code> is equal to the length of this node, the new node has no data.</p>
 	*  @param offset (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>Text</code> instance.
 	*/

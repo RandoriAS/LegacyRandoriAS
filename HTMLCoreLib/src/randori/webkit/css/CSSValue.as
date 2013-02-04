@@ -61,9 +61,19 @@ public class CSSValue
 	public static const CSS_VALUE_LIST:uint = 2;
 	public static const CSS_CUSTOM:uint = 3;
 
+	/**
+	*  <p>
+	*  A string representation of the current value.
+	*  </p>
+	*/
 	public function get cssText():String { return ''; }
 	public function set cssText(value:String):void { }
 
+	/**
+	*  <p>
+	*  A code defining the type of the value as defined above.
+	*  </p>
+	*/
 	public function get cssValueType():uint { return 0; }
 }
 

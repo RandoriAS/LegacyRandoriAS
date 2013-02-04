@@ -58,10 +58,25 @@ package randori.webkit.css
 public class Counter
 {
 
+	/**
+	*  <p>
+	*  This attribute is used for the identifier of the counter.
+	*  </p>
+	*/
 	public function get identifier():String { return ''; }
 
+	/**
+	*  <p>
+	*  This attribute is used for the style of the list.
+	*  </p>
+	*/
 	public function get listStyle():String { return ''; }
 
+	/**
+	*  <p>
+	*  This attribute is used for the separator of the nested counters.
+	*  </p>
+	*/
 	public function get separator():String { return ''; }
 }
 

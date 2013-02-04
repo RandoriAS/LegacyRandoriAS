@@ -62,6 +62,11 @@ package randori.webkit.css
 public dynamic class CSSValueList extends CSSValue
 {
 
+	/**
+	*  <p>The number of <code>CSSValues</code> in the list. The range of valid
+	*  values of the indices is <code>0</code> to <code>length-1</code>
+	*  inclusive.</p>
+	*/
 	public function get length():uint { return 0; }
 }
 

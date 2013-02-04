@@ -44,17 +44,37 @@ package randori.webkit.dom
 
 [JavaScript(export="false", name="Notation")]
 /**
+ *  <p>This interface represents a notation declared in the DTD. A notation
+ *  either declares, by name, the format of an unparsed entity (see  section 4.7
+ *  of the XML 1.0 specification <bibref ref="XML" />), or is used for formal
+ *  declaration of
+ *  processing instruction targets (see section 2.6 of the XML 1.0
+ *  specification <bibref ref="XML" />). The <code>nodeName</code> attribute
+ *  inherited from
+ *  <code>Node</code> is set to the declared name of the notation.</p><p>The DOM Level 1 does not support editing <code>Notation</code>
+ *  nodes; they are therefore
+ *  <termref def="dt-readonly-node">readonly</termref>.</p><p>A <code>Notation</code> node does not have any parent.</p>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
  *  @since 1.0
+ *  @see http://www.w3.org/TR/1998/REC-xml-19980210#Notations
+ *  @see http://www.w3.org/TR/1998/REC-xml-19980210#sec-pi
  *  @see randori.webkit.dom.Node
  */
 public class Notation extends Node
 {
 
+	/**
+	*  <p>The public identifier of this notation. If the
+	*  public identifier was not specified, this is <code>null</code>.</p>
+	*/
 	public function get publicId():String { return ''; }
 
+	/**
+	*  <p>The system identifier of this notation. If the
+	*  system identifier was not specified, this is <code>null</code>.</p>
+	*/
 	public function get systemId():String { return ''; }
 }
 
