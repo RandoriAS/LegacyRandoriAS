@@ -82,7 +82,6 @@ public dynamic class MediaList
 	*  Deletes the medium indicated by <code>oldMedium</code> from the list.
 	*  </p>
 	*  @param oldMedium <p>The medium to delete in the media list.</p>
-	*  @return <p></p>
 	*  @throw DOMException <p>
 	*  NO_MODIFICATION_ALLOWED_ERR: Raised if this list is readonly.
 	*  </p><p>
@@ -96,7 +95,6 @@ public dynamic class MediaList
 	*  <code>newMedium</code> is already used, it is first removed.
 	*  </p>
 	*  @param newMedium <p>The new medium to add.</p>
-	*  @return <p></p>
 	*  @throw DOMException <p>
 	*  INVALID_CHARACTER_ERR: If the medium contains characters that are
 	*  invalid in the underlying style language.

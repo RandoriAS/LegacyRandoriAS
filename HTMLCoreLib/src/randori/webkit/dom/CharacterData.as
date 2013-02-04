@@ -94,7 +94,6 @@ public class CharacterData extends Node
 	*  <code>data</code>, or if the specified <code>count</code> is
 	*  negative.</p><p>DOMSTRING_SIZE_ERR: Raised if the specified range of text does
 	*  not fit into a <code>DOMString</code>.</p>
-	*  @param length (optional argument, default value is <code>undefined</code>)
 	*/
 	public function substringData(offset:uint=undefined, length:uint=undefined):String { return '';}
 	/**
@@ -102,10 +101,8 @@ public class CharacterData extends Node
 	*  Upon success, <code>data</code> provides access to the concatenation of
 	*  <code>data</code> and the <code>DOMString</code> specified.</p>
 	*  @param arg <p>The <code>DOMString</code> to append.</p>
-	*  @return <p></p>
 	*  @throw DOMException <p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is
 	*  readonly.</p>
-	*  @param data (optional argument, default value is <code>undefined</code>)
 	*/
 	public function appendData(data:String=undefined):void {}
 	/**
@@ -113,11 +110,9 @@ public class CharacterData extends Node
 	*  unit offset.</p>
 	*  @param offset <p>The character offset at which to insert.</p>
 	*  @param arg <p>The <code>DOMString</code> to insert.</p>
-	*  @return <p></p>
 	*  @throw DOMException <p>INDEX_SIZE_ERR: Raised if the specified <code>offset</code>
 	*  is negative or greater than the number of 16-bit units in
 	*  <code>data</code>.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.</p>
-	*  @param data (optional argument, default value is <code>undefined</code>)
 	*/
 	public function insertData(offset:uint=undefined, data:String=undefined):void {}
 	/**
@@ -129,12 +124,10 @@ public class CharacterData extends Node
 	*  <code>offset</code> and <code>count</code> exceeds
 	*  <code>length</code> then all 16-bit units from <code>offset</code>
 	*  to the end of the data are deleted.</p>
-	*  @return <p></p>
 	*  @throw DOMException <p>INDEX_SIZE_ERR: Raised if the specified <code>offset</code>
 	*  is negative or greater than the number of 16-bit units in
 	*  <code>data</code>, or if the specified <code>count</code> is
 	*  negative.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.</p>
-	*  @param length (optional argument, default value is <code>undefined</code>)
 	*/
 	public function deleteData(offset:uint=undefined, length:uint=undefined):void {}
 	/**
@@ -149,13 +142,10 @@ public class CharacterData extends Node
 	*  by an <code>append</code> method invocation).</p>
 	*  @param arg <p>The <code>DOMString</code> with which the range must
 	*  be replaced.</p>
-	*  @return <p></p>
 	*  @throw DOMException <p>INDEX_SIZE_ERR: Raised if the specified <code>offset</code>
 	*  is negative or greater than the number of 16-bit units in
 	*  <code>data</code>, or if the specified <code>count</code> is
 	*  negative.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.</p>
-	*  @param length (optional argument, default value is <code>undefined</code>)
-	*  @param data (optional argument, default value is <code>undefined</code>)
 	*/
 	public function replaceData(offset:uint=undefined, length:uint=undefined, data:String=undefined):void {}
 	public function remove():void {}

@@ -139,7 +139,6 @@ public class CSSPrimitiveValue extends CSSValue
 	*  @param floatValue <p>
 	*  The new float value.
 	*  </p>
-	*  @return 
 	*  @throw DOMException <p>
 	*  INVALID_ACCESS_ERR: Raised if the attached property doesn't support
 	*  the float value or the unit type.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this property is
@@ -189,7 +188,6 @@ public class CSSPrimitiveValue extends CSSValue
 	*  @param stringValue <p>
 	*  The new string value.
 	*  </p>
-	*  @return 
 	*  @throw DOMException <p>
 	*  INVALID_ACCESS_ERR: Raised if the CSS value doesn't contain a string
 	*  value or if the string value can't be converted into the specified

@@ -159,7 +159,6 @@ public class MouseEvent extends UIEvent
 	*  <code>Event</code>.</p>
 	*  @param buttonArg <p>Specifies the <code>Event</code>'s mouse button.</p>
 	*  @param relatedTargetArg <p>Specifies the <code>Event</code>'s related <code>EventTarget</code>.</p>
-	*  @return <p></p>
 	*/
 	public function initMouseEvent(type:String=undefined, canBubble:Boolean=undefined, cancelable:Boolean=undefined, view:Window=undefined, detail:uint=undefined, screenX:uint=undefined, screenY:uint=undefined, clientX:uint=undefined, clientY:uint=undefined, ctrlKey:Boolean=undefined, altKey:Boolean=undefined, shiftKey:Boolean=undefined, metaKey:Boolean=undefined, button:uint=undefined, relatedTarget:EventTarget=undefined):void {}
 

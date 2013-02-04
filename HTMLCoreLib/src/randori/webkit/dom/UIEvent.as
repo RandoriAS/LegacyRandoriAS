@@ -78,7 +78,6 @@ public class UIEvent extends DomEvent
 	*  @param viewArg <p>Specifies the <code>Event</code>'s
 	*  <code>AbstractView</code>.</p>
 	*  @param detailArg <p>Specifies the <code>Event</code>'s detail.</p>
-	*  @return <p></p>
 	*/
 	public function initUIEvent(type:String=undefined, canBubble:Boolean=undefined, cancelable:Boolean=undefined, view:Window=undefined, detail:uint=undefined):void {}
 

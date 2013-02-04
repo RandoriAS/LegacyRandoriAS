@@ -138,7 +138,6 @@ public class XPathEvaluator
 	*  legal according to the rules of the
 	*  <code>XPathEvaluator</code>i</p><p>TYPE_ERR: Raised if the result cannot be converted to
 	*  return the specified type.</p>
-	*  @param inResult (optional argument, default value is <code>undefined</code>)
 	*/
 	public function evaluate(expression:String=undefined, contextNode:Node=undefined, resolver:XPathNSResolver=undefined, type:uint=undefined, inResult:XPathResult=undefined):XPathResult { return null;}
 }

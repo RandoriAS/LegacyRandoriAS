@@ -109,7 +109,6 @@ public class CSSMediaRule extends CSSRule
 	*  The index within the media block's rule collection of the rule
 	*  to remove.
 	*  </p>
-	*  @return <p></p>
 	*  @throw DOMException <p>INDEX_SIZE_ERR: Raised if the specified index does not correspond
 	*  to a rule in the media rule list.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this media rule is
 	*  readonly.</p>

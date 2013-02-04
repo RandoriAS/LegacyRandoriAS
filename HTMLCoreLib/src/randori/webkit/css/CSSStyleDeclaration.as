@@ -169,7 +169,6 @@ public dynamic class CSSStyleDeclaration
 	*  @param priority <p>
 	*  The new priority of the property (e.g. <code>"important"</code>).
 	*  </p>
-	*  @return <p></p>
 	*  @throw DOMException <p>SYNTAX_ERR: Raised if the specified value has a syntax error
 	*  and is unparsable.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this declaration is
 	*  readonly or the property is readonly.</p>

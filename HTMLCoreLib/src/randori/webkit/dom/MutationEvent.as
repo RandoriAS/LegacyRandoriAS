@@ -110,7 +110,6 @@ public class MutationEvent extends DomEvent
 	*  @param newValueArg <p>Specifies the <code>Event</code>'s <code>newValue</code> attribute.  This value may be null.</p>
 	*  @param attrNameArg <p>Specifies the <code>Event</code>'s <code>attrName</code> attribute.  This value may be null.</p>
 	*  @param attrChangeArg <p>Specifies the <code>Event</code>'s <code>attrChange</code> attribute</p>
-	*  @return <p></p>
 	*/
 	public function initMutationEvent(type:String=undefined, canBubble:Boolean=undefined, cancelable:Boolean=undefined, relatedNode:Node=undefined, prevValue:String=undefined, newValue:String=undefined, attrName:String=undefined, attrChange:uint=undefined):void {}
 }

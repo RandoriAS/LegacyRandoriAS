@@ -496,6 +496,8 @@ public class WebGLRenderingContext extends CanvasRenderingContext
 	*  @param level
 	*  @param xoffset
 	*  @param yoffset
+	*  @param x
+	*  @param y
 	*  @param width
 	*  @param height
 	*/
@@ -606,6 +608,7 @@ public class WebGLRenderingContext extends CanvasRenderingContext
 	*  @param target
 	*  @param attachment
 	*  @param renderbuffertarget
+	*  @param renderbuffer
 	*/
 	public function framebufferRenderbuffer(target:uint, attachment:uint, renderbuffertarget:uint, renderbuffer:WebGLRenderbuffer):void {}
 	/**

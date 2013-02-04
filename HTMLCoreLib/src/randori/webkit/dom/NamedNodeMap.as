@@ -85,7 +85,6 @@ public dynamic class NamedNodeMap
 	*  <code>Attr</code> that is already an attribute of another
 	*  <code>Element</code> object. The DOM user must explicitly clone
 	*  <code>Attr</code> nodes to re-use them in other elements.</p>
-	*  @param node (optional argument, default value is <code>undefined</code>)
 	*/
 	public function setNamedItem(node:Node=undefined):Node { return null;}
 	/**
@@ -138,7 +137,6 @@ public dynamic class NamedNodeMap
 	*  <code>Attr</code> that is already an attribute of another
 	*  <code>Element</code> object. The DOM user must explicitly clone
 	*  <code>Attr</code> nodes to re-use them in other elements.</p>
-	*  @param node (optional argument, default value is <code>undefined</code>)
 	*/
 	public function setNamedItemNS(node:Node=undefined):Node { return null;}
 	/**

@@ -103,7 +103,6 @@ public class Element extends Node
 	*  the <code>setAttributeNS</code> method.</p>
 	*  @param name <p>The name of the attribute to create or alter.</p>
 	*  @param value <p>Value to set in string form.</p>
-	*  @return <p></p>
 	*  @throw DOMException <p>INVALID_CHARACTER_ERR: Raised if the specified name contains
 	*  an illegal character.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.</p>
 	*/
@@ -115,7 +114,6 @@ public class Element extends Node
 	*  local name, and prefix when applicable.</p><p>To remove an attribute by local name and namespace URI, use
 	*  the <code>removeAttributeNS</code> method.</p>
 	*  @param name <p>The name of the attribute to remove.</p>
-	*  @return <p></p>
 	*  @throw DOMException <p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is
 	*  readonly.</p>
 	*/
@@ -203,7 +201,6 @@ public class Element extends Node
 	*  @param qualifiedName <p>The qualified name
 	*  of the attribute to create or alter.</p>
 	*  @param value <p>The value to set in string form.</p>
-	*  @return <p></p>
 	*  @throw DOMException <p>INVALID_CHARACTER_ERR: Raised if the specified qualified name
 	*  contains an illegal character.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.</p><p>NAMESPACE_ERR: Raised if the <code>qualifiedName</code> is
 	*  malformed, if the <code>qualifiedName</code> has a prefix and
@@ -226,7 +223,6 @@ public class Element extends Node
 	*  the attribute to remove.</p>
 	*  @param localName <p>The local name of the
 	*  attribute to remove.</p>
-	*  @return <p></p>
 	*  @throw DOMException <p>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is
 	*  readonly.</p>
 	*/

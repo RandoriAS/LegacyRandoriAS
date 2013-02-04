@@ -79,7 +79,6 @@ public class XPathExpression
 	*  <code>XPathResult</code>.</p>
 	*  @throw XPathException <p>TYPE_ERR: Raised if the result cannot be converted to
 	*  return the specified type.</p>
-	*  @param inResult (optional argument, default value is <code>undefined</code>)
 	*/
 	public function evaluate(contextNode:Node=undefined, type:uint=undefined, inResult:XPathResult=undefined):XPathResult { return null;}
 }

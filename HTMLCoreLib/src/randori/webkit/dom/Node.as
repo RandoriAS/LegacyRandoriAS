@@ -210,7 +210,6 @@ public class Node
 	*  as XPointer <bibref ref="XPointer" /> lookups) that depend on a particular
 	*  document tree structure are to be used.</p><note><p>In cases where the document contains <code>CDATASections</code>, the normalize operation alone may not be sufficient, since XPointers
 	*  do not differentiate between <code>Text</code> nodes and <code>CDATASection</code> nodes.</p></note>
-	*  @return <p></p>
 	*/
 	public function normalize():void {}
 	/**

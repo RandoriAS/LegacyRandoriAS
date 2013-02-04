@@ -119,7 +119,6 @@ public class CSSStyleSheet extends StyleSheet
 	*  The index within the style sheet's rule list of the rule
 	*  to remove.
 	*  </p>
-	*  @return <p></p>
 	*  @throw DOMException <p>INDEX_SIZE_ERR: Raised if the specified index does not correspond
 	*  to a rule in the style sheet's rule list.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this style sheet is
 	*  readonly.</p>
