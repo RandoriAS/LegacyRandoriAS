@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -44,10 +45,8 @@ import randori.webkit.dom.Element;
 
 [JavaScript(export="false", name="HTMLElement")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.Element
  */
 public class HTMLElement extends Element
@@ -83,6 +82,9 @@ public class HTMLElement extends Element
 	public function get innerHTML():String { return ''; }
 	public function set innerHTML(value:String):void { }
 
+	public function get innerText():String { return ''; }
+	public function set innerText(value:String):void { }
+
 	public function get outerHTML():String { return ''; }
 	public function set outerHTML(value:String):void { }
 
@@ -108,10 +110,12 @@ public class HTMLElement extends Element
 	/**
 	*  @see randori.webkit.html.HTMLCollection
 	*/
-	public function get children():Object { return null; }
+	public function get children():HTMLCollection { return null; }
 
 	public function get contentEditable():String { return ''; }
 	public function set contentEditable(value:String):void { }
+
+	public function get isContentEditable():Boolean { return false; }
 
 	public function get spellcheck():Boolean { return false; }
 	public function set spellcheck(value:Boolean):void { }
@@ -137,15 +141,8 @@ public class HTMLElement extends Element
 	*/
 	public function get itemProp():DOMSettableTokenList { return null; }
 
-	/**
-	*  @see randori.webkit.html.HTMLPropertiesCollection
-	*/
-	public function get properties():Object { return null; }
-
 	public function get itemValue():Object { return null; }
 	public function set itemValue(value:Object):void { }
-
-	public function get titleDisplayString():String { return ''; }
 	public function click():void {}
 }
 

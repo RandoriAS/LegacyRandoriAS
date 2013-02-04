@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -44,10 +45,9 @@ import randori.webkit.page.Selection;
 
 [JavaScript(export="false", nativecondition="SHADOW_DOM", name="ShadowRoot")]
 /**
- *  @author RandoriAS
+ *  <note>This class depends on the browser to support: <code>SHADOW_DOM</code></note>
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.DocumentFragment
  */
 public class ShadowRoot extends DocumentFragment
@@ -79,18 +79,18 @@ public class ShadowRoot extends DocumentFragment
 	*  @param className (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByClassName(className:String=undefined):Object { return null;}
+	public function getElementsByClassName(className:String=undefined):NodeList { return null;}
 	/**
 	*  @param tagName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByTagName(tagName:String=undefined):Object { return null;}
+	public function getElementsByTagName(tagName:String=undefined):NodeList { return null;}
 	/**
 	*  @param namespaceURI (optional argument, default value is <code>undefined</code>)
 	*  @param localName (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>NodeList</code> instance.
 	*/
-	public function getElementsByTagNameNS(namespaceURI:String=undefined, localName:String=undefined):Object { return null;}
+	public function getElementsByTagNameNS(namespaceURI:String=undefined, localName:String=undefined):NodeList { return null;}
 	/**
 	*  @param x (optional argument, default value is <code>undefined</code>)
 	*  @param y (optional argument, default value is <code>undefined</code>)

@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -40,14 +41,11 @@
 package randori.webkit.html
 {
 
-import randori.webkit.html.track.TextTrack;
 
 [JavaScript(export="false", nativecondition="VIDEO", name="HTMLMediaElement")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.html.HTMLElement
  */
 public class HTMLMediaElement extends HTMLElement
@@ -84,10 +82,9 @@ public class HTMLMediaElement extends HTMLElement
 	public function load():void {}
 	/**
 	*  @param type (optional argument, default value is <code>undefined</code>)
-	*  @param keySystem (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
-	public function canPlayType(type:String=undefined, keySystem:String=undefined):String { return '';}
+	public function canPlayType(type:String=undefined):String { return '';}
 	public static const HAVE_NOTHING:uint = 0;
 	public static const HAVE_METADATA:uint = 1;
 	public static const HAVE_CURRENT_DATA:uint = 2;
@@ -146,18 +143,6 @@ public class HTMLMediaElement extends HTMLElement
 
 	public function get defaultMuted():Boolean { return false; }
 	public function set defaultMuted(value:Boolean):void { }
-	/**
-	*  @param kind
-	*  @param label (optional argument, default value is <code>''</code>)
-	*  @param language (optional argument, default value is <code>''</code>)
-	*  @return A <code>TextTrack</code> instance.
-	*/
-	public function addTextTrack(kind:String, label:String='', language:String=''):TextTrack { return null;}
-
-	/**
-	*  @see randori.webkit.html.track.TextTrackList
-	*/
-	public function get textTracks():Object { return null; }
 
 	public function get mediaGroup():String { return ''; }
 	public function set mediaGroup(value:String):void { }

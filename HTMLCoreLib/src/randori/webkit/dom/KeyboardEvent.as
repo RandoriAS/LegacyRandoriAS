@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -44,18 +45,12 @@ import randori.webkit.page.Window;
 
 [JavaScript(export="false", name="KeyboardEvent")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.UIEvent
  */
 public class KeyboardEvent extends UIEvent
 {
-	public static const KEY_LOCATION_STANDARD:uint = 0x00;
-	public static const KEY_LOCATION_LEFT:uint = 0x01;
-	public static const KEY_LOCATION_RIGHT:uint = 0x02;
-	public static const KEY_LOCATION_NUMPAD:uint = 0x03;
 
 	public function get keyIdentifier():String { return ''; }
 
@@ -70,11 +65,6 @@ public class KeyboardEvent extends UIEvent
 	public function get metaKey():Boolean { return false; }
 
 	public function get altGraphKey():Boolean { return false; }
-	/**
-	*  @param keyIdentifierArg (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Boolean</code> instance.
-	*/
-	public function getModifierState(keyIdentifierArg:String=undefined):Boolean { return false;}
 	/**
 	*  @param type (optional argument, default value is <code>undefined</code>)
 	*  @param canBubble (optional argument, default value is <code>undefined</code>)

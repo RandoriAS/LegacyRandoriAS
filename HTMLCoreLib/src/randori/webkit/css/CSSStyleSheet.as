@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -43,39 +44,91 @@ package randori.webkit.css
 
 [JavaScript(export="false", name="CSSStyleSheet")]
 /**
- *  @author RandoriAS
+ *  <p>
+ *  The <code>CSSStyleSheet</code> interface is a concrete interface used
+ *  to represent a CSS style sheet i.e., a style sheet whose content type
+ *  is "text/css".
+ *  </p>
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q8
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#at-rules
  *  @see randori.webkit.css.StyleSheet
  */
 public class CSSStyleSheet extends StyleSheet
 {
 
 	/**
+	*  <p>
+	*  If this style sheet comes from an <code>@import</code> rule, the
+	*  <code>ownerRule</code> attribute will contain the
+	*  <code>CSSImportRule</code>. In that case, the <code>ownerNode</code>
+	*  attribute in the <code>StyleSheet</code> interface will be
+	*  <code>null</code>. If the style sheet comes from an element or a
+	*  processing instruction, the <code>ownerRule</code> attribute will be
+	*  <code>null</code> and the <code>ownerNode</code> attribute will contain
+	*  the <code>Node</code>.
+	*  </p>
 	*  @see randori.webkit.css.CSSRule
 	*/
 	public function get ownerRule():CSSRule { return null; }
 
 	/**
+	*  <p>
+	*  The list of all CSS rules contained within the style sheet.
+	*  This includes both rule sets and
+	*  at-rules.
+	*  </p>
 	*  @see randori.webkit.css.CSSRuleList
 	*/
-	public function get cssRules():Object { return null; }
+	public function get cssRules():CSSRuleList { return null; }
 	/**
-	*  @param rule (optional argument, default value is <code>undefined</code>)
-	*  @param index (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>uint</code> instance.
+	*  <p>
+	*  Used to insert a new rule into the style sheet. The new rule now
+	*  becomes part of the cascade.
+	*  </p>
+	*  @param rule <p>
+	*  The parsable text representing the rule. For rule sets
+	*  this contains both the selector and the style declaration.
+	*  For at-rules, this specifies both the at-identifier and the
+	*  rule content.
+	*  </p>
+	*  @param index <p>
+	*  The index within the style sheet's rule list of the rule
+	*  before which to insert the specified rule. If the
+	*  specified index is equal to the length of the style sheet's rule
+	*  collection, the rule will be added to the end of the style sheet.
+	*  </p>
+	*  @return <p>
+	*  The index within the style sheet's rule collection of the newly
+	*  inserted rule.
+	*  </p>
+	*  @throw DOMException <p>HIERARCHY_REQUEST_ERR: Raised if the rule cannot be inserted
+	*  at the specified index e.g. if an <code>@import</code> rule
+	*  is inserted after a standard rule set or other at-rule.</p><p>INDEX_SIZE_ERR: Raised if the specified index is not a valid
+	*  insertion point.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this style sheet is
+	*  readonly.</p><p>SYNTAX_ERR: Raised if the specified rule has a syntax error
+	*  and is unparsable.</p>
 	*/
 	public function insertRule(rule:String=undefined, index:uint=undefined):uint { return 0;}
 	/**
-	*  @param index (optional argument, default value is <code>undefined</code>)
+	*  <p>
+	*  Used to delete a rule from the style sheet.
+	*  </p>
+	*  @param index <p>
+	*  The index within the style sheet's rule list of the rule
+	*  to remove.
+	*  </p>
+	*  @throw DOMException <p>INDEX_SIZE_ERR: Raised if the specified index does not correspond
+	*  to a rule in the style sheet's rule list.</p><p>NO_MODIFICATION_ALLOWED_ERR: Raised if this style sheet is
+	*  readonly.</p>
 	*/
 	public function deleteRule(index:uint=undefined):void {}
 
 	/**
 	*  @see randori.webkit.css.CSSRuleList
 	*/
-	public function get rules():Object { return null; }
+	public function get rules():CSSRuleList { return null; }
 	/**
 	*  @param selector (optional argument, default value is <code>undefined</code>)
 	*  @param style (optional argument, default value is <code>undefined</code>)

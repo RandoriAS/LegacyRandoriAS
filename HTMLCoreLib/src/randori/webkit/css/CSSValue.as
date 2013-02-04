@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -43,10 +44,13 @@ package randori.webkit.css
 
 [JavaScript(export="false", name="CSSValue")]
 /**
- *  @author RandoriAS
+ *  <p>
+ *  The <code>CSSValue</code> interface represents a simple or a complex
+ *  value. A <code>CSSValue</code> object only occurs in a context of a CSS
+ *  property.
+ *  </p>
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class CSSValue
 {
@@ -55,9 +59,19 @@ public class CSSValue
 	public static const CSS_VALUE_LIST:uint = 2;
 	public static const CSS_CUSTOM:uint = 3;
 
+	/**
+	*  <p>
+	*  A string representation of the current value.
+	*  </p>
+	*/
 	public function get cssText():String { return ''; }
 	public function set cssText(value:String):void { }
 
+	/**
+	*  <p>
+	*  A code defining the type of the value as defined above.
+	*  </p>
+	*/
 	public function get cssValueType():uint { return 0; }
 }
 

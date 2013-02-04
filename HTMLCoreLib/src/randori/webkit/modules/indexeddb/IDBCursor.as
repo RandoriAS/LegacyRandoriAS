@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -43,19 +44,17 @@ package randori.webkit.modules.indexeddb
 
 [JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="IDBCursor")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class IDBCursor
 {
 
 	public function get direction():String { return ''; }
 
-	public function get key():Object { return null; }
+	public function get key():* { return null; }
 
-	public function get primaryKey():Object { return null; }
+	public function get primaryKey():* { return null; }
 
 	/**
 	*  @see randori.webkit.modules.indexeddb.IDBAny
@@ -65,21 +64,19 @@ public class IDBCursor
 	*  @param value
 	*  @return A <code>IDBRequest</code> instance.
 	*/
-	public function update(value:Object):IDBRequest { return null;}
+	public function update(value:*):IDBRequest { return null;}
 	/**
 	*  @param count
 	*/
 	public function advance(count:Number):void {}
-	[JavascriptMethod(name="continue")]
 	/**
 	*  @param key (optional argument, default value is <code>null</code>)
 	*/
-	public function $continue(key:Object=null):void {}
-	[JavascriptMethod(name="delete")]
+	public function continue_(key:*=null):void {}
 	/**
 	*  @return A <code>IDBRequest</code> instance.
 	*/
-	public function $delete():IDBRequest { return null;}
+	public function delete_():IDBRequest { return null;}
 }
 
 }

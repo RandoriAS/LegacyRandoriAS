@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -42,14 +43,11 @@ package randori.webkit.html
 
 import randori.webkit.dom.Document;
 import randori.webkit.page.Window;
-import randori.webkit.svg.SVGDocument;
 
 [JavaScript(export="false", name="HTMLFrameElement")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.html.HTMLElement
  */
 public class HTMLFrameElement extends HTMLElement
@@ -93,10 +91,6 @@ public class HTMLFrameElement extends HTMLElement
 	*  @see randori.webkit.page.Window
 	*/
 	public function get contentWindow():Window { return null; }
-	/**
-	*  @return A <code>SVGDocument</code> instance.
-	*/
-	public function getSVGDocument():SVGDocument { return null;}
 
 	public function get location():String { return ''; }
 	public function set location(value:String):void { }

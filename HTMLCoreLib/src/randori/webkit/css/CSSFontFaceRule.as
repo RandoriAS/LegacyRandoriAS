@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -43,19 +44,27 @@ package randori.webkit.css
 
 [JavaScript(export="false", name="CSSFontFaceRule")]
 /**
- *  @author RandoriAS
+ *  <p>
+ *  The <code>CSSFontFaceRule</code> interface represents a @font-face
+ *  rule in a CSS style sheet. The <code>@font-face</code> rule
+ *  is used to hold a set of font descriptions.
+ *  </p>
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#font-descriptions
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#q8
  *  @see randori.webkit.css.CSSRule
  */
 public class CSSFontFaceRule extends CSSRule
 {
 
 	/**
+	*  <p>
+	*  The declaration-block of this rule.
+	*  </p>
 	*  @see randori.webkit.css.CSSStyleDeclaration
 	*/
-	public function get style():Object { return null; }
+	public function get style():CSSStyleDeclaration { return null; }
 }
 
 }

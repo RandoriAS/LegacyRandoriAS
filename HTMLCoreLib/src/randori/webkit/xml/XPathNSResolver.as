@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -43,16 +44,24 @@ package randori.webkit.xml
 
 [JavaScript(export="false", name="XPathNSResolver")]
 /**
- *  @author RandoriAS
+ *  <p>The <code>XPathNSResolver</code> interface permit
+ *  <code>prefix</code> strings in the expression to be properly bound to
+ *  <code>namespaceURI</code> strings.  <code>XPathEvaluator</code> can
+ *  construct an implementation of <code>XPathNSResolver</code> from a
+ *  node, or the interface may be implemented by any application.</p>
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class XPathNSResolver
 {
 	/**
-	*  @param prefix (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>String</code> instance.
+	*  <p>Look up the namespace
+	*  URI associated to the given namespace prefix.  The
+	*  XPath evaluator must never call this with a <code>null</code> or
+	*  empty argument, because the result of doing this is undefined.</p>
+	*  @param prefix <p>The prefix to look for.</p>
+	*  @return <p>Returns the associated namespace URI or
+	*  <code>null</code> if none is found.</p>
 	*/
 	public function lookupNamespaceURI(prefix:String=undefined):String { return '';}
 }

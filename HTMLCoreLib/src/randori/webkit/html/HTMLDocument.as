@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -45,10 +46,8 @@ import randori.webkit.dom.Element;
 
 [JavaScript(export="false", name="HTMLDocument")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.Document
  */
 public class HTMLDocument extends Document
@@ -67,23 +66,23 @@ public class HTMLDocument extends Document
 	/**
 	*  @see randori.webkit.html.HTMLCollection
 	*/
-	public function get embeds():Object { return null; }
+	public function get embeds():HTMLCollection { return null; }
 
 	/**
 	*  @see randori.webkit.html.HTMLCollection
 	*/
-	public function get plugins():Object { return null; }
+	public function get plugins():HTMLCollection { return null; }
 
 	/**
 	*  @see randori.webkit.html.HTMLCollection
 	*/
-	public function get scripts():Object { return null; }
+	public function get scripts():HTMLCollection { return null; }
 
 	/**
 	*  @see randori.webkit.html.HTMLAllCollection
 	*/
-	public function get all():Object { return null; }
-	public function set all(value:Object):void { }
+	public function get all():HTMLAllCollection { return null; }
+	public function set all(value:HTMLAllCollection):void { }
 	public function clear():void {}
 	public function captureEvents():void {}
 	public function releaseEvents():void {}
