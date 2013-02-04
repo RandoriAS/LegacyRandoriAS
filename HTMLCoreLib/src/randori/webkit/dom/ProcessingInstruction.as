@@ -45,6 +45,10 @@ import randori.webkit.css.StyleSheet;
 
 [JavaScript(export="false", name="ProcessingInstruction")]
 /**
+ *  <p>The <code>ProcessingInstruction</code> interface
+ *  represents a  "processing instruction", used in XML
+ *  as a way to keep processor-specific information in the text of the
+ *  document.</p>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
@@ -54,8 +58,18 @@ import randori.webkit.css.StyleSheet;
 public class ProcessingInstruction extends Node
 {
 
+	/**
+	*  <p>The target of this processing instruction. XML defines this as
+	*  being the first <termref def="dt-token">token</termref> following the
+	*  markup that begins the processing instruction.</p>
+	*/
 	public function get target():String { return ''; }
 
+	/**
+	*  <p>The content of this processing instruction. This
+	*  is from the first non white space character after the target
+	*  to the character immediately preceding the <code>?&gt;</code>.</p>
+	*/
 	public function get data():String { return ''; }
 	public function set data(value:String):void { }
 

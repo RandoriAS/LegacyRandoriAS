@@ -44,6 +44,17 @@ package randori.webkit.dom
 
 [JavaScript(export="false", name="CharacterData")]
 /**
+ *  <p>The <code>CharacterData</code> interface extends Node with a set of
+ *  attributes and methods for accessing character data in the DOM.  For
+ *  clarity this set is defined here rather than on each object that uses
+ *  these attributes and methods. No DOM objects correspond directly to
+ *  <code>CharacterData</code>, though <code>Text</code> and others do
+ *  inherit the interface from it. All <code>offsets</code> in this
+ *  interface start from <code>0</code>.</p><p>As explained in the <code>DOMString</code> interface, text strings
+ *  in the DOM are represented in UTF-16, i.e. as a sequence of 16-bit
+ *  units.  In the following, the term <termref def="dt-16-bit-unit">16-bit units</termref> is used whenever
+ *  necessary to indicate that indexing on CharacterData is done in
+ *  16-bit units.</p>
  *  @author RandoriAS
  *  @version 1.0
  *  @productversion RandoriAS 1.0
@@ -53,31 +64,58 @@ package randori.webkit.dom
 public class CharacterData extends Node
 {
 
+	/**
+	*  <p>The character data of the node
+	*  that implements this interface. The DOM implementation may not
+	*  put arbitrary limits on the amount of data that may be stored in a
+	*  <code>CharacterData</code> node. However, implementation limits may
+	*  mean that the entirety of a node's data may not fit into a single
+	*  <code>DOMString</code>. In such cases, the user may call
+	*  <code>substringData</code> to retrieve the data in appropriately sized
+	*  pieces.</p>
+	*/
 	public function get data():String { return ''; }
 	public function set data(value:String):void { }
 
+	/**
+	*  <p>The number of <termref def="dt-16-bit-unit">16-bit
+	*  units</termref> that are available through <code>data</code> and the
+	*  <code>substringData</code> method below.  This may have the value zero,
+	*  i.e., <code>CharacterData</code> nodes may be empty.</p>
+	*/
 	public function get length():uint { return 0; }
 	/**
+	*  <p>Extracts a range of data from the node.</p>
 	*  @param offset (optional argument, default value is <code>undefined</code>)
 	*  @param length (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>String</code> instance.
 	*/
 	public function substringData(offset:uint=undefined, length:uint=undefined):String { return '';}
 	/**
+	*  <p>Append the string to the end of the character data of the node.
+	*  Upon success, <code>data</code> provides access to the concatenation of
+	*  <code>data</code> and the <code>DOMString</code> specified.</p>
 	*  @param data (optional argument, default value is <code>undefined</code>)
 	*/
 	public function appendData(data:String=undefined):void {}
 	/**
+	*  <p>Insert a string at the specified <termref def="dt-16-bit-unit">16-bit
+	*  unit</termref> offset.</p>
 	*  @param offset (optional argument, default value is <code>undefined</code>)
 	*  @param data (optional argument, default value is <code>undefined</code>)
 	*/
 	public function insertData(offset:uint=undefined, data:String=undefined):void {}
 	/**
+	*  <p>Remove a range of <termref def="dt-16-bit-unit">16-bit units</termref>
+	*  from the node. Upon success, <code>data</code> and <code>length</code>
+	*  reflect the change.</p>
 	*  @param offset (optional argument, default value is <code>undefined</code>)
 	*  @param length (optional argument, default value is <code>undefined</code>)
 	*/
 	public function deleteData(offset:uint=undefined, length:uint=undefined):void {}
 	/**
+	*  <p>Replace the characters starting at the specified <termref def="dt-16-bit-unit">16-bit unit</termref> offset with the specified
+	*  string.</p>
 	*  @param offset (optional argument, default value is <code>undefined</code>)
 	*  @param length (optional argument, default value is <code>undefined</code>)
 	*  @param data (optional argument, default value is <code>undefined</code>)
