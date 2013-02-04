@@ -42,6 +42,7 @@ package randori.webkit.modules.webdatabase
 {
 
 
+[JavaScript(export="false", nativecondition="SQL_DATABASE", name="DOMWindowWebDatabase")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

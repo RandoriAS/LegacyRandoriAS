@@ -45,6 +45,7 @@ import randori.webkit.page.Selection;
 
 [JavaScript(export="false", nativecondition="SHADOW_DOM", name="ShadowRoot")]
 /**
+ *  <note>This class depends on the browser to support: <code>SHADOW_DOM</code></note>
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
  *  @see randori.webkit.dom.DocumentFragment

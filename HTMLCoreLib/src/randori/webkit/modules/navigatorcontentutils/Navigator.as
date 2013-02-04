@@ -42,6 +42,7 @@ package randori.webkit.modules.navigatorcontentutils
 {
 
 
+[JavaScript(export="false", name="NavigatorContentUtils")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

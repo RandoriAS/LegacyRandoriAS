@@ -42,6 +42,7 @@ package randori.webkit.modules.quota
 {
 
 
+[JavaScript(export="false", nativecondition="QUOTA", name="DOMWindowQuota")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

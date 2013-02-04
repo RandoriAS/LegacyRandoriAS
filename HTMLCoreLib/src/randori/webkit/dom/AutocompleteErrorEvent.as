@@ -44,6 +44,7 @@ package randori.webkit.dom
 
 [JavaScript(export="false", nativecondition="REQUEST_AUTOCOMPLETE", name="AutocompleteErrorEvent")]
 /**
+ *  <note>This class depends on the browser to support: <code>REQUEST_AUTOCOMPLETE</code></note>
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
  *  @see randori.webkit.dom.DomEvent

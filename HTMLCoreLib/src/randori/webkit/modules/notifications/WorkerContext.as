@@ -42,6 +42,7 @@ package randori.webkit.modules.notifications
 {
 
 
+[JavaScript(export="false", nativecondition="NOTIFICATIONS", name="WorkerContextNotifications")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

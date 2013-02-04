@@ -42,6 +42,7 @@ package randori.webkit.modules.filesystem
 {
 
 
+[JavaScript(export="false", nativecondition="FILE_SYSTEM", name="HTMLInputElementFileSystem")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

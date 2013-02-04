@@ -44,6 +44,7 @@ package randori.webkit.dom
 
 [JavaScript(export="false", nativecondition="TOUCH_EVENTS", name="TouchList")]
 /**
+ *  <note>This class depends on the browser to support: <code>TOUCH_EVENTS</code></note>
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
  */

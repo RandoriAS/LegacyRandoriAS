@@ -44,6 +44,7 @@ package randori.webkit.css
 
 [JavaScript(export="false", nativecondition="CSS3_CONDITIONAL_RULES", name="CSSSupportsRule")]
 /**
+ *  <note>This class depends on the browser to support: <code>CSS3_CONDITIONAL_RULES</code></note>
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
  *  @see randori.webkit.css.CSSRule

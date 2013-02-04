@@ -42,6 +42,7 @@ package randori.webkit.modules.intents
 {
 
 
+[JavaScript(export="false", nativecondition="WEB_INTENTS", name="NavigatorIntents")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

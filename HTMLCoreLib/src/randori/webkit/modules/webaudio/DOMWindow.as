@@ -42,6 +42,7 @@ package randori.webkit.modules.webaudio
 {
 
 
+[JavaScript(export="false", nativecondition="WEB_AUDIO", name="DOMWindowWebAudio")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

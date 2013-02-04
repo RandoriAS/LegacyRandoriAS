@@ -42,6 +42,7 @@ package randori.webkit.modules.mediastream
 {
 
 
+[JavaScript(export="false", nativecondition="MEDIA_STREAM", name="DOMWindowMediaStream")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

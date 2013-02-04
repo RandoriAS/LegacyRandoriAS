@@ -45,6 +45,7 @@ import randori.webkit.page.Window;
 
 [JavaScript(export="false", nativecondition="TOUCH_EVENTS", name="TouchEvent")]
 /**
+ *  <note>This class depends on the browser to support: <code>TOUCH_EVENTS</code></note>
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
  *  @see randori.webkit.dom.UIEvent

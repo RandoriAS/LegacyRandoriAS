@@ -42,6 +42,7 @@ package randori.webkit.modules.battery
 {
 
 
+[JavaScript(export="false", nativecondition="BATTERY_STATUS", name="NavigatorBattery")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

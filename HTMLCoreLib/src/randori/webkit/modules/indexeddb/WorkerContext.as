@@ -42,6 +42,7 @@ package randori.webkit.modules.indexeddb
 {
 
 
+[JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="WorkerContextIndexedDatabase")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
