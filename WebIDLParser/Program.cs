@@ -29,8 +29,6 @@ namespace WebIDLParser
     {
 
         public static string OutputVersion = "1.0";
-        public static string ProductVersion = "1.0";
-        public static string SinceVersion = "1.0";
 
         //Path to a directory that contains all of the downloaded w3c documentation in XML form
         //which is used to generate the ASDoc comments inside the actionscript sources.
@@ -48,6 +46,8 @@ namespace WebIDLParser
 
         //Needs to be true. Set only to false, when you already have the preprocessed IDL files in the idlOutTempDirectory.
         public static bool runPreprocessor = false;
+        //Needs to be true. Set only to false, when you already have the preprocessed xml files in the w3cDirectory\preprocess directory.
+        public static bool runW3CXMLPreProcess = false;
 
         //Path to a c/c++ compiler, used for preprocessing the files.
         public static string preprocessorExe = @"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\amd64\cl.exe";

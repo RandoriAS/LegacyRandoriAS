@@ -105,17 +105,12 @@ namespace WebIDLParser
 
         public void generateComments()
         {
-            comments.Add("@author RandoriAS");
+            comments.Add("@author RandoriAS Web IDL Parser");
             comments.Add("@version " + Program.OutputVersion);
-            comments.Add("@productversion RandoriAS " + Program.ProductVersion);
-            comments.Add("@since " + Program.SinceVersion);
-            if (ns.name.EndsWith("css"))
+            var parts = ns.name.Split('.');
+            if (Directory.Exists(Path.Combine(Program.w3cDirectory, parts[parts.Length-1])))
             {
-                GenerateW3CComments("css");
-            }
-            else if (ns.name.EndsWith("dom"))
-            {
-                GenerateW3CComments("dom");
+                GenerateW3CComments(parts[parts.Length-1]);
             }
             baseType.ForEach(t => AddSeeReference(t));
         }
@@ -154,6 +149,119 @@ namespace WebIDLParser
                 ExtractXSpecRefs(elm[0], commentList);
                 XmlElementToComments(elm[0], commentList);
             }
+            if (member is TMethod)
+            {
+                ExtractMethodComments(xdoc, memberName, commentList);
+            }
+        }
+
+        private void ExtractMethodComments(XmlDocument xdoc, string memberName, List<String> commentList)
+        {
+            var parms = xdoc.SelectNodes("//method[@name='" + memberName + "']/parameters/param");
+            foreach (XmlNode prm in parms)
+            {
+                InsertParamDescription(prm, commentList);
+            }
+            parms = xdoc.SelectNodes("//method[@name='" + memberName + "']/returns");
+            if (parms.Count > 0)
+            {
+                InsertReturnDescription(parms[0], commentList);
+            }
+            parms = xdoc.SelectNodes("//method[@name='" + memberName + "']/raises");
+            if (parms.Count > 0)
+            {
+                InsertThrowDescription(parms[0], commentList);
+            }
+        }
+
+        private void InsertThrowDescription(XmlNode returnNode, List<string> commentList)
+        {
+            var exceptionNodes = returnNode.SelectNodes("exception");
+            if (exceptionNodes.Count == 0)
+            {
+                return;
+            }
+            var exceptionNode = exceptionNodes[0];
+            var exceptionName = exceptionNode.Attributes["name"];
+            var descrNodes = exceptionNode.SelectNodes("descr");
+            if (descrNodes.Count > 0)
+            {
+                var lines = SplitXMLElementString(descrNodes[0]);
+                lines[0] = "@throw " + exceptionName.Value + " " + lines[0];
+                foreach (var line in lines)
+                {
+                    commentList.Add(line);
+                }
+            }
+            else
+            {
+                commentList.Add("@throw " + exceptionName);
+            }
+        }
+        private void InsertReturnDescription(XmlNode returnNode, List<string> commentList)
+        {
+            var lines = SplitXMLElementString(returnNode.SelectNodes("descr")[0]);
+            var found = false;
+            for (var i = 0; i < commentList.Count(); i++)
+            {
+                if (commentList[i].StartsWith("@return "))
+                {
+                    MergeDescriptionComments(commentList, i, lines);
+                    found = true;
+                    break;
+                }
+            }
+            if (!found)
+            {
+                lines[0] = "@return " + lines[0];
+                MergeDescriptionComments(commentList, -1, lines);
+            }
+        }
+
+        private void InsertParamDescription(XmlNode paramNode, List<String> commentList)
+        {
+            var prefix = "@param " + paramNode.Attributes["name"].Value + " ";
+            var lines = SplitXMLElementString(paramNode.SelectNodes("descr")[0]);
+            var found = false;
+            for (var i = 0; i < commentList.Count(); i++)
+            {
+                if (commentList[i].StartsWith(prefix))
+                {
+                    var description = commentList[i].Substring(prefix.Length);
+                    if (description.Length > 0)
+                    {
+                        description += " - ";
+                    }
+                    lines[lines.Length-1] += description;
+                    MergeDescriptionComments(commentList, i, lines);
+                    found = true;
+                    break;
+                }
+            }
+            if (!found)
+            {
+                lines[0] = prefix + lines[0];
+                MergeDescriptionComments(commentList, -1, lines);
+            }
+        }
+
+        private void MergeDescriptionComments(List<string> commentList, int index, string[] lines)
+        {
+            if (index == -1)
+            {
+                foreach (var line in lines)
+                {
+                    commentList.Add(line);
+                }
+            }
+            else
+            {
+                commentList[index] += lines[0];
+                for (var i = 1; i < lines.Length; i++)
+                {
+                    commentList.Insert(++index, lines[i]);
+                }
+            }
         }
 
         private XmlDocument AddCommentsForName(String name, String Domain, List<String> commentList)
@@ -176,12 +284,15 @@ namespace WebIDLParser
                 xdoc.Load(XmlReader.Create(new MemoryStream(
                         UTF8Encoding.UTF8.GetBytes(xml)), settings));
 
+                FilterNonASDocElements(xdoc.DocumentElement);
+
                 var elm = xdoc.SelectNodes("//interface[@name='" + name + "']/descr");
                 if (elm.Count > 0)
                 {
                     ExtractXSpecRefs(elm[0], commentList);
                     XmlElementToComments(elm[0], commentList);
                 }
+
                 return xdoc;
             }
             return null;
@@ -221,9 +332,26 @@ namespace WebIDLParser
             }
         }
 
+        private void FilterNonASDocElements(XmlNode elm)
+        {
+            var list = new List<String>();
+            list.Add("termref");
+            list.ForEach(e => FilterNonASDocElement(elm, e));
+        }
+
+        private void FilterNonASDocElement(XmlNode elm, string nodeName)
+        {
+            XmlNodeList refs = elm.SelectNodes("//" + nodeName);
+            foreach (XmlNode node in refs)
+            {
+                var text = elm.OwnerDocument.CreateTextNode(node.InnerText);
+                node.ParentNode.ReplaceChild(text, node);
+            }
+        }
+
         private void XmlElementToComments(XmlNode elm, List<String> comments)
         {
-            var lines = Regex.Split(elm.InnerXml, "[\r\n]+");
+            var lines = SplitXMLElementString(elm);
             var idx = 0;
             foreach (var line in lines)
             {
@@ -235,42 +363,14 @@ namespace WebIDLParser
             }
         }
 
-        private bool CheckURL(string url)
+        private string[] SplitXMLElementString(XmlNode elm)
         {
-            System.IO.StreamReader streamReader = null;
-            System.Net.WebResponse response = null;
-            try
+            var lines = Regex.Split(elm.InnerXml, "[\r\n]+");
+            for (var i = 0; i < lines.Length; i++)
             {
-                System.Net.WebRequest wc = System.Net.WebRequest.Create(url); //args[0]);
-
-                ((System.Net.HttpWebRequest)wc).UserAgent = "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.19 (KHTML, like Gecko) Chrome/0.2.153.1 Safari/525.19";
-                wc.Timeout = 1000;
-                wc.Method = "HEAD";
-                response = wc.GetResponse();
-                streamReader = new System.IO.StreamReader(response.GetResponseStream());
-
-                streamReader.ReadToEnd();
-
-                return true;
+                lines[i] = lines[i].Trim();
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return false;
-            }
-            finally
-            {
-                if (response != null)
-                {
-                    response.Close();
-                    response.Dispose();
-                }
-                if (streamReader != null)
-                {
-                    streamReader.Close();
-                    streamReader.Dispose();
-                }
-            }
+            return lines;
         }
 
         private void AddSeeReference(TType type)
@@ -524,7 +624,18 @@ namespace WebIDLParser
             method.parameters.ForEach(p => AddParameterComment(p, method));
             if (method.resultType.name != "void")
             {
-                method.comments.Add("@return A <code>" + method.resultType.name + "</code> instance.");
+                var exists = false;
+                foreach (var cmt in method.comments)
+                {
+                    if (cmt.StartsWith("@return"))
+                    {
+                        exists = true;
+                    }
+                }
+                if (!exists)
+                {
+                    method.comments.Add("@return A <code>" + method.resultType.name + "</code> instance.");
+                }
             }
         }
 
@@ -540,11 +651,23 @@ namespace WebIDLParser
         private void AddParameterComment(TParameter parameter, TMethod method)
         {
             var comment = "@param " + parameter.name;
-            if (parameter.isOptional())
+            var exists = false;
+            foreach (var cmt in method.comments)
             {
-                comment += " (optional argument, default value is <code>" + TProperty.GetDefaultResult(parameter.type, parameter) + "</code>)";
+                if (cmt.StartsWith(comment))
+                {
+                    exists = true;
+                    break;
+                }
             }
-            method.comments.Add(comment);
+            if (!exists)
+            {
+                if (parameter.isOptional())
+                {
+                    comment += " (optional argument, default value is <code>" + TProperty.GetDefaultResult(parameter.type, parameter) + "</code>)";
+                }
+                method.comments.Add(comment);
+            }
         }
 
         public void disambiguateMethodNames()

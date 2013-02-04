@@ -40,6 +40,11 @@ namespace WebIDLParser
 
         public static void start()
         {
+            if (Program.runW3CXMLPreProcess)
+            {
+                PreprocessW3CXML();
+            }
+
             if (!Directory.Exists(Program.idlOutTempDirectory)) Directory.CreateDirectory(Program.idlOutTempDirectory);
             if (!Directory.Exists(Program.csOutDirectory)) Directory.CreateDirectory(Program.csOutDirectory);
 
@@ -168,6 +173,35 @@ namespace WebIDLParser
 
             Console.WriteLine("ready");
             Console.ReadKey();
+        }
+
+        private static void PreprocessW3CXML()
+        {
+            Directory.EnumerateDirectories(Program.w3cDirectory + "preprocess").ToList<String>().ForEach(d => PreprocessW3CDirectory(d));
+        }
+
+        private static void PreprocessW3CDirectory(string dir)
+        {
+            Directory.EnumerateFiles(dir).ToList<String>().ForEach(f => PreprocessW3CFile(f, dir));
+        }
+
+        private static void PreprocessW3CFile(string file, string dir)
+        {
+            var parts = dir.Split(Path.DirectorySeparatorChar);
+            var savedir = Path.Combine(Program.w3cDirectory, parts[parts.Length - 1], "definitions");
+            var xdoc = XDocument.Load(file);
+            xdoc.Descendants("interface").ToList<XElement>().ForEach(e => SaveW3CFile(e, savedir));
+        }
+
+        private static void SaveW3CFile(XElement element, string savedir)
+        {
+            var name = element.Attribute("name").Value + ".xml";
+            var content = element.ToString();
+            if (!Directory.Exists(savedir))
+            {
+                Directory.CreateDirectory(savedir);
+            }
+            File.WriteAllText(Path.Combine(savedir, name), content);
         }
 
         private static bool hasConstructor(TFileType t)
