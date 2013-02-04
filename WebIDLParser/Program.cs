@@ -35,7 +35,7 @@ namespace WebIDLParser
         public static string w3cDirectory = @"D:\w3c\";
 
         //Path to the existing project SharpKit.Html project
-        public static string csOutDirectory = @"D:\RandoriGenerated\randori\webkit\";
+        public static string csOutDirectory = @"C:\projects\RandoriAS\HTMLCoreLib\src\randori\webkit\";
 
         //Path to the WebKit(--> WebCore) sources. ( http://trac.webkit.org/browser/trunk/Source/WebCore/ )
         public static string idlInDirectory = @"C:\projects\WebCore\";
@@ -64,21 +64,8 @@ namespace WebIDLParser
             //THe output generates still the "HTML" version, for example
             //c#: el is HtmlImageElement
             //js: el instanceof HTMLImageElement
-            //Transformations.renameCsTypePrefix("HTML", "Html");
-            //Transformations.renameCsTypePrefix("SVG", "Svg");
-            //Transformations.renameCsTypePrefix("CSS", "Css");
 
             Transformations.renameType("EventListener", "Function");
-
-            //---
-            /*Transformations.moveToRootNamespace("css");
-            Transformations.moveToRootNamespace("dom");
-            Transformations.moveToRootNamespace("html");
-            Transformations.moveToRootNamespace("html.canvas");
-            Transformations.moveToRootNamespace("websockets");
-            Transformations.moveToRootNamespace("page");
-            Transformations.moveToRootNamespace("xml");*/
-
             Transformations.generateElementConstructorForType("HTML", "Element"); //This will extract "hr" from HtmlHrElement and generates document.createElement('hr')
             Transformations.generateElementConstructorForType("SVG", "Element");
 
@@ -102,7 +89,6 @@ namespace WebIDLParser
             Transformations.changeDelegateResultType("PositionErrorCallback", "void");
 
             Transformations.renameType("Event", "DomEvent");
-            //Transformations.renameType("DOMWindow", "Window");
         }
 
     }

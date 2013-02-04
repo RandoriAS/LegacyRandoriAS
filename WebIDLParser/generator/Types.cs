@@ -119,6 +119,11 @@ namespace WebIDLParser
         {
             try
             {
+                var attr = attributes.FindAll(a => a is TNameAttribute).Cast<TNameAttribute>().ToList().FirstOrDefault(a => a.name == "Conditional");
+                if (attr != null)
+                {
+                    comments.Insert(0, "<note>This class depends on the browser to support: <code>" + attr.value + "</code></note>");
+                }
                 var xdoc = AddCommentsForName(name, Domain, comments);
                 if (xdoc != null)
                 {
@@ -187,10 +192,17 @@ namespace WebIDLParser
             if (descrNodes.Count > 0)
             {
                 var lines = SplitXMLElementString(descrNodes[0]);
-                lines[0] = "@throw " + exceptionName.Value + " " + lines[0];
-                foreach (var line in lines)
+                if (lines != null)
                 {
-                    commentList.Add(line);
+                    lines[0] = "@throw " + exceptionName.Value + " " + lines[0];
+                    foreach (var line in lines)
+                    {
+                        commentList.Add(line);
+                    }
+                }
+                else
+                {
+                    commentList.Add("@throw " + exceptionName);
                 }
             }
             else
@@ -201,20 +213,23 @@ namespace WebIDLParser
         private void InsertReturnDescription(XmlNode returnNode, List<string> commentList)
         {
             var lines = SplitXMLElementString(returnNode.SelectNodes("descr")[0]);
-            var found = false;
-            for (var i = 0; i < commentList.Count(); i++)
+            if (lines != null)
             {
-                if (commentList[i].StartsWith("@return "))
+                var found = false;
+                for (var i = 0; i < commentList.Count(); i++)
                 {
-                    MergeDescriptionComments(commentList, i, lines);
-                    found = true;
-                    break;
+                    if (commentList[i].StartsWith("@return "))
+                    {
+                        MergeDescriptionComments(commentList, i, lines);
+                        found = true;
+                        break;
+                    }
                 }
-            }
-            if (!found)
-            {
-                lines[0] = "@return " + lines[0];
-                MergeDescriptionComments(commentList, -1, lines);
+                if (!found)
+                {
+                    lines[0] = "@return " + lines[0];
+                    MergeDescriptionComments(commentList, -1, lines);
+                }
             }
         }
 
@@ -222,26 +237,29 @@ namespace WebIDLParser
         {
             var prefix = "@param " + paramNode.Attributes["name"].Value + " ";
             var lines = SplitXMLElementString(paramNode.SelectNodes("descr")[0]);
-            var found = false;
-            for (var i = 0; i < commentList.Count(); i++)
+            if (lines != null)
             {
-                if (commentList[i].StartsWith(prefix))
+                var found = false;
+                for (var i = 0; i < commentList.Count(); i++)
                 {
-                    var description = commentList[i].Substring(prefix.Length);
-                    if (description.Length > 0)
+                    if (commentList[i].StartsWith(prefix))
                     {
-                        description += " - ";
+                        var description = commentList[i].Substring(prefix.Length);
+                        if (description.Length > 0)
+                        {
+                            description += " - ";
+                        }
+                        lines[lines.Length-1] += description;
+                        MergeDescriptionComments(commentList, i, lines);
+                        found = true;
+                        break;
                     }
-                    lines[lines.Length-1] += description;
-                    MergeDescriptionComments(commentList, i, lines);
-                    found = true;
-                    break;
                 }
-            }
-            if (!found)
-            {
-                lines[0] = prefix + lines[0];
-                MergeDescriptionComments(commentList, -1, lines);
+                if (!found)
+                {
+                    lines[0] = prefix + lines[0];
+                    MergeDescriptionComments(commentList, -1, lines);
+                }
             }
         }
 
@@ -352,25 +370,35 @@ namespace WebIDLParser
         private void XmlElementToComments(XmlNode elm, List<String> comments)
         {
             var lines = SplitXMLElementString(elm);
-            var idx = 0;
-            foreach (var line in lines)
+            if (lines != null)
             {
-                var thisLine = line.Trim();
-                if (thisLine.Length > 0)
+                var idx = 0;
+                foreach (var line in lines)
                 {
-                    comments.Insert(idx++, thisLine);
+                    var thisLine = line.Trim();
+                    if (thisLine.Length > 0)
+                    {
+                        comments.Insert(idx++, thisLine);
+                    }
                 }
             }
         }
 
         private string[] SplitXMLElementString(XmlNode elm)
         {
-            var lines = Regex.Split(elm.InnerXml, "[\r\n]+");
-            for (var i = 0; i < lines.Length; i++)
+            if (elm.InnerText.Count() > 0)
             {
-                lines[i] = lines[i].Trim();
+                var lines = Regex.Split(elm.InnerXml, "[\r\n]+");
+                for (var i = 0; i < lines.Length; i++)
+                {
+                    lines[i] = lines[i].Trim();
+                }
+                return lines;
             }
-            return lines;
+            else
+            {
+                return null;
+            }
         }
 
         private void AddSeeReference(TType type)
@@ -422,7 +450,7 @@ namespace WebIDLParser
             bool isDynamic = false;
             isDynamic = (members.FirstOrDefault(c => c.name == "this") != null);
 
-            if (!isSupplemental) sb.Append("[JavaScript(" + jsAttributes.ToString() + ")]" + Environment.NewLine);
+            sb.Append("[JavaScript(" + jsAttributes.ToString() + ")]" + Environment.NewLine);
             string typeType = "class";
             if (isInterface) typeType = "interface";
             if (isDynamic)
@@ -621,7 +649,19 @@ namespace WebIDLParser
                 method.comments.Add("Creates a new <code>" + name + "</code> instance.");
             }
             method.parameters.ForEach(p => AddParameterTypeReferenceComment(p, method));
-            method.parameters.ForEach(p => AddParameterComment(p, method));
+            var paramCommentsExist = false;
+            foreach (var cmt in method.comments)
+            {
+                if (cmt.StartsWith("@param"))
+                {
+                    paramCommentsExist = true;
+                    break;
+                }
+            }
+            if (!paramCommentsExist)
+            {
+                method.parameters.ForEach(p => AddParameterComment(p, method));
+            }
             if (method.resultType.name != "void")
             {
                 var exists = false;
@@ -651,23 +691,11 @@ namespace WebIDLParser
         private void AddParameterComment(TParameter parameter, TMethod method)
         {
             var comment = "@param " + parameter.name;
-            var exists = false;
-            foreach (var cmt in method.comments)
+            if (parameter.isOptional())
             {
-                if (cmt.StartsWith(comment))
-                {
-                    exists = true;
-                    break;
-                }
+                comment += " (optional argument, default value is <code>" + TProperty.GetDefaultResult(parameter.type, parameter) + "</code>)";
             }
-            if (!exists)
-            {
-                if (parameter.isOptional())
-                {
-                    comment += " (optional argument, default value is <code>" + TProperty.GetDefaultResult(parameter.type, parameter) + "</code>)";
-                }
-                method.comments.Add(comment);
-            }
+            method.comments.Add(comment);
         }
 
         public void disambiguateMethodNames()
@@ -892,31 +920,6 @@ namespace WebIDLParser
                         }
                         if (typeName == "") return;
 
-                        //name = "Vector.<" + typeName + ">";
-
-                        /*jsAttributes.Add("NativeEnumerator", "false");
-                        jsAttributes.Add("NativeArrayEnumerator", "true");
-
-                        baseType.Add(new TType() { name = "IJsArrayEnumerable", genericType = new TType() { name = typeName }, canCorrect = false });
-                        var str = @"
-	{TYPE} IJsArrayEnumerable<{TYPE}>.this[JsNumber index] {
-		get { throw new NotImplementedException(); }
-	}
-
-	JsNumber IJsArrayEnumerable<{TYPE}>.length {
-		get { throw new NotImplementedException(); }
-	}
-
-	System.Collections.Generic.IEnumerator<{TYPE}> System.Collections.Generic.IEnumerable<{TYPE}>.GetEnumerator() {
-		throw new NotImplementedException();
-	}
-
-	System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
-		throw new NotImplementedException();
-	}
-";
-                        str = str.Replace("{TYPE}", typeName);
-                        members.Add(new TFragmentMember(this) { text = str });*/
                         isVector = true;
                     }
                 }
@@ -1039,37 +1042,12 @@ namespace WebIDLParser
                             int idx = members.IndexOf(func);
                             members[idx] = prop;
                         }
-                        else
-                        {
-                            //string n1 = func.Name.Substring(3);
-                            //var propName = char.ToLower(n1[0]).ToString() + n1.Substring(1);
-                            //TProperty prop = new TProperty();
-                            //prop.Name = propName;
-                            //prop.resultType = func.resultType;
-                            //prop.canRead = true;
-                            //int idx = Members.IndexOf(func);
-                            //Members[idx] = prop;
-                            //TMethod setMem = (TMethod)Members.Find("set" + n1);
-                            //if (setMem != null) {
-                            //  prop.canWrite = true;
-                            //  Members.Remove(setMem);
-                            //}
-                        }
+                       
                     }
                 }
             }
         }
     }
-
-    //public class TClassComment : TMember
-    //{
-    //  public string text;
-
-    //  public override void write(StringBuilder sb) {
-    //    sb.Append(Environment.NewLine + "\t" + text + Environment.NewLine);
-    //  }
-
-    //}
 
     public abstract class TMember
     {
