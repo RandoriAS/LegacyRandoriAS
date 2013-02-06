@@ -28,13 +28,9 @@ package guice.binding {
 		 *  Context scope guarantees that Guice will only provide a single instance of the executed binding within the Context. However, unlike singletons, other contexts can redefine the 
 		 *  binding. If a child context does not redefine a binding, guicejs will inquire with parent contexts.
 		 **/		
-		public static const Instance:Scope = new Scope(0);
-		public static const Singleton:Scope = new Scope(1);
-		public static const Context:Scope = new Scope(2);
-		
-		public var value:int;
-		public function Scope( value:int ) {
-			this.value = value;
-		}
+		public static const Instance:int = 0;
+		public static const Singleton:int = 1;
+		public static const Context:int = 2;
+
 	}
 }

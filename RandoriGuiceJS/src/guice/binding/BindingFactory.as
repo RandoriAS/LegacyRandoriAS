@@ -21,10 +21,11 @@ package guice.binding {
 	import guice.binding.decorator.SingletonDecorator;
 	import guice.reflection.TypeDefinition;
 
+	
 	public class BindingFactory {
 		private var binder:Binder; 
 		private var typeDefinition:TypeDefinition;
-		private var scope:Scope;
+		private var scope:int;
 		
 		public function to(dependency:Class):AbstractBinding {
 			var abstractBinding:AbstractBinding = withDecoration( new TypeBinding( typeDefinition, new TypeDefinition(dependency) ) );
@@ -47,7 +48,7 @@ package guice.binding {
 			return abstractBinding;
 		}
 		
-		public function inScope( scope:Scope ):BindingFactory {
+		public function inScope( scope:int ):BindingFactory {
 			this.scope = scope;
 			return this;
 		}

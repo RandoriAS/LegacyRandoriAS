@@ -28,8 +28,8 @@ package guice.binding {
 			return null;
 		}
 		
-		public function getScope():Scope {
-			return null;
+		public function getScope():int {
+			return -1;
 		}
 
 		public function AbstractBinding() {
