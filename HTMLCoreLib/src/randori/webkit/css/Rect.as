@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -43,30 +44,47 @@ package randori.webkit.css
 
 [JavaScript(export="false", name="Rect")]
 /**
- *  @author RandoriAS
+ *  <p>
+ *  The <code>Rect</code> interface is used to represent any rect
+ *  value. This interface reflects the values in the underlying style
+ *  property. Hence, modifications made to the <code>CSSPrimitiveValue</code>
+ *  objects modify the style property.
+ *  </p>
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/visufx.html#value-def-shape
  */
 public class Rect
 {
 
 	/**
+	*  <p>
+	*  This attribute is used for the top of the rect.
+	*  </p>
 	*  @see randori.webkit.css.CSSPrimitiveValue
 	*/
 	public function get top():CSSPrimitiveValue { return null; }
 
 	/**
+	*  <p>
+	*  This attribute is used for the right of the rect.
+	*  </p>
 	*  @see randori.webkit.css.CSSPrimitiveValue
 	*/
 	public function get right():CSSPrimitiveValue { return null; }
 
 	/**
+	*  <p>
+	*  This attribute is used for the bottom of the rect.
+	*  </p>
 	*  @see randori.webkit.css.CSSPrimitiveValue
 	*/
 	public function get bottom():CSSPrimitiveValue { return null; }
 
 	/**
+	*  <p>
+	*  This attribute is used for the left of the rect.
+	*  </p>
 	*  @see randori.webkit.css.CSSPrimitiveValue
 	*/
 	public function get left():CSSPrimitiveValue { return null; }

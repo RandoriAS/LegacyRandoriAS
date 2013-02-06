@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -40,16 +41,14 @@
 package randori.webkit.xml
 {
 
-import randori.webkit.html.canvas.ArrayBufferView;
+import randori.webkit.html.canvas.ArrayBuffer;
 import randori.webkit.dom.Document;
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export="false", name="XMLHttpRequest")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class XMLHttpRequest
 {
@@ -136,7 +135,7 @@ public class XMLHttpRequest
 	/**
 	*  @param data
 	*/
-	public function send(data:ArrayBufferView):void {}
+	public function send(data:ArrayBuffer):void {}
 	public function abort():void {}
 
 	/**
@@ -171,7 +170,7 @@ public class XMLHttpRequest
 	/**
 	*  @param override
 	*/
-	public function overrideMimeType($override:String):void {}
+	public function overrideMimeType(override_:String):void {}
 	/**
 	*  @param type
 	*  @param listener

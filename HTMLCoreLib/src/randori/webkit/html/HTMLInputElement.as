@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -40,13 +41,13 @@
 package randori.webkit.html
 {
 
+import randori.webkit.fileapi.FileList;
+import randori.webkit.dom.NodeList;
 
 [JavaScript(export="false", name="HTMLInputElement")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.html.HTMLElement
  */
 public class HTMLInputElement extends HTMLElement
@@ -89,8 +90,8 @@ public class HTMLInputElement extends HTMLElement
 	/**
 	*  @see randori.webkit.fileapi.FileList
 	*/
-	public function get files():Object { return null; }
-	public function set files(value:Object):void { }
+	public function get files():FileList { return null; }
+	public function set files(value:FileList):void { }
 
 	public function get formAction():String { return ''; }
 	public function set formAction(value:String):void { }
@@ -140,14 +141,14 @@ public class HTMLInputElement extends HTMLElement
 	public function set placeholder(value:String):void { }
 
 	[JavascriptProperty(name="readOnly")]
-	public function get $readOnly():Boolean { return false; }
-	public function set $readOnly(value:Boolean):void { }
+	public function get readOnly_():Boolean { return false; }
+	public function set readOnly_(value:Boolean):void { }
 
 	public function get required():Boolean { return false; }
 	public function set required(value:Boolean):void { }
 
-	public function get size():String { return ''; }
-	public function set size(value:String):void { }
+	public function get size():uint { return 0; }
+	public function set size(value:uint):void { }
 
 	public function get src():String { return ''; }
 	public function set src(value:String):void { }
@@ -201,7 +202,7 @@ public class HTMLInputElement extends HTMLElement
 	/**
 	*  @see randori.webkit.dom.NodeList
 	*/
-	public function get labels():Object { return null; }
+	public function get labels():NodeList { return null; }
 	public function select():void {}
 
 	public function get selectionStart():uint { return 0; }
@@ -220,10 +221,11 @@ public class HTMLInputElement extends HTMLElement
 	*/
 	public function setRangeText(replacement:String, start:uint, end:uint, selectionMode:String=null):void {}
 	/**
-	*  @param start
-	*  @param end
+	*  @param start (optional argument, default value is <code>undefined</code>)
+	*  @param end (optional argument, default value is <code>undefined</code>)
+	*  @param direction (optional argument, default value is <code>''</code>)
 	*/
-	public function setSelectionRange(start:uint, end:uint):void {}
+	public function setSelectionRange(start:uint=undefined, end:uint=undefined, direction:String=''):void {}
 
 	public function get align():String { return ''; }
 	public function set align(value:String):void { }
@@ -233,17 +235,6 @@ public class HTMLInputElement extends HTMLElement
 
 	public function get incremental():Boolean { return false; }
 	public function set incremental(value:Boolean):void { }
-	/**
-	*  @param value
-	*/
-	public function setValueForUser(value:String):void {}
-
-	public function get altDisplayString():String { return ''; }
-
-	/**
-	*  @see randori.webkit.html.URL
-	*/
-	public function get absoluteImageURL():URL { return null; }
 
 	public function get capture():String { return ''; }
 	public function set capture(value:String):void { }

@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -41,15 +42,11 @@ package randori.webkit.modules.webaudio
 {
 
 import randori.webkit.html.canvas.ArrayBuffer;
-import randori.webkit.html.HTMLMediaElement;
-import randori.webkit.modules.mediastream.MediaStream;
 
 [JavaScript(export="false", nativecondition="WEB_AUDIO", name="AudioContext")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class AudioContext
 {
@@ -86,20 +83,6 @@ public class AudioContext
 	*  @return A <code>AudioBufferSourceNode</code> instance.
 	*/
 	public function createBufferSource():AudioBufferSourceNode { return null;}
-	/**
-	*  @param mediaElement
-	*  @return A <code>MediaElementAudioSourceNode</code> instance.
-	*/
-	public function createMediaElementSource(mediaElement:HTMLMediaElement):MediaElementAudioSourceNode { return null;}
-	/**
-	*  @param mediaStream
-	*  @return A <code>MediaStreamAudioSourceNode</code> instance.
-	*/
-	public function createMediaStreamSource(mediaStream:MediaStream):MediaStreamAudioSourceNode { return null;}
-	/**
-	*  @return A <code>MediaStreamAudioDestinationNode</code> instance.
-	*/
-	public function createMediaStreamDestination():MediaStreamAudioDestinationNode { return null;}
 	/**
 	*  @return A <code>GainNode</code> instance.
 	*/
@@ -167,22 +150,6 @@ public class AudioContext
 	public function get oncomplete():Function { return null; }
 	public function set oncomplete(value:Function):void { }
 	public function startRendering():void {}
-	/**
-	*  @return A <code>GainNode</code> instance.
-	*/
-	public function createGainNode():GainNode { return null;}
-	/**
-	*  @param maxDelayTime (optional argument, default value is <code>0</code>)
-	*  @return A <code>DelayNode</code> instance.
-	*/
-	public function createDelayNode(maxDelayTime:Number=0):DelayNode { return null;}
-	/**
-	*  @param bufferSize
-	*  @param numberOfInputChannels (optional argument, default value is <code>0</code>)
-	*  @param numberOfOutputChannels (optional argument, default value is <code>0</code>)
-	*  @return A <code>ScriptProcessorNode</code> instance.
-	*/
-	public function createJavaScriptNode(bufferSize:uint, numberOfInputChannels:uint=0, numberOfOutputChannels:uint=0):ScriptProcessorNode { return null;}
 }
 
 }

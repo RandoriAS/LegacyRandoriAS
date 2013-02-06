@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -43,35 +44,53 @@ package randori.webkit.css
 
 [JavaScript(export="false", name="RGBColor")]
 /**
- *  @author RandoriAS
+ *  <p>
+ *  The <code>RGBColor</code> interface is used to represent any RGB
+ *  color value. This interface reflects the values in the
+ *  underlying style property. Hence, modifications made to the
+ *  <code>CSSPrimitiveValue</code> objects modify the style property.
+ *  </p><p>
+ *  A specified RGB color is not clipped (even if the number is outside the
+ *  range 0-255 or 0%-100%). A computed RGB color is clipped depending on the
+ *  device.
+ *  </p><p>
+ *  Even if a style sheet can only contain an integer for a color value, the
+ *  internal storage of this integer is a float, and this can be used as a
+ *  float in the specified or the computed style.
+ *  </p><p>
+ *  A color percentage value can always be converted to a number and vice
+ *  versa.
+ *  </p>
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
+ *  @see http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#value-def-color
  */
 public class RGBColor
 {
 
 	/**
+	*  <p>
+	*  This attribute is used for the red value of the RGB color.
+	*  </p>
 	*  @see randori.webkit.css.CSSPrimitiveValue
 	*/
 	public function get red():CSSPrimitiveValue { return null; }
 
 	/**
+	*  <p>
+	*  This attribute is used for the green value of the RGB color.
+	*  </p>
 	*  @see randori.webkit.css.CSSPrimitiveValue
 	*/
 	public function get green():CSSPrimitiveValue { return null; }
 
 	/**
+	*  <p>
+	*  This attribute is used for the blue value of the RGB color.
+	*  </p>
 	*  @see randori.webkit.css.CSSPrimitiveValue
 	*/
 	public function get blue():CSSPrimitiveValue { return null; }
-
-	/**
-	*  @see randori.webkit.css.CSSPrimitiveValue
-	*/
-	public function get alpha():CSSPrimitiveValue { return null; }
-
-	public function get color():Object { return null; }
 }
 
 }

@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -40,14 +41,13 @@
 package randori.webkit.modules.indexeddb
 {
 
+import randori.webkit.dom.DOMStringList;
 import randori.webkit.dom.DomEvent;
 
 [JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="IDBDatabase")]
 /**
- *  @author RandoriAS
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  */
 public class IDBDatabase
 {
@@ -62,7 +62,7 @@ public class IDBDatabase
 	/**
 	*  @see randori.webkit.dom.DOMStringList
 	*/
-	public function get objectStoreNames():Object { return null; }
+	public function get objectStoreNames():DOMStringList { return null; }
 
 	/**
 	*  Function that accepts an event of type <code>AbortEvent</code>.
@@ -97,7 +97,7 @@ public class IDBDatabase
 	*  @param mode (optional argument, default value is <code>null</code>)
 	*  @return A <code>IDBTransaction</code> instance.
 	*/
-	public function transaction(storeNames:Object, mode:String=null):IDBTransaction { return null;}
+	public function transaction(storeNames:DOMStringList, mode:String=null):IDBTransaction { return null;}
 	public function close():void {}
 	/**
 	*  @param type

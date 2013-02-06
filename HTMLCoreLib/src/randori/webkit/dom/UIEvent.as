@@ -8,14 +8,15 @@
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
-  - or modifiy the WebIDLParser tool itself.
+  - or modify the WebIDLParser tool itself.
 
 ********************************************************************************************************
 
   Copyright (C) 2013 Sebastian Loncar, Web: http://loncar.de
   Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
-  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com)
+  Adapted to create Actionscript 3 classes by Roland Zwaga (roland@stackandheap.com) for the Randori
+  framework for large enterprise Javascript applications.
 
   MIT License:
 
@@ -44,27 +45,39 @@ import randori.webkit.page.Window;
 
 [JavaScript(export="false", name="UIEvent")]
 /**
- *  @author RandoriAS
+ *  <p>The <code>UIEvent</code> interface provides specific contextual
+ *  information associated with User Interface events.</p>
+ *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @productversion RandoriAS 1.0
- *  @since 1.0
  *  @see randori.webkit.dom.DomEvent
  */
 public class UIEvent extends DomEvent
 {
 
 	/**
+	*  <p>The <code>view</code> attribute identifies the
+	*  <code>AbstractView</code> from which the event was generated.</p>
 	*  @see randori.webkit.page.Window
 	*/
 	public function get view():Window { return null; }
 
+	/**
+	*  <p>Specifies some detail information about the <code>Event</code>,
+	*  depending on the type of event.</p>
+	*/
 	public function get detail():uint { return 0; }
 	/**
-	*  @param type (optional argument, default value is <code>undefined</code>)
-	*  @param canBubble (optional argument, default value is <code>undefined</code>)
-	*  @param cancelable (optional argument, default value is <code>undefined</code>)
-	*  @param view (optional argument, default value is <code>undefined</code>)
-	*  @param detail (optional argument, default value is <code>undefined</code>)
+	*  <p>The <code>initUIEvent</code> method is used to initialize the value of a <code>UIEvent</code> created through
+	*  the <code>DocumentEvent</code> interface.  This method may only be called before the <code>UIEvent</code> has
+	*  been dispatched via the <code>dispatchEvent</code> method, though it may be called multiple times during that
+	*  phase if necessary.  If called multiple times, the final invocation takes precedence.</p>
+	*  @param typeArg <p>Specifies the event type.</p>
+	*  @param canBubbleArg <p>Specifies whether or not the event can bubble.</p>
+	*  @param cancelableArg <p>Specifies whether or not the event's default
+	*  action can be prevented.</p>
+	*  @param viewArg <p>Specifies the <code>Event</code>'s
+	*  <code>AbstractView</code>.</p>
+	*  @param detailArg <p>Specifies the <code>Event</code>'s detail.</p>
 	*/
 	public function initUIEvent(type:String=undefined, canBubble:Boolean=undefined, cancelable:Boolean=undefined, view:Window=undefined, detail:uint=undefined):void {}
 
