@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
-  <includeClasses/>
+  <includeClasses>
+    <classEntry path="randori.async.Promise"/>
+    <classEntry path="randori.bus.AbstractEventBus"/>
+    <classEntry path="randori.content.ContentCache"/>
+    <classEntry path="randori.content.ContentLoader"/>
+    <classEntry path="randori.service.AbstractService"/>
+    <classEntry path="randori.content.ContentParser"/>
+    <classEntry path="randori.content.ContentResolver"/>
+    <classEntry path="randori.styles.StyleExtensionMap"/>
+    <classEntry path="randori.data.HashMap"/>
+    <classEntry path="randori.dom.DomExtensionFactory"/>
+    <classEntry path="randori.dom.ExternalBehaviorFactory"/>
+    <classEntry path="randori.behaviors.AbstractBehavior"/>
+    <classEntry path="randori.behaviors.AbstractMediator"/>
+    <classEntry path="randori.behaviors.AbstractRenderer"/>
+    <classEntry path="randori.dom.ElementDescriptorFactory"/>
+    <classEntry path="randori.styles.StyleExtensionManager"/>
+    <classEntry path="randori.dom.ElementDescriptor"/>
+    <classEntry path="randori.styles.StyleExtensionMapEntry"/>
+    <classEntry path="randori.dom.DomWalker"/>
+    <classEntry path="randori.i18n.LocalizationProvider"/>
+    <classEntry path="randori.i18n.AbstractTranslator"/>
+    <classEntry path="randori.i18n.Translation"/>
+    <classEntry path="randori.i18n.Domains"/>
+    <classEntry path="randori.timer.Timer"/>
+    <classEntry path="randori.i18n.NoOpTranslator"/>
+    <classEntry path="randori.i18n.PropertyFileTranslator"/>
+    <classEntry path="randori.signal.SimpleSignal"/>
+    <classEntry path="randori.service.ServiceConfig"/>
+    <classEntry path="randori.service.parser.AbstractParser"/>
+    <classEntry path="randori.startup.RandoriApplication"/>
+    <classEntry path="randori.startup.RandoriModule"/>
+  </includeClasses>
   <includeResources/>
   <namespaceManifests/>
 </flexLibProperties>

@@ -74,6 +74,7 @@
       </libraryPathEntry>
       <libraryPathEntry kind="3" linkType="2" path="/RandoriGuiceJS/bin/RandoriGuiceJS.swc" useDefaultLinkType="true"/>
       <libraryPathEntry kind="3" linkType="2" path="/HTMLCoreLib/bin/HTMLCoreLib.swc" useDefaultLinkType="true"/>
+      <libraryPathEntry kind="3" linkType="1" path="/JQuery/bin/JQuery.swc" useDefaultLinkType="false"/>
     </libraryPath>
     <sourceAttachmentPath/>
   </compiler>
