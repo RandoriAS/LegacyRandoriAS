@@ -24,15 +24,19 @@ package guice.reflection {
 		public static const Method:int = 2;
 		public static const View:int = 3;
 		
-		private var type:*;
+		private var _type:*;
 		private var _builtIn:Boolean = false;
+		
+		public function get type():* {
+			return _type;
+		}
 		
 		public function get builtIn():Boolean {
 			return _builtIn;
 		}
 
 		public function getClassName():String {
-			var className:String = type.className;
+			var className:String = _type.className;
 			
 			if ( !className ) {
 				throw new Error("Class not does defined a usable className");
@@ -42,7 +46,7 @@ package guice.reflection {
 		}
 		
 		public function getSuperClassName():String {
-			var className:String = type.superClassName;
+			var className:String = _type.superClassName;
 			
 			if (!className) {
 				className = "Object";
@@ -97,7 +101,7 @@ package guice.reflection {
 		}
 
 		public function TypeDefinition( clazz:Class ) {
-			this.type = clazz;
+			this._type = clazz;
 			
 			//We add data to all of our Types. So, if this is not one of our types, then we assume it is a built in or
 			//externally defined. We dont want to spend much time trying to parse those

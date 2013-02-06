@@ -20,7 +20,7 @@ package guice.resolver {
 	import guice.loader.SynchronousClassLoader;
 	import guice.reflection.TypeDefinition;
 	
-	import randori.html.Html;
+	import randori.webkit.page.Window;
 
 	public class ClassResolver {
 		private var loader:SynchronousClassLoader;
@@ -81,7 +81,7 @@ package guice.resolver {
 		}
 		
 		private function findDefinition(qualifiedClassName:String):Object {
-			var nextLevel:* = Html.window;
+			var nextLevel:* = Window.window;
 			var failed:Boolean = false;
 			
 			var path:Array = qualifiedClassName.split('.');

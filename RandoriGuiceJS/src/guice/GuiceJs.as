@@ -22,8 +22,8 @@ package guice {
 	import guice.loader.SynchronousClassLoader;
 	import guice.resolver.ClassResolver;
 	
-	import randori.html.XMLHttpRequest;
-
+	import randori.webkit.xml.XMLHttpRequest;
+	
 	public class GuiceJs {
 		private var dynamicClassBaseUrl:String;
 		

@@ -17,7 +17,7 @@
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
 package guice.loader {
-	import randori.html.XMLHttpRequest;
+	import randori.webkit.xml.XMLHttpRequest;
 
 	public class SynchronousClassLoader {
 		private var xmlHttpRequest:XMLHttpRequest;
@@ -30,7 +30,7 @@ package guice.loader {
 			potentialURL += ".js";
 			
 			xmlHttpRequest.open("GET", potentialURL, false);
-			xmlHttpRequest.send("");
+			xmlHttpRequest.send( null );
 			
 			//Todo Need to handle other status than just 404
 			if (xmlHttpRequest.status == 404) {
@@ -42,7 +42,7 @@ package guice.loader {
 			return ( xmlHttpRequest.responseText + "\n//@ sourceURL=" + potentialURL );
 		}
 
-		public function SynchronousClassLoader(xmlHttpRequest:XMLHttpRequest, dynamicClassBaseUrl:String) {
+		public function SynchronousClassLoader(xmlHttpRequest:randori.webkit.xml.XMLHttpRequest, dynamicClassBaseUrl:String) {
 			this.xmlHttpRequest = xmlHttpRequest;
 			this.dynamicClassBaseUrl = dynamicClassBaseUrl;
 		}
