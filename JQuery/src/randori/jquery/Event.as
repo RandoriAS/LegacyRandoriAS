@@ -26,7 +26,7 @@ package randori.jquery {
 			super();
 		}
 		/*
-		 *  The current DOM element within the event bubbling phase.
+		 * The current DOM element within the event bubbling phase.
 		 * @since 1.3
 		*/
 		public var currentTarget:Element;
@@ -71,7 +71,7 @@ package randori.jquery {
 		*/
 		public var result:Object;
 		/*
-		 *  The DOM element that initiated the event.
+		 * The DOM element that initiated the event.
 		 * @since 1.0
 		*/
 		public var target:Element;
@@ -81,12 +81,12 @@ package randori.jquery {
 		*/
 		public var timeStamp:Number;
 		/*
-		 *  Describes the nature of the event.
+		 * Describes the nature of the event.
 		 * @since 1.0
 		*/
 		public var type:String;
 		/*
-		 *  For key or mouse events, this property indicates the specific key or button that was pressed.
+		 * For key or mouse events, this property indicates the specific key or button that was pressed.
 		 * @since 1.1.3
 		*/
 		public var which:Number;
@@ -100,7 +100,7 @@ package randori.jquery {
 		}
 
 		/*
-		 *   Returns whether event.stopImmediatePropagation() was ever called on this event object.
+		 * Returns whether event.stopImmediatePropagation() was ever called on this event object.
 		 * @since 1.3
 		*/
 		public function isImmediatePropagationStopped():Boolean {
@@ -108,7 +108,7 @@ package randori.jquery {
 		}
 
 		/*
-		 *   Returns whether event.stopPropagation() was ever called on this event object.
+		 * Returns whether event.stopPropagation() was ever called on this event object.
 		 * @since 1.3
 		*/
 		public function isPropagationStopped():Boolean {
@@ -116,14 +116,14 @@ package randori.jquery {
 		}
 
 		/*
-		 *  If this method is called, the default action of the event will not be triggered.
+		 * If this method is called, the default action of the event will not be triggered.
 		 * @since 1.0
 		*/
 		public function preventDefault():void {
 		}
 
 		/*
-		 *  Keeps the rest of the handlers from being executed and prevents the event from bubbling up the DOM tree.
+		 * Keeps the rest of the handlers from being executed and prevents the event from bubbling up the DOM tree.
 		 * @since 1.3
 		*/
 		public function stopImmediatePropagation():void {

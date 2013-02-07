@@ -121,11 +121,9 @@ package randori.jquery {
 
 		[JavascriptMethod(name="Deferred")]
 		/*
-		 *  A constructor function that returns a chainable utility object with methods to register multiple callbacks into callback queues, invoke callback queues, and relay the success or failure state of any synchronous or asynchronous function.
+		 * A constructor function that returns a chainable utility object with methods to register multiple callbacks into callback queues, invoke callback queues, and relay the success or failure state of any synchronous or asynchronous function.
 		 * @since 1.5
-		 * @param handler
-		A function that is called just before the constructor returns.
-
+		 * @param handler A function that is called just before the constructor returns.
 		*/
 		public static function deferred(handler:Function):Deferred {
 			return null;
@@ -162,7 +160,7 @@ package randori.jquery {
 		/*
 		 * Merge the contents of two or more objects together into the first object.
 		 * @since 1.0
-		 * @param target  An object that will receive the new properties if additional objects are passed in or that will extend the jQuery namespace if it is the sole argument.
+		 * @param target An object that will receive the new properties if additional objects are passed in or that will extend the jQuery namespace if it is the sole argument.
 		 * @param object1 An object containing additional properties to merge in.
 		 * @param objectN Additional objects containing properties to merge in.
 		*/

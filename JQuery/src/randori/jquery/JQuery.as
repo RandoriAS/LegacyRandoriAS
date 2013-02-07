@@ -254,7 +254,6 @@ package randori.jquery
 		 * Insert content, specified by the parameter, to the end of each element in the set of matched elements.
 		 * @since 1.4
 		 * @param handler A function that returns an HTML string, DOM element(s), or jQuery object to insert at the end of each element in the set of matched elements. Receives the index position of the element in the set and the old HTML value of the element as arguments. Within the function, this refers to the current element in the set.
-
 		*/
 		public function append2(handler:Function):JQuery
 		{
@@ -286,7 +285,6 @@ package randori.jquery
 		 * Insert content, specified by the parameter, before each element in the set of matched elements.
 		 * @since 1.4
 		 * @param handler A function that returns an HTML string, DOM element(s), or jQuery object to insert before each element in the set of matched elements. Receives the index position of the element in the set as an argument. Within the function, this refers to the current element in the set.
-      
 		*/
 		public function before2(handler:Function):JQuery
 		{
@@ -595,7 +593,7 @@ package randori.jquery
 		}
 		
 		/*
-		 * Iterate over a jQuery object, executing a function for each matched element. 
+		 * Iterate over a jQuery object, executing a function for each matched element.
 		 * @since 1.0
 		 * @param handler A function to execute for each matched element.
 		*/
@@ -625,7 +623,7 @@ package randori.jquery
 		/*
 		 * Reduce the set of matched elements to the one at the specified index.
 		 * @since 1.1.2
-		 * @param index An integer indicating the 0-based position of the element. 
+		 * @param index An integer indicating the 0-based position of the element.
 		*/
 		public function eq1(index:int):JQuery
 		{
@@ -635,7 +633,7 @@ package randori.jquery
 		/*
 		 * Reduce the set of matched elements to the one at the specified index.
 		 * @since 1.4
-		 * @param index An integer indicating the position of the element, counting backwards  from the last element in the set. 
+		 * @param index An integer indicating the position of the element, counting backwards  from the last element in the set.
 		*/
 		public function eq2(index:int):JQuery
 		{
@@ -761,7 +759,7 @@ package randori.jquery
 		}
 		[JavascriptMethod(name="filter")]
 		/*
-		 * Reduce the set of matched elements to those that match the selector or pass the function's test. 
+		 * Reduce the set of matched elements to those that match the selector or pass the function's test.
 		 * @since 1.0
 		 * @param selector A string containing a selector expression to match the current set of elements against.
 		*/
@@ -771,7 +769,7 @@ package randori.jquery
 		}
 		[JavascriptMethod(name="filter")]
 		/*
-		 * Reduce the set of matched elements to those that match the selector or pass the function's test. 
+		 * Reduce the set of matched elements to those that match the selector or pass the function's test.
 		 * @since 1.0
 		 * @param handler A function used as a test for each element in the set. this is the current DOM element. (The method requires to have the following signature: function(index))
 		*/
@@ -781,7 +779,7 @@ package randori.jquery
 		}
 		[JavascriptMethod(name="filter")]
 		/*
-		 * Reduce the set of matched elements to those that match the selector or pass the function's test. 
+		 * Reduce the set of matched elements to those that match the selector or pass the function's test.
 		 * @since 1.4
 		 * @param element An element to match the current set of elements against.
 		*/
@@ -791,7 +789,7 @@ package randori.jquery
 		}
 		[JavascriptMethod(name="filter")]
 		/*
-		 * Reduce the set of matched elements to those that match the selector or pass the function's test. 
+		 * Reduce the set of matched elements to those that match the selector or pass the function's test.
 		 * @since 1.4
 		 * @param jQueryobject An existing jQuery object to match the current set of elements against.
 		*/
@@ -1078,7 +1076,7 @@ package randori.jquery
 		/*
 		 * Check the current matched set of elements against a selector, element, or jQuery object and return true if at least one of these elements matches the given arguments.
 		 * @since 1.6
-		 * @param handler A function used as a test for the set of elements. It accepts one argument, index, which is the element's index in the jQuery collection.Within the function, this refers to the current DOM element.  (The method requires to have the following signature: function(index))
+		 * @param handler A function used as a test for the set of elements. It accepts one argument, index, which is the element's index in the jQuery collection.Within the function, this refers to the current DOM element. (The method requires to have the following signature: function(index))
 		*/
 		public function is2(handler:Function):Boolean
 		{

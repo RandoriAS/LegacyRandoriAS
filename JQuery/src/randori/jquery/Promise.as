@@ -28,9 +28,9 @@ package randori.jquery
 		}
 		
 		/*
-		 *  Return a Promise object to observe when all actions of a certain type bound to the collection, queued or not, have finished. 
+		 * Return a Promise object to observe when all actions of a certain type bound to the collection, queued or not, have finished.
 		 * @since 1.6
-		 * @param type  The type of queue that needs to be observed. 
+		 * @param type The type of queue that needs to be observed.
 		 * @param target Object onto which the promise methods have to be attached
 		*/
 		public function promise(type:String, target:Object):Promise

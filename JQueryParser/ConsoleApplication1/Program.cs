@@ -137,7 +137,7 @@ namespace ConsoleApplication1
             {
                 member.type = "*";
             }
-            member.comments.Add(elm.Element("desc").Value);
+            member.comments.Add(elm.Element("desc").Value.Trim());
             classDef.members.Add(member);
         }
 
@@ -234,7 +234,7 @@ namespace ConsoleApplication1
             {
                 var name = TranslateName(Elm.Attribute("name").Value);
                 var type = TranslateType(Elm.Attribute("return").Value);
-                var desc = Elm.Element("desc").Value;
+                var desc = Elm.Element("desc").Value.Trim();
                 if (name.IndexOf('.') > -1)
                 {
                     name = name.Substring(name.IndexOf('.') + 1);
@@ -357,7 +357,7 @@ namespace ConsoleApplication1
             name = UncapitalizeName(name);
             var originalReturnName = Elm.Attribute("return").Value;
             var type = TranslateType(originalReturnName);
-            var desc = Elm.Element("desc").Value;
+            var desc = Elm.Element("desc").Value.Trim();
             if (name.IndexOf('.') > -1)
             {
                 name = name.Substring(name.IndexOf('.') + 1);
@@ -404,7 +404,7 @@ namespace ConsoleApplication1
                 type = elm.Attribute("type").Value;
             }
             type = TranslateType(type, true);
-            var desc = elm.Element("desc").Value;
+            var desc = elm.Element("desc").Value.Trim();
             if (type == "Function")
             {
                 if (name.IndexOf('(') > -1)
