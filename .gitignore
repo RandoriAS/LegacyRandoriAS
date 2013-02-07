@@ -12,3 +12,6 @@ bin-release/
 /WebIDLParser/Properties
 /WebIDLParser/bin
 /WebIDLParser/obj
+/sync_upstream.bat
+
+/add_upstream.bat
