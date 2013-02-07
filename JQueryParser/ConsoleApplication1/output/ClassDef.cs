@@ -104,6 +104,31 @@ namespace ConsoleApplication1.output
             }
         }
 
+        public MethodDef GetMethodByName(string name)
+        {
+            foreach (var method in methods)
+            {
+                if (method.name == name)
+                {
+                    return method;
+                }
+            }
+            return null;
+        }
+
+        public List<MethodDef> GetMethodWithNameLike(string name)
+        {
+            var result = new List<MethodDef>();
+            foreach (var method in methods)
+            {
+                if (method.name.StartsWith(name))
+                {
+                    result.Add(method);
+                }
+            }
+            return result;
+        }
+
         public void AddImport(string import)
         {
             if (imports.Contains(import) == false)

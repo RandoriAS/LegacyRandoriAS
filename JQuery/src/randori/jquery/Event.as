@@ -1,28 +1,30 @@
 /***
  * Copyright 2013 LTN Consulting, Inc. /dba Digital PrimatesÂ®
- *
+ * 
  * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * 
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an 'AS IS' BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- *
- *
+ * 
+ * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
  * @author Randori JQuery generator
 */
-package randori.jquery {
+package randori.jquery
+{
 	import randori.webkit.dom.Element;
-
 	[Javascript(export="false")]
-	public class Event {
-		public function Event() {
+	public class Event
+	{
+		public function Event()
+		{
 			super();
 		}
 		/*
@@ -90,50 +92,56 @@ package randori.jquery {
 		 * @since 1.1.3
 		*/
 		public var which:Number;
-
+		
 		/*
 		 * Returns whether event.preventDefault() was ever called on this event object.
 		 * @since 1.3
 		*/
-		public function isDefaultPrevented():Boolean {
+		public function isDefaultPrevented():Boolean
+		{
 			return false;
 		}
-
+		
 		/*
 		 * Returns whether event.stopImmediatePropagation() was ever called on this event object.
 		 * @since 1.3
 		*/
-		public function isImmediatePropagationStopped():Boolean {
+		public function isImmediatePropagationStopped():Boolean
+		{
 			return false;
 		}
-
+		
 		/*
 		 * Returns whether event.stopPropagation() was ever called on this event object.
 		 * @since 1.3
 		*/
-		public function isPropagationStopped():Boolean {
+		public function isPropagationStopped():Boolean
+		{
 			return false;
 		}
-
+		
 		/*
 		 * If this method is called, the default action of the event will not be triggered.
 		 * @since 1.0
 		*/
-		public function preventDefault():void {
+		public function preventDefault():void
+		{
 		}
-
+		
 		/*
 		 * Keeps the rest of the handlers from being executed and prevents the event from bubbling up the DOM tree.
 		 * @since 1.3
 		*/
-		public function stopImmediatePropagation():void {
+		public function stopImmediatePropagation():void
+		{
 		}
-
+		
 		/*
 		 * Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.
 		 * @since 1.0
 		*/
-		public function stopPropagation():void {
+		public function stopPropagation():void
+		{
 		}
 	}
 }

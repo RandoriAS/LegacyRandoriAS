@@ -40,6 +40,10 @@ namespace ConsoleApplication1
 
             List<string> entries = ReadSourceDirectory();
             entries.ForEach(e => Entry2Class(e));
+
+            var classDefPromise = ClassLookup["Promise"];
+            var classDefDeferred = ClassLookup["Deferred"];
+            AddMethodsToPromise(classDefPromise, classDefDeferred);
             
             foreach(var key in ClassLookup.Keys)
             {
@@ -50,6 +54,27 @@ namespace ConsoleApplication1
             Console.WriteLine("Finished, press any key...");
             Console.ReadKey();
 
+        }
+
+        private static void AddMethodsToPromise(ClassDef classDefPromise, ClassDef classDefDeferred)
+        {
+            List<String> methodNames = new List<string>();
+            methodNames.Add("then");
+            methodNames.Add("done");
+            methodNames.Add("fail");
+            methodNames.Add("always");
+            methodNames.Add("pipe");
+            methodNames.Add("progress");
+            methodNames.Add("state");
+            foreach (var name in methodNames)
+            {
+                CopyMethod(name, classDefPromise, classDefDeferred);
+            }
+        }
+
+        private static void CopyMethod(string name, ClassDef destination, ClassDef source)
+        {
+            destination.methods.AddRange(source.GetMethodWithNameLike(name));
         }
 
         private static void AddImports(ClassDef classDef)
