@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using ConsoleApplication1.output;
@@ -133,12 +134,12 @@ namespace ConsoleApplication1
             var xdoc = XDocument.Load(ArgumentPath);
             if ((xdoc.Root.Attribute("type") != null) && (xdoc.Root.Attribute("type").Value == "PlainObject"))
             {
-                return CreatePlainObjectClass(FileName, xdoc);
+                return CreateArgumentObjectClass(FileName, xdoc);
             }
             return null;
         }
 
-        private static ClassDef CreatePlainObjectClass(string RawClassName, XDocument xdoc)
+        private static ClassDef CreateArgumentObjectClass(string RawClassName, XDocument xdoc)
         {
             var classDef = new ClassDef() { name = new ClassNameDef() { ActionScriptName = FormatHypenedName(RawClassName), Extends = "Argument" } };
             classDef.attributes.Add("export", "false");
@@ -259,6 +260,10 @@ namespace ConsoleApplication1
             {
                 var name = TranslateName(Elm.Attribute("name").Value);
                 var type = TranslateType(Elm.Attribute("return").Value);
+                if ((type == "Object") && (Elm.Elements("property").Count() > 0))
+                {
+                    type = CreateTypedObjectForPlainObject(name, Elm);
+                }
                 var desc = Elm.Element("desc").Value.Trim();
                 if (name.IndexOf('.') > -1)
                 {
@@ -268,6 +273,41 @@ namespace ConsoleApplication1
                 int index = 0;
                 Elm.Elements("signature").ToList<XElement>().ForEach(e => CreateProperty(desc, CurrentClass, type, name, cnt, ++index, e));
             }
+        }
+
+        private static string CreateTypedObjectForPlainObject(string name, XElement Elm)
+        {
+            var propertyElms = Elm.Elements("property");
+            var classDef = new ClassDef() { name = new ClassNameDef() { ActionScriptName = CapitalizeName(name) + "Object" } };
+            if (ClassLookup.ContainsKey(classDef.name.ActionScriptName))
+            {
+                throw new Exception("Class name already exists: " + classDef.name.ActionScriptName);
+            }
+            ClassLookup[classDef.name.ActionScriptName] = classDef;
+            foreach (var prop in propertyElms)
+            {
+                classDef.members.Add(AddProperty(prop));
+            }
+            return classDef.name.ActionScriptName;
+        }
+
+        private static MemberDef AddProperty(XElement Elm)
+        {
+            var member = new MemberDef();
+            member.name = Elm.Attribute("name").Value;
+            member.type = TranslateType(Elm.Attribute("type").Value);
+            if (member.type == "PlainObject")
+            {
+                member.type = "Object";
+            }
+            member.comments.AddRange(SplitCommentLines(Elm.Element("desc").Value));
+            return member;
+        }
+
+        private static List<string> SplitCommentLines(string comment)
+        {
+            var lines = Regex.Split(comment, "[\r\n]+");
+            return lines.ToList<String>();
         }
 
         private static string TranslateClassName(string name)
@@ -370,7 +410,7 @@ namespace ConsoleApplication1
                 name += index.ToString();
             }
             var property = new MemberDef() { name = name, type = type };
-            property.comments.Add(description);
+            property.comments.AddRange(SplitCommentLines(description));
             property.comments.Add("@since " + since);
             CurrentClass.members.Add(property);
         }
@@ -404,7 +444,7 @@ namespace ConsoleApplication1
                 name += index.ToString();
             }
             var method = new MethodDef() { name = name, type = type };
-            method.comments.Add(description);
+            method.comments.AddRange(SplitCommentLines(description));
             method.comments.Add("@since " + since);
             method.parameters = elm.Elements("argument").ToList<XElement>().ConvertAll(e => CreateParameter(e)).ToList<ParamDef>();
             if (name != originalName)
@@ -429,6 +469,10 @@ namespace ConsoleApplication1
                 type = elm.Attribute("type").Value;
             }
             type = TranslateType(type, true);
+            if ((type == "PlainObject") && (elm.Elements("property").Count() > 0))
+            {
+                type = CreateTypedObjectForPlainObject(name, elm);
+            }
             var desc = elm.Element("desc").Value.Trim();
             if (type == "Function")
             {
@@ -444,7 +488,7 @@ namespace ConsoleApplication1
             }
             
             var param = new ParamDef() { name=name,type=type,isOptional=optional};
-            param.comments.Add(desc);
+            param.comments.AddRange(SplitCommentLines(desc));
             return param;
         }
 

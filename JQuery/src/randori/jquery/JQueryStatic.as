@@ -70,7 +70,7 @@ package randori.jquery
 		 * @since 1.0
 		 * @param settings A set of key/value pairs that configure the Ajax request. All settings are optional. A default can be set for any option with $.ajaxSetup().
 		*/
-		public static function ajax2(settings:Object=null):XMLHttpRequest
+		public static function ajax2(settings:SettingsObject=null):XMLHttpRequest
 		{
 			return null;
 		}
