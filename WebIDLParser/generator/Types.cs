@@ -1109,7 +1109,7 @@ namespace WebIDLParser
             var rType = resultType.ToString();
 
             var sName = Generator.getName(name);
-            if (sName.StartsWith("$"))
+            if (sName.EndsWith("_"))
             {
                 aliasName = name;
             }
