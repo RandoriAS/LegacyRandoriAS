@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<actionScriptProperties analytics="false" mainApplicationPath="HTMLCoreLib.as" projectUUID="95d05d3b-e7ab-47cb-97a4-1d099e1e5f9b" version="10">
+<actionScriptProperties analytics="false" mainApplicationPath="JQuery.as" projectUUID="18d48ad3-a8b6-484e-853a-0c88feb3cf49" version="10">
   <compiler additionalCompilerArguments="-locale en_US" autoRSLOrdering="true" copyDependentFiles="false" fteInMXComponents="false" generateAccessible="false" htmlExpressInstall="true" htmlGenerate="false" htmlHistoryManagement="false" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin" removeUnusedRSL="true" sourceFolderPath="src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
     <compilerSourcePath/>
     <libraryPath defaultLinkType="0">
@@ -76,7 +76,7 @@
     <sourceAttachmentPath/>
   </compiler>
   <applications>
-    <application path="HTMLCoreLib.as"/>
+    <application path="JQuery.as"/>
   </applications>
   <modules/>
   <buildCSSFiles/>
