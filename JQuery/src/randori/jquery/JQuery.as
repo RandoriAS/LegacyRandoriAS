@@ -104,7 +104,7 @@ package randori.jquery
 		 * @since 1.8
 		 * @param selector A string containing a selector expression to match the current set of elements against.
 		*/
-		public function addBack(selector:String):JQuery
+		public function addBack(selector:String=''):JQuery
 		{
 			return null;
 		}
@@ -135,7 +135,7 @@ package randori.jquery
 		 * @param content HTML string, DOM element, or jQuery object to insert after each element in the set of matched elements.
 		 * @param content One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert after each element in the set of matched elements.
 		*/
-		public function after1(content:*, content:*):JQuery
+		public function after1(content:*, content:*=null):JQuery
 		{
 			return null;
 		}
@@ -245,7 +245,7 @@ package randori.jquery
 		 * @param content DOM element, HTML string, or jQuery object to insert at the end of each element in the set of matched elements.
 		 * @param content One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert at the end of each element in the set of matched elements.
 		*/
-		public function append1(content:*, content:*):JQuery
+		public function append1(content:*, content:*=null):JQuery
 		{
 			return null;
 		}
@@ -276,7 +276,7 @@ package randori.jquery
 		 * @param content HTML string, DOM element, or jQuery object to insert before each element in the set of matched elements.
 		 * @param content One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert before each element in the set of matched elements.
 		*/
-		public function before1(content:*, content:*):JQuery
+		public function before1(content:*, content:*=null):JQuery
 		{
 			return null;
 		}
@@ -298,7 +298,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function bind1(eventType:String, eventData:Object, handler:Function):JQuery
+		public function bind1(eventType:String, eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -310,7 +310,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param preventBubble Setting the third argument to false will attach a function that prevents the default action from occurring and stops the event from bubbling. The default is true.
 		*/
-		public function bind2(eventType:String, eventData:Object, preventBubble:Boolean):JQuery
+		public function bind2(eventType:String, eventData:Object=null, preventBubble:Boolean):JQuery
 		{
 			return null;
 		}
@@ -341,7 +341,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function blur2(eventData:Object, handler:Function):JQuery
+		public function blur2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -371,7 +371,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function change2(eventData:Object, handler:Function):JQuery
+		public function change2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -390,7 +390,7 @@ package randori.jquery
 		 * @since 1.0
 		 * @param selector A string containing a selector expression to match elements against.
 		*/
-		public function children(selector:String):JQuery
+		public function children(selector:String=''):JQuery
 		{
 			return null;
 		}
@@ -400,7 +400,7 @@ package randori.jquery
 		 * @since 1.4
 		 * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.
 		*/
-		public function clearQueue(queueName:String):JQuery
+		public function clearQueue(queueName:String=''):JQuery
 		{
 			return null;
 		}
@@ -421,7 +421,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function click2(eventData:Object, handler:Function):JQuery
+		public function click2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -440,7 +440,7 @@ package randori.jquery
 		 * @since 1.0
 		 * @param withDataAndEvents A Boolean indicating whether event handlers should be copied along with the elements. As of jQuery 1.4, element data will be copied as well.
 		*/
-		public function clone1(withDataAndEvents:Boolean):JQuery
+		public function clone1(withDataAndEvents:Boolean=false):JQuery
 		{
 			return null;
 		}
@@ -451,7 +451,7 @@ package randori.jquery
 		 * @param withDataAndEvents A Boolean indicating whether event handlers and data should be copied along with the elements. The default value is false. *In jQuery 1.5.0 the default value was incorrectly true; it was changed back to false in 1.5.1 and up.
 		 * @param deepWithDataAndEvents A Boolean indicating whether event handlers and data for all children of the cloned element should be copied. By default its value matches the first argument's value (which defaults to false).
 		*/
-		public function clone2(withDataAndEvents:Boolean, deepWithDataAndEvents:Boolean):JQuery
+		public function clone2(withDataAndEvents:Boolean=false, deepWithDataAndEvents:Boolean=false):JQuery
 		{
 			return null;
 		}
@@ -481,7 +481,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function dblclick2(eventData:Object, handler:Function):JQuery
+		public function dblclick2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -501,7 +501,7 @@ package randori.jquery
 		 * @param duration An integer indicating the number of milliseconds to delay execution of the next item in the queue.
 		 * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.
 		*/
-		public function delay(duration:int, queueName:String):JQuery
+		public function delay(duration:int, queueName:String=''):JQuery
 		{
 			return null;
 		}
@@ -547,7 +547,7 @@ package randori.jquery
 		 * @since 1.2
 		 * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.
 		*/
-		public function dequeue(queueName:String):JQuery
+		public function dequeue(queueName:String=''):JQuery
 		{
 			return null;
 		}
@@ -557,7 +557,7 @@ package randori.jquery
 		 * @since 1.4
 		 * @param selector A selector expression that filters the set of matched elements to be removed.
 		*/
-		public function detach(selector:String):JQuery
+		public function detach(selector:String=''):JQuery
 		{
 			return null;
 		}
@@ -577,7 +577,7 @@ package randori.jquery
 		 * @param eventType A string containing a JavaScript event type, such as click or keydown.
 		 * @param handler The function that is no longer to be executed.
 		*/
-		public function die2(eventType:String, handler:String):JQuery
+		public function die2(eventType:String, handler:String=''):JQuery
 		{
 			return null;
 		}
@@ -656,7 +656,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function error2(eventData:Object, handler:Function):JQuery
+		public function error2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -722,7 +722,7 @@ package randori.jquery
 		 * @param opacity A number between 0 and 1 denoting the target opacity.
 		 * @param handler A function to call once the animation is complete.
 		*/
-		public function fadeTo1(duration:*, opacity:Number, handler:Function):JQuery
+		public function fadeTo1(duration:*, opacity:Number, handler:Function=null):JQuery
 		{
 			return null;
 		}
@@ -735,7 +735,7 @@ package randori.jquery
 		 * @param easing A string indicating which easing function to use for the transition.
 		 * @param handler A function to call once the animation is complete.
 		*/
-		public function fadeTo2(duration:*, opacity:Number, easing:String, handler:Function):JQuery
+		public function fadeTo2(duration:*, opacity:Number, easing:String='', handler:Function=null):JQuery
 		{
 			return null;
 		}
@@ -833,7 +833,7 @@ package randori.jquery
 		 * @since 1.9
 		 * @param queue The name of the queue in which to stop animations.
 		*/
-		public function finish(queue:String):JQuery
+		public function finish(queue:String=''):JQuery
 		{
 			return null;
 		}
@@ -863,7 +863,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function focus2(eventData:Object, handler:Function):JQuery
+		public function focus2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -893,7 +893,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function focusin2(eventData:Object, handler:Function):JQuery
+		public function focusin2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -914,7 +914,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function focusout2(eventData:Object, handler:Function):JQuery
+		public function focusout2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -925,7 +925,7 @@ package randori.jquery
 		 * @return Either of these types: Element, Array
 		 * @param index A zero-based integer indicating which element to retrieve.
 		*/
-		public function get(index:Number):*
+		public function get(index:Number=null):*
 		{
 			return null;
 		}
@@ -1119,7 +1119,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function keydown2(eventData:Object, handler:Function):JQuery
+		public function keydown2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1149,7 +1149,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function keypress2(eventData:Object, handler:Function):JQuery
+		public function keypress2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1179,7 +1179,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function keyup2(eventData:Object, handler:Function):JQuery
+		public function keyup2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1251,7 +1251,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function load2(eventData:Object, handler:Function):JQuery
+		public function load2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1263,7 +1263,7 @@ package randori.jquery
 		 * @param data A plain object or string that is sent to the server with the request.
 		 * @param handler A callback function that is executed when the request completes.
 		*/
-		public function load(url:String, data:*, handler:Function):JQuery
+		public function load(url:String, data:*=null, handler:Function=null):JQuery
 		{
 			return null;
 		}
@@ -1294,7 +1294,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mousedown2(eventData:Object, handler:Function):JQuery
+		public function mousedown2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1324,7 +1324,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseenter2(eventData:Object, handler:Function):JQuery
+		public function mouseenter2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1354,7 +1354,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseleave2(eventData:Object, handler:Function):JQuery
+		public function mouseleave2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1384,7 +1384,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mousemove2(eventData:Object, handler:Function):JQuery
+		public function mousemove2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1414,7 +1414,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseout2(eventData:Object, handler:Function):JQuery
+		public function mouseout2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1444,7 +1444,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseover2(eventData:Object, handler:Function):JQuery
+		public function mouseover2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1474,7 +1474,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseup2(eventData:Object, handler:Function):JQuery
+		public function mouseup2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1493,7 +1493,7 @@ package randori.jquery
 		 * @since 1.0
 		 * @param selector A string containing a selector expression to match elements against.
 		*/
-		public function next(selector:String):JQuery
+		public function next(selector:String=''):JQuery
 		{
 			return null;
 		}
@@ -1503,7 +1503,7 @@ package randori.jquery
 		 * @since 1.2
 		 * @param selector A string containing a selector expression to match elements against.
 		*/
-		public function nextAll(selector:String):JQuery
+		public function nextAll(selector:String=''):JQuery
 		{
 			return null;
 		}
@@ -1514,7 +1514,7 @@ package randori.jquery
 		 * @param selector A string containing a selector expression to indicate where to stop matching following sibling elements.
 		 * @param filter A string containing a selector expression to match elements against.
 		*/
-		public function nextUntil1(selector:String, filter:String):JQuery
+		public function nextUntil1(selector:String='', filter:String=''):JQuery
 		{
 			return null;
 		}
@@ -1525,7 +1525,7 @@ package randori.jquery
 		 * @param element A DOM node or jQuery object indicating where to stop matching following sibling elements.
 		 * @param filter A string containing a selector expression to match elements against.
 		*/
-		public function nextUntil2(element:Element, filter:String):JQuery
+		public function nextUntil2(element:Element=null, filter:String=''):JQuery
 		{
 			return null;
 		}
@@ -1577,7 +1577,7 @@ package randori.jquery
 		 * @param selector A selector which should match the one originally passed to .on() when attaching event handlers.
 		 * @param handler A handler function previously attached for the event(s), or the special value false. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function off1(events:String, selector:String, handler:Function):JQuery
+		public function off1(events:String, selector:String='', handler:Function=null):JQuery
 		{
 			return null;
 		}
@@ -1588,7 +1588,7 @@ package randori.jquery
 		 * @param events An object where the string keys represent one or more space-separated event types and optional namespaces, and the values represent handler functions previously attached for the event(s).
 		 * @param selector A selector which should match the one originally passed to .on() when attaching event handlers.
 		*/
-		public function off2(events:Object, selector:String):JQuery
+		public function off2(events:Object, selector:String=''):JQuery
 		{
 			return null;
 		}
@@ -1610,7 +1610,7 @@ package randori.jquery
 		 * @param data Data to be passed to the handler in event.data when an event is triggered.
 		 * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function on1(events:String, selector:String, data:*, handler:Function):JQuery
+		public function on1(events:String, selector:String='', data:*=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1622,7 +1622,7 @@ package randori.jquery
 		 * @param selector A selector string to filter the descendants of the selected elements that will call the handler. If the selector is null or omitted, the handler is always called when it reaches the selected element.
 		 * @param data Data to be passed to the handler in event.data when an event occurs.
 		*/
-		public function on2(events:Object, selector:String, data:*):JQuery
+		public function on2(events:Object, selector:String='', data:*=null):JQuery
 		{
 			return null;
 		}
@@ -1634,7 +1634,7 @@ package randori.jquery
 		 * @param data An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute at the time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function one1(events:String, data:Object, handler:Function):JQuery
+		public function one1(events:String, data:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1647,7 +1647,7 @@ package randori.jquery
 		 * @param data Data to be passed to the handler in event.data when an event is triggered.
 		 * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function one2(events:String, selector:String, data:*, handler:Function):JQuery
+		public function one2(events:String, selector:String='', data:*=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1659,7 +1659,7 @@ package randori.jquery
 		 * @param selector A selector string to filter the descendants of the selected elements that will call the handler. If the selector is null or omitted, the handler is always called when it reaches the selected element.
 		 * @param data Data to be passed to the handler in event.data when an event occurs.
 		*/
-		public function one3(events:Object, selector:String, data:*):JQuery
+		public function one3(events:Object, selector:String='', data:*=null):JQuery
 		{
 			return null;
 		}
@@ -1669,7 +1669,7 @@ package randori.jquery
 		 * @since 1.2.6
 		 * @param includeMargin A Boolean indicating whether to include the element's margin in the calculation.
 		*/
-		public function outerHeight(includeMargin:Boolean):int
+		public function outerHeight(includeMargin:Boolean=false):int
 		{
 			return null;
 		}
@@ -1679,7 +1679,7 @@ package randori.jquery
 		 * @since 1.2.6
 		 * @param includeMargin A Boolean indicating whether to include the element's margin in the calculation.
 		*/
-		public function outerWidth(includeMargin:Boolean):int
+		public function outerWidth(includeMargin:Boolean=false):int
 		{
 			return null;
 		}
@@ -1689,7 +1689,7 @@ package randori.jquery
 		 * @since 1.0
 		 * @param selector A string containing a selector expression to match elements against.
 		*/
-		public function parent(selector:String):JQuery
+		public function parent(selector:String=''):JQuery
 		{
 			return null;
 		}
@@ -1699,7 +1699,7 @@ package randori.jquery
 		 * @since 1.0
 		 * @param selector A string containing a selector expression to match elements against.
 		*/
-		public function parents(selector:String):JQuery
+		public function parents(selector:String=''):JQuery
 		{
 			return null;
 		}
@@ -1710,7 +1710,7 @@ package randori.jquery
 		 * @param selector A string containing a selector expression to indicate where to stop matching ancestor elements.
 		 * @param filter A string containing a selector expression to match elements against.
 		*/
-		public function parentsUntil1(selector:String, filter:String):JQuery
+		public function parentsUntil1(selector:String='', filter:String=''):JQuery
 		{
 			return null;
 		}
@@ -1721,7 +1721,7 @@ package randori.jquery
 		 * @param element A DOM node or jQuery object indicating where to stop matching ancestor elements.
 		 * @param filter A string containing a selector expression to match elements against.
 		*/
-		public function parentsUntil2(element:Element, filter:String):JQuery
+		public function parentsUntil2(element:Element=null, filter:String=''):JQuery
 		{
 			return null;
 		}
@@ -1741,7 +1741,7 @@ package randori.jquery
 		 * @param content DOM element, array of elements, HTML string, or jQuery object to insert at the beginning of each element in the set of matched elements.
 		 * @param content One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert at the beginning of each element in the set of matched elements.
 		*/
-		public function prepend1(content:*, content:*):JQuery
+		public function prepend1(content:*, content:*=null):JQuery
 		{
 			return null;
 		}
@@ -1771,7 +1771,7 @@ package randori.jquery
 		 * @since 1.0
 		 * @param selector A string containing a selector expression to match elements against.
 		*/
-		public function prev(selector:String):JQuery
+		public function prev(selector:String=''):JQuery
 		{
 			return null;
 		}
@@ -1781,7 +1781,7 @@ package randori.jquery
 		 * @since 1.2
 		 * @param selector A string containing a selector expression to match elements against.
 		*/
-		public function prevAll(selector:String):JQuery
+		public function prevAll(selector:String=''):JQuery
 		{
 			return null;
 		}
@@ -1792,7 +1792,7 @@ package randori.jquery
 		 * @param selector A string containing a selector expression to indicate where to stop matching preceding sibling elements.
 		 * @param filter A string containing a selector expression to match elements against.
 		*/
-		public function prevUntil1(selector:String, filter:String):JQuery
+		public function prevUntil1(selector:String='', filter:String=''):JQuery
 		{
 			return null;
 		}
@@ -1803,7 +1803,7 @@ package randori.jquery
 		 * @param element A DOM node or jQuery object indicating where to stop matching preceding sibling elements.
 		 * @param filter A string containing a selector expression to match elements against.
 		*/
-		public function prevUntil2(element:Element, filter:String):JQuery
+		public function prevUntil2(element:Element=null, filter:String=''):JQuery
 		{
 			return null;
 		}
@@ -1845,7 +1845,7 @@ package randori.jquery
 		 * @since 1.0
 		 * @param selector A selector expression that filters the set of matched elements to be removed.
 		*/
-		public function remove(selector:String):JQuery
+		public function remove(selector:String=''):JQuery
 		{
 			return null;
 		}
@@ -1865,7 +1865,7 @@ package randori.jquery
 		 * @since 1.0
 		 * @param className One or more space-separated classes to be removed from the class attribute of each matched element.
 		*/
-		public function removeClass1(className:String):JQuery
+		public function removeClass1(className:String=''):JQuery
 		{
 			return null;
 		}
@@ -1885,7 +1885,7 @@ package randori.jquery
 		 * @since 1.2.3
 		 * @param name A string naming the piece of data to delete.
 		*/
-		public function removeData1(name:String):JQuery
+		public function removeData1(name:String=''):JQuery
 		{
 			return null;
 		}
@@ -1895,7 +1895,7 @@ package randori.jquery
 		 * @since 1.7
 		 * @param list An array or space-separated string naming the pieces of data to delete.
 		*/
-		public function removeData2(list:*):JQuery
+		public function removeData2(list:*=null):JQuery
 		{
 			return null;
 		}
@@ -1956,7 +1956,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function resize2(eventData:Object, handler:Function):JQuery
+		public function resize2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -1986,7 +1986,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function scroll2(eventData:Object, handler:Function):JQuery
+		public function scroll2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -2016,7 +2016,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function select2(eventData:Object, handler:Function):JQuery
+		public function select2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -2089,7 +2089,7 @@ package randori.jquery
 		 * @since 1.0
 		 * @param selector A string containing a selector expression to match elements against.
 		*/
-		public function siblings(selector:String):JQuery
+		public function siblings(selector:String=''):JQuery
 		{
 			return null;
 		}
@@ -2109,7 +2109,7 @@ package randori.jquery
 		 * @param start An integer indicating the 0-based position at which the elements begin to be selected. If negative, it indicates an offset from the end of the set.
 		 * @param end An integer indicating the 0-based position at which the elements stop being selected. If negative, it indicates an offset from the end of the set. If omitted, the range continues until the end of the set.
 		*/
-		public function slice(start:int, end:int):JQuery
+		public function slice(start:int, end:int=null):JQuery
 		{
 			return null;
 		}
@@ -2201,7 +2201,7 @@ package randori.jquery
 		 * @param clearQueue A Boolean indicating whether to remove queued animation as well. Defaults to false.
 		 * @param jumpToEnd A Boolean indicating whether to complete the current animation immediately. Defaults to false.
 		*/
-		public function stop1(clearQueue:Boolean, jumpToEnd:Boolean):JQuery
+		public function stop1(clearQueue:Boolean=false, jumpToEnd:Boolean=false):JQuery
 		{
 			return null;
 		}
@@ -2213,7 +2213,7 @@ package randori.jquery
 		 * @param clearQueue A Boolean indicating whether to remove queued animation as well. Defaults to false.
 		 * @param jumpToEnd A Boolean indicating whether to complete the current animation immediately. Defaults to false.
 		*/
-		public function stop2(queue:String, clearQueue:Boolean, jumpToEnd:Boolean):JQuery
+		public function stop2(queue:String='', clearQueue:Boolean=false, jumpToEnd:Boolean=false):JQuery
 		{
 			return null;
 		}
@@ -2234,7 +2234,7 @@ package randori.jquery
 		 * @param eventData An object containing data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function submit2(eventData:Object, handler:Function):JQuery
+		public function submit2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}
@@ -2264,7 +2264,7 @@ package randori.jquery
 		 * @param handler A function to execute every odd time the element is clicked. (The method requires to have the following signature: handler(eventObject))
 		 * @param handler Additional handlers to cycle through after clicks. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function toggle(handler:Function, handler:Function, handler:Function):JQuery
+		public function toggle(handler:Function, handler:Function, handler:Function=null):JQuery
 		{
 			return null;
 		}
@@ -2332,7 +2332,7 @@ package randori.jquery
 		 * @since 1.4
 		 * @param switch_ A boolean value to determine whether the class should be added or removed.
 		*/
-		public function toggleClass3(switch_:Boolean):JQuery
+		public function toggleClass3(switch_:Boolean=false):JQuery
 		{
 			return null;
 		}
@@ -2343,7 +2343,7 @@ package randori.jquery
 		 * @param handler A function that returns class names to be toggled in the class attribute of each element in the matched set. Receives the index position of the element in the set, the old class value, and the switch as arguments.
 		 * @param switch_ A boolean value to determine whether the class should be added or removed.
 		*/
-		public function toggleClass4(handler:Function, switch_:Boolean):JQuery
+		public function toggleClass4(handler:Function, switch_:Boolean=false):JQuery
 		{
 			return null;
 		}
@@ -2354,7 +2354,7 @@ package randori.jquery
 		 * @param eventType A string containing a JavaScript event type, such as click or submit.
 		 * @param extraParameters Additional parameters to pass along to the event handler.
 		*/
-		public function trigger1(eventType:String, extraParameters:*):JQuery
+		public function trigger1(eventType:String, extraParameters:*=null):JQuery
 		{
 			return null;
 		}
@@ -2375,7 +2375,7 @@ package randori.jquery
 		 * @param eventType A string containing a JavaScript event type, such as click or submit.
 		 * @param extraParameters An array of additional parameters to pass along to the event handler.
 		*/
-		public function triggerHandler(eventType:String, extraParameters:Array):Object
+		public function triggerHandler(eventType:String, extraParameters:Array=null):Object
 		{
 			return null;
 		}
@@ -2386,7 +2386,7 @@ package randori.jquery
 		 * @param eventType A string containing a JavaScript event type, such as click or submit.
 		 * @param handler The function that is to be no longer executed. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function unbind1(eventType:String, handler:Function):JQuery
+		public function unbind1(eventType:String='', handler:Function=null):JQuery
 		{
 			return null;
 		}
@@ -2481,7 +2481,7 @@ package randori.jquery
 		 * @param eventData A plain object of data that will be passed to the event handler.
 		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function unload2(eventData:Object, handler:Function):JQuery
+		public function unload2(eventData:Object=null, handler:Function):JQuery
 		{
 			return null;
 		}

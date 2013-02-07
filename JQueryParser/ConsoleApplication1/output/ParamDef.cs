@@ -13,6 +13,10 @@ namespace ConsoleApplication1.output
         new public void Serialize(StringBuilder sb)
         {
             sb.Append(name + ":" + type);
+            if (isOptional)
+            {
+                sb.Append("=" + MethodDef.GenerateDefaultReturn(type));
+            }
         }
     }
 }

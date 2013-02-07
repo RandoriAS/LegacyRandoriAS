@@ -60,7 +60,7 @@ package randori.jquery
 		 * @param url A string containing the URL to which the request is sent.
 		 * @param settings A set of key/value pairs that configure the Ajax request. All settings are optional. A default can be set for any option with $.ajaxSetup(). See jQuery.ajax( settings ) below for a complete list of all settings.
 		*/
-		public static function ajax1(url:String, settings:Object):XMLHttpRequest
+		public static function ajax1(url:String, settings:Object=null):XMLHttpRequest
 		{
 			return null;
 		}
@@ -70,7 +70,7 @@ package randori.jquery
 		 * @since 1.0
 		 * @param settings A set of key/value pairs that configure the Ajax request. All settings are optional. A default can be set for any option with $.ajaxSetup().
 		*/
-		public static function ajax2(settings:Object):XMLHttpRequest
+		public static function ajax2(settings:Object=null):XMLHttpRequest
 		{
 			return null;
 		}
@@ -81,7 +81,7 @@ package randori.jquery
 		 * @param dataTypes An optional string containing one or more space-separated dataTypes
 		 * @param handler A handler to set default values for future Ajax requests.
 		*/
-		public static function ajaxPrefilter(dataTypes:String, handler:Function):void
+		public static function ajaxPrefilter(dataTypes:String='', handler:Function):void
 		{
 		}
 		
@@ -130,7 +130,7 @@ package randori.jquery
 		 * @since 1.5
 		 * @param handler A function that is called just before the constructor returns.
 		*/
-		public static function deferred(handler:Function):Deferred
+		public static function deferred(handler:Function=null):Deferred
 		{
 			return null;
 		}
@@ -141,7 +141,7 @@ package randori.jquery
 		 * @param element A DOM element from which to remove and execute a queued function.
 		 * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.
 		*/
-		public static function dequeue(element:Element, queueName:String):void
+		public static function dequeue(element:Element, queueName:String=''):void
 		{
 		}
 		
@@ -172,7 +172,7 @@ package randori.jquery
 		 * @param object1 An object containing additional properties to merge in.
 		 * @param objectN Additional objects containing properties to merge in.
 		*/
-		public static function extend1(target:Object, object1:Object, objectN:Object):Object
+		public static function extend1(target:Object, object1:Object=null, objectN:Object=null):Object
 		{
 			return null;
 		}
@@ -185,7 +185,7 @@ package randori.jquery
 		 * @param object1 An object containing additional properties to merge in.
 		 * @param objectN Additional objects containing properties to merge in.
 		*/
-		public static function extend2(deep:Boolean, target:Object, object1:Object, objectN:Object):Object
+		public static function extend2(deep:Boolean=false, target:Object, object1:Object, objectN:Object=null):Object
 		{
 			return null;
 		}
@@ -198,7 +198,7 @@ package randori.jquery
 		 * @param handler A callback function that is executed if the request succeeds.
 		 * @param dataType The type of data expected from the server. Default: Intelligent Guess (xml, json, script, or html).
 		*/
-		public static function get(url:String, data:*, handler:Function, dataType:String):XMLHttpRequest
+		public static function get(url:String, data:*=null, handler:Function=null, dataType:String=''):XMLHttpRequest
 		{
 			return null;
 		}
@@ -210,7 +210,7 @@ package randori.jquery
 		 * @param data A plain object or string that is sent to the server with the request.
 		 * @param handler A callback function that is executed if the request succeeds.
 		*/
-		public static function getJSON(url:String, data:Object, handler:Function):XMLHttpRequest
+		public static function getJSON(url:String, data:Object=null, handler:Function=null):XMLHttpRequest
 		{
 			return null;
 		}
@@ -221,7 +221,7 @@ package randori.jquery
 		 * @param url A string containing the URL to which the request is sent.
 		 * @param handler A callback function that is executed if the request succeeds.
 		*/
-		public static function getScript(url:String, handler:Function):XMLHttpRequest
+		public static function getScript(url:String, handler:Function=null):XMLHttpRequest
 		{
 			return null;
 		}
@@ -242,7 +242,7 @@ package randori.jquery
 		 * @param handler The function to process each item against.  The first argument to the function is the item, and the second argument is the index.  The function should return a Boolean value.  this will be the global window object.
 		 * @param invert If "invert" is false, or not provided, then the function returns an array consisting of all elements for which "callback" returns true.  If "invert" is true, then the function returns an array consisting of all elements for which "callback" returns false.
 		*/
-		public static function grep(array:Array, handler:Function, invert:Boolean):Array
+		public static function grep(array:Array, handler:Function, invert:Boolean=false):Array
 		{
 			return null;
 		}
@@ -273,7 +273,7 @@ package randori.jquery
 		 * @param array An array through which to search.
 		 * @param fromIndex The index of the array at which to begin the search. The default is 0, which will search the whole array.
 		*/
-		public static function inArray(value:*, array:Array, fromIndex:Number):Number
+		public static function inArray(value:*, array:Array, fromIndex:Number=null):Number
 		{
 			return null;
 		}
@@ -396,7 +396,7 @@ package randori.jquery
 		 * @since 1.0
 		 * @param removeAll A Boolean indicating whether to remove all jQuery variables from the global scope (including jQuery itself).
 		*/
-		public static function noConflict(removeAll:Boolean):Object
+		public static function noConflict(removeAll:Boolean=false):Object
 		{
 			return null;
 		}
@@ -446,7 +446,7 @@ package randori.jquery
 		 * @param context DOM element to serve as the context in which the HTML fragment will be created
 		 * @param keepScripts A Boolean indicating whether to include scripts passed in the HTML string
 		*/
-		public static function parseHTML(data:String, context:Element, keepScripts:Boolean):Array
+		public static function parseHTML(data:String, context:Element=null, keepScripts:Boolean=false):Array
 		{
 			return null;
 		}
@@ -479,7 +479,7 @@ package randori.jquery
 		 * @param handler A callback function that is executed if the request succeeds.
 		 * @param dataType The type of data expected from the server. Default: Intelligent Guess (xml, json, script, text, html).
 		*/
-		public static function post(url:String, data:*, handler:Function, dataType:String):XMLHttpRequest
+		public static function post(url:String, data:*=null, handler:Function=null, dataType:String=''):XMLHttpRequest
 		{
 			return null;
 		}
@@ -513,7 +513,7 @@ package randori.jquery
 		 * @param context The object to which the context (this) of the function should be set.
 		 * @param additionalArguments Any number of arguments to be passed to the function referenced in the function argument.
 		*/
-		public static function proxy3(handler:Function, context:Object, additionalArguments:*):Function
+		public static function proxy3(handler:Function, context:Object, additionalArguments:*=null):Function
 		{
 			return null;
 		}
@@ -525,7 +525,7 @@ package randori.jquery
 		 * @param name The name of the function whose context will be changed (should be a property of the context object).
 		 * @param additionalArguments Any number of arguments to be passed to the function named in the name argument.
 		*/
-		public static function proxy4(context:Object, name:String, additionalArguments:*):Function
+		public static function proxy4(context:Object, name:String, additionalArguments:*=null):Function
 		{
 			return null;
 		}
@@ -536,7 +536,7 @@ package randori.jquery
 		 * @param element A DOM element from which to remove data.
 		 * @param name A string naming the piece of data to remove.
 		*/
-		public static function removeData(element:Element, name:String):JQuery
+		public static function removeData(element:Element, name:String=''):JQuery
 		{
 			return null;
 		}

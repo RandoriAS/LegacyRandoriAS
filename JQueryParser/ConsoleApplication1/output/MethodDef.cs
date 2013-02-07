@@ -43,7 +43,7 @@ namespace ConsoleApplication1.output
             sb.AppendLine("\t\t}");
         }
 
-        private string GenerateDefaultReturn(string type)
+        public static string GenerateDefaultReturn(string type)
         {
             if (type == "Boolean")
             {
