@@ -66,7 +66,10 @@ namespace NodeJSParser.output
 
         private void SerializeParamComments(StringBuilder sb, ParamDef parameter)
         {
-            sb.AppendLine("\t\t * @param " + parameter.name + " " + parameter.comments[0]);
+            if (parameter.comments.Count() > 0)
+            {
+                sb.AppendLine("\t\t * @param " + parameter.name + " " + parameter.comments[0]);
+            }
         }
 
         private string SerializeParameters()

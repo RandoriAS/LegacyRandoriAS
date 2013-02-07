@@ -9,9 +9,13 @@ bin-release/
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
 /TestMe/
-/WebIDLParser/Properties
 /WebIDLParser/bin
 /WebIDLParser/obj
 /sync_upstream.bat
 
 /add_upstream.bat
+/NodeJSParser/NodeJSParser/bin
+/JQueryParser/ConsoleApplication1/bin
+
+/NodeJSParser/NodeJSParser/obj
+/JQueryParser/ConsoleApplication1/obj

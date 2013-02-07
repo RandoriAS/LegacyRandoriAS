@@ -27,7 +27,7 @@ namespace NodeJSParser.output
 @" * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!" + Environment.NewLine +
 @" * @author Randori Node.js generator" + Environment.NewLine +
 @"*/";
-        public string package = "randori.jquery";
+        public string package = "randori.nodejs";
         public ClassNameDef name { get; set; }
         public string extends { get; set; }
         public List<MemberDef> members { get; set; }
