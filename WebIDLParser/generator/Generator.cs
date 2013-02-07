@@ -143,6 +143,13 @@ namespace WebIDLParser
                     foreach (var t in ns.types)
                     {
                         t.checkGenerateEnumerator();
+                        if (t.name == "Window")
+                        {
+                            foreach (var m in t.members)
+                            {
+                                m.isStatic = true;
+                            }
+                        }
                     }
                 }
             }

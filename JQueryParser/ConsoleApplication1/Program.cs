@@ -49,12 +49,34 @@ namespace ConsoleApplication1
             foreach(var key in ClassLookup.Keys)
             {
                 AddImports(ClassLookup[key]);
+                NormalizeOptionalParameters(ClassLookup[key]);
                 SerializeClass(ClassLookup[key]);
             }
 
             Console.WriteLine("Finished, press any key...");
             Console.ReadKey();
 
+        }
+
+        private static void NormalizeOptionalParameters(ClassDef classDef)
+        {
+            classDef.methods.ForEach(m => CheckOptionalMethodParameters(m.parameters));
+        }
+
+        private static void CheckOptionalMethodParameters(List<ParamDef> parameters)
+        {
+            var startChanging = false;
+            foreach (var parameter in parameters)
+            {
+                if (!startChanging)
+                {
+                    startChanging = parameter.isOptional;
+                }
+                else
+                {
+                    parameter.isOptional = true;
+                }
+            }
         }
 
         private static void AddMethodsToPromise(ClassDef classDefPromise, ClassDef classDefDeferred)
@@ -495,7 +517,6 @@ namespace ConsoleApplication1
         private static string CreatePlainObject(XElement elm)
         {
             XNamespace ns = "http://www.w3.org/2003/XInclude";
-            /*<xi:include href="../includes/duration-argument.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>*/
             var includes = elm.Parent.Elements(ns + "include").ToList<XElement>();
             if (includes.Count() > 0)
             {

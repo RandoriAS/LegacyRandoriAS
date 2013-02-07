@@ -53,7 +53,7 @@ namespace ConsoleApplication1.output
             {
                 return "''";
             }
-            else if ((type == "int") && ((type == "Number")))
+            else if ((type == "int") || ((type == "Number")))
             {
                 return "0";
             }

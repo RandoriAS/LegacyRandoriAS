@@ -81,7 +81,7 @@ package randori.jquery
 		 * @param dataTypes An optional string containing one or more space-separated dataTypes
 		 * @param handler A handler to set default values for future Ajax requests.
 		*/
-		public static function ajaxPrefilter(dataTypes:String='', handler:Function):void
+		public static function ajaxPrefilter(dataTypes:String='', handler:Function=null):void
 		{
 		}
 		
@@ -185,7 +185,7 @@ package randori.jquery
 		 * @param object1 An object containing additional properties to merge in.
 		 * @param objectN Additional objects containing properties to merge in.
 		*/
-		public static function extend2(deep:Boolean=false, target:Object, object1:Object, objectN:Object=null):Object
+		public static function extend2(deep:Boolean=false, target:Object=null, object1:Object=null, objectN:Object=null):Object
 		{
 			return null;
 		}
@@ -273,9 +273,9 @@ package randori.jquery
 		 * @param array An array through which to search.
 		 * @param fromIndex The index of the array at which to begin the search. The default is 0, which will search the whole array.
 		*/
-		public static function inArray(value:*, array:Array, fromIndex:Number=null):Number
+		public static function inArray(value:*, array:Array, fromIndex:Number=0):Number
 		{
-			return null;
+			return 0;
 		}
 		
 		/*
@@ -415,7 +415,7 @@ package randori.jquery
 		*/
 		public static function now():Number
 		{
-			return null;
+			return 0;
 		}
 		[JavascriptMethod(name="param")]
 		/*
