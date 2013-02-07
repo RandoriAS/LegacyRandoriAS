@@ -38,10 +38,31 @@ namespace ConsoleApplication1.output
             sb.AppendLine("\t\t{");
             if (type != "void")
             {
-                sb.AppendLine("\t\t\treturn null;");
+                sb.AppendLine("\t\t\treturn " + GenerateDefaultReturn(type) + ";");
             }
             sb.AppendLine("\t\t}");
         }
+
+        private string GenerateDefaultReturn(string type)
+        {
+            if (type == "Boolean")
+            {
+                return "false";
+            }
+            else if (type == "String")
+            {
+                return "''";
+            }
+            else if ((type == "int") && ((type == "Number")))
+            {
+                return "0";
+            }
+            else
+            {
+                return "null";
+            }
+        }
+
 
         private void SerializeParamComments(StringBuilder sb, ParamDef parameter)
         {

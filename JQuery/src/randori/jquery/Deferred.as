@@ -78,7 +78,7 @@ package randori.jquery
 		*/
 		public function isRejected():Boolean
 		{
-			return null;
+			return false;
 		}
 		
 		/*
@@ -87,7 +87,7 @@ package randori.jquery
 		*/
 		public function isResolved():Boolean
 		{
-			return null;
+			return false;
 		}
 		
 		/*
@@ -232,7 +232,7 @@ package randori.jquery
 		*/
 		public function state():String
 		{
-			return null;
+			return '';
 		}
 		[JavascriptMethod(name="then")]
 		/*

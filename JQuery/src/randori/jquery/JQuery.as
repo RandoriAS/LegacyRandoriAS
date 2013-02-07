@@ -959,7 +959,7 @@ package randori.jquery
 		*/
 		public function hasClass(className:String):Boolean
 		{
-			return null;
+			return false;
 		}
 		[JavascriptMethod(name="hide")]
 		/*
@@ -1072,7 +1072,7 @@ package randori.jquery
 		*/
 		public function is1(selector:String):Boolean
 		{
-			return null;
+			return false;
 		}
 		[JavascriptMethod(name="is")]
 		/*
@@ -1082,7 +1082,7 @@ package randori.jquery
 		*/
 		public function is2(handler:Function):Boolean
 		{
-			return null;
+			return false;
 		}
 		[JavascriptMethod(name="is")]
 		/*
@@ -1092,7 +1092,7 @@ package randori.jquery
 		*/
 		public function is3(jQueryobject:Object):Boolean
 		{
-			return null;
+			return false;
 		}
 		[JavascriptMethod(name="is")]
 		/*
@@ -1102,7 +1102,7 @@ package randori.jquery
 		*/
 		public function is4(element:Element):Boolean
 		{
-			return null;
+			return false;
 		}
 		[JavascriptMethod(name="keydown")]
 		/*
@@ -2038,7 +2038,7 @@ package randori.jquery
 		*/
 		public function serialize():String
 		{
-			return null;
+			return '';
 		}
 		
 		/*

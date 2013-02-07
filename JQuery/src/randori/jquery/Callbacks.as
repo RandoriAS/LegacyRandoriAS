@@ -52,7 +52,7 @@ package randori.jquery
 		*/
 		public function disabled():Boolean
 		{
-			return null;
+			return false;
 		}
 		
 		/*
@@ -80,7 +80,7 @@ package randori.jquery
 		*/
 		public function fired():Boolean
 		{
-			return null;
+			return false;
 		}
 		
 		/*
@@ -101,7 +101,7 @@ package randori.jquery
 		*/
 		public function has(handler:Function):Boolean
 		{
-			return null;
+			return false;
 		}
 		
 		/*
@@ -119,7 +119,7 @@ package randori.jquery
 		*/
 		public function locked():Boolean
 		{
-			return null;
+			return false;
 		}
 		
 		/*

@@ -1,39 +1,37 @@
 /***
  * Copyright 2013 LTN Consulting, Inc. /dba Digital PrimatesÂ®
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an 'AS IS' BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
- * 
+ *
+ *
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
  * @author Randori JQuery generator
 */
-package randori.jquery
-{
+package randori.jquery {
 	import randori.webkit.dom.Element;
+
 	[Javascript(export="false")]
-	public class Event
-	{
-		public function Event()
-		{
+	public class Event {
+		public function Event() {
 			super();
 		}
 		/*
-		 *  The current DOM element within the event bubbling phase.  
+		 *  The current DOM element within the event bubbling phase.
 		 * @since 1.3
 		*/
 		public var currentTarget:Element;
 		/*
-		 * An optional object of data passed to an event method when the current executing handler is bound.  
+		 * An optional object of data passed to an event method when the current executing handler is bound.
 		 * @since 1.1
 		*/
 		public var data:Object;
@@ -53,17 +51,17 @@ package randori.jquery
 		*/
 		public var namespace:String;
 		/*
-		 * The mouse position relative to the left edge of the document. 
+		 * The mouse position relative to the left edge of the document.
 		 * @since 1.0.4
 		*/
 		public var pageX:Number;
 		/*
-		 * The mouse position relative to the top edge of the document. 
+		 * The mouse position relative to the top edge of the document.
 		 * @since 1.0.4
 		*/
 		public var pageY:Number;
 		/*
-		 * The other DOM element involved in the event, if any. 
+		 * The other DOM element involved in the event, if any.
 		 * @since 1.1.4
 		*/
 		public var relatedTarget:Element;
@@ -73,7 +71,7 @@ package randori.jquery
 		*/
 		public var result:Object;
 		/*
-		 *  The DOM element that initiated the event.  
+		 *  The DOM element that initiated the event.
 		 * @since 1.0
 		*/
 		public var target:Element;
@@ -83,65 +81,59 @@ package randori.jquery
 		*/
 		public var timeStamp:Number;
 		/*
-		 *  Describes the nature of the event.  
+		 *  Describes the nature of the event.
 		 * @since 1.0
 		*/
 		public var type:String;
 		/*
-		 *  For key or mouse events, this property indicates the specific key or button that was pressed.  
+		 *  For key or mouse events, this property indicates the specific key or button that was pressed.
 		 * @since 1.1.3
 		*/
 		public var which:Number;
-		
+
 		/*
-		 * Returns whether event.preventDefault() was ever called on this event object. 
+		 * Returns whether event.preventDefault() was ever called on this event object.
 		 * @since 1.3
 		*/
-		public function isDefaultPrevented():Boolean
-		{
-			return null;
+		public function isDefaultPrevented():Boolean {
+			return false;
 		}
-		
+
 		/*
-		 *   Returns whether event.stopImmediatePropagation() was ever called on this event object. 
+		 *   Returns whether event.stopImmediatePropagation() was ever called on this event object.
 		 * @since 1.3
 		*/
-		public function isImmediatePropagationStopped():Boolean
-		{
-			return null;
+		public function isImmediatePropagationStopped():Boolean {
+			return false;
 		}
-		
+
 		/*
-		 *   Returns whether event.stopPropagation() was ever called on this event object. 
+		 *   Returns whether event.stopPropagation() was ever called on this event object.
 		 * @since 1.3
 		*/
-		public function isPropagationStopped():Boolean
-		{
-			return null;
+		public function isPropagationStopped():Boolean {
+			return false;
 		}
-		
+
 		/*
-		 *  If this method is called, the default action of the event will not be triggered. 
+		 *  If this method is called, the default action of the event will not be triggered.
 		 * @since 1.0
 		*/
-		public function preventDefault():void
-		{
+		public function preventDefault():void {
 		}
-		
+
 		/*
 		 *  Keeps the rest of the handlers from being executed and prevents the event from bubbling up the DOM tree.
 		 * @since 1.3
 		*/
-		public function stopImmediatePropagation():void
-		{
+		public function stopImmediatePropagation():void {
 		}
-		
+
 		/*
-		 * Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.   
+		 * Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.
 		 * @since 1.0
 		*/
-		public function stopPropagation():void
-		{
+		public function stopPropagation():void {
 		}
 	}
 }
