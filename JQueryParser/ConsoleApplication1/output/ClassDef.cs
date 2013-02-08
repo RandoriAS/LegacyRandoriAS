@@ -52,6 +52,7 @@ namespace ConsoleApplication1.output
             comments = new List<string>();
             imports = new List<string>();
             attributes = new JsAttributes() { type = AttributeTypes.Class};
+            attributes.Add("export", "false");
         }
 
         public void Serialize(StringBuilder sb)

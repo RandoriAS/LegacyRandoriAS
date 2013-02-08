@@ -137,7 +137,6 @@ namespace ConsoleApplication1
         private static ClassDef AddBaseClass(string name)
         {
             var classDef = new ClassDef() { name = new ClassNameDef() { ActionScriptName = name } };
-            classDef.attributes.Add("export", "false");
             ClassLookup[name] = classDef;
             return classDef;
         }
@@ -168,7 +167,6 @@ namespace ConsoleApplication1
             {
                 return ClassLookup[classDef.name.ActionScriptName];
             }
-            classDef.attributes.Add("export", "false");
             ClassLookup[classDef.name.ActionScriptName] = classDef;
             xdoc.Root.Elements("property").ToList<XElement>().ForEach(e => AddMemberFromPropertyElement(classDef, e));
             return classDef;
@@ -177,20 +175,67 @@ namespace ConsoleApplication1
         private static void AddMemberFromPropertyElement(ClassDef classDef, XElement elm)
         {
             var member = new MemberDef() { name=elm.Attribute("name").Value };
+            member.comments.Add(elm.Element("desc").Value.Trim());
             if (elm.Attribute("type") != null)
             {
                 member.type = TranslateType(elm.Attribute("type").Value);
-                if (member.type == "PlainObject")
+                if ((member.type == "PlainObject") && (elm.Elements("property").Count() == 0))
                 {
                     member.type = "Object";
+                }
+                else if ((member.type == "PlainObject") && (elm.Elements("property").Count() > 0))
+                {
+                    member.type = CreateTypedObjectForPlainObject(member.name, elm);
+                }
+                else if ((member.type == "Function") && (elm.Elements("argument").Count() > 0))
+                {
+                    CreateCommentsAndObjectsForFunctionArguments(member, elm);
                 }
             }
             else
             {
                 member.type = "*";
             }
-            member.comments.Add(elm.Element("desc").Value.Trim());
+            if (elm.Attribute("default") != null)
+            {
+                member.defaultValue = elm.Attribute("default").Value;
+            }
             classDef.members.Add(member);
+        }
+
+        private static void CreateCommentsAndObjectsForFunctionArguments(MemberDef member, XElement elm)
+        {
+            var args = elm.Elements("argument").ToList<XElement>();
+            member.comments.Add("<br/>The signature of this function needs to be as follows:<br/>");
+            var comment = "Function(";
+            var idx = 0;
+            var descriptions = new List<String>();
+            descriptions.Add("<ul>");
+            var references = new List<String>();
+            foreach (var arg in args)
+            {
+                if (idx++ > 0)
+                {
+                    comment += ", ";
+                }
+                var type = "";
+                if ((arg.Attribute("type").Value == "PlainObject") && (arg.Elements("property").Count() > 0))
+                {
+                    type = CreateTypedObjectForPlainObject(arg.Attribute("name").Value, arg);
+                    references.Add("@see randori.jquery." + type);
+                }
+                else
+                {
+                    type = TranslateType(arg.Attribute("type").Value);
+                }
+                comment += arg.Attribute("name").Value + ":" + type;
+                descriptions.Add("<li>" + arg.Attribute("name").Value + ":" + type + " - " + arg.Element("desc").Value + "<li/>");
+            }
+            descriptions.Add("</ul>");
+            comment += "):void;";
+            member.comments.Add(comment);
+            member.comments.AddRange(descriptions);
+            member.comments.AddRange(references);
         }
 
         private static string FormatHypenedName(string FileName)
@@ -219,7 +264,6 @@ namespace ConsoleApplication1
             {
                 CurrentClass = new ClassDef() { name = ClassName };
                 ClassLookup[ClassName.ActionScriptName] = CurrentClass;
-                CurrentClass.attributes.Add("export", "false");
                 if ((ClassName.ActionScriptName != ClassName.JavascriptName) && (ClassName.JavascriptName != null))
                 {
                     CurrentClass.attributes.Add("name", ClassName.JavascriptName);
@@ -301,10 +345,10 @@ namespace ConsoleApplication1
             }
         }
 
-        private static string CreateTypedObjectForPlainObject(string name, XElement Elm)
+        private static string CreateTypedObjectForPlainObject(string ClassName, XElement Elm)
         {
             var propertyElms = Elm.Elements("property");
-            var classDef = new ClassDef() { name = new ClassNameDef() { ActionScriptName = CapitalizeName(name) + "Object" } };
+            var classDef = new ClassDef() { name = new ClassNameDef() { ActionScriptName = CapitalizeName(ClassName) + "Object" } };
             if (ClassLookup.ContainsKey(classDef.name.ActionScriptName))
             {
                 throw new Exception("Class name already exists: " + classDef.name.ActionScriptName);
@@ -325,6 +369,10 @@ namespace ConsoleApplication1
             if (member.type == "PlainObject")
             {
                 member.type = "Object";
+            }
+            if (Elm.Attribute("default") != null)
+            {
+                member.defaultValue = Elm.Attribute("default").Value;
             }
             member.comments.AddRange(SplitCommentLines(Elm.Element("desc").Value));
             return member;
@@ -402,6 +450,10 @@ namespace ConsoleApplication1
                 type = "Element";
             }
             else if (type == "HTML")
+            {
+                type = "Element";
+            }
+            else if (type == "DOM")
             {
                 type = "Element";
             }

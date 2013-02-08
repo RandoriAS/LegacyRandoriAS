@@ -29,23 +29,30 @@ package randori.jquery
 		/*
 		 * A string or number determining how long the animation will run.
 		*/
-		public var duration:*;
+		public var duration:* = 400;
 		/*
 		 * A string indicating which easing function to use for the transition.
 		*/
-		public var easing:String;
+		public var easing:String = 'swing';
 		/*
 		 * A function to call once the animation is complete.
 		*/
 		public var complete:Function;
 		/*
 		 * A function to be called after each step of the animation.
+		 * <br/>The signature of this function needs to be as follows:<br/>
+		 * Function(now:Number, fx:FxObject):void;
+		 * <ul>
+		 * <li>now:Number - The numeric value of the property being animated at each step<li/>
+		 * <li>fx:FxObject - A map of properties related to the animation and the element being animated<li/>
+		 * </ul>
+		 * @see randori.jquery.FxObject
 		*/
 		public var step:Function;
 		/*
 		 * A Boolean indicating whether to place the animation in the effects queue. If false, the animation will begin immediately. As of jQuery 1.7, the queue option can also accept a string, in which case the animation is added to the queue represented by that string.
 		*/
-		public var queue:Boolean;
+		public var queue:Boolean = true;
 		/*
 		 * A map of one or more of the CSS properties defined by the properties argument and their corresponding easing functions.
 		*/
