@@ -1,0 +1,6 @@
+C:\projects\RandoriAS\JQueryParser\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\projects\RandoriAS\JQueryParser\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\projects\RandoriAS\JQueryParser\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\projects\RandoriAS\JQueryParser\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\projects\RandoriAS\JQueryParser\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\projects\RandoriAS\JQueryParser\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
