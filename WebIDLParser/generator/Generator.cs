@@ -145,6 +145,7 @@ namespace WebIDLParser
                         t.checkGenerateEnumerator();
                         if (t.name == "Window")
                         {
+                            t.jsAttributes.Add(new TJsAttribute() { name = "mode", value = "\"global\"" });
                             foreach (var m in t.members)
                             {
                                 m.isStatic = true;
