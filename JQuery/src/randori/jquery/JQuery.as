@@ -130,10 +130,10 @@ package randori.jquery {
 		/*
 		 * Insert content, specified by the parameter, after each element in the set of matched elements.
 		 * @since 1.0
-		 * @param content HTML string, DOM element, or jQuery object to insert after each element in the set of matched elements.
-		 * @param content One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert after each element in the set of matched elements.
+		 * @param content1 HTML string, DOM element, or jQuery object to insert after each element in the set of matched elements.
+		 * @param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert after each element in the set of matched elements.
 		*/
-		public function after1(content:*, content:*=null):JQuery {
+		public function after1(content1:*, content2:*=null):JQuery {
 			return null;
 		}
 
@@ -233,10 +233,10 @@ package randori.jquery {
 		/*
 		 * Insert content, specified by the parameter, to the end of each element in the set of matched elements.
 		 * @since 1.0
-		 * @param content DOM element, HTML string, or jQuery object to insert at the end of each element in the set of matched elements.
-		 * @param content One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert at the end of each element in the set of matched elements.
+		 * @param content1 DOM element, HTML string, or jQuery object to insert at the end of each element in the set of matched elements.
+		 * @param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert at the end of each element in the set of matched elements.
 		*/
-		public function append1(content:*, content:*=null):JQuery {
+		public function append1(content1:*, content2:*=null):JQuery {
 			return null;
 		}
 
@@ -263,10 +263,10 @@ package randori.jquery {
 		/*
 		 * Insert content, specified by the parameter, before each element in the set of matched elements.
 		 * @since 1.0
-		 * @param content HTML string, DOM element, or jQuery object to insert before each element in the set of matched elements.
-		 * @param content One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert before each element in the set of matched elements.
+		 * @param content1 HTML string, DOM element, or jQuery object to insert before each element in the set of matched elements.
+		 * @param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert before each element in the set of matched elements.
 		*/
-		public function before1(content:*, content:*=null):JQuery {
+		public function before1(content1:*, content2:*=null):JQuery {
 			return null;
 		}
 
@@ -1722,10 +1722,10 @@ package randori.jquery {
 		/*
 		 * Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.
 		 * @since 1.0
-		 * @param content DOM element, array of elements, HTML string, or jQuery object to insert at the beginning of each element in the set of matched elements.
-		 * @param content One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert at the beginning of each element in the set of matched elements.
+		 * @param content1 DOM element, array of elements, HTML string, or jQuery object to insert at the beginning of each element in the set of matched elements.
+		 * @param content2 One or more additional DOM elements, arrays of elements, HTML strings, or jQuery objects to insert at the beginning of each element in the set of matched elements.
 		*/
-		public function prepend1(content:*, content:*=null):JQuery {
+		public function prepend1(content1:*, content2:*=null):JQuery {
 			return null;
 		}
 
@@ -2253,11 +2253,11 @@ package randori.jquery {
 		/*
 		 * Bind two or more handlers to the matched elements, to be executed on alternate clicks.
 		 * @since 1.0
-		 * @param handler A function to execute every even time the element is clicked. (The method requires to have the following signature: handler(eventObject))
-		 * @param handler A function to execute every odd time the element is clicked. (The method requires to have the following signature: handler(eventObject))
-		 * @param handler Additional handlers to cycle through after clicks. (The method requires to have the following signature: handler(eventObject))
+		 * @param handler1 A function to execute every even time the element is clicked. (The method requires to have the following signature: handler(eventObject))
+		 * @param handler2 A function to execute every odd time the element is clicked. (The method requires to have the following signature: handler(eventObject))
+		 * @param handler3 Additional handlers to cycle through after clicks. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function toggle(handler:Function, handler:Function, handler:Function=null):JQuery {
+		public function toggle(handler1:Function, handler2:Function, handler3:Function=null):JQuery {
 			return null;
 		}
 

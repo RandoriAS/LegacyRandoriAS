@@ -29,6 +29,7 @@ namespace ConsoleApplication1.output
 
         new public void Serialize(StringBuilder sb)
         {
+            CheckParameterNames();
             sb.Append("\t\t");
             attributes.Serialize(sb);
             sb.Append(Environment.NewLine);
@@ -41,6 +42,28 @@ namespace ConsoleApplication1.output
                 sb.AppendLine("\t\t\treturn " + GenerateDefaultReturn(type) + ";");
             }
             sb.AppendLine("\t\t}");
+        }
+
+        private void CheckParameterNames()
+        {
+            var Checked = new List<string>();
+            var Multiples = new List<string>();
+            foreach (var parameter in parameters)
+            {
+                if (Checked.IndexOf(parameter.name) == -1)
+                {
+                    Checked.Add(parameter.name);
+                    if (parameters.FindAll(p => p.name == parameter.name).Count() > 1)
+                    {
+                        Multiples.Add(parameter.name);
+                    }
+                }
+            }
+            foreach (var name in Multiples)
+            {
+                var index = 0;
+                parameters.FindAll(p => p.name == name).ForEach(p => p.name += (++index).ToString());
+            }
         }
 
         public static string GenerateDefaultReturn(string type)
