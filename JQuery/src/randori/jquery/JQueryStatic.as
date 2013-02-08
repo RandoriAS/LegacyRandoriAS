@@ -79,9 +79,9 @@ package randori.jquery
 		 * Handle custom Ajax options or modify existing options before each request is sent and before they are processed by $.ajax().
 		 * @since 1.5
 		 * @param dataTypes An optional string containing one or more space-separated dataTypes
-		 * @param handler A handler to set default values for future Ajax requests.
+		 * @param callBack A handler to set default values for future Ajax requests. (The method requires to have the following signature: handler(options,originalOptions,jqXHR))
 		*/
-		public static function ajaxPrefilter(dataTypes:String='', handler:Function=null):void
+		public static function ajaxPrefilter(dataTypes:String='', callBack:Function=null):void
 		{
 		}
 		
@@ -98,9 +98,9 @@ package randori.jquery
 		 * Creates an object that handles the actual transmission of Ajax data.
 		 * @since 1.5
 		 * @param dataType A string identifying the data type to use
-		 * @param handler A handler to return the new transport object to use with the data type provided in the first argument.
+		 * @param callBack A handler to return the new transport object to use with the data type provided in the first argument. (The method requires to have the following signature: handler(options,originalOptions,jqXHR))
 		*/
-		public static function ajaxTransport(dataType:String, handler:Function):void
+		public static function ajaxTransport(dataType:String, callBack:Function):void
 		{
 		}
 		[JavascriptMethod(name="Callbacks")]
@@ -128,9 +128,9 @@ package randori.jquery
 		/*
 		 * A constructor function that returns a chainable utility object with methods to register multiple callbacks into callback queues, invoke callback queues, and relay the success or failure state of any synchronous or asynchronous function.
 		 * @since 1.5
-		 * @param handler A function that is called just before the constructor returns.
+		 * @param beforeStart A function that is called just before the constructor returns.
 		*/
-		public static function deferred(handler:Function=null):Deferred
+		public static function deferred(beforeStart:Function=null):Deferred
 		{
 			return null;
 		}
@@ -149,9 +149,9 @@ package randori.jquery
 		 * A generic iterator function, which can be used to seamlessly iterate over both objects and arrays. Arrays and array-like objects with a length property (such as a function's arguments object) are iterated by numeric index, from 0 to length-1. Other objects are iterated via their named properties.
 		 * @since 1.0
 		 * @param collection The object or array to iterate over.
-		 * @param handler The function that will be executed on every object.
+		 * @param callBack The function that will be executed on every object. (The method requires to have the following signature: callback(indexInArray,valueOfElement))
 		*/
-		public static function each(collection:Object, handler:Function):Object
+		public static function each(collection:Object, callBack:Function):Object
 		{
 			return null;
 		}
@@ -195,10 +195,10 @@ package randori.jquery
 		 * @since 1.0
 		 * @param url A string containing the URL to which the request is sent.
 		 * @param data A plain object or string that is sent to the server with the request.
-		 * @param handler A callback function that is executed if the request succeeds.
+		 * @param callBack A callback function that is executed if the request succeeds. (The method requires to have the following signature: success(data,textStatus,jqXHR))
 		 * @param dataType The type of data expected from the server. Default: Intelligent Guess (xml, json, script, or html).
 		*/
-		public static function get(url:String, data:*=null, handler:Function=null, dataType:String=''):XMLHttpRequest
+		public static function get(url:String, data:*=null, callBack:Function=null, dataType:String=''):XMLHttpRequest
 		{
 			return null;
 		}
@@ -208,9 +208,9 @@ package randori.jquery
 		 * @since 1.0
 		 * @param url A string containing the URL to which the request is sent.
 		 * @param data A plain object or string that is sent to the server with the request.
-		 * @param handler A callback function that is executed if the request succeeds.
+		 * @param callBack A callback function that is executed if the request succeeds. (The method requires to have the following signature: success(data,textStatus,jqXHR))
 		*/
-		public static function getJSON(url:String, data:Object=null, handler:Function=null):XMLHttpRequest
+		public static function getJSON(url:String, data:Object=null, callBack:Function=null):XMLHttpRequest
 		{
 			return null;
 		}
@@ -219,9 +219,9 @@ package randori.jquery
 		 * Load a JavaScript file from the server using a GET HTTP request, then execute it.
 		 * @since 1.0
 		 * @param url A string containing the URL to which the request is sent.
-		 * @param handler A callback function that is executed if the request succeeds.
+		 * @param callBack A callback function that is executed if the request succeeds. (The method requires to have the following signature: success(script,textStatus,jqXHR))
 		*/
-		public static function getScript(url:String, handler:Function=null):XMLHttpRequest
+		public static function getScript(url:String, callBack:Function=null):XMLHttpRequest
 		{
 			return null;
 		}
@@ -239,10 +239,10 @@ package randori.jquery
 		 * Finds the elements of an array which satisfy a filter function. The original array is not affected.
 		 * @since 1.0
 		 * @param array The array to search through.
-		 * @param handler The function to process each item against.  The first argument to the function is the item, and the second argument is the index.  The function should return a Boolean value.  this will be the global window object.
+		 * @param callBack The function to process each item against.  The first argument to the function is the item, and the second argument is the index.  The function should return a Boolean value.  this will be the global window object. (The method requires to have the following signature: function(elementOfArray,indexInArray))
 		 * @param invert If "invert" is false, or not provided, then the function returns an array consisting of all elements for which "callback" returns true.  If "invert" is true, then the function returns an array consisting of all elements for which "callback" returns false.
 		*/
-		public static function grep(array:Array, handler:Function, invert:Boolean=false):Array
+		public static function grep(array:Array, callBack:Function, invert:Boolean=false):Array
 		{
 			return null;
 		}
@@ -362,9 +362,9 @@ package randori.jquery
 		 * Translate all items in an array or object to new array of items.
 		 * @since 1.0
 		 * @param array The Array to translate.
-		 * @param handler The function to process each item against.  The first argument to the function is the array item, the second argument is the index in array The function can return any value. Within the function, this refers to the global (window) object.
+		 * @param callBack The function to process each item against.  The first argument to the function is the array item, the second argument is the index in array The function can return any value. Within the function, this refers to the global (window) object. (The method requires to have the following signature: callback(elementOfArray,indexInArray))
 		*/
-		public static function map1(array:Array, handler:Function):Array
+		public static function map1(array:Array, callBack:Function):Array
 		{
 			return null;
 		}
@@ -373,9 +373,9 @@ package randori.jquery
 		 * Translate all items in an array or object to new array of items.
 		 * @since 1.6
 		 * @param arrayOrObject The Array or Object to translate.
-		 * @param handler The function to process each item against.  The first argument to the function is the value; the second argument is the index or key of the array or object property. The function can return any value to add to the array. A returned array will be flattened into the resulting array. Within the function, this refers to the global (window) object.
+		 * @param callBack The function to process each item against.  The first argument to the function is the value; the second argument is the index or key of the array or object property. The function can return any value to add to the array. A returned array will be flattened into the resulting array. Within the function, this refers to the global (window) object. (The method requires to have the following signature: callback(value,indexOrKey))
 		*/
-		public static function map2(arrayOrObject:*, handler:Function):Array
+		public static function map2(arrayOrObject:*, callBack:Function):Array
 		{
 			return null;
 		}
@@ -476,10 +476,10 @@ package randori.jquery
 		 * @since 1.0
 		 * @param url A string containing the URL to which the request is sent.
 		 * @param data A plain object or string that is sent to the server with the request.
-		 * @param handler A callback function that is executed if the request succeeds.
+		 * @param callBack A callback function that is executed if the request succeeds. (The method requires to have the following signature: success(data,textStatus,jqXHR))
 		 * @param dataType The type of data expected from the server. Default: Intelligent Guess (xml, json, script, text, html).
 		*/
-		public static function post(url:String, data:*=null, handler:Function=null, dataType:String=''):XMLHttpRequest
+		public static function post(url:String, data:*=null, callBack:Function=null, dataType:String=''):XMLHttpRequest
 		{
 			return null;
 		}
@@ -487,10 +487,10 @@ package randori.jquery
 		/*
 		 * Takes a function and returns a new one that will always have a particular context.
 		 * @since 1.4
-		 * @param handler The function whose context will be changed.
+		 * @param callBack The function whose context will be changed.
 		 * @param context The object to which the context (this) of the function should be set.
 		*/
-		public static function proxy1(handler:Function, context:Object):Function
+		public static function proxy1(callBack:Function, context:Object):Function
 		{
 			return null;
 		}
@@ -509,11 +509,11 @@ package randori.jquery
 		/*
 		 * Takes a function and returns a new one that will always have a particular context.
 		 * @since 1.6
-		 * @param handler The function whose context will be changed.
+		 * @param callBack The function whose context will be changed.
 		 * @param context The object to which the context (this) of the function should be set.
 		 * @param additionalArguments Any number of arguments to be passed to the function referenced in the function argument.
 		*/
-		public static function proxy3(handler:Function, context:Object, additionalArguments:*=null):Function
+		public static function proxy3(callBack:Function, context:Object, additionalArguments:*=null):Function
 		{
 			return null;
 		}

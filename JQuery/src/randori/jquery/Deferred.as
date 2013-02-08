@@ -30,10 +30,10 @@ package randori.jquery
 		/*
 		 * Add handlers to be called when the Deferred object is either resolved or rejected.
 		 * @since 1.6
-		 * @param handler1 A function, or array of functions, that is called when the Deferred is resolved or rejected.
-		 * @param handler2 Optional additional functions, or arrays of functions, that are called when the Deferred is resolved or rejected.
+		 * @param alwaysCallbacks1 A function, or array of functions, that is called when the Deferred is resolved or rejected.
+		 * @param alwaysCallbacks2 Optional additional functions, or arrays of functions, that are called when the Deferred is resolved or rejected.
 		*/
-		public function always(handler1:Function, handler2:Function=null):Deferred
+		public function always(alwaysCallbacks1:Function, alwaysCallbacks2:Function=null):Deferred
 		{
 			return null;
 		}
@@ -41,10 +41,10 @@ package randori.jquery
 		/*
 		 * Add handlers to be called when the Deferred object is resolved.
 		 * @since 1.5
-		 * @param handler1 A function, or array of functions, that are called when the Deferred is resolved.
-		 * @param handler2 Optional additional functions, or arrays of functions, that are called when the Deferred is resolved.
+		 * @param doneCallbacks1 A function, or array of functions, that are called when the Deferred is resolved.
+		 * @param doneCallbacks2 Optional additional functions, or arrays of functions, that are called when the Deferred is resolved.
 		*/
-		public function done(handler1:Function, handler2:Function=null):Deferred
+		public function done(doneCallbacks1:Function, doneCallbacks2:Function=null):Deferred
 		{
 			return null;
 		}
@@ -52,10 +52,10 @@ package randori.jquery
 		/*
 		 * Add handlers to be called when the Deferred object is rejected.
 		 * @since 1.5
-		 * @param handler1 A function, or array of functions, that are called when the Deferred is rejected.
-		 * @param handler2 Optional additional functions, or arrays of functions, that are called when the Deferred is rejected.
+		 * @param failCallbacks1 A function, or array of functions, that are called when the Deferred is rejected.
+		 * @param failCallbacks2 Optional additional functions, or arrays of functions, that are called when the Deferred is rejected.
 		*/
-		public function fail(handler1:Function, handler2:Function=null):Deferred
+		public function fail(failCallbacks1:Function, failCallbacks2:Function=null):Deferred
 		{
 			return null;
 		}
@@ -102,10 +102,10 @@ package randori.jquery
 		/*
 		 * Utility method to filter and/or chain Deferreds.
 		 * @since 1.6
-		 * @param handler1 An optional function that is called when the Deferred is resolved.
-		 * @param handler2 An optional function that is called when the Deferred is rejected.
+		 * @param doneFilter An optional function that is called when the Deferred is resolved.
+		 * @param failFilter An optional function that is called when the Deferred is rejected.
 		*/
-		public function pipe1(handler1:Function=null, handler2:Function=null):Promise
+		public function pipe1(doneFilter:Function=null, failFilter:Function=null):Promise
 		{
 			return null;
 		}
@@ -113,11 +113,11 @@ package randori.jquery
 		/*
 		 * Utility method to filter and/or chain Deferreds.
 		 * @since 1.7
-		 * @param handler1 An optional function that is called when the Deferred is resolved.
-		 * @param handler2 An optional function that is called when the Deferred is rejected.
-		 * @param handler3 An optional function that is called when progress notifications are sent to the Deferred.
+		 * @param doneFilter An optional function that is called when the Deferred is resolved.
+		 * @param failFilter An optional function that is called when the Deferred is rejected.
+		 * @param progressFilter An optional function that is called when progress notifications are sent to the Deferred.
 		*/
-		public function pipe2(handler1:Function=null, handler2:Function=null, handler3:Function=null):Promise
+		public function pipe2(doneFilter:Function=null, failFilter:Function=null, progressFilter:Function=null):Promise
 		{
 			return null;
 		}
@@ -125,9 +125,9 @@ package randori.jquery
 		/*
 		 * Add handlers to be called when the Deferred object generates progress notifications.
 		 * @since 1.7
-		 * @param handler A function, or array of functions, that is called when the Deferred generates progress notifications.
+		 * @param progressCallbacks A function, or array of functions, that is called when the Deferred generates progress notifications.
 		*/
-		public function progress(handler:Function):Deferred
+		public function progress(progressCallbacks:Function):Deferred
 		{
 			return null;
 		}
@@ -196,11 +196,11 @@ package randori.jquery
 		/*
 		 * Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.
 		 * @since 1.8
-		 * @param handler1 A function that is called when the Deferred is resolved.
-		 * @param handler2 An optional function that is called when the Deferred is rejected.
-		 * @param handler3 An optional function that is called when progress notifications are sent to the Deferred.
+		 * @param doneFilter A function that is called when the Deferred is resolved.
+		 * @param failFilter An optional function that is called when the Deferred is rejected.
+		 * @param progressFilter An optional function that is called when progress notifications are sent to the Deferred.
 		*/
-		public function then1(handler1:Function, handler2:Function=null, handler3:Function=null):Promise
+		public function then1(doneFilter:Function, failFilter:Function=null, progressFilter:Function=null):Promise
 		{
 			return null;
 		}
@@ -208,10 +208,10 @@ package randori.jquery
 		/*
 		 * Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.
 		 * @since 1.5
-		 * @param handler1 A function, or array of functions, called when the Deferred is resolved.
-		 * @param handler2 A function, or array of functions, called when the Deferred is rejected.
+		 * @param doneCallbacks A function, or array of functions, called when the Deferred is resolved.
+		 * @param failCallbacks A function, or array of functions, called when the Deferred is rejected.
 		*/
-		public function then2(handler1:Function, handler2:Function):Promise
+		public function then2(doneCallbacks:Function, failCallbacks:Function):Promise
 		{
 			return null;
 		}
@@ -219,11 +219,11 @@ package randori.jquery
 		/*
 		 * Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.
 		 * @since 1.7
-		 * @param handler1 A function, or array of functions, called when the Deferred is resolved.
-		 * @param handler2 A function, or array of functions, called when the Deferred is rejected.
-		 * @param handler3 A function, or array of functions, called when the Deferred notifies progress.
+		 * @param doneCallbacks A function, or array of functions, called when the Deferred is resolved.
+		 * @param failCallbacks A function, or array of functions, called when the Deferred is rejected.
+		 * @param progressCallbacks A function, or array of functions, called when the Deferred notifies progress.
 		*/
-		public function then3(handler1:Function, handler2:Function, handler3:Function=null):Promise
+		public function then3(doneCallbacks:Function, failCallbacks:Function, progressCallbacks:Function=null):Promise
 		{
 			return null;
 		}

@@ -97,9 +97,9 @@ package randori.jquery
 		/*
 		 * Determine whether a supplied callback is in a list
 		 * @since 1.7
-		 * @param handler The callback to search for.
+		 * @param callback The callback to search for.
 		*/
-		public function has(handler:Function):Boolean
+		public function has(callback:Function):Boolean
 		{
 			return false;
 		}

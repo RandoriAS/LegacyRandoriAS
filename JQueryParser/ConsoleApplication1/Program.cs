@@ -406,7 +406,7 @@ namespace ConsoleApplication1
                 return name.Substring(++index);
             }
             index = name.IndexOf(',');
-            if (index > -1)
+            if ((index > -1) && (name.IndexOf('(') < 0))
             {
                 name = "JQuery";
             }
@@ -417,6 +417,10 @@ namespace ConsoleApplication1
             if ((name == "false") || (name == "switch"))
             {
                 name = name + "_";
+            }
+            if (name == "function")
+            {
+                name = "callBack";
             }
             if (name.StartsWith("-"))
             {
@@ -564,8 +568,8 @@ namespace ConsoleApplication1
                 if (name.IndexOf('(') > -1)
                 {
                     desc += " (The method requires to have the following signature: " + name + ")";
+                    name = "callBack";
                 }
-                name = "handler";
             }
             else if (type == "PlainObject")
             {

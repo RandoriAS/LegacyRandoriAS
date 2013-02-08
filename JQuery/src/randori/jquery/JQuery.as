@@ -120,9 +120,9 @@ package randori.jquery {
 		/*
 		 * Adds the specified class(es) to each of the set of matched elements.
 		 * @since 1.4
-		 * @param handler A function returning one or more space-separated class names to be added to the existing class name(s). Receives the index position of the element in the set and the existing class name(s) as arguments. Within the function, this refers to the current element in the set.
+		 * @param callBack A function returning one or more space-separated class names to be added to the existing class name(s). Receives the index position of the element in the set and the existing class name(s) as arguments. Within the function, this refers to the current element in the set. (The method requires to have the following signature: function(index,currentClass))
 		*/
-		public function addClass2(handler:Function):JQuery {
+		public function addClass2(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -141,63 +141,63 @@ package randori.jquery {
 		/*
 		 * Insert content, specified by the parameter, after each element in the set of matched elements.
 		 * @since 1.4
-		 * @param handler A function that returns an HTML string, DOM element(s), or jQuery object to insert after each element in the set of matched elements. Receives the index position of the element in the set as an argument. Within the function, this refers to the current element in the set. (The method requires to have the following signature: function(index))
+		 * @param callBack A function that returns an HTML string, DOM element(s), or jQuery object to insert after each element in the set of matched elements. Receives the index position of the element in the set as an argument. Within the function, this refers to the current element in the set. (The method requires to have the following signature: function(index))
 		*/
-		public function after2(handler:Function):JQuery {
+		public function after2(callBack:Function):JQuery {
 			return null;
 		}
 
 		/*
 		 * Register a handler to be called when Ajax requests complete. This is an AjaxEvent.
 		 * @since 1.0
-		 * @param handler The function to be invoked.
+		 * @param callBack The function to be invoked. (The method requires to have the following signature: handler(event,XMLHttpRequest,ajaxOptions))
 		*/
-		public function ajaxComplete(handler:Function):JQuery {
+		public function ajaxComplete(callBack:Function):JQuery {
 			return null;
 		}
 
 		/*
 		 * Register a handler to be called when Ajax requests complete with an error. This is an Ajax Event.
 		 * @since 1.0
-		 * @param handler The function to be invoked.
+		 * @param callBack The function to be invoked. (The method requires to have the following signature: handler(event,jqXHR,ajaxSettings,thrownError))
 		*/
-		public function ajaxError(handler:Function):JQuery {
+		public function ajaxError(callBack:Function):JQuery {
 			return null;
 		}
 
 		/*
 		 * Attach a function to be executed before an Ajax request is sent. This is an Ajax Event.
 		 * @since 1.0
-		 * @param handler The function to be invoked.
+		 * @param callBack The function to be invoked. (The method requires to have the following signature: handler(event,jqXHR,ajaxOptions))
 		*/
-		public function ajaxSend(handler:Function):JQuery {
+		public function ajaxSend(callBack:Function):JQuery {
 			return null;
 		}
 
 		/*
 		 * Register a handler to be called when the first Ajax request begins. This is an Ajax Event.
 		 * @since 1.0
-		 * @param handler The function to be invoked. (The method requires to have the following signature: handler())
+		 * @param callBack The function to be invoked. (The method requires to have the following signature: handler())
 		*/
-		public function ajaxStart(handler:Function):JQuery {
+		public function ajaxStart(callBack:Function):JQuery {
 			return null;
 		}
 
 		/*
 		 * Register a handler to be called when all Ajax requests have completed. This is an Ajax Event.
 		 * @since 1.0
-		 * @param handler The function to be invoked. (The method requires to have the following signature: handler())
+		 * @param callBack The function to be invoked. (The method requires to have the following signature: handler())
 		*/
-		public function ajaxStop(handler:Function):JQuery {
+		public function ajaxStop(callBack:Function):JQuery {
 			return null;
 		}
 
 		/*
 		 * Attach a function to be executed whenever an Ajax request completes successfully. This is an Ajax Event.
 		 * @since 1.0
-		 * @param handler The function to be invoked.
+		 * @param callBack The function to be invoked. (The method requires to have the following signature: handler(event,XMLHttpRequest,ajaxOptions))
 		*/
-		public function ajaxSuccess(handler:Function):JQuery {
+		public function ajaxSuccess(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -244,9 +244,9 @@ package randori.jquery {
 		/*
 		 * Insert content, specified by the parameter, to the end of each element in the set of matched elements.
 		 * @since 1.4
-		 * @param handler A function that returns an HTML string, DOM element(s), or jQuery object to insert at the end of each element in the set of matched elements. Receives the index position of the element in the set and the old HTML value of the element as arguments. Within the function, this refers to the current element in the set.
+		 * @param callBack A function that returns an HTML string, DOM element(s), or jQuery object to insert at the end of each element in the set of matched elements. Receives the index position of the element in the set and the old HTML value of the element as arguments. Within the function, this refers to the current element in the set. (The method requires to have the following signature: function(index,html))
 		*/
-		public function append2(handler:Function):JQuery {
+		public function append2(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -274,9 +274,9 @@ package randori.jquery {
 		/*
 		 * Insert content, specified by the parameter, before each element in the set of matched elements.
 		 * @since 1.4
-		 * @param handler A function that returns an HTML string, DOM element(s), or jQuery object to insert before each element in the set of matched elements. Receives the index position of the element in the set as an argument. Within the function, this refers to the current element in the set.
+		 * @param callBack A function that returns an HTML string, DOM element(s), or jQuery object to insert before each element in the set of matched elements. Receives the index position of the element in the set as an argument. Within the function, this refers to the current element in the set.
 		*/
-		public function before2(handler:Function):JQuery {
+		public function before2(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -286,9 +286,9 @@ package randori.jquery {
 		 * @since 1.0
 		 * @param eventType A string containing one or more DOM event types, such as "click" or "submit," or custom event names.
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function bind1(eventType:String, eventData:Object=null, handler:Function=null):JQuery {
+		public function bind1(eventType:String, eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -318,9 +318,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "blur" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function blur1(handler:Function):JQuery {
+		public function blur1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -329,9 +329,9 @@ package randori.jquery {
 		 * Bind an event handler to the "blur" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function blur2(eventData:Object=null, handler:Function=null):JQuery {
+		public function blur2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -348,9 +348,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "change" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function change1(handler:Function):JQuery {
+		public function change1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -359,9 +359,9 @@ package randori.jquery {
 		 * Bind an event handler to the "change" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function change2(eventData:Object=null, handler:Function=null):JQuery {
+		public function change2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -396,9 +396,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "click" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function click1(handler:Function):JQuery {
+		public function click1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -407,9 +407,9 @@ package randori.jquery {
 		 * Bind an event handler to the "click" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function click2(eventData:Object=null, handler:Function=null):JQuery {
+		public function click2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -455,9 +455,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "dblclick" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function dblclick1(handler:Function):JQuery {
+		public function dblclick1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -466,9 +466,9 @@ package randori.jquery {
 		 * Bind an event handler to the "dblclick" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function dblclick2(eventData:Object=null, handler:Function=null):JQuery {
+		public function dblclick2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -497,9 +497,9 @@ package randori.jquery {
 		 * @since 1.4.2
 		 * @param selector A selector to filter the elements that trigger the event.
 		 * @param eventType A string containing one or more space-separated JavaScript event types, such as "click" or "keydown," or custom event names.
-		 * @param handler A function to execute at the time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute at the time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function delegate1(selector:String, eventType:String, handler:Function):JQuery {
+		public function delegate1(selector:String, eventType:String, callBack:Function):JQuery {
 			return null;
 		}
 
@@ -510,9 +510,9 @@ package randori.jquery {
 		 * @param selector A selector to filter the elements that trigger the event.
 		 * @param eventType A string containing one or more space-separated JavaScript event types, such as "click" or "keydown," or custom event names.
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute at the time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute at the time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function delegate2(selector:String, eventType:String, eventData:Object, handler:Function):JQuery {
+		public function delegate2(selector:String, eventType:String, eventData:Object, callBack:Function):JQuery {
 			return null;
 		}
 
@@ -578,9 +578,9 @@ package randori.jquery {
 		/*
 		 * Iterate over a jQuery object, executing a function for each matched element.
 		 * @since 1.0
-		 * @param handler A function to execute for each matched element.
+		 * @param callBack A function to execute for each matched element. (The method requires to have the following signature: function(index,Element))
 		*/
-		public function each(handler:Function):JQuery {
+		public function each(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -624,9 +624,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "error" JavaScript event.
 		 * @since 1.0
-		 * @param handler A function to execute when the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute when the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function error1(handler:Function):JQuery {
+		public function error1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -635,9 +635,9 @@ package randori.jquery {
 		 * Bind an event handler to the "error" JavaScript event.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function error2(eventData:Object=null, handler:Function=null):JQuery {
+		public function error2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -713,9 +713,9 @@ package randori.jquery {
 		 * @since 1.0
 		 * @param duration A string or number determining how long the animation will run.
 		 * @param opacity A number between 0 and 1 denoting the target opacity.
-		 * @param handler A function to call once the animation is complete.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function fadeTo1(duration:*, opacity:Number, handler:Function=null):JQuery {
+		public function fadeTo1(duration:*, opacity:Number, complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -726,9 +726,9 @@ package randori.jquery {
 		 * @param duration A string or number determining how long the animation will run.
 		 * @param opacity A number between 0 and 1 denoting the target opacity.
 		 * @param easing A string indicating which easing function to use for the transition.
-		 * @param handler A function to call once the animation is complete.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function fadeTo2(duration:*, opacity:Number, easing:String='', handler:Function=null):JQuery {
+		public function fadeTo2(duration:*, opacity:Number, easing:String='', complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -768,9 +768,9 @@ package randori.jquery {
 		/*
 		 * Reduce the set of matched elements to those that match the selector or pass the function's test.
 		 * @since 1.0
-		 * @param handler A function used as a test for each element in the set. this is the current DOM element. (The method requires to have the following signature: function(index))
+		 * @param callBack A function used as a test for each element in the set. this is the current DOM element. (The method requires to have the following signature: function(index))
 		*/
-		public function filter2(handler:Function):JQuery {
+		public function filter2(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -845,9 +845,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "focus" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function focus1(handler:Function):JQuery {
+		public function focus1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -856,9 +856,9 @@ package randori.jquery {
 		 * Bind an event handler to the "focus" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function focus2(eventData:Object=null, handler:Function=null):JQuery {
+		public function focus2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -875,9 +875,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "focusin" event.
 		 * @since 1.4
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function focusin1(handler:Function):JQuery {
+		public function focusin1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -886,9 +886,9 @@ package randori.jquery {
 		 * Bind an event handler to the "focusin" event.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function focusin2(eventData:Object=null, handler:Function=null):JQuery {
+		public function focusin2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -896,9 +896,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "focusout" JavaScript event.
 		 * @since 1.4
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function focusout1(handler:Function):JQuery {
+		public function focusout1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -907,9 +907,9 @@ package randori.jquery {
 		 * Bind an event handler to the "focusout" JavaScript event.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function focusout2(eventData:Object=null, handler:Function=null):JQuery {
+		public function focusout2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1071,9 +1071,9 @@ package randori.jquery {
 		/*
 		 * Check the current matched set of elements against a selector, element, or jQuery object and return true if at least one of these elements matches the given arguments.
 		 * @since 1.6
-		 * @param handler A function used as a test for the set of elements. It accepts one argument, index, which is the element's index in the jQuery collection.Within the function, this refers to the current DOM element. (The method requires to have the following signature: function(index))
+		 * @param callBack A function used as a test for the set of elements. It accepts one argument, index, which is the element's index in the jQuery collection.Within the function, this refers to the current DOM element. (The method requires to have the following signature: function(index))
 		*/
-		public function is2(handler:Function):Boolean {
+		public function is2(callBack:Function):Boolean {
 			return false;
 		}
 
@@ -1101,9 +1101,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "keydown" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function keydown1(handler:Function):JQuery {
+		public function keydown1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1112,9 +1112,9 @@ package randori.jquery {
 		 * Bind an event handler to the "keydown" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function keydown2(eventData:Object=null, handler:Function=null):JQuery {
+		public function keydown2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1131,9 +1131,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "keypress" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function keypress1(handler:Function):JQuery {
+		public function keypress1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1142,9 +1142,9 @@ package randori.jquery {
 		 * Bind an event handler to the "keypress" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function keypress2(eventData:Object=null, handler:Function=null):JQuery {
+		public function keypress2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1161,9 +1161,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "keyup" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function keyup1(handler:Function):JQuery {
+		public function keyup1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1172,9 +1172,9 @@ package randori.jquery {
 		 * Bind an event handler to the "keyup" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function keyup2(eventData:Object=null, handler:Function=null):JQuery {
+		public function keyup2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1200,9 +1200,9 @@ package randori.jquery {
 		 * Attach an event handler for all elements which match the current selector, now and in the future.
 		 * @since 1.3
 		 * @param events A string containing a JavaScript event type, such as "click" or "keydown." As of jQuery 1.4 the string can contain multiple, space-separated event types or custom event names.
-		 * @param handler A function to execute at the time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute at the time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function live1(events:String, handler:Function):JQuery {
+		public function live1(events:String, callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1212,9 +1212,9 @@ package randori.jquery {
 		 * @since 1.4
 		 * @param events A string containing a JavaScript event type, such as "click" or "keydown." As of jQuery 1.4 the string can contain multiple, space-separated event types or custom event names.
 		 * @param data An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute at the time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute at the time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function live2(events:String, data:Object, handler:Function):JQuery {
+		public function live2(events:String, data:Object, callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1232,9 +1232,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "load" JavaScript event.
 		 * @since 1.0
-		 * @param handler A function to execute when the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute when the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function load1(handler:Function):JQuery {
+		public function load1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1243,9 +1243,9 @@ package randori.jquery {
 		 * Bind an event handler to the "load" JavaScript event.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function load2(eventData:Object=null, handler:Function=null):JQuery {
+		public function load2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1254,18 +1254,18 @@ package randori.jquery {
 		 * @since 1.0
 		 * @param url A string containing the URL to which the request is sent.
 		 * @param data A plain object or string that is sent to the server with the request.
-		 * @param handler A callback function that is executed when the request completes.
+		 * @param callBack A callback function that is executed when the request completes. (The method requires to have the following signature: complete(responseText,textStatus,XMLHttpRequest))
 		*/
-		public function load(url:String, data:*=null, handler:Function=null):JQuery {
+		public function load(url:String, data:*=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
 		/*
 		 * Pass each element in the current matched set through a function, producing a new jQuery object containing the return values.
 		 * @since 1.2
-		 * @param handler A function object that will be invoked for each element in the current set.
+		 * @param callBack A function object that will be invoked for each element in the current set. (The method requires to have the following signature: callback(index,domElement))
 		*/
-		public function map(handler:Function):JQuery {
+		public function map(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1273,9 +1273,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "mousedown" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mousedown1(handler:Function):JQuery {
+		public function mousedown1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1284,9 +1284,9 @@ package randori.jquery {
 		 * Bind an event handler to the "mousedown" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mousedown2(eventData:Object=null, handler:Function=null):JQuery {
+		public function mousedown2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1303,9 +1303,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to be fired when the mouse enters an element, or trigger that handler on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseenter1(handler:Function):JQuery {
+		public function mouseenter1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1314,9 +1314,9 @@ package randori.jquery {
 		 * Bind an event handler to be fired when the mouse enters an element, or trigger that handler on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseenter2(eventData:Object=null, handler:Function=null):JQuery {
+		public function mouseenter2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1333,9 +1333,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to be fired when the mouse leaves an element, or trigger that handler on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseleave1(handler:Function):JQuery {
+		public function mouseleave1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1344,9 +1344,9 @@ package randori.jquery {
 		 * Bind an event handler to be fired when the mouse leaves an element, or trigger that handler on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseleave2(eventData:Object=null, handler:Function=null):JQuery {
+		public function mouseleave2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1363,9 +1363,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "mousemove" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mousemove1(handler:Function):JQuery {
+		public function mousemove1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1374,9 +1374,9 @@ package randori.jquery {
 		 * Bind an event handler to the "mousemove" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mousemove2(eventData:Object=null, handler:Function=null):JQuery {
+		public function mousemove2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1393,9 +1393,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "mouseout" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseout1(handler:Function):JQuery {
+		public function mouseout1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1404,9 +1404,9 @@ package randori.jquery {
 		 * Bind an event handler to the "mouseout" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseout2(eventData:Object=null, handler:Function=null):JQuery {
+		public function mouseout2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1423,9 +1423,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "mouseover" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseover1(handler:Function):JQuery {
+		public function mouseover1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1434,9 +1434,9 @@ package randori.jquery {
 		 * Bind an event handler to the "mouseover" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseover2(eventData:Object=null, handler:Function=null):JQuery {
+		public function mouseover2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1453,9 +1453,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "mouseup" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseup1(handler:Function):JQuery {
+		public function mouseup1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1464,9 +1464,9 @@ package randori.jquery {
 		 * Bind an event handler to the "mouseup" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function mouseup2(eventData:Object=null, handler:Function=null):JQuery {
+		public function mouseup2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1543,9 +1543,9 @@ package randori.jquery {
 		/*
 		 * Remove elements from the set of matched elements.
 		 * @since 1.4
-		 * @param handler A function used as a test for each element in the set. this is the current DOM element. (The method requires to have the following signature: function(index))
+		 * @param callBack A function used as a test for each element in the set. this is the current DOM element. (The method requires to have the following signature: function(index))
 		*/
-		public function not3(handler:Function):JQuery {
+		public function not3(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1565,9 +1565,9 @@ package randori.jquery {
 		 * @since 1.7
 		 * @param events One or more space-separated event types and optional namespaces, or just namespaces, such as "click", "keydown.myPlugin", or ".myPlugin".
 		 * @param selector A selector which should match the one originally passed to .on() when attaching event handlers.
-		 * @param handler A handler function previously attached for the event(s), or the special value false. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A handler function previously attached for the event(s), or the special value false. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function off1(events:String, selector:String='', handler:Function=null):JQuery {
+		public function off1(events:String, selector:String='', callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1597,9 +1597,9 @@ package randori.jquery {
 		 * @param events One or more space-separated event types and optional namespaces, such as "click" or "keydown.myPlugin".
 		 * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
 		 * @param data Data to be passed to the handler in event.data when an event is triggered.
-		 * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function on1(events:String, selector:String='', data:*=null, handler:Function=null):JQuery {
+		public function on1(events:String, selector:String='', data:*=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1621,9 +1621,9 @@ package randori.jquery {
 		 * @since 1.1
 		 * @param events A string containing one or more JavaScript event types, such as "click" or "submit," or custom event names.
 		 * @param data An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute at the time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute at the time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function one1(events:String, data:Object=null, handler:Function=null):JQuery {
+		public function one1(events:String, data:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1634,9 +1634,9 @@ package randori.jquery {
 		 * @param events One or more space-separated event types and optional namespaces, such as "click" or "keydown.myPlugin".
 		 * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
 		 * @param data Data to be passed to the handler in event.data when an event is triggered.
-		 * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function one2(events:String, selector:String='', data:*=null, handler:Function=null):JQuery {
+		public function one2(events:String, selector:String='', data:*=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1733,9 +1733,9 @@ package randori.jquery {
 		/*
 		 * Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.
 		 * @since 1.4
-		 * @param handler A function that returns an HTML string, DOM element(s), or jQuery object to insert at the beginning of each element in the set of matched elements. Receives the index position of the element in the set and the old HTML value of the element as arguments. Within the function, this refers to the current element in the set.
+		 * @param callBack A function that returns an HTML string, DOM element(s), or jQuery object to insert at the beginning of each element in the set of matched elements. Receives the index position of the element in the set and the old HTML value of the element as arguments. Within the function, this refers to the current element in the set. (The method requires to have the following signature: function(index,html))
 		*/
-		public function prepend2(handler:Function):JQuery {
+		public function prepend2(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1851,9 +1851,9 @@ package randori.jquery {
 		/*
 		 * Remove a single class, multiple classes, or all classes from each element in the set of matched elements.
 		 * @since 1.4
-		 * @param handler A function returning one or more space-separated class names to be removed. Receives the index position of the element in the set and the old class value as arguments.
+		 * @param callBack A function returning one or more space-separated class names to be removed. Receives the index position of the element in the set and the old class value as arguments. (The method requires to have the following signature: function(index,class))
 		*/
-		public function removeClass2(handler:Function):JQuery {
+		public function removeClass2(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1909,9 +1909,9 @@ package randori.jquery {
 		/*
 		 * Replace each element in the set of matched elements with the provided new content and return the set of elements that was removed.
 		 * @since 1.4
-		 * @param handler A function that returns content with which to replace the set of matched elements.
+		 * @param callBack A function that returns content with which to replace the set of matched elements.
 		*/
-		public function replaceWith2(handler:Function):JQuery {
+		public function replaceWith2(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1919,9 +1919,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "resize" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function resize1(handler:Function):JQuery {
+		public function resize1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1930,9 +1930,9 @@ package randori.jquery {
 		 * Bind an event handler to the "resize" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function resize2(eventData:Object=null, handler:Function=null):JQuery {
+		public function resize2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1949,9 +1949,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "scroll" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function scroll1(handler:Function):JQuery {
+		public function scroll1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1960,9 +1960,9 @@ package randori.jquery {
 		 * Bind an event handler to the "scroll" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function scroll2(eventData:Object=null, handler:Function=null):JQuery {
+		public function scroll2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -1979,9 +1979,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "select" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function select1(handler:Function):JQuery {
+		public function select1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -1990,9 +1990,9 @@ package randori.jquery {
 		 * Bind an event handler to the "select" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function select2(eventData:Object=null, handler:Function=null):JQuery {
+		public function select2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -2216,9 +2216,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "submit" JavaScript event, or trigger that event on an element.
 		 * @since 1.0
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function submit1(handler:Function):JQuery {
+		public function submit1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -2227,9 +2227,9 @@ package randori.jquery {
 		 * Bind an event handler to the "submit" JavaScript event, or trigger that event on an element.
 		 * @since 1.4.3
 		 * @param eventData An object containing data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function submit2(eventData:Object=null, handler:Function=null):JQuery {
+		public function submit2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -2253,11 +2253,11 @@ package randori.jquery {
 		/*
 		 * Bind two or more handlers to the matched elements, to be executed on alternate clicks.
 		 * @since 1.0
-		 * @param handler1 A function to execute every even time the element is clicked. (The method requires to have the following signature: handler(eventObject))
-		 * @param handler2 A function to execute every odd time the element is clicked. (The method requires to have the following signature: handler(eventObject))
-		 * @param handler3 Additional handlers to cycle through after clicks. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack1 A function to execute every even time the element is clicked. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack2 A function to execute every odd time the element is clicked. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack3 Additional handlers to cycle through after clicks. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function toggle(handler1:Function, handler2:Function, handler3:Function=null):JQuery {
+		public function toggle(callBack1:Function, callBack2:Function, callBack3:Function=null):JQuery {
 			return null;
 		}
 
@@ -2339,10 +2339,10 @@ package randori.jquery {
 		/*
 		 * Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the switch argument.
 		 * @since 1.4
-		 * @param handler A function that returns class names to be toggled in the class attribute of each element in the matched set. Receives the index position of the element in the set, the old class value, and the switch as arguments.
+		 * @param callBack A function that returns class names to be toggled in the class attribute of each element in the matched set. Receives the index position of the element in the set, the old class value, and the switch as arguments. (The method requires to have the following signature: function(index,class,switch))
 		 * @param switch_ A boolean value to determine whether the class should be added or removed.
 		*/
-		public function toggleClass4(handler:Function, switch_:Boolean=false):JQuery {
+		public function toggleClass4(callBack:Function, switch_:Boolean=false):JQuery {
 			return null;
 		}
 
@@ -2382,9 +2382,9 @@ package randori.jquery {
 		 * Remove a previously-attached event handler from the elements.
 		 * @since 1.0
 		 * @param eventType A string containing a JavaScript event type, such as click or submit.
-		 * @param handler The function that is to be no longer executed. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack The function that is to be no longer executed. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function unbind1(eventType:String='', handler:Function=null):JQuery {
+		public function unbind1(eventType:String='', callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -2435,9 +2435,9 @@ package randori.jquery {
 		 * @since 1.4.2
 		 * @param selector A selector which will be used to filter the event results.
 		 * @param eventType A string containing a JavaScript event type, such as "click" or "keydown"
-		 * @param handler A function to execute at the time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute at the time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function undelegate3(selector:String, eventType:String, handler:Function):JQuery {
+		public function undelegate3(selector:String, eventType:String, callBack:Function):JQuery {
 			return null;
 		}
 
@@ -2466,9 +2466,9 @@ package randori.jquery {
 		/*
 		 * Bind an event handler to the "unload" JavaScript event.
 		 * @since 1.0
-		 * @param handler A function to execute when the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute when the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function unload1(handler:Function):JQuery {
+		public function unload1(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -2477,9 +2477,9 @@ package randori.jquery {
 		 * Bind an event handler to the "unload" JavaScript event.
 		 * @since 1.4.3
 		 * @param eventData A plain object of data that will be passed to the event handler.
-		 * @param handler A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
+		 * @param callBack A function to execute each time the event is triggered. (The method requires to have the following signature: handler(eventObject))
 		*/
-		public function unload2(eventData:Object=null, handler:Function=null):JQuery {
+		public function unload2(eventData:Object=null, callBack:Function=null):JQuery {
 			return null;
 		}
 
@@ -2505,9 +2505,9 @@ package randori.jquery {
 		/*
 		 * Wrap an HTML structure around each element in the set of matched elements.
 		 * @since 1.4
-		 * @param handler A callback function returning the HTML content or jQuery object to wrap around the matched elements. Receives the index position of the element in the set as an argument. Within the function, this refers to the current element in the set. (The method requires to have the following signature: function(index))
+		 * @param callBack A callback function returning the HTML content or jQuery object to wrap around the matched elements. Receives the index position of the element in the set as an argument. Within the function, this refers to the current element in the set. (The method requires to have the following signature: function(index))
 		*/
-		public function wrap2(handler:Function):JQuery {
+		public function wrap2(callBack:Function):JQuery {
 			return null;
 		}
 
@@ -2534,9 +2534,9 @@ package randori.jquery {
 		/*
 		 * Wrap an HTML structure around the content of each element in the set of matched elements.
 		 * @since 1.4
-		 * @param handler A callback function which generates a structure to wrap around the content of the matched elements. Receives the index position of the element in the set as an argument. Within the function, this refers to the current element in the set. (The method requires to have the following signature: function(index))
+		 * @param callBack A callback function which generates a structure to wrap around the content of the matched elements. Receives the index position of the element in the set as an argument. Within the function, this refers to the current element in the set. (The method requires to have the following signature: function(index))
 		*/
-		public function wrapInner2(handler:Function):JQuery {
+		public function wrapInner2(callBack:Function):JQuery {
 			return null;
 		}
 	}
