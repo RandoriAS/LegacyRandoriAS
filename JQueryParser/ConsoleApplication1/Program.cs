@@ -164,6 +164,10 @@ namespace ConsoleApplication1
         private static ClassDef CreateArgumentObjectClass(string RawClassName, XDocument xdoc)
         {
             var classDef = new ClassDef() { name = new ClassNameDef() { ActionScriptName = FormatHypenedName(RawClassName), Extends = "Argument" } };
+            if (ClassLookup.ContainsKey(classDef.name.ActionScriptName))
+            {
+                return ClassLookup[classDef.name.ActionScriptName];
+            }
             classDef.attributes.Add("export", "false");
             ClassLookup[classDef.name.ActionScriptName] = classDef;
             xdoc.Root.Elements("property").ToList<XElement>().ForEach(e => AddMemberFromPropertyElement(classDef, e));
@@ -468,7 +472,14 @@ namespace ConsoleApplication1
             var method = new MethodDef() { name = name, type = type };
             method.comments.AddRange(SplitCommentLines(description));
             method.comments.Add("@since " + since);
-            method.parameters = elm.Elements("argument").ToList<XElement>().ConvertAll(e => CreateParameter(e)).ToList<ParamDef>();
+            if (elm.Elements("argument").Count() > 0)
+            {
+                method.parameters = elm.Elements("argument").ToList<XElement>().ConvertAll(e => CreateParameter(e)).ToList<ParamDef>();
+            }
+            else
+            {
+                method.parameters.AddRange(CreateParametersFromIncludeFiles(elm));
+            }
             if (name != originalName)
             {
                 method.attributes.Add("name", originalName);
@@ -506,7 +517,7 @@ namespace ConsoleApplication1
             }
             else if (type == "PlainObject")
             {
-                type = CreatePlainObject(elm);
+                type = CreatePlainObjectFromIncludeFile(elm);
             }
             
             var param = new ParamDef() { name=name,type=type,isOptional=optional};
@@ -514,7 +525,61 @@ namespace ConsoleApplication1
             return param;
         }
 
-        private static string CreatePlainObject(XElement elm)
+        private static List<ParamDef> CreateParametersFromIncludeFiles(XElement elm)
+        {
+            var parameters = new List<ParamDef>();
+            XNamespace ns = "http://www.w3.org/2003/XInclude";
+            var includes = elm.Elements(ns + "include").ToList<XElement>();
+            includes.ForEach(i => CreateParameterFromIncludeFile(i.Attribute("href").Value, parameters));
+            return parameters;
+        }
+
+        private static void CreateParameterFromIncludeFile(string path, List<ParamDef> parameters)
+        {
+            var FullPath = Path.Combine(JQueryEntriesDir, path);
+            if (File.Exists(FullPath))
+            {
+                var FileName = Path.GetFileNameWithoutExtension(FullPath);
+                if (FileName.EndsWith("-argument"))
+                {
+                    parameters.Add(Argument2Parameter(FullPath));
+                }
+            }
+        }
+
+        private static ParamDef Argument2Parameter(string path)
+        {
+            var xdoc = XDocument.Load(path);
+            var paramDef = new ParamDef();
+            paramDef.name = xdoc.Root.Attribute("name").Value;
+            paramDef.isOptional = (xdoc.Root.Attribute("optional") != null) ? (xdoc.Root.Attribute("optional").Value == "true") : false;
+            paramDef.defaultValue = (xdoc.Root.Attribute("default") != null) ? xdoc.Root.Attribute("default").Value : null;
+            
+            if ((xdoc.Root.Attribute("type") != null) && (xdoc.Root.Attribute("type").Value == "PlainObject"))
+            {
+                var classDef = Argument2Class(path);
+                if (classDef != null)
+                {
+                    paramDef.type = classDef.name.ActionScriptName;
+                }
+                else
+                {
+                    paramDef.type = "Object";
+                }
+            }
+            else
+            {
+                paramDef.type = (xdoc.Root.Attribute("type") != null) ? xdoc.Root.Attribute("type").Value : "*";
+            }
+
+            if (xdoc.Root.Element("desc") != null)
+            {
+                paramDef.comments.AddRange(SplitCommentLines(xdoc.Root.Element("desc").Value));
+            }
+            return paramDef;
+        }
+
+        private static string CreatePlainObjectFromIncludeFile(XElement elm)
         {
             XNamespace ns = "http://www.w3.org/2003/XInclude";
             var includes = elm.Parent.Elements(ns + "include").ToList<XElement>();

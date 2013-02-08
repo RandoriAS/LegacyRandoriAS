@@ -645,8 +645,10 @@ package randori.jquery {
 		/*
 		 * Display the matched elements by fading them to opaque.
 		 * @since 1.0
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function fadeIn1():JQuery {
+		public function fadeIn1(duration:*=400, complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -654,8 +656,9 @@ package randori.jquery {
 		/*
 		 * Display the matched elements by fading them to opaque.
 		 * @since 1.0
+		 * @param options A map of additional options to pass to the method.
 		*/
-		public function fadeIn2():JQuery {
+		public function fadeIn2(options:OptionsArgument):JQuery {
 			return null;
 		}
 
@@ -663,8 +666,11 @@ package randori.jquery {
 		/*
 		 * Display the matched elements by fading them to opaque.
 		 * @since 1.4.3
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param easing A string indicating which easing function to use for the transition.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function fadeIn3():JQuery {
+		public function fadeIn3(duration:*=400, easing:String='swing', complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -672,8 +678,10 @@ package randori.jquery {
 		/*
 		 * Hide the matched elements by fading them to transparent.
 		 * @since 1.0
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function fadeOut1():JQuery {
+		public function fadeOut1(duration:*=400, complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -681,8 +689,9 @@ package randori.jquery {
 		/*
 		 * Hide the matched elements by fading them to transparent.
 		 * @since 1.0
+		 * @param options A map of additional options to pass to the method.
 		*/
-		public function fadeOut2():JQuery {
+		public function fadeOut2(options:OptionsArgument):JQuery {
 			return null;
 		}
 
@@ -690,8 +699,11 @@ package randori.jquery {
 		/*
 		 * Hide the matched elements by fading them to transparent.
 		 * @since 1.4.3
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param easing A string indicating which easing function to use for the transition.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function fadeOut3():JQuery {
+		public function fadeOut3(duration:*=400, easing:String='swing', complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -724,8 +736,11 @@ package randori.jquery {
 		/*
 		 * Display or hide the matched elements by animating their opacity.
 		 * @since 1.4.4
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param easing A string indicating which easing function to use for the transition.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function fadeToggle1():JQuery {
+		public function fadeToggle1(duration:*=400, easing:String='swing', complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -733,8 +748,9 @@ package randori.jquery {
 		/*
 		 * Display or hide the matched elements by animating their opacity.
 		 * @since 1.4.4
+		 * @param options A map of additional options to pass to the method.
 		*/
-		public function fadeToggle2():JQuery {
+		public function fadeToggle2(options:OptionsArgument):JQuery {
 			return null;
 		}
 
@@ -949,8 +965,10 @@ package randori.jquery {
 		/*
 		 * Hide the matched elements.
 		 * @since 1.0
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function hide2():JQuery {
+		public function hide2(duration:*=400, complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -958,8 +976,9 @@ package randori.jquery {
 		/*
 		 * Hide the matched elements.
 		 * @since 1.0
+		 * @param options A map of additional options to pass to the method.
 		*/
-		public function hide3():JQuery {
+		public function hide3(options:OptionsArgument):JQuery {
 			return null;
 		}
 
@@ -967,8 +986,11 @@ package randori.jquery {
 		/*
 		 * Hide the matched elements.
 		 * @since 1.4.3
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param easing A string indicating which easing function to use for the transition.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function hide4():JQuery {
+		public function hide4(duration:*=400, easing:String='swing', complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -2012,8 +2034,10 @@ package randori.jquery {
 		/*
 		 * Display the matched elements.
 		 * @since 1.0
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function show2():JQuery {
+		public function show2(duration:*=400, complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -2021,8 +2045,9 @@ package randori.jquery {
 		/*
 		 * Display the matched elements.
 		 * @since 1.0
+		 * @param options A map of additional options to pass to the method.
 		*/
-		public function show3():JQuery {
+		public function show3(options:OptionsArgument):JQuery {
 			return null;
 		}
 
@@ -2030,8 +2055,11 @@ package randori.jquery {
 		/*
 		 * Display the matched elements.
 		 * @since 1.4.3
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param easing A string indicating which easing function to use for the transition.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function show4():JQuery {
+		public function show4(duration:*=400, easing:String='swing', complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -2066,8 +2094,10 @@ package randori.jquery {
 		/*
 		 * Display the matched elements with a sliding motion.
 		 * @since 1.0
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function slideDown1():JQuery {
+		public function slideDown1(duration:*=400, complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -2075,8 +2105,9 @@ package randori.jquery {
 		/*
 		 * Display the matched elements with a sliding motion.
 		 * @since 1.0
+		 * @param options A map of additional options to pass to the method.
 		*/
-		public function slideDown2():JQuery {
+		public function slideDown2(options:OptionsArgument):JQuery {
 			return null;
 		}
 
@@ -2084,8 +2115,11 @@ package randori.jquery {
 		/*
 		 * Display the matched elements with a sliding motion.
 		 * @since 1.4.3
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param easing A string indicating which easing function to use for the transition.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function slideDown3():JQuery {
+		public function slideDown3(duration:*=400, easing:String='swing', complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -2093,8 +2127,10 @@ package randori.jquery {
 		/*
 		 * Display or hide the matched elements with a sliding motion.
 		 * @since 1.0
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function slideToggle1():JQuery {
+		public function slideToggle1(duration:*=400, complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -2102,8 +2138,9 @@ package randori.jquery {
 		/*
 		 * Display or hide the matched elements with a sliding motion.
 		 * @since 1.0
+		 * @param options A map of additional options to pass to the method.
 		*/
-		public function slideToggle2():JQuery {
+		public function slideToggle2(options:OptionsArgument):JQuery {
 			return null;
 		}
 
@@ -2111,8 +2148,11 @@ package randori.jquery {
 		/*
 		 * Display or hide the matched elements with a sliding motion.
 		 * @since 1.4.3
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param easing A string indicating which easing function to use for the transition.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function slideToggle3():JQuery {
+		public function slideToggle3(duration:*=400, easing:String='swing', complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -2120,8 +2160,10 @@ package randori.jquery {
 		/*
 		 * Hide the matched elements with a sliding motion.
 		 * @since 1.0
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function slideUp1():JQuery {
+		public function slideUp1(duration:*=400, complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -2129,8 +2171,9 @@ package randori.jquery {
 		/*
 		 * Hide the matched elements with a sliding motion.
 		 * @since 1.0
+		 * @param options A map of additional options to pass to the method.
 		*/
-		public function slideUp2():JQuery {
+		public function slideUp2(options:OptionsArgument):JQuery {
 			return null;
 		}
 
@@ -2138,8 +2181,11 @@ package randori.jquery {
 		/*
 		 * Hide the matched elements with a sliding motion.
 		 * @since 1.4.3
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param easing A string indicating which easing function to use for the transition.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function slideUp3():JQuery {
+		public function slideUp3(duration:*=400, easing:String='swing', complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -2219,8 +2265,10 @@ package randori.jquery {
 		/*
 		 * Display or hide the matched elements.
 		 * @since 1.0
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function toggle1():JQuery {
+		public function toggle1(duration:*=400, complete:Function=null):JQuery {
 			return null;
 		}
 
@@ -2228,8 +2276,9 @@ package randori.jquery {
 		/*
 		 * Display or hide the matched elements.
 		 * @since 1.0
+		 * @param options A map of additional options to pass to the method.
 		*/
-		public function toggle2():JQuery {
+		public function toggle2(options:OptionsArgument):JQuery {
 			return null;
 		}
 
@@ -2237,8 +2286,11 @@ package randori.jquery {
 		/*
 		 * Display or hide the matched elements.
 		 * @since 1.4.3
+		 * @param duration A string or number determining how long the animation will run.
+		 * @param easing A string indicating which easing function to use for the transition.
+		 * @param complete A function to call once the animation is complete.
 		*/
-		public function toggle3():JQuery {
+		public function toggle3(duration:*=400, easing:String='swing', complete:Function=null):JQuery {
 			return null;
 		}
 
