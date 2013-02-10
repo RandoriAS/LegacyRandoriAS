@@ -69,10 +69,12 @@ public class IDBCursor
 	*  @param count
 	*/
 	public function advance(count:Number):void {}
+	[JavascriptMethod(name="continue")]
 	/**
 	*  @param key (optional argument, default value is <code>null</code>)
 	*/
 	public function continue_(key:*=null):void {}
+	[JavascriptMethod(name="delete")]
 	/**
 	*  @return A <code>IDBRequest</code> instance.
 	*/

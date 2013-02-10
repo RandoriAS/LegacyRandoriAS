@@ -1,0 +1,7 @@
+C:\projects\RandoriAS\NodeJSParser\NodeJSParser\bin\Debug\NodeJSParser.exe.config
+C:\projects\RandoriAS\NodeJSParser\NodeJSParser\bin\Debug\NodeJSParser.exe
+C:\projects\RandoriAS\NodeJSParser\NodeJSParser\bin\Debug\NodeJSParser.pdb
+C:\projects\RandoriAS\NodeJSParser\NodeJSParser\bin\Debug\Newtonsoft.Json.dll
+C:\projects\RandoriAS\NodeJSParser\NodeJSParser\obj\Debug\NodeJSParser.csprojResolveAssemblyReference.cache
+C:\projects\RandoriAS\NodeJSParser\NodeJSParser\obj\Debug\NodeJSParser.exe
+C:\projects\RandoriAS\NodeJSParser\NodeJSParser\obj\Debug\NodeJSParser.pdb

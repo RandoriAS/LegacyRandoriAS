@@ -1063,6 +1063,7 @@ namespace WebIDLParser
         public TFileType parentType;
         public string name = "";
         public string aliasName = "";
+        public bool isStatic = false;
         public TType resultType;
         public TAttributeList attributes = new TAttributeList();
         public List<String> comments = new List<String>();
@@ -1105,11 +1106,12 @@ namespace WebIDLParser
         {
             var modifier = "public";
             if (isPrivate) modifier = "private";
+            if (isStatic) modifier += " static";
             if (parentType.isInterface && !impl) modifier = "";
             var rType = resultType.ToString();
 
             var sName = Generator.getName(name);
-            if (sName.StartsWith("$"))
+            if (sName.EndsWith("_"))
             {
                 aliasName = name;
             }
@@ -1216,6 +1218,7 @@ namespace WebIDLParser
             }
             AddComments(sb);
             var modifier = "public";
+            if (isStatic) modifier += " static";
             if (parentType.isInterface && !impl) modifier = "";
             if (canRead)
             {
