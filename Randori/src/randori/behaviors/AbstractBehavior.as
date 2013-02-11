@@ -20,6 +20,8 @@ package randori.behaviors {
 	import guice.reflection.InjectionPoint;
 	import guice.reflection.TypeDefinition;
 	
+	import randori.jquery.JQuery;
+	import randori.jquery.JQueryStatic;
 	import randori.webkit.html.HTMLElement;
 	import randori.webkit.page.Window;
 
@@ -76,6 +78,7 @@ package randori.behaviors {
 		
 		public function provideDecoratedElement( element:HTMLElement ):void {
 			this.decoratedElement = element;
+			
 			this.decoratedNode = J(decoratedElement);
 			onPreRegister();
 		}
@@ -87,7 +90,7 @@ package randori.behaviors {
 					var typeDefinition:TypeDefinition = new TypeDefinition(instance.constructor);
 					
 					//Revisit me when we resolve window approach
-					Window.window.alert(typeDefinition.getClassName() + " requires a [View] element with the id of " + id + " but it could not be found");
+					Window.alert(typeDefinition.getClassName() + " requires a [View] element with the id of " + id + " but it could not be found");
 					throw new Error(typeDefinition.getClassName() + " requires a [View] element with the id of " + id + " but it could not be found");
 					return;                    
 				}

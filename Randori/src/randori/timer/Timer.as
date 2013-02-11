@@ -59,12 +59,12 @@ package randori.timer {
 				stop();
 			}
 
-			intervalID = Window.window.setInterval(onTimerTick, delay);
+			intervalID = Window.setInterval(onTimerTick, delay);
 		}
 		
 		public function stop():void {
 			if ( intervalID != -1 ) {
-				Window.window.clearInterval( intervalID );
+				Window.clearInterval( intervalID );
 			}
 			
 			intervalID = -1;

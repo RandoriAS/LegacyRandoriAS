@@ -22,15 +22,15 @@ package randori.i18n {
 
 	public class NoOpTranslator extends AbstractTranslator {
 		public override function synchronousTranslate( domain:String, keys:Vector.<String> ):Vector.<Translation> {
-			if (Window.window.console != null) {
-				Window.window.console.log("Requested to translate: " + domain + " " + keys);
+			if (Window.console != null) {
+				Window.console.log("Requested to translate: " + domain + " " + keys);
 			}
 			return new Vector.<Translation>();
 		}
 		
 		public override function translate(domain:String, keys:Vector.<String>):void {
-			if (Window.window.console != null) {
-				Window.window.console.log("Requested to translate: " + domain + " " + keys);
+			if (Window.console != null) {
+				Window.console.log("Requested to translate: " + domain + " " + keys);
 			}
 		}
 

@@ -54,12 +54,12 @@ package randori.async {
 			
 			if (state == FULLFILLED) {
 				//3.2.4
-				Window.window.setTimeout( function():void {
+				Window.setTimeout( function():void {
 					fullfill(value);
 				}, 1);
 			} else if (state == REJECTED) {
 				//3.2.4
-				Window.window.setTimeout( function():void {
+				Window.setTimeout( function():void {
 					internalReject(reason);
 				}, 1);
 			}

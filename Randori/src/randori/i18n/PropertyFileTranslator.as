@@ -81,7 +81,7 @@ package randori.i18n {
 			request.send( null );
 			
 			if (request.status == 404) {
-				Window.window.alert("Required Content " + url + " cannot be loaded.");
+				Window.alert("Required Content " + url + " cannot be loaded.");
 				throw new Error("Cannot continue, missing required property file " + url);
 			}
 			
@@ -102,7 +102,7 @@ package randori.i18n {
 					parseResult( request.responseText );
 					fileLoaded();
 				} else if ( request.readyState >= 3 && request.status == 404 ) {
-					Window.window.alert( "Required Content " + url + " cannot be loaded." );
+					Window.alert( "Required Content " + url + " cannot be loaded." );
 					throw new Error( "Cannot continue, missing required property file " + url );
 				}
 			};
