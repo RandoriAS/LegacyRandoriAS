@@ -15,33 +15,35 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
+ * The XML files at this location: https://github.com/jquery/api.jquery.com were
+ * used to generate this class
  * @author Randori JQuery generator
 */
-package randori.jquery
-{
+package randori.jquery {
 	import randori.webkit.dom.Element;
+	
+	
 	[Javascript(export="false")]
-	public class FxObject
-	{
-		public function FxObject()
-		{
-			super();
-		}
+	public class FxObject {
+		
 		/*
 		 * The animated element
-		*/
+		 */
 		public var elem:Element;
+		
 		/*
 		 * The first value of the animated property
-		*/
+		 */
 		public var start:Number;
+		
 		/*
 		 * The last value of the animated property
-		*/
+		 */
 		public var end:Number;
+		
 		/*
 		 * The property being animated
-		*/
+		 */
 		public var prop:String;
 	}
 }
