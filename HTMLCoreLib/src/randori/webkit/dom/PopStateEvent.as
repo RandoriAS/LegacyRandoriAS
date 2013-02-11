@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="PopStateEvent")]
+[Javascript(export="false", name="PopStateEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

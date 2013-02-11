@@ -42,7 +42,7 @@ package randori.webkit.modules.notifications
 {
 
 
-[JavaScript(export="false", nativecondition="NOTIFICATIONS", name="DOMWindowNotifications")]
+[Javascript(export="false", nativecondition="NOTIFICATIONS", name="DOMWindowNotifications")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

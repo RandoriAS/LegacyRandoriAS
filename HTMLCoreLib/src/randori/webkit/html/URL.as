@@ -43,7 +43,7 @@ package randori.webkit.html
 
 import randori.webkit.fileapi.Blob;
 
-[JavaScript(export="false", nativecondition="BLOB", name="URL")]
+[Javascript(export="false", nativecondition="BLOB", name="URL")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

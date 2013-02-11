@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="EntityReference")]
+[Javascript(export="false", name="EntityReference")]
 /**
  *  <p><code>EntityReference</code> objects may be inserted into the
  *  structure model when an entity reference is in the source document, or

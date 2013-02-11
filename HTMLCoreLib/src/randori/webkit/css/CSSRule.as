@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export="false", name="CSSRule")]
+[Javascript(export="false", name="CSSRule")]
 /**
  *  <p>
  *  The <code>CSSRule</code> interface is the abstract base interface for any

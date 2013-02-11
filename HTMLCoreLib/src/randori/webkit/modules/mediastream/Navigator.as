@@ -42,7 +42,7 @@ package randori.webkit.modules.mediastream
 {
 
 
-[JavaScript(export="false", nativecondition="MEDIA_STREAM", name="NavigatorMediaStream")]
+[Javascript(export="false", nativecondition="MEDIA_STREAM", name="NavigatorMediaStream")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

@@ -43,7 +43,7 @@ package randori.webkit.fileapi
 
 import randori.webkit.html.canvas.ArrayBuffer;
 
-[JavaScript(export="false", nativecondition="BLOB", name="FileReaderSync")]
+[Javascript(export="false", nativecondition="BLOB", name="FileReaderSync")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

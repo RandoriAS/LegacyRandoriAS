@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export="false", nativecondition="DATALIST_ELEMENT", name="HTMLDataListElement")]
+[Javascript(export="false", nativecondition="DATALIST_ELEMENT", name="HTMLDataListElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

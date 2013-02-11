@@ -42,7 +42,7 @@ package randori.webkit.modules.filesystem
 {
 
 
-[JavaScript(export="false", nativecondition="FILE_SYSTEM", name="Metadata")]
+[Javascript(export="false", nativecondition="FILE_SYSTEM", name="Metadata")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

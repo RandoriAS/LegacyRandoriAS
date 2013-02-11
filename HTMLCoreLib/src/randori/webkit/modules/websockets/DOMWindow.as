@@ -42,7 +42,7 @@ package randori.webkit.modules.websockets
 {
 
 
-[JavaScript(export="false", nativecondition="WEB_SOCKETS", name="DOMWindowWebSocket")]
+[Javascript(export="false", nativecondition="WEB_SOCKETS", name="DOMWindowWebSocket")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

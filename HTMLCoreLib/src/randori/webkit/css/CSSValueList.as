@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export="false", name="CSSValueList")]
+[Javascript(export="false", name="CSSValueList")]
 /**
  *  <p>The <code>CSSValueList</code> interface provides the abstraction of an
  *  ordered collection of CSS values.</p><p>

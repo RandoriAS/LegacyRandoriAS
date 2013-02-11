@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="Attr")]
+[Javascript(export="false", name="Attr")]
 /**
  *  <p>
  *  The <code>Attr</code> interface represents an attribute in an <code>Element</code> object.

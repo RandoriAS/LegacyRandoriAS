@@ -43,7 +43,7 @@ package randori.webkit.html.canvas
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export="false", nativecondition="WEBGL", name="WebGLContextEvent")]
+[Javascript(export="false", nativecondition="WEBGL", name="WebGLContextEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

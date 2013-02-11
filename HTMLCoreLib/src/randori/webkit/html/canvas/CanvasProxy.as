@@ -42,7 +42,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export="false", nativecondition="CANVAS_PROXY", name="CanvasProxy")]
+[Javascript(export="false", nativecondition="CANVAS_PROXY", name="CanvasProxy")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

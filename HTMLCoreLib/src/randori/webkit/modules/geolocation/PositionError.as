@@ -42,7 +42,7 @@ package randori.webkit.modules.geolocation
 {
 
 
-[JavaScript(export="false", nativecondition="GEOLOCATION", name="PositionError")]
+[Javascript(export="false", nativecondition="GEOLOCATION", name="PositionError")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

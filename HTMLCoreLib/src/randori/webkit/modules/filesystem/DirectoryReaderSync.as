@@ -42,7 +42,7 @@ package randori.webkit.modules.filesystem
 {
 
 
-[JavaScript(export="false", nativecondition="FILE_SYSTEM", name="DirectoryReaderSync")]
+[Javascript(export="false", nativecondition="FILE_SYSTEM", name="DirectoryReaderSync")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

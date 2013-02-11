@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export="false", name="CSSImportRule")]
+[Javascript(export="false", name="CSSImportRule")]
 /**
  *  <p>
  *  The <code>CSSImportRule</code> interface represents a @import

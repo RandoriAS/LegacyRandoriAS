@@ -42,7 +42,7 @@ package randori.webkit.modules.webdatabase
 {
 
 
-[JavaScript(export="false", nativecondition="SQL_DATABASE", name="SQLResultSetRowList")]
+[Javascript(export="false", nativecondition="SQL_DATABASE", name="SQLResultSetRowList")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

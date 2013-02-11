@@ -55,7 +55,7 @@ import randori.webkit.page.Selection;
 import randori.webkit.html.canvas.CanvasRenderingContext;
 import randori.webkit.page.SecurityPolicy;
 
-[JavaScript(export="false", name="Document")]
+[Javascript(export="false", name="Document")]
 /**
  *  <p>The <code>Document</code> interface represents the entire
  *  HTML or XML document. Conceptually, it is the root of the

@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export="false", name="HTMLTableRowElement")]
+[Javascript(export="false", name="HTMLTableRowElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

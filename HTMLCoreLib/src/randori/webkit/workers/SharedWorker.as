@@ -43,7 +43,7 @@ package randori.webkit.workers
 
 import randori.webkit.dom.MessagePort;
 
-[JavaScript(export="false", nativecondition="SHARED_WORKERS", name="SharedWorker")]
+[Javascript(export="false", nativecondition="SHARED_WORKERS", name="SharedWorker")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

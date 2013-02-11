@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export="false", name="CSSPageRule")]
+[Javascript(export="false", name="CSSPageRule")]
 /**
  *  <p>
  *  The <code>CSSPageRule</code> interface represents a @page

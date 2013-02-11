@@ -43,7 +43,7 @@ package randori.webkit.modules.webaudio
 
 import randori.webkit.html.canvas.ArrayBuffer;
 
-[JavaScript(export="false", nativecondition="WEB_AUDIO", name="AudioContext")]
+[Javascript(export="false", nativecondition="WEB_AUDIO", name="AudioContext")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

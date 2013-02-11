@@ -44,7 +44,7 @@ package randori.webkit.html.shadow
 import randori.webkit.html.HTMLElement;
 import randori.webkit.dom.NodeList;
 
-[JavaScript(export="false", nativecondition="SHADOW_DOM", name="HTMLContentElement")]
+[Javascript(export="false", nativecondition="SHADOW_DOM", name="HTMLContentElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

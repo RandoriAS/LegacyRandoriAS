@@ -42,7 +42,7 @@ package randori.webkit.modules.webaudio
 {
 
 
-[JavaScript(export="false", nativecondition="WEB_AUDIO", name="ConvolverNode")]
+[Javascript(export="false", nativecondition="WEB_AUDIO", name="ConvolverNode")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

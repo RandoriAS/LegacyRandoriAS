@@ -43,7 +43,7 @@ package randori.webkit.dom
 
 import randori.webkit.page.Selection;
 
-[JavaScript(export="false", nativecondition="SHADOW_DOM", name="ShadowRoot")]
+[Javascript(export="false", nativecondition="SHADOW_DOM", name="ShadowRoot")]
 /**
  *  <note>This class depends on the browser to support: <code>SHADOW_DOM</code></note>
  *  @author RandoriAS Web IDL Parser

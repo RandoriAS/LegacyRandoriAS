@@ -42,7 +42,7 @@ package randori.webkit.fileapi
 {
 
 
-[JavaScript(export="false", name="File")]
+[Javascript(export="false", name="File")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

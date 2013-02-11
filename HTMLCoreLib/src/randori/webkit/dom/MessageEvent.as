@@ -43,7 +43,7 @@ package randori.webkit.dom
 
 import randori.webkit.page.Window;
 
-[JavaScript(export="false", name="MessageEvent")]
+[Javascript(export="false", name="MessageEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
