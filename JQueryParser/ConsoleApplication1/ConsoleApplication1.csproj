@@ -41,12 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="output\ClassDef.cs" />
-    <Compile Include="output\JsAttribute.cs" />
-    <Compile Include="output\JsAttributes.cs" />
-    <Compile Include="output\MemberDef.cs" />
-    <Compile Include="output\MethodDef.cs" />
-    <Compile Include="output\ParamDef.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
