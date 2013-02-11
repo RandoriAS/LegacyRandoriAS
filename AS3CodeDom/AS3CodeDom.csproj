@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F11D6F60-BA08-4316-9D08-CE9A2F897191}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{B6C24023-FE7D-4E71-A0FA-8537C34DE01B}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApplication1</RootNamespace>
-    <AssemblyName>ConsoleApplication1</AssemblyName>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>AS3CodeDom</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,23 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="output\ClassDef.cs" />
-    <Compile Include="output\JsAttribute.cs" />
-    <Compile Include="output\JsAttributes.cs" />
-    <Compile Include="output\MemberDef.cs" />
-    <Compile Include="output\MethodDef.cs" />
-    <Compile Include="output\ParamDef.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\AS3CodeDom\AS3CodeDom.csproj">
-      <Project>{b6c24023-fe7d-4e71-a0fa-8537c34de01b}</Project>
-      <Name>AS3CodeDom</Name>
-    </ProjectReference>
+    <Compile Include="System\CodeDom\Compiler\AS3CodeProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System\CodeDom\Compiler\ClassBuilder.cs" />
+    <Compile Include="System\CodeDom\Compiler\ClassNameDef.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

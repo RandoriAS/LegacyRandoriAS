@@ -25,10 +25,12 @@ namespace ConsoleApplication1.output
 @" * " + Environment.NewLine +
 @" * " + Environment.NewLine +
 @" * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!" + Environment.NewLine +
+@" * The XML files at this location: https://github.com/jquery/api.jquery.com were" + Environment.NewLine +
+@" *  used to generate this class" + Environment.NewLine +
 @" * @author Randori JQuery generator" + Environment.NewLine +
 @"*/";
         public string package = "randori.jquery";
-        public ClassNameDef name { get; set; }
+        public System.CodeDom.Compiler.ClassNameDef name { get; set; }
         public string extends { get; set; }
         public List<MemberDef> members { get; set; }
         public List<MethodDef> methods { get; set; }
