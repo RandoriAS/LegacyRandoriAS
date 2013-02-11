@@ -42,7 +42,7 @@ package randori.webkit.modules.webaudio
 {
 
 
-[JavaScript(export="false", nativecondition="WEB_AUDIO", name="WaveShaperNode")]
+[Javascript(export="false", nativecondition="WEB_AUDIO", name="WaveShaperNode")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

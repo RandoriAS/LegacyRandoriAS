@@ -43,7 +43,7 @@ package randori.webkit.dom
 
 import randori.webkit.page.Window;
 
-[JavaScript(export="false", name="CompositionEvent")]
+[Javascript(export="false", name="CompositionEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

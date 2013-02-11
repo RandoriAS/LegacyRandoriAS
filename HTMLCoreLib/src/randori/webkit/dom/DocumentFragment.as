@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="DocumentFragment")]
+[Javascript(export="false", name="DocumentFragment")]
 /**
  *  <p><code>DocumentFragment</code> is a "lightweight" or "minimal"
  *  <code>Document</code> object. It is very common to want to be able to

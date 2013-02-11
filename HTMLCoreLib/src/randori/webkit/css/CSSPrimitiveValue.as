@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export="false", name="CSSPrimitiveValue")]
+[Javascript(export="false", name="CSSPrimitiveValue")]
 /**
  *  <p>
  *  The <code>CSSPrimitiveValue</code> interface represents a single

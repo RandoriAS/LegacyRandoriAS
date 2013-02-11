@@ -450,7 +450,7 @@ namespace WebIDLParser
             bool isDynamic = false;
             isDynamic = (members.FirstOrDefault(c => c.name == "this") != null);
 
-            sb.Append("[JavaScript(" + jsAttributes.ToString() + ")]" + Environment.NewLine);
+            sb.Append("[Javascript(" + jsAttributes.ToString() + ")]" + Environment.NewLine);
             string typeType = "class";
             if (isInterface) typeType = "interface";
             if (isDynamic)

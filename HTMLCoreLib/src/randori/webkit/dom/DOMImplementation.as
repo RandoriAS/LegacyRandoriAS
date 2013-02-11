@@ -44,7 +44,7 @@ package randori.webkit.dom
 import randori.webkit.css.CSSStyleSheet;
 import randori.webkit.html.HTMLDocument;
 
-[JavaScript(export="false", name="DOMImplementation")]
+[Javascript(export="false", name="DOMImplementation")]
 /**
  *  <p>The <code>DOMImplementation</code> interface provides a
  *  number of methods for performing operations that are independent

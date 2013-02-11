@@ -42,7 +42,7 @@ package randori.webkit.inspector
 {
 
 
-[JavaScript(export="false", nativecondition="JAVASCRIPT_DEBUGGER", name="ScriptProfile")]
+[Javascript(export="false", nativecondition="JAVASCRIPT_DEBUGGER", name="ScriptProfile")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

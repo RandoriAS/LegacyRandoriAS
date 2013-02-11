@@ -43,7 +43,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.NodeList;
 
-[JavaScript(export="false", nativecondition="PROGRESS_ELEMENT", name="HTMLProgressElement")]
+[Javascript(export="false", nativecondition="PROGRESS_ELEMENT", name="HTMLProgressElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

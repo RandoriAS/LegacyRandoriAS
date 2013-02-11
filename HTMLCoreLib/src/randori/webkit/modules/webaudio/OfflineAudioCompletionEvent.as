@@ -43,7 +43,7 @@ package randori.webkit.modules.webaudio
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export="false", nativecondition="WEB_AUDIO", name="OfflineAudioCompletionEvent")]
+[Javascript(export="false", nativecondition="WEB_AUDIO", name="OfflineAudioCompletionEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

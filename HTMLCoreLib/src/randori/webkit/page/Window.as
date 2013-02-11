@@ -244,7 +244,7 @@ import randori.webkit.fileapi.FileError;
 import randori.webkit.fileapi.FileReader;
 import randori.webkit.html.URL;
 
-[JavaScript(mode="global", export="false", name="Window")]
+[Javascript(mode="global", export="false", name="Window")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

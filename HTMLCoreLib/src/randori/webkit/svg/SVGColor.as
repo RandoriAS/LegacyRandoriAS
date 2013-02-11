@@ -44,7 +44,7 @@ package randori.webkit.svg
 import randori.webkit.css.CSSValue;
 import randori.webkit.css.RGBColor;
 
-[JavaScript(export="false", nativecondition="SVG", name="SVGColor")]
+[Javascript(export="false", nativecondition="SVG", name="SVGColor")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

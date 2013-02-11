@@ -43,7 +43,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.NodeList;
 
-[JavaScript(export="false", name="RadioNodeList")]
+[Javascript(export="false", name="RadioNodeList")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

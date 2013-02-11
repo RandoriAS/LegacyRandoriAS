@@ -42,7 +42,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export="false", name="MemoryInfo")]
+[Javascript(export="false", name="MemoryInfo")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

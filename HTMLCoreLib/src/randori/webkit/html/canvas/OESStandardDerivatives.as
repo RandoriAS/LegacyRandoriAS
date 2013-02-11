@@ -42,7 +42,7 @@ package randori.webkit.html.canvas
 {
 
 
-[JavaScript(export="false", nativecondition="WEBGL", name="OESStandardDerivatives")]
+[Javascript(export="false", nativecondition="WEBGL", name="OESStandardDerivatives")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

@@ -43,7 +43,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.NodeList;
 
-[JavaScript(export="false", nativecondition="METER_ELEMENT", name="HTMLMeterElement")]
+[Javascript(export="false", nativecondition="METER_ELEMENT", name="HTMLMeterElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

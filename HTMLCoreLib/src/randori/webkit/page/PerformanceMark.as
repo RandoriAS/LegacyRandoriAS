@@ -42,7 +42,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export="false", nativecondition="USER_TIMING", name="PerformanceMark")]
+[Javascript(export="false", nativecondition="USER_TIMING", name="PerformanceMark")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

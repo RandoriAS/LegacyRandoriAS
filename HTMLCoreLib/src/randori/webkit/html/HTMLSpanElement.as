@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export="false", name="HTMLSpanElement")]
+[Javascript(export="false", name="HTMLSpanElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

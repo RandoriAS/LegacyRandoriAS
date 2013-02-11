@@ -1,19 +1,19 @@
 /***
  * Copyright 2013 LTN Consulting, Inc. /dba Digital PrimatesÂ®
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an 'AS IS' BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
- * 
+ *
+ *
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
  * The XML files at this location: https://github.com/jquery/api.jquery.com were
  * used to generate this class
@@ -22,41 +22,41 @@
 package randori.jquery {
 	import randori.webkit.xml.XMLHttpRequest;
 	import randori.webkit.dom.Element;
-	
-	
+
+
 	[Javascript(export="false", name="JQuery")]
 	public final class JQueryStatic {
-		
+
 		/*
 		 * Deprecated in jQuery 1.3 (see jQuery.support). States if the current page, in the user's browser, is being rendered using the W3C CSS Box Model.
 		 * @since 1.0
 		 */
 		public static var boxModel:Boolean;
-		
+
 		/*
 		 * Hook directly into jQuery to override how particular CSS properties are retrieved or set, normalize CSS property naming, or create custom properties.
 		 * @since 1.4.3
 		 */
 		public static var cssHooks:Object;
-		
+
 		/*
 		 * The rate (in milliseconds) at which animations fire.
 		 * @since 1.4.3
 		 */
 		public static var interval:Number;
-		
+
 		/*
 		 * Globally disable all animations.
 		 * @since 1.3
 		 */
 		public static var off:Boolean;
-		
+
 		/*
 		 * A collection of properties that represent the presence of different browser features or bugs. Primarily intended for jQuery's internal use; specific properties may be removed when they are no longer needed internally to improve page startup performance.
 		 * @since 1.3
 		 */
 		public static var support:Object;
-		
+
 		/*
 		 * Perform an asynchronous HTTP (Ajax) request.
 		 * @since 1.5
@@ -66,7 +66,7 @@ package randori.jquery {
 		public static function ajax(url:String, settings:Object=null):XMLHttpRequest {
 			return null;
 		}
-		
+
 		/*
 		 * Perform an asynchronous HTTP (Ajax) request.
 		 * @since 1.0
@@ -76,7 +76,7 @@ package randori.jquery {
 		public static function ajax2(settings:SettingsObject=null):XMLHttpRequest {
 			return null;
 		}
-		
+
 		/*
 		 * Handle custom Ajax options or modify existing options before each request is sent and before they are processed by $.ajax().
 		 * @since 1.5
@@ -85,7 +85,7 @@ package randori.jquery {
 		 */
 		public static function ajaxPrefilter(dataTypes:String='', callBack:Function=null):void {
 		}
-		
+
 		/*
 		 * Set default values for future Ajax requests.
 		 * @since 1.1
@@ -93,7 +93,7 @@ package randori.jquery {
 		 */
 		public static function ajaxSetup(options:Object):void {
 		}
-		
+
 		/*
 		 * Creates an object that handles the actual transmission of Ajax data.
 		 * @since 1.5
@@ -102,7 +102,7 @@ package randori.jquery {
 		 */
 		public static function ajaxTransport(dataType:String, callBack:Function):void {
 		}
-		
+
 		/*
 		 * A multi-purpose callbacks list object that provides a powerful way to manage callback lists.
 		 * @since 1.7
@@ -112,7 +112,7 @@ package randori.jquery {
 		public static function callbacks(flags:String):Callbacks {
 			return null;
 		}
-		
+
 		/*
 		 * Check to see if a DOM element is a descendant of another DOM element.
 		 * @since 1.4
@@ -122,7 +122,7 @@ package randori.jquery {
 		public static function contains(container:Element, contained:Element):Boolean {
 			return false;
 		}
-		
+
 		/*
 		 * A constructor function that returns a chainable utility object with methods to register multiple callbacks into callback queues, invoke callback queues, and relay the success or failure state of any synchronous or asynchronous function.
 		 * @since 1.5
@@ -132,7 +132,7 @@ package randori.jquery {
 		public static function deferred(beforeStart:Function=null):Deferred {
 			return null;
 		}
-		
+
 		/*
 		 * Execute the next function on the queue for the matched element.
 		 * @since 1.3
@@ -141,7 +141,7 @@ package randori.jquery {
 		 */
 		public static function dequeue(element:Element, queueName:String=''):void {
 		}
-		
+
 		/*
 		 * A generic iterator function, which can be used to seamlessly iterate over both objects and arrays. Arrays and array-like objects with a length property (such as a function's arguments object) are iterated by numeric index, from 0 to length-1. Other objects are iterated via their named properties.
 		 * @since 1.0
@@ -151,7 +151,7 @@ package randori.jquery {
 		public static function each(collection:Object, callBack:Function):Object {
 			return null;
 		}
-		
+
 		/*
 		 * Takes a string and throws an exception containing it.
 		 * @since 1.4.1
@@ -159,7 +159,7 @@ package randori.jquery {
 		 */
 		public static function error(message:String):void {
 		}
-		
+
 		/*
 		 * Merge the contents of two or more objects together into the first object.
 		 * @since 1.0
@@ -170,7 +170,7 @@ package randori.jquery {
 		public static function extend(target:Object, object1:Object=null, objectN:Object=null):Object {
 			return null;
 		}
-		
+
 		/*
 		 * Merge the contents of two or more objects together into the first object.
 		 * @since 1.1.4
@@ -183,7 +183,7 @@ package randori.jquery {
 		public static function extend2(deep:Boolean=false, target:Object=null, object1:Object=null, objectN:Object=null):Object {
 			return null;
 		}
-		
+
 		/*
 		 * Load data from the server using a HTTP GET request.
 		 * @since 1.0
@@ -195,7 +195,7 @@ package randori.jquery {
 		public static function get(url:String, data:*=null, callBack:Function=null, dataType:String=''):XMLHttpRequest {
 			return null;
 		}
-		
+
 		/*
 		 * Load JSON-encoded data from the server using a GET HTTP request.
 		 * @since 1.0
@@ -206,7 +206,7 @@ package randori.jquery {
 		public static function getJSON(url:String, data:Object=null, callBack:Function=null):XMLHttpRequest {
 			return null;
 		}
-		
+
 		/*
 		 * Load a JavaScript file from the server using a GET HTTP request, then execute it.
 		 * @since 1.0
@@ -216,7 +216,7 @@ package randori.jquery {
 		public static function getScript(url:String, callBack:Function=null):XMLHttpRequest {
 			return null;
 		}
-		
+
 		/*
 		 * Execute some JavaScript code globally.
 		 * @since 1.0.4
@@ -224,7 +224,7 @@ package randori.jquery {
 		 */
 		public static function globalEval(code:String):void {
 		}
-		
+
 		/*
 		 * Finds the elements of an array which satisfy a filter function. The original array is not affected.
 		 * @since 1.0
@@ -235,7 +235,7 @@ package randori.jquery {
 		public static function grep(array:Array, callBack:Function, invert:Boolean=false):Array {
 			return null;
 		}
-		
+
 		/*
 		 * Determine whether an element has any jQuery data associated with it.
 		 * @since 1.5
@@ -244,7 +244,7 @@ package randori.jquery {
 		public static function hasData(element:Element):Boolean {
 			return false;
 		}
-		
+
 		/*
 		 * Holds or releases the execution of jQuery's ready event.
 		 * @since 1.6
@@ -252,7 +252,7 @@ package randori.jquery {
 		 */
 		public static function holdReady(hold:Boolean):void {
 		}
-		
+
 		/*
 		 * Search for a specified value within an array and return its index (or -1 if not found).
 		 * @since 1.2
@@ -263,7 +263,7 @@ package randori.jquery {
 		public static function inArray(value:*, array:Array, fromIndex:Number=0):Number {
 			return 0;
 		}
-		
+
 		/*
 		 * Determine whether the argument is an array.
 		 * @since 1.3
@@ -272,7 +272,7 @@ package randori.jquery {
 		public static function isArray(obj:Object):Boolean {
 			return false;
 		}
-		
+
 		/*
 		 * Check to see if an object is empty (contains no enumerable properties).
 		 * @since 1.4
@@ -281,7 +281,7 @@ package randori.jquery {
 		public static function isEmptyObject(object:Object):Boolean {
 			return false;
 		}
-		
+
 		/*
 		 * Determine if the argument passed is a Javascript function object.
 		 * @since 1.2
@@ -290,7 +290,7 @@ package randori.jquery {
 		public static function isFunction(obj:Object):Boolean {
 			return false;
 		}
-		
+
 		/*
 		 * Determines whether its argument is a number.
 		 * @since 1.7
@@ -299,7 +299,7 @@ package randori.jquery {
 		public static function isNumeric(value:Object):Boolean {
 			return false;
 		}
-		
+
 		/*
 		 * Check to see if an object is a plain object (created using "{}" or "new Object").
 		 * @since 1.4
@@ -308,7 +308,7 @@ package randori.jquery {
 		public static function isPlainObject(object:Object):Boolean {
 			return false;
 		}
-		
+
 		/*
 		 * Determine whether the argument is a window.
 		 * @since 1.4.3
@@ -317,7 +317,7 @@ package randori.jquery {
 		public static function isWindow(obj:Object):Boolean {
 			return false;
 		}
-		
+
 		/*
 		 * Check to see if a DOM node is within an XML document (or is an XML document).
 		 * @since 1.1.4
@@ -326,7 +326,7 @@ package randori.jquery {
 		public static function isXMLDoc(node:Element):Boolean {
 			return false;
 		}
-		
+
 		/*
 		 * Convert an array-like object into a true JavaScript array.
 		 * @since 1.2
@@ -335,7 +335,7 @@ package randori.jquery {
 		public static function makeArray(obj:Object):Array {
 			return null;
 		}
-		
+
 		/*
 		 * Translate all items in an array or object to new array of items.
 		 * @since 1.0
@@ -345,7 +345,7 @@ package randori.jquery {
 		public static function map(array:Array, callBack:Function):Array {
 			return null;
 		}
-		
+
 		/*
 		 * Translate all items in an array or object to new array of items.
 		 * @since 1.6
@@ -356,7 +356,7 @@ package randori.jquery {
 		public static function map2(arrayOrObject:*, callBack:Function):Array {
 			return null;
 		}
-		
+
 		/*
 		 * Merge the contents of two arrays together into the first array.
 		 * @since 1.0
@@ -366,7 +366,7 @@ package randori.jquery {
 		public static function merge(first:Array, second:Array):Array {
 			return null;
 		}
-		
+
 		/*
 		 * Relinquish jQuery's control of the $ variable.
 		 * @since 1.0
@@ -375,14 +375,14 @@ package randori.jquery {
 		public static function noConflict(removeAll:Boolean=false):Object {
 			return null;
 		}
-		
+
 		/*
 		 * An empty function.
 		 * @since 1.4
 		 */
 		public static function noop():void {
 		}
-		
+
 		/*
 		 * Return a number representing the current time.
 		 * @since 1.4.3
@@ -390,7 +390,7 @@ package randori.jquery {
 		public static function now():Number {
 			return 0;
 		}
-		
+
 		/*
 		 * Create a serialized representation of an array or object, suitable for use in a URL query string or Ajax request.
 		 * @since 1.2
@@ -399,7 +399,7 @@ package randori.jquery {
 		public static function param(obj:*):String {
 			return '';
 		}
-		
+
 		/*
 		 * Create a serialized representation of an array or object, suitable for use in a URL query string or Ajax request.
 		 * @since 1.4
@@ -410,7 +410,7 @@ package randori.jquery {
 		public static function param2(obj:*, traditional:Boolean):String {
 			return '';
 		}
-		
+
 		/*
 		 * Parses a string into an array of DOM nodes.
 		 * @since 1.8
@@ -421,7 +421,7 @@ package randori.jquery {
 		public static function parseHTML(data:String, context:Element=null, keepScripts:Boolean=false):Array {
 			return null;
 		}
-		
+
 		/*
 		 * Takes a well-formed JSON string and returns the resulting JavaScript object.
 		 * @since 1.4.1
@@ -430,7 +430,7 @@ package randori.jquery {
 		public static function parseJSON(json:String):Object {
 			return null;
 		}
-		
+
 		/*
 		 * Parses a string into an XML document.
 		 * @since 1.5
@@ -439,7 +439,7 @@ package randori.jquery {
 		public static function parseXML(data:String):Element {
 			return null;
 		}
-		
+
 		/*
 		 * Load data from the server using a HTTP POST request.
 		 * @since 1.0
@@ -451,7 +451,7 @@ package randori.jquery {
 		public static function post(url:String, data:*=null, callBack:Function=null, dataType:String=''):XMLHttpRequest {
 			return null;
 		}
-		
+
 		/*
 		 * Takes a function and returns a new one that will always have a particular context.
 		 * @since 1.4
@@ -461,7 +461,7 @@ package randori.jquery {
 		public static function proxy(callBack:Function, context:Object):Function {
 			return null;
 		}
-		
+
 		/*
 		 * Takes a function and returns a new one that will always have a particular context.
 		 * @since 1.4
@@ -472,7 +472,7 @@ package randori.jquery {
 		public static function proxy2(context:Object, name:String):Function {
 			return null;
 		}
-		
+
 		/*
 		 * Takes a function and returns a new one that will always have a particular context.
 		 * @since 1.6
@@ -484,7 +484,7 @@ package randori.jquery {
 		public static function proxy3(callBack:Function, context:Object, additionalArguments:*=null):Function {
 			return null;
 		}
-		
+
 		/*
 		 * Takes a function and returns a new one that will always have a particular context.
 		 * @since 1.6
@@ -496,7 +496,7 @@ package randori.jquery {
 		public static function proxy4(context:Object, name:String, additionalArguments:*=null):Function {
 			return null;
 		}
-		
+
 		/*
 		 * Remove a previously-stored piece of data.
 		 * @since 1.2.3
@@ -506,7 +506,7 @@ package randori.jquery {
 		public static function removeData(element:Element, name:String=''):JQuery {
 			return null;
 		}
-		
+
 		/*
 		 * Creates a new copy of jQuery whose properties and methods can be modified without affecting the original jQuery object.
 		 * @since 1.5
@@ -514,7 +514,7 @@ package randori.jquery {
 		public static function sub():JQuery {
 			return null;
 		}
-		
+
 		/*
 		 * Remove the whitespace from the beginning and end of a string.
 		 * @since 1.0
@@ -523,7 +523,7 @@ package randori.jquery {
 		public static function trim(str:String):String {
 			return '';
 		}
-		
+
 		/*
 		 * Determine the internal JavaScript [[Class]] of an object.
 		 * @since 1.4.3
@@ -532,7 +532,7 @@ package randori.jquery {
 		public static function type(obj:Object):String {
 			return '';
 		}
-		
+
 		/*
 		 * Sorts an array of DOM elements, in place, with the duplicates removed. Note that this only works on arrays of DOM elements, not strings or numbers.
 		 * @since 1.1.3
@@ -541,7 +541,7 @@ package randori.jquery {
 		public static function unique(array:Array):Array {
 			return null;
 		}
-		
+
 		/*
 		 * Provides a way to execute callback functions based on one or more objects, usually Deferred objects that represent asynchronous events.
 		 * @since 1.5
@@ -550,9 +550,9 @@ package randori.jquery {
 		public static function when(deferreds:Deferred):Promise {
 			return null;
 		}
-		
+
 		[JavascriptMethod(name="")]
-		public static function J(...params):JQuery {
+		public static function J(... params):JQuery {
 			return null;
 		}
 	}

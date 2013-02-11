@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export="false", name="CSSFontFaceRule")]
+[Javascript(export="false", name="CSSFontFaceRule")]
 /**
  *  <p>
  *  The <code>CSSFontFaceRule</code> interface represents a @font-face

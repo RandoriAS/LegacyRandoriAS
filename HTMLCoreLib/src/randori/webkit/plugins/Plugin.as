@@ -42,7 +42,7 @@ package randori.webkit.plugins
 {
 
 
-[JavaScript(export="false", name="Plugin")]
+[Javascript(export="false", name="Plugin")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

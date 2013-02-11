@@ -42,7 +42,7 @@ package randori.webkit.modules.speech
 {
 
 
-[JavaScript(export="false", nativecondition="SPEECH_SYNTHESIS", name="SpeechSynthesisUtterance")]
+[Javascript(export="false", nativecondition="SPEECH_SYNTHESIS", name="SpeechSynthesisUtterance")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

@@ -42,7 +42,7 @@ package randori.webkit.fileapi
 {
 
 
-[JavaScript(export="false", nativecondition="BLOB", name="FileError")]
+[Javascript(export="false", nativecondition="BLOB", name="FileError")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

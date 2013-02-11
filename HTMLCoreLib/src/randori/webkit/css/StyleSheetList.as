@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export="false", name="StyleSheetList")]
+[Javascript(export="false", name="StyleSheetList")]
 /**
  *  <p>The <code>StyleSheetList</code> interface provides the
  *  abstraction of an ordered collection of style sheets.

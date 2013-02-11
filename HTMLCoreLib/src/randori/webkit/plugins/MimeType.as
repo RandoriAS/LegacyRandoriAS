@@ -42,7 +42,7 @@ package randori.webkit.plugins
 {
 
 
-[JavaScript(export="false", name="MimeType")]
+[Javascript(export="false", name="MimeType")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

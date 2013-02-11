@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="TreeWalker")]
+[Javascript(export="false", name="TreeWalker")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

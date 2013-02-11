@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="DocumentType")]
+[Javascript(export="false", name="DocumentType")]
 /**
  *  <p>Each <code>Document</code> has a <code>doctype</code> attribute
  *  whose value is either <code>null</code> or a <code>DocumentType</code>

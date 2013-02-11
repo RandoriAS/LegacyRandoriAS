@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export="false", name="MediaQueryList")]
+[Javascript(export="false", name="MediaQueryList")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

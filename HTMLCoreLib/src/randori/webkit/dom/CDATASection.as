@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="CDATASection")]
+[Javascript(export="false", name="CDATASection")]
 /**
  *  <p>CDATA sections are used to escape blocks of text containing
  *  characters that would otherwise be regarded as markup. The only

@@ -42,7 +42,7 @@ package randori.webkit.svg
 {
 
 
-[JavaScript(export="false", nativecondition="SVG", name="SVGFEBlendElement")]
+[Javascript(export="false", nativecondition="SVG", name="SVGFEBlendElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

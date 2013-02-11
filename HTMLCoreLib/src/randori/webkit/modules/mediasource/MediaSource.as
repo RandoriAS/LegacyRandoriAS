@@ -43,7 +43,7 @@ package randori.webkit.modules.mediasource
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export="false", nativecondition="MEDIA_SOURCE", name="MediaSource")]
+[Javascript(export="false", nativecondition="MEDIA_SOURCE", name="MediaSource")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

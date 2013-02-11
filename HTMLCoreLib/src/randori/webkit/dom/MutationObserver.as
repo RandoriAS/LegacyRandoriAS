@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="MutationObserver")]
+[Javascript(export="false", name="MutationObserver")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

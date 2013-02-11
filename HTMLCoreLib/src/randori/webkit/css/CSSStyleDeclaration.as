@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export="false", name="CSSStyleDeclaration")]
+[Javascript(export="false", name="CSSStyleDeclaration")]
 /**
  *  <p>
  *  The <code>CSSStyleDeclaration</code> interface represents a single

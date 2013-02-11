@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export="false", name="CSSRuleList")]
+[Javascript(export="false", name="CSSRuleList")]
 /**
  *  <p>
  *  The <code>CSSRuleList</code> interface provides the

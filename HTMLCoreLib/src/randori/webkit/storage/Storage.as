@@ -42,7 +42,7 @@ package randori.webkit.storage
 {
 
 
-[JavaScript(export="false", name="Storage")]
+[Javascript(export="false", name="Storage")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
