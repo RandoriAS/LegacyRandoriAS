@@ -4,12 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1.output
+namespace System.CodeDom.Compiler
 {
-    class ClassNameDef
+    public class ClassNameDef
     {
         public string ActionScriptName { get; set; }
         public string JavascriptName { get; set; }
         public string Extends { get; set; }
+        public string FileName
+        {
+            get
+            {
+                return ActionScriptName + ".as";
+            }
+        }
     }
 }

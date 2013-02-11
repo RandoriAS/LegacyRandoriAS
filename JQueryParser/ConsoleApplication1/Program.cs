@@ -1,7 +1,10 @@
 ﻿using System;
+using System.CodeDom;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -12,14 +15,37 @@ namespace ConsoleApplication1
 {
     class Program
     {
+        private static string header = @"/***" + Environment.NewLine +
+@" * Copyright 2013 LTN Consulting, Inc. /dba Digital PrimatesÂ®" + Environment.NewLine +
+@" * " + Environment.NewLine +
+@" * Licensed under the Apache License, Version 2.0 (the 'License');" + Environment.NewLine +
+@" * you may not use this file except in compliance with the License." + Environment.NewLine +
+@" * You may obtain a copy of the License at" + Environment.NewLine +
+@" * " + Environment.NewLine +
+@" * http://www.apache.org/licenses/LICENSE-2.0" + Environment.NewLine +
+@" * " + Environment.NewLine +
+@" * Unless required by applicable law or agreed to in writing, software" + Environment.NewLine +
+@" * distributed under the License is distributed on an 'AS IS' BASIS," + Environment.NewLine +
+@" * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied." + Environment.NewLine +
+@" * See the License for the specific language governing permissions and" + Environment.NewLine +
+@" * limitations under the License." + Environment.NewLine +
+@" * " + Environment.NewLine +
+@" * " + Environment.NewLine +
+@" * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!" + Environment.NewLine +
+@" * The XML files at this location: https://github.com/jquery/api.jquery.com were" + Environment.NewLine +
+@" * used to generate this class" + Environment.NewLine +
+@" * @author Randori JQuery generator" + Environment.NewLine +
+@"*/";
         //Where the .as file will be saved
         public static string OutputDirectory = @"C:\projects\RandoriAS\JQuery\src\randori\jquery\";
 
         //api.jquery.com/entries directory:
         public static string JQueryEntriesDir = @"C:\projects\api.jquery.com\entries\";
 
-        private static Dictionary<String, ClassDef> ClassLookup = new Dictionary<String, ClassDef>();
+        private static Dictionary<String, CodeTypeDeclaration> ClassLookup = new Dictionary<String, CodeTypeDeclaration>();
         private static Dictionary<String, String> ImportLookup = new Dictionary<String, String>();
+
+        private static ClassBuilder Builder = new ClassBuilder{ PackageName = "randori.jquery" };
 
         static void Main(string[] args)
         {
@@ -37,10 +63,7 @@ namespace ConsoleApplication1
                 files.ForEach(f => File.Delete(f));
             }
 
-            AddBaseClasses();
-
-            List<string> entries = ReadSourceDirectory();
-            entries.ForEach(e => Entry2Class(e));
+            ReadSourceDirectory().ForEach(e => Entry2Class(e));
 
             var classDefPromise = ClassLookup["Promise"];
             var classDefDeferred = ClassLookup["Deferred"];
@@ -48,9 +71,23 @@ namespace ConsoleApplication1
             
             foreach(var key in ClassLookup.Keys)
             {
-                AddImports(ClassLookup[key]);
-                NormalizeOptionalParameters(ClassLookup[key]);
-                SerializeClass(ClassLookup[key]);
+                var Class = ClassLookup[key];
+                AddImports(Class, Builder.Class2Unit[key]);
+                NormalizeMethods(Class);
+                if (Class.Name == "JQueryStatic")
+                {
+                    var method = Builder.AddMethod(Class, "J", "JQuery");
+                    var parameter = Builder.AddParameter("list", "object[]", method, null, false);
+                    parameter.UserData["IsRestParams"] = true;
+                    Builder.AddMethodAttributeArgument(method, "name", "");
+                    Class.Members.Cast<CodeTypeMember>().ToList<CodeTypeMember>().ForEach(m => m.Attributes = m.Attributes | MemberAttributes.Static);
+                }
+            }
+
+            var provider = new AS3CodeProvider();
+            foreach (var unit in Builder.Units)
+            {
+                SerializeClass(unit, provider);
             }
 
             Console.WriteLine("Finished, press any key...");
@@ -58,28 +95,70 @@ namespace ConsoleApplication1
 
         }
 
-        private static void NormalizeOptionalParameters(ClassDef classDef)
+        private static void NormalizeMethods(CodeTypeDeclaration classDef)
         {
-            classDef.methods.ForEach(m => CheckOptionalMethodParameters(m.parameters));
+            var methods = classDef.Members.Cast<CodeTypeMember>().ToList<CodeTypeMember>().FindAll(c => c is CodeMemberMethod).Cast<CodeMemberMethod>().ToList<CodeMemberMethod>();
+            methods.ForEach(c => ProcessParameter((CodeMemberMethod)c));
+            DisambiguateMethodNames(methods);
+            AddAttributesForRenamedMethod(methods);
         }
 
-        private static void CheckOptionalMethodParameters(List<ParamDef> parameters)
+        private static void AddAttributesForRenamedMethod(List<CodeMemberMethod> methods)
+        {
+            methods.FindAll(m => m.Name != (string)m.UserData["ActionscriptName"]).ForEach(m => Builder.AddMethodAttributeArgument(m, "name", m.Name));
+        }
+
+        private static void DisambiguateMethodNames(List<CodeMemberMethod> methods)
+        {
+            var multiples = methods.FindAll(m => methods.FindAll(m1 => m1.Name == m.Name).Count > 1).Select(c => c.Name).Distinct().Cast<String>().ToList<String>();
+            multiples.ForEach(n => DoName(n, methods));
+        }
+
+        private static void DoName(string Name, List<CodeMemberMethod> methods)
+        {
+            var index = 0;
+            methods.FindAll(m => m.Name == Name).ForEach(m => m.UserData["ActionscriptName"] += (++index > 1) ? index.ToString() : "");
+        }
+
+        private static void ProcessParameter(CodeMemberMethod codeMemberMethod)
+        {
+            CheckOptionalMethodParameters(codeMemberMethod.Parameters);
+            DisambiguateMethodParameterNames(codeMemberMethod.Parameters);
+        }
+
+        private static void DisambiguateMethodParameterNames(CodeParameterDeclarationExpressionCollection parameters)
+        {
+            var list = parameters.Cast<CodeParameterDeclarationExpression>().ToList<CodeParameterDeclarationExpression>();
+            list.ForEach(p => DisambiguateMethodParameterName(p.Name, list));
+        }
+
+        private static void DisambiguateMethodParameterName(string Name, List<CodeParameterDeclarationExpression> parameters)
+        {
+            var namedParams = parameters.FindAll(p => p.Name == Name);
+            if (namedParams.Count > 1)
+            {
+                int index = 0;
+                namedParams.ForEach(p => p.Name += (++index).ToString());
+            }
+        }
+
+        private static void CheckOptionalMethodParameters(CodeParameterDeclarationExpressionCollection parameters)
         {
             var startChanging = false;
-            foreach (var parameter in parameters)
+            foreach (CodeParameterDeclarationExpression parameter in parameters)
             {
                 if (!startChanging)
                 {
-                    startChanging = parameter.isOptional;
+                    startChanging = Builder.IsOptionalParameter(parameter);
                 }
                 else
                 {
-                    parameter.isOptional = true;
+                    Builder.MarkParameterAsOptional(parameter);
                 }
             }
         }
 
-        private static void AddMethodsToPromise(ClassDef classDefPromise, ClassDef classDefDeferred)
+        private static void AddMethodsToPromise(CodeTypeDeclaration classDefPromise, CodeTypeDeclaration classDefDeferred)
         {
             List<String> methodNames = new List<string>();
             methodNames.Add("then");
@@ -95,61 +174,79 @@ namespace ConsoleApplication1
             }
         }
 
-        private static void CopyMethod(string name, ClassDef destination, ClassDef source)
+        private static void CopyMethod(string name, CodeTypeDeclaration destination, CodeTypeDeclaration source)
         {
-            destination.methods.AddRange(source.GetMethodWithNameLike(name));
+            destination.Members.AddRange(GetMethodsWithNameLike(source, name));
         }
 
-        private static void AddImports(ClassDef classDef)
+        private static CodeTypeMemberCollection GetMethodsWithNameLike(CodeTypeDeclaration source, string name)
         {
-            if ((classDef.name.Extends !=null) && (ImportLookup.ContainsKey(classDef.name.Extends) == true))
+            var result = new CodeTypeMemberCollection();
+            foreach (CodeTypeMember method in source.Members)
             {
-                classDef.AddImport(ImportLookup[classDef.name.Extends]);
-            }
-            foreach (var member in classDef.members)
-            {
-                if (ImportLookup.ContainsKey(member.type) == true)
+                if ((method is CodeMemberMethod) && (method.Name.StartsWith(name)))
                 {
-                    classDef.AddImport(ImportLookup[member.type]);
+                    result.Add(method);
                 }
             }
-            foreach (var method in classDef.methods)
+            return result;
+
+        }
+
+        private static void AddImports(CodeTypeDeclaration classDef, CodeCompileUnit unit)
+        {
+            CodeMemberField field;
+            CodeMemberMethod method;
+            foreach (CodeTypeMember member in classDef.Members)
             {
-                if (ImportLookup.ContainsKey(method.type) == true)
+                if (member is CodeMemberField)
                 {
-                    classDef.AddImport(ImportLookup[method.type]);
-                }
-                foreach (var parameter in method.parameters)
-                {
-                    if (ImportLookup.ContainsKey(parameter.type) == true)
+                    field = (CodeMemberField)member;
+                    if (ImportLookup.ContainsKey(field.Type.BaseType) == true)
                     {
-                        classDef.AddImport(ImportLookup[parameter.type]);
+                        Builder.AddImport(ImportLookup[field.Type.BaseType], unit);
+                    }
+                }
+                else if (member is CodeMemberMethod)
+                {
+                    method = (CodeMemberMethod)member;
+                    if (ImportLookup.ContainsKey(method.ReturnType.BaseType) == true)
+                    {
+                        Builder.AddImport(ImportLookup[method.ReturnType.BaseType], unit);
+                    }
+                    foreach (CodeParameterDeclarationExpression parameter in method.Parameters)
+                    {
+                        if (ImportLookup.ContainsKey(parameter.Type.BaseType) == true)
+                        {
+                            Builder.AddImport(ImportLookup[parameter.Type.BaseType], unit);
+                        }
                     }
                 }
             }
         }
 
-        private static void AddBaseClasses()
+        private static void SerializeClass(CodeCompileUnit compileUnit, AS3CodeProvider provider)
         {
-            AddBaseClass("Argument");
+            var options = new CodeGeneratorOptions();
+            var FileName = ((ClassNameDef)compileUnit.UserData["NameDef"]).FileName;
+            FileName = Path.Combine(OutputDirectory, FileName);
+
+            StreamWriter writer = new StreamWriter(FileName, false);
+            writer.WriteLine(header);
+            options.IndentString = "\t";
+            options.VerbatimOrder = false;
+            try
+            {
+                provider.GenerateCodeFromCompileUnit(compileUnit, writer, options);
+            }finally
+            {
+                 writer.Close();
+            }
+
+            Console.WriteLine("Created file: " + FileName);
         }
 
-        private static ClassDef AddBaseClass(string name)
-        {
-            var classDef = new ClassDef() { name = new ClassNameDef() { ActionScriptName = name } };
-            ClassLookup[name] = classDef;
-            return classDef;
-        }
-
-        private static void SerializeClass(ClassDef classDef)
-        {
-            var sb = new StringBuilder();
-            classDef.Serialize(sb);
-            File.WriteAllText(Path.Combine(OutputDirectory, classDef.FileName), sb.ToString());
-            Console.WriteLine("Created file: " + classDef.FileName);
-        }
-
-        private static ClassDef Argument2Class(string ArgumentPath)
+        private static CodeTypeDeclaration Argument2Class(string ArgumentPath)
         {
             var FileName = Path.GetFileNameWithoutExtension(ArgumentPath);
             var xdoc = XDocument.Load(ArgumentPath);
@@ -160,58 +257,74 @@ namespace ConsoleApplication1
             return null;
         }
 
-        private static ClassDef CreateArgumentObjectClass(string RawClassName, XDocument xdoc)
+        private static CodeTypeDeclaration CreateArgumentObjectClass(string RawClassName, XDocument xdoc)
         {
-            var classDef = new ClassDef() { name = new ClassNameDef() { ActionScriptName = FormatHypenedName(RawClassName), Extends = "Argument" } };
-            if (ClassLookup.ContainsKey(classDef.name.ActionScriptName))
+            var Name = FormatFromHypenatedName(RawClassName);
+            if (ClassLookup.ContainsKey(Name))
             {
-                return ClassLookup[classDef.name.ActionScriptName];
+                return ClassLookup[Name];
             }
-            ClassLookup[classDef.name.ActionScriptName] = classDef;
+            var NameDef = new ClassNameDef() {ActionScriptName = Name, Extends = "Argument" };
+            var classDef = Builder.CreateClass(NameDef);
+            ClassLookup[Name] = classDef;
             xdoc.Root.Elements("property").ToList<XElement>().ForEach(e => AddMemberFromPropertyElement(classDef, e));
             return classDef;
         }
 
-        private static void AddMemberFromPropertyElement(ClassDef classDef, XElement elm)
+        private static void AddMemberFromPropertyElement(CodeTypeDeclaration classDef, XElement elm)
         {
-            var member = new MemberDef() { name=elm.Attribute("name").Value };
-            member.comments.Add(elm.Element("desc").Value.Trim());
+            var PropertyName = elm.Attribute("name").Value;
+            var type = "";
+            var defaultValue = "";
+            bool isAsterisk = false;
             if (elm.Attribute("type") != null)
             {
-                member.type = TranslateType(elm.Attribute("type").Value);
-                if ((member.type == "PlainObject") && (elm.Elements("property").Count() == 0))
+                type = TranslateType(elm.Attribute("type").Value);
+                if (type == "*")
                 {
-                    member.type = "Object";
+                    type = "Object";
+                    isAsterisk = true;
                 }
-                else if ((member.type == "PlainObject") && (elm.Elements("property").Count() > 0))
+                if ((type == "PlainObject") && (elm.Elements("property").Count() == 0))
                 {
-                    member.type = CreateTypedObjectForPlainObject(member.name, elm);
+                    type = "Object";
                 }
-                else if ((member.type == "Function") && (elm.Elements("argument").Count() > 0))
+                else if ((type == "PlainObject") && (elm.Elements("property").Count() > 0))
                 {
-                    CreateCommentsAndObjectsForFunctionArguments(member, elm);
+                    type = CreateTypedObjectForPlainObject(PropertyName, elm);
                 }
             }
             else
             {
-                member.type = "*";
+                type = "Object";
+                isAsterisk = true;
             }
             if (elm.Attribute("default") != null)
             {
-                member.defaultValue = elm.Attribute("default").Value;
+                defaultValue = elm.Attribute("default").Value;
             }
-            classDef.members.Add(member);
+
+            var member = Builder.AddProperty(classDef, PropertyName, type);
+            if (isAsterisk)
+            {
+                member.UserData["IsAsterisk"] = true;
+            }
+            member.Comments.Add(new CodeCommentStatement(elm.Element("desc").Value.Trim(), true));
+            if ((type == "Function") && (elm.Elements("argument").Count() > 0))
+            {
+                CreateCommentsAndObjectsForFunctionArguments(member, elm);
+            }
         }
 
-        private static void CreateCommentsAndObjectsForFunctionArguments(MemberDef member, XElement elm)
+        private static void CreateCommentsAndObjectsForFunctionArguments(CodeMemberField member, XElement elm)
         {
             var args = elm.Elements("argument").ToList<XElement>();
-            member.comments.Add("<br/>The signature of this function needs to be as follows:<br/>");
+            member.Comments.Add(new CodeCommentStatement("<br/>The signature of this function needs to be as follows:<br/>", true));
             var comment = "Function(";
             var idx = 0;
-            var descriptions = new List<String>();
-            descriptions.Add("<ul>");
-            var references = new List<String>();
+            var descriptions = new CodeCommentStatementCollection();
+            descriptions.Add(new CodeCommentStatement("<ul>", true));
+            var references = new CodeCommentStatementCollection();
             foreach (var arg in args)
             {
                 if (idx++ > 0)
@@ -222,23 +335,23 @@ namespace ConsoleApplication1
                 if ((arg.Attribute("type").Value == "PlainObject") && (arg.Elements("property").Count() > 0))
                 {
                     type = CreateTypedObjectForPlainObject(arg.Attribute("name").Value, arg);
-                    references.Add("@see randori.jquery." + type);
+                    references.Add(new CodeCommentStatement("@see randori.jquery." + type, true));
                 }
                 else
                 {
                     type = TranslateType(arg.Attribute("type").Value);
                 }
                 comment += arg.Attribute("name").Value + ":" + type;
-                descriptions.Add("<li>" + arg.Attribute("name").Value + ":" + type + " - " + arg.Element("desc").Value + "<li/>");
+                descriptions.Add(new CodeCommentStatement("<li>" + arg.Attribute("name").Value + ":" + type + " - " + arg.Element("desc").Value + "<li/>", true));
             }
-            descriptions.Add("</ul>");
+            descriptions.Add(new CodeCommentStatement("</ul>", true));
             comment += "):void;";
-            member.comments.Add(comment);
-            member.comments.AddRange(descriptions);
-            member.comments.AddRange(references);
+            member.Comments.Add(new CodeCommentStatement(comment, true));
+            member.Comments.AddRange(descriptions);
+            ((CodeCommentStatementCollection)member.UserData["references"]).AddRange(references);
         }
 
-        private static string FormatHypenedName(string FileName)
+        private static string FormatFromHypenatedName(string FileName)
         {
             var parts = FileName.Split('-');
             var name = "";
@@ -249,7 +362,7 @@ namespace ConsoleApplication1
             return name;
         }
 
-        private static ClassDef Entry2Class(string EntryPath)
+        private static CodeTypeDeclaration Entry2Class(string EntryPath)
         {
             var xdoc = XDocument.Load(EntryPath);
             var FileName = Path.GetFileNameWithoutExtension(EntryPath);
@@ -259,18 +372,15 @@ namespace ConsoleApplication1
                 Console.WriteLine("Skipped file: " + FileName);
                 return null;
             }
-            ClassDef CurrentClass = null;
+            CodeTypeDeclaration CurrentClass = null;
             if (ClassLookup.ContainsKey(ClassName.ActionScriptName) == false)
             {
-                CurrentClass = new ClassDef() { name = ClassName };
+                CurrentClass = Builder.CreateClass(ClassName);
                 ClassLookup[ClassName.ActionScriptName] = CurrentClass;
-                if ((ClassName.ActionScriptName != ClassName.JavascriptName) && (ClassName.JavascriptName != null))
+
+                if (ClassName.ActionScriptName.IndexOf("Static") > -1)
                 {
-                    CurrentClass.attributes.Add("name", ClassName.JavascriptName);
-                }
-                if (CurrentClass.name.ActionScriptName.IndexOf("Static") > -1)
-                {
-                    CurrentClass.isStatic = true;
+                    CurrentClass.TypeAttributes = CurrentClass.TypeAttributes | TypeAttributes.Sealed;
                 }
             }
             else
@@ -295,7 +405,7 @@ namespace ConsoleApplication1
                 else
                 {
                     ClassName = "JQueryStatic";
-                    result.JavascriptName = "$";
+                    result.JavascriptName = "JQuery";
                 }
             }
             else
@@ -320,7 +430,7 @@ namespace ConsoleApplication1
             return result;
         }
 
-        private static void AddMember(ClassDef CurrentClass, XElement Elm)
+        private static void AddMember(CodeTypeDeclaration CurrentClass, XElement Elm)
         {
             if (Elm.Attribute("type").Value == "method")
             {
@@ -339,49 +449,50 @@ namespace ConsoleApplication1
                 {
                     name = name.Substring(name.IndexOf('.') + 1);
                 }
-                int cnt = Elm.Elements("signature").Count();
-                int index = 0;
-                Elm.Elements("signature").ToList<XElement>().ForEach(e => CreateProperty(desc, CurrentClass, type, name, cnt, ++index, e));
+                Elm.Elements("signature").ToList<XElement>().ForEach(e => CreateProperty(desc, CurrentClass, type, name, e));
             }
         }
 
-        private static string CreateTypedObjectForPlainObject(string ClassName, XElement Elm)
+        private static string CreateTypedObjectForPlainObject(string BaseName, XElement Elm)
         {
             var propertyElms = Elm.Elements("property");
-            var classDef = new ClassDef() { name = new ClassNameDef() { ActionScriptName = CapitalizeName(ClassName) + "Object" } };
-            if (ClassLookup.ContainsKey(classDef.name.ActionScriptName))
+            var ClassName = new ClassNameDef() { ActionScriptName = CapitalizeName(BaseName) + "Object" };
+            if (ClassLookup.ContainsKey(ClassName.ActionScriptName))
             {
-                throw new Exception("Class name already exists: " + classDef.name.ActionScriptName);
+                throw new Exception("Class name already exists: " + ClassName.ActionScriptName);
             }
-            ClassLookup[classDef.name.ActionScriptName] = classDef;
+            var classDef = Builder.CreateClass(ClassName);
+            ClassLookup[ClassName.ActionScriptName] = classDef;
             foreach (var prop in propertyElms)
             {
-                classDef.members.Add(AddProperty(prop));
+                AddProperty(prop, classDef);
             }
-            return classDef.name.ActionScriptName;
+            return ClassName.ActionScriptName;
         }
 
-        private static MemberDef AddProperty(XElement Elm)
+        private static void AddProperty(XElement Elm,  CodeTypeDeclaration classDef)
         {
-            var member = new MemberDef();
-            member.name = Elm.Attribute("name").Value;
-            member.type = TranslateType(Elm.Attribute("type").Value);
-            if (member.type == "PlainObject")
+            var Name = Elm.Attribute("name").Value;
+            var type = TranslateType(Elm.Attribute("type").Value);
+            var defaultValue = "";
+            if (type == "PlainObject")
             {
-                member.type = "Object";
+                type = "Object";
             }
             if (Elm.Attribute("default") != null)
             {
-                member.defaultValue = Elm.Attribute("default").Value;
+                defaultValue = Elm.Attribute("default").Value;
             }
-            member.comments.AddRange(SplitCommentLines(Elm.Element("desc").Value));
-            return member;
+            var field = Builder.AddProperty(classDef, Name, type);
+            field.Comments.AddRange(SplitCommentLines(Elm.Element("desc").Value));
         }
 
-        private static List<string> SplitCommentLines(string comment)
+        private static CodeCommentStatementCollection SplitCommentLines(string comment)
         {
             var lines = Regex.Split(comment, "[\r\n]+");
-            return lines.ToList<String>();
+            var result = new CodeCommentStatementCollection();
+            lines.ToList<String>().ConvertAll(c => new CodeCommentStatement(c, true)).ForEach(c => result.Add(c));
+            return result;
         }
 
         private static string TranslateClassName(string name)
@@ -484,20 +595,16 @@ namespace ConsoleApplication1
             return type;
         }
 
-        private static void CreateProperty(string description, ClassDef CurrentClass, string type, string name, int count, int index, XElement elm)
+        private static void CreateProperty(string description, CodeTypeDeclaration CurrentClass, string type, string name, XElement elm)
         {
             var since = elm.Element("added").Value;
-            if (count > 1)
-            {
-                name += index.ToString();
-            }
-            var property = new MemberDef() { name = name, type = type };
-            property.comments.AddRange(SplitCommentLines(description));
-            property.comments.Add("@since " + since);
-            CurrentClass.members.Add(property);
+            var property = Builder.AddProperty(CurrentClass, name, type);
+            
+            property.Comments.AddRange(SplitCommentLines(description));
+            property.Comments.Add(new CodeCommentStatement("@since " + since, true));
         }
 
-        private static void AddMethod(ClassDef CurrentClass, XElement Elm)
+        private static void AddMethod(CodeTypeDeclaration CurrentClass, XElement Elm)
         {
             var originalName = Elm.Attribute("name").Value;
             var name = TranslateName(originalName);
@@ -515,44 +622,43 @@ namespace ConsoleApplication1
             }
             int cnt = Elm.Elements("signature").Count();
             int index = 0;
-            Elm.Elements("signature").ToList<XElement>().ForEach(e => CreateMethod(desc, CurrentClass, type, name, originalName, originalReturnName, cnt, ++index, e));
+            Elm.Elements("signature").ToList<XElement>().ForEach(e => CreateMethod(desc, CurrentClass, type, name, originalName, originalReturnName, e));
         }
 
-        private static void CreateMethod(string description, ClassDef CurrentClass, String type, string name, string originalName, string originalReturnName, int count, int index, XElement elm)
+        private static void CreateMethod(string description, CodeTypeDeclaration CurrentClass, String type, string name, string originalName, string originalReturnName, XElement elm)
         {
             var since = elm.Element("added").Value;
-            if (count > 1)
-            {
-                name += index.ToString();
-            }
-            var method = new MethodDef() { name = name, type = type };
-            method.comments.AddRange(SplitCommentLines(description));
-            method.comments.Add("@since " + since);
+
+            var method = Builder.AddMethod(CurrentClass, name, type);
+            
+            method.Comments.AddRange(SplitCommentLines(description));
+            method.Comments.Add(new CodeCommentStatement("@since " + since, true));
             if (elm.Elements("argument").Count() > 0)
             {
-                method.parameters = elm.Elements("argument").ToList<XElement>().ConvertAll(e => CreateParameter(e)).ToList<ParamDef>();
+
+                elm.Elements("argument").ToList<XElement>().ForEach(e => CreateParameter(e, method));
             }
             else
             {
-                method.parameters.AddRange(CreateParametersFromIncludeFiles(elm));
+                CreateParametersFromIncludeFiles(elm, method);
             }
             if (name != originalName)
             {
-                method.attributes.Add("name", originalName);
+                Builder.AddMethodAttributeArgument(method, "name", originalName);
             }
             if ((type != originalReturnName) && (originalReturnName.IndexOf(',') > -1))
             {
-                method.comments.Add("@return Either of these types: " + originalReturnName);
+                method.ReturnType = new CodeTypeReference("Object");
+                method.UserData["IsAsterisk"] = true;
+                method.Comments.Add(new CodeCommentStatement("@return Either of these types: " + originalReturnName, true));
             }
-            CurrentClass.methods.Add(method);
         }
 
-        private static ParamDef CreateParameter(XElement elm)
+        private static void CreateParameter(XElement elm, CodeMemberMethod method)
         {
             var name = TranslateName(elm.Attribute("name").Value);
-            var type = "void";
+            var type = "Object";
             var optional = (elm.Attribute("optional") != null);
-            type = "";
             if (elm.Attribute("type") != null)
             {
                 type = elm.Attribute("type").Value;
@@ -575,22 +681,18 @@ namespace ConsoleApplication1
             {
                 type = CreatePlainObjectFromIncludeFile(elm);
             }
-            
-            var param = new ParamDef() { name=name,type=type,isOptional=optional};
-            param.comments.AddRange(SplitCommentLines(desc));
-            return param;
+            var param = Builder.AddParameter(name, type, method, null, optional);
+            ((CodeCommentStatementCollection)param.UserData["comments"]).AddRange(SplitCommentLines(desc));
         }
 
-        private static List<ParamDef> CreateParametersFromIncludeFiles(XElement elm)
+        private static void CreateParametersFromIncludeFiles(XElement elm, CodeMemberMethod method)
         {
-            var parameters = new List<ParamDef>();
             XNamespace ns = "http://www.w3.org/2003/XInclude";
             var includes = elm.Elements(ns + "include").ToList<XElement>();
-            includes.ForEach(i => CreateParameterFromIncludeFile(i.Attribute("href").Value, parameters));
-            return parameters;
+            includes.ForEach(i => CreateParameterFromIncludeFile(i.Attribute("href").Value, method));
         }
 
-        private static void CreateParameterFromIncludeFile(string path, List<ParamDef> parameters)
+        private static void CreateParameterFromIncludeFile(string path, CodeMemberMethod method)
         {
             var FullPath = Path.Combine(JQueryEntriesDir, path);
             if (File.Exists(FullPath))
@@ -598,39 +700,38 @@ namespace ConsoleApplication1
                 var FileName = Path.GetFileNameWithoutExtension(FullPath);
                 if (FileName.EndsWith("-argument"))
                 {
-                    parameters.Add(Argument2Parameter(FullPath));
+                    Argument2Parameter(FullPath, method);
                 }
             }
         }
 
-        private static ParamDef Argument2Parameter(string path)
+        private static CodeParameterDeclarationExpression Argument2Parameter(string path, CodeMemberMethod method)
         {
             var xdoc = XDocument.Load(path);
-            var paramDef = new ParamDef();
-            paramDef.name = xdoc.Root.Attribute("name").Value;
-            paramDef.isOptional = (xdoc.Root.Attribute("optional") != null) ? (xdoc.Root.Attribute("optional").Value == "true") : false;
-            paramDef.defaultValue = (xdoc.Root.Attribute("default") != null) ? xdoc.Root.Attribute("default").Value : null;
-            
+            var Name = xdoc.Root.Attribute("name").Value;
+            var defaultValue = (xdoc.Root.Attribute("default") != null) ? xdoc.Root.Attribute("default").Value : null;
+            var type = "";
             if ((xdoc.Root.Attribute("type") != null) && (xdoc.Root.Attribute("type").Value == "PlainObject"))
             {
                 var classDef = Argument2Class(path);
                 if (classDef != null)
                 {
-                    paramDef.type = classDef.name.ActionScriptName;
+                    type = classDef.Name;
                 }
                 else
                 {
-                    paramDef.type = "Object";
+                    type = "Object";
                 }
             }
             else
             {
-                paramDef.type = (xdoc.Root.Attribute("type") != null) ? xdoc.Root.Attribute("type").Value : "*";
+                type = (xdoc.Root.Attribute("type") != null) ? xdoc.Root.Attribute("type").Value : "*";
             }
 
+            var paramDef = Builder.AddParameter(Name, type, method, defaultValue, (defaultValue != null));
             if (xdoc.Root.Element("desc") != null)
             {
-                paramDef.comments.AddRange(SplitCommentLines(xdoc.Root.Element("desc").Value));
+                ((CodeCommentStatementCollection)paramDef.UserData["comments"]).AddRange(SplitCommentLines(xdoc.Root.Element("desc").Value));
             }
             return paramDef;
         }
@@ -641,7 +742,7 @@ namespace ConsoleApplication1
             var includes = elm.Parent.Elements(ns + "include").ToList<XElement>();
             if (includes.Count() > 0)
             {
-                var ArgumentClasses = new List<ClassDef>();
+                var ArgumentClasses = new List<CodeTypeDeclaration>();
                 foreach (var include in includes)
                 {
                     var arg = CreateClassFromIncudeFile(include.Attribute("href").Value);
@@ -652,7 +753,7 @@ namespace ConsoleApplication1
                 }
                 if (ArgumentClasses.Count() == 1)
                 {
-                    return ArgumentClasses[0].name.ActionScriptName;
+                    return ArgumentClasses[0].Name;
                 }
                 else
                 {
@@ -665,7 +766,7 @@ namespace ConsoleApplication1
             }
         }
 
-        private static ClassDef CreateClassFromIncudeFile(string path)
+        private static CodeTypeDeclaration CreateClassFromIncudeFile(string path)
         {
             var FullPath = Path.Combine(JQueryEntriesDir, path);
             if (File.Exists(FullPath))
