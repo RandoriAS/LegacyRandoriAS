@@ -24,7 +24,7 @@ namespace System.CodeDom.Compiler
                 
                 var CurrentClass = new CodeTypeDeclaration(ClassName.ActionScriptName) { IsClass= true, };
 
-                CodeAttributeDeclaration JavascriptAttrDecl = new CodeAttributeDeclaration("Javascript", new CodeAttributeArgument("export", new CodePrimitiveExpression("false")));
+                CodeAttributeDeclaration JavascriptAttrDecl = new CodeAttributeDeclaration("JavaScript", new CodeAttributeArgument("export", new CodePrimitiveExpression("false")));
                 CurrentClass.CustomAttributes.Add(JavascriptAttrDecl);
 
                 CurrentClass.TypeAttributes = CurrentClass.TypeAttributes |  TypeAttributes.Public;
@@ -76,7 +76,7 @@ namespace System.CodeDom.Compiler
             CodeAttributeDeclaration decl = null;
             if (method.CustomAttributes.Count == 0)
             {
-                decl = new CodeAttributeDeclaration("JavascriptMethod");
+                decl = new CodeAttributeDeclaration("JavaScriptMethod");
                 method.CustomAttributes.Add(decl);
             }
             else

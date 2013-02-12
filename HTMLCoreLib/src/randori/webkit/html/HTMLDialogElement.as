@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export="false", nativecondition="DIALOG_ELEMENT", name="HTMLDialogElement")]
+[Javascript(export="false", nativecondition="DIALOG_ELEMENT", name="HTMLDialogElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

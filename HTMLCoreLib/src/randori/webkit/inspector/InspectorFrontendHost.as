@@ -44,7 +44,7 @@ package randori.webkit.inspector
 import randori.webkit.dom.MouseEvent;
 import randori.webkit.modules.filesystem.DOMFileSystem;
 
-[JavaScript(export="false", nativecondition="INSPECTOR", name="InspectorFrontendHost")]
+[Javascript(export="false", nativecondition="INSPECTOR", name="InspectorFrontendHost")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

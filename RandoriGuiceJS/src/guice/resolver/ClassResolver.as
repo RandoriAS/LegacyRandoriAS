@@ -102,7 +102,6 @@ package guice.resolver {
 		}
 		
 		private function addDefinition( definitionText:String ):void {
-			/*
 			var globalEval = ( function() {
 				var isIndirectEvalGlobal:Function = (function (original:Object, Object) {
 					try {
@@ -136,7 +135,6 @@ package guice.resolver {
 			})();
 			
 			globalEval(definitionText);
-			*/
 		}
 		
 		public function ClassResolver( loader:SynchronousClassLoader ) {

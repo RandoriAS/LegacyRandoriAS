@@ -43,7 +43,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export="false", nativecondition="VIDEO", name="MediaController")]
+[Javascript(export="false", nativecondition="VIDEO", name="MediaController")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

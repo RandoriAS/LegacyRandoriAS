@@ -1123,7 +1123,7 @@ namespace WebIDLParser
             if (aliasName != "") jsAttributes.Add("Name", "\"" + aliasName + "\"");
             if (jsAttributes.Count > 0)
             {
-                sb.Append("\t[JavascriptMethod(" + jsAttributes + ")]" + Environment.NewLine);
+                sb.Append("\t[JavaScriptMethod(" + jsAttributes + ")]" + Environment.NewLine);
             }
             AddComments(sb);
             sb.Append("\t" + modifier + " function " + sName);
@@ -1214,7 +1214,7 @@ namespace WebIDLParser
             }
             if (pName != name)
             {
-                sb.Append("\t" + "[JavascriptProperty(name=\"" + name + "\")]" + Environment.NewLine);
+                sb.Append("\t" + "[JavaScriptProperty(name=\"" + name + "\")]" + Environment.NewLine);
             }
             AddComments(sb);
             var modifier = "public";

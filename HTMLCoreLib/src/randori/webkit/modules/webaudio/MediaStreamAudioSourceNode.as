@@ -43,7 +43,7 @@ package randori.webkit.modules.webaudio
 
 import randori.webkit.modules.mediastream.MediaStream;
 
-[JavaScript(export="false", nativecondition="WEB_AUDIO", name="MediaStreamAudioSourceNode")]
+[Javascript(export="false", nativecondition="WEB_AUDIO", name="MediaStreamAudioSourceNode")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

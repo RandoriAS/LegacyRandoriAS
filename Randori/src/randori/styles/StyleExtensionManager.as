@@ -168,9 +168,9 @@ package randori.styles {
 			* 
 			*/
 			
-			var allClassSelectors:RegExp = new RegExp("^[\w\W]*?\}", "gm");
+			var allClassSelectors:RegExp = new RegExp("^[\\w\\W]*?\\}", "gm");
 			
-			const RANDORI_VENDOR_ITEM_EXPRESSION:String = "\s?-randori-([\w\W]+?)\s?:\s?[\"\"']?([\w\W]+?)[\"\"']?;";
+			const RANDORI_VENDOR_ITEM_EXPRESSION:String = "\\s?-randori-([\\w\\W]+?)\\s?:\\s?[\"\']?([\\w\\W]+?)[\"\']?;";
 			//These two are the same save for the global flag. The global flag seems to disable all capturing groups immediately
 			var anyVendorItems:RegExp = new RegExp(RANDORI_VENDOR_ITEM_EXPRESSION, "g");
 
@@ -178,7 +178,7 @@ package randori.styles {
 			//The global flag seems to disable all capturing groups immediately
 			var eachVendorItem:RegExp = new RegExp(RANDORI_VENDOR_ITEM_EXPRESSION);
 
-			var classSelectorName:RegExp = new RegExp("^(.+?)\s+?{","m");
+			var classSelectorName:RegExp = new RegExp("^(.+?)\\s+?{", "m");
 			var CSSClassSelectorName:String;
 			var randoriVendorItemStr:String;
 			

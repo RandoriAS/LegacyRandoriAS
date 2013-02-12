@@ -42,7 +42,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export="false", name="History")]
+[Javascript(export="false", name="History")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

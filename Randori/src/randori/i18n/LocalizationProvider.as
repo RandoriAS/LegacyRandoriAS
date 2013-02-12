@@ -22,7 +22,7 @@ package randori.i18n {
 
 	public class LocalizationProvider {
 		
-		private var internationalKey:RegExp = new RegExp("\[(labels|messages|reference)\.\w+\]", "g");
+		private var internationalKey:RegExp = new RegExp("\\[(labels|messages|reference)\\.\\w+\\]", "g");
 		
 		private var translator:AbstractTranslator;
 		private var pendingTranslations:Object;
@@ -75,7 +75,7 @@ package randori.i18n {
 		private function sendTranslationRequest( timer:Timer ):void {
 			var domainLabels:Object = new Object();
 			
-			var keyValuePair:RegExp = new RegExp("\[(labels|messages|reference)\.(\w+)\]");
+			var keyValuePair:RegExp = new RegExp("\\[(labels|messages|reference)\\.(\\w+)\\]");
 			var result:Array;
 			
 			var domain:String;

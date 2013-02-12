@@ -1971,7 +1971,7 @@ namespace System.CodeDom.Compiler
         {
             if (comments.Count > 0)
             {
-                Output.WriteLine("/*");
+                Output.WriteLine("/**");
             }
             foreach (CodeCommentStatement comment in comments)
             {

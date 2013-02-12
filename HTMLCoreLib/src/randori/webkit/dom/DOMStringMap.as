@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="DOMStringMap")]
+[Javascript(export="false", name="DOMStringMap")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

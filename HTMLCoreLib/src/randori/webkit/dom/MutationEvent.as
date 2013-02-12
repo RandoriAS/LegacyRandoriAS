@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="MutationEvent")]
+[Javascript(export="false", name="MutationEvent")]
 /**
  *  <p>The <code>MutationEvent</code> interface provides specific contextual
  *  information associated with Mutation events.

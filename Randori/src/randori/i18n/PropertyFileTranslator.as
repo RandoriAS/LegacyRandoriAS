@@ -112,7 +112,7 @@ package randori.i18n {
 		
 		private function parseResult( responseText:String ):void {
 			//get each line
-			var eachLine:RegExp = new RegExp("[\w\W]+?[\n\r]+", "g");
+			var eachLine:RegExp = new RegExp("[\\w\\W]+?[\\n\\r]+", "g");
 			var eachLineResult:Array = responseText.match( eachLine );
 			
 			this.fileLoaded = true;
@@ -139,7 +139,7 @@ package randori.i18n {
 				return;
 			}
 			
-			var tokenize:RegExp = new RegExp("^(\w+)\s?=\s?([\w\W]+?)[\n\r]+");
+			var tokenize:RegExp = new RegExp("^(\\w+)\\s?=\\s?([\\w\\W]+?)[\\n\\r]+");
 			var tokenizeResult:Array = line.match(tokenize);
 			var key:String;
 			var strValue:String;

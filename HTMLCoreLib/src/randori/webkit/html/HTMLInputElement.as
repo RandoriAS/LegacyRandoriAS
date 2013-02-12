@@ -44,7 +44,7 @@ package randori.webkit.html
 import randori.webkit.fileapi.FileList;
 import randori.webkit.dom.NodeList;
 
-[JavaScript(export="false", name="HTMLInputElement")]
+[Javascript(export="false", name="HTMLInputElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

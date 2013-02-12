@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export="false", name="HTMLMarqueeElement")]
+[Javascript(export="false", name="HTMLMarqueeElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

@@ -43,7 +43,7 @@ package randori.webkit.modules.mediastream
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export="false", nativecondition="MEDIA_STREAM", name="MediaStreamTrackEvent")]
+[Javascript(export="false", nativecondition="MEDIA_STREAM", name="MediaStreamTrackEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

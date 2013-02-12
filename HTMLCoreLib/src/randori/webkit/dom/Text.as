@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="Text")]
+[Javascript(export="false", name="Text")]
 /**
  *  <p>The <code>Text</code> interface inherits from <code>CharacterData</code> and represents the textual content (termed
  *  character data in XML) of an <code>Element</code> or <code>Attr</code>. If there is no markup inside an element's content, the text is

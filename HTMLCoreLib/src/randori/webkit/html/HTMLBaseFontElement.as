@@ -21,7 +21,7 @@
   MIT License:
 
   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
-  associated documentation files (the "Software"), to deal in the Software without restriction,
+  associated documentation files (the "Software"), to deal in the Software without restriction, 
   including without limitation the rights to use, copy, modify, merge, publish, distribute,
   sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
   furnished to do so, subject to the following conditions:
@@ -38,45 +38,32 @@
 *******************************************************************************************************/
 
 
-package randori.webkit.html {
+package randori.webkit.html
+{
 
 
-	[JavaScript(export="false", name="HTMLBaseFontElement")]
+[Javascript(export="false", name="HTMLBaseFontElement")]
+/**
+ *  @author RandoriAS Web IDL Parser
+ *  @version 1.0
+ *  @see randori.webkit.html.HTMLElement
+ */
+public class HTMLBaseFontElement extends HTMLElement
+{
+	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('basefont')")]
 	/**
-	 *  @author RandoriAS Web IDL Parser
-	 *  @version 1.0
-	 *  @see randori.webkit.html.HTMLElement
-	 */
-	public class HTMLBaseFontElement extends HTMLElement {
+	*  Creates a new <code>HTMLBaseFontElement</code> instance.
+	*/
+	public function HTMLBaseFontElement() {super();}
 
-		[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('basefont')")]
-		/**
-		*  Creates a new <code>HTMLBaseFontElement</code> instance.
-		*/
-		public function HTMLBaseFontElement() {
-			super();
-		}
+	public function get color():String { return ''; }
+	public function set color(value:String):void { }
 
-		public function get color():String {
-			return '';
-		}
+	public function get face():String { return ''; }
+	public function set face(value:String):void { }
 
-		public function set color(value:String):void {
-		}
-
-		public function get face():String {
-			return '';
-		}
-
-		public function set face(value:String):void {
-		}
-
-		public function get size():uint {
-			return 0;
-		}
-
-		public function set size(value:uint):void {
-		}
-	}
+	public function get size():uint { return 0; }
+	public function set size(value:uint):void { }
+}
 
 }

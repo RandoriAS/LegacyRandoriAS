@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", nativecondition="DATA_TRANSFER_ITEMS", name="DataTransferItemList")]
+[Javascript(export="false", nativecondition="DATA_TRANSFER_ITEMS", name="DataTransferItemList")]
 /**
  *  <note>This class depends on the browser to support: <code>DATA_TRANSFER_ITEMS</code></note>
  *  @author RandoriAS Web IDL Parser

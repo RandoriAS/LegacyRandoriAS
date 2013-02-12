@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export="false", name="CSSUnknownRule")]
+[Javascript(export="false", name="CSSUnknownRule")]
 /**
  *  <p>
  *  The <code>CSSUnknownRule</code> interface represents an at-rule not

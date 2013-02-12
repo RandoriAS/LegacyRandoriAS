@@ -42,7 +42,7 @@ package randori.webkit.page
 {
 
 
-[JavaScript(export="false", nativecondition="INPUT_SPEECH", name="SpeechInputResult")]
+[Javascript(export="false", nativecondition="INPUT_SPEECH", name="SpeechInputResult")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

@@ -43,7 +43,7 @@ package randori.webkit.xml
 
 import randori.webkit.dom.ProgressEvent;
 
-[JavaScript(export="false", name="XMLHttpRequestProgressEvent")]
+[Javascript(export="false", name="XMLHttpRequestProgressEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

@@ -43,7 +43,7 @@ package randori.webkit.loader.appcache
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export="false", name="DOMApplicationCache")]
+[Javascript(export="false", name="DOMApplicationCache")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

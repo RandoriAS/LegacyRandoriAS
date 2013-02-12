@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="NamedNodeMap")]
+[Javascript(export="false", name="NamedNodeMap")]
 /**
  *  <p>Objects implementing the <code>NamedNodeMap</code> interface are
  *  used to represent collections of nodes that can be accessed by name. Note

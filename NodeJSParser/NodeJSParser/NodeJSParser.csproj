@@ -44,18 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="output\ClassDef.cs" />
-    <Compile Include="output\ClassNameDef.cs" />
-    <Compile Include="output\JsAttribute.cs" />
-    <Compile Include="output\JsAttributes.cs" />
-    <Compile Include="output\MemberDef.cs" />
-    <Compile Include="output\MethodDef.cs" />
-    <Compile Include="output\ParamDef.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AS3CodeDom\AS3CodeDom.csproj">
+      <Project>{b6c24023-fe7d-4e71-a0fa-8537c34de01b}</Project>
+      <Name>AS3CodeDom</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="output\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -43,7 +43,7 @@ package randori.webkit.modules.proximity
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export="false", nativecondition="PROXIMITY_EVENTS", name="DeviceProximityEvent")]
+[Javascript(export="false", nativecondition="PROXIMITY_EVENTS", name="DeviceProximityEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

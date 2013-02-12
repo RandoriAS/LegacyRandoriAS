@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="Notation")]
+[Javascript(export="false", name="Notation")]
 /**
  *  <p>This interface represents a notation declared in the DTD. A notation
  *  either declares, by name, the format of an unparsed entity (see  section 4.7

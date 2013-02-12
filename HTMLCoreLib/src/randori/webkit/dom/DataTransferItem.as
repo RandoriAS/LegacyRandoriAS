@@ -43,7 +43,7 @@ package randori.webkit.dom
 
 import randori.webkit.fileapi.Blob;
 
-[JavaScript(export="false", nativecondition="DATA_TRANSFER_ITEMS", name="DataTransferItem")]
+[Javascript(export="false", nativecondition="DATA_TRANSFER_ITEMS", name="DataTransferItem")]
 /**
  *  <note>This class depends on the browser to support: <code>DATA_TRANSFER_ITEMS</code></note>
  *  @author RandoriAS Web IDL Parser

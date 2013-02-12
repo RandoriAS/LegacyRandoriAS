@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="Entity")]
+[Javascript(export="false", name="Entity")]
 /**
  *  <p>This interface represents an entity, either parsed or
  *  unparsed, in an XML document. Note that this models the entity

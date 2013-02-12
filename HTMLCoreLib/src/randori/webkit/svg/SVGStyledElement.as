@@ -43,7 +43,7 @@ package randori.webkit.svg
 
 import randori.webkit.css.CSSValue;
 
-[JavaScript(export="false", nativecondition="SVG", name="SVGStyledElement")]
+[Javascript(export="false", nativecondition="SVG", name="SVGStyledElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

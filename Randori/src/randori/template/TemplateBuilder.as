@@ -44,7 +44,7 @@ package randori.template {
 			var field:String;
 			var dereferencedValue:*;
 
-			var keyRegex:RegExp = new RegExp("\{[\w\W]+?\}", "g");
+			var keyRegex:RegExp = new RegExp("\\{[\\w\\W]+?\\}", "g");
 			var foundKeys:Array = templateAsString.match(keyRegex);
 			var output:String = templateAsString;
 			

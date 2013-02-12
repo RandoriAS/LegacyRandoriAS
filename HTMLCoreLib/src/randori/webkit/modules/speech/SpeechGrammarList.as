@@ -42,7 +42,7 @@ package randori.webkit.modules.speech
 {
 
 
-[JavaScript(export="false", nativecondition="SCRIPTED_SPEECH", name="SpeechGrammarList")]
+[Javascript(export="false", nativecondition="SCRIPTED_SPEECH", name="SpeechGrammarList")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

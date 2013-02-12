@@ -42,7 +42,7 @@ package randori.webkit.modules.filesystem
 {
 
 
-[JavaScript(export="false", nativecondition="DATA_TRANSFER_ITEMS", name="DataTransferItemFileSystem")]
+[Javascript(export="false", nativecondition="DATA_TRANSFER_ITEMS", name="DataTransferItemFileSystem")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

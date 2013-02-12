@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="PageTransitionEvent")]
+[Javascript(export="false", name="PageTransitionEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

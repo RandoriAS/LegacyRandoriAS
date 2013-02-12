@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using NodeJSParser.output;
 using Newtonsoft.Json.Linq;
+using System.CodeDom;
 
 namespace ConsoleApplication1
 {
@@ -18,7 +19,7 @@ namespace ConsoleApplication1
         //api.jquery.com/entries directory:
         public static string JSONDir = @"C:\projects\NodeJSDoc";
 
-        public static List<ClassDef> ClassDefs = new List<ClassDef>();
+        public static List<CodeTypeDeclaration> ClassDefs = new List<CodeTypeDeclaration>();
 
         static void Main(string[] args)
         {

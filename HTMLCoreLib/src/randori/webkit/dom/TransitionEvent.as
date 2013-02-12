@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", nativecondition="CSS_TRANSFORMS_ANIMATIONS_TRANSITIONS_UNPREFIXED", name="TransitionEvent")]
+[Javascript(export="false", nativecondition="CSS_TRANSFORMS_ANIMATIONS_TRANSITIONS_UNPREFIXED", name="TransitionEvent")]
 /**
  *  <note>This class depends on the browser to support: <code>CSS_TRANSFORMS_ANIMATIONS_TRANSITIONS_UNPREFIXED</code></note>
  *  @author RandoriAS Web IDL Parser

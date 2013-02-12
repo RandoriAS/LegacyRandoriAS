@@ -22,10 +22,10 @@
 package randori.jquery {
 	
 	
-	[Javascript(export="false")]
+	[JavaScript(export="false")]
 	public class Promise {
 		
-		/*
+		/**
 		 * Return a Promise object to observe when all actions of a certain type bound to the collection, queued or not, have finished.
 		 * @since 1.6
 		 * @param type The type of queue that needs to be observed.
@@ -35,7 +35,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.
 		 * @since 1.8
 		 * @param doneFilter A function that is called when the Deferred is resolved.
@@ -46,30 +46,30 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.
 		 * @since 1.5
 		 * @param doneCallbacks A function, or array of functions, called when the Deferred is resolved.
 		 * @param failCallbacks A function, or array of functions, called when the Deferred is rejected.
 		 */
-		[JavascriptMethod(name="then", name="then")]
+		[JavaScriptMethod(name="then", name="then")]
 		public function then22(doneCallbacks:Function, failCallbacks:Function):Promise {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.
 		 * @since 1.7
 		 * @param doneCallbacks A function, or array of functions, called when the Deferred is resolved.
 		 * @param failCallbacks A function, or array of functions, called when the Deferred is rejected.
 		 * @param progressCallbacks A function, or array of functions, called when the Deferred notifies progress.
 		 */
-		[JavascriptMethod(name="then", name="then")]
+		[JavaScriptMethod(name="then", name="then")]
 		public function then33(doneCallbacks:Function, failCallbacks:Function, progressCallbacks:Function=null):Promise {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Add handlers to be called when the Deferred object is resolved.
 		 * @since 1.5
 		 * @param doneCallbacks1 A function, or array of functions, that are called when the Deferred is resolved.
@@ -79,7 +79,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Add handlers to be called when the Deferred object is rejected.
 		 * @since 1.5
 		 * @param failCallbacks1 A function, or array of functions, that are called when the Deferred is rejected.
@@ -89,7 +89,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Add handlers to be called when the Deferred object is either resolved or rejected.
 		 * @since 1.6
 		 * @param alwaysCallbacks1 A function, or array of functions, that is called when the Deferred is resolved or rejected.
@@ -99,7 +99,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Utility method to filter and/or chain Deferreds.
 		 * @since 1.6
 		 * @param doneFilter An optional function that is called when the Deferred is resolved.
@@ -109,19 +109,19 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Utility method to filter and/or chain Deferreds.
 		 * @since 1.7
 		 * @param doneFilter An optional function that is called when the Deferred is resolved.
 		 * @param failFilter An optional function that is called when the Deferred is rejected.
 		 * @param progressFilter An optional function that is called when progress notifications are sent to the Deferred.
 		 */
-		[JavascriptMethod(name="pipe", name="pipe")]
+		[JavaScriptMethod(name="pipe", name="pipe")]
 		public function pipe22(doneFilter:Function=null, failFilter:Function=null, progressFilter:Function=null):Promise {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Add handlers to be called when the Deferred object generates progress notifications.
 		 * @since 1.7
 		 * @param progressCallbacks A function, or array of functions, that is called when the Deferred generates progress notifications.
@@ -130,7 +130,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Determine the current state of a Deferred object.
 		 * @since 1.7
 		 */

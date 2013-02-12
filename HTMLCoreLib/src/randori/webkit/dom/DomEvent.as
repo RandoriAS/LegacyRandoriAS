@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", name="Event")]
+[Javascript(export="false", name="Event")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

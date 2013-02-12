@@ -43,7 +43,7 @@ package randori.webkit.svg
 
 import randori.webkit.dom.EventTarget;
 
-[JavaScript(export="false", nativecondition="SVG", name="SVGElementInstance")]
+[Javascript(export="false", nativecondition="SVG", name="SVGElementInstance")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

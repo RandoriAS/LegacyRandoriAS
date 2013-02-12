@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[JavaScript(export="false", name="StyleMedia")]
+[Javascript(export="false", name="StyleMedia")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

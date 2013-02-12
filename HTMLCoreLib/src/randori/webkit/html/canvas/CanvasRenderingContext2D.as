@@ -46,7 +46,7 @@ import randori.webkit.html.HTMLImageElement;
 import randori.webkit.html.ImageData;
 import randori.webkit.html.HTMLCanvasElement;
 
-[JavaScript(export="false", name="CanvasRenderingContext2D")]
+[Javascript(export="false", name="CanvasRenderingContext2D")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

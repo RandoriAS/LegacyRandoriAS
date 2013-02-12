@@ -42,7 +42,7 @@ package randori.webkit.xml
 {
 
 
-[JavaScript(export="false", name="XPathNSResolver")]
+[Javascript(export="false", name="XPathNSResolver")]
 /**
  *  <p>The <code>XPathNSResolver</code> interface permit
  *  <code>prefix</code> strings in the expression to be properly bound to

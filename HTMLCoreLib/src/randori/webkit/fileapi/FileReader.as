@@ -43,7 +43,7 @@ package randori.webkit.fileapi
 
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export="false", nativecondition="BLOB", name="FileReader")]
+[Javascript(export="false", nativecondition="BLOB", name="FileReader")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

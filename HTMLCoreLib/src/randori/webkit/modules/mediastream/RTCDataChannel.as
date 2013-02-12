@@ -44,7 +44,7 @@ package randori.webkit.modules.mediastream
 import randori.webkit.html.canvas.ArrayBuffer;
 import randori.webkit.dom.DomEvent;
 
-[JavaScript(export="false", nativecondition="MEDIA_STREAM", name="RTCDataChannel")]
+[Javascript(export="false", nativecondition="MEDIA_STREAM", name="RTCDataChannel")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

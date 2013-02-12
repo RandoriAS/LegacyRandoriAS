@@ -44,7 +44,7 @@ package randori.webkit.svg
 import randori.webkit.dom.NodeList;
 import randori.webkit.dom.Element;
 
-[JavaScript(export="false", nativecondition="SVG", name="SVGSVGElement")]
+[Javascript(export="false", nativecondition="SVG", name="SVGSVGElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
