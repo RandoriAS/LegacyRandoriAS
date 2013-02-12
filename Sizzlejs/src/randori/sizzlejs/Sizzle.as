@@ -87,8 +87,9 @@ package randori.sizzlejs {
 		 * custom selector you know will be used by the user at a later time.<br/>
 		 * Call Sizzle.compile(":myCustomPseudo") and it's cached.
 		 * @param selector A css selector
+		 * @return The compiled function to be used when filtering the set of possibly matching elements.
 		 */
-		public static function compile(selector:String):void {
+		public static function compile(selector:String):Function {
 		}
 
 		[JavaScriptProperty(name="selectors.cacheLength")]
