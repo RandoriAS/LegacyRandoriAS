@@ -99,7 +99,7 @@ namespace ConsoleApplication1
         {
             var methods = classDef.Members.Cast<CodeTypeMember>().ToList<CodeTypeMember>().FindAll(c => c is CodeMemberMethod).Cast<CodeMemberMethod>().ToList<CodeMemberMethod>();
             methods.ForEach(c => ProcessParameter((CodeMemberMethod)c));
-            DisambiguateMethodNames(methods);
+            DisambiguateMethodNames(methods, classDef);
             AddAttributesForRenamedMethod(methods);
         }
 
@@ -108,16 +108,20 @@ namespace ConsoleApplication1
             methods.FindAll(m => m.Name != (string)m.UserData["ActionscriptName"]).ForEach(m => Builder.AddMethodAttributeArgument(m, "name", m.Name));
         }
 
-        private static void DisambiguateMethodNames(List<CodeMemberMethod> methods)
+        private static void DisambiguateMethodNames(List<CodeMemberMethod> methods, CodeTypeDeclaration classDef)
         {
             var multiples = methods.FindAll(m => methods.FindAll(m1 => m1.Name == m.Name).Count > 1).Select(c => c.Name).Distinct().Cast<String>().ToList<String>();
-            multiples.ForEach(n => DoName(n, methods));
+            multiples.ForEach(n => DisambiguateName(n, methods, classDef));
         }
 
-        private static void DoName(string Name, List<CodeMemberMethod> methods)
+        private static void DisambiguateName(string Name, List<CodeMemberMethod> methods, CodeTypeDeclaration classDef)
         {
             var index = 0;
-            methods.FindAll(m => m.Name == Name).ForEach(m => m.UserData["ActionscriptName"] += (++index > 1) ? index.ToString() : "");
+            methods.FindAll(m => m.Name == Name).ForEach(m => m.UserData["ActionscriptName"] += (++index).ToString());
+            var ArgsMethod = Builder.AddMethod(classDef, Name, "*");
+            ArgsMethod.UserData["IsAsterisk"] = true;
+            var Param = Builder.AddParameter("params", "*", ArgsMethod, null, false);
+            Param.UserData["IsRestParams"] = true;
         }
 
         private static void ProcessParameter(CodeMemberMethod codeMemberMethod)
