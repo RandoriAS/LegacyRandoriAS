@@ -42,7 +42,7 @@ package randori.webkit.svg
 {
 
 
-[Javascript(export="false", nativecondition="SVG", name="SVGComponentTransferFunctionElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGComponentTransferFunctionElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +50,7 @@ package randori.webkit.svg
  */
 public class SVGComponentTransferFunctionElement extends SVGElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('componenttransferfunction')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('componenttransferfunction')")]
 	/**
 	*  Creates a new <code>SVGComponentTransferFunctionElement</code> instance.
 	*/

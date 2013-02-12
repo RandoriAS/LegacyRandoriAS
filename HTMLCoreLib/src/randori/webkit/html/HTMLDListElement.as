@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[Javascript(export="false", name="HTMLDListElement")]
+[JavaScript(export="false", name="HTMLDListElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLDListElement extends HTMLElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('dl')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('dl')")]
 	/**
 	*  Creates a new <code>HTMLDListElement</code> instance.
 	*/

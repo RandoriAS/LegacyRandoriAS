@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[Javascript(export="false", nativecondition="VIDEO", name="MediaError")]
+[JavaScript(export="false", nativecondition="VIDEO", name="MediaError")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

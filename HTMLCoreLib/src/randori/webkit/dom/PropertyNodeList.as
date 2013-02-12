@@ -43,7 +43,7 @@ package randori.webkit.dom
 
 import randori.webkit.html.MicroDataItemValue;
 
-[Javascript(export="false", nativecondition="MICRODATA", name="PropertyNodeList")]
+[JavaScript(export="false", nativecondition="MICRODATA", name="PropertyNodeList")]
 /**
  *  <note>This class depends on the browser to support: <code>MICRODATA</code></note>
  *  @author RandoriAS Web IDL Parser

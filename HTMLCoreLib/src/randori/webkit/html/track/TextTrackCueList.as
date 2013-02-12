@@ -42,7 +42,7 @@ package randori.webkit.html.track
 {
 
 
-[Javascript(export="false", nativecondition="VIDEO_TRACK", name="TextTrackCueList")]
+[JavaScript(export="false", nativecondition="VIDEO_TRACK", name="TextTrackCueList")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

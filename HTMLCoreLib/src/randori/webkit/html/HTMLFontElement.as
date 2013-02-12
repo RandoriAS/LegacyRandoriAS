@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[Javascript(export="false", name="HTMLFontElement")]
+[JavaScript(export="false", name="HTMLFontElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLFontElement extends HTMLElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('font')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('font')")]
 	/**
 	*  Creates a new <code>HTMLFontElement</code> instance.
 	*/

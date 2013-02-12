@@ -43,7 +43,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.NodeList;
 
-[Javascript(export="false", nativecondition="PROGRESS_ELEMENT", name="HTMLProgressElement")]
+[JavaScript(export="false", nativecondition="PROGRESS_ELEMENT", name="HTMLProgressElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -51,7 +51,7 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLProgressElement extends HTMLElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('progress')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('progress')")]
 	/**
 	*  Creates a new <code>HTMLProgressElement</code> instance.
 	*/

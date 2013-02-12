@@ -43,7 +43,7 @@ package randori.webkit.page
 
 import randori.webkit.html.canvas.ArrayBufferView;
 
-[Javascript(export="false", name="Crypto")]
+[JavaScript(export="false", name="Crypto")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

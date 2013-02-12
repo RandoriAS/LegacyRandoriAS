@@ -42,7 +42,7 @@ package randori.webkit.modules.speech
 {
 
 
-[Javascript(export="false", nativecondition="SPEECH_SYNTHESIS", name="DOMWindowSpeechSynthesis")]
+[JavaScript(export="false", nativecondition="SPEECH_SYNTHESIS", name="DOMWindowSpeechSynthesis")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -55,14 +55,14 @@ public class DOMWindow
 	*/
 	public function get speechSynthesis():SpeechSynthesis { return null; }
 
-	[JavascriptProperty(name="SpeechSynthesisEvent")]
+	[JavaScriptProperty(name="SpeechSynthesisEvent")]
 	/**
 	*  @see randori.webkit.modules.speech.SpeechSynthesisEvent
 	*/
 	public function get SpeechSynthesisEvent_():SpeechSynthesisEvent { return null; }
 	public function set SpeechSynthesisEvent_(value:SpeechSynthesisEvent):void { }
 
-	[JavascriptProperty(name="SpeechSynthesisUtterance")]
+	[JavaScriptProperty(name="SpeechSynthesisUtterance")]
 	/**
 	*  @see randori.webkit.modules.speech.SpeechSynthesisUtterance
 	*/

@@ -44,7 +44,7 @@ package randori.webkit.html
 import randori.webkit.fileapi.FileList;
 import randori.webkit.dom.NodeList;
 
-[Javascript(export="false", name="HTMLInputElement")]
+[JavaScript(export="false", name="HTMLInputElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -52,7 +52,7 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLInputElement extends HTMLElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('input')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('input')")]
 	/**
 	*  Creates a new <code>HTMLInputElement</code> instance.
 	*/
@@ -140,7 +140,7 @@ public class HTMLInputElement extends HTMLElement
 	public function get placeholder():String { return ''; }
 	public function set placeholder(value:String):void { }
 
-	[JavascriptProperty(name="readOnly")]
+	[JavaScriptProperty(name="readOnly")]
 	public function get readOnly_():Boolean { return false; }
 	public function set readOnly_(value:Boolean):void { }
 

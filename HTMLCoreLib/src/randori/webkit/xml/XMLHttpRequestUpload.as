@@ -43,7 +43,7 @@ package randori.webkit.xml
 
 import randori.webkit.dom.DomEvent;
 
-[Javascript(export="false", name="XMLHttpRequestUpload")]
+[JavaScript(export="false", name="XMLHttpRequestUpload")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

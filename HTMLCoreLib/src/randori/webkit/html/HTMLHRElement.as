@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[Javascript(export="false", name="HTMLHRElement")]
+[JavaScript(export="false", name="HTMLHRElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLHRElement extends HTMLElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('hr')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('hr')")]
 	/**
 	*  Creates a new <code>HTMLHRElement</code> instance.
 	*/

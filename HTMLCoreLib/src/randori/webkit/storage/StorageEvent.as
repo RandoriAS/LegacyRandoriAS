@@ -43,7 +43,7 @@ package randori.webkit.storage
 
 import randori.webkit.dom.DomEvent;
 
-[Javascript(export="false", name="StorageEvent")]
+[JavaScript(export="false", name="StorageEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

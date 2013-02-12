@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[Javascript(export="false", nativecondition="SHADOW_DOM", name="CSSHostRule")]
+[JavaScript(export="false", nativecondition="SHADOW_DOM", name="CSSHostRule")]
 /**
  *  <note>This class depends on the browser to support: <code>SHADOW_DOM</code></note>
  *  @author RandoriAS Web IDL Parser

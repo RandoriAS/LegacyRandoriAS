@@ -42,7 +42,7 @@ package randori.webkit.svg
 {
 
 
-[Javascript(export="false", nativecondition="SVG", name="SVGMPathElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGMPathElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -52,7 +52,7 @@ package randori.webkit.svg
  */
 public class SVGMPathElement extends SVGElement implements SVGURIReference, SVGExternalResourcesRequired
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('mpath')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('mpath')")]
 	/**
 	*  Creates a new <code>SVGMPathElement</code> instance.
 	*/

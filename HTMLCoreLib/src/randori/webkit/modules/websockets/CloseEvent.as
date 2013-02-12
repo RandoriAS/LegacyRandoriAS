@@ -43,7 +43,7 @@ package randori.webkit.modules.websockets
 
 import randori.webkit.dom.DomEvent;
 
-[Javascript(export="false", name="CloseEvent")]
+[JavaScript(export="false", name="CloseEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

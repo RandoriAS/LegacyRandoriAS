@@ -43,7 +43,7 @@ package randori.webkit.modules.webaudio
 
 import randori.webkit.html.HTMLMediaElement;
 
-[Javascript(export="false", nativecondition="WEB_AUDIO", name="MediaElementAudioSourceNode")]
+[JavaScript(export="false", nativecondition="WEB_AUDIO", name="MediaElementAudioSourceNode")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

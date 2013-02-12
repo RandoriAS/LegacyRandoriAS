@@ -43,7 +43,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.DOMStringList;
 
-[Javascript(export="false", nativecondition="MICRODATA", name="HTMLPropertiesCollection")]
+[JavaScript(export="false", nativecondition="MICRODATA", name="HTMLPropertiesCollection")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

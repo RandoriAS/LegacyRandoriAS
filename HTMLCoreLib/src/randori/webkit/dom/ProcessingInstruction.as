@@ -43,7 +43,7 @@ package randori.webkit.dom
 
 import randori.webkit.css.StyleSheet;
 
-[Javascript(export="false", name="ProcessingInstruction")]
+[JavaScript(export="false", name="ProcessingInstruction")]
 /**
  *  <p>The <code>ProcessingInstruction</code> interface
  *  represents a  "processing instruction", used in XML

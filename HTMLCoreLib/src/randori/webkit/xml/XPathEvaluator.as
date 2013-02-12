@@ -43,7 +43,7 @@ package randori.webkit.xml
 
 import randori.webkit.dom.Node;
 
-[Javascript(export="false", name="XPathEvaluator")]
+[JavaScript(export="false", name="XPathEvaluator")]
 /**
  *  <p>
  *  The evaluation of XPath expressions is provided by

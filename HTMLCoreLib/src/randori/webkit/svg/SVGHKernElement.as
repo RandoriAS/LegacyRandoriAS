@@ -42,7 +42,7 @@ package randori.webkit.svg
 {
 
 
-[Javascript(export="false", nativecondition="SVG", name="SVGHKernElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGHKernElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +50,7 @@ package randori.webkit.svg
  */
 public class SVGHKernElement extends SVGElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('hkern')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('hkern')")]
 	/**
 	*  Creates a new <code>SVGHKernElement</code> instance.
 	*/

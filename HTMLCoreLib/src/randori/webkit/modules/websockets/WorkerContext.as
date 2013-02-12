@@ -42,7 +42,7 @@ package randori.webkit.modules.websockets
 {
 
 
-[Javascript(export="false", nativecondition="WEB_SOCKETS", name="WorkerContextWebSocket")]
+[JavaScript(export="false", nativecondition="WEB_SOCKETS", name="WorkerContextWebSocket")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +50,7 @@ package randori.webkit.modules.websockets
 public class WorkerContext
 {
 
-	[JavascriptProperty(name="WebSocket")]
+	[JavaScriptProperty(name="WebSocket")]
 	/**
 	*  @see randori.webkit.modules.websockets.WebSocket
 	*/

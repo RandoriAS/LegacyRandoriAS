@@ -42,7 +42,7 @@ package randori.webkit.modules.mediastream
 {
 
 
-[Javascript(export="false", nativecondition="MEDIA_STREAM", name="DOMWindowMediaStream")]
+[JavaScript(export="false", nativecondition="MEDIA_STREAM", name="DOMWindowMediaStream")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,21 +50,21 @@ package randori.webkit.modules.mediastream
 public class DOMWindow
 {
 
-	[JavascriptProperty(name="RTCSessionDescription")]
+	[JavaScriptProperty(name="RTCSessionDescription")]
 	/**
 	*  @see randori.webkit.modules.mediastream.RTCSessionDescription
 	*/
 	public function get RTCSessionDescription_():RTCSessionDescription { return null; }
 	public function set RTCSessionDescription_(value:RTCSessionDescription):void { }
 
-	[JavascriptProperty(name="RTCIceCandidate")]
+	[JavaScriptProperty(name="RTCIceCandidate")]
 	/**
 	*  @see randori.webkit.modules.mediastream.RTCIceCandidate
 	*/
 	public function get RTCIceCandidate_():RTCIceCandidate { return null; }
 	public function set RTCIceCandidate_(value:RTCIceCandidate):void { }
 
-	[JavascriptProperty(name="MediaStreamEvent")]
+	[JavaScriptProperty(name="MediaStreamEvent")]
 	/**
 	*  @see randori.webkit.modules.mediastream.MediaStreamEvent
 	*/

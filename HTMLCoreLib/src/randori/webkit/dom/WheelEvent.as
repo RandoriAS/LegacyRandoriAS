@@ -43,7 +43,7 @@ package randori.webkit.dom
 
 import randori.webkit.page.Window;
 
-[Javascript(export="false", name="WheelEvent")]
+[JavaScript(export="false", name="WheelEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

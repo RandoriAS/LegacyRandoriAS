@@ -44,7 +44,7 @@ package randori.webkit.html.shadow
 import randori.webkit.html.HTMLElement;
 import randori.webkit.dom.NodeList;
 
-[Javascript(export="false", nativecondition="SHADOW_DOM", name="HTMLContentElement")]
+[JavaScript(export="false", nativecondition="SHADOW_DOM", name="HTMLContentElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -52,7 +52,7 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLContentElement extends HTMLElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('content')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('content')")]
 	/**
 	*  Creates a new <code>HTMLContentElement</code> instance.
 	*/

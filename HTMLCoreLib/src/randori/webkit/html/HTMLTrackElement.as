@@ -43,7 +43,7 @@ package randori.webkit.html
 
 import randori.webkit.html.track.TextTrack;
 
-[Javascript(export="false", nativecondition="VIDEO_TRACK", name="HTMLTrackElement")]
+[JavaScript(export="false", nativecondition="VIDEO_TRACK", name="HTMLTrackElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -51,7 +51,7 @@ import randori.webkit.html.track.TextTrack;
  */
 public class HTMLTrackElement extends HTMLElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('track')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('track')")]
 	/**
 	*  Creates a new <code>HTMLTrackElement</code> instance.
 	*/
@@ -69,7 +69,7 @@ public class HTMLTrackElement extends HTMLElement
 	public function get label():String { return ''; }
 	public function set label(value:String):void { }
 
-	[JavascriptProperty(name="default")]
+	[JavaScriptProperty(name="default")]
 	public function get default_():Boolean { return false; }
 	public function set default_(value:Boolean):void { }
 	public static const NONE:uint = 0;

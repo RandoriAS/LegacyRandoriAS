@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[Javascript(export="false", name="NodeIterator")]
+[JavaScript(export="false", name="NodeIterator")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[Javascript(export="false", name="ClientRectList")]
+[JavaScript(export="false", name="ClientRectList")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

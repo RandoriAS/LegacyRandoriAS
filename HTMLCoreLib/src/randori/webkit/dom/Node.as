@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[Javascript(export="false", name="Node")]
+[JavaScript(export="false", name="Node")]
 /**
  *  <p>The <code>Node</code> interface is the primary datatype for the entire Document Object Model.
  *  It represents a single node in the document tree. While all objects

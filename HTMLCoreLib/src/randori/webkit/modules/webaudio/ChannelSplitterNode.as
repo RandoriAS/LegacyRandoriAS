@@ -42,7 +42,7 @@ package randori.webkit.modules.webaudio
 {
 
 
-[Javascript(export="false", nativecondition="WEB_AUDIO", name="ChannelSplitterNode")]
+[JavaScript(export="false", nativecondition="WEB_AUDIO", name="ChannelSplitterNode")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

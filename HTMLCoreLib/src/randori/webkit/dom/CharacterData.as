@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[Javascript(export="false", name="CharacterData")]
+[JavaScript(export="false", name="CharacterData")]
 /**
  *  <p>The <code>CharacterData</code> interface extends Node with a set of
  *  attributes and methods for accessing character data in the DOM.  For

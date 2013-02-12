@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[Javascript(export="false", name="EventTarget")]
+[JavaScript(export="false", name="EventTarget")]
 /**
  *  <p>
  *  The <code>EventTarget</code> interface is implemented by all

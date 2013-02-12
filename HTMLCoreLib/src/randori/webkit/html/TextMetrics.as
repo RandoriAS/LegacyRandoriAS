@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[Javascript(export="false", name="TextMetrics")]
+[JavaScript(export="false", name="TextMetrics")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

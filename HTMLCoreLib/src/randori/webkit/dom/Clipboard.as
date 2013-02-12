@@ -44,7 +44,7 @@ package randori.webkit.dom
 import randori.webkit.fileapi.FileList;
 import randori.webkit.html.HTMLImageElement;
 
-[Javascript(export="false", name="Clipboard")]
+[JavaScript(export="false", name="Clipboard")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

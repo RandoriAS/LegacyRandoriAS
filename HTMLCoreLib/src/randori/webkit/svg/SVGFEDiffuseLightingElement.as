@@ -42,7 +42,7 @@ package randori.webkit.svg
 {
 
 
-[Javascript(export="false", nativecondition="SVG", name="SVGFEDiffuseLightingElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGFEDiffuseLightingElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

@@ -42,7 +42,7 @@ package randori.webkit.svg
 {
 
 
-[Javascript(export="false", nativecondition="SVG", name="SVGCursorElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGCursorElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -53,7 +53,7 @@ package randori.webkit.svg
  */
 public class SVGCursorElement extends SVGElement implements SVGURIReference, SVGTests, SVGExternalResourcesRequired
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('cursor')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('cursor')")]
 	/**
 	*  Creates a new <code>SVGCursorElement</code> instance.
 	*/

@@ -43,7 +43,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.NodeList;
 
-[Javascript(export="false", name="HTMLTextAreaElement")]
+[JavaScript(export="false", name="HTMLTextAreaElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -51,7 +51,7 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLTextAreaElement extends HTMLElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('textarea')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('textarea')")]
 	/**
 	*  Creates a new <code>HTMLTextAreaElement</code> instance.
 	*/
@@ -83,7 +83,7 @@ public class HTMLTextAreaElement extends HTMLElement
 	public function get placeholder():String { return ''; }
 	public function set placeholder(value:String):void { }
 
-	[JavascriptProperty(name="readOnly")]
+	[JavaScriptProperty(name="readOnly")]
 	public function get readOnly_():Boolean { return false; }
 	public function set readOnly_(value:Boolean):void { }
 

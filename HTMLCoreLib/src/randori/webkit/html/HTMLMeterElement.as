@@ -43,7 +43,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.NodeList;
 
-[Javascript(export="false", nativecondition="METER_ELEMENT", name="HTMLMeterElement")]
+[JavaScript(export="false", nativecondition="METER_ELEMENT", name="HTMLMeterElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -51,7 +51,7 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLMeterElement extends HTMLElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('meter')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('meter')")]
 	/**
 	*  Creates a new <code>HTMLMeterElement</code> instance.
 	*/

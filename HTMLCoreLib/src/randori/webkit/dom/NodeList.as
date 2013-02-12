@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[Javascript(export="false", name="NodeList")]
+[JavaScript(export="false", name="NodeList")]
 /**
  *  <p>The <code>NodeList</code> interface provides the abstraction of an
  *  ordered collection of nodes, without defining or constraining how this

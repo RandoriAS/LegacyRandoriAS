@@ -42,7 +42,7 @@ package randori.webkit.svg
 {
 
 
-[Javascript(export="false", nativecondition="SVG", name="SVGViewElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGViewElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -53,7 +53,7 @@ package randori.webkit.svg
  */
 public class SVGViewElement extends SVGElement implements SVGExternalResourcesRequired, SVGFitToViewBox, SVGZoomAndPan
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('view')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('view')")]
 	/**
 	*  Creates a new <code>SVGViewElement</code> instance.
 	*/

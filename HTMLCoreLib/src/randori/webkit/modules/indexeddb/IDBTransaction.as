@@ -44,7 +44,7 @@ package randori.webkit.modules.indexeddb
 import randori.webkit.dom.DOMError;
 import randori.webkit.dom.DomEvent;
 
-[Javascript(export="false", nativecondition="INDEXED_DATABASE", name="IDBTransaction")]
+[JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="IDBTransaction")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

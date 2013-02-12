@@ -42,7 +42,7 @@ package randori.webkit.modules.gamepad
 {
 
 
-[Javascript(export="false", nativecondition="GAMEPAD", name="NavigatorGamepad")]
+[JavaScript(export="false", nativecondition="GAMEPAD", name="NavigatorGamepad")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

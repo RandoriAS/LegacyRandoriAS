@@ -42,7 +42,7 @@ package randori.webkit.modules.filesystem
 {
 
 
-[Javascript(export="false", nativecondition="FILE_SYSTEM", name="DOMWindowFileSystem")]
+[JavaScript(export="false", nativecondition="FILE_SYSTEM", name="DOMWindowFileSystem")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

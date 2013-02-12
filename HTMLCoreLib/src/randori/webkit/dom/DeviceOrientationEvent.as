@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[Javascript(export="false", nativecondition="DEVICE_ORIENTATION", name="DeviceOrientationEvent")]
+[JavaScript(export="false", nativecondition="DEVICE_ORIENTATION", name="DeviceOrientationEvent")]
 /**
  *  <note>This class depends on the browser to support: <code>DEVICE_ORIENTATION</code></note>
  *  @author RandoriAS Web IDL Parser

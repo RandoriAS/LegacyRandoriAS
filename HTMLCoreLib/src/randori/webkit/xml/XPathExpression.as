@@ -43,7 +43,7 @@ package randori.webkit.xml
 
 import randori.webkit.dom.Node;
 
-[Javascript(export="false", name="XPathExpression")]
+[JavaScript(export="false", name="XPathExpression")]
 /**
  *  <p>The <code>XPathExpression</code> interface represents a parsed
  *  and resolved XPath expression.</p>

@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[Javascript(export="false", name="Rect")]
+[JavaScript(export="false", name="Rect")]
 /**
  *  <p>
  *  The <code>Rect</code> interface is used to represent any rect

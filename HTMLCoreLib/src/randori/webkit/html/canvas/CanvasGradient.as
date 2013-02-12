@@ -42,7 +42,7 @@ package randori.webkit.html.canvas
 {
 
 
-[Javascript(export="false", name="CanvasGradient")]
+[JavaScript(export="false", name="CanvasGradient")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

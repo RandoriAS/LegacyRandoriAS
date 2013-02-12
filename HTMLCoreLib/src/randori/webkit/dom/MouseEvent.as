@@ -43,7 +43,7 @@ package randori.webkit.dom
 
 import randori.webkit.page.Window;
 
-[Javascript(export="false", name="MouseEvent")]
+[JavaScript(export="false", name="MouseEvent")]
 /**
  *  <p>The <code>MouseEvent</code> interface provides specific contextual
  *  information associated with Mouse events.</p><p>The <code>detail</code> attribute inherited from <code>UIEvent</code>

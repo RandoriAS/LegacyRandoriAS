@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[Javascript(export="false", name="Counter")]
+[JavaScript(export="false", name="Counter")]
 /**
  *  <p>
  *  The <code>Counter</code> interface is used to represent any counter or

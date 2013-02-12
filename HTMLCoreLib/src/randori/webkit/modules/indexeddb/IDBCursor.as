@@ -42,7 +42,7 @@ package randori.webkit.modules.indexeddb
 {
 
 
-[Javascript(export="false", nativecondition="INDEXED_DATABASE", name="IDBCursor")]
+[JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="IDBCursor")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -69,12 +69,12 @@ public class IDBCursor
 	*  @param count
 	*/
 	public function advance(count:Number):void {}
-	[JavascriptMethod(name="continue")]
+	[JavaScriptMethod(name="continue")]
 	/**
 	*  @param key (optional argument, default value is <code>null</code>)
 	*/
 	public function continue_(key:*=null):void {}
-	[JavascriptMethod(name="delete")]
+	[JavaScriptMethod(name="delete")]
 	/**
 	*  @return A <code>IDBRequest</code> instance.
 	*/

@@ -44,7 +44,7 @@ package randori.webkit.modules.websockets
 import randori.webkit.html.canvas.ArrayBuffer;
 import randori.webkit.dom.DomEvent;
 
-[Javascript(export="false", nativecondition="WEB_SOCKETS", name="WebSocket")]
+[JavaScript(export="false", nativecondition="WEB_SOCKETS", name="WebSocket")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -64,7 +64,7 @@ public class WebSocket
 	*/
 	public function WebSocket(arg1:*=null, arg2:*=null) {super();}
 
-	[JavascriptProperty(name="URL")]
+	[JavaScriptProperty(name="URL")]
 	public function get URL_():String { return ''; }
 
 	public function get url():String { return ''; }

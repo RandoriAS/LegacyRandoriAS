@@ -42,7 +42,7 @@ package randori.webkit.svg
 {
 
 
-[Javascript(export="false", nativecondition="SVG", name="SVGGlyphElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGGlyphElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +50,7 @@ package randori.webkit.svg
  */
 public class SVGGlyphElement extends SVGElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('glyph')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('glyph')")]
 	/**
 	*  Creates a new <code>SVGGlyphElement</code> instance.
 	*/

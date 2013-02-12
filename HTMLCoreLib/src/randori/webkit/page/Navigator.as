@@ -42,7 +42,7 @@ package randori.webkit.page
 {
 
 
-[Javascript(export="false", name="Navigator")]
+[JavaScript(export="false", name="Navigator")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

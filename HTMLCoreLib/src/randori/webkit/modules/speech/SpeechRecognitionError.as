@@ -43,7 +43,7 @@ package randori.webkit.modules.speech
 
 import randori.webkit.dom.DomEvent;
 
-[Javascript(export="false", nativecondition="SCRIPTED_SPEECH", name="SpeechRecognitionError")]
+[JavaScript(export="false", nativecondition="SCRIPTED_SPEECH", name="SpeechRecognitionError")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

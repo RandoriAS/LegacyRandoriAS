@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[Javascript(export="false", nativecondition="VIDEO", name="TimeRanges")]
+[JavaScript(export="false", nativecondition="VIDEO", name="TimeRanges")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

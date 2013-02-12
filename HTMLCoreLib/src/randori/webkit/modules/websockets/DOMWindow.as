@@ -42,7 +42,7 @@ package randori.webkit.modules.websockets
 {
 
 
-[Javascript(export="false", nativecondition="WEB_SOCKETS", name="DOMWindowWebSocket")]
+[JavaScript(export="false", nativecondition="WEB_SOCKETS", name="DOMWindowWebSocket")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,14 +50,14 @@ package randori.webkit.modules.websockets
 public class DOMWindow
 {
 
-	[JavascriptProperty(name="CloseEvent")]
+	[JavaScriptProperty(name="CloseEvent")]
 	/**
 	*  @see randori.webkit.modules.websockets.CloseEvent
 	*/
 	public function get CloseEvent_():CloseEvent { return null; }
 	public function set CloseEvent_(value:CloseEvent):void { }
 
-	[JavascriptProperty(name="WebSocket")]
+	[JavaScriptProperty(name="WebSocket")]
 	/**
 	*  @see randori.webkit.modules.websockets.WebSocket
 	*/

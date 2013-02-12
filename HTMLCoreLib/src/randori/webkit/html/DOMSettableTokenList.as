@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[Javascript(export="false", name="DOMSettableTokenList")]
+[JavaScript(export="false", name="DOMSettableTokenList")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
