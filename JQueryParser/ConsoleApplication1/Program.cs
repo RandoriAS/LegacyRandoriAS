@@ -49,6 +49,7 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             ImportLookup["Element"] = "randori.webkit.dom.Element";
+            ImportLookup["Document"] = "randori.webkit.dom.Document";
             ImportLookup["XMLHttpRequest"] = "randori.webkit.xml.XMLHttpRequest";
             ImportLookup["Vector.<Element>"] = "randori.webkit.dom.Element";
 
@@ -386,7 +387,7 @@ namespace ConsoleApplication1
             {
                 CurrentClass = ClassLookup[ClassName.ActionScriptName];
             }
-            xdoc.Elements("entry").ToList<XElement>().ForEach(e => AddMember(CurrentClass, e));
+            xdoc.Descendants("entry").ToList<XElement>().ForEach(e => AddMember(CurrentClass, e));
             return CurrentClass;
         }
 
@@ -420,7 +421,14 @@ namespace ConsoleApplication1
                 }
                 else
                 {
-                    return null;
+                    if (xdoc.Root.Name == "entries")
+                    {
+                        ClassName = CapitalizeName(xdoc.Root.Elements("entry").ToList<XElement>()[0].Attribute("return").Value);
+                    }
+                    else
+                    {
+                        return null;
+                    }
                 }
             }
             ClassName = TranslateClassName(ClassName);
@@ -439,9 +447,13 @@ namespace ConsoleApplication1
             {
                 var name = TranslateName(Elm.Attribute("name").Value);
                 var type = TranslateType(Elm.Attribute("return").Value);
-                if ((type == "Object") && (Elm.Elements("property").Count() > 0))
+                if (((type == "Object") || (type == "PlainObject")) && (Elm.Elements("property").Count() > 0))
                 {
                     type = CreateTypedObjectForPlainObject(name, Elm);
+                }
+                else if (type == "PlainObject")
+                {
+                    type = "Object";
                 }
                 var desc = Elm.Element("desc").Value.Trim();
                 if (name.IndexOf('.') > -1)
@@ -484,6 +496,12 @@ namespace ConsoleApplication1
             }
             var field = Builder.AddProperty(classDef, Name, type);
             field.Comments.AddRange(SplitCommentLines(Elm.Element("desc").Value));
+        }
+
+        private static CodeCommentStatement JoinCommentLines(string comment)
+        {
+            var lines = Regex.Split(comment, "[\r\n]+");
+            return new CodeCommentStatement(String.Join(" ", lines), true);
         }
 
         private static CodeCommentStatementCollection SplitCommentLines(string comment)
@@ -680,8 +698,12 @@ namespace ConsoleApplication1
             {
                 type = CreatePlainObjectFromIncludeFile(elm);
             }
+            else if (type == "Selector")
+            {
+                type = "String";
+            }
             var param = Builder.AddParameter(name, type, method, null, optional);
-            ((CodeCommentStatementCollection)param.UserData["comments"]).AddRange(SplitCommentLines(desc));
+            ((CodeCommentStatementCollection)param.UserData["comments"]).Add(JoinCommentLines(desc));
         }
 
         private static void CreateParametersFromIncludeFiles(XElement elm, CodeMemberMethod method)

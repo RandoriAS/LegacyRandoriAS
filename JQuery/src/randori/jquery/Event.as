@@ -23,7 +23,7 @@ package randori.jquery {
 	import randori.webkit.dom.Element;
 	
 	
-	[Javascript(export="false")]
+	[JavaScript(export="false")]
 	public class Event {
 		
 		/*

@@ -6,12 +6,12 @@ package randori.sizzlejs {
 	public final class Sizzle {
 
 		[JavascriptMethod(name="")]
-		public static function Sizzle(selector:String, DOMElement:Element, results:Array=null):Vector.<Element> {
+		public static function select(selector:String, DOMElement:Element, results:Array=null):Vector.<Element> {
 			return null;
 		}
 
 		[JavascriptMethod(name="")]
-		public static function Sizzle2(selector:String, DOMElement:Document, results:Array=null):Vector.<Element> {
+		public static function select2(selector:String, DOMElement:Document, results:Array=null):Vector.<Element> {
 			return null;
 		}
 

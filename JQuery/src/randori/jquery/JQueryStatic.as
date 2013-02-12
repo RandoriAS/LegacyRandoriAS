@@ -24,7 +24,7 @@ package randori.jquery {
 	import randori.webkit.dom.Element;
 
 
-	[Javascript(export="false", name="JQuery")]
+	[JavaScript(export="false", name="JQuery")]
 	public final class JQueryStatic {
 
 		/*
@@ -32,6 +32,18 @@ package randori.jquery {
 		 * @since 1.0
 		 */
 		public static var boxModel:Boolean;
+
+		/*
+		 * Contains flags for the useragent, read from navigator.userAgent. We recommend against using this property; please try to use feature detection instead (see jQuery.support). jQuery.browser may be moved to a plugin in a future release of jQuery.
+		 * @since 1.0
+		 */
+		public static var browser:Object;
+
+		/*
+		 * The version number of the rendering engine for the user's browser.
+		 * @since 1.1.3
+		 */
+		public static var version:String;
 
 		/*
 		 * Hook directly into jQuery to override how particular CSS properties are retrieved or set, normalize CSS property naming, or create custom properties.
@@ -72,7 +84,7 @@ package randori.jquery {
 		 * @since 1.0
 		 * @param settings A set of key/value pairs that configure the Ajax request. All settings are optional. A default can be set for any option with $.ajaxSetup().
 		 */
-		[JavascriptMethod(name="ajax")]
+		[JavaScriptMethod(name="ajax")]
 		public static function ajax2(settings:SettingsObject=null):XMLHttpRequest {
 			return null;
 		}
@@ -108,7 +120,7 @@ package randori.jquery {
 		 * @since 1.7
 		 * @param flags An optional list of space-separated flags that change how the callback list behaves.
 		 */
-		[JavascriptMethod(name="Callbacks")]
+		[JavaScriptMethod(name="Callbacks")]
 		public static function callbacks(flags:String):Callbacks {
 			return null;
 		}
@@ -124,11 +136,43 @@ package randori.jquery {
 		}
 
 		/*
+		 * Store arbitrary data associated with the specified element. Returns the value that was set.
+		 * @since 1.2.3
+		 * @param element The DOM element to associate with the data.
+		 * @param key A string naming the piece of data to set.
+		 * @param value The new data value.
+		 */
+		public static function data(element:Element, key:String, value:Object):Object {
+			return null;
+		}
+
+		/*
+		 * Returns value at named data store for the element, as set by jQuery.data(element, name, value), or the full data store for the element.
+		 * @since 1.2.3
+		 * @param element The DOM element to query for the data.
+		 * @param key Name of the data stored.
+		 */
+		[JavaScriptMethod(name="data")]
+		public static function data2(element:Element, key:String):Object {
+			return null;
+		}
+
+		/*
+		 * Returns value at named data store for the element, as set by jQuery.data(element, name, value), or the full data store for the element.
+		 * @since 1.4
+		 * @param element The DOM element to query for the data.
+		 */
+		[JavaScriptMethod(name="data")]
+		public static function data3(element:Element):Object {
+			return null;
+		}
+
+		/*
 		 * A constructor function that returns a chainable utility object with methods to register multiple callbacks into callback queues, invoke callback queues, and relay the success or failure state of any synchronous or asynchronous function.
 		 * @since 1.5
 		 * @param beforeStart A function that is called just before the constructor returns.
 		 */
-		[JavascriptMethod(name="Deferred")]
+		[JavaScriptMethod(name="Deferred")]
 		public static function deferred(beforeStart:Function=null):Deferred {
 			return null;
 		}
@@ -179,7 +223,7 @@ package randori.jquery {
 		 * @param object1 An object containing additional properties to merge in.
 		 * @param objectN Additional objects containing properties to merge in.
 		 */
-		[JavascriptMethod(name="extend")]
+		[JavaScriptMethod(name="extend")]
 		public static function extend2(deep:Boolean=false, target:Object=null, object1:Object=null, objectN:Object=null):Object {
 			return null;
 		}
@@ -352,7 +396,7 @@ package randori.jquery {
 		 * @param arrayOrObject The Array or Object to translate.
 		 * @param callBack The function to process each item against.  The first argument to the function is the value; the second argument is the index or key of the array or object property. The function can return any value to add to the array. A returned array will be flattened into the resulting array. Within the function, this refers to the global (window) object. (The method requires to have the following signature: callback(value,indexOrKey))
 		 */
-		[JavascriptMethod(name="map")]
+		[JavaScriptMethod(name="map")]
 		public static function map2(arrayOrObject:*, callBack:Function):Array {
 			return null;
 		}
@@ -406,7 +450,7 @@ package randori.jquery {
 		 * @param obj An array or object to serialize.
 		 * @param traditional A Boolean indicating whether to perform a traditional "shallow" serialization.
 		 */
-		[JavascriptMethod(name="param")]
+		[JavaScriptMethod(name="param")]
 		public static function param2(obj:*, traditional:Boolean):String {
 			return '';
 		}
@@ -468,7 +512,7 @@ package randori.jquery {
 		 * @param context The object to which the context of the function should be set.
 		 * @param name The name of the function whose context will be changed (should be a property of the context object).
 		 */
-		[JavascriptMethod(name="proxy")]
+		[JavaScriptMethod(name="proxy")]
 		public static function proxy2(context:Object, name:String):Function {
 			return null;
 		}
@@ -480,7 +524,7 @@ package randori.jquery {
 		 * @param context The object to which the context (this) of the function should be set.
 		 * @param additionalArguments Any number of arguments to be passed to the function referenced in the function argument.
 		 */
-		[JavascriptMethod(name="proxy")]
+		[JavaScriptMethod(name="proxy")]
 		public static function proxy3(callBack:Function, context:Object, additionalArguments:*=null):Function {
 			return null;
 		}
@@ -492,8 +536,42 @@ package randori.jquery {
 		 * @param name The name of the function whose context will be changed (should be a property of the context object).
 		 * @param additionalArguments Any number of arguments to be passed to the function named in the name argument.
 		 */
-		[JavascriptMethod(name="proxy")]
+		[JavaScriptMethod(name="proxy")]
 		public static function proxy4(context:Object, name:String, additionalArguments:*=null):Function {
+			return null;
+		}
+
+		/*
+		 * Show the queue of functions to be executed on the matched element.
+		 * @since 1.3
+		 * @param element A DOM element to inspect for an attached queue.
+		 * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.
+		 */
+		public static function queue(element:Element, queueName:String=''):Array {
+			return null;
+		}
+
+		/*
+		 * Manipulate the queue of functions to be executed on the matched element.
+		 * @since 1.3
+		 * @param element A DOM element where the array of queued functions is attached.
+		 * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.
+		 * @param newQueue An array of functions to replace the current queue contents.
+		 */
+		[JavaScriptMethod(name="queue")]
+		public static function queue2(element:Element, queueName:String, newQueue:Array):JQuery {
+			return null;
+		}
+
+		/*
+		 * Manipulate the queue of functions to be executed on the matched element.
+		 * @since 1.3
+		 * @param element A DOM element on which to add a queued function.
+		 * @param queueName A string containing the name of the queue. Defaults to fx, the standard effects queue.
+		 * @param callBack The new function to add to the queue. (The method requires to have the following signature: callback())
+		 */
+		[JavaScriptMethod(name="queue")]
+		public static function queue3(element:Element, queueName:String, callBack:Function):JQuery {
 			return null;
 		}
 
@@ -551,7 +629,7 @@ package randori.jquery {
 			return null;
 		}
 
-		[JavascriptMethod(name="")]
+		[JavaScriptMethod(name="")]
 		public static function J(... params):JQuery {
 			return null;
 		}

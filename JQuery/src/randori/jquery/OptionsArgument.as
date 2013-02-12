@@ -22,7 +22,7 @@
 package randori.jquery {
 	
 	
-	[Javascript(export="false")]
+	[JavaScript(export="false")]
 	public class OptionsArgument {
 		
 		/*
