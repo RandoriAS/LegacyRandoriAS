@@ -18,7 +18,7 @@
  */
 package randori.dom {
 	
-	[JavaScript(export=false,name="Object",mode="json")]
+	[JavaScript(export="false",name="Object",mode="json")]
 	public class ElementDescriptor {
 		public var context:String;
 		public var behavior:String;

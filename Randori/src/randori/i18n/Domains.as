@@ -18,7 +18,7 @@
  */
 package randori.i18n {
 	
-	[JavaScript(export=false,name="Object",mode="json")]
+	[JavaScript(export="false",name="Object",mode="json")]
 	public class Domains {
 		public static const LABELS:int = 0;
 		public static const MESSAGES:int = 1;

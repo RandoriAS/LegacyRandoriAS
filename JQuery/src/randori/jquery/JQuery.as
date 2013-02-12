@@ -25,7 +25,22 @@ package randori.jquery {
 	
 	[Javascript(export="false")]
 	public class JQuery {
-		
+
+		[JavascriptMethod(name="css")]
+		public function css( name:*=null, value:*=null ):String {
+			return null;
+		}
+
+		[JavascriptMethod(name="data")]
+		public function data( value:*=null, value1:*=null ):String {
+			return null;
+		}
+
+		[JavascriptMethod(name="html")]
+		public function html( value:*=null ):String {
+			return null;
+		}
+
 		/*
 		 * The DOM node context originally passed to jQuery(); if none was passed then context will likely be the document.
 		 * @since 1.3

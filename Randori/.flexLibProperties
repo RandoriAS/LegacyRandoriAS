@@ -32,6 +32,15 @@
     <classEntry path="randori.service.parser.AbstractParser"/>
     <classEntry path="randori.startup.RandoriApplication"/>
     <classEntry path="randori.startup.RandoriModule"/>
+    <classEntry path="randori.template.TemplateBuilder"/>
+    <classEntry path="randori.behaviors.SimpleList"/>
+    <classEntry path="randori.behaviors.list.DataRendererProvider"/>
+    <classEntry path="randori.behaviors.List"/>
+    <classEntry path="randori.behaviors.template.TemplateRenderer"/>
+    <classEntry path="randori.behaviors.ViewStack"/>
+    <classEntry path="randori.behaviors.viewStack.ViewChangeAnimator"/>
+    <classEntry path="randori.behaviors.viewStack.MediatorCapturer"/>
+    <classEntry path="randori.utilities.GlobalUtilities"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

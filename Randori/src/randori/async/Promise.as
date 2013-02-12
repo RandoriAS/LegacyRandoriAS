@@ -184,7 +184,7 @@ package randori.async {
 }
 import randori.async.Promise;
 
-[JavaScript(export=false,name="Object",mode="json")]
+[JavaScript(export="false",name="Object",mode="json")]
 class ThenContract {
 	public var fullfilledHandler:Function;
 	public var rejectedHandler:Function;

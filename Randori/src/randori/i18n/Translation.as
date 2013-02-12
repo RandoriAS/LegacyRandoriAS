@@ -17,7 +17,7 @@
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
 package randori.i18n {
-	[JavaScript(export=false,name="Object",mode="json")]
+	[JavaScript(export="false",name="Object",mode="json")]
 	public class Translation {
 		public var key:String;
 		public var value:*;

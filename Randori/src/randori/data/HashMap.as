@@ -82,7 +82,7 @@ package randori.data {
 	}
 }
 
-[JavaScript(export=false,name="Object",mode="json")]
+[JavaScript(export="false",name="Object",mode="json")]
 class Entry {
 	public var key:Object;
 	public var value:*;
