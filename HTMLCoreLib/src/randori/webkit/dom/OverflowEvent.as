@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[Javascript(export="false", name="OverflowEvent")]
+[JavaScript(export="false", name="OverflowEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

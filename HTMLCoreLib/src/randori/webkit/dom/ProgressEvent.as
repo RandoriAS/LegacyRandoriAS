@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[Javascript(export="false", name="ProgressEvent")]
+[JavaScript(export="false", name="ProgressEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

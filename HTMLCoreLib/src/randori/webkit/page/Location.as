@@ -43,7 +43,7 @@ package randori.webkit.page
 
 import randori.webkit.dom.DOMStringList;
 
-[Javascript(export="false", name="Location")]
+[JavaScript(export="false", name="Location")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

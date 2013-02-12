@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[Javascript(export="false", name="CSSStyleRule")]
+[JavaScript(export="false", name="CSSStyleRule")]
 /**
  *  <p>
  *  The <code>CSSStyleRule</code> interface represents a single rule set

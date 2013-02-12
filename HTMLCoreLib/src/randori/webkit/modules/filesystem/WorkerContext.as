@@ -43,7 +43,7 @@ package randori.webkit.modules.filesystem
 
 import randori.webkit.fileapi.FileError;
 
-[Javascript(export="false", nativecondition="FILE_SYSTEM", name="WorkerContextFileSystem")]
+[JavaScript(export="false", nativecondition="FILE_SYSTEM", name="WorkerContextFileSystem")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -53,7 +53,7 @@ public class WorkerContext
 	public static const TEMPORARY:uint = 0;
 	public static const PERSISTENT:uint = 1;
 
-	[JavascriptProperty(name="FileError")]
+	[JavaScriptProperty(name="FileError")]
 	/**
 	*  @see randori.webkit.fileapi.FileError
 	*/

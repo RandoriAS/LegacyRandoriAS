@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[Javascript(export="false", name="CSSMediaRule")]
+[JavaScript(export="false", name="CSSMediaRule")]
 /**
  *  <p>
  *  The <code>CSSMediaRule</code> interface represents a @media

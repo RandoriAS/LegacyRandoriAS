@@ -43,7 +43,7 @@ package randori.webkit.css
 
 import randori.webkit.dom.Node;
 
-[Javascript(export="false", name="StyleSheet")]
+[JavaScript(export="false", name="StyleSheet")]
 /**
  *  <p>
  *  The <code>StyleSheet</code> interface is the abstract base interface for

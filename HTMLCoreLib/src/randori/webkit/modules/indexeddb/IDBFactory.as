@@ -42,7 +42,7 @@ package randori.webkit.modules.indexeddb
 {
 
 
-[Javascript(export="false", nativecondition="INDEXED_DATABASE", name="IDBFactory")]
+[JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="IDBFactory")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

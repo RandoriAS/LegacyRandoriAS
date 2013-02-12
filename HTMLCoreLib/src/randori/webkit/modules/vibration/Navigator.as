@@ -42,7 +42,7 @@ package randori.webkit.modules.vibration
 {
 
 
-[Javascript(export="false", nativecondition="VIBRATION", name="NavigatorVibration")]
+[JavaScript(export="false", nativecondition="VIBRATION", name="NavigatorVibration")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

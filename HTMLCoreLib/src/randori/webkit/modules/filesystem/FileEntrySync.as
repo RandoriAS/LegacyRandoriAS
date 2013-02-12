@@ -43,7 +43,7 @@ package randori.webkit.modules.filesystem
 
 import randori.webkit.fileapi.File;
 
-[Javascript(export="false", nativecondition="FILE_SYSTEM", name="FileEntrySync")]
+[JavaScript(export="false", nativecondition="FILE_SYSTEM", name="FileEntrySync")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

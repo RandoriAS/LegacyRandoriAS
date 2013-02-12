@@ -42,7 +42,7 @@ package randori.webkit.svg
 {
 
 
-[Javascript(export="false", nativecondition="SVG", name="SVGFESpotLightElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGFESpotLightElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +50,7 @@ package randori.webkit.svg
  */
 public class SVGFESpotLightElement extends SVGElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('fespotlight')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('fespotlight')")]
 	/**
 	*  Creates a new <code>SVGFESpotLightElement</code> instance.
 	*/

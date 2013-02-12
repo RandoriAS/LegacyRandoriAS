@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[Javascript(export="false", nativecondition="VIDEO", name="HTMLSourceElement")]
+[JavaScript(export="false", nativecondition="VIDEO", name="HTMLSourceElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLSourceElement extends HTMLElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('source')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('source')")]
 	/**
 	*  Creates a new <code>HTMLSourceElement</code> instance.
 	*/

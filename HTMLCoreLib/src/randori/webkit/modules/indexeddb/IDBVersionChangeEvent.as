@@ -43,7 +43,7 @@ package randori.webkit.modules.indexeddb
 
 import randori.webkit.dom.DomEvent;
 
-[Javascript(export="false", nativecondition="INDEXED_DATABASE", name="IDBVersionChangeEvent")]
+[JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="IDBVersionChangeEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

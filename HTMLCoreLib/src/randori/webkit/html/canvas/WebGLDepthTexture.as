@@ -42,7 +42,7 @@ package randori.webkit.html.canvas
 {
 
 
-[Javascript(export="false", nativecondition="WEBGL", name="WebGLDepthTexture")]
+[JavaScript(export="false", nativecondition="WEBGL", name="WebGLDepthTexture")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

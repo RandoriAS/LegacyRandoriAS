@@ -44,7 +44,7 @@ package randori.webkit.modules.indexeddb
 import randori.webkit.dom.DOMStringList;
 import randori.webkit.dom.DomEvent;
 
-[Javascript(export="false", nativecondition="INDEXED_DATABASE", name="IDBDatabase")]
+[JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="IDBDatabase")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

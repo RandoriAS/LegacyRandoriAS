@@ -43,7 +43,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.Document;
 
-[Javascript(export="false", name="HTMLObjectElement")]
+[JavaScript(export="false", name="HTMLObjectElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -51,7 +51,7 @@ import randori.webkit.dom.Document;
  */
 public class HTMLObjectElement extends HTMLElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('object')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('object')")]
 	/**
 	*  Creates a new <code>HTMLObjectElement</code> instance.
 	*/

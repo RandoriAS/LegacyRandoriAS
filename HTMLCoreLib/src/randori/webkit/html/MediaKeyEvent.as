@@ -43,7 +43,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.DomEvent;
 
-[Javascript(export="false", nativecondition="ENCRYPTED_MEDIA", name="MediaKeyEvent")]
+[JavaScript(export="false", nativecondition="ENCRYPTED_MEDIA", name="MediaKeyEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

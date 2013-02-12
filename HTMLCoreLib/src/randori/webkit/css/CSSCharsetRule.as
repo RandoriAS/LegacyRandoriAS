@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[Javascript(export="false", name="CSSCharsetRule")]
+[JavaScript(export="false", name="CSSCharsetRule")]
 /**
  *  <p>
  *  The <code>CSSCharsetRule</code> interface represents a @charset

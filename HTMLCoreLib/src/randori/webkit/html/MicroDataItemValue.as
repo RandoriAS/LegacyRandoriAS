@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[Javascript(export="false", nativecondition="MICRODATA", name="MicroDataItemValue")]
+[JavaScript(export="false", nativecondition="MICRODATA", name="MicroDataItemValue")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

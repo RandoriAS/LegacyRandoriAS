@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[Javascript(export="false", nativecondition="VIDEO", name="HTMLMediaElement")]
+[JavaScript(export="false", nativecondition="VIDEO", name="HTMLMediaElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLMediaElement extends HTMLElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('media')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('media')")]
 	/**
 	*  Creates a new <code>HTMLMediaElement</code> instance.
 	*/

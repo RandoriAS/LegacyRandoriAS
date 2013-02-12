@@ -42,7 +42,7 @@ package randori.webkit.svg
 {
 
 
-[Javascript(export="false", nativecondition="SVG", name="SVGAnimateMotionElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGAnimateMotionElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

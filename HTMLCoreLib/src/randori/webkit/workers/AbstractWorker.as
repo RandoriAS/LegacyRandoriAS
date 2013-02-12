@@ -43,7 +43,7 @@ package randori.webkit.workers
 
 import randori.webkit.dom.DomEvent;
 
-[Javascript(export="false", nativecondition="WORKERS", name="AbstractWorker")]
+[JavaScript(export="false", nativecondition="WORKERS", name="AbstractWorker")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

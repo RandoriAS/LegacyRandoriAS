@@ -42,7 +42,7 @@ package randori.webkit.modules.speech
 {
 
 
-[Javascript(export="false", nativecondition="SPEECH_SYNTHESIS", name="SpeechSynthesisVoice")]
+[JavaScript(export="false", nativecondition="SPEECH_SYNTHESIS", name="SpeechSynthesisVoice")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -58,7 +58,7 @@ public class SpeechSynthesisVoice
 
 	public function get localService():Boolean { return false; }
 
-	[JavascriptProperty(name="default")]
+	[JavaScriptProperty(name="default")]
 	public function get default_():Boolean { return false; }
 }
 

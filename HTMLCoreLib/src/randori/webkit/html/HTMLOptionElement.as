@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[Javascript(export="false", name="HTMLOptionElement")]
+[JavaScript(export="false", name="HTMLOptionElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLOptionElement extends HTMLElement
 {
-	[JavascriptMethod(name="Option")]
+	[JavaScriptMethod(name="Option")]
 	/**
 	*  Creates a new <code>HTMLOptionElement</code> instance.
 	*  @param data (optional argument, default value is <code>null</code>)

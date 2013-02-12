@@ -43,7 +43,7 @@ package randori.webkit.modules.geolocation
 
 import randori.webkit.page.Coordinates;
 
-[Javascript(export="false", nativecondition="GEOLOCATION", name="Geoposition")]
+[JavaScript(export="false", nativecondition="GEOLOCATION", name="Geoposition")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

@@ -43,7 +43,7 @@ package randori.webkit.html
 
 import randori.webkit.dom.NodeList;
 
-[Javascript(export="false", name="HTMLOutputElement")]
+[JavaScript(export="false", name="HTMLOutputElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -51,7 +51,7 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLOutputElement extends HTMLElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('output')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('output')")]
 	/**
 	*  Creates a new <code>HTMLOutputElement</code> instance.
 	*/

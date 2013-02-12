@@ -55,7 +55,7 @@ import randori.webkit.page.Selection;
 import randori.webkit.html.canvas.CanvasRenderingContext;
 import randori.webkit.page.SecurityPolicy;
 
-[Javascript(export="false", name="Document")]
+[JavaScript(export="false", name="Document")]
 /**
  *  <p>The <code>Document</code> interface represents the entire
  *  HTML or XML document. Conceptually, it is the root of the
@@ -471,7 +471,7 @@ public class Document extends Node
 	public function get domain():String { return ''; }
 	public function set domain(value:String):void { }
 
-	[JavascriptProperty(name="URL")]
+	[JavaScriptProperty(name="URL")]
 	public function get URL_():String { return ''; }
 
 	public function get cookie():String { return ''; }

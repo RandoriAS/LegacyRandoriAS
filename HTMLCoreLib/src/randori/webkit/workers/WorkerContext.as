@@ -50,7 +50,7 @@ import randori.webkit.html.URL;
 import randori.webkit.html.canvas.ArrayBuffer;
 import randori.webkit.html.canvas.DataView;
 
-[Javascript(export="false", nativecondition="WORKERS", name="WorkerContext")]
+[JavaScript(export="false", nativecondition="WORKERS", name="WorkerContext")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -119,112 +119,112 @@ public class WorkerContext
 	*/
 	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 
-	[JavascriptProperty(name="MessageEvent")]
+	[JavaScriptProperty(name="MessageEvent")]
 	/**
 	*  @see randori.webkit.dom.MessageEvent
 	*/
 	public function get MessageEvent_():MessageEvent { return null; }
 	public function set MessageEvent_(value:MessageEvent):void { }
 
-	[JavascriptProperty(name="WorkerLocation")]
+	[JavaScriptProperty(name="WorkerLocation")]
 	/**
 	*  @see randori.webkit.workers.WorkerLocation
 	*/
 	public function get WorkerLocation_():WorkerLocation { return null; }
 	public function set WorkerLocation_(value:WorkerLocation):void { }
 
-	[JavascriptProperty(name="EventSource")]
+	[JavaScriptProperty(name="EventSource")]
 	/**
 	*  @see randori.webkit.page.EventSource
 	*/
 	public function get EventSource_():EventSource { return null; }
 	public function set EventSource_(value:EventSource):void { }
 
-	[JavascriptProperty(name="XMLHttpRequest")]
+	[JavaScriptProperty(name="XMLHttpRequest")]
 	/**
 	*  @see randori.webkit.xml.XMLHttpRequest
 	*/
 	public function get XMLHttpRequest_():XMLHttpRequest { return null; }
 	public function set XMLHttpRequest_(value:XMLHttpRequest):void { }
 
-	[JavascriptProperty(name="URL")]
+	[JavaScriptProperty(name="URL")]
 	/**
 	*  @see randori.webkit.html.URL
 	*/
 	public function get URL_():URL { return null; }
 	public function set URL_(value:URL):void { }
 
-	[JavascriptProperty(name="ArrayBuffer")]
+	[JavaScriptProperty(name="ArrayBuffer")]
 	/**
 	*  @see randori.webkit.html.canvas.ArrayBuffer
 	*/
 	public function get ArrayBuffer_():ArrayBuffer { return null; }
 	public function set ArrayBuffer_(value:ArrayBuffer):void { }
 
-	[JavascriptProperty(name="Int8Array")]
+	[JavaScriptProperty(name="Int8Array")]
 	/**
 	*  @see randori.webkit.html.canvas.Int8Array
 	*/
 	public function get Int8Array_():Object { return null; }
 	public function set Int8Array_(value:Object):void { }
 
-	[JavascriptProperty(name="Uint8Array")]
+	[JavaScriptProperty(name="Uint8Array")]
 	/**
 	*  @see randori.webkit.html.canvas.Uint8Array
 	*/
 	public function get Uint8Array_():Object { return null; }
 	public function set Uint8Array_(value:Object):void { }
 
-	[JavascriptProperty(name="Uint8ClampedArray")]
+	[JavaScriptProperty(name="Uint8ClampedArray")]
 	/**
 	*  @see randori.webkit.html.canvas.Uint8Array
 	*/
 	public function get Uint8ClampedArray_():Object { return null; }
 	public function set Uint8ClampedArray_(value:Object):void { }
 
-	[JavascriptProperty(name="Int16Array")]
+	[JavaScriptProperty(name="Int16Array")]
 	/**
 	*  @see randori.webkit.html.canvas.Int16Array
 	*/
 	public function get Int16Array_():Object { return null; }
 	public function set Int16Array_(value:Object):void { }
 
-	[JavascriptProperty(name="Uint16Array")]
+	[JavaScriptProperty(name="Uint16Array")]
 	/**
 	*  @see randori.webkit.html.canvas.Uint16Array
 	*/
 	public function get Uint16Array_():Object { return null; }
 	public function set Uint16Array_(value:Object):void { }
 
-	[JavascriptProperty(name="Int32Array")]
+	[JavaScriptProperty(name="Int32Array")]
 	/**
 	*  @see randori.webkit.html.canvas.Int32Array
 	*/
 	public function get Int32Array_():Object { return null; }
 	public function set Int32Array_(value:Object):void { }
 
-	[JavascriptProperty(name="Uint32Array")]
+	[JavaScriptProperty(name="Uint32Array")]
 	/**
 	*  @see randori.webkit.html.canvas.Uint32Array
 	*/
 	public function get Uint32Array_():Object { return null; }
 	public function set Uint32Array_(value:Object):void { }
 
-	[JavascriptProperty(name="Float32Array")]
+	[JavaScriptProperty(name="Float32Array")]
 	/**
 	*  @see randori.webkit.html.canvas.Float32Array
 	*/
 	public function get Float32Array_():Object { return null; }
 	public function set Float32Array_(value:Object):void { }
 
-	[JavascriptProperty(name="Float64Array")]
+	[JavaScriptProperty(name="Float64Array")]
 	/**
 	*  @see randori.webkit.html.canvas.Float64Array
 	*/
 	public function get Float64Array_():Object { return null; }
 	public function set Float64Array_(value:Object):void { }
 
-	[JavascriptProperty(name="DataView")]
+	[JavaScriptProperty(name="DataView")]
 	/**
 	*  @see randori.webkit.html.canvas.DataView
 	*/

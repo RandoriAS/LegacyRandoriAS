@@ -43,7 +43,7 @@ package randori.webkit.html.canvas
 
 import randori.webkit.html.HTMLCanvasElement;
 
-[Javascript(export="false", name="CanvasRenderingContext")]
+[JavaScript(export="false", name="CanvasRenderingContext")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

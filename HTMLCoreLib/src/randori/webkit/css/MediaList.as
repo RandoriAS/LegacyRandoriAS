@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[Javascript(export="false", name="MediaList")]
+[JavaScript(export="false", name="MediaList")]
 /**
  *  <p>
  *  The <code>MediaList</code> interface provides the abstraction of an

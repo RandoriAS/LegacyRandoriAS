@@ -42,7 +42,7 @@ package randori.webkit.html.canvas
 {
 
 
-[Javascript(export="false", name="ArrayBuffer")]
+[JavaScript(export="false", name="ArrayBuffer")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

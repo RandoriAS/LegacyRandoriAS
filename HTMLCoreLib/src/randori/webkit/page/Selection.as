@@ -44,7 +44,7 @@ package randori.webkit.page
 import randori.webkit.dom.Node;
 import randori.webkit.dom.Range;
 
-[Javascript(export="false", name="Selection")]
+[JavaScript(export="false", name="Selection")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

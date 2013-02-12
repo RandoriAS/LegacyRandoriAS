@@ -43,7 +43,7 @@ package randori.webkit.modules.indexeddb
 
 import randori.webkit.dom.DOMStringList;
 
-[Javascript(export="false", nativecondition="INDEXED_DATABASE", name="IDBObjectStore")]
+[JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="IDBObjectStore")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -81,7 +81,7 @@ public class IDBObjectStore
 	*  @return A <code>IDBRequest</code> instance.
 	*/
 	public function add(value:*, key:*=null):IDBRequest { return null;}
-	[JavascriptMethod(name="delete")]
+	[JavaScriptMethod(name="delete")]
 	/**
 	*  @param keyRange
 	*  @return A <code>IDBRequest</code> instance.

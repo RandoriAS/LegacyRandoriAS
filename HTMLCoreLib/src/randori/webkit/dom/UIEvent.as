@@ -43,7 +43,7 @@ package randori.webkit.dom
 
 import randori.webkit.page.Window;
 
-[Javascript(export="false", name="UIEvent")]
+[JavaScript(export="false", name="UIEvent")]
 /**
  *  <p>The <code>UIEvent</code> interface provides specific contextual
  *  information associated with User Interface events.</p>

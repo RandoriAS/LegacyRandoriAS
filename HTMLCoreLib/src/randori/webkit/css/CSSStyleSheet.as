@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[Javascript(export="false", name="CSSStyleSheet")]
+[JavaScript(export="false", name="CSSStyleSheet")]
 /**
  *  <p>
  *  The <code>CSSStyleSheet</code> interface is a concrete interface used

@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[Javascript(export="false", name="Comment")]
+[JavaScript(export="false", name="Comment")]
 /**
  *  <p>This interface inherits from <code>CharacterData</code> and
  *  represents the content of a comment, i.e., all the

@@ -42,7 +42,7 @@ package randori.webkit.modules.networkinfo
 {
 
 
-[Javascript(export="false", nativecondition="NETWORK_INFO", name="NavigatorNetworkInfoConnection")]
+[JavaScript(export="false", nativecondition="NETWORK_INFO", name="NavigatorNetworkInfoConnection")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

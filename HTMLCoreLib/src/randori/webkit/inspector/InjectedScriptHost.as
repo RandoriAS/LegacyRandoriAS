@@ -43,7 +43,7 @@ package randori.webkit.inspector
 
 import randori.webkit.dom.Node;
 
-[Javascript(export="false", nativecondition="INSPECTOR", name="InjectedScriptHost")]
+[JavaScript(export="false", nativecondition="INSPECTOR", name="InjectedScriptHost")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

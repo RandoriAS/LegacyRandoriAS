@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[Javascript(export="false", nativecondition="DETAILS_ELEMENT", name="HTMLDetailsElement")]
+[JavaScript(export="false", nativecondition="DETAILS_ELEMENT", name="HTMLDetailsElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLDetailsElement extends HTMLElement
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('details')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('details')")]
 	/**
 	*  Creates a new <code>HTMLDetailsElement</code> instance.
 	*/

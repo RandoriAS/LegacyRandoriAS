@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[Javascript(export="false", name="CSSValue")]
+[JavaScript(export="false", name="CSSValue")]
 /**
  *  <p>
  *  The <code>CSSValue</code> interface represents a simple or a complex

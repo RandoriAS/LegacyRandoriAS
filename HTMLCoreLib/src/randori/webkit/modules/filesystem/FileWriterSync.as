@@ -43,7 +43,7 @@ package randori.webkit.modules.filesystem
 
 import randori.webkit.fileapi.Blob;
 
-[Javascript(export="false", nativecondition="FILE_SYSTEM", name="FileWriterSync")]
+[JavaScript(export="false", nativecondition="FILE_SYSTEM", name="FileWriterSync")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

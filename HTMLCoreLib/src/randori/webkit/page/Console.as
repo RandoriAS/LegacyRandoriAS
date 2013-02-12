@@ -42,7 +42,7 @@ package randori.webkit.page
 {
 
 
-[Javascript(export="false", name="Console")]
+[JavaScript(export="false", name="Console")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -77,7 +77,7 @@ public class Console
 	*  @param scriptArgs
 	*/
 	public function dirxml(...params):void {}
-	[JavascriptMethod(name="trace")]
+	[JavaScriptMethod(name="trace")]
 	/**
 	*  @param scriptArgs
 	*/

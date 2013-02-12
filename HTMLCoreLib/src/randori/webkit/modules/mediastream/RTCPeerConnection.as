@@ -43,7 +43,7 @@ package randori.webkit.modules.mediastream
 
 import randori.webkit.dom.DomEvent;
 
-[Javascript(export="false", nativecondition="MEDIA_STREAM", name="RTCPeerConnection")]
+[JavaScript(export="false", nativecondition="MEDIA_STREAM", name="RTCPeerConnection")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

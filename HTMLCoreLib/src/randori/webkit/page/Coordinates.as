@@ -42,7 +42,7 @@ package randori.webkit.page
 {
 
 
-[Javascript(export="false", name="Coordinates")]
+[JavaScript(export="false", name="Coordinates")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

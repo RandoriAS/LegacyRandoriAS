@@ -42,7 +42,8 @@ package randori.jquery {
 		 * @param failFilter An optional function that is called when the Deferred is rejected.
 		 * @param progressFilter An optional function that is called when progress notifications are sent to the Deferred.
 		 */
-		public function then(doneFilter:Function, failFilter:Function=null, progressFilter:Function=null):Promise {
+		[JavaScriptMethod(name="then", name="then")]
+		public function then11(doneFilter:Function, failFilter:Function=null, progressFilter:Function=null):Promise {
 			return null;
 		}
 		
@@ -105,7 +106,8 @@ package randori.jquery {
 		 * @param doneFilter An optional function that is called when the Deferred is resolved.
 		 * @param failFilter An optional function that is called when the Deferred is rejected.
 		 */
-		public function pipe(doneFilter:Function=null, failFilter:Function=null):Promise {
+		[JavaScriptMethod(name="pipe", name="pipe")]
+		public function pipe11(doneFilter:Function=null, failFilter:Function=null):Promise {
 			return null;
 		}
 		
@@ -136,6 +138,14 @@ package randori.jquery {
 		 */
 		public function state():String {
 			return '';
+		}
+		
+		public function then(...params):* {
+			return null;
+		}
+		
+		public function pipe(...params):* {
+			return null;
 		}
 	}
 }

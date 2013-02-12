@@ -42,7 +42,7 @@ package randori.webkit.modules.webaudio
 {
 
 
-[Javascript(export="false", nativecondition="WEB_AUDIO", name="DOMWindowWebAudio")]
+[JavaScript(export="false", nativecondition="WEB_AUDIO", name="DOMWindowWebAudio")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,14 +50,14 @@ package randori.webkit.modules.webaudio
 public class DOMWindow
 {
 
-	[JavascriptProperty(name="AudioProcessingEvent")]
+	[JavaScriptProperty(name="AudioProcessingEvent")]
 	/**
 	*  @see randori.webkit.modules.webaudio.AudioProcessingEvent
 	*/
 	public function get AudioProcessingEvent_():AudioProcessingEvent { return null; }
 	public function set AudioProcessingEvent_(value:AudioProcessingEvent):void { }
 
-	[JavascriptProperty(name="OfflineAudioCompletionEvent")]
+	[JavaScriptProperty(name="OfflineAudioCompletionEvent")]
 	/**
 	*  @see randori.webkit.modules.webaudio.OfflineAudioCompletionEvent
 	*/

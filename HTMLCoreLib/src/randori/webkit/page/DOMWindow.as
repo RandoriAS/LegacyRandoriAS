@@ -42,7 +42,7 @@ package randori.webkit.page
 {
 
 
-[Javascript(export="false", nativecondition="PAGE_POPUP", name="DOMWindowPagePopup")]
+[JavaScript(export="false", nativecondition="PAGE_POPUP", name="DOMWindowPagePopup")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

@@ -42,7 +42,7 @@ package randori.webkit.svg
 {
 
 
-[Javascript(export="false", nativecondition="SVG", name="SVGScriptElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGScriptElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -52,7 +52,7 @@ package randori.webkit.svg
  */
 public class SVGScriptElement extends SVGElement implements SVGURIReference, SVGExternalResourcesRequired
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('script')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('script')")]
 	/**
 	*  Creates a new <code>SVGScriptElement</code> instance.
 	*/

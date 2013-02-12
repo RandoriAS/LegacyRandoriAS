@@ -42,7 +42,7 @@ package randori.webkit.modules.indexeddb
 {
 
 
-[Javascript(export="false", nativecondition="INDEXED_DATABASE", name="WorkerContextIndexedDatabase")]
+[JavaScript(export="false", nativecondition="INDEXED_DATABASE", name="WorkerContextIndexedDatabase")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -55,77 +55,77 @@ public class WorkerContext
 	*/
 	public function get indexedDB():IDBFactory { return null; }
 
-	[JavascriptProperty(name="IDBCursor")]
+	[JavaScriptProperty(name="IDBCursor")]
 	/**
 	*  @see randori.webkit.modules.indexeddb.IDBCursor
 	*/
 	public function get IDBCursor_():IDBCursor { return null; }
 	public function set IDBCursor_(value:IDBCursor):void { }
 
-	[JavascriptProperty(name="IDBCursorWithValue")]
+	[JavaScriptProperty(name="IDBCursorWithValue")]
 	/**
 	*  @see randori.webkit.modules.indexeddb.IDBCursorWithValue
 	*/
 	public function get IDBCursorWithValue_():IDBCursorWithValue { return null; }
 	public function set IDBCursorWithValue_(value:IDBCursorWithValue):void { }
 
-	[JavascriptProperty(name="IDBDatabase")]
+	[JavaScriptProperty(name="IDBDatabase")]
 	/**
 	*  @see randori.webkit.modules.indexeddb.IDBDatabase
 	*/
 	public function get IDBDatabase_():IDBDatabase { return null; }
 	public function set IDBDatabase_(value:IDBDatabase):void { }
 
-	[JavascriptProperty(name="IDBFactory")]
+	[JavaScriptProperty(name="IDBFactory")]
 	/**
 	*  @see randori.webkit.modules.indexeddb.IDBFactory
 	*/
 	public function get IDBFactory_():IDBFactory { return null; }
 	public function set IDBFactory_(value:IDBFactory):void { }
 
-	[JavascriptProperty(name="IDBIndex")]
+	[JavaScriptProperty(name="IDBIndex")]
 	/**
 	*  @see randori.webkit.modules.indexeddb.IDBIndex
 	*/
 	public function get IDBIndex_():IDBIndex { return null; }
 	public function set IDBIndex_(value:IDBIndex):void { }
 
-	[JavascriptProperty(name="IDBKeyRange")]
+	[JavaScriptProperty(name="IDBKeyRange")]
 	/**
 	*  @see randori.webkit.modules.indexeddb.IDBKeyRange
 	*/
 	public function get IDBKeyRange_():IDBKeyRange { return null; }
 	public function set IDBKeyRange_(value:IDBKeyRange):void { }
 
-	[JavascriptProperty(name="IDBObjectStore")]
+	[JavaScriptProperty(name="IDBObjectStore")]
 	/**
 	*  @see randori.webkit.modules.indexeddb.IDBObjectStore
 	*/
 	public function get IDBObjectStore_():IDBObjectStore { return null; }
 	public function set IDBObjectStore_(value:IDBObjectStore):void { }
 
-	[JavascriptProperty(name="IDBOpenDBRequest")]
+	[JavaScriptProperty(name="IDBOpenDBRequest")]
 	/**
 	*  @see randori.webkit.modules.indexeddb.IDBOpenDBRequest
 	*/
 	public function get IDBOpenDBRequest_():IDBOpenDBRequest { return null; }
 	public function set IDBOpenDBRequest_(value:IDBOpenDBRequest):void { }
 
-	[JavascriptProperty(name="IDBRequest")]
+	[JavaScriptProperty(name="IDBRequest")]
 	/**
 	*  @see randori.webkit.modules.indexeddb.IDBRequest
 	*/
 	public function get IDBRequest_():IDBRequest { return null; }
 	public function set IDBRequest_(value:IDBRequest):void { }
 
-	[JavascriptProperty(name="IDBTransaction")]
+	[JavaScriptProperty(name="IDBTransaction")]
 	/**
 	*  @see randori.webkit.modules.indexeddb.IDBTransaction
 	*/
 	public function get IDBTransaction_():IDBTransaction { return null; }
 	public function set IDBTransaction_(value:IDBTransaction):void { }
 
-	[JavascriptProperty(name="IDBVersionChangeEvent")]
+	[JavaScriptProperty(name="IDBVersionChangeEvent")]
 	/**
 	*  @see randori.webkit.modules.indexeddb.IDBVersionChangeEvent
 	*/

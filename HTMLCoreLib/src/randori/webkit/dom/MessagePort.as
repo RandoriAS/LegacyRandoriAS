@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[Javascript(export="false", name="MessagePort")]
+[JavaScript(export="false", name="MessagePort")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

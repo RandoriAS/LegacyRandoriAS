@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[Javascript(export="false", name="MessageChannel")]
+[JavaScript(export="false", name="MessageChannel")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

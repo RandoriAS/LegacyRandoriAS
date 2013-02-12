@@ -43,7 +43,7 @@ package randori.webkit.svg
 
 import randori.webkit.dom.UIEvent;
 
-[Javascript(export="false", nativecondition="SVG", name="SVGZoomEvent")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGZoomEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

@@ -42,7 +42,7 @@ package randori.webkit.svg
 {
 
 
-[Javascript(export="false", nativecondition="SVG", name="SVGAnimationElement")]
+[JavaScript(export="false", nativecondition="SVG", name="SVGAnimationElement")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -53,7 +53,7 @@ package randori.webkit.svg
  */
 public class SVGAnimationElement extends SVGElement implements SVGTests, SVGExternalResourcesRequired, ElementTimeControl
 {
-	[JavascriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('animation')")]
+	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('animation')")]
 	/**
 	*  Creates a new <code>SVGAnimationElement</code> instance.
 	*/

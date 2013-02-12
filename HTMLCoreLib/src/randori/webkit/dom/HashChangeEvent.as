@@ -42,7 +42,7 @@ package randori.webkit.dom
 {
 
 
-[Javascript(export="false", name="HashChangeEvent")]
+[JavaScript(export="false", name="HashChangeEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0

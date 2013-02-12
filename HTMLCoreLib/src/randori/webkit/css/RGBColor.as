@@ -42,7 +42,7 @@ package randori.webkit.css
 {
 
 
-[Javascript(export="false", name="RGBColor")]
+[JavaScript(export="false", name="RGBColor")]
 /**
  *  <p>
  *  The <code>RGBColor</code> interface is used to represent any RGB
