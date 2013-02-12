@@ -41,6 +41,11 @@ package randori.jquery {
 			return null;
 		}
 
+		[JavascriptMethod(name="attr")]
+		public function attr( value:*=null, value1:*=null ):String {
+			return null;
+		}
+
 		/*
 		 * The DOM node context originally passed to jQuery(); if none was passed then context will likely be the document.
 		 * @since 1.3

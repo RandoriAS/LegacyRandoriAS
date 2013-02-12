@@ -41,6 +41,8 @@
     <classEntry path="randori.behaviors.viewStack.ViewChangeAnimator"/>
     <classEntry path="randori.behaviors.viewStack.MediatorCapturer"/>
     <classEntry path="randori.utilities.GlobalUtilities"/>
+    <classEntry path="randori.utilities.BehaviorDecorator"/>
+    <classEntry path="randori.utilities.InjectionDecorator"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

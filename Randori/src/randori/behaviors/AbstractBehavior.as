@@ -94,7 +94,7 @@ package randori.behaviors {
 					return;
 				}
 
-				delete(viableInjectionPoints[id]);
+				delete viableInjectionPoints[id];
 			}
 
 			this.viableInjectionPoints = null;
