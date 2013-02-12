@@ -1,5 +1,4 @@
 package randori.sizzlejs {
-	import randori.webkit.dom.Document;
 	import randori.webkit.dom.Element;
 
 	[JavaScript(export="false", name="Sizzle")]
@@ -51,27 +50,53 @@ package randori.sizzlejs {
 	public final class Sizzle {
 
 		[JavaScriptMethod(name="")]
-		public static function select(selector:String, DOMElement:Element, results:Array=null):Vector.<Element> {
+		/**
+		 * This is the main function for finding elements. It will use querySelectorAll if available.
+		 * @param selector A css selector
+		 * @param DOMelement An optional element to use as the context for finding elements. The default is the current document.
+		 * @param results Optionally pass an array to which Sizzle will append the elements (for instance, jQuery passes the jQuery object here).
+		 * @return All of the elements matching the selector
+		 */
+		public static function select(selector:String, DOMElement:Element=null, results:Array=null):Vector.<Element> {
 			return null;
 		}
 
-		[JavaScriptMethod(name="")]
-		public static function select2(selector:String, DOMElement:Document, results:Array=null):Vector.<Element> {
-			return null;
-		}
-
+		/**
+		 * Uses native matchesSelector if available.
+		 * @param element A DOMElement against which Sizzle will test the selector
+		 * @param selector A css selector
+		 * @return Whether the given element matches the selector
+		 */
 		public static function matchesSelector(element:Element, selector:String):Boolean {
 			return false;
 		}
 
+		/**
+		 * All the elements in the set that match the given selector.
+		 * @param selector A css selector
+		 * @param elements An array of DOMElements to filter against the specified selector.
+		 * @return All the elements in the set that match the given selector.
+		 */
 		public static function matches(selector:String, elements:Vector.<Element>):Vector.<Element> {
 			return null;
 		}
 
+		/**
+		 * This method can be called to add a selector to the internal cache of compiled selectors to be
+		 * used in a later selection. For instance, if writing a plugin, you may find it useful to add a
+		 * custom selector you know will be used by the user at a later time.<br/>
+		 * Call Sizzle.compile(":myCustomPseudo") and it's cached.
+		 * @param selector A css selector
+		 */
 		public static function compile(selector:String):void {
 		}
 
 		[JavaScriptProperty(name="selectors.cacheLength")]
+		/**
+		 * Most of the time, it should not be necessary to adjust the size of the selector cache. However,
+		 * the size of the internal cache can be adjusted to hold more or less compiled selector functions.
+		 * The default is currently 50.
+		 */
 		public static var cacheLength:int;
 	}
 }
