@@ -2,15 +2,15 @@ package randori.sizzlejs {
 	import randori.webkit.dom.Document;
 	import randori.webkit.dom.Element;
 
-	[Javascript(export="false", name="Sizzle")]
+	[JavaScript(export="false", name="Sizzle")]
 	public final class Sizzle {
 
-		[JavascriptMethod(name="")]
+		[JavaScriptMethod(name="")]
 		public static function select(selector:String, DOMElement:Element, results:Array=null):Vector.<Element> {
 			return null;
 		}
 
-		[JavascriptMethod(name="")]
+		[JavaScriptMethod(name="")]
 		public static function select2(selector:String, DOMElement:Document, results:Array=null):Vector.<Element> {
 			return null;
 		}
@@ -26,7 +26,7 @@ package randori.sizzlejs {
 		public static function compile(selector:String):void {
 		}
 
-		[JavascriptProperty(name="selectors.cacheLength")]
+		[JavaScriptProperty(name="selectors.cacheLength")]
 		public static var cacheLength:int;
 	}
 }
