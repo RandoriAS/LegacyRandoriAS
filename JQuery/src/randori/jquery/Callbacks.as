@@ -25,7 +25,7 @@ package randori.jquery {
 	[JavaScript(export="false")]
 	public class Callbacks {
 		
-		/*
+		/**
 		 * Add a callback or a collection of callbacks to a callback list.
 		 * @since 1.7
 		 * @param callbacks A function, or array of functions, that are to be added to the callback list.
@@ -34,7 +34,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Disable a callback list from doing anything more.
 		 * @since 1.7
 		 */
@@ -42,7 +42,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Determine if the callbacks list has been disabled.
 		 * @since 1.7
 		 */
@@ -50,7 +50,7 @@ package randori.jquery {
 			return false;
 		}
 		
-		/*
+		/**
 		 * Remove all of the callbacks from a list.
 		 * @since 1.7
 		 */
@@ -58,7 +58,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Call all of the callbacks with the given arguments
 		 * @since 1.7
 		 * @param arguments The argument or list of arguments to pass back to the callback list.
@@ -67,7 +67,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Determine if the callbacks have already been called at least once.
 		 * @since 1.7
 		 */
@@ -75,7 +75,7 @@ package randori.jquery {
 			return false;
 		}
 		
-		/*
+		/**
 		 * Call all callbacks in a list with the given context and arguments.
 		 * @since 1.7
 		 * @param context A reference to the context in which the callbacks in the list should be fired.
@@ -85,7 +85,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Determine whether a supplied callback is in a list
 		 * @since 1.7
 		 * @param callback The callback to search for.
@@ -94,7 +94,7 @@ package randori.jquery {
 			return false;
 		}
 		
-		/*
+		/**
 		 * Lock a callback list in its current state.
 		 * @since 1.7
 		 */
@@ -102,7 +102,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Determine if the callbacks list has been locked.
 		 * @since 1.7
 		 */
@@ -110,7 +110,7 @@ package randori.jquery {
 			return false;
 		}
 		
-		/*
+		/**
 		 * Remove a callback or a collection of callbacks from a callback list.
 		 * @since 1.7
 		 * @param callbacks A function, or array of functions, that are to be removed from the callback list.

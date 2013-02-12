@@ -27,49 +27,49 @@ package randori.jquery {
 	[JavaScript(export="false", name="JQuery")]
 	public final class JQueryStatic {
 
-		/*
+		/**
 		 * Deprecated in jQuery 1.3 (see jQuery.support). States if the current page, in the user's browser, is being rendered using the W3C CSS Box Model.
 		 * @since 1.0
 		 */
 		public static var boxModel:Boolean;
 
-		/*
+		/**
 		 * Contains flags for the useragent, read from navigator.userAgent. We recommend against using this property; please try to use feature detection instead (see jQuery.support). jQuery.browser may be moved to a plugin in a future release of jQuery.
 		 * @since 1.0
 		 */
 		public static var browser:Object;
 
-		/*
+		/**
 		 * The version number of the rendering engine for the user's browser.
 		 * @since 1.1.3
 		 */
 		public static var version:String;
 
-		/*
+		/**
 		 * Hook directly into jQuery to override how particular CSS properties are retrieved or set, normalize CSS property naming, or create custom properties.
 		 * @since 1.4.3
 		 */
 		public static var cssHooks:Object;
 
-		/*
+		/**
 		 * The rate (in milliseconds) at which animations fire.
 		 * @since 1.4.3
 		 */
 		public static var interval:Number;
 
-		/*
+		/**
 		 * Globally disable all animations.
 		 * @since 1.3
 		 */
 		public static var off:Boolean;
 
-		/*
+		/**
 		 * A collection of properties that represent the presence of different browser features or bugs. Primarily intended for jQuery's internal use; specific properties may be removed when they are no longer needed internally to improve page startup performance.
 		 * @since 1.3
 		 */
 		public static var support:Object;
 
-		/*
+		/**
 		 * Perform an asynchronous HTTP (Ajax) request.
 		 * @since 1.5
 		 * @param url A string containing the URL to which the request is sent.
@@ -79,7 +79,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Perform an asynchronous HTTP (Ajax) request.
 		 * @since 1.0
 		 * @param settings A set of key/value pairs that configure the Ajax request. All settings are optional. A default can be set for any option with $.ajaxSetup().
@@ -89,7 +89,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Handle custom Ajax options or modify existing options before each request is sent and before they are processed by $.ajax().
 		 * @since 1.5
 		 * @param dataTypes An optional string containing one or more space-separated dataTypes
@@ -98,7 +98,7 @@ package randori.jquery {
 		public static function ajaxPrefilter(dataTypes:String='', callBack:Function=null):void {
 		}
 
-		/*
+		/**
 		 * Set default values for future Ajax requests.
 		 * @since 1.1
 		 * @param options A set of key/value pairs that configure the default Ajax request. All options are optional.
@@ -106,7 +106,7 @@ package randori.jquery {
 		public static function ajaxSetup(options:Object):void {
 		}
 
-		/*
+		/**
 		 * Creates an object that handles the actual transmission of Ajax data.
 		 * @since 1.5
 		 * @param dataType A string identifying the data type to use
@@ -115,7 +115,7 @@ package randori.jquery {
 		public static function ajaxTransport(dataType:String, callBack:Function):void {
 		}
 
-		/*
+		/**
 		 * A multi-purpose callbacks list object that provides a powerful way to manage callback lists.
 		 * @since 1.7
 		 * @param flags An optional list of space-separated flags that change how the callback list behaves.
@@ -125,7 +125,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Check to see if a DOM element is a descendant of another DOM element.
 		 * @since 1.4
 		 * @param container The DOM element that may contain the other element.
@@ -135,7 +135,7 @@ package randori.jquery {
 			return false;
 		}
 
-		/*
+		/**
 		 * Store arbitrary data associated with the specified element. Returns the value that was set.
 		 * @since 1.2.3
 		 * @param element The DOM element to associate with the data.
@@ -146,7 +146,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Returns value at named data store for the element, as set by jQuery.data(element, name, value), or the full data store for the element.
 		 * @since 1.2.3
 		 * @param element The DOM element to query for the data.
@@ -157,7 +157,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Returns value at named data store for the element, as set by jQuery.data(element, name, value), or the full data store for the element.
 		 * @since 1.4
 		 * @param element The DOM element to query for the data.
@@ -167,7 +167,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * A constructor function that returns a chainable utility object with methods to register multiple callbacks into callback queues, invoke callback queues, and relay the success or failure state of any synchronous or asynchronous function.
 		 * @since 1.5
 		 * @param beforeStart A function that is called just before the constructor returns.
@@ -177,7 +177,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Execute the next function on the queue for the matched element.
 		 * @since 1.3
 		 * @param element A DOM element from which to remove and execute a queued function.
@@ -186,7 +186,7 @@ package randori.jquery {
 		public static function dequeue(element:Element, queueName:String=''):void {
 		}
 
-		/*
+		/**
 		 * A generic iterator function, which can be used to seamlessly iterate over both objects and arrays. Arrays and array-like objects with a length property (such as a function's arguments object) are iterated by numeric index, from 0 to length-1. Other objects are iterated via their named properties.
 		 * @since 1.0
 		 * @param collection The object or array to iterate over.
@@ -196,7 +196,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Takes a string and throws an exception containing it.
 		 * @since 1.4.1
 		 * @param message The message to send out.
@@ -204,7 +204,7 @@ package randori.jquery {
 		public static function error(message:String):void {
 		}
 
-		/*
+		/**
 		 * Merge the contents of two or more objects together into the first object.
 		 * @since 1.0
 		 * @param target An object that will receive the new properties if additional objects are passed in or that will extend the jQuery namespace if it is the sole argument.
@@ -215,7 +215,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Merge the contents of two or more objects together into the first object.
 		 * @since 1.1.4
 		 * @param deep If true, the merge becomes recursive (aka. deep copy).
@@ -228,7 +228,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Load data from the server using a HTTP GET request.
 		 * @since 1.0
 		 * @param url A string containing the URL to which the request is sent.
@@ -240,7 +240,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Load JSON-encoded data from the server using a GET HTTP request.
 		 * @since 1.0
 		 * @param url A string containing the URL to which the request is sent.
@@ -251,7 +251,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Load a JavaScript file from the server using a GET HTTP request, then execute it.
 		 * @since 1.0
 		 * @param url A string containing the URL to which the request is sent.
@@ -261,7 +261,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Execute some JavaScript code globally.
 		 * @since 1.0.4
 		 * @param code The JavaScript code to execute.
@@ -269,7 +269,7 @@ package randori.jquery {
 		public static function globalEval(code:String):void {
 		}
 
-		/*
+		/**
 		 * Finds the elements of an array which satisfy a filter function. The original array is not affected.
 		 * @since 1.0
 		 * @param array The array to search through.
@@ -280,7 +280,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Determine whether an element has any jQuery data associated with it.
 		 * @since 1.5
 		 * @param element A DOM element to be checked for data.
@@ -289,7 +289,7 @@ package randori.jquery {
 			return false;
 		}
 
-		/*
+		/**
 		 * Holds or releases the execution of jQuery's ready event.
 		 * @since 1.6
 		 * @param hold Indicates whether the ready hold is being requested or released
@@ -297,7 +297,7 @@ package randori.jquery {
 		public static function holdReady(hold:Boolean):void {
 		}
 
-		/*
+		/**
 		 * Search for a specified value within an array and return its index (or -1 if not found).
 		 * @since 1.2
 		 * @param value The value to search for.
@@ -308,7 +308,7 @@ package randori.jquery {
 			return 0;
 		}
 
-		/*
+		/**
 		 * Determine whether the argument is an array.
 		 * @since 1.3
 		 * @param obj Object to test whether or not it is an array.
@@ -317,7 +317,7 @@ package randori.jquery {
 			return false;
 		}
 
-		/*
+		/**
 		 * Check to see if an object is empty (contains no enumerable properties).
 		 * @since 1.4
 		 * @param object The object that will be checked to see if it's empty.
@@ -326,7 +326,7 @@ package randori.jquery {
 			return false;
 		}
 
-		/*
+		/**
 		 * Determine if the argument passed is a Javascript function object.
 		 * @since 1.2
 		 * @param obj Object to test whether or not it is a function.
@@ -335,7 +335,7 @@ package randori.jquery {
 			return false;
 		}
 
-		/*
+		/**
 		 * Determines whether its argument is a number.
 		 * @since 1.7
 		 * @param value The value to be tested.
@@ -344,7 +344,7 @@ package randori.jquery {
 			return false;
 		}
 
-		/*
+		/**
 		 * Check to see if an object is a plain object (created using "{}" or "new Object").
 		 * @since 1.4
 		 * @param object The object that will be checked to see if it's a plain object.
@@ -353,7 +353,7 @@ package randori.jquery {
 			return false;
 		}
 
-		/*
+		/**
 		 * Determine whether the argument is a window.
 		 * @since 1.4.3
 		 * @param obj Object to test whether or not it is a window.
@@ -362,7 +362,7 @@ package randori.jquery {
 			return false;
 		}
 
-		/*
+		/**
 		 * Check to see if a DOM node is within an XML document (or is an XML document).
 		 * @since 1.1.4
 		 * @param node The DOM node that will be checked to see if it's in an XML document.
@@ -371,7 +371,7 @@ package randori.jquery {
 			return false;
 		}
 
-		/*
+		/**
 		 * Convert an array-like object into a true JavaScript array.
 		 * @since 1.2
 		 * @param obj Any object to turn into a native Array.
@@ -380,7 +380,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Translate all items in an array or object to new array of items.
 		 * @since 1.0
 		 * @param array The Array to translate.
@@ -390,7 +390,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Translate all items in an array or object to new array of items.
 		 * @since 1.6
 		 * @param arrayOrObject The Array or Object to translate.
@@ -401,7 +401,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Merge the contents of two arrays together into the first array.
 		 * @since 1.0
 		 * @param first The first array to merge, the elements of second added.
@@ -411,7 +411,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Relinquish jQuery's control of the $ variable.
 		 * @since 1.0
 		 * @param removeAll A Boolean indicating whether to remove all jQuery variables from the global scope (including jQuery itself).
@@ -420,14 +420,14 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * An empty function.
 		 * @since 1.4
 		 */
 		public static function noop():void {
 		}
 
-		/*
+		/**
 		 * Return a number representing the current time.
 		 * @since 1.4.3
 		 */
@@ -435,7 +435,7 @@ package randori.jquery {
 			return 0;
 		}
 
-		/*
+		/**
 		 * Create a serialized representation of an array or object, suitable for use in a URL query string or Ajax request.
 		 * @since 1.2
 		 * @param obj An array or object to serialize.
@@ -444,7 +444,7 @@ package randori.jquery {
 			return '';
 		}
 
-		/*
+		/**
 		 * Create a serialized representation of an array or object, suitable for use in a URL query string or Ajax request.
 		 * @since 1.4
 		 * @param obj An array or object to serialize.
@@ -455,7 +455,7 @@ package randori.jquery {
 			return '';
 		}
 
-		/*
+		/**
 		 * Parses a string into an array of DOM nodes.
 		 * @since 1.8
 		 * @param data HTML string to be parsed
@@ -466,7 +466,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Takes a well-formed JSON string and returns the resulting JavaScript object.
 		 * @since 1.4.1
 		 * @param json The JSON string to parse.
@@ -475,7 +475,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Parses a string into an XML document.
 		 * @since 1.5
 		 * @param data a well-formed XML string to be parsed
@@ -484,7 +484,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Load data from the server using a HTTP POST request.
 		 * @since 1.0
 		 * @param url A string containing the URL to which the request is sent.
@@ -496,7 +496,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Takes a function and returns a new one that will always have a particular context.
 		 * @since 1.4
 		 * @param callBack The function whose context will be changed.
@@ -506,7 +506,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Takes a function and returns a new one that will always have a particular context.
 		 * @since 1.4
 		 * @param context The object to which the context of the function should be set.
@@ -517,7 +517,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Takes a function and returns a new one that will always have a particular context.
 		 * @since 1.6
 		 * @param callBack The function whose context will be changed.
@@ -529,7 +529,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Takes a function and returns a new one that will always have a particular context.
 		 * @since 1.6
 		 * @param context The object to which the context of the function should be set.
@@ -541,7 +541,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Show the queue of functions to be executed on the matched element.
 		 * @since 1.3
 		 * @param element A DOM element to inspect for an attached queue.
@@ -551,7 +551,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Manipulate the queue of functions to be executed on the matched element.
 		 * @since 1.3
 		 * @param element A DOM element where the array of queued functions is attached.
@@ -563,7 +563,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Manipulate the queue of functions to be executed on the matched element.
 		 * @since 1.3
 		 * @param element A DOM element on which to add a queued function.
@@ -575,7 +575,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Remove a previously-stored piece of data.
 		 * @since 1.2.3
 		 * @param element A DOM element from which to remove data.
@@ -585,7 +585,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Creates a new copy of jQuery whose properties and methods can be modified without affecting the original jQuery object.
 		 * @since 1.5
 		 */
@@ -593,7 +593,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Remove the whitespace from the beginning and end of a string.
 		 * @since 1.0
 		 * @param str The string to trim.
@@ -602,7 +602,7 @@ package randori.jquery {
 			return '';
 		}
 
-		/*
+		/**
 		 * Determine the internal JavaScript [[Class]] of an object.
 		 * @since 1.4.3
 		 * @param obj Object to get the internal JavaScript [[Class]] of.
@@ -611,7 +611,7 @@ package randori.jquery {
 			return '';
 		}
 
-		/*
+		/**
 		 * Sorts an array of DOM elements, in place, with the duplicates removed. Note that this only works on arrays of DOM elements, not strings or numbers.
 		 * @since 1.1.3
 		 * @param array The Array of DOM elements.
@@ -620,7 +620,7 @@ package randori.jquery {
 			return null;
 		}
 
-		/*
+		/**
 		 * Provides a way to execute callback functions based on one or more objects, usually Deferred objects that represent asynchronous events.
 		 * @since 1.5
 		 * @param deferreds One or more Deferred objects, or plain JavaScript objects.

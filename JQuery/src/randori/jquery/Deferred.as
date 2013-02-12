@@ -25,7 +25,7 @@ package randori.jquery {
 	[JavaScript(export="false")]
 	public class Deferred {
 		
-		/*
+		/**
 		 * Add handlers to be called when the Deferred object is either resolved or rejected.
 		 * @since 1.6
 		 * @param alwaysCallbacks1 A function, or array of functions, that is called when the Deferred is resolved or rejected.
@@ -35,7 +35,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Add handlers to be called when the Deferred object is resolved.
 		 * @since 1.5
 		 * @param doneCallbacks1 A function, or array of functions, that are called when the Deferred is resolved.
@@ -45,7 +45,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Add handlers to be called when the Deferred object is rejected.
 		 * @since 1.5
 		 * @param failCallbacks1 A function, or array of functions, that are called when the Deferred is rejected.
@@ -55,7 +55,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Determine whether a Deferred object has been rejected.
 		 * @since 1.5
 		 */
@@ -63,7 +63,7 @@ package randori.jquery {
 			return false;
 		}
 		
-		/*
+		/**
 		 * Determine whether a Deferred object has been resolved.
 		 * @since 1.5
 		 */
@@ -71,7 +71,7 @@ package randori.jquery {
 			return false;
 		}
 		
-		/*
+		/**
 		 * Call the progressCallbacks on a Deferred object with the given args.
 		 * @since 1.7
 		 * @param args Optional arguments that are passed to the progressCallbacks.
@@ -80,7 +80,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Call the progressCallbacks on a Deferred object with the given context and args.
 		 * @since 1.7
 		 * @param context Context passed to the progressCallbacks as the this object.
@@ -90,7 +90,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Utility method to filter and/or chain Deferreds.
 		 * @since 1.6
 		 * @param doneFilter An optional function that is called when the Deferred is resolved.
@@ -100,7 +100,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Utility method to filter and/or chain Deferreds.
 		 * @since 1.7
 		 * @param doneFilter An optional function that is called when the Deferred is resolved.
@@ -112,7 +112,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Add handlers to be called when the Deferred object generates progress notifications.
 		 * @since 1.7
 		 * @param progressCallbacks A function, or array of functions, that is called when the Deferred generates progress notifications.
@@ -121,7 +121,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Return a Deferred's Promise object.
 		 * @since 1.5
 		 * @param target Object onto which the promise methods have to be attached
@@ -130,7 +130,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Reject a Deferred object and call any failCallbacks with the given args.
 		 * @since 1.5
 		 * @param args Optional arguments that are passed to the failCallbacks.
@@ -139,7 +139,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Reject a Deferred object and call any failCallbacks with the given context and args.
 		 * @since 1.5
 		 * @param context Context passed to the failCallbacks as the this object.
@@ -149,7 +149,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Resolve a Deferred object and call any doneCallbacks with the given args.
 		 * @since 1.5
 		 * @param args Optional arguments that are passed to the doneCallbacks.
@@ -158,7 +158,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Resolve a Deferred object and call any doneCallbacks with the given context and args.
 		 * @since 1.5
 		 * @param context Context passed to the doneCallbacks as the this object.
@@ -168,7 +168,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Determine the current state of a Deferred object.
 		 * @since 1.7
 		 */
@@ -176,7 +176,7 @@ package randori.jquery {
 			return '';
 		}
 		
-		/*
+		/**
 		 * Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.
 		 * @since 1.8
 		 * @param doneFilter A function that is called when the Deferred is resolved.
@@ -187,7 +187,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.
 		 * @since 1.5
 		 * @param doneCallbacks A function, or array of functions, called when the Deferred is resolved.
@@ -198,7 +198,7 @@ package randori.jquery {
 			return null;
 		}
 		
-		/*
+		/**
 		 * Add handlers to be called when the Deferred object is resolved, rejected, or still in progress.
 		 * @since 1.7
 		 * @param doneCallbacks A function, or array of functions, called when the Deferred is resolved.
