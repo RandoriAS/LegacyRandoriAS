@@ -17,8 +17,17 @@
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
 package randori.utilities {
+	[JavaScript(mode="global")]
 	public class GlobalUtilities {
-		public function GlobalUtilities() {
+
+		[JavaScriptCode(file="_inherit.js")]
+		public static function $inherit(ce:Object, ce2:Object):void {
+			
+		}
+
+		[JavaScriptCode(file="_createDelegate.js")]
+		public static function $createDelegate( scope:Object, func:Function ):Function {
+			return null;
 		}
 	}
 }
