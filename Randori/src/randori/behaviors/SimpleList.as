@@ -102,13 +102,13 @@ package randori.behaviors {
 		public function showLoading():void {
 			var output:String = "<div style=\"height:100%; width:100%;\"><div style=\"text-align:center;width:100%;top:60%;position:absolute\">Loading...</div></div>";
 			
-			decoratedNode.html(output);
+			decoratedNode.html2(output);
 		}
 		
 		private function showNoResults(visible:Boolean = true):void {
 			var output:String = "<div style=\"height:100%; width:100%;\"><div style=\"text-align:center;width:100%;top:60%;position:absolute\">No Items Found</div></div>";
 			
-			decoratedNode.html(output);
+			decoratedNode.html2(output);
 		}
 
 		

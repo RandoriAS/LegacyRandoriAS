@@ -1206,7 +1206,7 @@ package randori.jquery {
 		 * Get the HTML contents of the first element in the set of matched elements.
 		 * @since 1.0
 		 */
-		public function html():String {
+		public function html( ... args ):String {
 			return '';
 		}
 		

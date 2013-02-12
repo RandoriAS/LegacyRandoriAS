@@ -102,36 +102,41 @@ package guice.resolver {
 		}
 		
 		private function addDefinition( definitionText:String ):void {
-			var globalEval = ( function() {
-				var isIndirectEvalGlobal:Function = (function (original:Object, Object) {
+			var globalEval:Function = ( function( str:String ):Function {
+				var isIndirectEvalGlobal:Boolean = (function (original:Object):Boolean {
 					try {
 						// Does `Object` resolve to a local variable, or to a global, built-in `Object`,
 						// reference to which we passed as a first argument?
-						return (1, Window.eval)('Object') === original;
+						return (1, eval)('Object') === original;
 					}
-					catch (err) {
+					catch (e:Error) {
 						// if indirect eval errors out (as allowed per ES3), then just bail out with `false`
 						return false;
-					}
+					}						
+					
+					return false;
 				})(Object, 123);
 				
 				if (isIndirectEvalGlobal) {
 					
 					// if indirect eval executes code globally, use it
-					return function (expression) {
-						return (1, eval)(expression);
+					return function (expression:String):void {
+						(1, eval)(expression);
 					};
-				}
-				else if (typeof window.execScript !== 'undefined') {
+				} else {
+					var defintion:Object = findDefinition( "window.execScript" );
 					
 					// if `window.execScript exists`, use it
-					return function (expression) {
-						return window.execScript(expression);
-					};
+					if (defintion !== null) {
+						return function (expression:String):void {
+							defintion(expression);
+						};
+					}
 				}
 				
 				// otherwise, globalEval is `undefined` since nothing is returned
 
+				return null;
 			})();
 			
 			globalEval(definitionText);

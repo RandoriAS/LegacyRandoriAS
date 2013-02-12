@@ -39,7 +39,7 @@ package randori.behaviors {
 		private var mediators:Object;
 
 		public function get currentViewUrl():String {
-			return ( (_currentView != null)?_currentView.data("url"):null );
+			return ( (_currentView != null)?( _currentView.data3("url") as String ):null );
 		}
 		
 		public function hasView(url:String):Boolean {
@@ -60,19 +60,19 @@ package randori.behaviors {
 			var div:HTMLDivElement = new HTMLDivElement();
 			var fragment:JQuery = JQueryStatic.J(div);
 			fragment.hide();
-			fragment.css("width", "100%");
-			fragment.css("height", "100%");
-			fragment.css("position", "absolute");
-			fragment.css("top", "0");
-			fragment.css("left", "0");
+			fragment.css3("width", "100%");
+			fragment.css3("height", "100%");
+			fragment.css3("position", "absolute");
+			fragment.css3("top", "0");
+			fragment.css3("left", "0");
 			fragment.data( "url", url ) ;
 			
 			promise = contentLoader.asynchronousLoad(url).then( 
 				function(result:String):AbstractMediator {
 					var content:String = contentParser.parse(result);
 					
-					fragment.html(content);
-					fragment.attr( "data-url", url );
+					fragment.html2(content);
+					fragment.attr2( "data-url", url );
 					decoratedNode.append(div);
 					
 					var mediatorCapturer:MediatorCapturer = new MediatorCapturer();
@@ -96,7 +96,7 @@ package randori.behaviors {
 			var oldView:JQuery = viewFragmentStack.pop();
 			if (oldView != null ) {
 				oldView.remove();
-				var url:String = oldView.data( "url" );
+				var url:String = oldView.data3( "url" ) as String;
 				var mediator:AbstractMediator = mediators[url];
 				
 				if (mediator != null ) {

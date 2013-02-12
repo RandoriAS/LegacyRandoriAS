@@ -51,7 +51,7 @@ package randori.behaviors.template {
 			//So this is the only method I have been able to figure out that actually keeps those first text nodes
 			//which is really important during templating
 			var newNode:JQuery = templateBuilder.renderTemplateClone(data);
-			decoratedNode.html(newNode.html());
+			decoratedNode.html2(newNode.html());
 			domWalker.walkDomChildren(decoratedElement, this);
 		}
 		
