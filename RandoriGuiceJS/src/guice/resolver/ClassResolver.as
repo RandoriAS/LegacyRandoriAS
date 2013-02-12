@@ -68,9 +68,9 @@ package guice.resolver {
 		
 		private function resolveParentClassFromDefinition( qualifiedClassName:String, classDefinition:String ):void {
 			//\$Inherit\(net.digitalprimates.service.LabelService,([\w\W]*?)\)
-			var inheritString:String = "\$Inherit\(";
+			var inheritString:String = "\\$Inherit\\(";
 			inheritString += qualifiedClassName;
-			inheritString += ",\s*(.*?)\)";
+			inheritString += ",\\s*(.*?)\\)";
 			var inheritResult:Array = classDefinition.match(inheritString);
 			
 			//Do we inherit from anything?
