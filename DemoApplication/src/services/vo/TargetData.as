@@ -17,7 +17,7 @@
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
 package services.vo {
-	[JavaScript(export="false",name="Object".mode="json")]
+	[JavaScript(export="false",name="Object",mode="json")]
 	public class TargetData {
 		public var name:String;
 		public var image:String;
