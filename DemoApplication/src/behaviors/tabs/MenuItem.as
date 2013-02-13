@@ -17,7 +17,7 @@
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
 package behaviors.tabs {
-	[JavaScript(export="false",name="Object")]
+	[JavaScript(export="false",name="Object",mode="json")]
 	public class MenuItem {
 		public var name:String;
 		public var url:String;
