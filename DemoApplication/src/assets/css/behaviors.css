@@ -1,6 +1,6 @@
 ﻿.hmssApp {
-    -randori-context: demo.startup.DemoContext;
-    -randori-mediator: demo.views.mediators.IndexMediator;   
+    -randori-context: startup.DemoContext;
+    -randori-mediator: views.mediators.IndexMediator;   
 }
 
 .viewStack {
@@ -8,19 +8,19 @@
 }
 
 .verticalTabs {
-    -randori-behavior: demo.behaviors.VerticalTabs;
+    -randori-behavior: behaviors.VerticalTabs;
 }
 
 .intel {
-    -randori-mediator: demo.views.mediators.IntelMediator;   
+    -randori-mediator: views.mediators.IntelMediator;   
 }
 
 .labs {
-    -randori-mediator: demo.views.mediators.LabsMediator;   
+    -randori-mediator: views.mediators.LabsMediator;   
 }
 
 .targets {
-    -randori-mediator: demo.views.mediators.TargetsMediator;   
+    -randori-mediator: views.mediators.TargetsMediator;   
 }
 
 .simpleList {

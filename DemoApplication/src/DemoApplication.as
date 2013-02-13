@@ -1,8 +1,6 @@
 package
 {
-	import flash.display.Sprite;
-	
-	public class DemoApplication extends Sprite
+	public class DemoApplication
 	{
 		public function DemoApplication()
 		{

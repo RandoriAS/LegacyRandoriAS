@@ -31,7 +31,7 @@ package randori.template {
 		//Also, be really careful. IF you replace a node in the DOM while you are walking the DOM, it will no longer know its Siblings... joy
 		public function captureAndEmptyTemplateContents(rootTemplateNode:JQuery):void {
 			templateAsString = rootTemplateNode.html();
-			JQueryStatic.J( rootTemplateNode ).empty();
+			rootTemplateNode.empty();
 			validTemplate = true;
 		}
 		

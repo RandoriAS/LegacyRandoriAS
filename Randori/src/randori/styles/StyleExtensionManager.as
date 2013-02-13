@@ -214,8 +214,8 @@ package randori.styles {
 			resolveSheet(resetLinkAndReturnURL(element));
 		}
 
-		public function StyleExtensionManager() {
-			this.map = new StyleExtensionMap();
+		public function StyleExtensionManager( map:StyleExtensionMap ) {
+			this.map = map;
 		}
 
 	}
