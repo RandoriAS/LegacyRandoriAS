@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLHtmlElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('html')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('html')")]
 	/**
 	*  Creates a new <code>HTMLHtmlElement</code> instance.
 	*/

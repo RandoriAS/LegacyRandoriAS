@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLAnchorElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('a')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('a')")]
 	/**
 	*  Creates a new <code>HTMLAnchorElement</code> instance.
 	*/

@@ -50,7 +50,7 @@ package randori.webkit.svg
  */
 public class SVGFESpotLightElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('fespotlight')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('fespotlight')")]
 	/**
 	*  Creates a new <code>SVGFESpotLightElement</code> instance.
 	*/

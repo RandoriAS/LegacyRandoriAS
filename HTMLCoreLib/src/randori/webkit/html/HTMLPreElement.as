@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLPreElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('pre')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('pre')")]
 	/**
 	*  Creates a new <code>HTMLPreElement</code> instance.
 	*/

@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLQuoteElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('quote')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('quote')")]
 	/**
 	*  Creates a new <code>HTMLQuoteElement</code> instance.
 	*/

@@ -51,7 +51,7 @@ import randori.webkit.css.StyleSheet;
  */
 public class HTMLStyleElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('style')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('style')")]
 	/**
 	*  Creates a new <code>HTMLStyleElement</code> instance.
 	*/

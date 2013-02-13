@@ -52,7 +52,7 @@ import randori.webkit.dom.NodeList;
  */
 public dynamic class HTMLSelectElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('select')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('select')")]
 	/**
 	*  Creates a new <code>HTMLSelectElement</code> instance.
 	*/

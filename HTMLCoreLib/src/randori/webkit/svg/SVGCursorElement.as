@@ -53,7 +53,7 @@ package randori.webkit.svg
  */
 public class SVGCursorElement extends SVGElement implements SVGURIReference, SVGTests, SVGExternalResourcesRequired
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('cursor')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('cursor')")]
 	/**
 	*  Creates a new <code>SVGCursorElement</code> instance.
 	*/

@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLTableCaptionElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('caption')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('caption')")]
 	/**
 	*  Creates a new <code>HTMLTableCaptionElement</code> instance.
 	*/

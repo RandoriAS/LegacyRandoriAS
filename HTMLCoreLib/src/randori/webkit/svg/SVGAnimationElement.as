@@ -53,7 +53,7 @@ package randori.webkit.svg
  */
 public class SVGAnimationElement extends SVGElement implements SVGTests, SVGExternalResourcesRequired, ElementTimeControl
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('animation')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('animation')")]
 	/**
 	*  Creates a new <code>SVGAnimationElement</code> instance.
 	*/

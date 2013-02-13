@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLLegendElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('legend')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('legend')")]
 	/**
 	*  Creates a new <code>HTMLLegendElement</code> instance.
 	*/

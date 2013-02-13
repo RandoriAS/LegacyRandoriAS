@@ -51,7 +51,7 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLTextAreaElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('textarea')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('textarea')")]
 	/**
 	*  Creates a new <code>HTMLTextAreaElement</code> instance.
 	*/

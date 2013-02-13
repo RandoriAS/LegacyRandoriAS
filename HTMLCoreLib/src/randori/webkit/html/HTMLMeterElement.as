@@ -51,7 +51,7 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLMeterElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('meter')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('meter')")]
 	/**
 	*  Creates a new <code>HTMLMeterElement</code> instance.
 	*/

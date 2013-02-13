@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLEmbedElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('embed')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('embed')")]
 	/**
 	*  Creates a new <code>HTMLEmbedElement</code> instance.
 	*/

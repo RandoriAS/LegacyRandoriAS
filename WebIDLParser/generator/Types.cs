@@ -874,8 +874,8 @@ namespace WebIDLParser
             tagName = getCreateElementMethodTagName(tagName, typeName);
             if (string.IsNullOrEmpty(tagName)) return null;
             var method = new TMethod(this) { name = "ctor", aliasName = "document.createElement('" + tagName + "')" };
-            method.jsAttributes.Add("OmitParanthesis", "true");
-            method.jsAttributes.Add("OmitNewOperator", "true");
+            method.jsAttributes.Add("OmitParanthesis", "\"true\"");
+            method.jsAttributes.Add("OmitNewOperator", "\"true\"");
             return method;
         }
 

@@ -52,7 +52,7 @@ package randori.webkit.svg
  */
 public class SVGScriptElement extends SVGElement implements SVGURIReference, SVGExternalResourcesRequired
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('script')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('script')")]
 	/**
 	*  Creates a new <code>SVGScriptElement</code> instance.
 	*/

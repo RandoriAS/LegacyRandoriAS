@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLCanvasElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('canvas')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('canvas')")]
 	/**
 	*  Creates a new <code>HTMLCanvasElement</code> instance.
 	*/
