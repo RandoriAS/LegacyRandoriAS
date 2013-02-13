@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLParamElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('param')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('param')")]
 	/**
 	*  Creates a new <code>HTMLParamElement</code> instance.
 	*/

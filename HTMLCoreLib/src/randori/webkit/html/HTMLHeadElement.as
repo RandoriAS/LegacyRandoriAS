@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLHeadElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('head')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('head')")]
 	/**
 	*  Creates a new <code>HTMLHeadElement</code> instance.
 	*/

@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLParagraphElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('p')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('p')")]
 	/**
 	*  Creates a new <code>HTMLParagraphElement</code> instance.
 	*/

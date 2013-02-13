@@ -52,7 +52,7 @@ import randori.webkit.page.Window;
  */
 public class HTMLFrameElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('frame')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('frame')")]
 	/**
 	*  Creates a new <code>HTMLFrameElement</code> instance.
 	*/

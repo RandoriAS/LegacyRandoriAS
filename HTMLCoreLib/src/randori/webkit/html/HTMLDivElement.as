@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLDivElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('div')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('div')")]
 	/**
 	*  Creates a new <code>HTMLDivElement</code> instance.
 	*/

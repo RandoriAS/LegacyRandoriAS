@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLMapElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('map')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('map')")]
 	/**
 	*  Creates a new <code>HTMLMapElement</code> instance.
 	*/

@@ -51,7 +51,7 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLOutputElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('output')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('output')")]
 	/**
 	*  Creates a new <code>HTMLOutputElement</code> instance.
 	*/

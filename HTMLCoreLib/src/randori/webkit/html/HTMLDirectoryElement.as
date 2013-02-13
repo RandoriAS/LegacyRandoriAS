@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLDirectoryElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('directory')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('directory')")]
 	/**
 	*  Creates a new <code>HTMLDirectoryElement</code> instance.
 	*/

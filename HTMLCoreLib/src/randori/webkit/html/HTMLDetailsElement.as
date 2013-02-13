@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLDetailsElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('details')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('details')")]
 	/**
 	*  Creates a new <code>HTMLDetailsElement</code> instance.
 	*/

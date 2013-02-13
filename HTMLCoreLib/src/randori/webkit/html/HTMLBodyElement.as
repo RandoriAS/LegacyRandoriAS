@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLBodyElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('body')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('body')")]
 	/**
 	*  Creates a new <code>HTMLBodyElement</code> instance.
 	*/

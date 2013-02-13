@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLLabelElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('label')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('label')")]
 	/**
 	*  Creates a new <code>HTMLLabelElement</code> instance.
 	*/

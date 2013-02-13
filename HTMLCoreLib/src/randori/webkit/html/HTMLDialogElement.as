@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLDialogElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('dialog')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('dialog')")]
 	/**
 	*  Creates a new <code>HTMLDialogElement</code> instance.
 	*/

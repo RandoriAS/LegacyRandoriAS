@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLMenuElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('menu')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('menu')")]
 	/**
 	*  Creates a new <code>HTMLMenuElement</code> instance.
 	*/

@@ -50,7 +50,7 @@ package randori.webkit.svg
  */
 public class SVGMetadataElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('metadata')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('metadata')")]
 	/**
 	*  Creates a new <code>SVGMetadataElement</code> instance.
 	*/

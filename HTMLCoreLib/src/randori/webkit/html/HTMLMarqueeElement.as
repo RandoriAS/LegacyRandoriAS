@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLMarqueeElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('marquee')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('marquee')")]
 	/**
 	*  Creates a new <code>HTMLMarqueeElement</code> instance.
 	*/

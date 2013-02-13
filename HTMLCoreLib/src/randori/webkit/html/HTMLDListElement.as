@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLDListElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('dl')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('dl')")]
 	/**
 	*  Creates a new <code>HTMLDListElement</code> instance.
 	*/

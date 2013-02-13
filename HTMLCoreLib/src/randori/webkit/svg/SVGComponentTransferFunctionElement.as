@@ -50,7 +50,7 @@ package randori.webkit.svg
  */
 public class SVGComponentTransferFunctionElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('componenttransferfunction')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('componenttransferfunction')")]
 	/**
 	*  Creates a new <code>SVGComponentTransferFunctionElement</code> instance.
 	*/

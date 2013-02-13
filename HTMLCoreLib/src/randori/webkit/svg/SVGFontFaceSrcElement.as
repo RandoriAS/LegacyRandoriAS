@@ -50,7 +50,7 @@ package randori.webkit.svg
  */
 public class SVGFontFaceSrcElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('fontfacesrc')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('fontfacesrc')")]
 	/**
 	*  Creates a new <code>SVGFontFaceSrcElement</code> instance.
 	*/

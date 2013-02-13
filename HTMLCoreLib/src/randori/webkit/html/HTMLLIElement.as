@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLLIElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('li')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('li')")]
 	/**
 	*  Creates a new <code>HTMLLIElement</code> instance.
 	*/

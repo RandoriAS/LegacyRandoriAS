@@ -52,7 +52,7 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLInputElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('input')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('input')")]
 	/**
 	*  Creates a new <code>HTMLInputElement</code> instance.
 	*/

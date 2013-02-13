@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLMediaElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('media')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('media')")]
 	/**
 	*  Creates a new <code>HTMLMediaElement</code> instance.
 	*/

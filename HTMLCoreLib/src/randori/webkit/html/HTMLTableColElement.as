@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLTableColElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('col')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('col')")]
 	/**
 	*  Creates a new <code>HTMLTableColElement</code> instance.
 	*/

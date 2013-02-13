@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLFontElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('font')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('font')")]
 	/**
 	*  Creates a new <code>HTMLFontElement</code> instance.
 	*/

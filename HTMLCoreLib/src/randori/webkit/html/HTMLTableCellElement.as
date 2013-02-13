@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLTableCellElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('td')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('td')")]
 	/**
 	*  Creates a new <code>HTMLTableCellElement</code> instance.
 	*/

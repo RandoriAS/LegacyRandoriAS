@@ -51,7 +51,7 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLProgressElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('progress')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('progress')")]
 	/**
 	*  Creates a new <code>HTMLProgressElement</code> instance.
 	*/

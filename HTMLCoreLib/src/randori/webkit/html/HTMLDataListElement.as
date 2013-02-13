@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLDataListElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('datalist')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('datalist')")]
 	/**
 	*  Creates a new <code>HTMLDataListElement</code> instance.
 	*/

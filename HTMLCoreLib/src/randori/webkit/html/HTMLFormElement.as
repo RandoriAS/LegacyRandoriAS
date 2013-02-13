@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLFormElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('form')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('form')")]
 	/**
 	*  Creates a new <code>HTMLFormElement</code> instance.
 	*/

@@ -52,7 +52,7 @@ package randori.webkit.svg
  */
 public class SVGMPathElement extends SVGElement implements SVGURIReference, SVGExternalResourcesRequired
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('mpath')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('mpath')")]
 	/**
 	*  Creates a new <code>SVGMPathElement</code> instance.
 	*/

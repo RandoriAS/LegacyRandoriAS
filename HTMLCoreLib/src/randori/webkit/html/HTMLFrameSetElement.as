@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLFrameSetElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('frameset')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('frameset')")]
 	/**
 	*  Creates a new <code>HTMLFrameSetElement</code> instance.
 	*/

@@ -51,7 +51,7 @@ import randori.webkit.css.CSSValue;
  */
 public class SVGStyledElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('styled')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('styled')")]
 	/**
 	*  Creates a new <code>SVGStyledElement</code> instance.
 	*/
