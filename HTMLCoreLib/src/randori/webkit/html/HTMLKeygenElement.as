@@ -51,7 +51,7 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLKeygenElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('keygen')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('keygen')")]
 	/**
 	*  Creates a new <code>HTMLKeygenElement</code> instance.
 	*/

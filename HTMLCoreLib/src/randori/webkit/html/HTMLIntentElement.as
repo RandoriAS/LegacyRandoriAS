@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLIntentElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('intent')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('intent')")]
 	/**
 	*  Creates a new <code>HTMLIntentElement</code> instance.
 	*/

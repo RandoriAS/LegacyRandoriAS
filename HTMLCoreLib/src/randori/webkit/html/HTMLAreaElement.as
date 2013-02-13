@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLAreaElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('area')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('area')")]
 	/**
 	*  Creates a new <code>HTMLAreaElement</code> instance.
 	*/

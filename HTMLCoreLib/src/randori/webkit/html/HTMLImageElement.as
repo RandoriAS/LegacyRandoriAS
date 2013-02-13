@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLImageElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('img')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('img')")]
 	/**
 	*  Creates a new <code>HTMLImageElement</code> instance.
 	*/

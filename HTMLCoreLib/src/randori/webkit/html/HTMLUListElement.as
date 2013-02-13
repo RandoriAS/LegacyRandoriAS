@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLUListElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('ul')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('ul')")]
 	/**
 	*  Creates a new <code>HTMLUListElement</code> instance.
 	*/

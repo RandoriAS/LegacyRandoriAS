@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLTitleElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('title')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('title')")]
 	/**
 	*  Creates a new <code>HTMLTitleElement</code> instance.
 	*/

@@ -51,7 +51,7 @@ package randori.webkit.svg
  */
 public class SVGStyleElement extends SVGElement implements SVGLangSpace
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('style')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('style')")]
 	/**
 	*  Creates a new <code>SVGStyleElement</code> instance.
 	*/

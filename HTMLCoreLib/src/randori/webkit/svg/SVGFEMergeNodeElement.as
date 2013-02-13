@@ -50,7 +50,7 @@ package randori.webkit.svg
  */
 public class SVGFEMergeNodeElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('femergenode')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('femergenode')")]
 	/**
 	*  Creates a new <code>SVGFEMergeNodeElement</code> instance.
 	*/

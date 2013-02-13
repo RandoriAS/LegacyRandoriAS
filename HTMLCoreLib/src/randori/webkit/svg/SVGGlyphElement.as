@@ -50,7 +50,7 @@ package randori.webkit.svg
  */
 public class SVGGlyphElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('glyph')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('glyph')")]
 	/**
 	*  Creates a new <code>SVGGlyphElement</code> instance.
 	*/

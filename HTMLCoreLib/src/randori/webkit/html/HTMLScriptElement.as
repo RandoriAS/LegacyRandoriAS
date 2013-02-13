@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLScriptElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('script')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('script')")]
 	/**
 	*  Creates a new <code>HTMLScriptElement</code> instance.
 	*/

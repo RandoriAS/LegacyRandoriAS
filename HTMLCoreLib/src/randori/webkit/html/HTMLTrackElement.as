@@ -51,7 +51,7 @@ import randori.webkit.html.track.TextTrack;
  */
 public class HTMLTrackElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('track')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('track')")]
 	/**
 	*  Creates a new <code>HTMLTrackElement</code> instance.
 	*/

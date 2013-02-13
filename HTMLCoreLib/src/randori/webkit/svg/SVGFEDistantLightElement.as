@@ -50,7 +50,7 @@ package randori.webkit.svg
  */
 public class SVGFEDistantLightElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('fedistantlight')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('fedistantlight')")]
 	/**
 	*  Creates a new <code>SVGFEDistantLightElement</code> instance.
 	*/

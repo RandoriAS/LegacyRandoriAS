@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLOListElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('ol')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('ol')")]
 	/**
 	*  Creates a new <code>HTMLOListElement</code> instance.
 	*/

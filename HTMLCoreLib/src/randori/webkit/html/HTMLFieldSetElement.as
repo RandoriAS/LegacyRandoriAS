@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLFieldSetElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('fieldset')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('fieldset')")]
 	/**
 	*  Creates a new <code>HTMLFieldSetElement</code> instance.
 	*/

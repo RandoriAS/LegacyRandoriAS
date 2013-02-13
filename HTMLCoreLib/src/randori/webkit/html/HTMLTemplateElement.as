@@ -51,7 +51,7 @@ import randori.webkit.dom.DocumentFragment;
  */
 public class HTMLTemplateElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('template')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('template')")]
 	/**
 	*  Creates a new <code>HTMLTemplateElement</code> instance.
 	*/

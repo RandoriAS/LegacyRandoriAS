@@ -53,7 +53,7 @@ package randori.webkit.svg
  */
 public class SVGViewElement extends SVGElement implements SVGExternalResourcesRequired, SVGFitToViewBox, SVGZoomAndPan
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('view')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('view')")]
 	/**
 	*  Creates a new <code>SVGViewElement</code> instance.
 	*/

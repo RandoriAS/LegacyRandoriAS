@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLBRElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('br')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('br')")]
 	/**
 	*  Creates a new <code>HTMLBRElement</code> instance.
 	*/

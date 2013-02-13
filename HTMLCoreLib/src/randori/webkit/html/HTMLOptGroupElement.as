@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLOptGroupElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('optgroup')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('optgroup')")]
 	/**
 	*  Creates a new <code>HTMLOptGroupElement</code> instance.
 	*/

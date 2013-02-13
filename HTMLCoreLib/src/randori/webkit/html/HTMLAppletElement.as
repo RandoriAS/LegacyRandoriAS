@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLAppletElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('applet')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('applet')")]
 	/**
 	*  Creates a new <code>HTMLAppletElement</code> instance.
 	*/

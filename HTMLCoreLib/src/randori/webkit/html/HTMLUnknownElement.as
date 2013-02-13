@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLUnknownElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('unknown')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('unknown')")]
 	/**
 	*  Creates a new <code>HTMLUnknownElement</code> instance.
 	*/

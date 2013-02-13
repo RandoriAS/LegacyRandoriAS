@@ -50,7 +50,7 @@ package randori.webkit.html
  */
 public class HTMLSpanElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('span')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('span')")]
 	/**
 	*  Creates a new <code>HTMLSpanElement</code> instance.
 	*/

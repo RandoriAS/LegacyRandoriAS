@@ -50,7 +50,7 @@ package randori.webkit.svg
  */
 public class SVGHKernElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('hkern')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('hkern')")]
 	/**
 	*  Creates a new <code>SVGHKernElement</code> instance.
 	*/

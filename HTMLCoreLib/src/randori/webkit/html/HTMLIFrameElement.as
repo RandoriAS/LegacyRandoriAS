@@ -52,7 +52,7 @@ import randori.webkit.page.Window;
  */
 public class HTMLIFrameElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('iframe')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('iframe')")]
 	/**
 	*  Creates a new <code>HTMLIFrameElement</code> instance.
 	*/

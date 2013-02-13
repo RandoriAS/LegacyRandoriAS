@@ -50,7 +50,7 @@ package randori.webkit.svg
  */
 public class SVGVKernElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('vkern')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('vkern')")]
 	/**
 	*  Creates a new <code>SVGVKernElement</code> instance.
 	*/

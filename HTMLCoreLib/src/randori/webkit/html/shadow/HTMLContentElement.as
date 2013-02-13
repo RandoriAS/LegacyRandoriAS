@@ -52,7 +52,7 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLContentElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('content')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('content')")]
 	/**
 	*  Creates a new <code>HTMLContentElement</code> instance.
 	*/

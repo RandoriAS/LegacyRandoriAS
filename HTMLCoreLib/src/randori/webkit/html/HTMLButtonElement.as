@@ -51,7 +51,7 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLButtonElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis=true, omitnewoperator=true, name="document.createElement('button')")]
+	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('button')")]
 	/**
 	*  Creates a new <code>HTMLButtonElement</code> instance.
 	*/
