@@ -55,10 +55,12 @@ package randori.behaviors {
 		public function set selectedIndex(value:int):void {
 			_selectedIndex = value;
 			decoratedNode.children().removeClass("selected");
-			if (value > -1 && value < decoratedNode.children().length) {
-				decoratedNode.children().eq(value).addClass("selected");
-
-				listChanged.dispatch(value, data[value]);
+			if ( _data && _data.length >=  value ) {
+				if (value > -1 && value < decoratedNode.children().length) {
+					decoratedNode.children().eq(value).addClass("selected");
+	
+					listChanged.dispatch(value, data[value]);
+				}
 			}
 		}
 

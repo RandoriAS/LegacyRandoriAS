@@ -45,9 +45,9 @@ package behaviors {
 		}
 		
 		private function listChangedHandler( index:int, data:Object ):void {
-			if (menuItemSelected != null && data != null) {
-				var menuItem = new MenuItem(data[ "name" ], data[ "url" ]);
-				menuItemSelected(menuItem);
+			if (data != null) {
+				var menuItem:MenuItem = new MenuItem(data[ "name" ], data[ "url" ]);
+				menuItemSelected.dispatch(menuItem);
 			}
 		}
 		
