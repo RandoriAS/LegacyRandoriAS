@@ -79,7 +79,7 @@ package guice.reflection {
 			return injectionPoints(Constructor);
 		}
 		
-		public function constructorApply(... args):Object {
+		public function constructorApply(args:Array):Object {
 			var instance:Object = null;
 			
 			if ( this._builtIn ) {
