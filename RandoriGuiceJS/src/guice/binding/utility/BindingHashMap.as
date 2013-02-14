@@ -18,7 +18,7 @@
  */
 package guice.binding.utility {
 	
-	[JavaScript(export=false,name="Object",mode="json")]
+	[JavaScript(export="false",name="Object",mode="json")]
 	dynamic public class BindingHashMap extends Object {
 		public function BindingHashMap() {
 			super();

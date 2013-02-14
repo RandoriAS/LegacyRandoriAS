@@ -17,7 +17,7 @@
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
 package guice.reflection {
-	[JavaScript(export=false,name="Object",mode="json")]
+	[JavaScript(export="false",name="Object",mode="json")]
 	public class InjectionPoint {
 		public var n:String; //name
 		public var t:String; //type as string
