@@ -32,8 +32,8 @@ package services {
 		private var path:String;
 		
 		public function get():Promise {
-			var promise = sendRequest("GET", config.protocol, config.host, config.port, path);
-			var parserPromise = promise.then( targets.parseResult );
+			var promise:Promise = sendRequest("GET", path);
+			var parserPromise:Promise = promise.then( targets.parseResult );
 			
 			return parserPromise;
 		}
