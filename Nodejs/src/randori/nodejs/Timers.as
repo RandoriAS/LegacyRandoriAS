@@ -15,19 +15,18 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Timers
-	{
-		public function Timers()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: timers.json
+	 */
+	[JavaScript(export="false", name="timers")]
+	public class Timers {
 		
-		/*
+		/**
 		 * <p>To schedule execution of a one-time <code>callback</code> after <code>delay</code> milliseconds. Returns a
 		 * <code>timeoutId</code> for possible use with <code>clearTimeout()</code>. Optionally you can
 		 * also pass arguments to the callback.
@@ -38,38 +37,34 @@ package randori.nodejs
 		 * be called as close as possible to the time specified.
 		 * </p>
 		 * 
-		*/
-		public function setTimeout(callback:*, delay:*, arg:*, ...:*):void
-		{
+		 */
+		public static function setTimeout(callback:*, delay:*, arg:*, ...params):void {
 		}
 		
-		/*
+		/**
 		 * <p>Prevents a timeout from triggering.
 		 * </p>
 		 * 
-		*/
-		public function clearTimeout(timeoutId:*):void
-		{
+		 */
+		public static function clearTimeout(timeoutId:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>To schedule the repeated execution of <code>callback</code> every <code>delay</code> milliseconds.
 		 * Returns a <code>intervalId</code> for possible use with <code>clearInterval()</code>. Optionally
 		 * you can also pass arguments to the callback.
 		 * </p>
 		 * 
-		*/
-		public function setInterval(callback:*, delay:*, arg:*, ...:*):void
-		{
+		 */
+		public static function setInterval(callback:*, delay:*, arg:*, ...params):void {
 		}
 		
-		/*
+		/**
 		 * <p>Stops a interval from triggering.
 		 * </p>
 		 * 
-		*/
-		public function clearInterval(intervalId:*):void
-		{
+		 */
+		public static function clearInterval(intervalId:*):void {
 		}
 	}
 }

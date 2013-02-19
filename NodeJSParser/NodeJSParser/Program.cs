@@ -6,20 +6,40 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using NodeJSParser.output;
 using Newtonsoft.Json.Linq;
 using System.CodeDom;
+using System.CodeDom.Compiler;
 
 namespace ConsoleApplication1
 {
     class Program
     {
+        private static string header = @"/***" + Environment.NewLine +
+@" * Copyright 2013 LTN Consulting, Inc. /dba Digital PrimatesÂ®" + Environment.NewLine +
+@" * " + Environment.NewLine +
+@" * Licensed under the Apache License, Version 2.0 (the 'License');" + Environment.NewLine +
+@" * you may not use this file except in compliance with the License." + Environment.NewLine +
+@" * You may obtain a copy of the License at" + Environment.NewLine +
+@" * " + Environment.NewLine +
+@" * http://www.apache.org/licenses/LICENSE-2.0" + Environment.NewLine +
+@" * " + Environment.NewLine +
+@" * Unless required by applicable law or agreed to in writing, software" + Environment.NewLine +
+@" * distributed under the License is distributed on an 'AS IS' BASIS," + Environment.NewLine +
+@" * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied." + Environment.NewLine +
+@" * See the License for the specific language governing permissions and" + Environment.NewLine +
+@" * limitations under the License." + Environment.NewLine +
+@" * " + Environment.NewLine +
+@" * " + Environment.NewLine +
+@" * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!" + Environment.NewLine +
+@" * @author Randori Nodejs generator" + Environment.NewLine +
+@"*/";
+
         //Where the .as files will be saved
         public static string OutputDirectory = @"C:\projects\RandoriAS\Nodejs\src\randori\nodejs";
         //api.jquery.com/entries directory:
         public static string JSONDir = @"C:\projects\NodeJSDoc";
 
-        public static List<CodeTypeDeclaration> ClassDefs = new List<CodeTypeDeclaration>();
+        private static ClassBuilder Builder = new ClassBuilder { PackageName = "randori.nodejs" };
 
         static void Main(string[] args)
         {
@@ -30,7 +50,10 @@ namespace ConsoleApplication1
             CleanOutputDirectry();
             var files = Directory.EnumerateFiles(JSONDir).ToList<string>();
             files.ForEach(f => ProcessJSONFile(f));
-            ClassDefs.ForEach(c => WriteFile(c));
+
+            var provider = new AS3CodeProvider(Builder);
+            Builder.Units.ForEach(c => WriteFile(c, provider));
+            
             Console.WriteLine("Finished, press any key to continue...");
             Console.ReadKey();
         }
@@ -40,75 +63,165 @@ namespace ConsoleApplication1
             Directory.EnumerateFiles(OutputDirectory).ToList<string>().ForEach(f => File.Delete(f));
         }
 
-        private static void WriteFile(ClassDef c)
+        private static void WriteFile(CodeCompileUnit compileUnit, AS3CodeProvider provider)
         {
-            var sb = new StringBuilder();
-            c.Serialize(sb);
-            File.WriteAllText(Path.Combine(OutputDirectory, c.FileName), sb.ToString());
+            if (compileUnit.Namespaces[0].Types[0].Members.Count == 0)
+            {
+                return;
+            }
+            var options = new CodeGeneratorOptions();
+            var FileName = ((ClassNameDef)compileUnit.UserData["NameDef"]).FileName;
+            FileName = Path.Combine(OutputDirectory, FileName);
+
+            StreamWriter writer = new StreamWriter(FileName, false);
+            writer.WriteLine(header);
+            options.IndentString = "\t";
+            options.VerbatimOrder = false;
+            try
+            {
+                provider.GenerateCodeFromCompileUnit(compileUnit, writer, options);
+            }
+            finally
+            {
+                writer.Close();
+            }
+
+            Console.WriteLine("Created file: " + FileName);
         }
 
-        private static void ProcessJSONFile(string FileName)
+        private static void ProcessJSONFile(string JSONPath)
         {
-            var strJSON = File.ReadAllText(FileName);
+            var strJSON = File.ReadAllText(JSONPath);
+            var FileName = Path.GetFileName(JSONPath);
             JObject json = JObject.Parse(strJSON);
             if (json["modules"] != null)
             {
                 JToken modules = json["modules"];
-                modules.ToList<JToken>().ForEach(t => CreateClassDef(t));
+                modules.ToList<JToken>().ForEach(t => CreateCompileUnit(t, FileName));
             }
         }
 
-        private static void CreateClassDef(JToken ClassToken)
+        private static void CreateCompileUnit(JToken ClassToken, string FileName)
         {
-            var classDef = new ClassDef() { name = new ClassNameDef() { ActionScriptName = FormatClassName(ClassToken["name"].ToString())} };
-            ClassDefs.Add(classDef);
+            var className = new ClassNameDef() { ActionScriptName = FormatClassName((String)ClassToken["name"]), JavascriptName = (String)ClassToken["name"] };
+            var type = Builder.CreateClass(className);
+            type.Comments.Add(new CodeCommentStatement("Generated from file: " + FileName, true));
+
             if (ClassToken["methods"] != null)
             {
-                AddMethods(classDef, ClassToken["methods"]);
+                AddMethods(type, ClassToken["methods"], true);
             }
-            Console.WriteLine(classDef.name.ActionScriptName);
+
+            if (ClassToken["classes"] != null)
+            {
+                AddClasses(ClassToken["classes"], FileName);
+            }
+
+            Console.WriteLine("Created: " + className.ActionScriptName);
         }
 
-        private static void AddMethods(ClassDef classDef, JToken MethodsToken)
+        private static void AddClasses(JToken ClassesToken, string FileName)
         {
-            MethodsToken.ToList<JToken>().ForEach(m => CreateMethodDefs(classDef, m));
+            ClassesToken.ToList<JToken>().ForEach(c => CreateClass(c, FileName));
         }
 
-        private static void CreateMethodDefs(ClassDef classDef, JToken MethodToken)
+        private static void CreateClass(JToken ClassToken, string FileName)
+        {
+            var type = Builder.GetClassByName((String)ClassToken["name"]);
+            if (type == null)
+            {
+                var name = new ClassNameDef() { ActionScriptName = FormatClassName((String)ClassToken["name"]), JavascriptName = (String)ClassToken["name"] };
+                type = Builder.CreateClass(name);
+                type.Comments.Add(new CodeCommentStatement("Generated from file: " + FileName, true));
+            }
+            if (ClassToken["methods"] != null)
+            {
+                AddMethods(type, ClassToken["methods"], false);
+            }
+        }
+
+        private static void AddMethods(CodeTypeDeclaration type, JToken MethodsToken, bool IsStatic)
+        {
+            MethodsToken.ToList<JToken>().ForEach(m => CreateStaticMethods(type, m));
+        }
+
+        private static void CreateStaticMethods(CodeTypeDeclaration type, JToken MethodToken)
         {
             var name = MethodToken["name"].ToString();
             var description = TrimComment(MethodToken["desc"].ToString());
-            MethodToken["signatures"].ToList<JToken>().ForEach(s => CreateMethodDef(classDef, name, description, s));
+            MethodToken["signatures"].ToList<JToken>().ForEach(s => CreateStaticMethod(type, name, description, s));
         }
 
         private static List<String> TrimComment(string comment)
         {
             var lines = Regex.Split(comment, "[\r\n]+");
-            return lines.ToList<String>().ConvertAll(l => l.Trim());
+            return lines.ToList<String>().ConvertAll(l => l.Trim().Replace("/*", "//").Replace("*/", "//"));
         }
 
-        private static void CreateMethodDef(ClassDef classDef, string name, List<String> description, JToken SignatureToken)
+        private static void CreateStaticMethod(CodeTypeDeclaration type, string name, List<String> description, JToken SignatureToken)
         {
-            var methodDef = new MethodDef() { name = name};
-            methodDef.type = "void";
-            methodDef.comments.AddRange(description);
-            classDef.methods.Add(methodDef);
-            SignatureToken["params"].ToList<JToken>().ForEach(p => AddParam(methodDef.parameters, p));
+            var method = Builder.AddMethod(type, name, "void");
+            Builder.MakeStatic(method);
+            foreach (var line in description)
+            {
+                method.Comments.Add(new CodeCommentStatement(line, true));
+            }
+            
+            SignatureToken["params"].ToList<JToken>().ForEach(p => AddParam(method, p));
         }
 
-        private static void AddParam(List<ParamDef> list, JToken Parameter)
+        private static void AddParam(CodeMemberMethod method, JToken Parameter)
         {
-            var paramDef = new ParamDef() { name = Parameter["name"].ToString() };
+            bool isOptional = false;
+            var type = "*";
             if (Parameter["optional"] != null)
             {
-                paramDef.isOptional = (Parameter["optional"].ToString() == "true");
+                isOptional = (Parameter["optional"].ToString() == "true");
             }
-            paramDef.type = "*";
-            list.Add(paramDef);
+            if (Parameter["type"] != null)
+            {
+                type = FormatParameterTypeName((String)Parameter["type"]);
+            }
+            var Name = FormatParameterName((String)Parameter["name"]);
+            var parameter = Builder.AddParameter(Name, type, method, null, isOptional);
+            parameter.UserData["IsAsterisk"] = (type == "*");
+        }
+
+        private static string FormatParameterName(string ParamName)
+        {
+            if (ParamName.IndexOf(' ') > -1)
+            {
+                ParamName = ParamName.Substring(0, ParamName.LastIndexOf(' ') - 1);
+            }
+            if (ParamName.IndexOf('(') > -1)
+            {
+                ParamName = ParamName.Substring(ParamName.LastIndexOf('(') + 1);
+            }
+            ParamName = ParamName.Replace(")", "");
+            return ParamName;
+        }
+
+        private static string FormatParameterTypeName(string ParamTypeName)
+        {
+            if (ParamTypeName.IndexOf(' ') > -1)
+            {
+                return CapitalizeName(ParamTypeName.Substring(ParamTypeName.LastIndexOf(' ')+1));
+            }
+            return ParamTypeName;
         }
 
         private static string FormatClassName(String RawName)
         {
+            RawName = RawName.Replace(" ", "");
+            if (RawName.IndexOf('.') > -1)
+            {
+                var parts = RawName.Split('.');
+                RawName = "";
+                foreach (var part in parts)
+                {
+                    RawName += CapitalizeName(part);
+                }
+            }
             if (RawName.IndexOf('_') > -1)
             {
                 var parts = RawName.Split('_').ToList<String>();

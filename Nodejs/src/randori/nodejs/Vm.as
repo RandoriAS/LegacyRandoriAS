@@ -15,19 +15,18 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Vm
-	{
-		public function Vm()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: vm.json
+	 */
+	[JavaScript(export="false", name="vm")]
+	public class Vm {
 		
-		/*
+		/**
 		 * <p><code>vm.runInThisContext()</code> compiles <code>code</code>, runs it and returns the result. Running
 		 * code does not have access to local scope. <code>filename</code> is optional, it&#39;s used only
 		 * in stack traces.
@@ -53,12 +52,11 @@ package randori.nodejs
 		 * and throws an exception.
 		 * </p>
 		 * 
-		*/
-		public function runInThisContext(code:*, filename:*):void
-		{
+		 */
+		public static function runInThisContext(code:*, filename:*):void {
 		}
 		
-		/*
+		/**
 		 * <p><code>vm.runInNewContext</code> compiles <code>code</code>, then runs it in <code>sandbox</code> and returns the
 		 * result. Running code does not have access to local scope. The object <code>sandbox</code>
 		 * will be used as the global object for <code>code</code>.
@@ -84,12 +82,11 @@ package randori.nodejs
 		 * and throws an exception.
 		 * </p>
 		 * 
-		*/
-		public function runInNewContext(code:*, sandbox:*, filename:*):void
-		{
+		 */
+		public static function runInNewContext(code:*, sandbox:*, filename:*):void {
 		}
 		
-		/*
+		/**
 		 * <p><code>vm.runInContext</code> compiles <code>code</code>, then runs it in <code>context</code> and returns the
 		 * result. A (V8) context comprises a global object, together with a set of
 		 * built-in objects and functions. Running code does not have access to local scope
@@ -120,24 +117,22 @@ package randori.nodejs
 		 * and throws an exception.
 		 * </p>
 		 * 
-		*/
-		public function runInContext(code:*, context:*, filename:*):void
-		{
+		 */
+		public static function runInContext(code:*, context:*, filename:*):void {
 		}
 		
-		/*
+		/**
 		 * <p><code>vm.createContext</code> creates a new context which is suitable for use as the 2nd argument of a subsequent
 		 * call to <code>vm.runInContext</code>. A (V8) context comprises a global object together with a set of
 		 * build-in objects and functions. The optional argument <code>initSandbox</code> will be shallow-copied
 		 * to seed the initial contents of the global object used by the context.
 		 * </p>
 		 * 
-		*/
-		public function createContext(initSandbox:*):void
-		{
+		 */
+		public static function createContext(initSandbox:*):void {
 		}
 		
-		/*
+		/**
 		 * <p><code>createScript</code> compiles <code>code</code> but does not run it. Instead, it returns a
 		 * <code>vm.Script</code> object representing this compiled code. This script can be run
 		 * later many times using methods below. The returned script is not bound to any
@@ -148,9 +143,8 @@ package randori.nodejs
 		 * and throws an exception.
 		 * </p>
 		 * 
-		*/
-		public function createScript(code:*, filename:*):void
-		{
+		 */
+		public static function createScript(code:*, filename:*):void {
 		}
 	}
 }

@@ -15,19 +15,18 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Dns
-	{
-		public function Dns()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: dns.json
+	 */
+	[JavaScript(export="false", name="dns")]
+	public class Dns {
 		
-		/*
+		/**
 		 * <p>Resolves a domain (e.g. <code>&#39;google.com&#39;</code>) into the first found A (IPv4) or
 		 * AAAA (IPv6) record.
 		 * The <code>family</code> can be the integer <code>4</code> or <code>6</code>. Defaults to <code>null</code> that indicates
@@ -44,12 +43,11 @@ package randori.nodejs
 		 * such as no available file descriptors.
 		 * </p>
 		 * 
-		*/
-		public function lookup(domain:*, family:*, callback:*):void
-		{
+		 */
+		public static function lookup(domain:*, family:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Resolves a domain (e.g. <code>&#39;google.com&#39;</code>) into an array of the record types
 		 * specified by rrtype. Valid rrtypes are <code>&#39;A&#39;</code> (IPV4 addresses, default),
 		 * <code>&#39;AAAA&#39;</code> (IPV6 addresses), <code>&#39;MX&#39;</code> (mail exchange records), <code>&#39;TXT&#39;</code> (text
@@ -64,89 +62,81 @@ package randori.nodejs
 		 * one of the error codes listed below.
 		 * </p>
 		 * 
-		*/
-		public function resolve(domain:*, rrtype:*, callback:*):void
-		{
+		 */
+		public static function resolve(domain:*, rrtype:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>The same as <code>dns.resolve()</code>, but only for IPv4 queries (<code>A</code> records).
 		 * <code>addresses</code> is an array of IPv4 addresses (e.g.
 		 * <code>[&#39;74.125.79.104&#39;, &#39;74.125.79.105&#39;, &#39;74.125.79.106&#39;]</code>).
 		 * </p>
 		 * 
-		*/
-		public function resolve4(domain:*, callback:*):void
-		{
+		 */
+		public static function resolve4(domain:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>The same as <code>dns.resolve4()</code> except for IPv6 queries (an <code>AAAA</code> query).
 		 * </p>
 		 * 
-		*/
-		public function resolve6(domain:*, callback:*):void
-		{
+		 */
+		public static function resolve6(domain:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>The same as <code>dns.resolve()</code>, but only for mail exchange queries (<code>MX</code> records).
 		 * </p>
 		 * <p><code>addresses</code> is an array of MX records, each with a priority and an exchange
 		 * attribute (e.g. <code>[{&#39;priority&#39;: 10, &#39;exchange&#39;: &#39;mx.example.com&#39;},...]</code>).
 		 * </p>
 		 * 
-		*/
-		public function resolveMx(domain:*, callback:*):void
-		{
+		 */
+		public static function resolveMx(domain:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>The same as <code>dns.resolve()</code>, but only for text queries (<code>TXT</code> records).
 		 * <code>addresses</code> is an array of the text records available for <code>domain</code> (e.g.,
 		 * <code>[&#39;v=spf1 ip4:0.0.0.0 ~all&#39;]</code>).
 		 * </p>
 		 * 
-		*/
-		public function resolveTxt(domain:*, callback:*):void
-		{
+		 */
+		public static function resolveTxt(domain:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>The same as <code>dns.resolve()</code>, but only for service records (<code>SRV</code> records).
 		 * <code>addresses</code> is an array of the SRV records available for <code>domain</code>. Properties
 		 * of SRV records are priority, weight, port, and name (e.g.,
 		 * <code>[{&#39;priority&#39;: 10, {&#39;weight&#39;: 5, &#39;port&#39;: 21223, &#39;name&#39;: &#39;service.example.com&#39;}, ...]</code>).
 		 * </p>
 		 * 
-		*/
-		public function resolveSrv(domain:*, callback:*):void
-		{
+		 */
+		public static function resolveSrv(domain:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>The same as <code>dns.resolve()</code>, but only for name server records (<code>NS</code> records).
 		 * <code>addresses</code> is an array of the name server records available for <code>domain</code>
 		 * (e.g., <code>[&#39;ns1.example.com&#39;, &#39;ns2.example.com&#39;]</code>).
 		 * </p>
 		 * 
-		*/
-		public function resolveNs(domain:*, callback:*):void
-		{
+		 */
+		public static function resolveNs(domain:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>The same as <code>dns.resolve()</code>, but only for canonical name records (<code>CNAME</code>
 		 * records). <code>addresses</code> is an array of the canonical name records available for
 		 * <code>domain</code> (e.g., <code>[&#39;bar.example.com&#39;]</code>).
 		 * </p>
 		 * 
-		*/
-		public function resolveCname(domain:*, callback:*):void
-		{
+		 */
+		public static function resolveCname(domain:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Reverse resolves an ip address to an array of domain names.
 		 * </p>
 		 * <p>The callback has arguments <code>(err, domains)</code>.
@@ -155,9 +145,8 @@ package randori.nodejs
 		 * one of the error codes listed below.
 		 * </p>
 		 * 
-		*/
-		public function reverse(ip:*, callback:*):void
-		{
+		 */
+		public static function reverse(ip:*, callback:*):void {
 		}
 	}
 }

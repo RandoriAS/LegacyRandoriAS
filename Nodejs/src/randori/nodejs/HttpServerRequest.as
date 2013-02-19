@@ -15,16 +15,40 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Module
-	{
-		public function Module()
-		{
-			super();
+	
+	/**
+	 * Generated from file: http.json
+	 */
+	[JavaScript(export="false", name="http.ServerRequest")]
+	public class HttpServerRequest {
+		
+		/**
+		 * <p>Set the encoding for the request body. See [stream.setEncoding()][] for more
+		 * information.
+		 * </p>
+		 * 
+		 */
+		public static function setEncoding(encoding:*):void {
+		}
+		
+		/**
+		 * <p>Pauses request from emitting events.  Useful to throttle back an upload.
+		 * </p>
+		 * 
+		 */
+		public static function pause():void {
+		}
+		
+		/**
+		 * <p>Resumes a paused request.
+		 * </p>
+		 * 
+		 */
+		public static function resume():void {
 		}
 	}
 }

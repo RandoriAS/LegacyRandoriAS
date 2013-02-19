@@ -15,19 +15,18 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Crypto
-	{
-		public function Crypto()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: crypto.json
+	 */
+	[JavaScript(export="false", name="crypto")]
+	public class Crypto {
 		
-		/*
+		/**
 		 * <p>Creates a credentials object, with the optional details being a dictionary with keys:
 		 * </p>
 		 * <ul>
@@ -46,12 +45,11 @@ package randori.nodejs
 		 * <p><a href="http://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt">http://mxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt</a>.
 		 * </p>
 		 * 
-		*/
-		public function createCredentials(details:*):void
-		{
+		 */
+		public static function createCredentials(details:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates and returns a hash object, a cryptographic hash with the given algorithm
 		 * which can be used to generate hash digests.
 		 * </p>
@@ -74,24 +72,22 @@ package randori.nodejs
 		 * console.log(d + &#39;  &#39; + filename);
 		 * });</code></pre>
 		 * 
-		*/
-		public function createHash(algorithm:*):void
-		{
+		 */
+		public static function createHash(algorithm:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates and returns a hmac object, a cryptographic hmac with the given algorithm and key.
 		 * </p>
 		 * <p><code>algorithm</code> is dependent on the available algorithms supported by OpenSSL - see createHash above.
 		 * <code>key</code> is the hmac key to be used.
 		 * </p>
 		 * 
-		*/
-		public function createHmac(algorithm:*, key:*):void
-		{
+		 */
+		public static function createHmac(algorithm:*, key:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates and returns a cipher object, with the given algorithm and password.
 		 * </p>
 		 * <p><code>algorithm</code> is dependent on OpenSSL, examples are <code>&#39;aes192&#39;</code>, etc.
@@ -101,12 +97,11 @@ package randori.nodejs
 		 * string or a <a href="buffer.html">buffer</a>.
 		 * </p>
 		 * 
-		*/
-		public function createCipher(algorithm:*, password:*):void
-		{
+		 */
+		public static function createCipher(algorithm:*, password:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates and returns a cipher object, with the given algorithm, key and iv.
 		 * </p>
 		 * <p><code>algorithm</code> is the same as the argument to <code>createCipher()</code>.
@@ -117,74 +112,69 @@ package randori.nodejs
 		 * <p><code>key</code> and <code>iv</code> must be <code>&#39;binary&#39;</code> encoded strings or <a href="buffer.html">buffers</a>.
 		 * </p>
 		 * 
-		*/
-		public function createCipheriv(algorithm:*, key:*, iv:*):void
-		{
+		 */
+		public static function createCipheriv(algorithm:*, key:*, iv:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates and returns a decipher object, with the given algorithm and key.
 		 * This is the mirror of the [createCipher()][] above.
 		 * </p>
 		 * 
-		*/
-		public function createDecipher(algorithm:*, password:*):void
-		{
+		 */
+		public static function createDecipher(algorithm:*, password:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates and returns a decipher object, with the given algorithm, key and iv.
 		 * This is the mirror of the [createCipheriv()][] above.
 		 * </p>
 		 * 
-		*/
-		public function createDecipheriv(algorithm:*, key:*, iv:*):void
-		{
+		 */
+		public static function createDecipheriv(algorithm:*, key:*, iv:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates and returns a signing object, with the given algorithm.
 		 * On recent OpenSSL releases, <code>openssl list-public-key-algorithms</code> will display
 		 * the available signing algorithms. Examples are <code>&#39;RSA-SHA256&#39;</code>.
 		 * </p>
 		 * 
-		*/
-		public function createSign(algorithm:*):void
-		{
+		 */
+		public static function createSign(algorithm:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates and returns a verification object, with the given algorithm.
 		 * This is the mirror of the signing object above.
 		 * </p>
 		 * 
-		*/
-		public function createVerify(algorithm:*):void
-		{
+		 */
+		public static function createVerify(algorithm:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates a Diffie-Hellman key exchange object and generates a prime of the
 		 * given bit length. The generator used is <code>2</code>.
 		 * </p>
 		 * 
-		*/
-		public function createDiffieHellman(prime_length:*):void
-		{
+		 */
+		[JavaScriptMethod(name="createDiffieHellman")]
+		public static function createDiffieHellman1(prime_length:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates a Diffie-Hellman key exchange object using the supplied prime. The
 		 * generator used is <code>2</code>. Encoding can be <code>&#39;binary&#39;</code>, <code>&#39;hex&#39;</code>, or <code>&#39;base64&#39;</code>.
 		 * Defaults to <code>&#39;binary&#39;</code>.
 		 * </p>
 		 * 
-		*/
-		public function createDiffieHellman(prime:*, encoding:*):void
-		{
+		 */
+		[JavaScriptMethod(name="createDiffieHellman")]
+		public static function createDiffieHellman2(prime:*, encoding:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates a predefined Diffie-Hellman key exchange object.
 		 * The supported groups are: <code>&#39;modp1&#39;</code>, <code>&#39;modp2&#39;</code>, <code>&#39;modp5&#39;</code>
 		 * (defined in [RFC 2412][])
@@ -207,26 +197,24 @@ package randori.nodejs
 		 * bob.generateKeys();
 		 * var alice_secret = alice.computeSecret(bob.getPublicKey(), &#39;binary&#39;, &#39;hex&#39;);
 		 * var bob_secret = bob.computeSecret(alice.getPublicKey(), &#39;binary&#39;, &#39;hex&#39;);
-		 * /* alice_secret and bob_secret should be the same */
+		 * // alice_secret and bob_secret should be the same //
 		 * console.log(alice_secret == bob_secret);</code></pre>
 		 * 
-		*/
-		public function getDiffieHellman(group_name:*):void
-		{
+		 */
+		public static function getDiffieHellman(group_name:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous PBKDF2 applies pseudorandom function HMAC-SHA1 to derive
 		 * a key of given length from the given password, salt and iterations.
 		 * The callback gets two arguments <code>(err, derivedKey)</code>.
 		 * </p>
 		 * 
-		*/
-		public function pbkdf2(password:*, salt:*, iterations:*, keylen:*, callback:*):void
-		{
+		 */
+		public static function pbkdf2(password:*, salt:*, iterations:*, keylen:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Generates cryptographically strong pseudo-random data. Usage:
 		 * </p>
 		 * <pre><code>// async
@@ -242,9 +230,12 @@ package randori.nodejs
 		 * // handle error
 		 * }</code></pre>
 		 * 
-		*/
-		public function randomBytes(size:*, callback:*):void
-		{
+		 */
+		public static function randomBytes(size:*, callback:*):void {
+		}
+		
+		public function createDiffieHellman(...params):* {
+			return null;
 		}
 	}
 }

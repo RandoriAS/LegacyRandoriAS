@@ -14,6 +14,7 @@ namespace System.CodeDom.Compiler
 
         public List<CodeCompileUnit> Units = new List<CodeCompileUnit>();
         public Dictionary<string, CodeCompileUnit> Class2Unit = new Dictionary<string, CodeCompileUnit>();
+        public Dictionary<string, CodeTypeDeclaration> ClassName2TypeDecl = new Dictionary<string, CodeTypeDeclaration>();
 
         public CodeTypeDeclaration CreateClass(ClassNameDef ClassName)
         {
@@ -23,6 +24,8 @@ namespace System.CodeDom.Compiler
                 unit.Namespaces.Add(ns);
                 
                 var CurrentClass = new CodeTypeDeclaration(ClassName.ActionScriptName) { IsClass= true, };
+
+                ClassName2TypeDecl.Add(ClassName.ActionScriptName, CurrentClass);
 
                 CodeAttributeDeclaration JavascriptAttrDecl = new CodeAttributeDeclaration("JavaScript", new CodeAttributeArgument("export", new CodePrimitiveExpression("false")));
                 CurrentClass.CustomAttributes.Add(JavascriptAttrDecl);
@@ -37,6 +40,15 @@ namespace System.CodeDom.Compiler
                 Class2Unit[ClassName.ActionScriptName] = unit;
                 ns.Types.Add(CurrentClass);
                 return CurrentClass;
+        }
+
+        public CodeTypeDeclaration GetClassByName(string actionScriptName)
+        {
+            if (ClassName2TypeDecl.ContainsKey(actionScriptName))
+            {
+                return ClassName2TypeDecl[actionScriptName];
+            }
+            return null;
         }
 
         public CodeMemberField AddProperty(CodeTypeDeclaration ClassDef, string name, string type)
@@ -56,7 +68,7 @@ namespace System.CodeDom.Compiler
             paramDef.UserData["defaultValue"] = defaultValue;
             paramDef.UserData["IsOptional"] = IsOptional;
             paramDef.UserData["IsAsterisk"] = false;
-            paramDef.UserData["IsRestParams"] = false;
+            paramDef.UserData["IsRestParams"] = (Name == "...");
             method.Parameters.Add(paramDef);
             return paramDef;
         }
@@ -118,6 +130,11 @@ namespace System.CodeDom.Compiler
             {
                 unit.Namespaces[0].Imports.Add(new CodeNamespaceImport(ImportType));
             }
+        }
+
+        public void MakeStatic(CodeMemberMethod method)
+        {
+            method.Attributes = method.Attributes | MemberAttributes.Static;
         }
     }
 }

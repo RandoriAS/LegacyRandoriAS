@@ -15,19 +15,18 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Cluster
-	{
-		public function Cluster()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: cluster.json
+	 */
+	[JavaScript(export="false", name="cluster")]
+	public class Cluster {
 		
-		/*
+		/**
 		 * <p><code>setupMaster</code> is used to change the default &#39;fork&#39; behavior. The new settings
 		 * are effective immediately and permanently, they cannot be changed later on.
 		 * </p>
@@ -41,12 +40,12 @@ package randori.nodejs
 		 * });
 		 * cluster.fork();</code></pre>
 		 * 
-		*/
-		public function setupMaster(settings:*):void
-		{
+		 */
+		[JavaScriptMethod(name="setupMaster")]
+		public static function setupMaster1(settings:Object):void {
 		}
 		
-		/*
+		/**
 		 * <p><code>setupMaster</code> is used to change the default &#39;fork&#39; behavior. The new settings
 		 * are effective immediately and permanently, they cannot be changed later on.
 		 * </p>
@@ -60,30 +59,30 @@ package randori.nodejs
 		 * });
 		 * cluster.fork();</code></pre>
 		 * 
-		*/
-		public function setupMaster(settings:*):void
-		{
+		 */
+		[JavaScriptMethod(name="setupMaster")]
+		public static function setupMaster2(settings:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Spawn a new worker process. This can only be called from the master process.
 		 * </p>
 		 * 
-		*/
-		public function fork(env:*):void
-		{
+		 */
+		[JavaScriptMethod(name="fork")]
+		public static function fork1(env:Object):void {
 		}
 		
-		/*
+		/**
 		 * <p>Spawn a new worker process. This can only be called from the master process.
 		 * </p>
 		 * 
-		*/
-		public function fork(env:*):void
-		{
+		 */
+		[JavaScriptMethod(name="fork")]
+		public static function fork2(env:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>When calling this method, all workers will commit a graceful suicide. When they are
 		 * disconnected all internal handlers will be closed, allowing the master process to
 		 * die graceful if no other event is waiting.
@@ -91,12 +90,12 @@ package randori.nodejs
 		 * <p>The method takes an optional callback argument which will be called when finished.
 		 * </p>
 		 * 
-		*/
-		public function disconnect(callback:*):void
-		{
+		 */
+		[JavaScriptMethod(name="disconnect")]
+		public static function disconnect1(callback:Function):void {
 		}
 		
-		/*
+		/**
 		 * <p>When calling this method, all workers will commit a graceful suicide. When they are
 		 * disconnected all internal handlers will be closed, allowing the master process to
 		 * die graceful if no other event is waiting.
@@ -104,9 +103,21 @@ package randori.nodejs
 		 * <p>The method takes an optional callback argument which will be called when finished.
 		 * </p>
 		 * 
-		*/
-		public function disconnect(callback:*):void
-		{
+		 */
+		[JavaScriptMethod(name="disconnect")]
+		public static function disconnect2(callback:*):void {
+		}
+		
+		public function setupMaster(...params):* {
+			return null;
+		}
+		
+		public function fork(...params):* {
+			return null;
+		}
+		
+		public function disconnect(...params):* {
+			return null;
 		}
 	}
 }

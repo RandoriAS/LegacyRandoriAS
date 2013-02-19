@@ -15,19 +15,18 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Url
-	{
-		public function Url()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: url.json
+	 */
+	[JavaScript(export="false", name="url")]
+	public class Url {
 		
-		/*
+		/**
 		 * <p>Take a URL string, and return an object.
 		 * </p>
 		 * <p>Pass <code>true</code> as the second argument to also parse
@@ -39,12 +38,11 @@ package randori.nodejs
 		 * <code>{ pathname: &#39;//foo/bar&#39; }</code>. Defaults to <code>false</code>.
 		 * </p>
 		 * 
-		*/
-		public function parse(urlStr:*, parseQueryString:*, slashesDenoteHost:*):void
-		{
+		 */
+		public static function parse(urlStr:*, parseQueryString:*, slashesDenoteHost:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Take a parsed URL object, and return a formatted URL string.
 		 * </p>
 		 * <ul>
@@ -67,19 +65,17 @@ package randori.nodejs
 		 * <li><code>hash</code> is treated the same with or without the leading <code>#</code> (pound sign, anchor)</li>
 		 * </ul>
 		 * 
-		*/
-		public function format(urlObj:*):void
-		{
+		 */
+		public static function format(urlObj:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Take a base URL, and a href URL, and resolve them as a browser would for
 		 * an anchor tag.
 		 * </p>
 		 * 
-		*/
-		public function resolve(from:*, to:*):void
-		{
+		 */
+		public static function resolve(from:*, to:*):void {
 		}
 	}
 }

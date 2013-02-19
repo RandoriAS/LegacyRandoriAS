@@ -15,16 +15,23 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Events
-	{
-		public function Events()
-		{
-			super();
+	
+	/**
+	 * Generated from file: fs.json
+	 */
+	[JavaScript(export="false", name="fs.FSWatcher")]
+	public class FsFSWatcher {
+		
+		/**
+		 * <p>Stop watching for changes on the given <code>fs.FSWatcher</code>.
+		 * </p>
+		 * 
+		 */
+		public static function close():void {
 		}
 	}
 }

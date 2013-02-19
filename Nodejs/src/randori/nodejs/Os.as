@@ -15,109 +15,98 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Os
-	{
-		public function Os()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: os.json
+	 */
+	[JavaScript(export="false", name="os")]
+	public class Os {
 		
-		/*
+		/**
 		 * <p>Returns the operating system&#39;s default directory for temp files.
 		 * </p>
 		 * 
-		*/
-		public function tmpDir():void
-		{
+		 */
+		public static function tmpDir():void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns the hostname of the operating system.
 		 * </p>
 		 * 
-		*/
-		public function hostname():void
-		{
+		 */
+		public static function hostname():void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns the operating system name.
 		 * </p>
 		 * 
-		*/
-		public function type():void
-		{
+		 */
+		public static function type():void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns the operating system platform.
 		 * </p>
 		 * 
-		*/
-		public function platform():void
-		{
+		 */
+		public static function platform():void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns the operating system CPU architecture.
 		 * </p>
 		 * 
-		*/
-		public function arch():void
-		{
+		 */
+		public static function arch():void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns the operating system release.
 		 * </p>
 		 * 
-		*/
-		public function release():void
-		{
+		 */
+		public static function release():void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns the system uptime in seconds.
 		 * </p>
 		 * 
-		*/
-		public function uptime():void
-		{
+		 */
+		public static function uptime():void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns an array containing the 1, 5, and 15 minute load averages.
 		 * </p>
 		 * 
-		*/
-		public function loadavg():void
-		{
+		 */
+		public static function loadavg():void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns the total amount of system memory in bytes.
 		 * </p>
 		 * 
-		*/
-		public function totalmem():void
-		{
+		 */
+		public static function totalmem():void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns the amount of free system memory in bytes.
 		 * </p>
 		 * 
-		*/
-		public function freemem():void
-		{
+		 */
+		public static function freemem():void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns an array of objects containing information about each CPU/core installed: model, speed (in MHz), and times (an object containing the number of CPU ticks spent in: user, nice, sys, idle, and irq).
 		 * </p>
 		 * <p>Example inspection of os.cpus:
@@ -187,12 +176,11 @@ package randori.nodejs
 		 * idle: 1072572010,
 		 * irq: 30 } } ]</code></pre>
 		 * 
-		*/
-		public function cpus():void
-		{
+		 */
+		public static function cpus():void {
 		}
 		
-		/*
+		/**
 		 * <p>Get a list of network interfaces:
 		 * </p>
 		 * <pre><code>{ lo0:
@@ -207,9 +195,8 @@ package randori.nodejs
 		 * vmnet8: [ { address: &#39;10.88.88.1&#39;, family: &#39;IPv4&#39;, internal: false } ],
 		 * ppp0: [ { address: &#39;10.2.0.231&#39;, family: &#39;IPv4&#39;, internal: false } ] }</code></pre>
 		 * 
-		*/
-		public function networkInterfaces():void
-		{
+		 */
+		public static function networkInterfaces():void {
 		}
 	}
 }

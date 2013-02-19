@@ -21,16 +21,30 @@ package randori.nodejs {
 	
 	
 	/**
-	 * Generated from file: string_decoder.json
+	 * Generated from file: crypto.json
 	 */
 	[JavaScript(export="false")]
-	public class StringDecoder {
+	public class Hmac {
 		
 		/**
-		 * <p>Returns a decoded string.</p>
+		 * <p>Update the hmac content with the given <code>data</code>.
+		 * This can be called many times with new data as it is streamed.
+		 * </p>
 		 * 
 		 */
-		public static function write(buffer:*):void {
+		public static function update(data:*):void {
+		}
+		
+		/**
+		 * <p>Calculates the digest of all of the passed data to the hmac.
+		 * The <code>encoding</code> can be <code>&#39;hex&#39;</code>, <code>&#39;binary&#39;</code> or <code>&#39;base64&#39;</code>.
+		 * Defaults to <code>&#39;binary&#39;</code>.
+		 * </p>
+		 * <p>Note: <code>hmac</code> object can not be used after <code>digest()</code> method been called.
+		 * </p>
+		 * 
+		 */
+		public static function digest(encoding:*):void {
 		}
 	}
 }

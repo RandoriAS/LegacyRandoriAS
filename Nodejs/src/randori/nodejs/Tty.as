@@ -15,36 +15,33 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Tty
-	{
-		public function Tty()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: tty.json
+	 */
+	[JavaScript(export="false", name="tty")]
+	public class Tty {
 		
-		/*
+		/**
 		 * <p>Returns <code>true</code> or <code>false</code> depending on if the <code>fd</code> is associated with a
 		 * terminal.
 		 * </p>
 		 * 
-		*/
-		public function isatty(fd:*):void
-		{
+		 */
+		public static function isatty(fd:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Deprecated. Use <code>tty.ReadStream#setRawMode()</code>
 		 * (i.e. <code>process.stdin.setRawMode()</code>) instead.
 		 * </p>
 		 * 
-		*/
-		public function setRawMode(mode:*):void
-		{
+		 */
+		public static function setRawMode(mode:*):void {
 		}
 	}
 }
