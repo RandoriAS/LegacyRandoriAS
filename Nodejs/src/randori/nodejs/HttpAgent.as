@@ -21,27 +21,33 @@ package randori.nodejs {
 	
 	
 	/**
-	 * Generated from file: tty.json
+	 * Generated from file: http.json
 	 */
-	[JavaScript(export="false")]
-	public class ReadStream {
+	[JavaScript(export="false", name="http.Agent")]
+	public class HttpAgent {
 		
 		/**
-		 * <p>A <code>Boolean</code> that is initialized to <code>false</code>. It represents the current &quot;raw&quot; state
-		 * of the <code>tty.ReadStream</code> instance.
+		 * <p>By default set to 5. Determines how many concurrent sockets the agent can have
+		 * open per host.
 		 * </p>
 		 * 
 		 */
-		public var isRaw:Boolean;
+		public var maxSockets:int;
 		
 		/**
-		 * <p><code>mode</code> should be <code>true</code> or <code>false</code>. This sets the properties of the
-		 * <code>tty.ReadStream</code> to act either as a raw device or default. <code>isRaw</code> will be set
-		 * to the resulting mode.
+		 * <p>An object which contains arrays of sockets currently in use by the Agent. Do not
+		 * modify.
 		 * </p>
 		 * 
 		 */
-		public static function setRawMode(mode:*):void {
-		}
+		public var sockets:Object;
+		
+		/**
+		 * <p>An object which contains queues of requests that have not yet been assigned to
+		 * sockets. Do not modify.
+		 * </p>
+		 * 
+		 */
+		public var requests:Object;
 	}
 }

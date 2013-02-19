@@ -27,6 +27,22 @@ package randori.nodejs {
 	public class Querystring {
 		
 		/**
+		 * <p>The escape function used by <code>querystring.stringify</code>,
+		 * provided so that it could be overridden if necessary.
+		 * </p>
+		 * 
+		 */
+		public static var escape:Function;
+		
+		/**
+		 * <p>The unescape function used by <code>querystring.parse</code>,
+		 * provided so that it could be overridden if necessary.
+		 * </p>
+		 * 
+		 */
+		public static var unescape:Function;
+		
+		/**
 		 * <p>Serialize an object to a query string.
 		 * Optionally override the default separator (<code>&#39;&amp;&#39;</code>) and assignment (<code>&#39;=&#39;</code>)
 		 * characters.

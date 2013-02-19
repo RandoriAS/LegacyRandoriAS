@@ -24,7 +24,52 @@ package randori.nodejs {
 	 * Generated from file: tls.json
 	 */
 	[JavaScript(export="false", name="tls.CleartextStream")]
-	public class TlsCleartextStream {
+	public class TlsCleartextStream extends EventsEventEmitter {
+		
+		/**
+		 * <p>This event is emitted after a new connection has been successfully handshaked.
+		 * The listener will be called no matter if the server&#39;s certificate was
+		 * authorized or not. It is up to the user to test <code>cleartextStream.authorized</code>
+		 * to see if the server certificate was signed by one of the specified CAs.
+		 * If <code>cleartextStream.authorized === false</code> then the error can be found in
+		 * <code>cleartextStream.authorizationError</code>. Also if NPN was used - you can check
+		 * <code>cleartextStream.npnProtocol</code> for negotiated protocol.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="secureConnect")]
+		public var onsecureConnect:Function;
+		
+		/**
+		 * <p>A boolean that is <code>true</code> if the peer certificate was signed by one of the
+		 * specified CAs, otherwise <code>false</code>
+		 * </p>
+		 * 
+		 */
+		public var authorized:Boolean;
+		
+		/**
+		 * <p>The reason why the peer&#39;s certificate has not been verified. This property
+		 * becomes available only when <code>cleartextStream.authorized === false</code>.
+		 * </p>
+		 * 
+		 */
+		public var authorizationError:String;
+		
+		/**
+		 * <p>The string representation of the remote IP address. For example,
+		 * <code>&#39;74.125.127.100&#39;</code> or <code>&#39;2001:4860:a005::68&#39;</code>.
+		 * </p>
+		 * 
+		 */
+		public var remoteAddress:String;
+		
+		/**
+		 * <p>The numeric representation of the remote port. For example, <code>443</code>.
+		 * </p>
+		 * 
+		 */
+		public var remotePort:int;
 		
 		/**
 		 * <p>Returns an object representing the peer&#39;s certificate. The returned object has

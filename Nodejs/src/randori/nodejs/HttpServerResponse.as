@@ -24,7 +24,44 @@ package randori.nodejs {
 	 * Generated from file: http.json
 	 */
 	[JavaScript(export="false", name="http.ServerResponse")]
-	public class HttpServerResponse {
+	public class HttpServerResponse extends EventsEventEmitter {
+		
+		/**
+		 * <p><code>function () { }</code>
+		 * </p>
+		 * <p>Indicates that the underlaying connection was terminated before
+		 * <code>response.end()</code> was called or able to flush.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="close")]
+		public var onclose:Function;
+		
+		/**
+		 * <p>When using implicit headers (not calling <code>response.writeHead()</code> explicitly), this property
+		 * controls the status code that will be sent to the client when the headers get
+		 * flushed.
+		 * </p>
+		 * <p>Example:
+		 * </p>
+		 * <pre><code>response.statusCode = 404;</code></pre>
+		 * <p>After response header was sent to the client, this property indicates the
+		 * status code which was sent out.
+		 * </p>
+		 * 
+		 */
+		public var statusCode:int;
+		
+		/**
+		 * <p>When true, the Date header will be automatically generated and sent in
+		 * the response if it is not already present in the headers. Defaults to true.
+		 * </p>
+		 * <p>This should only be disabled for testing; HTTP requires the Date header
+		 * in responses.
+		 * </p>
+		 * 
+		 */
+		public var sendDate:Date;
 		
 		/**
 		 * <p>Sends a HTTP/1.1 100 Continue message to the client, indicating that

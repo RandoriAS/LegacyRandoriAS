@@ -24,7 +24,24 @@ package randori.nodejs {
 	 * Generated from file: fs.json
 	 */
 	[JavaScript(export="false", name="fs.FSWatcher")]
-	public class FsFSWatcher {
+	public class FsFSWatcher extends EventsEventEmitter {
+		
+		/**
+		 * <p>Emitted when something changes in a watched directory or file.
+		 * See more details in <a href="#fs_fs_watch_filename_options_listener">fs.watch</a>.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="change")]
+		public var onchange:Function;
+		
+		/**
+		 * <p>Emitted when an error occurs.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="error")]
+		public var onerror:Function;
 		
 		/**
 		 * <p>Stop watching for changes on the given <code>fs.FSWatcher</code>.

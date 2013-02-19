@@ -26,6 +26,15 @@ package randori.nodejs {
 	[JavaScript(export="false", name="punycode")]
 	public class Punycode {
 		
+		public static var ucs2:Object;
+		
+		/**
+		 * <p>A string representing the current Punycode.js version number.
+		 * </p>
+		 * 
+		 */
+		public static var version:String;
+		
 		/**
 		 * <p>Converts a Punycode string of ASCII code points to a string of Unicode code
 		 * points.

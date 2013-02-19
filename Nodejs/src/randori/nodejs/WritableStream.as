@@ -24,7 +24,60 @@ package randori.nodejs {
 	 * Generated from file: stream.json
 	 */
 	[JavaScript(export="false", name="Writable Stream")]
-	public class WritableStream {
+	public class WritableStream extends EventsEventEmitter {
+		
+		/**
+		 * <p><code>function () { }</code>
+		 * </p>
+		 * <p>Emitted when the stream&#39;s write queue empties and it&#39;s safe to write without
+		 * buffering again. Listen for it when <code>stream.write()</code> returns <code>false</code>.
+		 * </p>
+		 * <p>The <code>&#39;drain&#39;</code> event can happen at <em>any</em> time, regardless of whether or not
+		 * <code>stream.write()</code> has previously returned <code>false</code>. To avoid receiving unwanted
+		 * <code>&#39;drain&#39;</code> events, listen using <code>stream.once()</code>.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="drain")]
+		public var ondrain:Function;
+		
+		/**
+		 * <p><code>function (exception) { }</code>
+		 * </p>
+		 * <p>Emitted on error with the exception <code>exception</code>.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="error")]
+		public var onerror:Function;
+		
+		/**
+		 * <p><code>function () { }</code>
+		 * </p>
+		 * <p>Emitted when the underlying file descriptor has been closed.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="close")]
+		public var onclose:Function;
+		
+		/**
+		 * <p><code>function (src) { }</code>
+		 * </p>
+		 * <p>Emitted when the stream is passed to a readable stream&#39;s pipe method.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="pipe")]
+		public var onpipe:Function;
+		
+		/**
+		 * <p>A boolean that is <code>true</code> by default, but turns <code>false</code> after an
+		 * <code>&#39;error&#39;</code> occurred or <code>end()</code> / <code>destroy()</code> was called.
+		 * </p>
+		 * 
+		 */
+		public var writable:Boolean;
 		
 		/**
 		 * <p>Writes <code>string</code> with the given <code>encoding</code> to the stream.  Returns <code>true</code>

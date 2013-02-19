@@ -27,6 +27,13 @@ package randori.nodejs {
 	public class Os {
 		
 		/**
+		 * <p>A constant defining the appropriate End-of-line marker for the operating system.
+		 * </p>
+		 * 
+		 */
+		public static var EOL:String;
+		
+		/**
 		 * <p>Returns the operating system&#39;s default directory for temp files.
 		 * </p>
 		 * 

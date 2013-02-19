@@ -27,6 +27,13 @@ package randori.nodejs {
 	public class Fs {
 		
 		/**
+		 * <p><code>WriteStream</code> is a <a href="stream.html#stream_writable_stream">Writable Stream</a>.
+		 * </p>
+		 * 
+		 */
+		public static var WriteStream:WritableStream;
+		
+		/**
 		 * <p>Asynchronous rename(2). No arguments other than a possible exception are given
 		 * to the completion callback.
 		 * </p>

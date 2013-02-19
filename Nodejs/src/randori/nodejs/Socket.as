@@ -24,7 +24,42 @@ package randori.nodejs {
 	 * Generated from file: dgram.json
 	 */
 	[JavaScript(export="false")]
-	public class Socket {
+	public class Socket extends EventsEventEmitter {
+		
+		/**
+		 * <p>Emitted when a new datagram is available on a socket.  <code>msg</code> is a <code>Buffer</code> and <code>rinfo</code> is
+		 * an object with the sender&#39;s address information and the number of bytes in the datagram.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="message")]
+		public var onmessage:Function;
+		
+		/**
+		 * <p>Emitted when a socket starts listening for datagrams.  This happens as soon as UDP sockets
+		 * are created.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="listening")]
+		public var onlistening:Function;
+		
+		/**
+		 * <p>Emitted when a socket is closed with <code>close()</code>.  No new <code>message</code> events will be emitted
+		 * on this socket.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="close")]
+		public var onclose:Function;
+		
+		/**
+		 * <p>Emitted when an error occurs.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="error")]
+		public var onerror:Function;
 		
 		/**
 		 * <p>For UDP sockets, the destination port and IP address must be specified.  A string

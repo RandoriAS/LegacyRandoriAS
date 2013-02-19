@@ -27,6 +27,14 @@ package randori.nodejs {
 	public class EventsEventEmitter {
 		
 		/**
+		 * <p>This event is emitted any time someone adds a new listener.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="newListener")]
+		public var onnewListener:Function;
+		
+		/**
 		 * <p>Adds a listener to the end of the listeners array for the specified event.
 		 * </p>
 		 * <pre><code>server.on(&#39;connection&#39;, function (stream) {

@@ -24,7 +24,135 @@ package randori.nodejs {
 	 * Generated from file: net.json
 	 */
 	[JavaScript(export="false", name="net.Socket")]
-	public class NetSocket {
+	public class NetSocket extends EventsEventEmitter {
+		
+		/**
+		 * <p>Emitted when a socket connection is successfully established.
+		 * See <code>connect()</code>.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="connect")]
+		public var onconnect:Function;
+		
+		/**
+		 * <p>Emitted when data is received.  The argument <code>data</code> will be a <code>Buffer</code> or
+		 * <code>String</code>.  Encoding of data is set by <code>socket.setEncoding()</code>.
+		 * (See the [Readable Stream][] section for more information.)
+		 * </p>
+		 * <p>Note that the <strong>data will be lost</strong> if there is no listener when a <code>Socket</code>
+		 * emits a <code>&#39;data&#39;</code> event.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="data")]
+		public var ondata:Function;
+		
+		/**
+		 * <p>Emitted when the other end of the socket sends a FIN packet.
+		 * </p>
+		 * <p>By default (<code>allowHalfOpen == false</code>) the socket will destroy its file
+		 * descriptor  once it has written out its pending write queue.  However, by
+		 * setting <code>allowHalfOpen == true</code> the socket will not automatically <code>end()</code>
+		 * its side allowing the user to write arbitrary amounts of data, with the
+		 * caveat that the user is required to <code>end()</code> their side now.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="end")]
+		public var onend:Function;
+		
+		/**
+		 * <p>Emitted if the socket times out from inactivity. This is only to notify that
+		 * the socket has been idle. The user must manually close the connection.
+		 * </p>
+		 * <p>See also: <code>socket.setTimeout()</code>
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="timeout")]
+		public var ontimeout:Function;
+		
+		/**
+		 * <p>Emitted when the write buffer becomes empty. Can be used to throttle uploads.
+		 * </p>
+		 * <p>See also: the return values of <code>socket.write()</code>
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="drain")]
+		public var ondrain:Function;
+		
+		/**
+		 * <p>Emitted when an error occurs.  The <code>&#39;close&#39;</code> event will be called directly
+		 * following this event.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="error")]
+		public var onerror:Function;
+		
+		/**
+		 * <p>Emitted once the socket is fully closed. The argument <code>had_error</code> is a boolean
+		 * which says if the socket was closed due to a transmission error.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="close")]
+		public var onclose:Function;
+		
+		/**
+		 * <p><code>net.Socket</code> has the property that <code>socket.write()</code> always works. This is to
+		 * help users get up and running quickly. The computer cannot always keep up
+		 * with the amount of data that is written to a socket - the network connection
+		 * simply might be too slow. Node will internally queue up the data written to a
+		 * socket and send it out over the wire when it is possible. (Internally it is
+		 * polling on the socket&#39;s file descriptor for being writable).
+		 * </p>
+		 * <p>The consequence of this internal buffering is that memory may grow. This
+		 * property shows the number of characters currently buffered to be written.
+		 * (Number of characters is approximately equal to the number of bytes to be
+		 * written, but the buffer may contain strings, and the strings are lazily
+		 * encoded, so the exact number of bytes is not known.)
+		 * </p>
+		 * <p>Users who experience large or growing <code>bufferSize</code> should attempt to
+		 * &quot;throttle&quot; the data flows in their program with <code>pause()</code> and <code>resume()</code>.
+		 * </p>
+		 * 
+		 */
+		public var bufferSize:int;
+		
+		/**
+		 * <p>The string representation of the remote IP address. For example,
+		 * <code>&#39;74.125.127.100&#39;</code> or <code>&#39;2001:4860:a005::68&#39;</code>.
+		 * </p>
+		 * 
+		 */
+		public var remoteAddress:String;
+		
+		/**
+		 * <p>The numeric representation of the remote port. For example,
+		 * <code>80</code> or <code>21</code>.
+		 * </p>
+		 * 
+		 */
+		public var remotePort:int;
+		
+		/**
+		 * <p>The amount of received bytes.
+		 * </p>
+		 * 
+		 */
+		public var bytesRead:int;
+		
+		/**
+		 * <p>The amount of bytes sent.
+		 * </p>
+		 * <p><code>net.Socket</code> instances are [EventEmitter][] with the following events:
+		 * </p>
+		 * 
+		 */
+		public var bytesWritten:int;
 		
 		/**
 		 * <p>Construct a new socket object.

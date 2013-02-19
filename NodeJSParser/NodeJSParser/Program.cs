@@ -39,10 +39,12 @@ namespace ConsoleApplication1
         //api.jquery.com/entries directory:
         public static string JSONDir = @"C:\projects\NodeJSDoc";
 
+        private static Dictionary<string, string> UnknownTypes = new Dictionary<string, string>();
         private static ClassBuilder Builder = new ClassBuilder { PackageName = "randori.nodejs" };
 
         static void Main(string[] args)
         {
+            InitializeUnknownTypes(UnknownTypes);
             if (Directory.Exists(OutputDirectory) == false)
             {
                 Directory.CreateDirectory(OutputDirectory);
@@ -56,6 +58,47 @@ namespace ConsoleApplication1
             
             Console.WriteLine("Finished, press any key to continue...");
             Console.ReadKey();
+        }
+
+        private static void InitializeUnknownTypes(Dictionary<string, string> UnknownTypes)
+        {
+            UnknownTypes.Add("fs.WriteStream", "WritableStream");
+            UnknownTypes.Add("file.bytesWritten", "int");
+            UnknownTypes.Add("stream.writable", "Boolean");
+            UnknownTypes.Add("punycode.version", "String");
+            UnknownTypes.Add("punycode.ucs2", "Object");
+            UnknownTypes.Add("request.url", "String");
+            UnknownTypes.Add("request.headers", "Object");
+            UnknownTypes.Add("request.trailers", "Object");
+            UnknownTypes.Add("request.httpVersion", "String");
+            UnknownTypes.Add("request.connection", "Socket");
+            UnknownTypes.Add("request.method", "String");
+            UnknownTypes.Add("querystring.escape", "Function");
+            UnknownTypes.Add("querystring.unescape", "Function");
+            UnknownTypes.Add("response.statusCode", "int");
+            UnknownTypes.Add("response.sendDate", "Date");
+            UnknownTypes.Add("agent.maxSockets", "int");
+            UnknownTypes.Add("agent.sockets", "Object");
+            UnknownTypes.Add("agent.requests", "Object");
+            UnknownTypes.Add("path.sep", "String");
+            UnknownTypes.Add("socket.bufferSize", "int");
+            UnknownTypes.Add("socket.remoteAddress", "String");
+            UnknownTypes.Add("socket.remotePort", "int");
+            UnknownTypes.Add("socket.bytesRead", "int");
+            UnknownTypes.Add("socket.bytesWritten", "int");
+            UnknownTypes.Add("cleartextStream.authorized", "Boolean");
+            UnknownTypes.Add("cleartextStream.authorizationError", "String");
+            UnknownTypes.Add("cleartextStream.remoteAddress", "String");
+            UnknownTypes.Add("cleartextStream.remotePort", "int");
+            UnknownTypes.Add("stream.readable", "Boolean");
+            UnknownTypes.Add("server.maxHeadersCount", "int");
+            UnknownTypes.Add("server.maxConnections", "int");
+            UnknownTypes.Add("server.connections", "int");
+            UnknownTypes.Add("rs.isRaw", "Boolean");
+            UnknownTypes.Add("http.globalAgent", "HttpAgent");
+            UnknownTypes.Add("https.globalAgent", "HttpAgent");
+            UnknownTypes.Add("http.ClientResponse", "Object");
+            UnknownTypes.Add("os.EOL", "String");
         }
 
         private static void CleanOutputDirectry()
@@ -107,10 +150,7 @@ namespace ConsoleApplication1
             var type = Builder.CreateClass(className);
             type.Comments.Add(new CodeCommentStatement("Generated from file: " + FileName, true));
 
-            if (ClassToken["methods"] != null)
-            {
-                AddMethods(type, ClassToken["methods"], true);
-            }
+            AddMembers(type, ClassToken, true);
 
             if (ClassToken["classes"] != null)
             {
@@ -118,6 +158,90 @@ namespace ConsoleApplication1
             }
 
             Console.WriteLine("Created: " + className.ActionScriptName);
+        }
+
+        private static void AddMembers(CodeTypeDeclaration type, JToken ClassToken, bool IsStatic)
+        {
+            if (ClassToken["methods"] != null)
+            {
+                AddMethods(type, ClassToken["methods"], IsStatic);
+            }
+            if (ClassToken["events"] != null)
+            {
+                if (type.Name != "EventsEventEmitter")
+                {
+                    type.BaseTypes.Add("EventsEventEmitter");
+                }
+                AddEvents(type, ClassToken["events"], IsStatic);
+            }
+            if (ClassToken["properties"] != null)
+            {
+                AddProperties(type, ClassToken["properties"], IsStatic);
+            }
+        }
+
+        private static void AddProperties(CodeTypeDeclaration type, JToken PropertiesToken, bool IsStatic)
+        {
+            PropertiesToken.ToList<JToken>().ForEach(p => CreateProperty(type, p, IsStatic));
+        }
+
+        private static void CreateProperty(CodeTypeDeclaration type, JToken PropertyToken, bool IsStatic)
+        {
+            var Name = (String)PropertyToken["name"];
+            if (Name.Substring(0, 1) == "[")
+            {
+                return;
+            }
+            string Type = "";
+            if (PropertyToken["type"] == null)
+            {
+                Type = ExtractPropertyTypeName((String)PropertyToken["textRaw"]);
+            }
+            else
+            {
+                Type = (String)PropertyToken["type"];
+            }
+            var property = Builder.AddProperty(type, Name, Type);
+            AddPropertyComments(PropertyToken, property);
+            if (IsStatic == true)
+            {
+                property.Attributes = property.Attributes | MemberAttributes.Static;
+            }
+        }
+
+        private static string ExtractPropertyTypeName(string RawName)
+        {
+            if ((RawName.Substring(0, 1) == "`") && (RawName.IndexOf('{') < 0))
+            {
+                var parts = RawName.Split(' ');
+                RawName = parts[1];
+                RawName = RawName.Replace(",", "").Trim();
+            }
+            else
+            {
+                if (RawName.LastIndexOf('{') > -1)
+                {
+                    RawName = RawName.Substring(RawName.LastIndexOf('{')+1);
+                    if (RawName.IndexOf("object") > -1)
+                    {
+                        RawName = "Object";
+                    }
+                    else
+                    {
+                        RawName = RawName.Replace("}", "").Trim();
+                    }
+                }
+            }
+            if (RawName == "Integer")
+            {
+                RawName = "int";
+            }
+            //Exceptions which can't be generated due to missing documentation:
+            if (UnknownTypes.ContainsKey(RawName))
+            {
+                RawName = UnknownTypes[RawName];
+            }
+            return RawName;
         }
 
         private static void AddClasses(JToken ClassesToken, string FileName)
@@ -134,10 +258,41 @@ namespace ConsoleApplication1
                 type = Builder.CreateClass(name);
                 type.Comments.Add(new CodeCommentStatement("Generated from file: " + FileName, true));
             }
-            if (ClassToken["methods"] != null)
+            AddMembers(type, ClassToken, false);
+        }
+
+        private static void AddEvents(CodeTypeDeclaration type, JToken EventsToken, bool IsStatic)
+        {
+            EventsToken.ToList<JToken>().ForEach(e => CreateEvents(type, e, IsStatic));
+        }
+
+        private static void CreateEvents(CodeTypeDeclaration type, JToken EventToken, bool IsStatic)
+        {
+            var EventName = FormatEventName((String)EventToken["name"]);
+            var property = Builder.AddProperty(type, EventName, "Function");
+            Builder.AddPropertyAttributeArgument(property, "name", (String)EventToken["name"]);
+            AddPropertyComments(EventToken, property);
+            if (IsStatic == true)
             {
-                AddMethods(type, ClassToken["methods"], false);
+                property.Attributes = property.Attributes | MemberAttributes.Static;
             }
+        }
+
+        private static void AddPropertyComments(JToken Token, CodeMemberField property)
+        {
+            if (Token["desc"] != null)
+            {
+                var description = TrimComment((String)Token["desc"]);
+                foreach (var line in description)
+                {
+                    property.Comments.Add(new CodeCommentStatement(line, true));
+                }
+            }
+        }
+
+        private static string FormatEventName(string EventName)
+        {
+            return "on" + EventName;
         }
 
         private static void AddMethods(CodeTypeDeclaration type, JToken MethodsToken, bool IsStatic)

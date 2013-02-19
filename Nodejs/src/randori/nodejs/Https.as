@@ -27,6 +27,13 @@ package randori.nodejs {
 	public class Https {
 		
 		/**
+		 * <p>Global instance of [https.Agent][] for all HTTPS client requests.
+		 * </p>
+		 * 
+		 */
+		public static var globalAgent:HttpAgent;
+		
+		/**
 		 * <p>Returns a new HTTPS web server object. The <code>options</code> is similar to
 		 * [tls.createServer()][].  The <code>requestListener</code> is a function which is
 		 * automatically added to the <code>&#39;request&#39;</code> event.

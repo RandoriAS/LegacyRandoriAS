@@ -21,27 +21,22 @@ package randori.nodejs {
 	
 	
 	/**
-	 * Generated from file: tty.json
+	 * Generated from file: tls.json
 	 */
 	[JavaScript(export="false")]
-	public class ReadStream {
+	public class SecurePair extends EventsEventEmitter {
 		
 		/**
-		 * <p>A <code>Boolean</code> that is initialized to <code>false</code>. It represents the current &quot;raw&quot; state
-		 * of the <code>tty.ReadStream</code> instance.
+		 * <p>The event is emitted from the SecurePair once the pair has successfully
+		 * established a secure connection.
+		 * </p>
+		 * <p>Similarly to the checking for the server &#39;secureConnection&#39; event,
+		 * pair.cleartext.authorized should be checked to confirm whether the certificate
+		 * used properly authorized.
 		 * </p>
 		 * 
 		 */
-		public var isRaw:Boolean;
-		
-		/**
-		 * <p><code>mode</code> should be <code>true</code> or <code>false</code>. This sets the properties of the
-		 * <code>tty.ReadStream</code> to act either as a raw device or default. <code>isRaw</code> will be set
-		 * to the resulting mode.
-		 * </p>
-		 * 
-		 */
-		public static function setRawMode(mode:*):void {
-		}
+		[JavaScriptProperty(name="secure")]
+		public var onsecure:Function;
 	}
 }

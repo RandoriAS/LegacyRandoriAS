@@ -27,6 +27,32 @@ package randori.nodejs {
 	public class Buffer {
 		
 		/**
+		 * <p>How many bytes will be returned when <code>buffer.inspect()</code> is called. This can
+		 * be overridden by user modules.
+		 * </p>
+		 * <p>Note that this is a property on the buffer module returned by
+		 * <code>require(&#39;buffer&#39;)</code>, not on the Buffer global, or a buffer instance.
+		 * </p>
+		 * 
+		 */
+		public static var INSPECT_MAX_BYTES:Number;
+		
+		/**
+		 * <p>The size of the buffer in bytes.  Note that this is not necessarily the size
+		 * of the contents. <code>length</code> refers to the amount of memory allocated for the
+		 * buffer object.  It does not change when the contents of the buffer are changed.
+		 * </p>
+		 * <pre><code>buf = new Buffer(1234);
+		 * console.log(buf.length);
+		 * buf.write(&quot;some string&quot;, 0, &quot;ascii&quot;);
+		 * console.log(buf.length);
+		 * // 1234
+		 * // 1234</code></pre>
+		 * 
+		 */
+		public var length:Number;
+		
+		/**
 		 * <p>Writes <code>string</code> to the buffer at <code>offset</code> using the given encoding.
 		 * <code>offset</code> defaults to <code>0</code>, <code>encoding</code> defaults to <code>&#39;utf8&#39;</code>. <code>length</code> is
 		 * the number of bytes to write. Returns number of octets written. If <code>buffer</code> did

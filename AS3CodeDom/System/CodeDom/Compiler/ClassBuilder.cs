@@ -98,6 +98,21 @@ namespace System.CodeDom.Compiler
             decl.Arguments.Add(new CodeAttributeArgument(name, new CodePrimitiveExpression(value)));
         }
 
+        public void AddPropertyAttributeArgument(CodeMemberField property, string name, string value)
+        {
+            CodeAttributeDeclaration decl = null;
+            if (property.CustomAttributes.Count == 0)
+            {
+                decl = new CodeAttributeDeclaration("JavaScriptProperty");
+                property.CustomAttributes.Add(decl);
+            }
+            else
+            {
+                decl = property.CustomAttributes[0];
+            }
+            decl.Arguments.Add(new CodeAttributeArgument(name, new CodePrimitiveExpression(value)));
+        }
+
         public CodeMemberMethod AddMethod(CodeTypeDeclaration CurrentClass, string name, string type)
         {
             var method = new CodeMemberMethod() { Name = name };

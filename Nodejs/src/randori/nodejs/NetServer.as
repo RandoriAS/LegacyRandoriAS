@@ -24,7 +24,64 @@ package randori.nodejs {
 	 * Generated from file: net.json
 	 */
 	[JavaScript(export="false", name="net.Server")]
-	public class NetServer {
+	public class NetServer extends EventsEventEmitter {
+		
+		/**
+		 * <p>Emitted when the server has been bound after calling <code>server.listen</code>.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="listening")]
+		public var onlistening:Function;
+		
+		/**
+		 * <p>Emitted when a new connection is made. <code>socket</code> is an instance of
+		 * <code>net.Socket</code>.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="connection")]
+		public var onconnection:Function;
+		
+		/**
+		 * <p>Emitted when the server closes. Note that if connections exist, this
+		 * event is not emitted until all connections are ended.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="close")]
+		public var onclose:Function;
+		
+		/**
+		 * <p>Emitted when an error occurs.  The <code>&#39;close&#39;</code> event will be called directly
+		 * following this event.  See example in discussion of <code>server.listen</code>.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="error")]
+		public var onerror:Function;
+		
+		/**
+		 * <p>Set this property to reject connections when the server&#39;s connection count gets
+		 * high.
+		 * </p>
+		 * <p>It is not recommended to use this option once a socket has been sent to a child
+		 * with <code>child_process.fork()</code>.
+		 * </p>
+		 * 
+		 */
+		public var maxConnections:int;
+		
+		/**
+		 * <p>The number of concurrent connections on the server.
+		 * </p>
+		 * <p>This becomes <code>null</code> when sending a socket to a child with <code>child_process.fork()</code>.
+		 * </p>
+		 * <p><code>net.Server</code> is an [EventEmitter][] with the following events:
+		 * </p>
+		 * 
+		 */
+		public var connections:int;
 		
 		/**
 		 * <p>Begin accepting connections on the specified <code>port</code> and <code>host</code>.  If the

@@ -27,6 +27,34 @@ package randori.nodejs {
 	public class Http {
 		
 		/**
+		 * <p>A collection of all the standard HTTP response status codes, and the
+		 * short description of each.  For example, <code>http.STATUS_CODES[404] === &#39;Not
+		 * Found&#39;</code>.
+		 * </p>
+		 * 
+		 */
+		public static var STATUS_CODES:Object;
+		
+		/**
+		 * <p>Global instance of Agent which is used as the default for all http client
+		 * requests.
+		 * </p>
+		 * 
+		 */
+		public static var globalAgent:HttpAgent;
+		
+		/**
+		 * <p>This object is created when making a request with <code>http.request()</code>. It is
+		 * passed to the <code>&#39;response&#39;</code> event of the request object.
+		 * </p>
+		 * <p>The response implements the [Readable Stream][] interface. This is an
+		 * [EventEmitter][] with the following events:
+		 * </p>
+		 * 
+		 */
+		public static var ClientResponse:Object;
+		
+		/**
 		 * <p>Returns a new web server object.
 		 * </p>
 		 * <p>The <code>requestListener</code> is a function which is automatically

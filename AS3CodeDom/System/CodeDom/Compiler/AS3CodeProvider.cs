@@ -2532,7 +2532,7 @@ namespace System.CodeDom.Compiler
             {
                 if (first)
                 {
-                    Output.Write(" : ");
+                    Output.Write(" extends ");
                     first = false;
                 }
                 else

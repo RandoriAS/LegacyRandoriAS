@@ -27,6 +27,23 @@ package randori.nodejs {
 	public class Path {
 		
 		/**
+		 * <p>The platform-specific file separator. <code>&#39;\\&#39;</code> or <code>&#39;/&#39;</code>.
+		 * </p>
+		 * <p>An example on linux:
+		 * </p>
+		 * <pre><code>&#39;foo/bar/baz&#39;.split(path.sep)
+		 * // returns
+		 * [&#39;foo&#39;, &#39;bar&#39;, &#39;baz&#39;]</code></pre>
+		 * <p>An example on windows:
+		 * </p>
+		 * <pre><code>&#39;foo\\bar\\baz&#39;.split(path.sep)
+		 * // returns
+		 * [&#39;foo&#39;, &#39;bar&#39;, &#39;baz&#39;]</code></pre>
+		 * 
+		 */
+		public static var sep:String;
+		
+		/**
 		 * <p>Normalize a string path, taking care of <code>&#39;..&#39;</code> and <code>&#39;.&#39;</code> parts.
 		 * </p>
 		 * <p>When multiple slashes are found, they&#39;re replaced by a single one;

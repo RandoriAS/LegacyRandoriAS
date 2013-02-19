@@ -1,31 +1,120 @@
 /***
  * Copyright 2013 LTN Consulting, Inc. /dba Digital PrimatesÂ®
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an 'AS IS' BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
- * 
+ *
+ *
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
  * @author Randori Nodejs generator
 */
 package randori.nodejs {
-	
-	
+
+
 	/**
 	 * Generated from file: child_process.json
 	 */
 	[JavaScript(export="false", name="child_process")]
-	public class ChildProcess {
-		
+	public class ChildProcess extends EventsEventEmitter {
+
+		/**
+		 * <p>This event is emitted after the child process ends. If the process terminated
+		 * normally, <code>code</code> is the final exit code of the process, otherwise <code>null</code>. If
+		 * the process terminated due to receipt of a signal, <code>signal</code> is the string name
+		 * of the signal, otherwise <code>null</code>.
+		 * </p>
+		 * <p>Note that the child process stdio streams might still be open.
+		 * </p>
+		 * <p>See <code>waitpid(2)</code>.
+		 * </p>
+		 *
+		 */
+		[JavaScriptProperty(name="exit")]
+		public var onexit:Function;
+
+		/**
+		 * <p>This event is emitted when the stdio streams of a child process have all
+		 * terminated.  This is distinct from &#39;exit&#39;, since multiple processes
+		 * might share the same stdio streams.
+		 * </p>
+		 *
+		 */
+		[JavaScriptProperty(name="close")]
+		public var onclose:Function;
+
+		/**
+		 * <p>This event is emitted after using the <code>.disconnect()</code> method in the parent or
+		 * in the child. After disconnecting it is no longer possible to send messages.
+		 * An alternative way to check if you can send messages is to see if the
+		 * <code>child.connected</code> property is <code>true</code>.
+		 * </p>
+		 *
+		 */
+		[JavaScriptProperty(name="disconnect")]
+		public var ondisconnect:Function;
+
+		/**
+		 * <p>Messages send by <code>.send(message, [sendHandle])</code> are obtained using the
+		 * <code>message</code> event.
+		 * </p>
+		 *
+		 */
+		[JavaScriptProperty(name="message")]
+		public var onmessage:Function;
+
+		/**
+		 * <p>A <code>Writable Stream</code> that represents the child process&#39;s <code>stdin</code>.
+		 * Closing this stream via <code>end()</code> often causes the child process to terminate.
+		 * </p>
+		 * <p>If the child stdio streams are shared with the parent, then this will
+		 * not be set.
+		 * </p>
+		 *
+		 */
+		public var stdin:Object;
+
+		/**
+		 * <p>A <code>Readable Stream</code> that represents the child process&#39;s <code>stdout</code>.
+		 * </p>
+		 * <p>If the child stdio streams are shared with the parent, then this will
+		 * not be set.
+		 * </p>
+		 *
+		 */
+		public var stdout:Object;
+
+		/**
+		 * <p>A <code>Readable Stream</code> that represents the child process&#39;s <code>stderr</code>.
+		 * </p>
+		 * <p>If the child stdio streams are shared with the parent, then this will
+		 * not be set.
+		 * </p>
+		 *
+		 */
+		public var stderr:Object;
+
+		/**
+		 * <p>The PID of the child process.
+		 * </p>
+		 * <p>Example:
+		 * </p>
+		 * <pre><code>var spawn = require(&#39;child_process&#39;).spawn,
+		 * grep  = spawn(&#39;grep&#39;, [&#39;ssh&#39;]);
+		 * console.log(&#39;Spawned child pid: &#39; + grep.pid);
+		 * grep.stdin.end();</code></pre>
+		 *
+		 */
+		public var pid:int;
+
 		/**
 		 * <p>Launches a new process with the given <code>command</code>, with  command line arguments in <code>args</code>.
 		 * If omitted, <code>args</code> defaults to an empty Array.
@@ -180,12 +269,12 @@ package randori.nodejs {
 		 * </p>
 		 * <p>See also: <code>child_process.exec()</code> and <code>child_process.fork()</code>
 		 * </p>
-		 * 
+		 *
 		 */
 		[JavaScriptMethod(name="spawn")]
 		public static function spawn1(command:String, args:Array, options:Object):void {
 		}
-		
+
 		/**
 		 * <p>Launches a new process with the given <code>command</code>, with  command line arguments in <code>args</code>.
 		 * If omitted, <code>args</code> defaults to an empty Array.
@@ -340,12 +429,12 @@ package randori.nodejs {
 		 * </p>
 		 * <p>See also: <code>child_process.exec()</code> and <code>child_process.fork()</code>
 		 * </p>
-		 * 
+		 *
 		 */
 		[JavaScriptMethod(name="spawn")]
 		public static function spawn2(command:*, args:*, options:*):void {
 		}
-		
+
 		/**
 		 * <p>Runs a command in a shell and buffers the output.
 		 * </p>
@@ -379,12 +468,12 @@ package randori.nodejs {
 		 * amount of data allowed on stdout or stderr - if this value is exceeded then
 		 * the child process is killed.
 		 * </p>
-		 * 
+		 *
 		 */
 		[JavaScriptMethod(name="exec")]
 		public static function exec1(command:String, options:Object, callback:Function):void {
 		}
-		
+
 		/**
 		 * <p>Runs a command in a shell and buffers the output.
 		 * </p>
@@ -418,34 +507,34 @@ package randori.nodejs {
 		 * amount of data allowed on stdout or stderr - if this value is exceeded then
 		 * the child process is killed.
 		 * </p>
-		 * 
+		 *
 		 */
 		[JavaScriptMethod(name="exec")]
 		public static function exec2(command:*, options:*, callback:*):void {
 		}
-		
+
 		/**
 		 * <p>This is similar to <code>child_process.exec()</code> except it does not execute a
 		 * subshell but rather the specified file directly. This makes it slightly
 		 * leaner than <code>child_process.exec</code>. It has the same options.
 		 * </p>
-		 * 
+		 *
 		 */
 		[JavaScriptMethod(name="execFile")]
 		public static function execFile1(file:String, args:Array, options:Object, callback:Function):void {
 		}
-		
+
 		/**
 		 * <p>This is similar to <code>child_process.exec()</code> except it does not execute a
 		 * subshell but rather the specified file directly. This makes it slightly
 		 * leaner than <code>child_process.exec</code>. It has the same options.
 		 * </p>
-		 * 
+		 *
 		 */
 		[JavaScriptMethod(name="execFile")]
 		public static function execFile2(file:*, args:*, options:*, callback:*):void {
 		}
-		
+
 		/**
 		 * <p>This is a special case of the <code>spawn()</code> functionality for spawning Node
 		 * processes. In addition to having all the methods in a normal ChildProcess
@@ -463,12 +552,12 @@ package randori.nodejs {
 		 * startup and 10mb memory for each new Node. That is, you cannot create many
 		 * thousands of them.
 		 * </p>
-		 * 
+		 *
 		 */
 		[JavaScriptMethod(name="fork")]
 		public static function fork1(modulePath:String, args:Array, options:Object):void {
 		}
-		
+
 		/**
 		 * <p>This is a special case of the <code>spawn()</code> functionality for spawning Node
 		 * processes. In addition to having all the methods in a normal ChildProcess
@@ -486,12 +575,12 @@ package randori.nodejs {
 		 * startup and 10mb memory for each new Node. That is, you cannot create many
 		 * thousands of them.
 		 * </p>
-		 * 
+		 *
 		 */
 		[JavaScriptMethod(name="fork")]
 		public static function fork2(modulePath:*, args:*, options:*):void {
 		}
-		
+
 		/**
 		 * <p>Send a signal to the child process. If no argument is given, the process will
 		 * be sent <code>&#39;SIGTERM&#39;</code>. See <code>signal(7)</code> for a list of available signals.
@@ -508,12 +597,12 @@ package randori.nodejs {
 		 * </p>
 		 * <p>See <code>kill(2)</code>
 		 * </p>
-		 * 
+		 *
 		 */
 		[JavaScriptMethod(name="kill")]
 		public static function kill1(signal:String):void {
 		}
-		
+
 		/**
 		 * <p>Send a signal to the child process. If no argument is given, the process will
 		 * be sent <code>&#39;SIGTERM&#39;</code>. See <code>signal(7)</code> for a list of available signals.
@@ -530,12 +619,12 @@ package randori.nodejs {
 		 * </p>
 		 * <p>See <code>kill(2)</code>
 		 * </p>
-		 * 
+		 *
 		 */
 		[JavaScriptMethod(name="kill")]
 		public static function kill2(signal:*):void {
 		}
-		
+
 		/**
 		 * <p>When using <code>child_process.fork()</code> you can write to the child using
 		 * <code>child.send(message, [sendHandle])</code> and messages are received by
@@ -625,12 +714,12 @@ package randori.nodejs {
 		 * the <code>.connections</code> property becomes <code>null</code>.
 		 * It is also recommended not to use <code>.maxConnections</code> in this condition.
 		 * </p>
-		 * 
+		 *
 		 */
 		[JavaScriptMethod(name="send")]
 		public static function send1(message:Object, sendHandle:Object):void {
 		}
-		
+
 		/**
 		 * <p>When using <code>child_process.fork()</code> you can write to the child using
 		 * <code>child.send(message, [sendHandle])</code> and messages are received by
@@ -720,12 +809,12 @@ package randori.nodejs {
 		 * the <code>.connections</code> property becomes <code>null</code>.
 		 * It is also recommended not to use <code>.maxConnections</code> in this condition.
 		 * </p>
-		 * 
+		 *
 		 */
 		[JavaScriptMethod(name="send")]
 		public static function send2(message:*, sendHandle:*):void {
 		}
-		
+
 		/**
 		 * <p>To close the IPC connection between parent and child use the
 		 * <code>child.disconnect()</code> method. This allows the child to exit gracefully since
@@ -734,32 +823,32 @@ package randori.nodejs {
 		 * <code>connected</code> flag will be set to <code>false</code>. Please note that you can also call
 		 * <code>process.disconnect()</code> in the child process.
 		 * </p>
-		 * 
+		 *
 		 */
 		public static function disconnect():void {
 		}
-		
-		public function spawn(...params):* {
+
+		public function spawn(... params):* {
 			return null;
 		}
-		
-		public function exec(...params):* {
+
+		public function exec(... params):* {
 			return null;
 		}
-		
-		public function execFile(...params):* {
+
+		public function execFile(... params):* {
 			return null;
 		}
-		
-		public function fork(...params):* {
+
+		public function fork(... params):* {
 			return null;
 		}
-		
-		public function kill(...params):* {
+
+		public function kill(... params):* {
 			return null;
 		}
-		
-		public function send(...params):* {
+
+		public function send(... params):* {
 			return null;
 		}
 	}

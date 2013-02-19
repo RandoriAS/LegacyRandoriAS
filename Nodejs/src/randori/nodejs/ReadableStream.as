@@ -24,7 +24,63 @@ package randori.nodejs {
 	 * Generated from file: stream.json
 	 */
 	[JavaScript(export="false", name="Readable Stream")]
-	public class ReadableStream {
+	public class ReadableStream extends EventsEventEmitter {
+		
+		/**
+		 * <p><code>function (data) { }</code>
+		 * </p>
+		 * <p>The <code>&#39;data&#39;</code> event emits either a <code>Buffer</code> (by default) or a string if
+		 * <code>setEncoding()</code> was used.
+		 * </p>
+		 * <p>Note that the <strong>data will be lost</strong> if there is no listener when a
+		 * <code>Readable Stream</code> emits a <code>&#39;data&#39;</code> event.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="data")]
+		public var ondata:Function;
+		
+		/**
+		 * <p><code>function () { }</code>
+		 * </p>
+		 * <p>Emitted when the stream has received an EOF (FIN in TCP terminology).
+		 * Indicates that no more <code>&#39;data&#39;</code> events will happen. If the stream is
+		 * also writable, it may be possible to continue writing.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="end")]
+		public var onend:Function;
+		
+		/**
+		 * <p><code>function (exception) { }</code>
+		 * </p>
+		 * <p>Emitted if there was an error receiving data.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="error")]
+		public var onerror:Function;
+		
+		/**
+		 * <p><code>function () { }</code>
+		 * </p>
+		 * <p>Emitted when the underlying resource (for example, the backing file
+		 * descriptor) has been closed. Not all streams will emit this.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="close")]
+		public var onclose:Function;
+		
+		/**
+		 * <p>A boolean that is <code>true</code> by default, but turns <code>false</code> after an
+		 * <code>&#39;error&#39;</code> occurred, the stream came to an <code>&#39;end&#39;</code>, or <code>destroy()</code> was
+		 * called.
+		 * </p>
+		 * 
+		 */
+		public var readable:Boolean;
 		
 		/**
 		 * <p>Makes the <code>&#39;data&#39;</code> event emit a string instead of a <code>Buffer</code>. <code>encoding</code>
