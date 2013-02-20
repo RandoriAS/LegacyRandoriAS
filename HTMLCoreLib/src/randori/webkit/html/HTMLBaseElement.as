@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLBaseElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('base')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLBaseElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('base')")]
 	/**
 	*  Creates a new <code>HTMLBaseElement</code> instance.
 	*/

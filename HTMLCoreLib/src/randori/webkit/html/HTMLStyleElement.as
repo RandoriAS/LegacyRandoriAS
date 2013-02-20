@@ -44,6 +44,7 @@ package randori.webkit.html
 import randori.webkit.css.StyleSheet;
 
 [JavaScript(export="false", name="HTMLStyleElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('style')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -51,7 +52,6 @@ import randori.webkit.css.StyleSheet;
  */
 public class HTMLStyleElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('style')")]
 	/**
 	*  Creates a new <code>HTMLStyleElement</code> instance.
 	*/

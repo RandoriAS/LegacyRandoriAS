@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLOptGroupElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('optgroup')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLOptGroupElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('optgroup')")]
 	/**
 	*  Creates a new <code>HTMLOptGroupElement</code> instance.
 	*/

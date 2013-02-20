@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLAppletElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('applet')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLAppletElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('applet')")]
 	/**
 	*  Creates a new <code>HTMLAppletElement</code> instance.
 	*/

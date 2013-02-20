@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLTableCellElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('td')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLTableCellElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('td')")]
 	/**
 	*  Creates a new <code>HTMLTableCellElement</code> instance.
 	*/

@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLBaseFontElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('basefont')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLBaseFontElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('basefont')")]
 	/**
 	*  Creates a new <code>HTMLBaseFontElement</code> instance.
 	*/

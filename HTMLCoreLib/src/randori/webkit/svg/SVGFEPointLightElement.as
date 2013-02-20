@@ -43,6 +43,7 @@ package randori.webkit.svg
 
 
 [JavaScript(export="false", nativecondition="SVG", name="SVGFEPointLightElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('fepointlight')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.svg
  */
 public class SVGFEPointLightElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('fepointlight')")]
 	/**
 	*  Creates a new <code>SVGFEPointLightElement</code> instance.
 	*/

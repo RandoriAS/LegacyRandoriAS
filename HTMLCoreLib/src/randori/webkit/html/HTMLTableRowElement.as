@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLTableRowElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('tr')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLTableRowElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('tr')")]
 	/**
 	*  Creates a new <code>HTMLTableRowElement</code> instance.
 	*/

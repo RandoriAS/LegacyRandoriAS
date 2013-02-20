@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLScriptElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('script')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLScriptElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('script')")]
 	/**
 	*  Creates a new <code>HTMLScriptElement</code> instance.
 	*/

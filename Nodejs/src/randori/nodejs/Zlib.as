@@ -15,149 +15,134 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Zlib
-	{
-		public function Zlib()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: zlib.json
+	 */
+	[JavaScript(export="false", name="zlib")]
+	public class Zlib {
 		
-		/*
+		/**
 		 * <p>Returns a new <a href="#zlib_class_zlib_gzip">Gzip</a> object with an
 		 * <a href="#zlib_options">options</a>.
 		 * </p>
 		 * 
-		*/
-		public function createGzip(options:*):void
-		{
+		 */
+		public static function createGzip(options:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns a new <a href="#zlib_class_zlib_gunzip">Gunzip</a> object with an
 		 * <a href="#zlib_options">options</a>.
 		 * </p>
 		 * 
-		*/
-		public function createGunzip(options:*):void
-		{
+		 */
+		public static function createGunzip(options:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns a new <a href="#zlib_class_zlib_deflate">Deflate</a> object with an
 		 * <a href="#zlib_options">options</a>.
 		 * </p>
 		 * 
-		*/
-		public function createDeflate(options:*):void
-		{
+		 */
+		public static function createDeflate(options:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns a new <a href="#zlib_class_zlib_inflate">Inflate</a> object with an
 		 * <a href="#zlib_options">options</a>.
 		 * </p>
 		 * 
-		*/
-		public function createInflate(options:*):void
-		{
+		 */
+		public static function createInflate(options:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns a new <a href="#zlib_class_zlib_deflateraw">DeflateRaw</a> object with an
 		 * <a href="#zlib_options">options</a>.
 		 * </p>
 		 * 
-		*/
-		public function createDeflateRaw(options:*):void
-		{
+		 */
+		public static function createDeflateRaw(options:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns a new <a href="#zlib_class_zlib_inflateraw">InflateRaw</a> object with an
 		 * <a href="#zlib_options">options</a>.
 		 * </p>
 		 * 
-		*/
-		public function createInflateRaw(options:*):void
-		{
+		 */
+		public static function createInflateRaw(options:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns a new <a href="#zlib_class_zlib_unzip">Unzip</a> object with an
 		 * <a href="#zlib_options">options</a>.
 		 * </p>
 		 * 
-		*/
-		public function createUnzip(options:*):void
-		{
+		 */
+		public static function createUnzip(options:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Compress a string with Deflate.
 		 * </p>
 		 * 
-		*/
-		public function deflate(buf:*, callback:*):void
-		{
+		 */
+		public static function deflate(buf:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Compress a string with DeflateRaw.
 		 * </p>
 		 * 
-		*/
-		public function deflateRaw(buf:*, callback:*):void
-		{
+		 */
+		public static function deflateRaw(buf:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Compress a string with Gzip.
 		 * </p>
 		 * 
-		*/
-		public function gzip(buf:*, callback:*):void
-		{
+		 */
+		public static function gzip(buf:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Decompress a raw Buffer with Gunzip.
 		 * </p>
 		 * 
-		*/
-		public function gunzip(buf:*, callback:*):void
-		{
+		 */
+		public static function gunzip(buf:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Decompress a raw Buffer with Inflate.
 		 * </p>
 		 * 
-		*/
-		public function inflate(buf:*, callback:*):void
-		{
+		 */
+		public static function inflate(buf:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Decompress a raw Buffer with InflateRaw.
 		 * </p>
 		 * 
-		*/
-		public function inflateRaw(buf:*, callback:*):void
-		{
+		 */
+		public static function inflateRaw(buf:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Decompress a raw Buffer with Unzip.
 		 * </p>
 		 * 
-		*/
-		public function unzip(buf:*, callback:*):void
-		{
+		 */
+		public static function unzip(buf:*, callback:*):void {
 		}
 	}
 }

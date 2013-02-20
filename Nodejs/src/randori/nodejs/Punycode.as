@@ -15,19 +15,27 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Punycode
-	{
-		public function Punycode()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: punycode.json
+	 */
+	[JavaScript(export="false", name="punycode")]
+	public class Punycode {
 		
-		/*
+		public static var ucs2:Object;
+		
+		/**
+		 * <p>A string representing the current Punycode.js version number.
+		 * </p>
+		 * 
+		 */
+		public static var version:String;
+		
+		/**
 		 * <p>Converts a Punycode string of ASCII code points to a string of Unicode code
 		 * points.
 		 * </p>
@@ -35,12 +43,11 @@ package randori.nodejs
 		 * punycode.decode(&#39;maana-pta&#39;); // &#39;mañana&#39;
 		 * punycode.decode(&#39;--dqo34k&#39;); // &#39;☃-⌘&#39;</code></pre>
 		 * 
-		*/
-		public function decode(string:*):void
-		{
+		 */
+		public static function decode(string:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Converts a string of Unicode code points to a Punycode string of ASCII code
 		 * points.
 		 * </p>
@@ -48,12 +55,11 @@ package randori.nodejs
 		 * punycode.encode(&#39;mañana&#39;); // &#39;maana-pta&#39;
 		 * punycode.encode(&#39;☃-⌘&#39;); // &#39;--dqo34k&#39;</code></pre>
 		 * 
-		*/
-		public function encode(string:*):void
-		{
+		 */
+		public static function encode(string:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Converts a Punycode string representing a domain name to Unicode. Only the
 		 * Punycoded parts of the domain name will be converted, i.e. it doesn&#39;t matter if
 		 * you call it on a string that has already been converted to Unicode.
@@ -62,12 +68,11 @@ package randori.nodejs
 		 * punycode.toUnicode(&#39;xn--maana-pta.com&#39;); // &#39;mañana.com&#39;
 		 * punycode.toUnicode(&#39;xn----dqo34k.com&#39;); // &#39;☃-⌘.com&#39;</code></pre>
 		 * 
-		*/
-		public function toUnicode(domain:*):void
-		{
+		 */
+		public static function toUnicode(domain:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Converts a Unicode string representing a domain name to Punycode. Only the
 		 * non-ASCII parts of the domain name will be converted, i.e. it doesn&#39;t matter if
 		 * you call it with a domain that&#39;s already in ASCII.
@@ -76,9 +81,8 @@ package randori.nodejs
 		 * punycode.toASCII(&#39;mañana.com&#39;); // &#39;xn--maana-pta.com&#39;
 		 * punycode.toASCII(&#39;☃-⌘.com&#39;); // &#39;xn----dqo34k.com&#39;</code></pre>
 		 * 
-		*/
-		public function toASCII(domain:*):void
-		{
+		 */
+		public static function toASCII(domain:*):void {
 		}
 	}
 }

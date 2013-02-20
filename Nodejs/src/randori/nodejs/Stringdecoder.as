@@ -15,16 +15,22 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Stringdecoder
-	{
-		public function Stringdecoder()
-		{
-			super();
+	
+	/**
+	 * Generated from file: string_decoder.json
+	 */
+	[JavaScript(export="false")]
+	public class StringDecoder {
+		
+		/**
+		 * <p>Returns a decoded string.</p>
+		 * 
+		 */
+		public static function write(buffer:*):void {
 		}
 	}
 }

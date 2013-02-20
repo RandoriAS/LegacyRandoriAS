@@ -44,6 +44,7 @@ package randori.webkit.html
 import randori.webkit.css.StyleSheet;
 
 [JavaScript(export="false", name="HTMLLinkElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('link')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -51,7 +52,6 @@ import randori.webkit.css.StyleSheet;
  */
 public class HTMLLinkElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('link')")]
 	/**
 	*  Creates a new <code>HTMLLinkElement</code> instance.
 	*/

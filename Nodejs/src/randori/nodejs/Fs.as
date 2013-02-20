@@ -15,253 +15,235 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Fs
-	{
-		public function Fs()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: fs.json
+	 */
+	[JavaScript(export="false", name="fs")]
+	public class Fs {
 		
-		/*
+		/**
+		 * <p><code>WriteStream</code> is a <a href="stream.html#stream_writable_stream">Writable Stream</a>.
+		 * </p>
+		 * 
+		 */
+		public static var WriteStream:WritableStream;
+		
+		/**
 		 * <p>Asynchronous rename(2). No arguments other than a possible exception are given
 		 * to the completion callback.
 		 * </p>
 		 * 
-		*/
-		public function rename(oldPath:*, newPath:*, callback:*):void
-		{
+		 */
+		public static function rename(oldPath:*, newPath:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous rename(2).
 		 * </p>
 		 * 
-		*/
-		public function renameSync(oldPath:*, newPath:*):void
-		{
+		 */
+		public static function renameSync(oldPath:*, newPath:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous ftruncate(2). No arguments other than a possible exception are
 		 * given to the completion callback.
 		 * </p>
 		 * 
-		*/
-		public function truncate(fd:*, len:*, callback:*):void
-		{
+		 */
+		public static function truncate(fd:*, len:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous ftruncate(2).
 		 * </p>
 		 * 
-		*/
-		public function truncateSync(fd:*, len:*):void
-		{
+		 */
+		public static function truncateSync(fd:*, len:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous chown(2). No arguments other than a possible exception are given
 		 * to the completion callback.
 		 * </p>
 		 * 
-		*/
-		public function chown(path:*, uid:*, gid:*, callback:*):void
-		{
+		 */
+		public static function chown(path:*, uid:*, gid:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous chown(2).
 		 * </p>
 		 * 
-		*/
-		public function chownSync(path:*, uid:*, gid:*):void
-		{
+		 */
+		public static function chownSync(path:*, uid:*, gid:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous fchown(2). No arguments other than a possible exception are given
 		 * to the completion callback.
 		 * </p>
 		 * 
-		*/
-		public function fchown(fd:*, uid:*, gid:*, callback:*):void
-		{
+		 */
+		public static function fchown(fd:*, uid:*, gid:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous fchown(2).
 		 * </p>
 		 * 
-		*/
-		public function fchownSync(fd:*, uid:*, gid:*):void
-		{
+		 */
+		public static function fchownSync(fd:*, uid:*, gid:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous lchown(2). No arguments other than a possible exception are given
 		 * to the completion callback.
 		 * </p>
 		 * 
-		*/
-		public function lchown(path:*, uid:*, gid:*, callback:*):void
-		{
+		 */
+		public static function lchown(path:*, uid:*, gid:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous lchown(2).
 		 * </p>
 		 * 
-		*/
-		public function lchownSync(path:*, uid:*, gid:*):void
-		{
+		 */
+		public static function lchownSync(path:*, uid:*, gid:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous chmod(2). No arguments other than a possible exception are given
 		 * to the completion callback.
 		 * </p>
 		 * 
-		*/
-		public function chmod(path:*, mode:*, callback:*):void
-		{
+		 */
+		public static function chmod(path:*, mode:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous chmod(2).
 		 * </p>
 		 * 
-		*/
-		public function chmodSync(path:*, mode:*):void
-		{
+		 */
+		public static function chmodSync(path:*, mode:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous fchmod(2). No arguments other than a possible exception
 		 * are given to the completion callback.
 		 * </p>
 		 * 
-		*/
-		public function fchmod(fd:*, mode:*, callback:*):void
-		{
+		 */
+		public static function fchmod(fd:*, mode:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous fchmod(2).
 		 * </p>
 		 * 
-		*/
-		public function fchmodSync(fd:*, mode:*):void
-		{
+		 */
+		public static function fchmodSync(fd:*, mode:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous lchmod(2). No arguments other than a possible exception
 		 * are given to the completion callback.
 		 * </p>
 		 * <p>Only available on Mac OS X.
 		 * </p>
 		 * 
-		*/
-		public function lchmod(path:*, mode:*, callback:*):void
-		{
+		 */
+		public static function lchmod(path:*, mode:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous lchmod(2).
 		 * </p>
 		 * 
-		*/
-		public function lchmodSync(path:*, mode:*):void
-		{
+		 */
+		public static function lchmodSync(path:*, mode:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous stat(2). The callback gets two arguments <code>(err, stats)</code> where
 		 * <code>stats</code> is a <a href="#fs_class_fs_stats">fs.Stats</a> object.  See the <a href="#fs_class_fs_stats">fs.Stats</a>
 		 * section below for more information.
 		 * </p>
 		 * 
-		*/
-		public function stat(path:*, callback:*):void
-		{
+		 */
+		public static function stat(path:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous lstat(2). The callback gets two arguments <code>(err, stats)</code> where
 		 * <code>stats</code> is a <code>fs.Stats</code> object. <code>lstat()</code> is identical to <code>stat()</code>, except that if
 		 * <code>path</code> is a symbolic link, then the link itself is stat-ed, not the file that it
 		 * refers to.
 		 * </p>
 		 * 
-		*/
-		public function lstat(path:*, callback:*):void
-		{
+		 */
+		public static function lstat(path:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous fstat(2). The callback gets two arguments <code>(err, stats)</code> where
 		 * <code>stats</code> is a <code>fs.Stats</code> object. <code>fstat()</code> is identical to <code>stat()</code>, except that
 		 * the file to be stat-ed is specified by the file descriptor <code>fd</code>.
 		 * </p>
 		 * 
-		*/
-		public function fstat(fd:*, callback:*):void
-		{
+		 */
+		public static function fstat(fd:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous stat(2). Returns an instance of <code>fs.Stats</code>.
 		 * </p>
 		 * 
-		*/
-		public function statSync(path:*):void
-		{
+		 */
+		public static function statSync(path:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous lstat(2). Returns an instance of <code>fs.Stats</code>.
 		 * </p>
 		 * 
-		*/
-		public function lstatSync(path:*):void
-		{
+		 */
+		public static function lstatSync(path:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous fstat(2). Returns an instance of <code>fs.Stats</code>.
 		 * </p>
 		 * 
-		*/
-		public function fstatSync(fd:*):void
-		{
+		 */
+		public static function fstatSync(fd:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous link(2). No arguments other than a possible exception are given to
 		 * the completion callback.
 		 * </p>
 		 * 
-		*/
-		public function link(srcpath:*, dstpath:*, callback:*):void
-		{
+		 */
+		public static function link(srcpath:*, dstpath:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous link(2).
 		 * </p>
 		 * 
-		*/
-		public function linkSync(srcpath:*, dstpath:*):void
-		{
+		 */
+		public static function linkSync(srcpath:*, dstpath:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous symlink(2). No arguments other than a possible exception are given
 		 * to the completion callback.
 		 * <code>type</code> argument can be either <code>&#39;dir&#39;</code>, <code>&#39;file&#39;</code>, or <code>&#39;junction&#39;</code> (default is <code>&#39;file&#39;</code>).  It is only
@@ -270,40 +252,36 @@ package randori.nodejs
 		 * <code>&#39;junction&#39;</code>, the <code>destination</code> argument will automatically be normalized to absolute path.
 		 * </p>
 		 * 
-		*/
-		public function symlink(srcpath:*, dstpath:*, type:*, callback:*):void
-		{
+		 */
+		public static function symlink(srcpath:*, dstpath:*, type:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous symlink(2).
 		 * </p>
 		 * 
-		*/
-		public function symlinkSync(srcpath:*, dstpath:*, type:*):void
-		{
+		 */
+		public static function symlinkSync(srcpath:*, dstpath:*, type:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous readlink(2). The callback gets two arguments <code>(err,
 		 * linkString)</code>.
 		 * </p>
 		 * 
-		*/
-		public function readlink(path:*, callback:*):void
-		{
+		 */
+		public static function readlink(path:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous readlink(2). Returns the symbolic link&#39;s string value.
 		 * </p>
 		 * 
-		*/
-		public function readlinkSync(path:*):void
-		{
+		 */
+		public static function readlinkSync(path:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous realpath(2). The <code>callback</code> gets two arguments <code>(err,
 		 * resolvedPath)</code>. May use <code>process.cwd</code> to resolve relative paths. <code>cache</code> is an
 		 * object literal of mapped paths that can be used to force a specific path
@@ -317,118 +295,106 @@ package randori.nodejs
 		 * console.log(resolvedPath);
 		 * });</code></pre>
 		 * 
-		*/
-		public function realpath(path:*, cache:*, callback:*):void
-		{
+		 */
+		public static function realpath(path:*, cache:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous realpath(2). Returns the resolved path.
 		 * </p>
 		 * 
-		*/
-		public function realpathSync(path:*, cache:*):void
-		{
+		 */
+		public static function realpathSync(path:*, cache:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous unlink(2). No arguments other than a possible exception are given
 		 * to the completion callback.
 		 * </p>
 		 * 
-		*/
-		public function unlink(path:*, callback:*):void
-		{
+		 */
+		public static function unlink(path:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous unlink(2).
 		 * </p>
 		 * 
-		*/
-		public function unlinkSync(path:*):void
-		{
+		 */
+		public static function unlinkSync(path:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous rmdir(2). No arguments other than a possible exception are given
 		 * to the completion callback.
 		 * </p>
 		 * 
-		*/
-		public function rmdir(path:*, callback:*):void
-		{
+		 */
+		public static function rmdir(path:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous rmdir(2).
 		 * </p>
 		 * 
-		*/
-		public function rmdirSync(path:*):void
-		{
+		 */
+		public static function rmdirSync(path:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous mkdir(2). No arguments other than a possible exception are given
 		 * to the completion callback. <code>mode</code> defaults to <code>0777</code>.
 		 * </p>
 		 * 
-		*/
-		public function mkdir(path:*, mode:*, callback:*):void
-		{
+		 */
+		public static function mkdir(path:*, mode:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous mkdir(2).
 		 * </p>
 		 * 
-		*/
-		public function mkdirSync(path:*, mode:*):void
-		{
+		 */
+		public static function mkdirSync(path:*, mode:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous readdir(3).  Reads the contents of a directory.
 		 * The callback gets two arguments <code>(err, files)</code> where <code>files</code> is an array of
 		 * the names of the files in the directory excluding <code>&#39;.&#39;</code> and <code>&#39;..&#39;</code>.
 		 * </p>
 		 * 
-		*/
-		public function readdir(path:*, callback:*):void
-		{
+		 */
+		public static function readdir(path:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous readdir(3). Returns an array of filenames excluding <code>&#39;.&#39;</code> and
 		 * <code>&#39;..&#39;</code>.
 		 * </p>
 		 * 
-		*/
-		public function readdirSync(path:*):void
-		{
+		 */
+		public static function readdirSync(path:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous close(2).  No arguments other than a possible exception are given
 		 * to the completion callback.
 		 * </p>
 		 * 
-		*/
-		public function close(fd:*, callback:*):void
-		{
+		 */
+		public static function close(fd:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous close(2).
 		 * </p>
 		 * 
-		*/
-		public function closeSync(fd:*):void
-		{
+		 */
+		public static function closeSync(fd:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous file open. See open(2). <code>flags</code> can be:
 		 * </p>
 		 * <ul>
@@ -477,97 +443,91 @@ package randori.nodejs
 		 * not followed. Exclusive mode may or may not work with network file systems.
 		 * </p>
 		 * 
-		*/
-		public function open(path:*, flags:*, mode:*, callback:*):void
-		{
+		 */
+		public static function open(path:*, flags:*, mode:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous open(2).
 		 * </p>
 		 * 
-		*/
-		public function openSync(path:*, flags:*, mode:*):void
-		{
+		 */
+		public static function openSync(path:*, flags:*, mode:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Change file timestamps of the file referenced by the supplied path.
 		 * </p>
 		 * 
-		*/
-		public function utimes(path:*, atime:*, mtime:*):void
-		{
+		 */
+		[JavaScriptMethod(name="utimes")]
+		public static function utimes1(path:*, atime:*, mtime:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Change file timestamps of the file referenced by the supplied path.
 		 * </p>
 		 * 
-		*/
-		public function utimes(path:*, atime:*, mtime:*, callback:*):void
-		{
+		 */
+		[JavaScriptMethod(name="utimes")]
+		public static function utimes2(path:*, atime:*, mtime:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Change file timestamps of the file referenced by the supplied path.
 		 * </p>
 		 * 
-		*/
-		public function utimesSync(path:*, atime:*, mtime:*):void
-		{
+		 */
+		public static function utimesSync(path:*, atime:*, mtime:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Change the file timestamps of a file referenced by the supplied file
 		 * descriptor.
 		 * </p>
 		 * 
-		*/
-		public function futimes(fd:*, atime:*, mtime:*):void
-		{
+		 */
+		[JavaScriptMethod(name="futimes")]
+		public static function futimes1(fd:*, atime:*, mtime:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Change the file timestamps of a file referenced by the supplied file
 		 * descriptor.
 		 * </p>
 		 * 
-		*/
-		public function futimes(fd:*, atime:*, mtime:*, callback:*):void
-		{
+		 */
+		[JavaScriptMethod(name="futimes")]
+		public static function futimes2(fd:*, atime:*, mtime:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Change the file timestamps of a file referenced by the supplied file
 		 * descriptor.
 		 * </p>
 		 * 
-		*/
-		public function futimesSync(fd:*, atime:*, mtime:*):void
-		{
+		 */
+		public static function futimesSync(fd:*, atime:*, mtime:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronous fsync(2). No arguments other than a possible exception are given
 		 * to the completion callback.
 		 * </p>
 		 * 
-		*/
-		public function fsync(fd:*, callback:*):void
-		{
+		 */
+		public static function fsync(fd:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous fsync(2).
 		 * </p>
 		 * 
-		*/
-		public function fsyncSync(fd:*):void
-		{
+		 */
+		public static function fsyncSync(fd:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Write <code>buffer</code> to the file specified by <code>fd</code>.
 		 * </p>
 		 * <p><code>offset</code> and <code>length</code> determine the part of the buffer to be written.
@@ -585,21 +545,19 @@ package randori.nodejs
 		 * <code>fs.createWriteStream</code> is strongly recommended.
 		 * </p>
 		 * 
-		*/
-		public function write(fd:*, buffer:*, offset:*, length:*, position:*, callback:*):void
-		{
+		 */
+		public static function write(fd:*, buffer:*, offset:*, length:*, position:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous version of <code>fs.write()</code>. Returns the number of bytes written.
 		 * </p>
 		 * 
-		*/
-		public function writeSync(fd:*, buffer:*, offset:*, length:*, position:*):void
-		{
+		 */
+		public static function writeSync(fd:*, buffer:*, offset:*, length:*, position:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Read data from the file specified by <code>fd</code>.
 		 * </p>
 		 * <p><code>buffer</code> is the buffer that the data will be written to.
@@ -614,21 +572,19 @@ package randori.nodejs
 		 * <p>The callback is given the three arguments, <code>(err, bytesRead, buffer)</code>.
 		 * </p>
 		 * 
-		*/
-		public function read(fd:*, buffer:*, offset:*, length:*, position:*, callback:*):void
-		{
+		 */
+		public static function read(fd:*, buffer:*, offset:*, length:*, position:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous version of <code>fs.read</code>. Returns the number of <code>bytesRead</code>.
 		 * </p>
 		 * 
-		*/
-		public function readSync(fd:*, buffer:*, offset:*, length:*, position:*):void
-		{
+		 */
+		public static function readSync(fd:*, buffer:*, offset:*, length:*, position:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronously reads the entire contents of a file. Example:
 		 * </p>
 		 * <pre><code>fs.readFile(&#39;/etc/passwd&#39;, function (err, data) {
@@ -641,24 +597,22 @@ package randori.nodejs
 		 * <p>If no encoding is specified, then the raw buffer is returned.
 		 * </p>
 		 * 
-		*/
-		public function readFile(filename:*, encoding:*, callback:*):void
-		{
+		 */
+		public static function readFile(filename:*, encoding:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous version of <code>fs.readFile</code>. Returns the contents of the <code>filename</code>.
 		 * </p>
 		 * <p>If <code>encoding</code> is specified then this function returns a string. Otherwise it
 		 * returns a buffer.
 		 * </p>
 		 * 
-		*/
-		public function readFileSync(filename:*, encoding:*):void
-		{
+		 */
+		public static function readFileSync(filename:*, encoding:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronously writes data to a file, replacing the file if it already exists.
 		 * <code>data</code> can be a string or a buffer. The <code>encoding</code> argument is ignored if
 		 * <code>data</code> is a buffer. It defaults to <code>&#39;utf8&#39;</code>.
@@ -670,21 +624,19 @@ package randori.nodejs
 		 * console.log(&#39;It\&#39;s saved!&#39;);
 		 * });</code></pre>
 		 * 
-		*/
-		public function writeFile(filename:*, data:*, encoding:*, callback:*):void
-		{
+		 */
+		public static function writeFile(filename:*, data:*, encoding:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>The synchronous version of <code>fs.writeFile</code>.
 		 * </p>
 		 * 
-		*/
-		public function writeFileSync(filename:*, data:*, encoding:*):void
-		{
+		 */
+		public static function writeFileSync(filename:*, data:*, encoding:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Asynchronously append data to a file, creating the file if it not yet exists.
 		 * <code>data</code> can be a string or a buffer. The <code>encoding</code> argument is ignored if
 		 * <code>data</code> is a buffer.
@@ -696,21 +648,19 @@ package randori.nodejs
 		 * console.log(&#39;The &quot;data to append&quot; was appended to file!&#39;);
 		 * });</code></pre>
 		 * 
-		*/
-		public function appendFile(filename:*, data:*, encoding:*, callback:*):void
-		{
+		 */
+		public static function appendFile(filename:*, data:*, encoding:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>The synchronous version of <code>fs.appendFile</code>.
 		 * </p>
 		 * 
-		*/
-		public function appendFileSync(filename:*, data:*, encoding:*):void
-		{
+		 */
+		public static function appendFileSync(filename:*, data:*, encoding:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Watch for changes on <code>filename</code>. The callback <code>listener</code> will be called each
 		 * time the file is accessed.
 		 * </p>
@@ -733,12 +683,11 @@ package randori.nodejs
 		 * you need to compare <code>curr.mtime</code> and <code>prev.mtime</code>.
 		 * </p>
 		 * 
-		*/
-		public function watchFile(filename:*, options:*, listener:*):void
-		{
+		 */
+		public static function watchFile(filename:*, options:*, listener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Stop watching for changes on <code>filename</code>. If <code>listener</code> is specified, only that
 		 * particular listener is removed. Otherwise, <em>all</em> listeners are removed and you
 		 * have effectively stopped watching <code>filename</code>.
@@ -747,12 +696,11 @@ package randori.nodejs
 		 * no-op, not an error.
 		 * </p>
 		 * 
-		*/
-		public function unwatchFile(filename:*, listener:*):void
-		{
+		 */
+		public static function unwatchFile(filename:*, listener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Watch for changes on <code>filename</code>, where <code>filename</code> is either a file or a
 		 * directory.  The returned object is a <a href="#fs_class_fs_fswatcher">fs.FSWatcher</a>.
 		 * </p>
@@ -766,12 +714,11 @@ package randori.nodejs
 		 * the event.
 		 * </p>
 		 * 
-		*/
-		public function watch(filename:*, options:*, listener:*):void
-		{
+		 */
+		public static function watch(filename:*, options:*, listener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Test whether or not the given path exists by checking with the file system.
 		 * Then call the <code>callback</code> argument with either true or false.  Example:
 		 * </p>
@@ -779,21 +726,19 @@ package randori.nodejs
 		 * util.debug(exists ? &quot;it&#39;s there&quot; : &quot;no passwd!&quot;);
 		 * });</code></pre>
 		 * 
-		*/
-		public function exists(path:*, callback:*):void
-		{
+		 */
+		public static function exists(path:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Synchronous version of <code>fs.exists</code>.
 		 * </p>
 		 * 
-		*/
-		public function existsSync(path:*):void
-		{
+		 */
+		public static function existsSync(path:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns a new ReadStream object (See <code>Readable Stream</code>).
 		 * </p>
 		 * <p><code>options</code> is an object with the following defaults:
@@ -812,12 +757,11 @@ package randori.nodejs
 		 * </p>
 		 * <pre><code>fs.createReadStream(&#39;sample.txt&#39;, {start: 90, end: 99});</code></pre>
 		 * 
-		*/
-		public function createReadStream(path:*, options:*):void
-		{
+		 */
+		public static function createReadStream(path:*, options:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns a new WriteStream object (See <code>Writable Stream</code>).
 		 * </p>
 		 * <p><code>options</code> is an object with the following defaults:
@@ -831,9 +775,16 @@ package randori.nodejs
 		 * default mode <code>w</code>.
 		 * </p>
 		 * 
-		*/
-		public function createWriteStream(path:*, options:*):void
-		{
+		 */
+		public static function createWriteStream(path:*, options:*):void {
+		}
+		
+		public function utimes(...params):* {
+			return null;
+		}
+		
+		public function futimes(...params):* {
+			return null;
 		}
 	}
 }

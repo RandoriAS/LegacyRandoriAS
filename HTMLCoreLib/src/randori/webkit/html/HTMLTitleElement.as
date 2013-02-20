@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLTitleElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('title')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLTitleElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('title')")]
 	/**
 	*  Creates a new <code>HTMLTitleElement</code> instance.
 	*/

@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLTableCaptionElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('caption')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLTableCaptionElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('caption')")]
 	/**
 	*  Creates a new <code>HTMLTableCaptionElement</code> instance.
 	*/

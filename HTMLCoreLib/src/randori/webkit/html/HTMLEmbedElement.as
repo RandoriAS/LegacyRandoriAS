@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLEmbedElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('embed')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLEmbedElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('embed')")]
 	/**
 	*  Creates a new <code>HTMLEmbedElement</code> instance.
 	*/

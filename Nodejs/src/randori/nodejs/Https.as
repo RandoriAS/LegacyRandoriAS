@@ -15,19 +15,25 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Https
-	{
-		public function Https()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: https.json
+	 */
+	[JavaScript(export="false", name="https")]
+	public class Https {
 		
-		/*
+		/**
+		 * <p>Global instance of [https.Agent][] for all HTTPS client requests.
+		 * </p>
+		 * 
+		 */
+		public static var globalAgent:HttpAgent;
+		
+		/**
 		 * <p>Returns a new HTTPS web server object. The <code>options</code> is similar to
 		 * [tls.createServer()][].  The <code>requestListener</code> is a function which is
 		 * automatically added to the <code>&#39;request&#39;</code> event.
@@ -57,12 +63,11 @@ package randori.nodejs
 		 * res.end(&quot;hello world\n&quot;);
 		 * }).listen(8000);</code></pre>
 		 * 
-		*/
-		public function createServer(options:*, requestListener:*):void
-		{
+		 */
+		public static function createServer(options:*, requestListener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Makes a request to a secure web server.
 		 * </p>
 		 * <p><code>options</code> can be an object or a string. If <code>options</code> is a string, it is
@@ -163,12 +168,11 @@ package randori.nodejs
 		 * ...
 		 * }</code></pre>
 		 * 
-		*/
-		public function request(options:*, callback:*):void
-		{
+		 */
+		public static function request(options:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Like <code>http.get()</code> but for HTTPS.
 		 * </p>
 		 * <p><code>options</code> can be an object or a string. If <code>options</code> is a string, it is
@@ -187,9 +191,8 @@ package randori.nodejs
 		 * console.error(e);
 		 * });</code></pre>
 		 * 
-		*/
-		public function get(options:*, callback:*):void
-		{
+		 */
+		public static function get(options:*, callback:*):void {
 		}
 	}
 }

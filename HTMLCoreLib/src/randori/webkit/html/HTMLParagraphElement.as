@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLParagraphElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('p')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLParagraphElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('p')")]
 	/**
 	*  Creates a new <code>HTMLParagraphElement</code> instance.
 	*/

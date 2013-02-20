@@ -44,6 +44,7 @@ package randori.webkit.html
 import randori.webkit.dom.NodeList;
 
 [JavaScript(export="false", name="HTMLButtonElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('button')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -51,7 +52,6 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLButtonElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('button')")]
 	/**
 	*  Creates a new <code>HTMLButtonElement</code> instance.
 	*/

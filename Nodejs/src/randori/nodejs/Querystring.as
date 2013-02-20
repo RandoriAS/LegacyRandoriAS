@@ -15,19 +15,34 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Querystring
-	{
-		public function Querystring()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: querystring.json
+	 */
+	[JavaScript(export="false", name="querystring")]
+	public class Querystring {
 		
-		/*
+		/**
+		 * <p>The escape function used by <code>querystring.stringify</code>,
+		 * provided so that it could be overridden if necessary.
+		 * </p>
+		 * 
+		 */
+		public static var escape:Function;
+		
+		/**
+		 * <p>The unescape function used by <code>querystring.parse</code>,
+		 * provided so that it could be overridden if necessary.
+		 * </p>
+		 * 
+		 */
+		public static var unescape:Function;
+		
+		/**
 		 * <p>Serialize an object to a query string.
 		 * Optionally override the default separator (<code>&#39;&amp;&#39;</code>) and assignment (<code>&#39;=&#39;</code>)
 		 * characters.
@@ -41,12 +56,11 @@ package randori.nodejs
 		 * // returns
 		 * &#39;foo:bar;baz:qux&#39;</code></pre>
 		 * 
-		*/
-		public function stringify(obj:*, sep:*, eq:*):void
-		{
+		 */
+		public static function stringify(obj:*, sep:*, eq:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Deserialize a query string to an object.
 		 * Optionally override the default separator (<code>&#39;&amp;&#39;</code>) and assignment (<code>&#39;=&#39;</code>)
 		 * characters.
@@ -60,9 +74,8 @@ package randori.nodejs
 		 * // returns
 		 * { foo: &#39;bar&#39;, baz: [&#39;qux&#39;, &#39;quux&#39;], corge: &#39;&#39; }</code></pre>
 		 * 
-		*/
-		public function parse(str:*, sep:*, eq:*, options:*):void
-		{
+		 */
+		public static function parse(str:*, sep:*, eq:*, options:*):void {
 		}
 	}
 }

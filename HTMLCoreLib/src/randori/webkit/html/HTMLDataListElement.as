@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", nativecondition="DATALIST_ELEMENT", name="HTMLDataListElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('datalist')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLDataListElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('datalist')")]
 	/**
 	*  Creates a new <code>HTMLDataListElement</code> instance.
 	*/

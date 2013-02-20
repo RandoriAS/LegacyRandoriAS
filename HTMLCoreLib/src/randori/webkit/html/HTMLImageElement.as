@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLImageElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('img')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLImageElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('img')")]
 	/**
 	*  Creates a new <code>HTMLImageElement</code> instance.
 	*/

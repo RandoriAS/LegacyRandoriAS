@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLSpanElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('span')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLSpanElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('span')")]
 	/**
 	*  Creates a new <code>HTMLSpanElement</code> instance.
 	*/

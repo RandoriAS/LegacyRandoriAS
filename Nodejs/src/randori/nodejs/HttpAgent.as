@@ -15,16 +15,39 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Events
-	{
-		public function Events()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: http.json
+	 */
+	[JavaScript(export="false", name="http.Agent")]
+	public class HttpAgent {
+		
+		/**
+		 * <p>By default set to 5. Determines how many concurrent sockets the agent can have
+		 * open per host.
+		 * </p>
+		 * 
+		 */
+		public var maxSockets:int;
+		
+		/**
+		 * <p>An object which contains arrays of sockets currently in use by the Agent. Do not
+		 * modify.
+		 * </p>
+		 * 
+		 */
+		public var sockets:Object;
+		
+		/**
+		 * <p>An object which contains queues of requests that have not yet been assigned to
+		 * sockets. Do not modify.
+		 * </p>
+		 * 
+		 */
+		public var requests:Object;
 	}
 }

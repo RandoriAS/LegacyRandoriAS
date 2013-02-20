@@ -43,6 +43,7 @@ package randori.webkit.svg
 
 
 [JavaScript(export="false", nativecondition="SVG", name="SVGVKernElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('vkern')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.svg
  */
 public class SVGVKernElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('vkern')")]
 	/**
 	*  Creates a new <code>SVGVKernElement</code> instance.
 	*/
