@@ -210,6 +210,7 @@ namespace WebIDLParser
                 commentList.Add("@throw " + exceptionName);
             }
         }
+
         private void InsertReturnDescription(XmlNode returnNode, List<string> commentList)
         {
             var lines = SplitXMLElementString(returnNode.SelectNodes("descr")[0]);
@@ -436,7 +437,7 @@ namespace WebIDLParser
 
             var isSupplemental = this.isSupplemental();
 
-            jsAttributes.Add("Export", "\"false\"");
+            jsAttributes.Add("export", "\"false\"");
 
             var attr = attributes.FindAll(a => a is TNameAttribute).Cast<TNameAttribute>().FirstOrDefault(a => a.name == "Conditional");
             if (attr != null)
@@ -445,12 +446,13 @@ namespace WebIDLParser
             }
 
             if (aliasName == "") aliasName = name; //Give all types an Name-attribute (without namespace)
-            if (aliasName != "") jsAttributes.Add("Name", "\"" + aliasName + "\"");
+            if (aliasName != "") jsAttributes.Add("name", "\"" + aliasName + "\"");
 
             bool isDynamic = false;
             isDynamic = (members.FirstOrDefault(c => c.name == "this") != null);
 
             sb.Append("[JavaScript(" + jsAttributes.ToString() + ")]" + Environment.NewLine);
+            CheckForConstructorAnnotation(sb);
             string typeType = "class";
             if (isInterface) typeType = "interface";
             if (isDynamic)
@@ -520,6 +522,16 @@ namespace WebIDLParser
                 writeInterfaceTypes(sb, true);
 
             sb.Append("}" + Environment.NewLine + Environment.NewLine);
+        }
+
+        private void CheckForConstructorAnnotation(StringBuilder sb)
+        {
+            var ctor = members.Find(m => m.name == "ctor");
+            if ((ctor != null) && (ctor.aliasName != null) && (ctor.aliasName.Length > 0))
+            {
+                sb.AppendLine("[JavaScriptConstructor(factoryMethod=\"" + ctor.aliasName + "\")]");
+                ctor.aliasName = "";
+            }
         }
 
         private bool IsInBaseTypes(TMember mem)
@@ -874,8 +886,6 @@ namespace WebIDLParser
             tagName = getCreateElementMethodTagName(tagName, typeName);
             if (string.IsNullOrEmpty(tagName)) return null;
             var method = new TMethod(this) { name = "ctor", aliasName = "document.createElement('" + tagName + "')" };
-            method.jsAttributes.Add("OmitParanthesis", "\"true\"");
-            method.jsAttributes.Add("OmitNewOperator", "\"true\"");
             return method;
         }
 

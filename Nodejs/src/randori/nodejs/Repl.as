@@ -15,19 +15,18 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Repl
-	{
-		public function Repl()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: repl.json
+	 */
+	[JavaScript(export="false", name="repl")]
+	public class Repl {
 		
-		/*
+		/**
 		 * <p>Returns and starts a <code>REPLServer</code> instance. Accepts an &quot;options&quot; Object that
 		 * takes the following values:
 		 * </p>
@@ -114,9 +113,8 @@ package randori.nodejs
 		 * see: <a href="https://gist.github.com/2053342">https://gist.github.com/2053342</a>
 		 * </p>
 		 * 
-		*/
-		public function start(options:*):void
-		{
+		 */
+		public static function start(options:*):void {
 		}
 	}
 }

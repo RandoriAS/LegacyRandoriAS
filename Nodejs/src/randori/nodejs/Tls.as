@@ -15,19 +15,18 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Tls
-	{
-		public function Tls()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: tls.json
+	 */
+	[JavaScript(export="false", name="tls_(ssl)")]
+	public class Tls {
 		
-		/*
+		/**
 		 * <p>Creates a new [tls.Server][].  The <code>connectionListener</code> argument is
 		 * automatically set as a listener for the [secureConnection][] event.  The
 		 * <code>options</code> object has these possibilities:
@@ -143,12 +142,11 @@ package randori.nodejs
 		 * </p>
 		 * <pre><code>openssl s_client -connect 127.0.0.1:8000</code></pre>
 		 * 
-		*/
-		public function createServer(options:*, secureConnectionListener:*):void
-		{
+		 */
+		public static function createServer(options:*, secureConnectionListener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates a new client connection to the given <code>port</code> and <code>host</code> (old API) or
 		 * <code>options.port</code> and <code>options.host</code>. (If <code>host</code> is omitted, it defaults to
 		 * <code>localhost</code>.) <code>options</code> should be an object which specifies:
@@ -239,12 +237,12 @@ package randori.nodejs
 		 * server.close();
 		 * });</code></pre>
 		 * 
-		*/
-		public function connect(port:*, host:*, options:*, callback:*):void
-		{
+		 */
+		[JavaScriptMethod(name="connect")]
+		public static function connect1(port:*, host:*, options:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates a new client connection to the given <code>port</code> and <code>host</code> (old API) or
 		 * <code>options.port</code> and <code>options.host</code>. (If <code>host</code> is omitted, it defaults to
 		 * <code>localhost</code>.) <code>options</code> should be an object which specifies:
@@ -335,12 +333,12 @@ package randori.nodejs
 		 * server.close();
 		 * });</code></pre>
 		 * 
-		*/
-		public function connect(options:*, callback:*):void
-		{
+		 */
+		[JavaScriptMethod(name="connect")]
+		public static function connect2(options:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates a new client connection to the given <code>port</code> and <code>host</code> (old API) or
 		 * <code>options.port</code> and <code>options.host</code>. (If <code>host</code> is omitted, it defaults to
 		 * <code>localhost</code>.) <code>options</code> should be an object which specifies:
@@ -431,12 +429,12 @@ package randori.nodejs
 		 * server.close();
 		 * });</code></pre>
 		 * 
-		*/
-		public function connect(port:*, host:*, options:*, callback:*):void
-		{
+		 */
+		[JavaScriptMethod(name="connect")]
+		public static function connect3(port:*, host:*, options:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates a new secure pair object with two streams, one of which reads/writes
 		 * encrypted data, and one reads/writes cleartext data.
 		 * Generally the encrypted one is piped to/from an incoming encrypted data stream,
@@ -460,9 +458,12 @@ package randori.nodejs
 		 * <code>encrypted</code> stream properties.
 		 * </p>
 		 * 
-		*/
-		public function createSecurePair(credentials:*, isServer:*, requestCert:*, rejectUnauthorized:*):void
-		{
+		 */
+		public static function createSecurePair(credentials:*, isServer:*, requestCert:*, rejectUnauthorized:*):void {
+		}
+		
+		public function connect(...params):* {
+			return null;
 		}
 	}
 }

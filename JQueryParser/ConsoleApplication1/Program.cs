@@ -73,7 +73,6 @@ namespace ConsoleApplication1
             {
                 var Class = ClassLookup[key];
                 AddImports(Class, Builder.Class2Unit[key]);
-                NormalizeMethods(Class);
                 if (Class.Name == "JQueryStatic")
                 {
                     var method = Builder.AddMethod(Class, "J", "JQuery");
@@ -84,7 +83,7 @@ namespace ConsoleApplication1
                 }
             }
 
-            var provider = new AS3CodeProvider();
+            var provider = new AS3CodeProvider(Builder);
             foreach (var unit in Builder.Units)
             {
                 SerializeClass(unit, provider);
@@ -93,73 +92,6 @@ namespace ConsoleApplication1
             Console.WriteLine("Finished, press any key...");
             Console.ReadKey();
 
-        }
-
-        private static void NormalizeMethods(CodeTypeDeclaration classDef)
-        {
-            var methods = classDef.Members.Cast<CodeTypeMember>().ToList<CodeTypeMember>().FindAll(c => c is CodeMemberMethod).Cast<CodeMemberMethod>().ToList<CodeMemberMethod>();
-            methods.ForEach(c => ProcessParameter((CodeMemberMethod)c));
-            DisambiguateMethodNames(methods, classDef);
-            AddAttributesForRenamedMethod(methods);
-        }
-
-        private static void AddAttributesForRenamedMethod(List<CodeMemberMethod> methods)
-        {
-            methods.FindAll(m => m.Name != (string)m.UserData["ActionscriptName"]).ForEach(m => Builder.AddMethodAttributeArgument(m, "name", m.Name));
-        }
-
-        private static void DisambiguateMethodNames(List<CodeMemberMethod> methods, CodeTypeDeclaration classDef)
-        {
-            var multiples = methods.FindAll(m => methods.FindAll(m1 => m1.Name == m.Name).Count > 1).Select(c => c.Name).Distinct().Cast<String>().ToList<String>();
-            multiples.ForEach(n => DisambiguateName(n, methods, classDef));
-        }
-
-        private static void DisambiguateName(string Name, List<CodeMemberMethod> methods, CodeTypeDeclaration classDef)
-        {
-            var index = 0;
-            methods.FindAll(m => m.Name == Name).ForEach(m => m.UserData["ActionscriptName"] += (++index).ToString());
-            var ArgsMethod = Builder.AddMethod(classDef, Name, "*");
-            ArgsMethod.UserData["IsAsterisk"] = true;
-            var Param = Builder.AddParameter("params", "*", ArgsMethod, null, false);
-            Param.UserData["IsRestParams"] = true;
-        }
-
-        private static void ProcessParameter(CodeMemberMethod codeMemberMethod)
-        {
-            CheckOptionalMethodParameters(codeMemberMethod.Parameters);
-            DisambiguateMethodParameterNames(codeMemberMethod.Parameters);
-        }
-
-        private static void DisambiguateMethodParameterNames(CodeParameterDeclarationExpressionCollection parameters)
-        {
-            var list = parameters.Cast<CodeParameterDeclarationExpression>().ToList<CodeParameterDeclarationExpression>();
-            list.ForEach(p => DisambiguateMethodParameterName(p.Name, list));
-        }
-
-        private static void DisambiguateMethodParameterName(string Name, List<CodeParameterDeclarationExpression> parameters)
-        {
-            var namedParams = parameters.FindAll(p => p.Name == Name);
-            if (namedParams.Count > 1)
-            {
-                int index = 0;
-                namedParams.ForEach(p => p.Name += (++index).ToString());
-            }
-        }
-
-        private static void CheckOptionalMethodParameters(CodeParameterDeclarationExpressionCollection parameters)
-        {
-            var startChanging = false;
-            foreach (CodeParameterDeclarationExpression parameter in parameters)
-            {
-                if (!startChanging)
-                {
-                    startChanging = Builder.IsOptionalParameter(parameter);
-                }
-                else
-                {
-                    Builder.MarkParameterAsOptional(parameter);
-                }
-            }
         }
 
         private static void AddMethodsToPromise(CodeTypeDeclaration classDefPromise, CodeTypeDeclaration classDefDeferred)

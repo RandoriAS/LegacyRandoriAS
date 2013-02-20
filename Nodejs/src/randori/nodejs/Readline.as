@@ -15,19 +15,18 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Readline
-	{
-		public function Readline()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: readline.json
+	 */
+	[JavaScript(export="false", name="readline")]
+	public class Readline {
 		
-		/*
+		/**
 		 * <p>Creates a readline <code>Interface</code> instance. Accepts an &quot;options&quot; Object that takes
 		 * the following values:
 		 * </p>
@@ -86,9 +85,8 @@ package randori.nodejs
 		 * (<code>process.stdout</code> does this automatically when it is a TTY).
 		 * </p>
 		 * 
-		*/
-		public function createInterface(options:*):void
-		{
+		 */
+		public static function createInterface(options:*):void {
 		}
 	}
 }

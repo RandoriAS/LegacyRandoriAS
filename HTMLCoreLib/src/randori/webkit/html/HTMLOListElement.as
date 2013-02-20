@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLOListElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('ol')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLOListElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('ol')")]
 	/**
 	*  Creates a new <code>HTMLOListElement</code> instance.
 	*/

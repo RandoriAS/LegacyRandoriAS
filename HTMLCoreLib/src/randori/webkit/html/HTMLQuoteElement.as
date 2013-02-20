@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLQuoteElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('quote')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLQuoteElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('quote')")]
 	/**
 	*  Creates a new <code>HTMLQuoteElement</code> instance.
 	*/

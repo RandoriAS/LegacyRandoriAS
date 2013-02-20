@@ -15,16 +15,33 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Stream
-	{
-		public function Stream()
-		{
-			super();
+	
+	/**
+	 * Generated from file: tty.json
+	 */
+	[JavaScript(export="false")]
+	public class ReadStream {
+		
+		/**
+		 * <p>A <code>Boolean</code> that is initialized to <code>false</code>. It represents the current &quot;raw&quot; state
+		 * of the <code>tty.ReadStream</code> instance.
+		 * </p>
+		 * 
+		 */
+		public var isRaw:Boolean;
+		
+		/**
+		 * <p><code>mode</code> should be <code>true</code> or <code>false</code>. This sets the properties of the
+		 * <code>tty.ReadStream</code> to act either as a raw device or default. <code>isRaw</code> will be set
+		 * to the resulting mode.
+		 * </p>
+		 * 
+		 */
+		public static function setRawMode(mode:*):void {
 		}
 	}
 }

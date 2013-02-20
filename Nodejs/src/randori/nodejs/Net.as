@@ -15,19 +15,18 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Net
-	{
-		public function Net()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: net.json
+	 */
+	[JavaScript(export="false", name="net")]
+	public class Net {
 		
-		/*
+		/**
 		 * <p>Creates a new TCP server. The <code>connectionListener</code> argument is
 		 * automatically set as a listener for the [&#39;connection&#39;][] event.
 		 * </p>
@@ -66,12 +65,11 @@ package randori.nodejs
 		 * </p>
 		 * <pre><code>nc -U /tmp/echo.sock</code></pre>
 		 * 
-		*/
-		public function createServer(options:*, connectionListener:*):void
-		{
+		 */
+		public static function createServer(options:*, connectionListener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Constructs a new socket object and opens the socket to the given location.
 		 * When the socket is established, the [&#39;connect&#39;][] event will be emitted.
 		 * </p>
@@ -120,12 +118,12 @@ package randori.nodejs
 		 * </p>
 		 * <pre><code>var client = net.connect({path: &#39;/tmp/echo.sock&#39;},</code></pre>
 		 * 
-		*/
-		public function connect(options:*, connectionListener:*):void
-		{
+		 */
+		[JavaScriptMethod(name="connect")]
+		public static function connect1(options:*, connectionListener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Constructs a new socket object and opens the socket to the given location.
 		 * When the socket is established, the [&#39;connect&#39;][] event will be emitted.
 		 * </p>
@@ -174,12 +172,12 @@ package randori.nodejs
 		 * </p>
 		 * <pre><code>var client = net.connect({path: &#39;/tmp/echo.sock&#39;},</code></pre>
 		 * 
-		*/
-		public function connect(options:*, connectionListener:*):void
-		{
+		 */
+		[JavaScriptMethod(name="connect")]
+		public static function connect2(options:*, connectionListener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Constructs a new socket object and opens the socket to the given location.
 		 * When the socket is established, the [&#39;connect&#39;][] event will be emitted.
 		 * </p>
@@ -228,106 +226,111 @@ package randori.nodejs
 		 * </p>
 		 * <pre><code>var client = net.connect({path: &#39;/tmp/echo.sock&#39;},</code></pre>
 		 * 
-		*/
-		public function createConnection(options:*, connectionListener:*):void
-		{
+		 */
+		[JavaScriptMethod(name="createConnection")]
+		public static function createConnection1(options:*, connectionListener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates a TCP connection to <code>port</code> on <code>host</code>. If <code>host</code> is omitted,
 		 * <code>&#39;localhost&#39;</code> will be assumed.
 		 * The <code>connectListener</code> parameter will be added as an listener for the
 		 * [&#39;connect&#39;][] event.
 		 * </p>
 		 * 
-		*/
-		public function connect(port:*, host:*, connectListener:*):void
-		{
+		 */
+		[JavaScriptMethod(name="connect")]
+		public static function connect3(port:*, host:*, connectListener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates a TCP connection to <code>port</code> on <code>host</code>. If <code>host</code> is omitted,
 		 * <code>&#39;localhost&#39;</code> will be assumed.
 		 * The <code>connectListener</code> parameter will be added as an listener for the
 		 * [&#39;connect&#39;][] event.
 		 * </p>
 		 * 
-		*/
-		public function connect(port:*, host:*, connectListener:*):void
-		{
+		 */
+		[JavaScriptMethod(name="connect")]
+		public static function connect4(port:*, host:*, connectListener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates a TCP connection to <code>port</code> on <code>host</code>. If <code>host</code> is omitted,
 		 * <code>&#39;localhost&#39;</code> will be assumed.
 		 * The <code>connectListener</code> parameter will be added as an listener for the
 		 * [&#39;connect&#39;][] event.
 		 * </p>
 		 * 
-		*/
-		public function createConnection(port:*, host:*, connectListener:*):void
-		{
+		 */
+		[JavaScriptMethod(name="createConnection")]
+		public static function createConnection2(port:*, host:*, connectListener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates unix socket connection to <code>path</code>.
 		 * The <code>connectListener</code> parameter will be added as an listener for the
 		 * [&#39;connect&#39;][] event.
 		 * </p>
 		 * 
-		*/
-		public function connect(path:*, connectListener:*):void
-		{
+		 */
+		[JavaScriptMethod(name="connect")]
+		public static function connect5(path:*, connectListener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates unix socket connection to <code>path</code>.
 		 * The <code>connectListener</code> parameter will be added as an listener for the
 		 * [&#39;connect&#39;][] event.
 		 * </p>
 		 * 
-		*/
-		public function connect(path:*, connectListener:*):void
-		{
+		 */
+		[JavaScriptMethod(name="connect")]
+		public static function connect6(path:*, connectListener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates unix socket connection to <code>path</code>.
 		 * The <code>connectListener</code> parameter will be added as an listener for the
 		 * [&#39;connect&#39;][] event.
 		 * </p>
 		 * 
-		*/
-		public function createConnection(path:*, connectListener:*):void
-		{
+		 */
+		[JavaScriptMethod(name="createConnection")]
+		public static function createConnection3(path:*, connectListener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Tests if input is an IP address. Returns 0 for invalid strings,
 		 * returns 4 for IP version 4 addresses, and returns 6 for IP version 6 addresses.
 		 * </p>
 		 * 
-		*/
-		public function isIP(input:*):void
-		{
+		 */
+		public static function isIP(input:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns true if input is a version 4 IP address, otherwise returns false.
 		 * </p>
 		 * 
-		*/
-		public function isIPv4(input:*):void
-		{
+		 */
+		public static function isIPv4(input:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns true if input is a version 6 IP address, otherwise returns false.
 		 * </p>
 		 * 
-		*/
-		public function isIPv6(input:*):void
-		{
+		 */
+		public static function isIPv6(input:*):void {
+		}
+		
+		public function connect(...params):* {
+			return null;
+		}
+		
+		public function createConnection(...params):* {
+			return null;
 		}
 	}
 }

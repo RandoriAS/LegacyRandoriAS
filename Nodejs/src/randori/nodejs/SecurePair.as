@@ -15,16 +15,28 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Module
-	{
-		public function Module()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: tls.json
+	 */
+	[JavaScript(export="false")]
+	public class SecurePair extends EventsEventEmitter {
+		
+		/**
+		 * <p>The event is emitted from the SecurePair once the pair has successfully
+		 * established a secure connection.
+		 * </p>
+		 * <p>Similarly to the checking for the server &#39;secureConnection&#39; event,
+		 * pair.cleartext.authorized should be checked to confirm whether the certificate
+		 * used properly authorized.
+		 * </p>
+		 * 
+		 */
+		[JavaScriptProperty(name="secure")]
+		public var onsecure:Function;
 	}
 }

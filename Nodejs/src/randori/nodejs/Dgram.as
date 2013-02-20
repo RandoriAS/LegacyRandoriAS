@@ -15,19 +15,18 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Dgram
-	{
-		public function Dgram()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: dgram.json
+	 */
+	[JavaScript(export="false", name="dgram")]
+	public class Dgram {
 		
-		/*
+		/**
 		 * <p>Creates a datagram Socket of the specified types.  Valid types are <code>udp4</code>
 		 * and <code>udp6</code>.
 		 * </p>
@@ -39,12 +38,12 @@ package randori.nodejs
 		 * with <code>socket.address().address</code> and <code>socket.address().port</code>.
 		 * </p>
 		 * 
-		*/
-		public function createSocket(type:*, callback:*):void
-		{
+		 */
+		[JavaScriptMethod(name="createSocket")]
+		public static function createSocket1(type:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Creates a datagram Socket of the specified types.  Valid types are <code>udp4</code>
 		 * and <code>udp6</code>.
 		 * </p>
@@ -56,9 +55,13 @@ package randori.nodejs
 		 * with <code>socket.address().address</code> and <code>socket.address().port</code>.
 		 * </p>
 		 * 
-		*/
-		public function createSocket(type:*, callback:*):void
-		{
+		 */
+		[JavaScriptMethod(name="createSocket")]
+		public static function createSocket2(type:*, callback:*):void {
+		}
+		
+		public function createSocket(...params):* {
+			return null;
 		}
 	}
 }

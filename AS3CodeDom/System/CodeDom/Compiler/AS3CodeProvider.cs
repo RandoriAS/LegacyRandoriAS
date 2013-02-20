@@ -26,14 +26,9 @@ namespace System.CodeDom.Compiler
             get { return "as"; }
         }
 
-        public AS3CodeProvider(IDictionary<string, string> providerOptions = null)
+        public AS3CodeProvider(ClassBuilder builder)
         {
-            /*if (providerOptions == null)
-            {
-                throw new ArgumentNullException("providerOptions");
-            }*/
-
-            generator = new ActionscriptCodeGenerator();
+            generator = new ActionscriptCodeGenerator(builder);
         }
 
         [Obsolete]
@@ -76,7 +71,6 @@ namespace System.CodeDom.Compiler
         private CodeTypeDeclaration currentClass;
         private CodeTypeMember currentMember;
         private bool inNestedBinary = false;
-        private IDictionary<string, string> provOptions;
 
         private const int ParameterMultilineThreshold = 15;
         private const int MaxLineLength = 80;
@@ -90,8 +84,6 @@ namespace System.CodeDom.Compiler
                                                          GeneratorSupport.MultipleInterfaceMembers |
                                                          GeneratorSupport.PublicStaticMembers |
                                                          GeneratorSupport.ComplexExpressions;
-
-        //private static Regex outputReg;
 
         private static readonly string[][] keywords = new string[][] {
             null,           // 1 character
@@ -163,12 +155,13 @@ namespace System.CodeDom.Compiler
         {
         }
 
-        internal ActionscriptCodeGenerator(IDictionary<string, string> providerOptions)
+        internal ActionscriptCodeGenerator(ClassBuilder builder)
         {
-            provOptions = providerOptions;
+            classBuilder = builder;
         }
 
         private bool generatingForLoop = false;
+        private ClassBuilder classBuilder;
 
         private string FileExtension { get { return ".as"; } }
 
@@ -810,38 +803,105 @@ namespace System.CodeDom.Compiler
             return value;
         }
 
-        public void GenerateCodeFromCompileUnit(CodeCompileUnit e, TextWriter w, CodeGeneratorOptions o)
+        public void GenerateCodeFromCompileUnit(CodeCompileUnit unit, TextWriter writer, CodeGeneratorOptions generatorOptions)
         {
             bool setLocal = false;
-            if (output != null && w != output.InnerWriter)
+            if (output != null && writer != output.InnerWriter)
             {
-                throw new InvalidOperationException("Wring output writer");
+                throw new InvalidOperationException("Wrong output writer");
             }
             if (output == null)
             {
                 setLocal = true;
-                options = (o == null) ? new CodeGeneratorOptions() : o;
-                output = new IndentedTextWriter(w, options.IndentString);
+                this.options = (generatorOptions == null) ? new CodeGeneratorOptions() : generatorOptions;
+                output = new IndentedTextWriter(writer, generatorOptions.IndentString);
             }
 
             try
             {
-                GenerateCompileUnit(e);
+                GenerateCompileUnit(unit);
             }
             finally
             {
                 if (setLocal)
                 {
                     output = null;
-                    options = null;
+                    this.options = null;
                 }
             }
         }
 
-        private void GenerateCompileUnit(CodeCompileUnit e)
+        private void NormalizeMethods(CodeTypeDeclaration type)
         {
-            GenerateNamespaces(e);
-            GenerateCompileUnitStart(e);
+            var methods = type.Members.Cast<CodeTypeMember>().ToList<CodeTypeMember>().FindAll(c => c is CodeMemberMethod).Cast<CodeMemberMethod>().ToList<CodeMemberMethod>();
+            methods.ForEach(c => ProcessParameter((CodeMemberMethod)c));
+            DisambiguateMethodNames(methods, type);
+            AddAttributesForRenamedMethod(methods);
+        }
+
+        private void DisambiguateMethodNames(List<CodeMemberMethod> methods, CodeTypeDeclaration classDef)
+        {
+            var multiples = methods.FindAll(m => methods.FindAll(m1 => m1.Name == m.Name).Count > 1).Select(c => c.Name).Distinct().Cast<String>().ToList<String>();
+            multiples.ForEach(n => DisambiguateName(n, methods, classDef));
+        }
+
+        private void DisambiguateName(string Name, List<CodeMemberMethod> methods, CodeTypeDeclaration classDef)
+        {
+            var index = 0;
+            methods.FindAll(m => m.Name == Name).ForEach(m => m.UserData["ActionscriptName"] += (++index).ToString());
+            var ArgsMethod = classBuilder.AddMethod(classDef, Name, "*");
+            ArgsMethod.UserData["IsAsterisk"] = true;
+            var Param = classBuilder.AddParameter("params", "*", ArgsMethod, null, false);
+            Param.UserData["IsRestParams"] = true;
+        }
+
+        private void ProcessParameter(CodeMemberMethod codeMemberMethod)
+        {
+            CheckOptionalMethodParameters(codeMemberMethod.Parameters);
+            DisambiguateMethodParameterNames(codeMemberMethod.Parameters);
+        }
+
+        private void CheckOptionalMethodParameters(CodeParameterDeclarationExpressionCollection parameters)
+        {
+            var startChanging = false;
+            foreach (CodeParameterDeclarationExpression parameter in parameters)
+            {
+                if (!startChanging)
+                {
+                    startChanging = classBuilder.IsOptionalParameter(parameter);
+                }
+                else
+                {
+                    classBuilder.MarkParameterAsOptional(parameter);
+                }
+            }
+        }
+
+        private void DisambiguateMethodParameterNames(CodeParameterDeclarationExpressionCollection parameters)
+        {
+            var list = parameters.Cast<CodeParameterDeclarationExpression>().ToList<CodeParameterDeclarationExpression>();
+            list.ForEach(p => DisambiguateMethodParameterName(p.Name, list));
+        }
+
+        private void DisambiguateMethodParameterName(string Name, List<CodeParameterDeclarationExpression> parameters)
+        {
+            var namedParams = parameters.FindAll(p => p.Name == Name);
+            if (namedParams.Count > 1)
+            {
+                int index = 0;
+                namedParams.ForEach(p => p.Name += (++index).ToString());
+            }
+        }
+
+        private void AddAttributesForRenamedMethod(List<CodeMemberMethod> methods)
+        {
+            methods.FindAll(m => m.Name != (string)m.UserData["ActionscriptName"]).ForEach(m => classBuilder.AddMethodAttributeArgument(m, "name", m.Name));
+        }
+
+        private void GenerateCompileUnit(CodeCompileUnit unit)
+        {
+            GenerateNamespaces(unit);
+            GenerateCompileUnitStart(unit);
         }
 
         private void GenerateNamespaces(CodeCompileUnit e)
@@ -1840,23 +1900,23 @@ namespace System.CodeDom.Compiler
             return typeRef.BaseType;
         }
 
-        public void GenerateCodeFromNamespace(CodeNamespace e, TextWriter w, CodeGeneratorOptions o)
+        public void GenerateCodeFromNamespace(CodeNamespace nameSpace, TextWriter writer, CodeGeneratorOptions options)
         {
             bool setLocal = false;
-            if (output != null && w != output.InnerWriter)
+            if (output != null && writer != output.InnerWriter)
             {
                 throw new InvalidOperationException("Wrong output writer");
             }
             if (output == null)
             {
                 setLocal = true;
-                options = (o == null) ? new CodeGeneratorOptions() : o;
-                output = new IndentedTextWriter(w, options.IndentString);
+                options = (options == null) ? new CodeGeneratorOptions() : options;
+                output = new IndentedTextWriter(writer, options.IndentString);
             }
 
             try
             {
-                GenerateNamespace(e);
+                GenerateNamespace(nameSpace);
             }
             finally
             {
@@ -1868,20 +1928,20 @@ namespace System.CodeDom.Compiler
             }
         }
 
-        private void GenerateNamespace(CodeNamespace e)
+        private void GenerateNamespace(CodeNamespace nameSpace)
         {
-            GenerateCommentStatements(e.Comments);
-            GenerateNamespaceStart(e);
+            GenerateCommentStatements(nameSpace.Comments);
+            GenerateNamespaceStart(nameSpace);
 
-            if (GetUserData(e, "GenerateImports", true))
+            if (GetUserData(nameSpace, "GenerateImports", true))
             {
-                GenerateNamespaceImports(e);
+                GenerateNamespaceImports(nameSpace);
             }
 
             Output.WriteLine("");
 
-            GenerateTypes(e);
-            GenerateNamespaceEnd(e);
+            GenerateTypes(nameSpace);
+            GenerateNamespaceEnd(nameSpace);
         }
 
         private void GenerateNamespaceEnd(CodeNamespace e)
@@ -1893,15 +1953,16 @@ namespace System.CodeDom.Compiler
             }
         }
 
-        private void GenerateTypes(CodeNamespace e)
+        private void GenerateTypes(CodeNamespace nameSpace)
         {
-            foreach (CodeTypeDeclaration c in e.Types)
+            foreach (CodeTypeDeclaration type in nameSpace.Types)
             {
+                NormalizeMethods(type);
                 if (options.BlankLinesBetweenMembers)
                 {
                     Output.WriteLine();
                 }
-                ((ICodeGenerator)this).GenerateCodeFromType(c, output.InnerWriter, options);
+                ((ICodeGenerator)this).GenerateCodeFromType(type, output.InnerWriter, options);
             }
         }
 
@@ -2471,7 +2532,7 @@ namespace System.CodeDom.Compiler
             {
                 if (first)
                 {
-                    Output.Write(" : ");
+                    Output.Write(" extends ");
                     first = false;
                 }
                 else

@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLBodyElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('body')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLBodyElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('body')")]
 	/**
 	*  Creates a new <code>HTMLBodyElement</code> instance.
 	*/

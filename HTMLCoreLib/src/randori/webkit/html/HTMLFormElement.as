@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLFormElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('form')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLFormElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('form')")]
 	/**
 	*  Creates a new <code>HTMLFormElement</code> instance.
 	*/

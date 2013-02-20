@@ -15,42 +15,67 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Http
-	{
-		public function Http()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: http.json
+	 */
+	[JavaScript(export="false", name="http")]
+	public class Http {
 		
-		/*
+		/**
+		 * <p>A collection of all the standard HTTP response status codes, and the
+		 * short description of each.  For example, <code>http.STATUS_CODES[404] === &#39;Not
+		 * Found&#39;</code>.
+		 * </p>
+		 * 
+		 */
+		public static var STATUS_CODES:Object;
+		
+		/**
+		 * <p>Global instance of Agent which is used as the default for all http client
+		 * requests.
+		 * </p>
+		 * 
+		 */
+		public static var globalAgent:HttpAgent;
+		
+		/**
+		 * <p>This object is created when making a request with <code>http.request()</code>. It is
+		 * passed to the <code>&#39;response&#39;</code> event of the request object.
+		 * </p>
+		 * <p>The response implements the [Readable Stream][] interface. This is an
+		 * [EventEmitter][] with the following events:
+		 * </p>
+		 * 
+		 */
+		public static var ClientResponse:Object;
+		
+		/**
 		 * <p>Returns a new web server object.
 		 * </p>
 		 * <p>The <code>requestListener</code> is a function which is automatically
 		 * added to the <code>&#39;request&#39;</code> event.
 		 * </p>
 		 * 
-		*/
-		public function createServer(requestListener:*):void
-		{
+		 */
+		public static function createServer(requestListener:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>This function is <strong>deprecated</strong>; please use [http.request()][] instead.
 		 * Constructs a new HTTP client. <code>port</code> and <code>host</code> refer to the server to be
 		 * connected to.
 		 * </p>
 		 * 
-		*/
-		public function createClient(port:*, host:*):void
-		{
+		 */
+		public static function createClient(port:*, host:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Node maintains several connections per server to make HTTP requests.
 		 * This function allows one to transparently issue requests.
 		 * </p>
@@ -134,12 +159,11 @@ package randori.nodejs
 		 * </li>
 		 * </ul>
 		 * 
-		*/
-		public function request(options:*, callback:*):void
-		{
+		 */
+		public static function request(options:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Since most requests are GET requests without bodies, Node provides this
 		 * convenience method. The only difference between this method and <code>http.request()</code>
 		 * is that it sets the method to GET and calls <code>req.end()</code> automatically.
@@ -152,9 +176,8 @@ package randori.nodejs
 		 * console.log(&quot;Got error: &quot; + e.message);
 		 * });</code></pre>
 		 * 
-		*/
-		public function get(options:*, callback:*):void
-		{
+		 */
+		public static function get(options:*, callback:*):void {
 		}
 	}
 }

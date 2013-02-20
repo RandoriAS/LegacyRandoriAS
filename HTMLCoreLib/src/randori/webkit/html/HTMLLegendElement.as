@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLLegendElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('legend')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLLegendElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('legend')")]
 	/**
 	*  Creates a new <code>HTMLLegendElement</code> instance.
 	*/

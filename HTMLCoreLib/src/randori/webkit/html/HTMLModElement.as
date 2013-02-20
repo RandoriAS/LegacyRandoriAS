@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLModElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('tbody')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLModElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('tbody')")]
 	/**
 	*  Creates a new <code>HTMLModElement</code> instance.
 	*/

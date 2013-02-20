@@ -43,6 +43,7 @@ package randori.webkit.svg
 
 
 [JavaScript(export="false", nativecondition="SVG", name="SVGFontFaceFormatElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('fontfaceformat')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.svg
  */
 public class SVGFontFaceFormatElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('fontfaceformat')")]
 	/**
 	*  Creates a new <code>SVGFontFaceFormatElement</code> instance.
 	*/

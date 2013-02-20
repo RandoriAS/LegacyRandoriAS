@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLParamElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('param')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLParamElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('param')")]
 	/**
 	*  Creates a new <code>HTMLParamElement</code> instance.
 	*/

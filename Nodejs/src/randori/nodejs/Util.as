@@ -15,19 +15,18 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Util
-	{
-		public function Util()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: util.json
+	 */
+	[JavaScript(export="false", name="util")]
+	public class Util {
 		
-		/*
+		/**
 		 * <p>Returns a formatted string using the first argument as a <code>printf</code>-like format.
 		 * </p>
 		 * <p>The first argument is a string that contains zero or more <em>placeholders</em>.
@@ -55,63 +54,57 @@ package randori.nodejs
 		 * </p>
 		 * <pre><code>util.format(1, 2, 3); // &#39;1 2 3&#39;</code></pre>
 		 * 
-		*/
-		public function format(format:*, ...:*):void
-		{
+		 */
+		public static function format(format:*, ...params):void {
 		}
 		
-		/*
+		/**
 		 * <p>A synchronous output function. Will block the process and
 		 * output <code>string</code> immediately to <code>stderr</code>.
 		 * </p>
 		 * <pre><code>require(&#39;util&#39;).debug(&#39;message on stderr&#39;);</code></pre>
 		 * 
-		*/
-		public function debug(string:*):void
-		{
+		 */
+		public static function debug(string:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Same as <code>util.debug()</code> except this will output all arguments immediately to
 		 * <code>stderr</code>.
 		 * </p>
 		 * 
-		*/
-		public function error(...:*):void
-		{
+		 */
+		public static function error(...params):void {
 		}
 		
-		/*
+		/**
 		 * <p>A synchronous output function. Will block the process and output all arguments
 		 * to <code>stdout</code> with newlines after each argument.
 		 * </p>
 		 * 
-		*/
-		public function puts(...:*):void
-		{
+		 */
+		public static function puts(...params):void {
 		}
 		
-		/*
+		/**
 		 * <p>A synchronous output function. Will block the process, cast each argument to a
 		 * string then output to <code>stdout</code>. Does not place newlines after each argument.
 		 * </p>
 		 * 
-		*/
-		public function print(...:*):void
-		{
+		 */
+		public static function print(...params):void {
 		}
 		
-		/*
+		/**
 		 * <p>Output with timestamp on <code>stdout</code>.
 		 * </p>
 		 * <pre><code>require(&#39;util&#39;).log(&#39;Timestamped message.&#39;);</code></pre>
 		 * 
-		*/
-		public function log(string:*):void
-		{
+		 */
+		public static function log(string:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Return a string representation of <code>object</code>, which is useful for debugging.
 		 * </p>
 		 * <p>If <code>showHidden</code> is <code>true</code>, then the object&#39;s non-enumerable properties will be
@@ -141,12 +134,11 @@ package randori.nodejs
 		 * util.inspect(obj);
 		 * // &quot;{nate}&quot;</code></pre>
 		 * 
-		*/
-		public function inspect(object:*, showHidden:*, depth:*, colors:*):void
-		{
+		 */
+		public static function inspect(object:*, showHidden:*, depth:*, colors:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns <code>true</code> if the given &quot;object&quot; is an <code>Array</code>. <code>false</code> otherwise.
 		 * </p>
 		 * <pre><code>var util = require(&#39;util&#39;);
@@ -157,12 +149,11 @@ package randori.nodejs
 		 * util.isArray({})
 		 * // false</code></pre>
 		 * 
-		*/
-		public function isArray(object:*):void
-		{
+		 */
+		public static function isArray(object:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns <code>true</code> if the given &quot;object&quot; is a <code>RegExp</code>. <code>false</code> otherwise.
 		 * </p>
 		 * <pre><code>var util = require(&#39;util&#39;);
@@ -173,12 +164,11 @@ package randori.nodejs
 		 * util.isRegExp({})
 		 * // false</code></pre>
 		 * 
-		*/
-		public function isRegExp(object:*):void
-		{
+		 */
+		public static function isRegExp(object:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns <code>true</code> if the given &quot;object&quot; is a <code>Date</code>. <code>false</code> otherwise.
 		 * </p>
 		 * <pre><code>var util = require(&#39;util&#39;);
@@ -189,12 +179,11 @@ package randori.nodejs
 		 * util.isDate({})
 		 * // false</code></pre>
 		 * 
-		*/
-		public function isDate(object:*):void
-		{
+		 */
+		public static function isDate(object:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Returns <code>true</code> if the given &quot;object&quot; is an <code>Error</code>. <code>false</code> otherwise.
 		 * </p>
 		 * <pre><code>var util = require(&#39;util&#39;);
@@ -205,12 +194,11 @@ package randori.nodejs
 		 * util.isError({ name: &#39;Error&#39;, message: &#39;an error occurred&#39; })
 		 * // false</code></pre>
 		 * 
-		*/
-		public function isError(object:*):void
-		{
+		 */
+		public static function isError(object:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Read the data from <code>readableStream</code> and send it to the <code>writableStream</code>.
 		 * When <code>writableStream.write(data)</code> returns <code>false</code> <code>readableStream</code> will be
 		 * paused until the <code>drain</code> event occurs on the <code>writableStream</code>. <code>callback</code> gets
@@ -218,12 +206,11 @@ package randori.nodejs
 		 * when an error occurs.
 		 * </p>
 		 * 
-		*/
-		public function pump(readableStream:*, writableStream:*, callback:*):void
-		{
+		 */
+		public static function pump(readableStream:*, writableStream:*, callback:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Inherit the prototype methods from one
 		 * <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/constructor">constructor</a>
 		 * into another.  The prototype of <code>constructor</code> will be set to a new
@@ -249,9 +236,8 @@ package randori.nodejs
 		 * })
 		 * stream.write(&quot;It works!&quot;); // Received data: &quot;It works!&quot;</code></pre>
 		 * 
-		*/
-		public function inherits(constructor:*, superConstructor:*):void
-		{
+		 */
+		public static function inherits(constructor:*, superConstructor:*):void {
 		}
 	}
 }

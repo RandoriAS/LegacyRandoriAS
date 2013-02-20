@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLTableColElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('col')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLTableColElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('col')")]
 	/**
 	*  Creates a new <code>HTMLTableColElement</code> instance.
 	*/

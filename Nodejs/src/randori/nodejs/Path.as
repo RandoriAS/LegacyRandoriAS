@@ -15,19 +15,35 @@
  * 
  * 
  * !!!! THIS IS A GENERATED FILE, DO NOT MAKE ANY CHANGES TO IT MANUALLY !!!!
- * @author Randori Node.js generator
+ * @author Randori Nodejs generator
 */
-package randori.nodejs
-{
+package randori.nodejs {
 	
-	public class Path
-	{
-		public function Path()
-		{
-			super();
-		}
+	
+	/**
+	 * Generated from file: path.json
+	 */
+	[JavaScript(export="false", name="path")]
+	public class Path {
 		
-		/*
+		/**
+		 * <p>The platform-specific file separator. <code>&#39;\\&#39;</code> or <code>&#39;/&#39;</code>.
+		 * </p>
+		 * <p>An example on linux:
+		 * </p>
+		 * <pre><code>&#39;foo/bar/baz&#39;.split(path.sep)
+		 * // returns
+		 * [&#39;foo&#39;, &#39;bar&#39;, &#39;baz&#39;]</code></pre>
+		 * <p>An example on windows:
+		 * </p>
+		 * <pre><code>&#39;foo\\bar\\baz&#39;.split(path.sep)
+		 * // returns
+		 * [&#39;foo&#39;, &#39;bar&#39;, &#39;baz&#39;]</code></pre>
+		 * 
+		 */
+		public static var sep:String;
+		
+		/**
 		 * <p>Normalize a string path, taking care of <code>&#39;..&#39;</code> and <code>&#39;.&#39;</code> parts.
 		 * </p>
 		 * <p>When multiple slashes are found, they&#39;re replaced by a single one;
@@ -40,12 +56,11 @@ package randori.nodejs
 		 * // returns
 		 * &#39;/foo/bar/baz/asdf&#39;</code></pre>
 		 * 
-		*/
-		public function normalize(p:*):void
-		{
+		 */
+		public static function normalize(p:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Join all arguments together and normalize the resulting path.
 		 * Non-string arguments are ignored.
 		 * </p>
@@ -58,12 +73,11 @@ package randori.nodejs
 		 * // returns
 		 * &#39;foo/bar&#39;</code></pre>
 		 * 
-		*/
-		public function join(path1:*, path2:*, ...:*):void
-		{
+		 */
+		public static function join(path1:*, path2:*, ...params):void {
 		}
 		
-		/*
+		/**
 		 * <p>Resolves <code>to</code> to an absolute path.
 		 * </p>
 		 * <p>If <code>to</code> isn&#39;t already absolute <code>from</code> arguments are prepended in right to left
@@ -97,12 +111,11 @@ package randori.nodejs
 		 * // if currently in /home/myself/node, it returns
 		 * &#39;/home/myself/node/wwwroot/static_files/gif/image.gif&#39;</code></pre>
 		 * 
-		*/
-		public function resolve(from ...:*, to:*):void
-		{
+		 */
+		public static function resolve(fro:*, to:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Solve the relative path from <code>from</code> to <code>to</code>.
 		 * </p>
 		 * <p>At times we have two absolute paths, and we need to derive the relative
@@ -119,12 +132,11 @@ package randori.nodejs
 		 * // returns
 		 * &#39;../../impl/bbb&#39;</code></pre>
 		 * 
-		*/
-		public function relative(from:*, to:*):void
-		{
+		 */
+		public static function relative(from:*, to:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Return the directory name of a path.  Similar to the Unix <code>dirname</code> command.
 		 * </p>
 		 * <p>Example:
@@ -133,12 +145,11 @@ package randori.nodejs
 		 * // returns
 		 * &#39;/foo/bar/baz/asdf&#39;</code></pre>
 		 * 
-		*/
-		public function dirname(p:*):void
-		{
+		 */
+		public static function dirname(p:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Return the last portion of a path.  Similar to the Unix <code>basename</code> command.
 		 * </p>
 		 * <p>Example:
@@ -150,12 +161,11 @@ package randori.nodejs
 		 * // returns
 		 * &#39;quux&#39;</code></pre>
 		 * 
-		*/
-		public function basename(p:*, ext:*):void
-		{
+		 */
+		public static function basename(p:*, ext:*):void {
 		}
 		
-		/*
+		/**
 		 * <p>Return the extension of the path, from the last &#39;.&#39; to end of string
 		 * in the last portion of the path.  If there is no &#39;.&#39; in the last portion
 		 * of the path or the first character of it is &#39;.&#39;, then it returns
@@ -171,9 +181,8 @@ package randori.nodejs
 		 * // returns
 		 * &#39;&#39;</code></pre>
 		 * 
-		*/
-		public function extname(p:*):void
-		{
+		 */
+		public static function extname(p:*):void {
 		}
 	}
 }

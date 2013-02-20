@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLTableSectionElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('tbody')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLTableSectionElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('tbody')")]
 	/**
 	*  Creates a new <code>HTMLTableSectionElement</code> instance.
 	*/

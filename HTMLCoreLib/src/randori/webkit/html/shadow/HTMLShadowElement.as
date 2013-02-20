@@ -45,6 +45,7 @@ import randori.webkit.html.HTMLElement;
 import randori.webkit.dom.ShadowRoot;
 
 [JavaScript(export="false", nativecondition="SHADOW_DOM", name="HTMLShadowElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('shadow')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -52,7 +53,6 @@ import randori.webkit.dom.ShadowRoot;
  */
 public class HTMLShadowElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('shadow')")]
 	/**
 	*  Creates a new <code>HTMLShadowElement</code> instance.
 	*/

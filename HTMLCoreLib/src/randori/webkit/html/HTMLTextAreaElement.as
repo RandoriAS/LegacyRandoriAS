@@ -44,6 +44,7 @@ package randori.webkit.html
 import randori.webkit.dom.NodeList;
 
 [JavaScript(export="false", name="HTMLTextAreaElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('textarea')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -51,7 +52,6 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLTextAreaElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('textarea')")]
 	/**
 	*  Creates a new <code>HTMLTextAreaElement</code> instance.
 	*/

@@ -44,6 +44,7 @@ package randori.webkit.html
 import randori.webkit.html.track.TextTrack;
 
 [JavaScript(export="false", nativecondition="VIDEO_TRACK", name="HTMLTrackElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('track')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -51,7 +52,6 @@ import randori.webkit.html.track.TextTrack;
  */
 public class HTMLTrackElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('track')")]
 	/**
 	*  Creates a new <code>HTMLTrackElement</code> instance.
 	*/
