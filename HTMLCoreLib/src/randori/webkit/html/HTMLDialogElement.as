@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", nativecondition="DIALOG_ELEMENT", name="HTMLDialogElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('dialog')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLDialogElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('dialog')")]
 	/**
 	*  Creates a new <code>HTMLDialogElement</code> instance.
 	*/

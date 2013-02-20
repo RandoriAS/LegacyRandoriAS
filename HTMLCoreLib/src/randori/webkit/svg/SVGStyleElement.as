@@ -43,6 +43,7 @@ package randori.webkit.svg
 
 
 [JavaScript(export="false", nativecondition="SVG", name="SVGStyleElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('style')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -51,7 +52,6 @@ package randori.webkit.svg
  */
 public class SVGStyleElement extends SVGElement implements SVGLangSpace
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('style')")]
 	/**
 	*  Creates a new <code>SVGStyleElement</code> instance.
 	*/

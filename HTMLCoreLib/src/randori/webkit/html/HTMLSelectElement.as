@@ -45,6 +45,7 @@ import randori.webkit.dom.Node;
 import randori.webkit.dom.NodeList;
 
 [JavaScript(export="false", name="HTMLSelectElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('select')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -52,7 +53,6 @@ import randori.webkit.dom.NodeList;
  */
 public dynamic class HTMLSelectElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('select')")]
 	/**
 	*  Creates a new <code>HTMLSelectElement</code> instance.
 	*/

@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLBRElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('br')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLBRElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('br')")]
 	/**
 	*  Creates a new <code>HTMLBRElement</code> instance.
 	*/

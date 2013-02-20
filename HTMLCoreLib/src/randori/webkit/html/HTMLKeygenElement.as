@@ -44,6 +44,7 @@ package randori.webkit.html
 import randori.webkit.dom.NodeList;
 
 [JavaScript(export="false", name="HTMLKeygenElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('keygen')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -51,7 +52,6 @@ import randori.webkit.dom.NodeList;
  */
 public class HTMLKeygenElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('keygen')")]
 	/**
 	*  Creates a new <code>HTMLKeygenElement</code> instance.
 	*/

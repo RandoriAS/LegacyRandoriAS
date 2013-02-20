@@ -43,6 +43,7 @@ package randori.webkit.svg
 
 
 [JavaScript(export="false", nativecondition="SVG", name="SVGFEDistantLightElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('fedistantlight')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.svg
  */
 public class SVGFEDistantLightElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('fedistantlight')")]
 	/**
 	*  Creates a new <code>SVGFEDistantLightElement</code> instance.
 	*/

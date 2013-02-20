@@ -172,10 +172,6 @@ namespace WebIDLParser
 
             foreach (var pFile in parsedFiles)
             {
-                if (pFile.outFile.Contains("CSSStyleDeclaration"))
-                {
-                    var k = 0;
-                }
                 pFile.saveFile();
             }
 

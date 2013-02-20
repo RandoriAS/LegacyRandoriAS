@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLFieldSetElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('fieldset')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLFieldSetElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('fieldset')")]
 	/**
 	*  Creates a new <code>HTMLFieldSetElement</code> instance.
 	*/

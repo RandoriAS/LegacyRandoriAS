@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLMarqueeElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('marquee')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLMarqueeElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('marquee')")]
 	/**
 	*  Creates a new <code>HTMLMarqueeElement</code> instance.
 	*/

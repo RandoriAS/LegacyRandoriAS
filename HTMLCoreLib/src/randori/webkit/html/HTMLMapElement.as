@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLMapElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('map')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLMapElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('map')")]
 	/**
 	*  Creates a new <code>HTMLMapElement</code> instance.
 	*/

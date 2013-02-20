@@ -43,6 +43,7 @@ package randori.webkit.svg
 
 
 [JavaScript(export="false", nativecondition="SVG", name="SVGFontFaceUriElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('fontfaceuri')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.svg
  */
 public class SVGFontFaceUriElement extends SVGElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('fontfaceuri')")]
 	/**
 	*  Creates a new <code>SVGFontFaceUriElement</code> instance.
 	*/

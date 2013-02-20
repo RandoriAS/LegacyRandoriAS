@@ -44,6 +44,7 @@ package randori.webkit.html
 import randori.webkit.dom.DocumentFragment;
 
 [JavaScript(export="false", nativecondition="TEMPLATE_ELEMENT", name="HTMLTemplateElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('template')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -51,7 +52,6 @@ import randori.webkit.dom.DocumentFragment;
  */
 public class HTMLTemplateElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('template')")]
 	/**
 	*  Creates a new <code>HTMLTemplateElement</code> instance.
 	*/

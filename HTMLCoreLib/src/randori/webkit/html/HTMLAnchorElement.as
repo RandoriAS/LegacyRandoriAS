@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLAnchorElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('a')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLAnchorElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('a')")]
 	/**
 	*  Creates a new <code>HTMLAnchorElement</code> instance.
 	*/

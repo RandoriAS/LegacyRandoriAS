@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLLIElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('li')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLLIElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('li')")]
 	/**
 	*  Creates a new <code>HTMLLIElement</code> instance.
 	*/

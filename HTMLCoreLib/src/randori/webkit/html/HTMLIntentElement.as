@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", nativecondition="WEB_INTENTS_TAG", name="HTMLIntentElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('intent')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLIntentElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('intent')")]
 	/**
 	*  Creates a new <code>HTMLIntentElement</code> instance.
 	*/

@@ -43,6 +43,7 @@ package randori.webkit.html
 
 
 [JavaScript(export="false", name="HTMLUnknownElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('unknown')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -50,7 +51,6 @@ package randori.webkit.html
  */
 public class HTMLUnknownElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('unknown')")]
 	/**
 	*  Creates a new <code>HTMLUnknownElement</code> instance.
 	*/

@@ -45,6 +45,7 @@ import randori.webkit.dom.Document;
 import randori.webkit.page.Window;
 
 [JavaScript(export="false", name="HTMLFrameElement")]
+[JavaScriptConstructor(factoryMethod="document.createElement('frame')")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -52,7 +53,6 @@ import randori.webkit.page.Window;
  */
 public class HTMLFrameElement extends HTMLElement
 {
-	[JavaScriptMethod(omitparanthesis="true", omitnewoperator="true", name="document.createElement('frame')")]
 	/**
 	*  Creates a new <code>HTMLFrameElement</code> instance.
 	*/
