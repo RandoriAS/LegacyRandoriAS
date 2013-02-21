@@ -127,8 +127,7 @@ package randori.jqueryui {
 		 * Get the value of the slider.
 		 */
 		[JavaScriptMethod(name="value")]
-		public function value_1():Number {
-			return 0;
+		public function value_1():void {
 		}
 		
 		/**
@@ -142,16 +141,14 @@ package randori.jqueryui {
 		 * Get the value for all handles.
 		 */
 		[JavaScriptMethod(name="values")]
-		public function values_1():Array {
-			return null;
+		public function values_1():void {
 		}
 		
 		/**
 		 * Get the value for the specified handle.
 		 */
 		[JavaScriptMethod(name="values")]
-		public function values_2(index:int):Number {
-			return 0;
+		public function values_2(index:int):void {
 		}
 		
 		/**
@@ -190,7 +187,7 @@ package randori.jqueryui {
 		 * Gets the value currently associated with the specified <code>optionName</code>.
 		 */
 		[JavaScriptMethod(name="option")]
-		public function option1(optionName:String):Object {
+		public function option1(optionName:String):JQueryUI {
 			return null;
 		}
 		
@@ -198,7 +195,7 @@ package randori.jqueryui {
 		 * Gets an object containing key/value pairs representing the current <code>Slider</code> options hash.
 		 */
 		[JavaScriptMethod(name="option")]
-		public function option2():Object {
+		public function option2():JQueryUI {
 			return null;
 		}
 		

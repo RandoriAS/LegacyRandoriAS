@@ -222,7 +222,7 @@ namespace JQueryUIParser
             var xdoc = LoadIncludeFile(inc);
             if (xdoc != null)
             {
-                inc.ReplaceWith(xdoc);
+                inc.ReplaceWith(xdoc.Root);
             }
         }
 
@@ -249,6 +249,15 @@ namespace JQueryUIParser
                 {
                     AddMemberComment(CurrentClass.Name, Method, method.Comments);
                 }
+                if (Method.Element("longdesc") != null)
+                {
+                    XNamespace ns = "http://www.w3.org/2003/XInclude";
+                    if (Method.Element("longdesc").Elements(ns + "include").Count() > 0)
+                    {
+                        MergeIncludes(Method.Element("longdesc"), ns);
+                    }
+                    SplitCommentLines(GetInnerXML(Method.Element("longdesc")), method.Comments);
+                }
             }
             else
             {
@@ -256,15 +265,24 @@ namespace JQueryUIParser
             }
         }
 
-        private static void AddMethodFromSignature(CodeTypeDeclaration CurrentClass, string MethodName, XElement MethodElement, string type)
+        private static void AddMethodFromSignature(CodeTypeDeclaration CurrentClass, string MethodName, XElement SignatureElement, string type)
         {
-            if (MethodElement.Attribute("return") != null)
-            {
-                type = TranslateType(MethodElement.Attribute("return").Value);
-            }
             var method = Builder.AddMethod(CurrentClass, MethodName, type);
-            AddMemberComment(CurrentClass.Name, MethodElement, method.Comments);
-            MethodElement.Elements("argument").ToList().ForEach(a => AddArgumentFromElement(method, a));
+            if (SignatureElement.Parent.Element("longdesc") != null)
+            {
+                XNamespace ns = "http://www.w3.org/2003/XInclude";
+                if (SignatureElement.Parent.Element("longdesc").Elements(ns + "include").Count() > 0)
+                {
+                    MergeIncludes(SignatureElement.Parent.Element("longdesc"), ns);
+                }
+                SplitCommentLines(GetInnerXML(SignatureElement.Parent.Element("longdesc")), method.Comments);
+            }
+            if (SignatureElement.Attribute("return") != null)
+            {
+                type = TranslateType(SignatureElement.Attribute("return").Value);
+            }
+            AddMemberComment(CurrentClass.Name, SignatureElement, method.Comments);
+            SignatureElement.Elements("argument").ToList().ForEach(a => AddArgumentFromElement(method, a));
         }
 
         private static void AddArgumentFromElement(CodeMemberMethod method, XElement Argument)

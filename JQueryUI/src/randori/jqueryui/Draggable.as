@@ -295,7 +295,7 @@ package randori.jqueryui {
 		 * Gets the value currently associated with the specified <code>optionName</code>.
 		 */
 		[JavaScriptMethod(name="option")]
-		public function option1(optionName:String):Object {
+		public function option1(optionName:String):JQueryUI {
 			return null;
 		}
 		
@@ -303,7 +303,7 @@ package randori.jqueryui {
 		 * Gets an object containing key/value pairs representing the current <code>Draggable</code> options hash.
 		 */
 		[JavaScriptMethod(name="option")]
-		public function option2():Object {
+		public function option2():JQueryUI {
 			return null;
 		}
 		
