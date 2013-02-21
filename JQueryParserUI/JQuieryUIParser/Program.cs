@@ -279,7 +279,7 @@ namespace JQueryUIParser
         private static void AddOptions(CodeTypeDeclaration CurrentClass, XElement Option)
         {
             CodeMemberField field;
-            var multiples = (Option.Elements("type").Count() > 0);
+            var multiples = (Option.Elements("type").Count() > 1);
             var Name = Option.Attribute("name").Value;
             if (multiples)
             {

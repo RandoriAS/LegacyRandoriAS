@@ -51,11 +51,9 @@ package randori.jqueryui {
 		public var appendTo:String;
 		
 		/**
-		 * If set to true, the dialog will automatically open upon initialization. If false, the dialog will stay hidden until the open() method is called.
+		 * If set to <code>true</code>, the dialog will automatically open upon initialization. If <code>false</code>, the dialog will stay hidden until the <a href="#method-open"><code>open()</code></a> method is called.
 		 */
-		public var autoOpen:*;
-		
-		public var autoOpenBoolean:Boolean;
+		public var autoOpen:Boolean;
 		
 		/**
 		 * Specifies which buttons should be displayed on the dialog. The context of the callback is the dialog element; if you need access to the button, it is available as the target of the event object.
@@ -75,30 +73,22 @@ package randori.jqueryui {
 		/**
 		 * Specifies whether the dialog should close when it has focus and the user presses the esacpe (ESC) key.
 		 */
-		public var closeOnEscape:*;
-		
-		public var closeOnEscapeBoolean:Boolean;
+		public var closeOnEscape:Boolean;
 		
 		/**
 		 * Specifies the text for the close button. Note that the close text is visibly hidden when using a standard theme.
 		 */
-		public var closeText:*;
-		
-		public var closeTextString:String;
+		public var closeText:String;
 		
 		/**
 		 * The specified class name(s) will be added to the dialog, for additional theming.
 		 */
-		public var dialogClass:*;
-		
-		public var dialogClassString:String;
+		public var dialogClass:String;
 		
 		/**
-		 * If set to true, the dialog will be draggable by the title bar. Requires the jQuery UI Draggable widget to be included.
+		 * If set to <code>true</code>, the dialog will be draggable by the title bar. Requires the <a href="/draggable/">jQuery UI Draggable widget</a> to be included.
 		 */
-		public var draggable:*;
-		
-		public var draggableBoolean:Boolean;
+		public var draggable:Boolean;
 		
 		/**
 		 * The height of the dialog.
@@ -138,37 +128,27 @@ package randori.jqueryui {
 		/**
 		 * The maximum height to which the dialog can be resized, in pixels.
 		 */
-		public var maxHeight:*;
-		
-		public var maxHeightNumber:Number;
+		public var maxHeight:Number;
 		
 		/**
 		 * The maximum width to which the dialog can be resized, in pixels.
 		 */
-		public var maxWidth:*;
-		
-		public var maxWidthNumber:Number;
+		public var maxWidth:Number;
 		
 		/**
 		 * The minimum height to which the dialog can be resized, in pixels.
 		 */
-		public var minHeight:*;
-		
-		public var minHeightNumber:Number;
+		public var minHeight:Number;
 		
 		/**
 		 * The minimum width to which the dialog can be resized, in pixels.
 		 */
-		public var minWidth:*;
-		
-		public var minWidthNumber:Number;
+		public var minWidth:Number;
 		
 		/**
-		 * If set to true, the dialog will have modal behavior; other items on the page will be disabled, i.e., cannot be interacted with. Modal dialogs create an overlay below the dialog but above other page elements.
+		 * If set to <code>true</code>, the dialog will have modal behavior; other items on the page will be disabled, i.e., cannot be interacted with. Modal dialogs create an overlay below the dialog but above other page elements.
 		 */
-		public var modal:*;
-		
-		public var modalBoolean:Boolean;
+		public var modal:Boolean;
 		
 		/**
 		 * Specifies where the dialog should be displayed. The dialog will handle collisions such that as much of the dialog is visible as possible.Note: The String and Array forms are deprecated.
@@ -191,11 +171,9 @@ package randori.jqueryui {
 		public var positionArray:Array;
 		
 		/**
-		 * If set to true, the dialog will be resizable. Requires the jQuery UI Resizable widget to be included.
+		 * If set to <code>true</code>, the dialog will be resizable. Requires the <a href="/resizable/">jQuery UI Resizable widget</a> to be included.
 		 */
-		public var resizable:*;
-		
-		public var resizableBoolean:Boolean;
+		public var resizable:Boolean;
 		
 		/**
 		 * If and how to animate the showing of the dialog.
@@ -218,18 +196,14 @@ package randori.jqueryui {
 		public var showObject:Object;
 		
 		/**
-		 * Specifies the title of the dialog. If the value is null, the title attribute on the dialog source element will be used.
+		 * Specifies the title of the dialog. If the value is <code>null</code>, the <code>title</code> attribute on the dialog source element will be used.
 		 */
-		public var title:*;
-		
-		public var titleString:String;
+		public var title:String;
 		
 		/**
 		 * The width of the dialog, in pixels.
 		 */
-		public var width:*;
-		
-		public var widthNumber:Number;
+		public var width:Number;
 		
 		/**
 		 * Event:

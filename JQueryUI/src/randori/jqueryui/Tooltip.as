@@ -45,26 +45,20 @@ package randori.jqueryui {
 		public var contentString:String;
 		
 		/**
-		 * A selector indicating which items should show tooltips. Customize if you're using something other then the title attribute for the tooltip content, or if you need a different selector for event delegation.When changing this option, you likely need to also change the content option.
+		 * <p>A selector indicating which items should show tooltips. Customize if you're using something other then the title attribute for the tooltip content, or if you need a different selector for event delegation.</p><p><em>When changing this option, you likely need to also change the <a href="#option-content"><code>content</code></a> option.</em></p>
 		 */
-		public var items:*;
-		
-		public var itemsSelector:String;
+		public var items:String;
 		
 		/**
-		 * Identifies the position of the tooltip in relation to the associated target element. The of option defaults to the target element, but you can specify another element to position against. You can refer to the jQuery UI Position utility for more details about the various options.
+		 * <p>Identifies the position of the tooltip in relation to the associated target element. The <code>of</code> option defaults to the target element, but you can specify another element to position against. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</p>
 		 */
-		public var position:*;
-		
-		public var positionObject:Object;
+		public var position:Object;
 		
 		/**
 		 * A class to add to the widget, can be used to display various tooltip types, like warnings or errors.
-				This may get replaced by the classes option.
+		 * <p>This may get replaced by the <a href="http://bugs.jqueryui.com/ticket/7053">classes option</a>.</p>
 		 */
-		public var tooltipClass:*;
-		
-		public var tooltipClassString:String;
+		public var tooltipClass:String;
 		
 		/**
 		 * Whether the tooltip should track (follow) the mouse.
