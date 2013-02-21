@@ -256,6 +256,24 @@ package randori.jqueryui {
 		public var disabled:Boolean;
 		
 		/**
+		 * Event:
+		 * Triggered when dragging starts.
+		 */
+		public var onstart:Function;
+		
+		/**
+		 * Event:
+		 * Triggered while the mouse is moved during the dragging.
+		 */
+		public var ondrag:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when dragging stops.
+		 */
+		public var onstop:Function;
+		
+		/**
 		 * Removes the <code>Draggable</code> functionality completely. This will return the element back to its pre-init state.
 		 */
 		public function destroy():void {

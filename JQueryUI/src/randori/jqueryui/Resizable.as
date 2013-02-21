@@ -177,6 +177,24 @@ package randori.jqueryui {
 		public var disabled:Boolean;
 		
 		/**
+		 * Event:
+		 * This event is triggered at the start of a resize operation.
+		 */
+		public var onstart:Function;
+		
+		/**
+		 * Event:
+		 * This event is triggered during the resize, on the drag of the resize handler.
+		 */
+		public var onresize:Function;
+		
+		/**
+		 * Event:
+		 * This event is triggered at the end of a resize operation.
+		 */
+		public var onstop:Function;
+		
+		/**
 		 * Removes the <code>Resizable</code> functionality completely. This will return the element back to its pre-init state.
 		 */
 		public function destroy():void {

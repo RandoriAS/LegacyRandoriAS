@@ -118,6 +118,31 @@ package randori.jqueryui {
 		public var disabled:Boolean;
 		
 		/**
+		 * Event:
+		 * Triggered before a spin. Can be canceled, preventing the spin from occurring.
+		 */
+		public var onstart:Function;
+		
+		/**
+		 * Event:
+		 * Triggered during increment/decrement (to determine direction of spin compare current value with <code>ui.value</code>).
+		 * <p>Can be canceled, preventing the value from being updated.</p>
+		 */
+		public var onspin:Function;
+		
+		/**
+		 * Event:
+		 * Triggered after a spin.
+		 */
+		public var onstop:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when the value of the spinner has changed and the input is no longer focused.
+		 */
+		public var onchange:Function;
+		
+		/**
 		 * <p>Decrements the value by the specified number of pages, as defined by the <a href="#option-page"><code>page</code></a> option. Without the parameter, a single page is decremented.</p><p>If the resulting value is above the max, below the min, or results in a step mismatch, the value will be adjusted to the closest valid value.</p><p>Invoking <code>pageDown()</code> will cause <a href="#event-start"><code>start</code></a>, <a href="#event-spin"><code>spin</code></a>, and <a href="#event-stop"><code>stop</code></a> events to be triggered.</p>
 		 */
 		public function pageDown():void {

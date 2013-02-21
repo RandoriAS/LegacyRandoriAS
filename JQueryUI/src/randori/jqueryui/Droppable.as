@@ -81,6 +81,36 @@ package randori.jqueryui {
 		public var disabled:Boolean;
 		
 		/**
+		 * Event:
+		 * Triggered when an accepted draggable starts dragging. This can be useful if you want to make the droppable "light up" when it can be dropped on.
+		 */
+		public var onactivate:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when an accepted draggable stops dragging.
+		 */
+		public var ondeactivate:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when an accepted draggable is dragged over the droppable (based on the<a href="#option-tolerance"><code>tolerance</code></a> option).
+		 */
+		public var onover:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when an accepted draggable is dragged out of the droppable (based on the<a href="#option-tolerance"><code>tolerance</code></a> option).
+		 */
+		public var onout:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when an accepted draggable is dropped on the droppable (based on the<a href="#option-tolerance"><code>tolerance</code></a> option).
+		 */
+		public var ondrop:Function;
+		
+		/**
 		 * Removes the <code>Droppable</code> functionality completely. This will return the element back to its pre-init state.
 		 */
 		public function destroy():void {

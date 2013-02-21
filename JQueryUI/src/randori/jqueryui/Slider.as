@@ -100,6 +100,30 @@ package randori.jqueryui {
 		public var disabled:Boolean;
 		
 		/**
+		 * Event:
+		 * Triggered when the user starts sliding.
+		 */
+		public var onstart:Function;
+		
+		/**
+		 * Event:
+		 * Triggered on every mouse move during slide. The value provided in the event as <code>ui.value</code> represents the value that the handle will have as a result of the current movement. Canceling the event will prevent the handle from moving and the handle will continue to have its previous value.
+		 */
+		public var onslide:Function;
+		
+		/**
+		 * Event:
+		 * Triggered after the user slides a handle, if the value has changed; or if the value is changed programmatically via the <a href="#method-value"><code>value</code></a> method.
+		 */
+		public var onchange:Function;
+		
+		/**
+		 * Event:
+		 * Triggered after the user slides a handle.
+		 */
+		public var onstop:Function;
+		
+		/**
 		 * Get the value of the slider.
 		 */
 		[JavaScriptMethod(name="value")]

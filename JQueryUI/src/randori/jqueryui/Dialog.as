@@ -232,6 +232,66 @@ package randori.jqueryui {
 		public var widthNumber:Number;
 		
 		/**
+		 * Event:
+		 * Triggered when a dialog is about to close. If canceled, the dialog will not close.
+		 */
+		public var onbeforeClose:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when the dialog is opened.
+		 */
+		public var onopen:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when the dialog gains focus.
+		 */
+		public var onfocus:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when the user starts dragging the dialog.
+		 */
+		public var ondragStart:Function;
+		
+		/**
+		 * Event:
+		 * Triggered while the dialog is being dragged.
+		 */
+		public var ondrag:Function;
+		
+		/**
+		 * Event:
+		 * Triggered after the dialog has been dragged.
+		 */
+		public var ondragStop:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when the user starts resizing the dialog.
+		 */
+		public var onresizeStart:Function;
+		
+		/**
+		 * Event:
+		 * Triggered while the dialog is being resized.
+		 */
+		public var onresize:Function;
+		
+		/**
+		 * Event:
+		 * Triggered after the dialog has been resized.
+		 */
+		public var onresizeStop:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when the dialog is closed.
+		 */
+		public var onclose:Function;
+		
+		/**
 		 * Closes the dialog.
 		 */
 		public function close():void {

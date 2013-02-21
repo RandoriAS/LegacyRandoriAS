@@ -168,11 +168,6 @@ namespace JQueryUIParser
             {
                 CurrentClass = Builder.CreateClass(ClassName);
                 ClassLookup[ClassName.ActionScriptName] = CurrentClass;
-
-                /*if (ClassName.ActionScriptName.IndexOf("Static") > -1)
-                {
-                    CurrentClass.TypeAttributes = CurrentClass.TypeAttributes | TypeAttributes.Sealed;
-                }*/
             }
             else
             {
@@ -198,6 +193,15 @@ namespace JQueryUIParser
 
             EntryElement.Elements("methods").ToList().ForEach(opts => opts.Elements("method").ToList().ForEach(m => AddMethod(CurrentClass, m)));
             EntryElement.Elements("methods").ToList().ForEach(opts => opts.Elements(ns + "include").ToList().ForEach(inc => AddMethodFromIncludeFile(CurrentClass, inc)));
+
+            EntryElement.Elements("events").ToList().ForEach(evts => evts.Elements("event").ToList().ForEach(e => AddEvent(CurrentClass, e)));
+        }
+
+        private static void AddEvent(CodeTypeDeclaration CurrentClass, XElement EventElement)
+        {
+            var field = Builder.AddProperty(CurrentClass, "on"+EventElement.Attribute("name").Value, "Function");
+            field.Comments.Add(new CodeCommentStatement("Event:", true));
+            AddMemberComment(CurrentClass.Name, EventElement, field.Comments);
         }
 
         private static void AddMethod(CodeTypeDeclaration CurrentClass, XElement Method)
@@ -318,11 +322,11 @@ namespace JQueryUIParser
             }
         }
 
-        private static void AddMemberComment(string PlaceholderName, XElement Option, CodeCommentStatementCollection Comments)
+        private static void AddMemberComment(string PlaceholderName, XElement MemberElement, CodeCommentStatementCollection Comments)
         {
-            if (Option.Element("desc") != null)
+            if (MemberElement.Element("desc") != null)
             {
-                var desc = GetInnerXML(Option.Element("desc"));
+                var desc = GetInnerXML(MemberElement.Element("desc"));
                 desc = desc.Replace("<placeholder name=\"name\" />", "<code>" + PlaceholderName + "</code>");
                 desc = desc.Replace("<desc>", "").Replace("</desc>", "");
                 SplitCommentLines(desc.Trim(), Comments);

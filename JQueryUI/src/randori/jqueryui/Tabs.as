@@ -88,6 +88,36 @@ package randori.jqueryui {
 		public var show:Boolean;
 		
 		/**
+		 * Event:
+		 * Triggered after a tab has been activated (after animation completes). If the tabs were previously collapsed, <code>ui.oldTab</code> and <code>ui.oldPanel</code> will be empty jQuery objects. If the tabs are collapsing, <code>ui.newTab</code> and <code>ui.newPanel</code> will be empty jQuery objects.
+		 */
+		public var onactivate:Function;
+		
+		/**
+		 * Event:
+		 * Triggered directly after a tab is activated. Can be canceled to prevent the tab from activating. If the tabs are currently collapsed, <code>ui.oldTab</code> and <code>ui.oldPanel</code> will be empty jQuery objects. If the tabs are collapsing, <code>ui.newTab</code> and <code>ui.newPanel</code> will be empty jQuery objects.
+		 */
+		public var onbeforeActivate:Function;
+		
+		/**
+		 * Event:
+		 * <p>Triggered when a remote tab is about to be loaded, after the <a href="#event-beforeActivate"><code>beforeActivate</code></a> event. Can be canceled to prevent the tab panel from loading content; though the panel will still be activated. This event is triggered just before the Ajax request is made, so modifications can be made to <code>ui.jqXHR</code> and <code>ui.ajaxSettings</code>.</p><p><em>Note: Although <code>ui.ajaxSettings</code> is provided and can be modified, some of these settings have already been processed by jQuery. For example, <a href="http://api.jquery.com/jQuery.ajaxPrefilter/">prefilters</a> have been applied, <code>data</code> has been processed, and <code>type</code> has been determined. The <code>beforeLoad</code> event occurs at the same time, and therefore has the same restrictions, as the <code>beforeSend</code> callback from <a href="http://api.jquery.com/jQuery.ajax/"><code>jQuery.ajax()</code></a>.</em></p>
+		 */
+		public var onbeforeLoad:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when the tabs are created. If the tabs are collapsed, <code>ui.tab</code> and <code>ui.panel</code> will be empty jQuery objects.
+		 */
+		public var oncreate:Function;
+		
+		/**
+		 * Event:
+		 * Triggered after a remote tab has been loaded.
+		 */
+		public var onload:Function;
+		
+		/**
 		 * Disables all tabs.
 		 */
 		[JavaScriptMethod(name="disable")]

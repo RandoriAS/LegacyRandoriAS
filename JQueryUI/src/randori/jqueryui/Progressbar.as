@@ -59,6 +59,18 @@ package randori.jqueryui {
 		public var disabled:Boolean;
 		
 		/**
+		 * Event:
+		 * Triggered when the value of the progressbar changes.
+		 */
+		public var onchange:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when the value of the progressbar reaches the maximum value.
+		 */
+		public var oncomplete:Function;
+		
+		/**
 		 * Gets the current value of the progressbar.
 		 */
 		[JavaScriptMethod(name="value")]

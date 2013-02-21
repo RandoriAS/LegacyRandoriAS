@@ -78,6 +78,24 @@ package randori.jqueryui {
 		public var disabled:Boolean;
 		
 		/**
+		 * Event:
+		 * Triggered when the menu loses focus.
+		 */
+		public var onblur:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when a menu gains focus or when any menu item is activated.
+		 */
+		public var onfocus:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when a menu item is selected.
+		 */
+		public var onselect:Function;
+		
+		/**
 		 * Removes focus from a menu, resets any active element styles and triggers the menu's <a href="event-blur"><code>blur</code></a> event.
 		 */
 		public function blur():void {

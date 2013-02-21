@@ -87,6 +87,18 @@ package randori.jqueryui {
 		public var show:Boolean;
 		
 		/**
+		 * Event:
+		 * Triggered when a tooltip is shown, triggered on <code>focusin</code> or <code>mouseover</code>.
+		 */
+		public var onopen:Function;
+		
+		/**
+		 * Event:
+		 * Triggered when a tooltip is closed, triggered on <code>focusout</code> or <code>mouseleave</code>.
+		 */
+		public var onclose:Function;
+		
+		/**
 		 * Closes a tooltip. This is only intended to be called for non-delegated tooltips.
 		 */
 		public function close():void {

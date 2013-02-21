@@ -110,6 +110,24 @@ package randori.jqueryui {
 		public var disabled:Boolean;
 
 		/**
+		 * Event:
+		 * Triggered after a panel has been activated (after animation completes). If the accordion was previously collapsed, <code>ui.oldHeader</code> and <code>ui.oldPanel</code> will be empty jQuery objects. If the accordion is collapsing, <code>ui.newHeader</code> and <code>ui.newPanel</code> will be empty jQuery objects.
+		 */
+		public var onactivate:Function;
+
+		/**
+		 * Event:
+		 * Triggered directly before a panel is activated. Can be canceled to prevent the panel from activating. If the accordion is currently collapsed, <code>ui.oldHeader</code> and <code>ui.oldPanel</code> will be empty jQuery objects. If the accordion is collapsing, <code>ui.newHeader</code> and <code>ui.newPanel</code> will be empty jQuery objects.
+		 */
+		public var onbeforeActivate:Function;
+
+		/**
+		 * Event:
+		 * Triggered when the accordion is created. If the accordion is collapsed, <code>ui.header</code> and <code>ui.panel</code> will be empty jQuery objects.
+		 */
+		public var oncreate:Function;
+
+		/**
 		 * Recompute the height of the accordion panels. Results depend on the content and the <a href="#option-heightStyle"><code>heightStyle</code></a> option.
 		 */
 		public function refresh():void {

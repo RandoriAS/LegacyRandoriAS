@@ -71,6 +71,42 @@ package randori.jqueryui {
 		public var disabled:Boolean;
 		
 		/**
+		 * Event:
+		 * Triggered at the end of the select operation, on each element added to the selection.
+		 */
+		public var onselected:Function;
+		
+		/**
+		 * Event:
+		 * Triggered during the select operation, on each element added to the selection.
+		 */
+		public var onselecting:Function;
+		
+		/**
+		 * Event:
+		 * Triggered at the beginning of the select operation.
+		 */
+		public var onstart:Function;
+		
+		/**
+		 * Event:
+		 * Triggered at the end of the select operation.
+		 */
+		public var onstop:Function;
+		
+		/**
+		 * Event:
+		 * Triggered at the end of the select operation, on each element removed from the selection.
+		 */
+		public var onunselected:Function;
+		
+		/**
+		 * Event:
+		 * Triggered during the select operation, on each element removed from the selection.
+		 */
+		public var onunselecting:Function;
+		
+		/**
 		 * Refresh the position and size of each selectee element. This method can be used to manually recalculate the position and size of each selectee when the <a href="#option-autoRefresh"><code>autoRefresh</code></a> option is set to <code>false</code>.
 		 */
 		public function refresh():void {
