@@ -625,7 +625,10 @@ namespace System.CodeDom.Compiler
 
             OutputMemberAccessModifier(field.Attributes);
             OutputFieldScopeModifier(field.Attributes);
-            Output.Write("var ");
+            if ((field.Attributes & MemberAttributes.ScopeMask) != (MemberAttributes.Static & MemberAttributes.Const))
+            {
+                Output.Write("var ");
+            }
             var type = field.Type;
             if ((bool)field.UserData["IsAsterisk"] == true)
             {
@@ -651,6 +654,9 @@ namespace System.CodeDom.Compiler
                     break;
                 case MemberAttributes.Const:
                     Output.Write("const ");
+                    break;
+                 case MemberAttributes.Static & MemberAttributes.Const:
+                    Output.Write("static const ");
                     break;
                 default:
                     break;
@@ -851,8 +857,7 @@ namespace System.CodeDom.Compiler
             methods.FindAll(m => m.Name == Name).ForEach(m => m.UserData["ActionscriptName"] += (++index).ToString());
             var ArgsMethod = classBuilder.AddMethod(classDef, Name, "*");
             ArgsMethod.UserData["IsAsterisk"] = true;
-            var Param = classBuilder.AddParameter("params", "*", ArgsMethod, null, false);
-            Param.UserData["IsRestParams"] = true;
+            var Param = classBuilder.AddParameter("...", "*", ArgsMethod, null, false);
         }
 
         private void ProcessParameter(CodeMemberMethod codeMemberMethod)

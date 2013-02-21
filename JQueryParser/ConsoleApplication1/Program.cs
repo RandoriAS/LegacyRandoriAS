@@ -65,9 +65,12 @@ namespace ConsoleApplication1
 
             ReadSourceDirectory().ForEach(e => Entry2Class(e));
 
-            var classDefPromise = ClassLookup["Promise"];
-            var classDefDeferred = ClassLookup["Deferred"];
-            AddMethodsToPromise(classDefPromise, classDefDeferred);
+            if (ClassLookup.ContainsKey("Promise"))
+            {
+                var classDefPromise = ClassLookup["Promise"];
+                var classDefDeferred = ClassLookup["Deferred"];
+                AddMethodsToPromise(classDefPromise, classDefDeferred);
+            }
             
             foreach(var key in ClassLookup.Keys)
             {
@@ -382,7 +385,7 @@ namespace ConsoleApplication1
             else
             {
                 var name = TranslateName(Elm.Attribute("name").Value);
-                var type = TranslateType(Elm.Attribute("return").Value);
+                var type = TranslateType((Elm.Attribute("return") !=null) ? Elm.Attribute("return").Value : null);
                 if (((type == "Object") || (type == "PlainObject")) && (Elm.Elements("property").Count() > 0))
                 {
                     type = CreateTypedObjectForPlainObject(name, Elm);
@@ -496,14 +499,14 @@ namespace ConsoleApplication1
 
         private static string TranslateType(string type, bool isParameter=false)
         {
+            if ((type == null) ||(type == "") || (type == "undefined"))
+            {
+                type = (isParameter == true) ? "*" : "void";
+            }
             if (type.IndexOf(' ') > -1)
             {
                 type = type.Substring(0, type.IndexOf(' '));
                 type = CapitalizeName(type);
-            }
-            if ((type == "") || (type == "undefined"))
-            {
-                type = (isParameter == true) ? "*" : "void";
             }
             else if (type == "Anything")
             {
@@ -562,7 +565,7 @@ namespace ConsoleApplication1
             var originalName = Elm.Attribute("name").Value;
             var name = TranslateName(originalName);
             name = UncapitalizeName(name);
-            var originalReturnName = Elm.Attribute("return").Value;
+            var originalReturnName = (Elm.Attribute("return") != null) ? Elm.Attribute("return").Value : null;
             var type = TranslateType(originalReturnName);
             var desc = Elm.Element("desc").Value.Trim();
             if (name.IndexOf('.') > -1)
@@ -580,12 +583,15 @@ namespace ConsoleApplication1
 
         private static void CreateMethod(string description, CodeTypeDeclaration CurrentClass, String type, string name, string originalName, string originalReturnName, XElement elm)
         {
-            var since = elm.Element("added").Value;
+            var since = (elm.Element("added") != null) ? elm.Element("added").Value : null;
 
             var method = Builder.AddMethod(CurrentClass, name, type);
             
             method.Comments.AddRange(SplitCommentLines(description));
-            method.Comments.Add(new CodeCommentStatement("@since " + since, true));
+            if (since != null)
+            {
+                method.Comments.Add(new CodeCommentStatement("@since " + since, true));
+            }
             if (elm.Elements("argument").Count() > 0)
             {
 
@@ -599,7 +605,7 @@ namespace ConsoleApplication1
             {
                 Builder.AddMethodAttributeArgument(method, "name", originalName);
             }
-            if ((type != originalReturnName) && (originalReturnName.IndexOf(',') > -1))
+            if ((type != originalReturnName) && ((originalReturnName == null) || (originalReturnName.IndexOf(',') > -1)))
             {
                 method.ReturnType = new CodeTypeReference("Object");
                 method.UserData["IsAsterisk"] = true;
@@ -621,7 +627,7 @@ namespace ConsoleApplication1
             {
                 type = CreateTypedObjectForPlainObject(name, elm);
             }
-            var desc = elm.Element("desc").Value.Trim();
+            var desc = (elm.Element("desc") != null) ? elm.Element("desc").Value.Trim() : "";
             if (type == "Function")
             {
                 if (name.IndexOf('(') > -1)
@@ -639,7 +645,10 @@ namespace ConsoleApplication1
                 type = "String";
             }
             var param = Builder.AddParameter(name, type, method, null, optional);
-            ((CodeCommentStatementCollection)param.UserData["comments"]).Add(JoinCommentLines(desc));
+            if (desc.Length > 0)
+            {
+                ((CodeCommentStatementCollection)param.UserData["comments"]).Add(JoinCommentLines(desc));
+            }
         }
 
         private static void CreateParametersFromIncludeFiles(XElement elm, CodeMemberMethod method)
