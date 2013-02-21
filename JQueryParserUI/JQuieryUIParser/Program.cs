@@ -75,7 +75,10 @@ namespace JQueryUIParser
             var provider = new AS3CodeProvider(Builder);
             foreach (var unit in Builder.Units)
             {
-                SerializeClass(unit, provider);
+                if (unit.Namespaces[0].Types[0].Members.Count > 0)
+                {
+                    SerializeClass(unit, provider);
+                }
             }
 
             Console.WriteLine("Finished, press any key...");
@@ -187,22 +190,40 @@ namespace JQueryUIParser
 
         private static void AddMembers(CodeTypeDeclaration CurrentClass, XElement EntryElement)
         {
+            XNamespace ns = "http://www.w3.org/2003/XInclude"; 
             if (EntryElement.Element("desc") != null)
             {
                 CurrentClass.Comments.Add(new CodeCommentStatement(GetInnerXML(EntryElement.Element("desc")), true));
             }
             if (EntryElement.Element("longdesc") != null)
             {
+                if (EntryElement.Element("longdesc").Elements(ns + "include").Count() > 0)
+                {
+                    MergeIncludes(EntryElement.Element("longdesc"), ns);
+                }
                 SplitCommentLines(GetInnerXML(EntryElement.Element("longdesc")), CurrentClass.Comments);
             }
             EntryElement.Elements("options").ToList().ForEach(opts => opts.Elements("option").ToList().ForEach(opt => AddOptions(CurrentClass, opt)));
-            XNamespace ns = "http://www.w3.org/2003/XInclude";
             EntryElement.Elements("options").ToList().ForEach(opts => opts.Elements(ns+"include").ToList().ForEach(inc => AddOptionFromIncludeFile(CurrentClass, inc)));
 
             EntryElement.Elements("methods").ToList().ForEach(opts => opts.Elements("method").ToList().ForEach(m => AddMethod(CurrentClass, m)));
             EntryElement.Elements("methods").ToList().ForEach(opts => opts.Elements(ns + "include").ToList().ForEach(inc => AddMethodFromIncludeFile(CurrentClass, inc)));
 
             EntryElement.Elements("events").ToList().ForEach(evts => evts.Elements("event").ToList().ForEach(e => AddEvent(CurrentClass, e)));
+        }
+
+        private static void MergeIncludes(XElement LongDesc, XNamespace ns)
+        {
+            LongDesc.Elements(ns + "include").ToList().ForEach(inc => MergeIncludeFile(inc));
+        }
+
+        private static void MergeIncludeFile(XElement inc)
+        {
+            var xdoc = LoadIncludeFile(inc);
+            if (xdoc != null)
+            {
+                inc.ReplaceWith(xdoc);
+            }
         }
 
         private static void AddEvent(CodeTypeDeclaration CurrentClass, XElement EventElement)
@@ -274,12 +295,21 @@ namespace JQueryUIParser
 
         private static void AddOptionFromIncludeFile(CodeTypeDeclaration CurrentClass, XElement inc)
         {
+            var xdoc = LoadIncludeFile(inc);
+            if (xdoc != null)
+            {
+                AddSinglePropertyFromOptionElement(CurrentClass, xdoc.Root);
+            }
+        }
+
+        private static XDocument LoadIncludeFile(XElement inc)
+        {
             var FullPath = Path.Combine(JQueryEntriesDir, inc.Attribute("href").Value);
             if (File.Exists(FullPath))
             {
-                var xdoc = XDocument.Load(FullPath);
-                AddSinglePropertyFromOptionElement(CurrentClass, xdoc.Root);
+                return XDocument.Load(FullPath);
             }
+            return null;
         }
 
         private static void AddMethodFromIncludeFile(CodeTypeDeclaration CurrentClass, XElement inc)
