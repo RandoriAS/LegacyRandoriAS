@@ -35,7 +35,7 @@ package randori.jqueryui {
 		public var active:*;
 		
 		/**
-		 * Setting active to false will collapse all panels. This requires the collapsible option to be true.
+		 * Setting <code>active</code> to <code>false</code> will collapse all panels. This requires the <a href="#option-collapsible"><code>collapsible</code></a> option to be <code>true</code>.
 		 */
 		public var activeBoolean:Boolean;
 		
@@ -60,7 +60,7 @@ package randori.jqueryui {
 		public var disabledBoolean:Boolean;
 		
 		/**
-		 * An array containing the zero-based indexes of the tabs that should be disabled, e.g., [ 0, 2 ] would disable the first and third tab.
+		 * An array containing the zero-based indexes of the tabs that should be disabled, e.g., <code>[ 0, 2 ]</code> would disable the first and third tab.
 		 */
 		public var disabledArray:Array;
 		

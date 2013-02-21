@@ -56,25 +56,25 @@ package randori.jqueryui {
 		
 		/**
 		 * Defines the data to use, must be specified.
-				Independent of the variant you use, the label is always treated as text. If you want the label to be treated as html you can use Scott González' html extension. The demos all focus on different variations of the source option - look for one that matches your use case, and check out the code.
+		 * <p>Independent of the variant you use, the label is always treated as text. If you want the label to be treated as html you can use <a href="https://github.com/scottgonzalez/jquery-ui-extensions/blob/master/autocomplete/jquery.ui.autocomplete.html.js">Scott González' html extension</a>. The demos all focus on different variations of the <code>source</code> option - look for one that matches your use case, and check out the code.</p>
 		 */
 		public var source:*;
 		
 		/**
 		 * An array can be used for local data. There are two supported formats:
-					An array of strings: [ "Choice1", "Choice2" ]An array of objects with label and value properties: [ { label: "Choice1", value: "value1" }, ... ]
-					The label property is displayed in the suggestion menu. The value will be inserted into the input element when a user selects an item. If just one property is specified, it will be used for both, e.g., if you provide only value properties, the value will also be used as the label.
+		 * <ul><li>An array of strings: <code>[ "Choice1", "Choice2" ]</code></li><li>An array of objects with <code>label</code> and <code>value</code> properties: <code>[ { label: "Choice1", value: "value1" }, ... ]</code></li></ul>
+		 * The label property is displayed in the suggestion menu. The value will be inserted into the input element when a user selects an item. If just one property is specified, it will be used for both, e.g., if you provide only <code>value</code> properties, the value will also be used as the label.
 		 */
 		public var sourceArray:Array;
 		
 		/**
-		 * When a string is used, the Autocomplete plugin expects that string to point to a URL resource that will return JSON data. It can be on the same host or on a different one (must provide JSONP). The Autocomplete plugin does not filter the results, instead a query string is added with a term field, which the server-side script should use for filtering the results. For example, if the source option is set to "http://example.com" and the user types foo, a GET request would be made to http://example.com?term=foo. The data itself can be in the same format as the local data described above.
+		 * When a string is used, the Autocomplete plugin expects that string to point to a URL resource that will return JSON data. It can be on the same host or on a different one (must provide JSONP). The Autocomplete plugin does not filter the results, instead a query string is added with a <code>term</code> field, which the server-side script should use for filtering the results. For example, if the <code>source</code> option is set to <code>"http://example.com"</code> and the user types <code>foo</code>, a GET request would be made to <code>http://example.com?term=foo</code>. The data itself can be in the same format as the local data described above.
 		 */
 		public var sourceString:String;
 		
 		/**
 		 * The third variation, a callback, provides the most flexibility and can be used to connect any data source to Autocomplete. The callback gets two arguments:
-					A request object, with a single term property, which refers to the value currently in the text input. For example, if the user enters "new yo" in a city field, the Autocomplete term will equal "new yo".A response callback, which expects a single argument: the data to suggest to the user. This data should be filtered based on the provided term, and can be in any of the formats described above for simple local data. It's important when providing a custom source callback to handle errors during the request. You must always call the response callback even if you encounter an error. This ensures that the widget always has the correct state.When filtering data locally, you can make use of the built-in $.ui.autocomplete.escapeRegex function. It'll take a single string argument and escape all regex characters, making the result safe to pass to new RegExp().
+		 * <ul><li>A <code>request</code> object, with a single <code>term</code> property, which refers to the value currently in the text input. For example, if the user enters <code>"new yo"</code> in a city field, the Autocomplete term will equal <code>"new yo"</code>.</li><li>A <code>response</code> callback, which expects a single argument: the data to suggest to the user. This data should be filtered based on the provided term, and can be in any of the formats described above for simple local data. It's important when providing a custom source callback to handle errors during the request. You must always call the <code>response</code> callback even if you encounter an error. This ensures that the widget always has the correct state.</li></ul><p>When filtering data locally, you can make use of the built-in <code>$.ui.autocomplete.escapeRegex</code> function. It'll take a single string argument and escape all regex characters, making the result safe to pass to <code>new RegExp()</code>.</p>
 		 */
 		public var sourceFunction:Function;
 		

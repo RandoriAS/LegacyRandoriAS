@@ -65,7 +65,7 @@ package randori.jqueryui {
 	public class Datepicker {
 		
 		/**
-		 * An input element that is to be updated with the selected date from the datepicker. Use the altFormat option to change the format of the date within this field. Leave as blank for no alternate field.
+		 * An input element that is to be updated with the selected date from the datepicker. Use the <a href="#option-altFormat"><code>altFormat</code></a> option to change the format of the date within this field. Leave as blank for no alternate field.
 		 */
 		public var altField:*;
 		
@@ -156,7 +156,7 @@ package randori.jqueryui {
 		public var dayNamesShort:Array;
 		
 		/**
-		 * Set the date to highlight on first opening if the field is blank. Specify either an actual date via a Date object or as a string in the current dateFormat, or a number of days from today (e.g. +7) or a string of values and periods ('y' for years, 'm' for months, 'w' for weeks, 'd' for days, e.g. '+1m +7d'), or null for today.
+		 * Set the date to highlight on first opening if the field is blank. Specify either an actual date via a Date object or as a string in the current <a href="#option-dateFormat"><code>dateFormat</code></a>, or a number of days from today (e.g. +7) or a string of values and periods ('y' for years, 'm' for months, 'w' for weeks, 'd' for days, e.g. '+1m +7d'), or null for today.
 		 */
 		public var defaultDate:*;
 		
@@ -166,12 +166,12 @@ package randori.jqueryui {
 		public var defaultDateDate:Date;
 		
 		/**
-		 * A number of days from today. For example 2 represents two days from today and -1 represents yesterday.
+		 * A number of days from today. For example <code>2</code> represents two days from today and <code>-1</code> represents yesterday.
 		 */
 		public var defaultDateNumber:Number;
 		
 		/**
-		 * A string in the format defined by the dateFormat option, or a relative date. Relative dates must contain value and period pairs; valid periods are "y" for years, "m" for months, "w" for weeks, and "d" for days. For example, "+1m +7d" represents one month and seven days from today.
+		 * A string in the format defined by the <a href="#option-dateFormat"><code>dateFormat</code></a> option, or a relative date. Relative dates must contain value and period pairs; valid periods are <code>"y"</code> for years, <code>"m"</code> for months, <code>"w"</code> for weeks, and <code>"d"</code> for days. For example, <code>"+1m +7d"</code> represents one month and seven days from today.
 		 */
 		public var defaultDateString:String;
 		
@@ -205,7 +205,7 @@ package randori.jqueryui {
 		public var isRTL:Boolean;
 		
 		/**
-		 * The maximum selectable date. When set to null, there is no maximum.
+		 * The maximum selectable date. When set to <code>null</code>, there is no maximum.
 		 */
 		public var maxDate:*;
 		
@@ -215,17 +215,17 @@ package randori.jqueryui {
 		public var maxDateDate:Date;
 		
 		/**
-		 * A number of days from today. For example 2 represents two days from today and -1 represents yesterday.
+		 * A number of days from today. For example <code>2</code> represents two days from today and <code>-1</code> represents yesterday.
 		 */
 		public var maxDateNumber:Number;
 		
 		/**
-		 * A string in the format defined by the dateFormat option, or a relative date. Relative dates must contain value and period pairs; valid periods are "y" for years, "m" for months, "w" for weeks, and "d" for days. For example, "+1m +7d" represents one month and seven days from today.
+		 * A string in the format defined by the <a href="#option-dateFormat"><code>dateFormat</code></a> option, or a relative date. Relative dates must contain value and period pairs; valid periods are <code>"y"</code> for years, <code>"m"</code> for months, <code>"w"</code> for weeks, and <code>"d"</code> for days. For example, <code>"+1m +7d"</code> represents one month and seven days from today.
 		 */
 		public var maxDateString:String;
 		
 		/**
-		 * The minimum selectable date. When set to null, there is no minimum.
+		 * The minimum selectable date. When set to <code>null</code>, there is no minimum.
 		 */
 		public var minDate:*;
 		
@@ -235,12 +235,12 @@ package randori.jqueryui {
 		public var minDateDate:Date;
 		
 		/**
-		 * A number of days from today. For example 2 represents two days from today and -1 represents yesterday.
+		 * A number of days from today. For example <code>2</code> represents two days from today and <code>-1</code> represents yesterday.
 		 */
 		public var minDateNumber:Number;
 		
 		/**
-		 * A string in the format defined by the dateFormat option, or a relative date. Relative dates must contain value and period pairs; valid periods are "y" for years, "m" for months, "w" for weeks, and "d" for days. For example, "+1m +7d" represents one month and seven days from today.
+		 * A string in the format defined by the <a href="#option-dateFormat"><code>dateFormat</code></a> option, or a relative date. Relative dates must contain value and period pairs; valid periods are <code>"y"</code> for years, <code>"m"</code> for months, <code>"w"</code> for weeks, and <code>"d"</code> for days. For example, <code>"+1m +7d"</code> represents one month and seven days from today.
 		 */
 		public var minDateString:String;
 		
@@ -290,17 +290,17 @@ package randori.jqueryui {
 		public var selectOtherMonths:Boolean;
 		
 		/**
-		 * The cutoff year for determining the century for a date (used in conjunction with dateFormat 'y'). Any dates entered with a year value less than or equal to the cutoff year are considered to be in the current century, while those greater than it are deemed to be in the previous century.
+		 * The cutoff year for determining the century for a date (used in conjunction with <a href="#option-dateFormat"><code>dateFormat</code></a> 'y'). Any dates entered with a year value less than or equal to the cutoff year are considered to be in the current century, while those greater than it are deemed to be in the previous century.
 		 */
 		public var shortYearCutoff:*;
 		
 		/**
-		 * A value between 0 and 99 indicating the cutoff year.
+		 * A value between <code>0</code> and <code>99</code> indicating the cutoff year.
 		 */
 		public var shortYearCutoffNumber:Number;
 		
 		/**
-		 * A relative number of years from the current year, e.g., "+3" or "-5".
+		 * A relative number of years from the current year, e.g., <code>"+3"</code> or <code>"-5"</code>.
 		 */
 		public var shortYearCutoffString:String;
 		

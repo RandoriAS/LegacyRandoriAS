@@ -40,7 +40,7 @@ package randori.jqueryui {
 		public var acceptSelector:String;
 		
 		/**
-		 * A function that will be called for each draggable on the page (passed as the first argument to the function). The function must return true if the draggable should be accepted.
+		 * A function that will be called for each draggable on the page (passed as the first argument to the function). The function must return <code>true</code> if the draggable should be accepted.
 		 */
 		public var acceptFunction:Function;
 		

@@ -47,7 +47,7 @@ package randori.jqueryui {
 		public var animate:Boolean;
 		
 		/**
-		 * How long to animate when using the animate option.
+		 * How long to animate when using the <a href="#option-animate"><code>animate</code></a> option.
 		 */
 		public var animateDuration:*;
 		
@@ -57,7 +57,7 @@ package randori.jqueryui {
 		public var animateDurationNumber:Number;
 		
 		/**
-		 * A named duration, such as "slow" or "fast".
+		 * A named duration, such as <code>"slow"</code> or <code>"fast"</code>.
 		 */
 		public var animateDurationString:String;
 		
@@ -72,7 +72,7 @@ package randori.jqueryui {
 		public var aspectRatio:*;
 		
 		/**
-		 * When set to true, the element will maintain its original aspect ratio.
+		 * When set to <code>true</code>, the element will maintain its original aspect ratio.
 		 */
 		public var aspectRatioBoolean:Boolean;
 		
@@ -107,7 +107,7 @@ package randori.jqueryui {
 		public var containmentElement:Element;
 		
 		/**
-		 * Possible values: "parent" and "document".
+		 * Possible values: <code>"parent"</code> and <code>"document"</code>.
 		 */
 		public var containmentString:String;
 		
@@ -142,7 +142,7 @@ package randori.jqueryui {
 		public var handlesString:String;
 		
 		/**
-		 * The following keys are supported: { n, e, s, w, ne, se, sw, nw }. The value of any specified should be a jQuery selector matching the child element of the resizable to use as that handle. If the handle is not a child of the resizable, you can pass in the DOMElement or a valid jQuery object directly.Note: When generating your own handles, each handle must have the ui-resizable-handle class, as well as the appropriate ui-resizable-{direction} class, .e.g., ui-resizable-s.
+		 * <p>The following keys are supported: { n, e, s, w, ne, se, sw, nw }. The value of any specified should be a jQuery selector matching the child element of the resizable to use as that handle. If the handle is not a child of the resizable, you can pass in the DOMElement or a valid jQuery object directly.</p><p><em>Note: When generating your own handles, each handle must have the <code>ui-resizable-handle</code> class, as well as the appropriate <code>ui-resizable-{direction}</code> class, .e.g., <code>ui-resizable-s</code>.</em></p>
 		 */
 		public var handlesObject:Object;
 		

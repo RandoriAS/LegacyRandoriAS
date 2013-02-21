@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace JQueryUIParser
@@ -287,7 +288,7 @@ namespace JQueryUIParser
                 field.UserData["IsAsterisk"] = true;
                 if (Option.Element("desc") != null)
                 {
-                    field.Comments.Add(new CodeCommentStatement(Option.Element("desc").Value.Trim(), true));
+                    AddMemberComment(CurrentClass.Name, Option, field.Comments);
                 }
                 Option.Elements("type").Cast<XElement>().ToList<XElement>().ForEach(t => AddOption(CurrentClass, t, Name, multiples));
             }
@@ -366,7 +367,7 @@ namespace JQueryUIParser
                 var field = Builder.AddProperty(CurrentClass, Name, TranslateType(TypeName));
                 if (type.Element("desc") != null)
                 {
-                    field.Comments.Add(new CodeCommentStatement(type.Element("desc").Value.Trim(), true));
+                    AddMemberComment(CurrentClass.Name, type, field.Comments);
                 }
             }
         }

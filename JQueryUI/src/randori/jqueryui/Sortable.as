@@ -51,7 +51,7 @@ package randori.jqueryui {
 		public var appendToSelector:String;
 		
 		/**
-		 * The string "parent" will cause the helper to be a sibling of the sortable item.
+		 * The string <code>"parent"</code> will cause the helper to be a sibling of the sortable item.
 		 */
 		public var appendToString:String;
 		
@@ -71,7 +71,7 @@ package randori.jqueryui {
 		public var connectWith:String;
 		
 		/**
-		 * Defines a bounding box that the sortable items are constrained to while dragging.Note: The element specified for containment must have a calculated width and height (though it need not be explicit). For example, if you have float: left sortable children and specify containment: "parent" be sure to have float: left on the sortable/parent container as well or it will have height: 0, causing undefined behavior.
+		 * <p>Defines a bounding box that the sortable items are constrained to while dragging.</p><p>Note: The element specified for containment must have a calculated width and height (though it need not be explicit). For example, if you have <code>float: left</code> sortable children and specify <code>containment: "parent"</code> be sure to have <code>float: left</code> on the sortable/parent container as well or it will have <code>height: 0</code>, causing undefined behavior.</p>
 		 */
 		public var containment:*;
 		
@@ -86,7 +86,7 @@ package randori.jqueryui {
 		public var containmentSelector:String;
 		
 		/**
-		 * A string identifying an element to use as the container. Possible values: "parent", "document", "window".
+		 * A string identifying an element to use as the container. Possible values: <code>"parent"</code>, <code>"document"</code>, <code>"window"</code>.
 		 */
 		public var containmentString:String;
 		
@@ -145,7 +145,7 @@ package randori.jqueryui {
 		public var helper:*;
 		
 		/**
-		 * If set to "clone", then the element will be cloned and the clone will be dragged.
+		 * If set to <code>"clone"</code>, then the element will be cloned and the clone will be dragged.
 		 */
 		public var helperString:String;
 		
@@ -175,7 +175,7 @@ package randori.jqueryui {
 		public var revert:*;
 		
 		/**
-		 * When set to true, the items will animate with the default duration.
+		 * When set to <code>true</code>, the items will animate with the default duration.
 		 */
 		public var revertBoolean:Boolean;
 		

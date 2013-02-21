@@ -56,7 +56,7 @@ package randori.jqueryui {
 		public var appendToSelector:String;
 		
 		/**
-		 * The string "parent" will cause the helper to be a sibling of the draggable.
+		 * The string <code>"parent"</code> will cause the helper to be a sibling of the draggable.
 		 */
 		public var appendToString:String;
 		
@@ -91,12 +91,12 @@ package randori.jqueryui {
 		public var containmentElement:Element;
 		
 		/**
-		 * Possible values: "parent", "document", "window".
+		 * Possible values: <code>"parent"</code>, <code>"document"</code>, <code>"window"</code>.
 		 */
 		public var containmentString:String;
 		
 		/**
-		 * An array defining a bounding box in the form [ x1, y1, x2, y2 ].
+		 * An array defining a bounding box in the form <code>[ x1, y1, x2, y2 ]</code>.
 		 */
 		public var containmentArray:Array;
 		
@@ -140,7 +140,7 @@ package randori.jqueryui {
 		public var helper:*;
 		
 		/**
-		 * If set to "clone", then the element will be cloned and the clone will be dragged.
+		 * If set to <code>"clone"</code>, then the element will be cloned and the clone will be dragged.
 		 */
 		public var helperString:String;
 		
@@ -150,12 +150,12 @@ package randori.jqueryui {
 		public var helperFunction:Function;
 		
 		/**
-		 * Prevent iframes from capturing the mousemove events during a drag. Useful in combination with the cursorAt option, or in any case where the mouse cursor may not be over the helper.
+		 * Prevent iframes from capturing the mousemove events during a drag. Useful in combination with the <a href="#option-cursorAt"><code>cursorAt</code></a> option, or in any case where the mouse cursor may not be over the helper.
 		 */
 		public var iframeFix:*;
 		
 		/**
-		 * When set to true, transparent overlays will be placed over all iframes on the page.
+		 * When set to <code>true</code>, transparent overlays will be placed over all iframes on the page.
 		 */
 		public var iframeFixBoolean:Boolean;
 		
@@ -181,12 +181,12 @@ package randori.jqueryui {
 		public var revert:*;
 		
 		/**
-		 * If set to true the element will always revert.
+		 * If set to <code>true</code> the element will always revert.
 		 */
 		public var revertBoolean:Boolean;
 		
 		/**
-		 * If set to "invalid", revert will only occur if the draggable has not been dropped on a droppable. For "valid", it's the other way around.
+		 * If set to <code>"invalid"</code>, revert will only occur if the draggable has not been dropped on a droppable. For <code>"valid"</code>, it's the other way around.
 		 */
 		public var revertString:String;
 		
@@ -221,7 +221,7 @@ package randori.jqueryui {
 		public var snap:*;
 		
 		/**
-		 * When set to true, the element will snap to all other draggable elements.
+		 * When set to <code>true</code>, the element will snap to all other draggable elements.
 		 */
 		public var snapBoolean:Boolean;
 		

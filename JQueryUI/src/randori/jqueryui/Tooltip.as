@@ -30,7 +30,7 @@ package randori.jqueryui {
 	public class Tooltip {
 		
 		/**
-		 * The content of the tooltip.When changing this option, you likely need to also change the items option.
+		 * <p>The content of the tooltip.</p><p><em>When changing this option, you likely need to also change the <a href="#option-items"><code>items</code></a> option.</em></p>
 		 */
 		public var content:*;
 		

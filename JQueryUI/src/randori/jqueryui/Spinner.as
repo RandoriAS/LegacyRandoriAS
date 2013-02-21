@@ -48,7 +48,7 @@ package randori.jqueryui {
 		public var incremental:*;
 		
 		/**
-		 * When set to true, the stepping delta will increase when spun incessantly. When set to false, all steps are equal (as defined by the step option).
+		 * When set to <code>true</code>, the stepping delta will increase when spun incessantly. When set to <code>false</code>, all steps are equal (as defined by the <a href="#option-step"><code>step</code></a> option).
 		 */
 		public var incrementalBoolean:Boolean;
 		
@@ -58,7 +58,7 @@ package randori.jqueryui {
 		public var incrementalFunction:Function;
 		
 		/**
-		 * The maximum allowed value. The element's max attribute is used if it exists and the option is not explicitly set. If null, there is no maximum enforced.
+		 * The maximum allowed value. The element's <code>max</code> attribute is used if it exists and the option is not explicitly set. If <code>null</code>, there is no maximum enforced.
 		 */
 		public var max:*;
 		
@@ -68,12 +68,12 @@ package randori.jqueryui {
 		public var maxNumber:Number;
 		
 		/**
-		 * If Globalize is included, the max option can be passed as a string which will be parsed based on the numberFormat and culture options; otherwise it will fall back to the native parseFloat() method.
+		 * If <a href="https://github.com/jquery/globalize">Globalize</a> is included, the <code>max</code> option can be passed as a string which will be parsed based on the <a href="#opiton-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options; otherwise it will fall back to the native <code>parseFloat()</code> method.
 		 */
 		public var maxString:String;
 		
 		/**
-		 * The minimum allowed value. The element's min attribute is used if it exists and the option is not explicitly set. If null, there is no minimum enforced.
+		 * The minimum allowed value. The element's <code>min</code> attribute is used if it exists and the option is not explicitly set. If <code>null</code>, there is no minimum enforced.
 		 */
 		public var min:*;
 		
@@ -83,7 +83,7 @@ package randori.jqueryui {
 		public var minNumber:Number;
 		
 		/**
-		 * If Globalize is included, the min option can be passed as a string which will be parsed based on the numberFormat and culture options; otherwise it will fall back to the native parseFloat() method.
+		 * If <a href="https://github.com/jquery/globalize">Globalize</a> is included, the <code>min</code> option can be passed as a string which will be parsed based on the <a href="#opiton-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options; otherwise it will fall back to the native <code>parseFloat()</code> method.
 		 */
 		public var minString:String;
 		
@@ -98,7 +98,7 @@ package randori.jqueryui {
 		public var page:Number;
 		
 		/**
-		 * The size of the step to take when spinning via buttons or via the stepUp()/stepDown() methods. The element's step attribute is used if it exists and the option is not explicitly set.
+		 * The size of the step to take when spinning via buttons or via the <a href="#method-stepUp"><code>stepUp()</code></a>/<a href="#method-stepDown"><code>stepDown()</code></a> methods. The element's <code>step</code> attribute is used if it exists and the option is not explicitly set.
 		 */
 		public var step:*;
 		
@@ -108,7 +108,7 @@ package randori.jqueryui {
 		public var stepNumber:Number;
 		
 		/**
-		 * If Globalize is included, the step option can be passed as a string which will be parsed based on the numberFormat and culture options, otherwise it will fall back to the native parseFloat.
+		 * If <a href="https://github.com/jquery/globalize">Globalize</a> is included, the <code>step</code> option can be passed as a string which will be parsed based on the <a href="#opiton-numberFormat"><code>numberFormat</code></a> and <a href="#option-culture"><code>culture</code></a> options, otherwise it will fall back to the native <code>parseFloat</code>.
 		 */
 		public var stepString:String;
 		

@@ -44,12 +44,12 @@ package randori.jqueryui {
 		public var value:*;
 		
 		/**
-		 * A value between 0 and the max.
+		 * A value between <code>0</code> and the <a href="#option-max"><code>max</code></a>.
 		 */
 		public var valueNumber:Number;
 		
 		/**
-		 * Value can be set to false to create an indeterminate progressbar.
+		 * Value can be set to <code>false</code> to create an indeterminate progressbar.
 		 */
 		public var valueBoolean:Boolean;
 		

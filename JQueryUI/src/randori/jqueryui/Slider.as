@@ -30,17 +30,17 @@ package randori.jqueryui {
 	public class Slider {
 		
 		/**
-		 * Whether to slide the handle smoothly when the user clicks on the slider track. Also accepts any valid animation duration.
+		 * Whether to slide the handle smoothly when the user clicks on the slider track. Also accepts any valid <a href="//api.jquery.com/animate/#duration">animation duration</a>.
 		 */
 		public var animate:*;
 		
 		/**
-		 * When set to true, the handle will animate with the default duration.
+		 * When set to <code>true</code>, the handle will animate with the default duration.
 		 */
 		public var animateBoolean:Boolean;
 		
 		/**
-		 * The name of a speed, such as "fast" or "slow".
+		 * The name of a speed, such as <code>"fast"</code> or <code>"slow"</code>.
 		 */
 		public var animateString:String;
 		
@@ -70,12 +70,12 @@ package randori.jqueryui {
 		public var range:*;
 		
 		/**
-		 * If set to true, the slider will detect if you have two handles and create a styleable range element between these two.
+		 * If set to <code>true</code>, the slider will detect if you have two handles and create a styleable range element between these two.
 		 */
 		public var rangeBoolean:Boolean;
 		
 		/**
-		 * Either "min" or "max". A min range goes from the slider min to one handle. A max range goes from one handle to the slider max.
+		 * Either <code>"min"</code> or <code>"max"</code>. A min range goes from the slider min to one handle. A max range goes from one handle to the slider max.
 		 */
 		public var rangeString:String;
 		
