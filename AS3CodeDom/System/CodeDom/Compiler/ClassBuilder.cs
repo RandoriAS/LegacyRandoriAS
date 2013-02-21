@@ -91,6 +91,10 @@ namespace System.CodeDom.Compiler
 
         public CodeParameterDeclarationExpression AddParameter(string Name, string type, CodeMemberMethod method, string defaultValue, bool IsOptional)
         {
+            if (Name == "switch")
+            {
+                Name = "_" + Name;
+            }
             var paramDef = new CodeParameterDeclarationExpression(type, Name);
             paramDef.UserData["comments"] = new CodeCommentStatementCollection();
             paramDef.UserData["defaultValue"] = defaultValue;

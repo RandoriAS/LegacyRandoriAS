@@ -174,7 +174,14 @@ namespace JQueryUIParser
             {
                 CurrentClass = ClassLookup[ClassName.ActionScriptName];
             }
-            xdoc.Descendants("entry").ToList<XElement>().ForEach(e => AddMembers(CurrentClass, e));
+            if ((xdoc.Root.Attribute("type") != null) && (xdoc.Root.Attribute("type").Value != "method"))
+            {
+                xdoc.Descendants("entry").ToList<XElement>().ForEach(e => AddMembers(CurrentClass, e));
+            }
+            else if ((xdoc.Root.Attribute("type") != null) && (xdoc.Root.Attribute("type").Value == "method"))
+            {
+                AddMethod(CurrentClass, xdoc.Root);
+            }
             return CurrentClass;
         }
 
@@ -254,6 +261,14 @@ namespace JQueryUIParser
             if (Argument.Attribute("desc") != null)
             {
                 method.Comments.Add(new CodeCommentStatement("@param " + Argument.Attribute("name").Value + " " + Argument.Attribute("desc").Value));
+            }
+            if (Argument.Attribute("added") != null)
+            {
+                method.Comments.Add(new CodeCommentStatement("@since " + Argument.Attribute("added").Value, true));
+            }
+            if (Argument.Attribute("deprecated") != null)
+            {
+                method.Comments.Add(new CodeCommentStatement("@deprecated Since version " + Argument.Attribute("deprecated").Value, true));
             }
         }
 
@@ -380,16 +395,21 @@ namespace JQueryUIParser
             {
                 ClassName = CapitalizeName(xdoc.Root.Attribute("name").Value);
             }
+            else if ((xdoc.Root.Attribute("type") != null) && (xdoc.Root.Attribute("type").Value == "method"))
+            {
+                ClassName = "JQueryUI";
+                result.JavascriptName = "JQuery";
+            }
             else if (FileName.IndexOf('.') > -1)
             {
                 var parts = FileName.Split('.');
-                if (parts[0] != "jQuery")
+                if (parts[0].ToLower() != "jquery")
                 {
                     ClassName = CapitalizeName(parts[0]);
                 }
                 else
                 {
-                    ClassName = "JQueryStatic";
+                    ClassName = "JQueryStaticUI";
                     result.JavascriptName = "JQuery";
                 }
             }
