@@ -59,9 +59,16 @@ public class JavaScriptCallFrame
 	*/
 	public function evaluate(script:String):void {}
 	/**
-	*  @return A <code>Object</code> instance.
+	*  @return A <code>any</code> instance.
 	*/
-	public function restart():Object { return null;}
+	public function restart():* { return null;}
+	/**
+	*  @param scopeIndex
+	*  @param variableName
+	*  @param newValue
+	*  @return A <code>any</code> instance.
+	*/
+	public function setVariableValue(scopeIndex:int, variableName:String, newValue:*):* { return null;}
 
 	/**
 	*  @see randori.webkit.inspector.JavaScriptCallFrame

@@ -1,0 +1,8 @@
+C:\projects\RandoriAS\JQueryParserUI\JQuieryUIParser\obj\Debug\JQueryUIParser.csprojResolveAssemblyReference.cache
+C:\projects\RandoriAS\JQueryParserUI\JQuieryUIParser\obj\Debug\ConsoleApplication1.exe
+C:\projects\RandoriAS\JQueryParserUI\JQuieryUIParser\bin\Debug\ConsoleApplication1.exe.config
+C:\projects\RandoriAS\JQueryParserUI\JQuieryUIParser\bin\Debug\ConsoleApplication1.exe
+C:\projects\RandoriAS\JQueryParserUI\JQuieryUIParser\bin\Debug\ConsoleApplication1.pdb
+C:\projects\RandoriAS\JQueryParserUI\JQuieryUIParser\bin\Debug\AS3CodeDom.dll
+C:\projects\RandoriAS\JQueryParserUI\JQuieryUIParser\bin\Debug\AS3CodeDom.pdb
+C:\projects\RandoriAS\JQueryParserUI\JQuieryUIParser\obj\Debug\ConsoleApplication1.pdb

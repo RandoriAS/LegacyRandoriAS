@@ -55,6 +55,11 @@ public class PagePopupController
 	*/
 	public function setValueAndClosePopup(numberValue:uint, stringValue:String):void {}
 	/**
+	*  @param value
+	*/
+	public function setValue(value:String):void {}
+	public function closePopup():void {}
+	/**
 	*  @param numberString
 	*  @return A <code>String</code> instance.
 	*/
@@ -65,6 +70,12 @@ public class PagePopupController
 	*  @return A <code>String</code> instance.
 	*/
 	public function formatMonth(year:uint, zeroBaseMonth:uint):String { return '';}
+	/**
+	*  @param year
+	*  @param zeroBaseMonth
+	*  @return A <code>String</code> instance.
+	*/
+	public function formatShortMonth(year:uint, zeroBaseMonth:uint):String { return '';}
 	/**
 	*  @param name
 	*  @param sample

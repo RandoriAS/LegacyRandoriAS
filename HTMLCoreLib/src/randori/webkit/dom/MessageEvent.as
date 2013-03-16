@@ -61,7 +61,7 @@ public class MessageEvent extends DomEvent
 	*/
 	public function get source():Window { return null; }
 
-	public function get data():Object { return null; }
+	public function get data():* { return null; }
 
 	public function get ports():Array { return null; }
 	/**
@@ -74,7 +74,7 @@ public class MessageEvent extends DomEvent
 	*  @param sourceArg (optional argument, default value is <code>undefined</code>)
 	*  @param messagePorts (optional argument, default value is <code>undefined</code>)
 	*/
-	public function initMessageEvent(typeArg:String=undefined, canBubbleArg:Boolean=undefined, cancelableArg:Boolean=undefined, dataArg:Object=undefined, originArg:String=undefined, lastEventIdArg:String=undefined, sourceArg:Window=undefined, messagePorts:Array=undefined):void {}
+	public function initMessageEvent(typeArg:String=undefined, canBubbleArg:Boolean=undefined, cancelableArg:Boolean=undefined, dataArg:*=undefined, originArg:String=undefined, lastEventIdArg:String=undefined, sourceArg:Window=undefined, messagePorts:Array=undefined):void {}
 }
 
 }

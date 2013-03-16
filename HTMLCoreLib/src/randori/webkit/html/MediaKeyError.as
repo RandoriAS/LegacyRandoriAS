@@ -42,7 +42,7 @@ package randori.webkit.html
 {
 
 
-[JavaScript(export="false", nativecondition="ENCRYPTED_MEDIA", name="MediaKeyError")]
+[JavaScript(export="false", name="MediaKeyError")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
@@ -57,6 +57,8 @@ public class MediaKeyError
 	public static const MEDIA_KEYERR_DOMAIN:uint = 6;
 
 	public function get code():uint { return 0; }
+
+	public function get systemCode():uint { return 0; }
 }
 
 }

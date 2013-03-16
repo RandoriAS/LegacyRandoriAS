@@ -78,7 +78,7 @@ public class FileReader
 	public function readAsDataURL(blob:Blob):void {}
 	public function abort():void {}
 
-	public function get result():Object { return null; }
+	public function get result():* { return null; }
 
 	/**
 	*  @see randori.webkit.fileapi.FileError

@@ -323,11 +323,11 @@ namespace WebIDLParser
             var result = "";
             for (var i = 0; i < chars.Count(); i++)
             {
-                if ((i > 0) && (char.IsUpper(chars[i]) && (char.IsUpper(chars[i-1]) && (char.IsLower(chars[i+1])))))
+                if ((i > 0) && ((i + 1) < chars.Count()) && (char.IsUpper(chars[i]) && (char.IsUpper(chars[i - 1]) && (char.IsLower(chars[i + 1])))))
                 {
                     result += "-";
                 }
-                else if ((i > 0) && (char.IsUpper(chars[i]) && (char.IsLower(chars[i - 1]) && (char.IsLower(chars[i + 1])))))
+                else if ((i > 0) && ((i+1) < chars.Count()) && (char.IsUpper(chars[i]) && (char.IsLower(chars[i - 1]) && (char.IsLower(chars[i + 1])))))
                 {
                     result += "-";
                 }

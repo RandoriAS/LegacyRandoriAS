@@ -131,12 +131,6 @@ public class Node
 	public function get nextSibling():Node { return null; }
 
 	/**
-	*  <p>A <code>NamedNodeMap</code> containing the attributes of this node (if it is an <code>Element</code>) or <code>null</code> otherwise. </p>
-	*  @see randori.webkit.dom.NamedNodeMap
-	*/
-	public function get attributes():NamedNodeMap { return null; }
-
-	/**
 	*  <p>The <code>Document</code> object associated with this node. This is also the <code>Document</code> object used to create new nodes. When this node is a <code>Document</code> or a <code>DocumentType</code> which is not used with any <code>Document</code> yet, this is <code>null</code>.</p>
 	*  @see randori.webkit.dom.Document
 	*/
@@ -249,12 +243,6 @@ public class Node
 	*  <p>Returns the local part of the qualified name of this node.</p><p>For nodes of any type other than <code>ELEMENT_NODE</code> and <code>ATTRIBUTE_NODE</code> and nodes created with a DOM Level 1 method, such as <code>createElement</code> from the <code>Document</code> interface, this is always <code>null</code>.</p>
 	*/
 	public function get localName():String { return ''; }
-	/**
-	*  <p>Returns whether this node (if it is an element) has any
-	*  attributes.</p>
-	*  @return <p><code>true</code> if this node has any attributes, <code>false</code> otherwise.</p>
-	*/
-	public function hasAttributes():Boolean { return false;}
 
 	public function get baseURI():String { return ''; }
 

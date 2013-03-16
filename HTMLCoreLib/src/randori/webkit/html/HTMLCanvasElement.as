@@ -68,9 +68,9 @@ public class HTMLCanvasElement extends HTMLElement
 	public function toDataURL(type:String=undefined):String { return '';}
 	/**
 	*  @param contextId (optional argument, default value is <code>undefined</code>)
-	*  @return A <code>Object</code> instance.
+	*  @return A <code>any</code> instance.
 	*/
-	public function getContext(contextId:String=undefined):Object { return null;}
+	public function getContext(contextId:String=undefined):* { return null;}
 }
 
 }

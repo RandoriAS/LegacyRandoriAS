@@ -83,20 +83,20 @@ public class WorkerContext
 	public function get navigator():WorkerNavigator { return null; }
 	/**
 	*  @param handler
-	*  @param timeout
+	*  @param timeout (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>uint</code> instance.
 	*/
-	public function setTimeout(handler:Object, timeout:uint):uint { return 0;}
+	public function setTimeout(handler:*, timeout:uint=undefined):uint { return 0;}
 	/**
 	*  @param handle (optional argument, default value is <code>undefined</code>)
 	*/
 	public function clearTimeout(handle:uint=undefined):void {}
 	/**
 	*  @param handler
-	*  @param timeout
+	*  @param timeout (optional argument, default value is <code>undefined</code>)
 	*  @return A <code>uint</code> instance.
 	*/
-	public function setInterval(handler:Object, timeout:uint):uint { return 0;}
+	public function setInterval(handler:*, timeout:uint=undefined):uint { return 0;}
 	/**
 	*  @param handle (optional argument, default value is <code>undefined</code>)
 	*/
@@ -177,7 +177,7 @@ public class WorkerContext
 
 	[JavaScriptProperty(name="Uint8ClampedArray")]
 	/**
-	*  @see randori.webkit.html.canvas.Uint8Array
+	*  @see randori.webkit.html.canvas.Uint8ClampedArray
 	*/
 	public function get Uint8ClampedArray_():Object { return null; }
 	public function set Uint8ClampedArray_(value:Object):void { }

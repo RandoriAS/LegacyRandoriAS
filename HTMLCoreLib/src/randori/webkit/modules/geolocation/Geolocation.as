@@ -63,9 +63,9 @@ public class Geolocation
 	*/
 	public function watchPosition(successCallback:Object, errorCallback:Object=null, options:Object=null):uint { return 0;}
 	/**
-	*  @param watchId
+	*  @param watchID
 	*/
-	public function clearWatch(watchId:uint):void {}
+	public function clearWatch(watchID:uint):void {}
 }
 
 }

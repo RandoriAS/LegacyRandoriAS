@@ -113,6 +113,7 @@ public class CSSPrimitiveValue extends CSSValue
 	public static const CSS_VW:uint = 26;
 	public static const CSS_VH:uint = 27;
 	public static const CSS_VMIN:uint = 28;
+	public static const CSS_VMAX:uint = 29;
 
 	/**
 	*  <p>The type of the value as defined by the constants specified above.</p>
