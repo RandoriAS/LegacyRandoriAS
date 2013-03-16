@@ -137,6 +137,7 @@ public class SVGElementInstance extends EventTarget
 
 	/**
 	*  Function that accepts an event of type <code>FocusEvent</code>.
+	*  @see randori.webkit.dom.FocusEvent
 	*/
 	public function get onfocus():Function { return null; }
 	public function set onfocus(value:Function):void { }

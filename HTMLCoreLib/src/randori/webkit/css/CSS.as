@@ -4,7 +4,7 @@
   This file was auto generated with the tool "WebIDLParser"
 
   Content was generated from IDL file:
-  http://trac.webkit.org/browser/trunk/Source/WebCore/Modules/webaudio/AudioDestinationNode.idl
+  http://trac.webkit.org/browser/trunk/Source/WebCore/css/DOMWindowCSS.idl
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
@@ -38,20 +38,24 @@
 *******************************************************************************************************/
 
 
-package randori.webkit.modules.webaudio
+package randori.webkit.css
 {
 
 
-[JavaScript(export="false", nativecondition="WEB_AUDIO", name="AudioDestinationNode")]
+[JavaScript(export="false", nativecondition="CSS3_CONDITIONAL_RULES", name="CSS")]
 /**
+ *  <note>This class depends on the browser to support: <code>CSS3_CONDITIONAL_RULES</code></note>
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @see randori.webkit.modules.webaudio.AudioNode
  */
-public class AudioDestinationNode extends AudioNode
+public class CSS
 {
-
-	public function get maxChannelCount():uint { return 0; }
+	/**
+	*  @param property
+	*  @param value
+	*  @return A <code>Boolean</code> instance.
+	*/
+	public function supports(property:String, value:String):Boolean { return false;}
 }
 
 }

@@ -107,16 +107,19 @@ public class RTCPeerConnection
 	public function get iceGatheringState():String { return ''; }
 
 	public function get iceConnectionState():String { return ''; }
-
 	/**
-	*  @see randori.webkit.modules.mediastream.MediaStreamList
+	*  @return A <code>sequence</code> instance.
 	*/
-	public function get localStreams():MediaStreamList { return null; }
-
+	public function getLocalStreams():Vector.<MediaStream> { return null;}
 	/**
-	*  @see randori.webkit.modules.mediastream.MediaStreamList
+	*  @return A <code>sequence</code> instance.
 	*/
-	public function get remoteStreams():MediaStreamList { return null; }
+	public function getRemoteStreams():Vector.<MediaStream> { return null;}
+	/**
+	*  @param streamId
+	*  @return A <code>MediaStream</code> instance.
+	*/
+	public function getStreamById(streamId:String):MediaStream { return null;}
 	/**
 	*  @param stream
 	*  @param mediaConstraints (optional argument, default value is <code>null</code>)
@@ -137,6 +140,11 @@ public class RTCPeerConnection
 	*  @return A <code>RTCDataChannel</code> instance.
 	*/
 	public function createDataChannel(label:String, options:Object=null):RTCDataChannel { return null;}
+	/**
+	*  @param track
+	*  @return A <code>RTCDTMFSender</code> instance.
+	*/
+	public function createDTMFSender(track:MediaStreamTrack):RTCDTMFSender { return null;}
 	public function close():void {}
 
 	/**

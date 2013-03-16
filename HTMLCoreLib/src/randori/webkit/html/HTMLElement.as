@@ -141,8 +141,8 @@ public class HTMLElement extends Element
 	*/
 	public function get itemProp():DOMSettableTokenList { return null; }
 
-	public function get itemValue():Object { return null; }
-	public function set itemValue(value:Object):void { }
+	public function get itemValue():* { return null; }
+	public function set itemValue(value:*):void { }
 	public function click():void {}
 }
 

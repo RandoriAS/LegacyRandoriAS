@@ -51,10 +51,15 @@ import randori.webkit.page.Window;
  */
 public class WheelEvent extends MouseEvent
 {
+	public static const DOM_DELTA_PIXEL:uint = 0x00;
+	public static const DOM_DELTA_LINE:uint = 0x01;
+	public static const DOM_DELTA_PAGE:uint = 0x02;
 
 	public function get wheelDeltaX():uint { return 0; }
 
 	public function get wheelDeltaY():uint { return 0; }
+
+	public function get deltaMode():uint { return 0; }
 
 	public function get wheelDelta():uint { return 0; }
 	/**

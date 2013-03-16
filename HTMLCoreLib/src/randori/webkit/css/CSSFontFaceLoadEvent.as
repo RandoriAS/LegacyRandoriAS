@@ -4,7 +4,7 @@
   This file was auto generated with the tool "WebIDLParser"
 
   Content was generated from IDL file:
-  http://trac.webkit.org/browser/trunk/Source/WebCore/Modules/webaudio/AudioDestinationNode.idl
+  http://trac.webkit.org/browser/trunk/Source/WebCore/css/CSSFontFaceLoadEvent.idl
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
@@ -38,20 +38,31 @@
 *******************************************************************************************************/
 
 
-package randori.webkit.modules.webaudio
+package randori.webkit.css
 {
 
+import randori.webkit.dom.DomEvent;
+import randori.webkit.dom.DOMError;
 
-[JavaScript(export="false", nativecondition="WEB_AUDIO", name="AudioDestinationNode")]
+[JavaScript(export="false", nativecondition="FONT_LOAD_EVENTS", name="CSSFontFaceLoadEvent")]
 /**
+ *  <note>This class depends on the browser to support: <code>FONT_LOAD_EVENTS</code></note>
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @see randori.webkit.modules.webaudio.AudioNode
+ *  @see randori.webkit.dom.DomEvent
  */
-public class AudioDestinationNode extends AudioNode
+public class CSSFontFaceLoadEvent extends DomEvent
 {
 
-	public function get maxChannelCount():uint { return 0; }
+	/**
+	*  @see randori.webkit.css.CSSFontFaceRule
+	*/
+	public function get fontface():CSSFontFaceRule { return null; }
+
+	/**
+	*  @see randori.webkit.dom.DOMError
+	*/
+	public function get error():DOMError { return null; }
 }
 
 }

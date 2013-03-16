@@ -66,9 +66,9 @@ public class NotificationCenter
 	*/
 	public function checkPermission():int { return 0;}
 	/**
-	*  @param callback
+	*  @param callback (optional argument, default value is <code>null</code>)
 	*/
-	public function requestPermission(callback:Object):void {}
+	public function requestPermission(callback:Object=null):void {}
 }
 
 }

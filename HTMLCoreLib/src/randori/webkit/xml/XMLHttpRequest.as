@@ -41,7 +41,6 @@
 package randori.webkit.xml
 {
 
-import randori.webkit.html.canvas.ArrayBuffer;
 import randori.webkit.dom.Document;
 import randori.webkit.dom.DomEvent;
 
@@ -132,10 +131,7 @@ public class XMLHttpRequest
 	*  @param value
 	*/
 	public function setRequestHeader(header:String, value:String):void {}
-	/**
-	*  @param data
-	*/
-	public function send(data:ArrayBuffer):void {}
+	public function send():void {}
 	public function abort():void {}
 
 	/**

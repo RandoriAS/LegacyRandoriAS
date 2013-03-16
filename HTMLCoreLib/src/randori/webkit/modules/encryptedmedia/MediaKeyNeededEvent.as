@@ -4,7 +4,7 @@
   This file was auto generated with the tool "WebIDLParser"
 
   Content was generated from IDL file:
-  http://trac.webkit.org/browser/trunk/Source/WebCore/Modules/webaudio/AudioDestinationNode.idl
+  http://trac.webkit.org/browser/trunk/Source/WebCore/Modules/encryptedmedia/MediaKeyNeededEvent.idl
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
@@ -38,20 +38,24 @@
 *******************************************************************************************************/
 
 
-package randori.webkit.modules.webaudio
+package randori.webkit.modules.encryptedmedia
 {
 
+import randori.webkit.dom.DomEvent;
 
-[JavaScript(export="false", nativecondition="WEB_AUDIO", name="AudioDestinationNode")]
+[JavaScript(export="false", name="MediaKeyNeededEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @see randori.webkit.modules.webaudio.AudioNode
+ *  @see randori.webkit.dom.DomEvent
  */
-public class AudioDestinationNode extends AudioNode
+public class MediaKeyNeededEvent extends DomEvent
 {
 
-	public function get maxChannelCount():uint { return 0; }
+	/**
+	*  @see randori.webkit.html.canvas.Uint8Array
+	*/
+	public function get initData():Object { return null; }
 }
 
 }

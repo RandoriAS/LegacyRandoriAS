@@ -4,7 +4,7 @@
   This file was auto generated with the tool "WebIDLParser"
 
   Content was generated from IDL file:
-  http://trac.webkit.org/browser/trunk/Source/WebCore/Modules/webaudio/AudioDestinationNode.idl
+  http://trac.webkit.org/browser/trunk/Source/WebCore/dom/FocusEvent.idl
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
@@ -38,20 +38,23 @@
 *******************************************************************************************************/
 
 
-package randori.webkit.modules.webaudio
+package randori.webkit.dom
 {
 
 
-[JavaScript(export="false", nativecondition="WEB_AUDIO", name="AudioDestinationNode")]
+[JavaScript(export="false", name="FocusEvent")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @see randori.webkit.modules.webaudio.AudioNode
+ *  @see randori.webkit.dom.UIEvent
  */
-public class AudioDestinationNode extends AudioNode
+public class FocusEvent extends UIEvent
 {
 
-	public function get maxChannelCount():uint { return 0; }
+	/**
+	*  @see randori.webkit.dom.EventTarget
+	*/
+	public function get relatedTarget():EventTarget { return null; }
 }
 
 }

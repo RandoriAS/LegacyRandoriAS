@@ -4,7 +4,7 @@
   This file was auto generated with the tool "WebIDLParser"
 
   Content was generated from IDL file:
-  http://trac.webkit.org/browser/trunk/Source/WebCore/Modules/webaudio/AudioDestinationNode.idl
+  http://trac.webkit.org/browser/trunk/Source/WebCore/css/FontLoader.idl
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
@@ -38,20 +38,67 @@
 *******************************************************************************************************/
 
 
-package randori.webkit.modules.webaudio
+package randori.webkit.css
 {
 
+import randori.webkit.dom.DomEvent;
 
-[JavaScript(export="false", nativecondition="WEB_AUDIO", name="AudioDestinationNode")]
+[JavaScript(export="false", nativecondition="FONT_LOAD_EVENTS", name="FontLoader")]
 /**
+ *  <note>This class depends on the browser to support: <code>FONT_LOAD_EVENTS</code></note>
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @see randori.webkit.modules.webaudio.AudioNode
  */
-public class AudioDestinationNode extends AudioNode
+public class FontLoader
 {
 
-	public function get maxChannelCount():uint { return 0; }
+	public function get onloading():Function { return null; }
+	public function set onloading(value:Function):void { }
+
+	public function get onloadingdone():Function { return null; }
+	public function set onloadingdone(value:Function):void { }
+
+	public function get onloadstart():Function { return null; }
+	public function set onloadstart(value:Function):void { }
+
+	public function get onload():Function { return null; }
+	public function set onload(value:Function):void { }
+
+	public function get onerror():Function { return null; }
+	public function set onerror(value:Function):void { }
+	/**
+	*  @param font
+	*  @param text (optional argument, default value is <code>null</code>)
+	*  @return A <code>Boolean</code> instance.
+	*/
+	public function checkFont(font:String, text:String=null):Boolean { return false;}
+	/**
+	*  @param params
+	*/
+	public function loadFont(params:Object):void {}
+	/**
+	*  @param callback
+	*/
+	public function notifyWhenFontsReady(callback:Object):void {}
+
+	public function get loading():Boolean { return false; }
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
+	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param type
+	*  @param listener
+	*  @param useCapture (optional argument, default value is <code>false</code>)
+	*/
+	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void {}
+	/**
+	*  @param evt
+	*  @return A <code>Boolean</code> instance.
+	*/
+	public function dispatchEvent(evt:DomEvent):Boolean { return false;}
 }
 
 }

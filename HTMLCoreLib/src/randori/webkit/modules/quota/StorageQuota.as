@@ -4,7 +4,7 @@
   This file was auto generated with the tool "WebIDLParser"
 
   Content was generated from IDL file:
-  http://trac.webkit.org/browser/trunk/Source/WebCore/Modules/webaudio/AudioDestinationNode.idl
+  http://trac.webkit.org/browser/trunk/Source/WebCore/Modules/quota/StorageQuota.idl
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
@@ -38,20 +38,28 @@
 *******************************************************************************************************/
 
 
-package randori.webkit.modules.webaudio
+package randori.webkit.modules.quota
 {
 
 
-[JavaScript(export="false", nativecondition="WEB_AUDIO", name="AudioDestinationNode")]
+[JavaScript(export="false", nativecondition="QUOTA", name="StorageQuota")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @see randori.webkit.modules.webaudio.AudioNode
  */
-public class AudioDestinationNode extends AudioNode
+public class StorageQuota
 {
-
-	public function get maxChannelCount():uint { return 0; }
+	/**
+	*  @param usageCallback
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function queryUsageAndQuota(usageCallback:Object, errorCallback:Object=null):void {}
+	/**
+	*  @param newQuotaInBytes
+	*  @param quotaCallback (optional argument, default value is <code>null</code>)
+	*  @param errorCallback (optional argument, default value is <code>null</code>)
+	*/
+	public function requestQuota(newQuotaInBytes:Number, quotaCallback:Object=null, errorCallback:Object=null):void {}
 }
 
 }

@@ -4,7 +4,7 @@
   This file was auto generated with the tool "WebIDLParser"
 
   Content was generated from IDL file:
-  http://trac.webkit.org/browser/trunk/Source/WebCore/Modules/webaudio/AudioDestinationNode.idl
+  http://trac.webkit.org/browser/trunk/Source/WebCore/html/track/TextTrackRegion.idl
 
   PLEASE DO *NOT* MODIFY THIS FILE! This file will be overridden next generation. If you need changes:
   - Regenerate the project with the newest IDL files.
@@ -38,20 +38,50 @@
 *******************************************************************************************************/
 
 
-package randori.webkit.modules.webaudio
+package randori.webkit.html.track
 {
 
 
-[JavaScript(export="false", nativecondition="WEB_AUDIO", name="AudioDestinationNode")]
+[JavaScript(export="false", nativecondition="VIDEO_TRACK", name="TextTrackRegion")]
 /**
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
- *  @see randori.webkit.modules.webaudio.AudioNode
  */
-public class AudioDestinationNode extends AudioNode
+public class TextTrackRegion
 {
+	/**
+	*  Creates a new <code>TextTrackRegion</code> instance.
+	*/
+	public function TextTrackRegion() {super();}
 
-	public function get maxChannelCount():uint { return 0; }
+	/**
+	*  @see randori.webkit.html.track.TextTrack
+	*/
+	public function get track():TextTrack { return null; }
+
+	public function get id():String { return ''; }
+	public function set id(value:String):void { }
+
+	public function get width():Number { return 0; }
+	public function set width(value:Number):void { }
+
+	public function get height():uint { return 0; }
+	public function set height(value:uint):void { }
+
+	public function get regionAnchorX():Number { return 0; }
+	public function set regionAnchorX(value:Number):void { }
+
+	public function get regionAnchorY():Number { return 0; }
+	public function set regionAnchorY(value:Number):void { }
+
+	public function get viewportAnchorX():Number { return 0; }
+	public function set viewportAnchorX(value:Number):void { }
+
+	public function get viewportAnchorY():Number { return 0; }
+	public function set viewportAnchorY(value:Number):void { }
+
+	public function get scroll():String { return ''; }
+	public function set scroll(value:String):void { }
 }
 
 }

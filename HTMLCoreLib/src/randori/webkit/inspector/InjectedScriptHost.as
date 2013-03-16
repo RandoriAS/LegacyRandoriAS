@@ -59,37 +59,37 @@ public class InjectedScriptHost
 	*  @param objectId
 	*  @param hints
 	*/
-	public function inspect(objectId:Object, hints:Object):void {}
+	public function inspect(objectId:*, hints:*):void {}
 	/**
 	*  @param num
-	*  @return A <code>Object</code> instance.
+	*  @return A <code>any</code> instance.
 	*/
-	public function inspectedObject(num:int):Object { return null;}
+	public function inspectedObject(num:int):* { return null;}
 	/**
 	*  @param object
-	*  @return A <code>Object</code> instance.
+	*  @return A <code>any</code> instance.
 	*/
-	public function internalConstructorName(object:Object):Object { return null;}
+	public function internalConstructorName(object:*):* { return null;}
 	/**
 	*  @param object
 	*  @return A <code>Boolean</code> instance.
 	*/
-	public function isHTMLAllCollection(object:Object):Boolean { return false;}
+	public function isHTMLAllCollection(object:*):Boolean { return false;}
 	/**
 	*  @param object
 	*  @return A <code>String</code> instance.
 	*/
-	public function type(object:Object):String { return '';}
+	public function type(object:*):String { return '';}
 	/**
 	*  @param object
-	*  @return A <code>Object</code> instance.
+	*  @return A <code>any</code> instance.
 	*/
-	public function functionDetails(object:Object):Object { return null;}
+	public function functionDetails(object:*):* { return null;}
 	/**
 	*  @param object
 	*  @return A <code>Array</code> instance.
 	*/
-	public function getInternalProperties(object:Object):Array { return null;}
+	public function getInternalProperties(object:*):Array { return null;}
 	/**
 	*  @param node
 	*  @return A <code>Array</code> instance.
@@ -99,17 +99,25 @@ public class InjectedScriptHost
 	*  @param database
 	*  @return A <code>String</code> instance.
 	*/
-	public function databaseId(database:Object):String { return '';}
+	public function databaseId(database:*):String { return '';}
 	/**
 	*  @param storage
 	*  @return A <code>String</code> instance.
 	*/
-	public function storageId(storage:Object):String { return '';}
+	public function storageId(storage:*):String { return '';}
 	/**
 	*  @param text
-	*  @return A <code>Object</code> instance.
+	*  @return A <code>any</code> instance.
 	*/
-	public function evaluate(text:String):Object { return null;}
+	public function evaluate(text:String):* { return null;}
+	/**
+	*  @param functionObject
+	*  @param scopeIndex
+	*  @param variableName
+	*  @param newValue
+	*  @return A <code>any</code> instance.
+	*/
+	public function setFunctionVariableValue(functionObject:*, scopeIndex:int, variableName:String, newValue:*):* { return null;}
 }
 
 }
