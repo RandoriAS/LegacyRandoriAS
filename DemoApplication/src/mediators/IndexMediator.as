@@ -16,13 +16,13 @@
  * 
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
-package views.mediators {
+package mediators {
 	import behaviors.VerticalTabs;
+	import behaviors.tabs.MenuItem;
 	
+	import randori.async.Promise;
 	import randori.behaviors.AbstractMediator;
 	import randori.behaviors.ViewStack;
-	import randori.jquery.JQuery;
-	import behaviors.tabs.MenuItem;
 	
 	public class IndexMediator extends AbstractMediator {
 		
@@ -33,7 +33,7 @@ package views.mediators {
 		public var menu:VerticalTabs;
 		
 		override protected function onRegister():void {
-			var menuItems = new Array(
+			var menuItems:Array = new Array(
 				new MenuItem( "Targets", "views/targets.html" ),
 				new MenuItem( "Labs", "views/labs.html" ),
 				new MenuItem( "Intel", "views/intel.html" )
@@ -45,9 +45,9 @@ package views.mediators {
 
 		private function menuItemSelected( menuData:MenuItem ):void  {
 			viewStack.popView();
-			var promise = viewStack.pushView(menuData.url);
+			var promise:Promise = viewStack.pushView(menuData.url);
 			
-			promise.then( function( result:AbstractMediator ) {
+			promise.then( function( result:AbstractMediator ):void {
 				//do something here with the new view if you want
 			} );
 		}

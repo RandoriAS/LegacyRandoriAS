@@ -19,6 +19,9 @@
 package startup {
 	import guice.GuiceModule;
 	import guice.binding.Binder;
+	import guice.binding.Scope;
+	
+	import randori.styles.StyleExtensionManager;
 	
 	public class DemoContext extends GuiceModule {
 		

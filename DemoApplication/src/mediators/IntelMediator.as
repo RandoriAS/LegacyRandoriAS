@@ -16,7 +16,7 @@
  * 
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
-package views.mediators {
+package mediators {
 	import randori.behaviors.AbstractMediator;
 	import randori.jquery.JQuery;
 	

@@ -16,20 +16,30 @@
  * 
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
-package views.mediators {
+package mediators {
 	import randori.behaviors.AbstractMediator;
+	import randori.behaviors.SimpleList;
 	import randori.jquery.JQuery;
 	
-	public class LabsMediator extends AbstractMediator {
+	import services.TargetsService;
+	
+	public class TargetsMediator extends AbstractMediator {
 		
 		[View]
-		public var message:JQuery;
+		public var targetList:SimpleList;
+		
+		[Inject] 
+		public var service:TargetsService;
 		
 		override protected function onRegister():void {
-			message.text( "Labs Mediator Loaded and Registered" );
+			service.get().then( handleResult );
+		}
+		
+		private function handleResult( result:Array ):void {
+			targetList.data = result;
 		}
 
-		public function LabsMediator() {
+		public function TargetsMediator() {
 			super();
 		}
 	}
