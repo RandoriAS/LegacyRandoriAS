@@ -17,12 +17,11 @@
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
 package randori.behaviors {
-	import flash.events.Event;
-	
 	import randori.dom.DomWalker;
 	import randori.jquery.JQuery;
 	import randori.jquery.JQueryStatic;
 	import randori.signal.SimpleSignal;
+	import randori.webkit.dom.DomEvent;
 
 	public class List extends SimpleList {
 		
@@ -77,7 +76,7 @@ package randori.behaviors {
 			selectedIndex = 0;
 		}
 
-		protected function onItemClick(e:Event):void {
+		protected function onItemClick(e:DomEvent):void {
 			var targetJq:JQuery = JQueryStatic.J(e.currentTarget);
 			var index:int = targetJq.index();
 			selectedIndex = index;
