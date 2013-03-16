@@ -50,15 +50,28 @@ package randori.webkit.modules.mediastream
 public class RTCStatsReport
 {
 
+	public function get timestamp():Object { return null; }
+
+	public function get id():String { return ''; }
 	/**
-	*  @see randori.webkit.modules.mediastream.RTCStatsElement
+	*  @param name
+	*  @return A <code>String</code> instance.
 	*/
-	public function get local():RTCStatsElement { return null; }
+	public function stat(name:String):String { return '';}
+	/**
+	*  @return A <code>sequence</code> instance.
+	*/
+	public function names():Vector.<String> { return null;}
 
 	/**
-	*  @see randori.webkit.modules.mediastream.RTCStatsElement
+	*  @see randori.webkit.modules.mediastream.RTCStatsReport
 	*/
-	public function get remote():RTCStatsElement { return null; }
+	public function get local():RTCStatsReport { return null; }
+
+	/**
+	*  @see randori.webkit.modules.mediastream.RTCStatsReport
+	*/
+	public function get remote():RTCStatsReport { return null; }
 }
 
 }

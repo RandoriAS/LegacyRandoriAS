@@ -127,6 +127,10 @@ namespace WebIDLParser
                         {
                             t.convertToInterface();
                         }
+                        else if (t.name == "Window")
+                        {
+                            addJsonMethod(t);
+                        }
                         t.generateConstructors();
                         t.disambiguateMethodNames();
                         t.generateComments();
@@ -177,6 +181,15 @@ namespace WebIDLParser
 
             Console.WriteLine("ready");
             Console.ReadKey();
+        }
+
+        private static void addJsonMethod(TFileType fileType)
+        {
+            var jsonMethod = new TMethod(fileType);
+            jsonMethod.name = "JSON";
+            jsonMethod.resultType = new TType() { name="Object" };
+            jsonMethod.parameters.Add(new TParameter() { name = "JSONString", type = new TType() { name = "String" } });
+            fileType.members.Add(jsonMethod);
         }
 
         private static void PreprocessW3CXML()

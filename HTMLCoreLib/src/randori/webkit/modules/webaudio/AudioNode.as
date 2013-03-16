@@ -58,6 +58,15 @@ public class AudioNode
 	public function get numberOfInputs():uint { return 0; }
 
 	public function get numberOfOutputs():uint { return 0; }
+
+	public function get channelCount():uint { return 0; }
+	public function set channelCount(value:uint):void { }
+
+	public function get channelCountMode():String { return ''; }
+	public function set channelCountMode(value:String):void { }
+
+	public function get channelInterpretation():String { return ''; }
+	public function set channelInterpretation(value:String):void { }
 	/**
 	*  @param destination
 	*  @param output (optional argument, default value is <code>undefined</code>)

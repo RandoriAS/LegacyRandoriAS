@@ -58,11 +58,43 @@ namespace System.CodeDom.Compiler
             ClassDef.Members.Add(field);
             field.UserData["IsAsterisk"] = false;
             field.UserData["references"] = new CodeCommentStatementCollection();
+            if (HasMethodWithName(ClassDef, name))
+            {
+                field.UserData["ActionscriptName"] = name + "_";
+            }
             return field;
+        }
+
+        public bool HasMethodWithName(CodeTypeDeclaration ClassDef, string name)
+        {
+            foreach (var member in ClassDef.Members)
+            {
+                if ((member is CodeMemberMethod) && (((CodeMemberMethod)member).Name == name))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool HasFieldWithName(CodeTypeDeclaration ClassDef, string name)
+        {
+            foreach (var member in ClassDef.Members)
+            {
+                if ((member is CodeMemberField) && (((CodeMemberField)member).Name == name))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public CodeParameterDeclarationExpression AddParameter(string Name, string type, CodeMemberMethod method, string defaultValue, bool IsOptional)
         {
+            if (Name == "switch")
+            {
+                Name = "_" + Name;
+            }
             var paramDef = new CodeParameterDeclarationExpression(type, Name);
             paramDef.UserData["comments"] = new CodeCommentStatementCollection();
             paramDef.UserData["defaultValue"] = defaultValue;
@@ -125,6 +157,10 @@ namespace System.CodeDom.Compiler
             if (type.ToLower() != "void")
             {
                 method.Statements.Add(new CodeMethodReturnStatement(new CodeDefaultValueExpression(new CodeTypeReference(type))));
+            }
+            if (HasFieldWithName(CurrentClass, name))
+            {
+                method.UserData["ActionscriptName"] = name + "_";
             }
             return method;
         }

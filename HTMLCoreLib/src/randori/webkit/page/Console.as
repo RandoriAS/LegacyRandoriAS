@@ -77,6 +77,10 @@ public class Console
 	*  @param scriptArgs
 	*/
 	public function dirxml(...params):void {}
+	/**
+	*  @param scriptArgs
+	*/
+	public function table(...params):void {}
 	[JavaScriptMethod(name="trace")]
 	/**
 	*  @param scriptArgs

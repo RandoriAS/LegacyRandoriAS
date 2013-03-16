@@ -61,8 +61,11 @@ public class SpeechSynthesisUtterance
 	public function get lang():String { return ''; }
 	public function set lang(value:String):void { }
 
-	public function get voiceURI():String { return ''; }
-	public function set voiceURI(value:String):void { }
+	/**
+	*  @see randori.webkit.modules.speech.SpeechSynthesisVoice
+	*/
+	public function get voice():SpeechSynthesisVoice { return null; }
+	public function set voice(value:SpeechSynthesisVoice):void { }
 
 	public function get volume():Number { return 0; }
 	public function set volume(value:Number):void { }

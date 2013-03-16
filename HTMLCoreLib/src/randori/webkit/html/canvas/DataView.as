@@ -51,13 +51,13 @@ package randori.webkit.html.canvas
 public class DataView extends ArrayBufferView
 {
 	/**
-	*  @return A <code>Object</code> instance.
+	*  @return A <code>any</code> instance.
 	*/
-	public function getInt8():Object { return null;}
+	public function getInt8():* { return null;}
 	/**
-	*  @return A <code>Object</code> instance.
+	*  @return A <code>any</code> instance.
 	*/
-	public function getUint8():Object { return null;}
+	public function getUint8():* { return null;}
 	/**
 	*  @param byteOffset
 	*  @param littleEndian (optional argument, default value is <code>false</code>)

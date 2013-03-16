@@ -169,6 +169,15 @@ public class Element extends Node
 	*  @return <p>A list of matching <code>Element</code> nodes.</p>
 	*/
 	public function getElementsByTagName(name:String=undefined):NodeList { return null;}
+
+	/**
+	*  @see randori.webkit.dom.NamedNodeMap
+	*/
+	public function get attributes():NamedNodeMap { return null; }
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
+	public function hasAttributes():Boolean { return false;}
 	/**
 	*  <p>Retrieves an attribute value by local name and namespace
 	*  URI. HTML-only DOM implementations do not need to implement this
