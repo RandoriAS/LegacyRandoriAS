@@ -16,7 +16,7 @@
  * 
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
-package core.utilities {
+package guice.utilities {
 	[JavaScript(mode="global")]
 	public class GlobalUtilities {
 
@@ -26,7 +26,7 @@ package core.utilities {
 		}
 
 		[JavaScriptCode(file="_createDelegate.js")]
-		public static function $createDelegate( scope:Object, func:Function ):Function {
+		public static function $createStaticDelegate( scope:Object, func:Function ):Function {
 			return null;
 		}
 	}

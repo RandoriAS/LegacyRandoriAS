@@ -16,7 +16,7 @@
  * 
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
-package core.utilities {
+package guice.utilities {
 	public class InjectionDecorator {
 		/* Decorates an arbitrary object to allow it to be injected by guice */
 		public function decorateObject(dependency:*, className:String ):void {
