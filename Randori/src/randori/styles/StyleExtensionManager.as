@@ -140,7 +140,7 @@ package randori.styles {
 			var prefix:String;
 			
 			sheetRequest.open("GET", url, false);
-			sheetRequest.send(null);
+			sheetRequest.send();
 			
 			if (sheetRequest.status == 404) {
 				throw new Error("Cannot Find StyleSheet " + url);

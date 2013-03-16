@@ -78,7 +78,7 @@ package randori.i18n {
 			}
 			
 			request.open("GET", url, false);
-			request.send( null );
+			request.send();
 			
 			if (request.status == 404) {
 				Window.alert("Required Content " + url + " cannot be loaded.");
@@ -107,7 +107,7 @@ package randori.i18n {
 				}
 			};
 			
-			request.send(null);
+			request.send();
 		}
 		
 		private function parseResult( responseText:String ):void {

@@ -35,7 +35,7 @@ package randori.content {
 			
 			//Else load it now
 			xmlHttpRequest.open( "GET", fragmentURL, false );
-			xmlHttpRequest.send( null );
+			xmlHttpRequest.send();
 			
 			if ( xmlHttpRequest.status == 404 )
 			{

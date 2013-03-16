@@ -63,7 +63,7 @@ package randori.service {
 			
 			modifyHeaders(xmlHttpRequest);
 			
-			xmlHttpRequest.send( null );
+			xmlHttpRequest.send();
 			
 			return promise;
 		}

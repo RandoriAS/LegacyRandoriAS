@@ -23,7 +23,7 @@ package randori.startup {
 	import randori.dom.DomWalker;
 	import randori.webkit.dom.Node;
 
-	public class RandoriApplication {
+	public class RandoriBootstrap {
 		private var rootNode:Node;
 		
 		public function launch():void {
@@ -35,7 +35,7 @@ package randori.startup {
 			domWalker.walkDomFragment(rootNode);
 		}
 
-		public function RandoriApplication( rootNode:Node ) {
+		public function RandoriBootstrap( rootNode:Node ) {
 			this.rootNode = rootNode;
 		}
 	}
