@@ -17,9 +17,9 @@
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
 package randori.service {
-	import flash.events.Event;
 	
 	import randori.async.Promise;
+	import randori.webkit.dom.DomEvent;
 	import randori.webkit.xml.XMLHttpRequest;
 
 	public class AbstractService {
@@ -49,7 +49,7 @@ package randori.service {
 			
 			xmlHttpRequest.open(verb, uri, true);
 			//xmlHttpRequest.withCredentials = true;
-			xmlHttpRequest.onreadystatechange = function(evt:Event):void {
+			xmlHttpRequest.onreadystatechange = function(evt:DomEvent):void {
 				var request:XMLHttpRequest = evt.target as XMLHttpRequest;
 				
 				if (request.readyState == XMLHttpRequest.DONE) {
