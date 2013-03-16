@@ -52,15 +52,17 @@ package randori.async {
 			var thenContract:ThenContract = new ThenContract(onFulfilled, onRejected, promise);
 			thenContracts.push( thenContract );
 			
+			var that:Promise = this;
+			
 			if (state == FULLFILLED) {
 				//3.2.4
 				Window.setTimeout( function():void {
-					fullfill(value);
+					that.fullfill(value);
 				}, 1);
 			} else if (state == REJECTED) {
 				//3.2.4
 				Window.setTimeout( function():void {
-					internalReject(reason);
+					that.internalReject(reason);
 				}, 1);
 			}
 			
