@@ -186,9 +186,9 @@ namespace WebIDLParser
         private static void addJsonMethod(TFileType fileType)
         {
             var jsonMethod = new TMethod(fileType);
-            jsonMethod.name = "json";
+            jsonMethod.name = "JSON";
             jsonMethod.resultType = new TType() { name="Object" };
-            jsonMethod.parameters.Add(new TParameter() { name = "jsonString", type = new TType() { name = "String"} });
+            jsonMethod.parameters.Add(new TParameter() { name = "JSONString", type = new TType() { name = "String" } });
             fileType.members.Add(jsonMethod);
         }
 

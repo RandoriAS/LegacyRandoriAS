@@ -3974,10 +3974,10 @@ package randori.webkit.page {
 		}
 
 		/**
-		*  @param jsonString
+		*  @param JSONString
 		*  @return A <code>Object</code> instance.
 		*/
-		public static function json(jsonString:String):Object {
+		public static function JSON(JSONString:String):Object {
 			return null;
 		}
 	}
