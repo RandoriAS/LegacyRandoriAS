@@ -17,9 +17,9 @@
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
 package randori.i18n {
-	import flash.events.Event;
-	
+
 	import randori.signal.SimpleSignal;
+	import randori.webkit.dom.DomEvent;
 	import randori.webkit.page.Window;
 	import randori.webkit.xml.XMLHttpRequest;
 
@@ -97,7 +97,7 @@ package randori.i18n {
 			}
 			
 			request.open("GET", url, true);
-			request.onreadystatechange = function( evt:Event ):void {
+			request.onreadystatechange = function( evt:DomEvent ):void {
 				if ( request.readyState == 4 && request.status == 200 ) {
 					parseResult( request.responseText );
 					fileLoaded();
