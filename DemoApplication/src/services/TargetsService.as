@@ -22,12 +22,12 @@ package services {
 	import randori.service.ServiceConfig;
 	import randori.webkit.xml.XMLHttpRequest;
 	
-	import services.parser.TargetsParser;
+	import services.parser.GenericJsonParser;
 	
 	public class TargetsService extends AbstractService {
 		
 		private var config:ServiceConfig;
-		private var targets:TargetsParser;
+		private var targets:GenericJsonParser;
 		
 		private var path:String;
 		
@@ -38,7 +38,7 @@ package services {
 			return parserPromise;
 		}
 		
-		public function TargetsService(xmlHttpRequest:XMLHttpRequest, config:ServiceConfig, targets:TargetsParser ) {
+		public function TargetsService(xmlHttpRequest:XMLHttpRequest, config:ServiceConfig, targets:GenericJsonParser ) {
 			super(xmlHttpRequest);
 			
 			this.config = config;

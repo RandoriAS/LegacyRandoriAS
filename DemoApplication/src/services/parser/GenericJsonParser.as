@@ -21,7 +21,7 @@ package services.parser {
 	
 	import services.vo.TargetData;
 	
-	public class TargetsParser extends AbstractParser {
+	public class GenericJsonParser extends AbstractParser {
 
 		public function parseResult(result:Object):Array {
 			//Here we are just going to parse the result into Json.
@@ -31,7 +31,7 @@ package services.parser {
 			return json as Array;
 		}
 		
-		public function TargetsParser() {
+		public function GenericJsonParser() {
 			super();
 		}
 	}
