@@ -33,9 +33,6 @@ package mediators {
 		
 		override protected function onRegister():void {
 			service.get().then( handleResult );
-
-            var x:int = 5;
-            x()();
 		}
 		
 		private function handleResult( result:Array ):void {
