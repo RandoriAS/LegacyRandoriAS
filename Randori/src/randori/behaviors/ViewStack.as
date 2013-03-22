@@ -67,22 +67,23 @@ package randori.behaviors {
 			fragment.css3("left", "0");
 			fragment.data( "url", url ) ;
 			
+			var that:ViewStack = this;
 			promise = contentLoader.asynchronousLoad(url).then( 
 				function(result:String):AbstractMediator {
-					var content:String = contentParser.parse(result);
+					var content:String = that.contentParser.parse(result);
 					
 					fragment.html2(content);
 					fragment.attr2( "data-url", url );
 					decoratedNode.append(div);
 					
 					var mediatorCapturer:MediatorCapturer = new MediatorCapturer();
-					domWalker.walkDomFragment(div, mediatorCapturer);
+					that.domWalker.walkDomFragment(div, mediatorCapturer);
 					
-					viewFragmentStack.push(fragment);
+					that.viewFragmentStack.push(fragment);
 					var mediator:AbstractMediator = mediatorCapturer.mediator;
-					mediators[ url ] = mediator;
+					that.mediators[ url ] = mediator;
 					
-					showView(_currentView, fragment);
+					that.showView(that._currentView, fragment);
 					
 					return mediator;
 				} 

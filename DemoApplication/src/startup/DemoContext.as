@@ -22,8 +22,10 @@ package startup {
 	import guice.binding.Scope;
 	
 	import randori.styles.StyleExtensionManager;
-	
-	public class DemoContext extends GuiceModule {
+
+import services.TargetsService;
+
+public class DemoContext extends GuiceModule {
 		
 		override public function configure(binder:Binder):void {
 		}

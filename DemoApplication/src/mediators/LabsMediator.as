@@ -18,16 +18,27 @@
  */
 package mediators {
 	import randori.behaviors.AbstractMediator;
-	import randori.jquery.JQuery;
-	
-	public class LabsMediator extends AbstractMediator {
+import randori.behaviors.SimpleList;
+import randori.jquery.JQuery;
+import randori.webkit.page.Console;
+
+import services.LabService;
+
+public class LabsMediator extends AbstractMediator {
 		
 		[View]
-		public var message:JQuery;
-		
+		public var items:SimpleList;
+
+        [Inject]
+        public var service:LabService;
+
 		override protected function onRegister():void {
-			message.text( "Labs Mediator Loaded and Registered" );
+            service.get().then( displayData);
 		}
+
+        private function displayData( gadgets:Array ):void {
+            items.data = gadgets;
+        }
 
 		public function LabsMediator() {
 			super();

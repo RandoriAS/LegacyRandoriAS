@@ -16,34 +16,32 @@
  * 
  * @author Michael Labriola <labriola@digitalprimates.net>
  */
-package mediators {
-	import randori.behaviors.AbstractMediator;
-	import randori.behaviors.SimpleList;
-	import randori.jquery.JQuery;
+package services {
+	import randori.async.Promise;
+	import randori.service.AbstractService;
+	import randori.service.ServiceConfig;
+	import randori.webkit.xml.XMLHttpRequest;
 	
-	import services.TargetsService;
+	import services.parser.GenericJsonParser;
 	
-	public class TargetsMediator extends AbstractMediator {
+	public class LabService extends AbstractService {
 		
-		[View]
-		public var targetList:SimpleList;
+		private var targets:GenericJsonParser;
 		
-		[Inject] 
-		public var service:TargetsService;
+		private var path:String;
 		
-		override protected function onRegister():void {
-			service.get().then( handleResult );
-
-            var x:int = 5;
-            x()();
+		public function get():Promise {
+			var promise:Promise = sendRequest("GET", path);
+			var parserPromise:Promise = promise.then( targets.parseResult );
+			
+			return parserPromise;
 		}
 		
-		private function handleResult( result:Array ):void {
-			targetList.data = result;
-		}
-
-		public function TargetsMediator( ) {
-			super();
+		public function LabService(xmlHttpRequest:XMLHttpRequest, targets:GenericJsonParser ) {
+			super(xmlHttpRequest);
+			
+			this.targets = targets;
+			this.path = "assets/data/gadgets.txt";
 		}
 	}
 }
