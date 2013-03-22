@@ -3,6 +3,8 @@ bin/
 bin-debug/
 bin-release/
 
+!/RandoriSDK/bin/
+
 # Other files and folders
 *.settings/
 *.project
