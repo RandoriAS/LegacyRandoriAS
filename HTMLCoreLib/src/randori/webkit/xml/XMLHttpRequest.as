@@ -43,6 +43,9 @@ package randori.webkit.xml
 
 import randori.webkit.dom.Document;
 import randori.webkit.dom.DomEvent;
+import randori.webkit.fileapi.Blob;
+import randori.webkit.html.FormData;
+import randori.webkit.html.canvas.ArrayBuffer;
 
 [JavaScript(export="false", name="XMLHttpRequest")]
 /**
@@ -131,7 +134,13 @@ public class XMLHttpRequest
 	*  @param value
 	*/
 	public function setRequestHeader(header:String, value:String):void {}
-	public function send():void {}
+	public function send( data:* = null ):void {}
+    public function sendArrayBuffer(data:ArrayBuffer):void {}
+    public function sendBlob(data:Blob):void {}
+    public function sendDocument(data:Document):void {}
+    public function sendString(data:String):void {}
+    public function sendFormData(data:FormData):void {}
+
 	public function abort():void {}
 
 	/**
