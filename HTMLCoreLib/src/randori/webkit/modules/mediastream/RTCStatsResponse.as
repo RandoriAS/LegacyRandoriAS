@@ -47,7 +47,7 @@ package randori.webkit.modules.mediastream
  *  @author RandoriAS Web IDL Parser
  *  @version 1.0
  */
-public dynamic class RTCStatsResponse
+public class RTCStatsResponse
 {
 	/**
 	*  @return A <code>sequence</code> instance.

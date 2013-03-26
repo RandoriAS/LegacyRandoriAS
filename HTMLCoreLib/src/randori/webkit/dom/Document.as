@@ -53,7 +53,6 @@ import randori.webkit.html.HTMLCollection;
 import randori.webkit.page.Location;
 import randori.webkit.page.Selection;
 import randori.webkit.html.canvas.CanvasRenderingContext;
-import randori.webkit.css.FontLoader;
 import randori.webkit.page.SecurityPolicy;
 
 [JavaScript(export="false", name="Document")]
@@ -581,11 +580,6 @@ public class Document extends Node
 	*  @return A <code>NodeList</code> instance.
 	*/
 	public function querySelectorAll(selectors:String):NodeList { return null;}
-
-	/**
-	*  @see randori.webkit.css.FontLoader
-	*/
-	public function get fontloader():FontLoader { return null; }
 
 	public function get onabort():Function { return null; }
 	public function set onabort(value:Function):void { }

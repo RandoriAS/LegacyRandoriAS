@@ -85,6 +85,10 @@ public class InspectorFrontendHost
 	*/
 	public function localizedStringsURL():String { return '';}
 	/**
+	*  @return A <code>String</code> instance.
+	*/
+	public function hiddenPanels():String { return '';}
+	/**
 	*  @param text
 	*/
 	public function copyText(text:String):void {}
@@ -111,6 +115,10 @@ public class InspectorFrontendHost
 	*  @param url
 	*/
 	public function close(url:String):void {}
+	/**
+	*  @return A <code>Boolean</code> instance.
+	*/
+	public function canInspectWorkers():Boolean { return false;}
 	/**
 	*  @return A <code>String</code> instance.
 	*/
@@ -165,18 +173,6 @@ public class InspectorFrontendHost
 	*  @return A <code>Boolean</code> instance.
 	*/
 	public function isUnderTest():Boolean { return false;}
-	/**
-	*  @return A <code>Boolean</code> instance.
-	*/
-	public function canInspectWorkers():Boolean { return false;}
-	/**
-	*  @return A <code>Boolean</code> instance.
-	*/
-	public function canSaveAs():Boolean { return false;}
-	/**
-	*  @return A <code>String</code> instance.
-	*/
-	public function hiddenPanels():String { return '';}
 }
 
 }
